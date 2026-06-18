@@ -69,6 +69,9 @@ class AutoOrganizerRuntime:
             if label.description == MANAGED_MARKER
         }
 
+        names = {label.label_id: label.name for label in label_reg.async_list_labels()}
+        per_label: dict[str, int] = {}
+
         total = labeled = unlabeled = without_area = managed_on = 0
         for entry in ent_reg.entities.values():
             total += 1
@@ -78,6 +81,9 @@ class AutoOrganizerRuntime:
                 unlabeled += 1
             if set(entry.labels) & managed:
                 managed_on += 1
+            for label_id in entry.labels:
+                name = names.get(label_id, label_id)
+                per_label[name] = per_label.get(name, 0) + 1
 
             area_id = entry.area_id
             if area_id is None and entry.device_id:
@@ -95,6 +101,9 @@ class AutoOrganizerRuntime:
             "managed_labels": len(managed),
             "managed_labeled_entities": managed_on,
             "coverage_pct": coverage,
+            "by_label": dict(
+                sorted(per_label.items(), key=lambda kv: kv[1], reverse=True)
+            ),
         }
         self._notify()
         return self.stats

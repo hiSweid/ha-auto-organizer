@@ -29,7 +29,10 @@ async def async_setup_entry(
             StatsSensor(runtime, "entities_unlabeled", "unlabeled", "mdi:tag-off-outline", "entities"),
             StatsSensor(runtime, "entities_without_area", "without_area", "mdi:map-marker-off", "entities"),
             StatsSensor(runtime, "managed_labels", "managed_labels", "mdi:label-multiple", "labels"),
-            StatsSensor(runtime, "coverage_pct", "coverage", "mdi:chart-donut", "%"),
+            StatsSensor(
+                runtime, "coverage_pct", "coverage", "mdi:chart-donut", "%",
+                attrs_key="by_label",
+            ),
         ]
     )
 
@@ -105,11 +108,20 @@ class StatsSensor(_BaseSensor):
         translation_key: str,
         icon: str,
         unit: str,
+        attrs_key: str | None = None,
     ) -> None:
         super().__init__(runtime, translation_key, icon)
         self._stat_key = stat_key
+        self._attrs_key = attrs_key
         self._attr_native_unit_of_measurement = unit
 
     @property
     def native_value(self) -> float | int | None:
         return self._runtime.stats.get(self._stat_key)
+
+    @property
+    def extra_state_attributes(self) -> dict[str, Any] | None:
+        if not self._attrs_key:
+            return None
+        value = self._runtime.stats.get(self._attrs_key)
+        return {self._attrs_key: value} if value else None
