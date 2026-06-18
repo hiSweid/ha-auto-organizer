@@ -131,7 +131,7 @@ class AutoLabelerOptionsFlow(OptionsFlow):
                 vol.Optional(
                     CONF_LANGUAGE,
                     default=o.get(CONF_LANGUAGE, DEFAULT_LANGUAGE),
-                ): vol.In(["de", "en"]),
+                ): vol.In(["auto", "de", "en"]),
                 vol.Optional(
                     CONF_MAX_LABELS,
                     default=o.get(CONF_MAX_LABELS, DEFAULT_MAX_LABELS),

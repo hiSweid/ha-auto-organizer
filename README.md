@@ -82,7 +82,7 @@ Configurable under the integration's *Configure* button:
 | Area labels | off | Add a label for each entity's area |
 | Floor labels | off | Add a label for each entity's floor |
 | Skip diagnostic/config | on | Ignore diagnostic & config helper entities |
-| Label language | `de` | `de` or `en` |
+| Label language | `auto` | `auto` (follow Home Assistant), `de` or `en` |
 | Max labels per entity | 2 | Cap on labels assigned to one entity |
 | Auto-label new entities | on | Label newly added entities automatically (debounced) |
 | Run on startup | off | Run once when Home Assistant starts |

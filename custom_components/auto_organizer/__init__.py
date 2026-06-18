@@ -81,8 +81,12 @@ PLATFORMS: list[Platform] = [
 type AutoOrganizerConfigEntry = ConfigEntry[AutoOrganizerRuntime]
 
 
-def _options_from_entry(entry: ConfigEntry) -> LabelerOptions:
+def _options_from_entry(hass: HomeAssistant, entry: ConfigEntry) -> LabelerOptions:
     o = entry.options
+    language = o.get(CONF_LANGUAGE, DEFAULT_LANGUAGE)
+    if language == "auto":
+        # Follow Home Assistant's configured language (resolved to de/en).
+        language = hass.config.language
     return LabelerOptions(
         dry_run=o.get(CONF_DRY_RUN, DEFAULT_DRY_RUN),
         overwrite=o.get(CONF_OVERWRITE, DEFAULT_OVERWRITE),
@@ -97,7 +101,7 @@ def _options_from_entry(entry: ConfigEntry) -> LabelerOptions:
         enable_area=o.get(CONF_ENABLE_AREA, DEFAULT_ENABLE_AREA),
         enable_floor=o.get(CONF_ENABLE_FLOOR, DEFAULT_ENABLE_FLOOR),
         skip_categories=o.get(CONF_SKIP_CATEGORIES, DEFAULT_SKIP_CATEGORIES),
-        language=o.get(CONF_LANGUAGE, DEFAULT_LANGUAGE),
+        language=language,
         max_labels=o.get(CONF_MAX_LABELS, DEFAULT_MAX_LABELS),
         exclude=_parse_exclude(o.get(CONF_EXCLUDE, "")),
         custom_rules=parse_custom_rules(o.get(CONF_CUSTOM_RULES, "")),
@@ -123,7 +127,7 @@ async def async_setup_entry(
         hass=hass,
         entry=entry,
         labeler=labeler,
-        options_factory=lambda: _options_from_entry(entry),
+        options_factory=lambda: _options_from_entry(hass, entry),
     )
     entry.runtime_data = runtime
 
@@ -132,7 +136,7 @@ async def async_setup_entry(
     if entry.options.get(CONF_RUN_ON_STARTUP, DEFAULT_RUN_ON_STARTUP):
 
         async def _run_on_start(_now) -> None:
-            await labeler.run(_options_from_entry(entry))
+            await labeler.run(_options_from_entry(hass, entry))
 
         async_at_started(hass, _run_on_start)
 
@@ -140,7 +144,7 @@ async def async_setup_entry(
     if interval and interval > 0:
 
         async def _scheduled(_now) -> None:
-            await labeler.run(_options_from_entry(entry))
+            await labeler.run(_options_from_entry(hass, entry))
 
         entry.async_on_unload(
             async_track_time_interval(
@@ -156,7 +160,7 @@ async def async_setup_entry(
             pending.clear()
             if not ids:
                 return
-            await runtime.labeler.run(_options_from_entry(entry), entity_filter=ids)
+            await runtime.labeler.run(_options_from_entry(hass, entry), entity_filter=ids)
             runtime.refresh_stats()
 
         debouncer = Debouncer(
@@ -200,7 +204,7 @@ def _register_services(hass: HomeAssistant) -> None:
         if not entries:
             return {"error": "no config entry"}
         entry = entries[0]
-        options = _options_from_entry(entry)
+        options = _options_from_entry(hass, entry)
         if ATTR_DRY_RUN in call.data:
             options.dry_run = call.data[ATTR_DRY_RUN]
         if ATTR_OVERWRITE in call.data:
@@ -227,7 +231,7 @@ def _register_services(hass: HomeAssistant) -> None:
             return {"error": "no config entry"}
         result = await entries[0].runtime_data.labeler.assign_areas(
             dry_run=call.data.get(ATTR_DRY_RUN, False),
-            exclude=_options_from_entry(entries[0]).exclude,
+            exclude=_options_from_entry(hass, entries[0]).exclude,
         )
         return result.as_dict()
 

@@ -7,6 +7,8 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **Automatic language**: label language now defaults to `auto`, following
+  Home Assistant's configured language (resolved to German or English).
 - **Custom rules**: user-defined `keyword=label` mappings (per line/comma);
   only existing labels are accepted, applied as a prioritized keyword layer.
 - **Exclude option**: skip entities from labeling and area assignment by

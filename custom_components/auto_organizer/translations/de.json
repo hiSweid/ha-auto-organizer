@@ -24,7 +24,7 @@
           "enable_area": "Label für den Bereich jeder Entität hinzufügen",
           "enable_floor": "Label für die Etage jeder Entität hinzufügen",
           "skip_categories": "Diagnose-/Konfig-Entitäten überspringen",
-          "language": "Label-Sprache (de/en)",
+          "language": "Label-Sprache (auto/de/en)",
           "max_labels": "Maximale Labels pro Entität",
           "auto_label_new": "Neu hinzugefügte Entitäten automatisch labeln",
           "run_on_startup": "Einmal beim Start von Home Assistant ausführen",
