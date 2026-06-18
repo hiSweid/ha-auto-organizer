@@ -6,6 +6,8 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-06-18
+
 ### Added
 - **Repair issues**: a warning when custom rules reference unknown labels, and
   when area/floor labeling is enabled but no areas exist.
@@ -67,5 +69,6 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Labels created by the integration are marked internally so `cleanup` never
   removes labels you created by hand.
 
-[Unreleased]: https://github.com/hiSweid/ha-auto-organizer/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/hiSweid/ha-auto-organizer/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/hiSweid/ha-auto-organizer/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/hiSweid/ha-auto-organizer/releases/tag/v0.1.0
