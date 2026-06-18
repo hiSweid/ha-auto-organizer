@@ -33,6 +33,28 @@
       }
     }
   },
+  "entity": {
+    "button": {
+      "run": { "name": "Run now" },
+      "cleanup": { "name": "Cleanup labels" }
+    },
+    "select": {
+      "scope": {
+        "name": "Run scope",
+        "state": {
+          "labels_and_areas": "Labels + areas",
+          "labels": "Only labels",
+          "areas": "Only areas"
+        }
+      }
+    },
+    "switch": {
+      "dry_run": { "name": "Dry run" }
+    },
+    "sensor": {
+      "last_run": { "name": "Last run" }
+    }
+  },
   "services": {
     "run": {
       "name": "Run labeler",

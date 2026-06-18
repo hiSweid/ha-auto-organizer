@@ -90,6 +90,18 @@ Configurable under the integration's *Configure* button:
 Curated theme labels apply even to diagnostic/config entities (they are
 explicitly mapped, so noise is not a concern).
 
+## Control entities
+
+The integration creates a device with everything you need to drive it from the
+UI — no need to call services by hand:
+
+- **Run now** (button) — runs according to the selected scope.
+- **Run scope** (select) — *Labels + areas*, *Only labels* or *Only areas*.
+- **Dry run** (switch) — when on, the buttons only preview (write nothing).
+- **Cleanup labels** (button) — removes the labels this integration created.
+- **Last run** (sensor) — number of entities changed, with details (counts,
+  scope, dry-run, timestamp) in its attributes.
+
 ## Labels
 
 Functional (domain / device class):

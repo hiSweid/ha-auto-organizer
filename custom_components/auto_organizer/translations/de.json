@@ -33,6 +33,28 @@
       }
     }
   },
+  "entity": {
+    "button": {
+      "run": { "name": "Jetzt ausführen" },
+      "cleanup": { "name": "Labels aufräumen" }
+    },
+    "select": {
+      "scope": {
+        "name": "Umfang",
+        "state": {
+          "labels_and_areas": "Labels + Bereiche",
+          "labels": "Nur Labels",
+          "areas": "Nur Bereiche"
+        }
+      }
+    },
+    "switch": {
+      "dry_run": { "name": "Testlauf" }
+    },
+    "sensor": {
+      "last_run": { "name": "Letzter Lauf" }
+    }
+  },
   "services": {
     "run": {
       "name": "Labeler ausführen",

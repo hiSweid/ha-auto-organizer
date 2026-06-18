@@ -44,6 +44,12 @@ SERVICE_RUN: Final = "run"
 SERVICE_CLEANUP: Final = "cleanup"
 SERVICE_ASSIGN_AREAS: Final = "assign_areas"
 
+# Control-entity run scope (select)
+SCOPE_BOTH: Final = "labels_and_areas"
+SCOPE_LABELS: Final = "labels"
+SCOPE_AREAS: Final = "areas"
+SCOPES: Final = [SCOPE_BOTH, SCOPE_LABELS, SCOPE_AREAS]
+
 # Service call attributes
 ATTR_DRY_RUN: Final = "dry_run"
 ATTR_OVERWRITE: Final = "overwrite"

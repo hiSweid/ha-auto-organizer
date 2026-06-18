@@ -8,6 +8,7 @@ from datetime import timedelta
 import voluptuous as vol
 
 from homeassistant.config_entries import ConfigEntry
+from homeassistant.const import Platform
 from homeassistant.core import (
     HomeAssistant,
     ServiceCall,
@@ -17,6 +18,8 @@ from homeassistant.core import (
 from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers.event import async_track_time_interval
 from homeassistant.helpers.start import async_at_started
+
+from .coordinator import AutoOrganizerRuntime
 
 from .const import (
     ATTR_DRY_RUN,
@@ -59,7 +62,14 @@ from .labeler import Labeler, LabelerOptions
 
 _LOGGER = logging.getLogger(__name__)
 
-type AutoLabelerConfigEntry = ConfigEntry[Labeler]
+PLATFORMS: list[Platform] = [
+    Platform.BUTTON,
+    Platform.SELECT,
+    Platform.SWITCH,
+    Platform.SENSOR,
+]
+
+type AutoOrganizerConfigEntry = ConfigEntry[AutoOrganizerRuntime]
 
 
 def _options_from_entry(entry: ConfigEntry) -> LabelerOptions:
@@ -85,11 +95,17 @@ def _options_from_entry(entry: ConfigEntry) -> LabelerOptions:
 
 
 async def async_setup_entry(
-    hass: HomeAssistant, entry: AutoLabelerConfigEntry
+    hass: HomeAssistant, entry: AutoOrganizerConfigEntry
 ) -> bool:
     """Set up Auto-Organizer from a config entry."""
     labeler = Labeler(hass)
-    entry.runtime_data = labeler
+    runtime = AutoOrganizerRuntime(
+        hass=hass,
+        entry=entry,
+        labeler=labeler,
+        options_factory=lambda: _options_from_entry(entry),
+    )
+    entry.runtime_data = runtime
 
     entry.async_on_unload(entry.add_update_listener(_async_update_listener))
 
@@ -113,6 +129,7 @@ async def async_setup_entry(
         )
 
     _register_services(hass)
+    await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     return True
 
 
@@ -122,7 +139,7 @@ def _register_services(hass: HomeAssistant) -> None:
         return
 
     async def _handle_run(call: ServiceCall) -> ServiceResponse:
-        entries: list[AutoLabelerConfigEntry] = hass.config_entries.async_entries(
+        entries: list[AutoOrganizerConfigEntry] = hass.config_entries.async_entries(
             DOMAIN
         )
         if not entries:
@@ -134,7 +151,7 @@ def _register_services(hass: HomeAssistant) -> None:
         if ATTR_OVERWRITE in call.data:
             options.overwrite = call.data[ATTR_OVERWRITE]
         entity_filter = call.data.get(ATTR_ENTITY_FILTER)
-        result = await entry.runtime_data.run(
+        result = await entry.runtime_data.labeler.run(
             options,
             entity_filter=set(entity_filter) if entity_filter else None,
         )
@@ -144,7 +161,7 @@ def _register_services(hass: HomeAssistant) -> None:
         entries = hass.config_entries.async_entries(DOMAIN)
         if not entries:
             return {"error": "no config entry"}
-        result = await entries[0].runtime_data.cleanup(
+        result = await entries[0].runtime_data.labeler.cleanup(
             dry_run=call.data.get(ATTR_DRY_RUN, False)
         )
         return result.as_dict()
@@ -153,7 +170,7 @@ def _register_services(hass: HomeAssistant) -> None:
         entries = hass.config_entries.async_entries(DOMAIN)
         if not entries:
             return {"error": "no config entry"}
-        result = await entries[0].runtime_data.assign_areas(
+        result = await entries[0].runtime_data.labeler.assign_areas(
             dry_run=call.data.get(ATTR_DRY_RUN, False)
         )
         return result.as_dict()
@@ -190,17 +207,22 @@ def _register_services(hass: HomeAssistant) -> None:
 
 
 async def _async_update_listener(
-    hass: HomeAssistant, entry: AutoLabelerConfigEntry
+    hass: HomeAssistant, entry: AutoOrganizerConfigEntry
 ) -> None:
     """Reload the entry when options change."""
     await hass.config_entries.async_reload(entry.entry_id)
 
 
 async def async_unload_entry(
-    hass: HomeAssistant, entry: AutoLabelerConfigEntry
+    hass: HomeAssistant, entry: AutoOrganizerConfigEntry
 ) -> bool:
     """Unload a config entry."""
-    if not hass.config_entries.async_entries(DOMAIN):
+    unloaded = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
+    # Remove the (shared) services only once the last entry is gone.
+    remaining = [
+        e for e in hass.config_entries.async_entries(DOMAIN) if e.entry_id != entry.entry_id
+    ]
+    if not remaining:
         for service in (SERVICE_RUN, SERVICE_CLEANUP, SERVICE_ASSIGN_AREAS):
             hass.services.async_remove(DOMAIN, service)
-    return True
+    return unloaded
