@@ -39,6 +39,7 @@ class RunResult:
     scanned: int = 0
     updated: int = 0
     labels_created: int = 0
+    labels_removed: int = 0
     changes: list[dict[str, list[str]]] = field(default_factory=list)
 
     def as_dict(self) -> dict:
@@ -46,6 +47,7 @@ class RunResult:
             "scanned": self.scanned,
             "updated": self.updated,
             "labels_created": self.labels_created,
+            "labels_removed": self.labels_removed,
             "changes": self.changes,
         }
 
@@ -259,6 +261,6 @@ class Labeler:
         for label_id in managed:
             if not dry_run:
                 reg.async_delete(label_id)
-            result.labels_created -= 1  # negative => removed
+            result.labels_removed += 1
 
         return result
