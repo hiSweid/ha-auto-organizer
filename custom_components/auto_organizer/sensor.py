@@ -5,7 +5,12 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Any
 
-from homeassistant.components.sensor import SensorDeviceClass, SensorEntity
+from homeassistant.components.sensor import (
+    SensorDeviceClass,
+    SensorEntity,
+    SensorStateClass,
+)
+from homeassistant.const import EntityCategory
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.util import dt as dt_util
@@ -39,6 +44,7 @@ async def async_setup_entry(
 
 class _BaseSensor(SensorEntity):
     _attr_has_entity_name = True
+    _attr_entity_category = EntityCategory.DIAGNOSTIC
 
     def __init__(self, runtime: AutoOrganizerRuntime, key: str, icon: str) -> None:
         self._runtime = runtime
@@ -56,6 +62,7 @@ class LastRunSensor(_BaseSensor):
     """Number of entities changed by the last run; details in attributes."""
 
     _attr_native_unit_of_measurement = "entities"
+    _attr_state_class = SensorStateClass.MEASUREMENT
 
     def __init__(self, runtime: AutoOrganizerRuntime) -> None:
         super().__init__(runtime, "last_run", "mdi:history")
@@ -100,6 +107,8 @@ class LastRunTimeSensor(_BaseSensor):
 
 class StatsSensor(_BaseSensor):
     """A single registry statistic from the coordinator."""
+
+    _attr_state_class = SensorStateClass.MEASUREMENT
 
     def __init__(
         self,
