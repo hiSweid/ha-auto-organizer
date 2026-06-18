@@ -3,22 +3,27 @@
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
 
 Automatically assign [Labels](https://www.home-assistant.io/docs/organizing/labels/)
-to your Home Assistant entities based on a rule set — by **domain** (lights,
-switches, covers, …) and **device class** (temperature, motion, battery,
-energy, …). No cloud, no API keys, runs entirely local.
+to your Home Assistant entities from a rule set — by **domain** (lights,
+switches, covers, …), **device class** (temperature, motion, battery, energy, …)
+and curated **integration themes** (appliances, garden, network, car). No cloud,
+no API keys, runs entirely local.
 
 Hundreds of entities get sensible, consistent labels in one click, ready to use
-in label-based automations, dashboards and the entity filter.
+in label-based automations, dashboards and the entity filter. Labels default to
+**German**; English is also available.
 
 ## Features
 
-- 🏷️ Rule-based labeling by domain and device class (with keyword fallback)
+- 🏷️ Rule-based labeling by domain, device class and a keyword fallback
+- 🚗 Curated integration themes — appliances, garden, network, car
 - 🎨 Creates labels with sensible colors and Material Design icons
+- 🌍 German (default) and English label names
+- 🧹 Skips diagnostic/config entities by default to avoid noise
+- 🏠 Optional **area** and **floor** labels
 - 🧪 **Dry-run** mode — preview every change before anything is written
 - ➕ **Merge** (default) or **overwrite** existing labels
 - ⏱️ Optional run on startup and/or on a recurring interval
-- 🧹 `cleanup` service removes only the labels this integration created
-- 🌍 English & German translations
+- ↩️ `cleanup` service removes only the labels this integration created
 
 ## Installation
 
@@ -52,7 +57,7 @@ action: auto_labeler.run
 data:
   entities:
     - light.kitchen
-    - sensor.outdoor_temperature
+    - sensor.aussentemperatur
 
 # Remove every label this integration created
 action: auto_labeler.cleanup
@@ -72,15 +77,37 @@ Configurable under the integration's *Configure* button:
 | Overwrite | off | Replace existing labels instead of merging |
 | Label by domain | on | Lights, switches, covers, … |
 | Label by device class | on | Temperature, motion, battery, … |
-| Label by integration | off | Adds the source integration as a label |
+| Curated theme labels | on | Appliances, garden, network, car (by integration) |
+| Label by source integration | off | Adds the raw integration name as a label |
+| Area labels | off | Add a label for each entity's area |
+| Floor labels | off | Add a label for each entity's floor |
+| Skip diagnostic/config | on | Ignore diagnostic & config helper entities |
+| Label language | `de` | `de` or `en` |
 | Run on startup | off | Run once when Home Assistant starts |
 | Re-scan interval | 0 | Minutes between automatic runs (0 = off) |
 | Label prefix | — | Optional prefix for created labels |
 
+Curated theme labels apply even to diagnostic/config entities (they are
+explicitly mapped, so noise is not a concern).
+
+## Labels
+
+Functional (domain / device class):
+Beleuchtung, Schalter, Lüfter, Klima, Rollläden, Schlösser, Staubsauger, Medien,
+Kameras, Szenen, Automationen, Skripte, Anwesenheit, Wetter, Updates,
+Sicherheit, Temperatur, Luftfeuchtigkeit, Batterie, Energie, Wasser, Helligkeit,
+Bewegung, Öffnungen, Leck, Luftqualität, Kosten.
+
+Curated by integration:
+Haushaltsgeräte (appliances), Garten (garden), Netzwerk & Server (network),
+Auto (car / charging).
+
+English names are used when the language option is set to `en`.
+
 ## How it works
 
 The rule set lives in [`rules.py`](custom_components/auto_labeler/rules.py) as
-plain data and is applied by the engine in
+plain, language-keyed data and is applied by the engine in
 [`labeler.py`](custom_components/auto_labeler/labeler.py). Labels created by the
 integration are marked internally so `cleanup` never touches labels you made by
 hand.
@@ -88,7 +115,8 @@ hand.
 ## Contributing
 
 Rule contributions are very welcome — extend the maps in `rules.py` and add a
-case to `tests/test_rules.py`. Run the tests with `pytest -q`.
+case to `tests/test_rules.py`. The rule engine is pure and has no Home Assistant
+dependency, so the tests run with plain `pytest -q`.
 
 ## License
 
