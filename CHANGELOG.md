@@ -7,6 +7,8 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **Diagnostics**: download config-entry diagnostics (options + stats + last
+  run summary, no secrets) from the device page.
 - **Automatic language**: label language now defaults to `auto`, following
   Home Assistant's configured language (resolved to German or English).
 - **Custom rules**: user-defined `keyword=label` mappings (per line/comma);
