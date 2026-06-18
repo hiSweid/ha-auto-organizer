@@ -341,6 +341,60 @@ def test_match_area_longest_wins():
     assert match_area("light.gaeste_bad_spiegel", None, areas) == "gaeste_bad"
 
 
+def test_doors_and_windows_map_to_security():
+    for dc in ("door", "window", "garage_door", "opening"):
+        entry = FakeEntry("binary_sensor.x", original_device_class=dc)
+        assert names(entry) == ["Sicherheit"], dc
+
+
+def test_openings_label_removed():
+    assert "openings" not in rules.LABELS
+    present = {ld["names"]["de"] for ld in rules.LABELS.values()}
+    assert "Öffnungen" not in present
+
+
+def test_car_name_labeled_as_auto():
+    assert names(FakeEntry("sensor.egolf_reichweite")) == ["Auto"]
+
+
+def test_car_name_via_friendly_name():
+    entry = FakeEntry("sensor.xyz", original_device_class=None)
+    entry.name = "Tesla Ladestand"
+    assert "Auto" in names(entry)
+
+
+def test_car_name_plus_device_class_within_cap():
+    entry = FakeEntry("sensor.egolf_batterie", original_device_class="battery")
+    assert names(entry) == ["Auto", "Batterie"]
+
+
+def test_frost_keyword_maps_to_weather():
+    assert names(FakeEntry("binary_sensor.frostwarnung")) == ["Wetter"]
+
+
+def test_oil_consumption_maps_to_klima():
+    assert names(FakeEntry("sensor.taglicher_olverbrauch")) == ["Klima"]
+
+
+def test_oilfox_integration_maps_to_klima():
+    assert names(FakeEntry("sensor.oilfox_fuellstand", platform="oilfox")) == ["Klima"]
+
+
+def test_max_labels_cap():
+    opts = LabelerOptions(max_labels=1)
+    entry = FakeEntry("sensor.maeher", platform="navimow",
+                      original_device_class="temperature")
+    # curated Garten + Temperatur would be 2, capped to 1
+    assert names(entry, opts) == ["Garten"]
+
+
+def test_default_max_two_labels():
+    entry = FakeEntry("sensor.egolf_batterie", platform="navimow",
+                      original_device_class="battery")
+    # car + curated + battery would be 3, default cap = 2
+    assert len(names(entry)) == 2
+
+
 def test_match_area_ambiguous_returns_none():
     areas = [
         {"area_id": "a1", "name": "Nord", "aliases": []},

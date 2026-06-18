@@ -25,6 +25,7 @@
           "enable_floor": "Add a label for each entity's floor",
           "skip_categories": "Skip diagnostic/config entities",
           "language": "Label language (de/en)",
+          "max_labels": "Maximum labels per entity",
           "run_on_startup": "Run once on Home Assistant start",
           "scan_interval": "Re-scan interval in minutes (0 = off)",
           "label_prefix": "Optional prefix for created labels"

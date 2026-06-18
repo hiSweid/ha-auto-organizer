@@ -64,6 +64,7 @@ class LabelerOptions:
     skip_categories: bool = True
     language: str = DEFAULT_LANGUAGE
     label_prefix: str = ""
+    max_labels: int = 2
 
 
 # Area/floor labels use the user-defined names verbatim (not translatable),
@@ -111,7 +112,6 @@ LABELS: Final[dict[str, LabelDef]] = {
     "water": _ld("light-blue", "mdi:water", "Wasser", "Water"),
     "light_level": _ld("yellow", "mdi:brightness-6", "Helligkeit", "Light Level"),
     "motion": _ld("red", "mdi:motion-sensor", "Bewegung", "Motion"),
-    "openings": _ld("brown", "mdi:door", "Öffnungen", "Openings"),
     "leak": _ld("light-blue", "mdi:water-alert", "Leck", "Leak"),
     "air_quality": _ld("teal", "mdi:air-filter", "Luftqualität", "Air Quality"),
     "cost": _ld("green", "mdi:cash", "Kosten", "Cost"),
@@ -152,7 +152,6 @@ DOMAIN_LABELS: Final[dict[str, str]] = {
     "water_heater": "climate",
     "lawn_mower": "garden",
     "remote": "media",
-    "valve": "openings",
 }
 
 # --- device_class -> label key ------------------------------------------
@@ -185,10 +184,10 @@ DEVICE_CLASS_LABELS: Final[dict[str, str]] = {
     "vibration": "motion",
     "occupancy": "presence",
     "presence": "presence",
-    "door": "openings",
-    "window": "openings",
-    "garage_door": "openings",
-    "opening": "openings",
+    "door": "security",
+    "window": "security",
+    "garage_door": "security",
+    "opening": "security",
     "lock": "locks",
     "smoke": "security",
     "carbon_monoxide": "security",
@@ -225,7 +224,20 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "humidity": "humidity",
     "motion": "motion",
     "wallbox": "car",
+    "frost": "weather",
+    "unwetter": "weather",
+    "olverbrauch": "climate",
+    "oelverbrauch": "climate",
+    "heizol": "climate",
+    "heizoel": "climate",
 }
+
+# Known vehicle/model names; matched as whole words in entity_id/name and
+# always labeled "car" (even when a device_class also applies).
+CAR_NAME_KEYWORDS: Final[tuple[str, ...]] = (
+    "egolf", "golf", "tesla", "zoe", "leaf", "kona", "ioniq",
+    "enyaq", "polestar", "cupra",
+)
 
 # --- integration (platform) -> curated theme label ----------------------
 # Thematic labels that cannot be derived from domain/device_class, mapped
@@ -256,6 +268,8 @@ INTEGRATION_LABELS: Final[dict[str, str]] = {
     "easee": "car",
     "zaptec": "car",
     "openevse": "car",
+    # heating oil
+    "oilfox": "climate",
 }
 
 
@@ -355,8 +369,16 @@ def compute_label_specs(
     )
 
     # Curated integration themes apply even to diagnostic/config entities.
-    if options.enable_curated and platform:
-        add(INTEGRATION_LABELS.get(platform))
+    if options.enable_curated:
+        if platform:
+            add(INTEGRATION_LABELS.get(platform))
+        # Known vehicle names always count as "car".
+        ename = getattr(entry, "name", None) or getattr(
+            entry, "original_name", None
+        )
+        hay = _normalize(f"{entry.entity_id} {ename or ''}")
+        if any(f" {kw} " in hay for kw in CAR_NAME_KEYWORDS):
+            add("car")
 
     # Domain/device_class labels are skipped for config/diagnostic helpers.
     if not is_category:
@@ -386,5 +408,9 @@ def compute_label_specs(
 
     if options.label_prefix:
         specs = [{**s, "name": f"{options.label_prefix}{s['name']}"} for s in specs]
+
+    # Cap the number of labels per entity (most relevant first).
+    if options.max_labels and len(specs) > options.max_labels:
+        specs = specs[: options.max_labels]
 
     return specs

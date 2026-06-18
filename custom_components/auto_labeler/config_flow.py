@@ -27,12 +27,14 @@ from .const import (
     CONF_ENABLE_CURATED,
     CONF_ENABLE_FLOOR,
     CONF_LANGUAGE,
+    CONF_MAX_LABELS,
     CONF_SKIP_CATEGORIES,
     DEFAULT_DRY_RUN,
     DEFAULT_ENABLE_AREA,
     DEFAULT_ENABLE_CURATED,
     DEFAULT_ENABLE_FLOOR,
     DEFAULT_LANGUAGE,
+    DEFAULT_MAX_LABELS,
     DEFAULT_ENABLE_DEVICE_CLASS,
     DEFAULT_ENABLE_DOMAIN,
     DEFAULT_ENABLE_INTEGRATION,
@@ -124,6 +126,10 @@ class AutoLabelerOptionsFlow(OptionsFlow):
                     CONF_LANGUAGE,
                     default=o.get(CONF_LANGUAGE, DEFAULT_LANGUAGE),
                 ): vol.In(["de", "en"]),
+                vol.Optional(
+                    CONF_MAX_LABELS,
+                    default=o.get(CONF_MAX_LABELS, DEFAULT_MAX_LABELS),
+                ): vol.All(int, vol.Range(min=1, max=10)),
                 vol.Optional(
                     CONF_RUN_ON_STARTUP,
                     default=o.get(

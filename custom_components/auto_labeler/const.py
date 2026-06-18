@@ -20,6 +20,7 @@ CONF_ENABLE_FLOOR: Final = "enable_floor"
 CONF_ENABLE_CURATED: Final = "enable_curated"
 CONF_SKIP_CATEGORIES: Final = "skip_categories"
 CONF_LANGUAGE: Final = "language"
+CONF_MAX_LABELS: Final = "max_labels"
 CONF_LABEL_PREFIX: Final = "label_prefix"
 
 # Defaults
@@ -35,6 +36,7 @@ DEFAULT_ENABLE_FLOOR: Final = False
 DEFAULT_ENABLE_CURATED: Final = True
 DEFAULT_SKIP_CATEGORIES: Final = True
 DEFAULT_LANGUAGE: Final = "de"
+DEFAULT_MAX_LABELS: Final = 2
 DEFAULT_LABEL_PREFIX: Final = ""
 
 # Services

@@ -10,6 +10,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `auto_labeler.assign_areas` service: auto-assigns entities **without** an
   area to a matching area by name/alias (longest match wins, ambiguous matches
   skipped). Supports `dry_run`; never changes existing area assignments.
+- Known vehicle names (e-Golf, Tesla, Zoe, Leaf, Kona, Ioniq, …) are labeled
+  **Auto** even when a device class also applies.
+- `max_labels` option (default **2**) caps labels per entity.
+
+### Changed
+- Doors/windows/openings now map to **Sicherheit** (the separate "Öffnungen"
+  label was removed).
+- Frost/storm warnings map to **Wetter**; heating-oil entities (oilfox,
+  Ölverbrauch) map to **Klima**.
 
 ## [0.1.0] - 2026-06-18
 
