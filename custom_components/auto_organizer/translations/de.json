@@ -52,7 +52,13 @@
       "dry_run": { "name": "Testlauf" }
     },
     "sensor": {
-      "last_run": { "name": "Letzter Lauf" }
+      "last_run": { "name": "Letzter Lauf" },
+      "last_run_time": { "name": "Zuletzt gelaufen" },
+      "labeled": { "name": "Gelabelte Entitäten" },
+      "unlabeled": { "name": "Nicht gelabelte Entitäten" },
+      "without_area": { "name": "Entitäten ohne Bereich" },
+      "managed_labels": { "name": "Verwaltete Labels" },
+      "coverage": { "name": "Label-Abdeckung" }
     }
   },
   "services": {

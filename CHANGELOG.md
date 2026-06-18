@@ -9,7 +9,9 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Added
 - **Control entities** (a device with): *Run now* and *Cleanup labels* buttons,
   a *Run scope* select (labels+areas / only labels / only areas), a *Dry run*
-  switch, and a *Last run* sensor with result details.
+  switch, and sensors: *Last run* (+ details), *Last run time*, *Labeled
+  entities*, *Unlabeled entities*, *Entities without area*, *Managed labels*
+  and *Label coverage* (%).
 - `auto_organizer.assign_areas` service: auto-assigns entities **without** an
   area to a matching area by name/alias (longest match wins, ambiguous matches
   skipped). Supports `dry_run`; never changes existing area assignments.

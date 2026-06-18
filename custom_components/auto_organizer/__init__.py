@@ -128,6 +128,14 @@ async def async_setup_entry(
             )
         )
 
+    async def _refresh_stats(*_) -> None:
+        runtime.refresh_stats()
+
+    async_at_started(hass, _refresh_stats)
+    entry.async_on_unload(
+        async_track_time_interval(hass, _refresh_stats, timedelta(minutes=5))
+    )
+
     _register_services(hass)
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     return True
