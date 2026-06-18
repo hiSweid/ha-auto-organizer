@@ -20,6 +20,7 @@
           "enable_domain": "Nach Domain labeln (Lampen, Schalter, …)",
           "enable_device_class": "Nach Geräteklasse labeln (Temperatur, Bewegung, …)",
           "enable_integration": "Nach Quell-Integration labeln",
+          "enable_curated": "Themen-Labels für bekannte Integrationen (Haushaltsgeräte, Garten, Netzwerk …)",
           "skip_categories": "Diagnose-/Konfig-Entitäten überspringen",
           "language": "Label-Sprache (de/en)",
           "run_on_startup": "Einmal beim Start von Home Assistant ausführen",

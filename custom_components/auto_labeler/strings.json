@@ -20,6 +20,7 @@
           "enable_domain": "Label by domain (lights, switches, …)",
           "enable_device_class": "Label by device class (temperature, motion, …)",
           "enable_integration": "Label by source integration",
+          "enable_curated": "Curated theme labels (appliances, garden, network …)",
           "skip_categories": "Skip diagnostic/config entities",
           "language": "Label language (de/en)",
           "run_on_startup": "Run once on Home Assistant start",

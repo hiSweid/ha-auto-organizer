@@ -127,3 +127,28 @@ def test_unsupported_language_falls_back_to_german():
 def test_language_region_code_normalized():
     opts = LabelerOptions(language="en-US")
     assert names(FakeEntry("light.k"), opts) == ["Lights"]
+
+
+def test_curated_integration_label():
+    entry = FakeEntry("sensor.maehroboter_akku", platform="navimow")
+    # curated key comes first, then the domain label
+    assert names(entry) == ["Garten", "Sensoren"]
+
+
+def test_curated_applies_even_to_diagnostic():
+    entry = FakeEntry(
+        "sensor.pve_cpu", platform="proxmoxve", entity_category="diagnostic"
+    )
+    # diagnostic => domain label skipped, but curated theme still applied
+    assert names(entry) == ["Netzwerk & Server"]
+
+
+def test_curated_can_be_disabled():
+    opts = LabelerOptions(enable_curated=False)
+    entry = FakeEntry("sensor.maehroboter_akku", platform="navimow")
+    assert names(entry, opts) == ["Sensoren"]
+
+
+def test_curated_appliance_label():
+    entry = FakeEntry("binary_sensor.waschmaschine", platform="ha_washdata")
+    assert "Haushaltsgeräte" in names(entry)

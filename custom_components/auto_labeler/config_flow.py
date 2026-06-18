@@ -23,9 +23,11 @@ from .const import (
     CONF_OVERWRITE,
     CONF_RUN_ON_STARTUP,
     CONF_SCAN_INTERVAL,
+    CONF_ENABLE_CURATED,
     CONF_LANGUAGE,
     CONF_SKIP_CATEGORIES,
     DEFAULT_DRY_RUN,
+    DEFAULT_ENABLE_CURATED,
     DEFAULT_LANGUAGE,
     DEFAULT_ENABLE_DEVICE_CLASS,
     DEFAULT_ENABLE_DOMAIN,
@@ -95,6 +97,10 @@ class AutoLabelerOptionsFlow(OptionsFlow):
                     default=o.get(
                         CONF_ENABLE_INTEGRATION, DEFAULT_ENABLE_INTEGRATION
                     ),
+                ): bool,
+                vol.Optional(
+                    CONF_ENABLE_CURATED,
+                    default=o.get(CONF_ENABLE_CURATED, DEFAULT_ENABLE_CURATED),
                 ): bool,
                 vol.Optional(
                     CONF_SKIP_CATEGORIES,

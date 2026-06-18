@@ -57,6 +57,7 @@ class LabelerOptions:
     enable_domain: bool = True
     enable_device_class: bool = True
     enable_integration: bool = False
+    enable_curated: bool = True
     skip_categories: bool = True
     language: str = DEFAULT_LANGUAGE
     label_prefix: str = ""
@@ -110,6 +111,14 @@ LABELS: Final[dict[str, LabelDef]] = {
     "leak": _ld("light-blue", "mdi:water-alert", "Leck", "Leak"),
     "connectivity": _ld("grey", "mdi:wifi", "Verbindung", "Connectivity"),
     "air_quality": _ld("teal", "mdi:air-filter", "Luftqualität", "Air Quality"),
+    # curated, integration-derived themes
+    "appliances": _ld(
+        "orange", "mdi:washing-machine", "Haushaltsgeräte", "Appliances"
+    ),
+    "garden": _ld("light-green", "mdi:flower", "Garten", "Garden"),
+    "network": _ld(
+        "blue-grey", "mdi:server-network", "Netzwerk & Server", "Network & Servers"
+    ),
 }
 
 
@@ -184,6 +193,31 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "motion": "motion",
 }
 
+# --- integration (platform) -> curated theme label ----------------------
+# Thematic labels that cannot be derived from domain/device_class, mapped
+# from the source integration. These apply even to diagnostic/config
+# entities (they are explicitly curated, so noise is not a concern).
+INTEGRATION_LABELS: Final[dict[str, str]] = {
+    # household appliances
+    "homeconnect": "appliances",
+    "homeconnect_ws": "appliances",
+    "ha_washdata": "appliances",
+    "miele": "appliances",
+    # garden / outdoor
+    "navimow": "garden",
+    "gardena": "garden",
+    "gardena_bluetooth": "garden",
+    "rainbird": "garden",
+    "opensprinkler": "garden",
+    # network & servers
+    "proxmoxve": "network",
+    "fritz": "network",
+    "fritzbox_callmonitor": "network",
+    "unifi": "network",
+    "openwrt": "network",
+    "speedtestdotnet": "network",
+}
+
 
 def resolve_language(language: str | None) -> str:
     """Return a supported language code, falling back to the default."""
@@ -211,37 +245,44 @@ def compute_label_specs(
     keys: list[str] = []
     seen: set[str] = set()
 
-    # Skip config/diagnostic helper entities; they only add noise.
-    if options.skip_categories and getattr(entry, "entity_category", None):
-        return []
-
     def add(key: str | None) -> None:
         if key and key not in seen:
             seen.add(key)
             keys.append(key)
 
-    domain = entry.entity_id.split(".", 1)[0]
+    platform = getattr(entry, "platform", None)
+    is_category = bool(
+        options.skip_categories and getattr(entry, "entity_category", None)
+    )
 
-    if options.enable_domain:
-        add(DOMAIN_LABELS.get(domain))
+    # Curated integration themes apply even to diagnostic/config entities.
+    if options.enable_curated and platform:
+        add(INTEGRATION_LABELS.get(platform))
 
-    if options.enable_device_class:
-        device_class = entry.device_class or entry.original_device_class
-        if device_class:
-            add(DEVICE_CLASS_LABELS.get(device_class))
+    # Domain/device_class labels are skipped for config/diagnostic helpers.
+    if not is_category:
+        domain = entry.entity_id.split(".", 1)[0]
 
-    # Keyword fallbacks only when nothing more specific matched.
-    if not keys:
-        entity_id = entry.entity_id.lower()
-        for needle, key in KEYWORD_LABELS.items():
-            if needle in entity_id:
-                add(key)
+        if options.enable_domain:
+            add(DOMAIN_LABELS.get(domain))
+
+        if options.enable_device_class:
+            device_class = entry.device_class or entry.original_device_class
+            if device_class:
+                add(DEVICE_CLASS_LABELS.get(device_class))
+
+        # Keyword fallbacks only when nothing more specific matched.
+        if not keys:
+            entity_id = entry.entity_id.lower()
+            for needle, key in KEYWORD_LABELS.items():
+                if needle in entity_id:
+                    add(key)
 
     specs = [label_spec(k, options.language) for k in keys]
 
-    if options.enable_integration and entry.platform:
+    if options.enable_integration and not is_category and platform:
         specs.append(
-            {"name": entry.platform, "color": "grey", "icon": "mdi:puzzle"}
+            {"name": platform, "color": "grey", "icon": "mdi:puzzle"}
         )
 
     if options.label_prefix:
