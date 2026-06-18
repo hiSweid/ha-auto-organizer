@@ -12,6 +12,7 @@ from homeassistant.util import dt as dt_util
 
 from . import AutoOrganizerConfigEntry
 from .coordinator import AutoOrganizerRuntime
+from .rules import affected_count
 
 
 async def async_setup_entry(
@@ -48,17 +49,6 @@ class _BaseSensor(SensorEntity):
         self.async_on_remove(self._runtime.add_listener(self.async_write_ha_state))
 
 
-def _affected(last: dict) -> int:
-    total = 0
-    if "labels" in last:
-        total += int(last["labels"].get("updated", 0))
-    if "areas" in last:
-        total += int(last["areas"].get("assigned", 0))
-    if "cleanup" in last:
-        total += int(last["cleanup"].get("updated", 0))
-    return total
-
-
 class LastRunSensor(_BaseSensor):
     """Number of entities changed by the last run; details in attributes."""
 
@@ -71,7 +61,7 @@ class LastRunSensor(_BaseSensor):
     def native_value(self) -> int | None:
         if not self._runtime.last_run:
             return None
-        return _affected(self._runtime.last_run)
+        return affected_count(self._runtime.last_run)
 
     @property
     def extra_state_attributes(self) -> dict[str, Any] | None:

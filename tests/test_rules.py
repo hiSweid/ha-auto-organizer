@@ -13,6 +13,7 @@ sys.path.insert(0, str(COMPONENT))
 import rules  # noqa: E402
 from rules import (  # noqa: E402
     LabelerOptions,
+    affected_count,
     area_floor_specs,
     compute_label_specs,
     label_differs,
@@ -280,6 +281,26 @@ def test_heating_domains_go_into_klima():
 
 def test_energy_and_lights_have_distinct_colors():
     assert rules.LABELS["energy"]["color"] != rules.LABELS["lights"]["color"]
+
+
+def test_affected_count_none_and_empty():
+    assert affected_count(None) == 0
+    assert affected_count({}) == 0
+
+
+def test_affected_count_sums_labels_and_areas():
+    last = {"labels": {"updated": 10}, "areas": {"assigned": 5}}
+    assert affected_count(last) == 15
+
+
+def test_affected_count_cleanup_and_remove_all():
+    assert affected_count({"cleanup": {"updated": 7}}) == 7
+    assert affected_count({"remove_all": {"updated": 42}}) == 42
+
+
+def test_affected_count_ignores_non_dict_sections():
+    # robustness: missing/garbage sections must not raise
+    assert affected_count({"labels": None, "scope": "labels"}) == 0
 
 
 def test_label_differs_detects_color_and_icon_drift():

@@ -344,6 +344,23 @@ def label_differs(color: str | None, icon: str | None, spec: LabelSpec) -> bool:
     return color != spec["color"] or icon != spec["icon"]
 
 
+def affected_count(last_run: dict | None) -> int:
+    """Total entities changed in a run summary (labels/areas/cleanup/remove_all)."""
+    if not last_run:
+        return 0
+    total = 0
+    for section, key in (
+        ("labels", "updated"),
+        ("areas", "assigned"),
+        ("cleanup", "updated"),
+        ("remove_all", "updated"),
+    ):
+        section_data = last_run.get(section)
+        if isinstance(section_data, dict):
+            total += int(section_data.get(key, 0))
+    return total
+
+
 def label_spec(key: str, language: str = DEFAULT_LANGUAGE) -> LabelSpec:
     """Resolve a label key into a localized :class:`LabelSpec`."""
     ld = LABELS[key]
