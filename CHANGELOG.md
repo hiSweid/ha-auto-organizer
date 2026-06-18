@@ -18,6 +18,9 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Known vehicle names (e-Golf, Tesla, Zoe, Leaf, Kona, Ioniq, …) are labeled
   **Auto** even when a device class also applies.
 - `max_labels` option (default **2**) caps labels per entity.
+- Much larger keyword vocabulary (German + English) for the fallback, now
+  matched against the normalized entity_id **and** friendly name, so more
+  entities get a sensible label (e.g. Wasser, Klima, Medien, Garten).
 
 ### Changed
 - Doors/windows/openings now map to **Sicherheit** (the separate "Öffnungen"

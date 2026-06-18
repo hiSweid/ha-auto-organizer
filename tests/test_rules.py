@@ -171,8 +171,34 @@ def test_car_label_from_integration():
 
 
 def test_car_label_from_keyword():
-    entry = FakeEntry("sensor.wallbox_leistung")
-    assert names(entry) == ["Auto"]
+    # "wallbox" -> car and "leistung" -> energy (capped at 2)
+    assert "Auto" in names(FakeEntry("sensor.wallbox_ladung"))
+
+
+def test_keyword_water_group():
+    assert names(FakeEntry("sensor.wasserzaehler_stand")) == ["Wasser"]
+
+
+def test_keyword_climate_group():
+    assert names(FakeEntry("sensor.heizung_vorlauf")) == ["Klima"]
+
+
+def test_keyword_matches_friendly_name():
+    entry = FakeEntry("sensor.xyz_123")
+    entry.name = "Waschmaschine Restzeit"
+    assert "Haushaltsgeräte" in names(entry)
+
+
+def test_keyword_umlaut_in_name():
+    entry = FakeEntry("sensor.abc")
+    entry.name = "Lüfter Bad"
+    assert names(entry) == ["Lüfter"]
+
+
+def test_keyword_only_as_fallback():
+    # has a device_class -> keyword fallback must NOT run
+    entry = FakeEntry("sensor.wasser_temp", original_device_class="temperature")
+    assert names(entry) == ["Temperatur"]
 
 
 def test_curated_appliance_label():

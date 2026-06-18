@@ -214,22 +214,152 @@ DEVICE_CLASS_LABELS: Final[dict[str, str]] = {
     "irradiance": "weather",
 }
 
-# --- entity_id keyword fallbacks ----------------------------------------
-# Applied when nothing more specific matched; keyed by substring in entity_id.
+# --- keyword fallbacks --------------------------------------------------
+# Applied only when nothing more specific matched. Substrings are tested
+# against the normalized (lowercased, de-umlauted) entity_id AND friendly
+# name, so e.g. "wasser" matches "Wasserzähler". Keep substrings >= 4 chars
+# and distinctive to avoid false positives. All map to EXISTING labels.
 KEYWORD_LABELS: Final[dict[str, str]] = {
-    "battery": "battery",
-    "_power": "energy",
-    "_energy": "energy",
+    # energy
+    "strom": "energy",
+    "leistung": "energy",
+    "energie": "energy",
+    "energy": "energy",
+    "power": "energy",
+    "watt": "energy",
+    "kwh": "energy",
+    "einspeis": "energy",
+    "netzbezug": "energy",
+    "photovolt": "energy",
+    "solar": "energy",
+    "wechselrichter": "energy",
+    # water
+    "wasser": "water",
+    "water": "water",
+    "fluessig": "water",
+    "liquid": "water",
+    "nass": "water",
+    # leak
+    "wasserleck": "leak",
+    "leckage": "leak",
+    "wassermelder": "leak",
+    # temperature
     "temperature": "temperature",
+    "temperatur": "temperature",
+    "thermometer": "temperature",
+    # humidity
     "humidity": "humidity",
+    "feucht": "humidity",
+    "luftfeucht": "humidity",
+    "taupunkt": "humidity",
+    # battery
+    "battery": "battery",
+    "batterie": "battery",
+    "akku": "battery",
+    "ladestand": "battery",
+    "ladezustand": "battery",
+    # motion / presence
     "motion": "motion",
-    "wallbox": "car",
-    "frost": "weather",
+    "bewegung": "motion",
+    "bewegungsmelder": "motion",
+    "praesenz": "presence",
+    # light level
+    "helligkeit": "light_level",
+    "illuminance": "light_level",
+    "beleuchtungsstaerke": "light_level",
+    # weather
+    "wetter": "weather",
+    "weather": "weather",
+    "niederschlag": "weather",
+    "regenmenge": "weather",
+    "windgeschw": "weather",
+    "windspeed": "weather",
+    "sturm": "weather",
     "unwetter": "weather",
+    "frost": "weather",
+    "pollen": "weather",
+    "sonnenaufgang": "weather",
+    "sonnenuntergang": "weather",
+    # security
+    "rauchmelder": "security",
+    "alarm": "security",
+    "einbruch": "security",
+    "tuerkontakt": "security",
+    "fensterkontakt": "security",
+    # car / charging
+    "wallbox": "car",
+    "ladestation": "car",
+    "egolf": "car",
+    "tesla": "car",
+    "ioniq": "car",
+    "enyaq": "car",
+    "evcc": "car",
+    # media
+    "fernseher": "media",
+    "lautsprecher": "media",
+    "sonos": "media",
+    "soundbar": "media",
+    "mediaplayer": "media",
+    "receiver": "media",
+    # appliances
+    "waschmaschine": "appliances",
+    "trockner": "appliances",
+    "geschirrspuel": "appliances",
+    "spuelmaschine": "appliances",
+    "kaffeemaschine": "appliances",
+    "backofen": "appliances",
+    "kuehlschrank": "appliances",
+    "gefrier": "appliances",
+    "dishwasher": "appliances",
+    "washer": "appliances",
+    # garden
+    "garten": "garden",
+    "maehroboter": "garden",
+    "rasenmaeher": "garden",
+    "bewaesser": "garden",
+    "irrigation": "garden",
+    # network
+    "fritzbox": "network",
+    "proxmox": "network",
+    "router": "network",
+    "netzwerk": "network",
+    "speedtest": "network",
+    "unifi": "network",
+    "wireguard": "network",
+    "pihole": "network",
+    # climate / heating
+    "klima": "climate",
+    "heizung": "climate",
+    "heizkoerper": "climate",
+    "thermostat": "climate",
+    "klimaanlage": "climate",
+    "heizoel": "climate",
+    "heizol": "climate",
     "olverbrauch": "climate",
     "oelverbrauch": "climate",
-    "heizol": "climate",
-    "heizoel": "climate",
+    "fussbodenheiz": "climate",
+    # cost
+    "kosten": "cost",
+    "tarif": "cost",
+    "ersparnis": "cost",
+    "erloes": "cost",
+    "strompreis": "cost",
+    # covers
+    "rolllad": "covers",
+    "rollladen": "covers",
+    "jalousie": "covers",
+    "markise": "covers",
+    "beschattung": "covers",
+    # locks
+    "tuerschloss": "locks",
+    "schliessanlage": "locks",
+    # fans
+    "luefter": "fans",
+    "ventilator": "fans",
+    "abluft": "fans",
+    "lueftung": "fans",
+    # updates
+    "firmware": "updates",
 }
 
 # Known vehicle/model names; matched as whole words in entity_id/name and
@@ -414,11 +544,15 @@ def compute_label_specs(
             if device_class:
                 add(DEVICE_CLASS_LABELS.get(device_class))
 
-        # Keyword fallbacks only when nothing more specific matched.
+        # Keyword fallbacks only when nothing more specific matched. Matched
+        # against the normalized entity_id and friendly name.
         if not keys:
-            entity_id = entry.entity_id.lower()
+            ename = getattr(entry, "name", None) or getattr(
+                entry, "original_name", None
+            )
+            hay = _normalize(f"{entry.entity_id} {ename or ''}")
             for needle, key in KEYWORD_LABELS.items():
-                if needle in entity_id:
+                if needle in hay:
                     add(key)
 
     specs = [label_spec(k, options.language) for k in keys]
