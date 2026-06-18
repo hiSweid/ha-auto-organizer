@@ -152,3 +152,35 @@ def test_curated_can_be_disabled():
 def test_curated_appliance_label():
     entry = FakeEntry("binary_sensor.waschmaschine", platform="ha_washdata")
     assert "Haushaltsgeräte" in names(entry)
+
+
+def test_monetary_maps_to_cost():
+    entry = FakeEntry("sensor.strompreis", original_device_class="monetary")
+    assert "Kosten" in names(entry)
+
+
+def test_lawn_mower_domain_maps_to_garden():
+    assert names(FakeEntry("lawn_mower.vorgarten")) == ["Garten"]
+
+
+def test_weather_device_classes_map_to_weather():
+    for dc in ("wind_speed", "precipitation", "uv_index", "irradiance"):
+        entry = FakeEntry("sensor.x", original_device_class=dc)
+        assert "Wetter" in names(entry), dc
+
+
+def test_apparent_power_groups_into_energy():
+    entry = FakeEntry("sensor.x", original_device_class="apparent_power")
+    assert "Energie" in names(entry)
+
+
+def test_vibration_maps_to_motion():
+    entry = FakeEntry("binary_sensor.x", original_device_class="vibration")
+    assert "Bewegung" in names(entry)
+
+
+def test_voc_maps_to_air_quality():
+    entry = FakeEntry(
+        "sensor.x", original_device_class="volatile_organic_compounds"
+    )
+    assert "Luftqualität" in names(entry)
