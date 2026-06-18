@@ -16,7 +16,9 @@ async def async_setup_entry(
     async_add_entities: AddEntitiesCallback,
 ) -> None:
     runtime = entry.runtime_data
-    async_add_entities([RunButton(runtime), CleanupButton(runtime)])
+    async_add_entities(
+        [RunButton(runtime), CleanupButton(runtime), RemoveAllButton(runtime)]
+    )
 
 
 class _BaseButton(ButtonEntity):
@@ -48,3 +50,13 @@ class CleanupButton(_BaseButton):
 
     async def async_press(self) -> None:
         await self._runtime.async_cleanup()
+
+
+class RemoveAllButton(_BaseButton):
+    """Remove EVERY label in Home Assistant (not just managed ones)."""
+
+    def __init__(self, runtime: AutoOrganizerRuntime) -> None:
+        super().__init__(runtime, "remove_all", "mdi:label-off")
+
+    async def async_press(self) -> None:
+        await self._runtime.async_remove_all()

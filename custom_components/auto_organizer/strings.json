@@ -36,7 +36,8 @@
   "entity": {
     "button": {
       "run": { "name": "Run now" },
-      "cleanup": { "name": "Cleanup labels" }
+      "cleanup": { "name": "Cleanup labels" },
+      "remove_all": { "name": "Remove all labels" }
     },
     "select": {
       "scope": {
@@ -93,6 +94,16 @@
     "assign_areas": {
       "name": "Assign areas",
       "description": "Auto-assign entities without an area to a matching area by name.",
+      "fields": {
+        "dry_run": {
+          "name": "Dry run",
+          "description": "Compute changes without writing them."
+        }
+      }
+    },
+    "remove_all": {
+      "name": "Remove all labels",
+      "description": "Delete every label in Home Assistant, not just managed ones.",
       "fields": {
         "dry_run": {
           "name": "Dry run",

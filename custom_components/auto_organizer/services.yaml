@@ -31,3 +31,11 @@ assign_areas:
       default: false
       selector:
         boolean:
+
+remove_all:
+  fields:
+    dry_run:
+      example: true
+      default: false
+      selector:
+        boolean:

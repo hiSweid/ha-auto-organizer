@@ -290,3 +290,30 @@ class Labeler:
             result.labels_removed += 1
 
         return result
+
+    async def remove_all_labels(self, dry_run: bool = False) -> RunResult:
+        """Remove **every** label in Home Assistant, not just managed ones.
+
+        Clears all label assignments from entities and deletes all labels.
+        Destructive on purpose — triggered explicitly by the user.
+        """
+        result = RunResult()
+        reg = lr.async_get(self.hass)
+        ent_reg = er.async_get(self.hass)
+
+        all_label_ids = {label.label_id for label in reg.async_list_labels()}
+        if not all_label_ids:
+            return result
+
+        for entry in list(ent_reg.entities.values()):
+            if entry.labels:
+                result.updated += 1
+                if not dry_run:
+                    ent_reg.async_update_entity(entry.entity_id, labels=set())
+
+        for label_id in all_label_ids:
+            if not dry_run:
+                reg.async_delete(label_id)
+            result.labels_removed += 1
+
+        return result

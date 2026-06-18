@@ -56,6 +56,7 @@ from .const import (
     DOMAIN,
     SERVICE_ASSIGN_AREAS,
     SERVICE_CLEANUP,
+    SERVICE_REMOVE_ALL,
     SERVICE_RUN,
 )
 from .labeler import Labeler, LabelerOptions
@@ -183,6 +184,15 @@ def _register_services(hass: HomeAssistant) -> None:
         )
         return result.as_dict()
 
+    async def _handle_remove_all(call: ServiceCall) -> ServiceResponse:
+        entries = hass.config_entries.async_entries(DOMAIN)
+        if not entries:
+            return {"error": "no config entry"}
+        result = await entries[0].runtime_data.labeler.remove_all_labels(
+            dry_run=call.data.get(ATTR_DRY_RUN, False)
+        )
+        return result.as_dict()
+
     hass.services.async_register(
         DOMAIN,
         SERVICE_RUN,
@@ -212,6 +222,13 @@ def _register_services(hass: HomeAssistant) -> None:
         schema=vol.Schema({vol.Optional(ATTR_DRY_RUN): cv.boolean}),
         supports_response=SupportsResponse.OPTIONAL,
     )
+    hass.services.async_register(
+        DOMAIN,
+        SERVICE_REMOVE_ALL,
+        _handle_remove_all,
+        schema=vol.Schema({vol.Optional(ATTR_DRY_RUN): cv.boolean}),
+        supports_response=SupportsResponse.OPTIONAL,
+    )
 
 
 async def _async_update_listener(
@@ -231,6 +248,11 @@ async def async_unload_entry(
         e for e in hass.config_entries.async_entries(DOMAIN) if e.entry_id != entry.entry_id
     ]
     if not remaining:
-        for service in (SERVICE_RUN, SERVICE_CLEANUP, SERVICE_ASSIGN_AREAS):
+        for service in (
+            SERVICE_RUN,
+            SERVICE_CLEANUP,
+            SERVICE_ASSIGN_AREAS,
+            SERVICE_REMOVE_ALL,
+        ):
             hass.services.async_remove(DOMAIN, service)
     return unloaded

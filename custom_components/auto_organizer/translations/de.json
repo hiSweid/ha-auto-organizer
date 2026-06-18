@@ -36,7 +36,8 @@
   "entity": {
     "button": {
       "run": { "name": "Jetzt ausführen" },
-      "cleanup": { "name": "Labels aufräumen" }
+      "cleanup": { "name": "Labels aufräumen" },
+      "remove_all": { "name": "Alle Labels entfernen" }
     },
     "select": {
       "scope": {
@@ -93,6 +94,16 @@
     "assign_areas": {
       "name": "Bereiche zuweisen",
       "description": "Entitäten ohne Bereich automatisch einem passenden Bereich anhand des Namens zuordnen.",
+      "fields": {
+        "dry_run": {
+          "name": "Testlauf",
+          "description": "Änderungen berechnen, aber nicht schreiben."
+        }
+      }
+    },
+    "remove_all": {
+      "name": "Alle Labels entfernen",
+      "description": "Wirklich alle Labels in Home Assistant löschen, nicht nur die selbst erstellten.",
       "fields": {
         "dry_run": {
           "name": "Testlauf",

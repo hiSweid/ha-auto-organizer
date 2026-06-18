@@ -129,3 +129,17 @@ class AutoOrganizerRuntime:
         }
         self.refresh_stats()
         return self.last_run
+
+    async def async_remove_all(self) -> dict:
+        """Remove every label in Home Assistant (not just managed ones)."""
+        result = (
+            await self.labeler.remove_all_labels(dry_run=self.dry_run)
+        ).as_dict()
+        self.last_run = {
+            "scope": "remove_all",
+            "dry_run": self.dry_run,
+            "timestamp": dt_util.utcnow().isoformat(),
+            "remove_all": result,
+        }
+        self.refresh_stats()
+        return self.last_run

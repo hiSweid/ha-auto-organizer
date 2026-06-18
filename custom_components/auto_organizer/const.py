@@ -43,6 +43,7 @@ DEFAULT_LABEL_PREFIX: Final = ""
 SERVICE_RUN: Final = "run"
 SERVICE_CLEANUP: Final = "cleanup"
 SERVICE_ASSIGN_AREAS: Final = "assign_areas"
+SERVICE_REMOVE_ALL: Final = "remove_all"
 
 # Control-entity run scope (select)
 SCOPE_BOTH: Final = "labels_and_areas"
