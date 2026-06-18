@@ -15,7 +15,15 @@ from rules import (  # noqa: E402
     LabelerOptions,
     area_floor_specs,
     compute_label_specs,
+    match_area,
 )
+
+AREAS = [
+    {"area_id": "wohnzimmer", "name": "Wohnzimmer", "aliases": []},
+    {"area_id": "kueche", "name": "Küche", "aliases": ["Kitchen"]},
+    {"area_id": "bad", "name": "Bad", "aliases": []},
+    {"area_id": "schlafzimmer", "name": "Schlafzimmer", "aliases": []},
+]
 
 
 @dataclass
@@ -300,3 +308,43 @@ def test_raw_integration_label_skipped_for_diagnostic():
     opts = LabelerOptions(enable_integration=True, enable_curated=False)
     entry = FakeEntry("sensor.x", platform="foo", entity_category="diagnostic")
     assert names(entry, opts) == []
+
+
+# --- area matching -------------------------------------------------------
+
+def test_match_area_from_entity_id():
+    assert match_area("light.wohnzimmer_decke", None, AREAS) == "wohnzimmer"
+
+
+def test_match_area_handles_umlaut():
+    assert match_area("sensor.kueche_temperatur", "Küche Temperatur", AREAS) == "kueche"
+
+
+def test_match_area_via_alias():
+    assert match_area("switch.kitchen_coffee", None, AREAS) == "kueche"
+
+
+def test_match_area_from_friendly_name():
+    assert match_area("sensor.xyz_123", "Schlafzimmer Fenster", AREAS) == "schlafzimmer"
+
+
+def test_match_area_none_when_no_match():
+    assert match_area("sensor.cpu_load", "CPU Load", AREAS) is None
+
+
+def test_match_area_longest_wins():
+    areas = [
+        {"area_id": "bad", "name": "Bad", "aliases": []},
+        {"area_id": "gaeste_bad", "name": "Gäste Bad", "aliases": []},
+    ]
+    # "gaeste bad" is longer/more specific than "bad"
+    assert match_area("light.gaeste_bad_spiegel", None, areas) == "gaeste_bad"
+
+
+def test_match_area_ambiguous_returns_none():
+    areas = [
+        {"area_id": "a1", "name": "Nord", "aliases": []},
+        {"area_id": "a2", "name": "Süd", "aliases": []},
+    ]
+    # "nord" and "sued" both match with equal length -> ambiguous
+    assert match_area("sensor.nord_sued_klima", None, areas) is None

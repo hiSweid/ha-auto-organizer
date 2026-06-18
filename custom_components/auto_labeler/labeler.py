@@ -18,11 +18,18 @@ from .rules import (
     LabelerOptions,
     area_floor_specs,
     compute_label_specs,
+    match_area,
 )
 
 _LOGGER = logging.getLogger(__name__)
 
-__all__ = ["Labeler", "LabelerOptions", "RunResult", "compute_label_specs"]
+__all__ = [
+    "AreaAssignResult",
+    "Labeler",
+    "LabelerOptions",
+    "RunResult",
+    "compute_label_specs",
+]
 
 
 @dataclass
@@ -39,6 +46,22 @@ class RunResult:
             "scanned": self.scanned,
             "updated": self.updated,
             "labels_created": self.labels_created,
+            "changes": self.changes,
+        }
+
+
+@dataclass
+class AreaAssignResult:
+    """Summary of an area auto-assignment run."""
+
+    scanned: int = 0
+    assigned: int = 0
+    changes: list[dict[str, str]] = field(default_factory=list)
+
+    def as_dict(self) -> dict:
+        return {
+            "scanned": self.scanned,
+            "assigned": self.assigned,
             "changes": self.changes,
         }
 
@@ -156,6 +179,54 @@ class Labeler:
             result.updated,
             result.labels_created,
             options.dry_run,
+        )
+        return result
+
+    async def assign_areas(self, dry_run: bool = False) -> AreaAssignResult:
+        """Auto-assign entities without an area to a matching area by name.
+
+        Only entities that have no effective area (neither their own nor via
+        their device) are touched, so existing assignments are never changed.
+        """
+        result = AreaAssignResult()
+        ent_reg = er.async_get(self.hass)
+        area_reg = ar.async_get(self.hass)
+        dev_reg = dr.async_get(self.hass)
+
+        areas = [
+            {"area_id": a.area_id, "name": a.name, "aliases": list(a.aliases)}
+            for a in area_reg.async_list_areas()
+        ]
+        if not areas:
+            return result
+
+        for entry in list(ent_reg.entities.values()):
+            if entry.area_id:
+                continue
+            if entry.device_id:
+                device = dev_reg.async_get(entry.device_id)
+                if device and device.area_id:
+                    continue
+
+            result.scanned += 1
+            area_id = match_area(
+                entry.entity_id, entry.name or entry.original_name, areas
+            )
+            if not area_id:
+                continue
+
+            result.assigned += 1
+            result.changes.append(
+                {"entity_id": entry.entity_id, "area_id": area_id}
+            )
+            if not dry_run:
+                ent_reg.async_update_entity(entry.entity_id, area_id=area_id)
+
+        _LOGGER.info(
+            "Auto Labeler area assign: scanned=%s assigned=%s dry_run=%s",
+            result.scanned,
+            result.assigned,
+            dry_run,
         )
         return result
 

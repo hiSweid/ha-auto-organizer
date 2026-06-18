@@ -49,6 +49,7 @@ from .const import (
     DEFAULT_RUN_ON_STARTUP,
     DEFAULT_SCAN_INTERVAL,
     DOMAIN,
+    SERVICE_ASSIGN_AREAS,
     SERVICE_CLEANUP,
     SERVICE_RUN,
 )
@@ -145,6 +146,15 @@ def _register_services(hass: HomeAssistant) -> None:
         )
         return result.as_dict()
 
+    async def _handle_assign_areas(call: ServiceCall) -> ServiceResponse:
+        entries = hass.config_entries.async_entries(DOMAIN)
+        if not entries:
+            return {"error": "no config entry"}
+        result = await entries[0].runtime_data.assign_areas(
+            dry_run=call.data.get(ATTR_DRY_RUN, False)
+        )
+        return result.as_dict()
+
     hass.services.async_register(
         DOMAIN,
         SERVICE_RUN,
@@ -167,6 +177,13 @@ def _register_services(hass: HomeAssistant) -> None:
         schema=vol.Schema({vol.Optional(ATTR_DRY_RUN): cv.boolean}),
         supports_response=SupportsResponse.OPTIONAL,
     )
+    hass.services.async_register(
+        DOMAIN,
+        SERVICE_ASSIGN_AREAS,
+        _handle_assign_areas,
+        schema=vol.Schema({vol.Optional(ATTR_DRY_RUN): cv.boolean}),
+        supports_response=SupportsResponse.OPTIONAL,
+    )
 
 
 async def _async_update_listener(
@@ -181,6 +198,6 @@ async def async_unload_entry(
 ) -> bool:
     """Unload a config entry."""
     if not hass.config_entries.async_entries(DOMAIN):
-        for service in (SERVICE_RUN, SERVICE_CLEANUP):
+        for service in (SERVICE_RUN, SERVICE_CLEANUP, SERVICE_ASSIGN_AREAS):
             hass.services.async_remove(DOMAIN, service)
     return True

@@ -10,6 +10,7 @@ and English (``en``) are supported for now; German is the default.
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 from typing import Final, Protocol, TypedDict
 
@@ -263,6 +264,41 @@ def resolve_language(language: str | None) -> str:
     if language and language.split("-", 1)[0] in SUPPORTED_LANGUAGES:
         return language.split("-", 1)[0]
     return DEFAULT_LANGUAGE
+
+
+def _normalize(text: str) -> str:
+    """Lowercase, de-umlaut and reduce to space-separated alphanumeric tokens."""
+    text = text.lower()
+    for src, dst in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss")):
+        text = text.replace(src, dst)
+    return f" {re.sub(r'[^a-z0-9]+', ' ', text).strip()} "
+
+
+def match_area(
+    entity_id: str,
+    name: str | None,
+    areas: list[dict],
+) -> str | None:
+    """Guess an entity's area from its id/name by matching area names/aliases.
+
+    ``areas`` is a list of ``{"area_id", "name", "aliases"}`` dicts. A candidate
+    matches when its normalized name appears as a whole word in the entity's
+    id/name. The longest match wins; ties between different areas are treated as
+    ambiguous and return ``None`` (pure function, unit-testable).
+    """
+    hay = _normalize(f"{entity_id} {name or ''}")
+    matches: list[tuple[int, str]] = []
+    for area in areas:
+        for cand in [area.get("name", "")] + list(area.get("aliases") or []):
+            nc = _normalize(cand).strip()
+            if nc and f" {nc} " in hay:
+                matches.append((len(nc), area["area_id"]))
+                break
+    if not matches:
+        return None
+    longest = max(length for length, _ in matches)
+    top = {area_id for length, area_id in matches if length == longest}
+    return next(iter(top)) if len(top) == 1 else None
 
 
 def area_floor_specs(

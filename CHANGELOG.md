@@ -6,6 +6,11 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+- `auto_labeler.assign_areas` service: auto-assigns entities **without** an
+  area to a matching area by name/alias (longest match wins, ambiguous matches
+  skipped). Supports `dry_run`; never changes existing area assignments.
+
 ## [0.1.0] - 2026-06-18
 
 ### Added

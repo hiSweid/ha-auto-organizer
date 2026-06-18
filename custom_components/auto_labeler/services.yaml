@@ -23,3 +23,11 @@ cleanup:
       default: false
       selector:
         boolean:
+
+assign_areas:
+  fields:
+    dry_run:
+      example: true
+      default: false
+      selector:
+        boolean:

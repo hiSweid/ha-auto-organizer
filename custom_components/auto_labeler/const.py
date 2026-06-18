@@ -40,6 +40,7 @@ DEFAULT_LABEL_PREFIX: Final = ""
 # Services
 SERVICE_RUN: Final = "run"
 SERVICE_CLEANUP: Final = "cleanup"
+SERVICE_ASSIGN_AREAS: Final = "assign_areas"
 
 # Service call attributes
 ATTR_DRY_RUN: Final = "dry_run"

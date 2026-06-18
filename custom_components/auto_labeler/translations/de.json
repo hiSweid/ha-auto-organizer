@@ -60,6 +60,16 @@
           "description": "Änderungen berechnen, aber nicht schreiben."
         }
       }
+    },
+    "assign_areas": {
+      "name": "Bereiche zuweisen",
+      "description": "Entitäten ohne Bereich automatisch einem passenden Bereich anhand des Namens zuordnen.",
+      "fields": {
+        "dry_run": {
+          "name": "Testlauf",
+          "description": "Änderungen berechnen, aber nicht schreiben."
+        }
+      }
     }
   }
 }

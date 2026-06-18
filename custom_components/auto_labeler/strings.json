@@ -60,6 +60,16 @@
           "description": "Compute changes without writing them."
         }
       }
+    },
+    "assign_areas": {
+      "name": "Assign areas",
+      "description": "Auto-assign entities without an area to a matching area by name.",
+      "fields": {
+        "dry_run": {
+          "name": "Dry run",
+          "description": "Compute changes without writing them."
+        }
+      }
     }
   }
 }
