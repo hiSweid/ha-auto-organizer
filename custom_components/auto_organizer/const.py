@@ -23,6 +23,7 @@ CONF_LANGUAGE: Final = "language"
 CONF_MAX_LABELS: Final = "max_labels"
 CONF_AUTO_LABEL_NEW: Final = "auto_label_new"
 CONF_EXCLUDE: Final = "exclude"
+CONF_CUSTOM_RULES: Final = "custom_rules"
 CONF_LABEL_PREFIX: Final = "label_prefix"
 
 # Defaults
@@ -41,6 +42,7 @@ DEFAULT_LANGUAGE: Final = "de"
 DEFAULT_MAX_LABELS: Final = 2
 DEFAULT_AUTO_LABEL_NEW: Final = True
 DEFAULT_EXCLUDE: Final = ""
+DEFAULT_CUSTOM_RULES: Final = ""
 DEFAULT_LABEL_PREFIX: Final = ""
 
 # Services

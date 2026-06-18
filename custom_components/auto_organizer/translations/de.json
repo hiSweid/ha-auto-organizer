@@ -30,7 +30,8 @@
           "run_on_startup": "Einmal beim Start von Home Assistant ausführen",
           "scan_interval": "Intervall für erneuten Scan in Minuten (0 = aus)",
           "label_prefix": "Optionales Präfix für erstellte Labels",
-          "exclude": "Ausschluss (kommagetrennt: Domains, entity_ids oder Muster wie sensor.test_*)"
+          "exclude": "Ausschluss (kommagetrennt: Domains, entity_ids oder Muster wie sensor.test_*)",
+          "custom_rules": "Eigene Regeln: Schlüsselwort=Label pro Zeile (Label muss existieren, z.B. pool=water)"
         }
       }
     }

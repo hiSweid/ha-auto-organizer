@@ -67,6 +67,7 @@ class LabelerOptions:
     label_prefix: str = ""
     max_labels: int = 2
     exclude: tuple[str, ...] = field(default_factory=tuple)
+    custom_rules: dict[str, str] = field(default_factory=dict)
 
 
 # Area/floor labels use the user-defined names verbatim (not translatable),
@@ -494,6 +495,26 @@ def is_excluded(entity_id: str, patterns: tuple[str, ...] | list[str]) -> bool:
     return False
 
 
+def parse_custom_rules(text: str | None) -> dict[str, str]:
+    """Parse user rules ``keyword=label_key`` (per line or comma separated).
+
+    Keywords are normalized; only label keys that exist in :data:`LABELS` are
+    kept (unknown ones are ignored).
+    """
+    result: dict[str, str] = {}
+    if not text:
+        return result
+    for item in str(text).replace("\n", ",").split(","):
+        if "=" not in item:
+            continue
+        raw_kw, _, label = item.partition("=")
+        keyword = _normalize(raw_kw).strip()
+        label = label.strip()
+        if keyword and label in LABELS:
+            result[keyword] = label
+    return result
+
+
 def affected_count(last_run: dict | None) -> int:
     """Total entities changed in a run summary (labels/areas/cleanup/remove_all)."""
     if not last_run:
@@ -569,12 +590,16 @@ def compute_label_specs(
                 add(DEVICE_CLASS_LABELS.get(device_class))
 
         # Keyword fallbacks only when nothing more specific matched. Matched
-        # against the normalized entity_id and friendly name.
+        # against the normalized entity_id and friendly name. User-defined
+        # custom rules take precedence over the built-in vocabulary.
         if not keys:
             ename = getattr(entry, "name", None) or getattr(
                 entry, "original_name", None
             )
             hay = _normalize(f"{entry.entity_id} {ename or ''}")
+            for needle, key in options.custom_rules.items():
+                if needle in hay:
+                    add(key)
             for needle, key in KEYWORD_LABELS.items():
                 if needle in hay:
                     add(key)

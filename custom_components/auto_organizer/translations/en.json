@@ -30,7 +30,8 @@
           "run_on_startup": "Run once on Home Assistant start",
           "scan_interval": "Re-scan interval in minutes (0 = off)",
           "label_prefix": "Optional prefix for created labels",
-          "exclude": "Exclude (comma-separated domains, entity_ids or patterns like sensor.test_*)"
+          "exclude": "Exclude (comma-separated domains, entity_ids or patterns like sensor.test_*)",
+          "custom_rules": "Custom rules: keyword=label per line (label must exist, e.g. pool=water)"
         }
       }
     }

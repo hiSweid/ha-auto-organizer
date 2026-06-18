@@ -40,6 +40,7 @@ from .const import (
     CONF_ENABLE_CURATED,
     CONF_ENABLE_FLOOR,
     CONF_AUTO_LABEL_NEW,
+    CONF_CUSTOM_RULES,
     CONF_EXCLUDE,
     CONF_LANGUAGE,
     CONF_MAX_LABELS,
@@ -66,6 +67,7 @@ from .const import (
     SERVICE_RUN,
 )
 from .labeler import Labeler, LabelerOptions
+from .rules import parse_custom_rules
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -98,6 +100,7 @@ def _options_from_entry(entry: ConfigEntry) -> LabelerOptions:
         language=o.get(CONF_LANGUAGE, DEFAULT_LANGUAGE),
         max_labels=o.get(CONF_MAX_LABELS, DEFAULT_MAX_LABELS),
         exclude=_parse_exclude(o.get(CONF_EXCLUDE, "")),
+        custom_rules=parse_custom_rules(o.get(CONF_CUSTOM_RULES, "")),
         label_prefix=o.get(CONF_LABEL_PREFIX, DEFAULT_LABEL_PREFIX),
     )
 

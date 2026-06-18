@@ -16,6 +16,7 @@ from homeassistant.config_entries import ConfigEntry
 
 from .const import (
     CONF_AUTO_LABEL_NEW,
+    CONF_CUSTOM_RULES,
     CONF_EXCLUDE,
     CONF_DRY_RUN,
     CONF_ENABLE_DEVICE_CLASS,
@@ -32,6 +33,7 @@ from .const import (
     CONF_MAX_LABELS,
     CONF_SKIP_CATEGORIES,
     DEFAULT_AUTO_LABEL_NEW,
+    DEFAULT_CUSTOM_RULES,
     DEFAULT_EXCLUDE,
     DEFAULT_DRY_RUN,
     DEFAULT_ENABLE_AREA,
@@ -155,6 +157,10 @@ class AutoLabelerOptionsFlow(OptionsFlow):
                 vol.Optional(
                     CONF_EXCLUDE,
                     default=o.get(CONF_EXCLUDE, DEFAULT_EXCLUDE),
+                ): str,
+                vol.Optional(
+                    CONF_CUSTOM_RULES,
+                    default=o.get(CONF_CUSTOM_RULES, DEFAULT_CUSTOM_RULES),
                 ): str,
             }
         )

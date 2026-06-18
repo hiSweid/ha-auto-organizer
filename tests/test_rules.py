@@ -20,6 +20,7 @@ from rules import (  # noqa: E402
     label_differs,
     label_spec,
     match_area,
+    parse_custom_rules,
 )
 
 AREAS = [
@@ -330,6 +331,27 @@ def test_excluded_entity_gets_no_label():
     assert names(FakeEntry("light.kitchen"), opts) == []
     # other domains unaffected
     assert names(FakeEntry("switch.k"), opts) == ["Schalter"]
+
+
+def test_parse_custom_rules_valid_and_invalid():
+    rules_map = parse_custom_rules("pool=water\nspielzimmer=media, bogus=doesnotexist")
+    assert rules_map == {"pool": "water", "spielzimmer": "media"}
+
+
+def test_parse_custom_rules_empty():
+    assert parse_custom_rules("") == {}
+    assert parse_custom_rules(None) == {}
+
+
+def test_custom_rule_applied_as_fallback():
+    opts = LabelerOptions(custom_rules={"pool": "water"})
+    assert names(FakeEntry("sensor.pool_ph"), opts) == ["Wasser"]
+
+
+def test_custom_rule_not_used_when_specific_match():
+    opts = LabelerOptions(custom_rules={"kitchen": "water"})
+    # light domain matches -> custom keyword fallback must not run
+    assert names(FakeEntry("light.kitchen"), opts) == ["Beleuchtung"]
 
 
 def test_affected_count_none_and_empty():
