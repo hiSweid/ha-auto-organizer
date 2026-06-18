@@ -16,6 +16,7 @@ from rules import (  # noqa: E402
     affected_count,
     area_floor_specs,
     compute_label_specs,
+    is_excluded,
     label_differs,
     label_spec,
     match_area,
@@ -307,6 +308,28 @@ def test_heating_domains_go_into_klima():
 
 def test_energy_and_lights_have_distinct_colors():
     assert rules.LABELS["energy"]["color"] != rules.LABELS["lights"]["color"]
+
+
+def test_is_excluded_empty():
+    assert is_excluded("light.k", ()) is False
+
+
+def test_is_excluded_by_domain():
+    assert is_excluded("sensor.x", ("sensor",)) is True
+    assert is_excluded("light.x", ("sensor",)) is False
+
+
+def test_is_excluded_by_exact_id_and_glob():
+    assert is_excluded("light.kitchen", ("light.kitchen",)) is True
+    assert is_excluded("sensor.test_foo", ("sensor.test_*",)) is True
+    assert is_excluded("sensor.other", ("sensor.test_*",)) is False
+
+
+def test_excluded_entity_gets_no_label():
+    opts = LabelerOptions(exclude=("light",))
+    assert names(FakeEntry("light.kitchen"), opts) == []
+    # other domains unaffected
+    assert names(FakeEntry("switch.k"), opts) == ["Schalter"]
 
 
 def test_affected_count_none_and_empty():

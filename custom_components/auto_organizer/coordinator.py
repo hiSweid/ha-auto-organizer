@@ -115,13 +115,15 @@ class AutoOrganizerRuntime:
             "dry_run": self.dry_run,
             "timestamp": dt_util.utcnow().isoformat(),
         }
+        options = self.options_factory()
+        options.dry_run = self.dry_run
         if self.scope in (SCOPE_BOTH, SCOPE_LABELS):
-            options = self.options_factory()
-            options.dry_run = self.dry_run
             summary["labels"] = (await self.labeler.run(options)).as_dict()
         if self.scope in (SCOPE_BOTH, SCOPE_AREAS):
             summary["areas"] = (
-                await self.labeler.assign_areas(dry_run=self.dry_run)
+                await self.labeler.assign_areas(
+                    dry_run=self.dry_run, exclude=options.exclude
+                )
             ).as_dict()
         self.last_run = summary
         self.refresh_stats()

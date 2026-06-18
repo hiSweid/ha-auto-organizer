@@ -10,8 +10,9 @@ and English (``en``) are supported for now; German is the default.
 
 from __future__ import annotations
 
+import fnmatch
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Final, Protocol, TypedDict
 
 # Supported UI languages. German is the default, English the fallback.
@@ -65,6 +66,7 @@ class LabelerOptions:
     language: str = DEFAULT_LANGUAGE
     label_prefix: str = ""
     max_labels: int = 2
+    exclude: tuple[str, ...] = field(default_factory=tuple)
 
 
 # Area/floor labels use the user-defined names verbatim (not translatable),
@@ -474,6 +476,24 @@ def label_differs(color: str | None, icon: str | None, spec: LabelSpec) -> bool:
     return color != spec["color"] or icon != spec["icon"]
 
 
+def is_excluded(entity_id: str, patterns: tuple[str, ...] | list[str]) -> bool:
+    """Return True if the entity matches any exclude pattern.
+
+    A pattern matches when it equals the domain (e.g. ``sensor``), equals the
+    full ``entity_id``, or matches it as an fnmatch glob (e.g. ``sensor.test_*``).
+    """
+    if not patterns:
+        return False
+    domain = entity_id.split(".", 1)[0]
+    for pattern in patterns:
+        pattern = pattern.strip()
+        if not pattern:
+            continue
+        if pattern in (domain, entity_id) or fnmatch.fnmatchcase(entity_id, pattern):
+            return True
+    return False
+
+
 def affected_count(last_run: dict | None) -> int:
     """Total entities changed in a run summary (labels/areas/cleanup/remove_all)."""
     if not last_run:
@@ -507,6 +527,10 @@ def compute_label_specs(
     Pure function (no Home Assistant state) so the ruleset can be unit-tested
     in isolation.
     """
+    # User exclusions take priority over everything else.
+    if is_excluded(entry.entity_id, options.exclude):
+        return []
+
     keys: list[str] = []
     seen: set[str] = set()
 

@@ -29,7 +29,8 @@
           "auto_label_new": "Neu hinzugefügte Entitäten automatisch labeln",
           "run_on_startup": "Einmal beim Start von Home Assistant ausführen",
           "scan_interval": "Intervall für erneuten Scan in Minuten (0 = aus)",
-          "label_prefix": "Optionales Präfix für erstellte Labels"
+          "label_prefix": "Optionales Präfix für erstellte Labels",
+          "exclude": "Ausschluss (kommagetrennt: Domains, entity_ids oder Muster wie sensor.test_*)"
         }
       }
     }

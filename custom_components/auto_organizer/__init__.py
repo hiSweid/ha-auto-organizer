@@ -40,6 +40,7 @@ from .const import (
     CONF_ENABLE_CURATED,
     CONF_ENABLE_FLOOR,
     CONF_AUTO_LABEL_NEW,
+    CONF_EXCLUDE,
     CONF_LANGUAGE,
     CONF_MAX_LABELS,
     CONF_SKIP_CATEGORIES,
@@ -96,8 +97,18 @@ def _options_from_entry(entry: ConfigEntry) -> LabelerOptions:
         skip_categories=o.get(CONF_SKIP_CATEGORIES, DEFAULT_SKIP_CATEGORIES),
         language=o.get(CONF_LANGUAGE, DEFAULT_LANGUAGE),
         max_labels=o.get(CONF_MAX_LABELS, DEFAULT_MAX_LABELS),
+        exclude=_parse_exclude(o.get(CONF_EXCLUDE, "")),
         label_prefix=o.get(CONF_LABEL_PREFIX, DEFAULT_LABEL_PREFIX),
     )
+
+
+def _parse_exclude(raw: str | list) -> tuple[str, ...]:
+    """Parse the exclude option (comma/newline separated string or list)."""
+    if isinstance(raw, (list, tuple)):
+        items = raw
+    else:
+        items = str(raw).replace("\n", ",").split(",")
+    return tuple(p.strip() for p in items if p.strip())
 
 
 async def async_setup_entry(
@@ -212,7 +223,8 @@ def _register_services(hass: HomeAssistant) -> None:
         if not entries:
             return {"error": "no config entry"}
         result = await entries[0].runtime_data.labeler.assign_areas(
-            dry_run=call.data.get(ATTR_DRY_RUN, False)
+            dry_run=call.data.get(ATTR_DRY_RUN, False),
+            exclude=_options_from_entry(entries[0]).exclude,
         )
         return result.as_dict()
 

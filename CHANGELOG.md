@@ -7,6 +7,8 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **Exclude option**: skip entities from labeling and area assignment by
+  domain, exact entity_id or fnmatch pattern (e.g. `sensor.test_*`).
 - **Auto-label new entities**: newly added entities are labeled automatically
   (debounced) via the entity-registry event; toggle `auto_label_new`
   (default on).

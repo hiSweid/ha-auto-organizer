@@ -18,6 +18,7 @@ from .rules import (
     LabelerOptions,
     area_floor_specs,
     compute_label_specs,
+    is_excluded,
     label_differs,
     match_area,
 )
@@ -210,11 +211,14 @@ class Labeler:
         )
         return result
 
-    async def assign_areas(self, dry_run: bool = False) -> AreaAssignResult:
+    async def assign_areas(
+        self, dry_run: bool = False, exclude: tuple[str, ...] = ()
+    ) -> AreaAssignResult:
         """Auto-assign entities without an area to a matching area by name.
 
         Only entities that have no effective area (neither their own nor via
         their device) are touched, so existing assignments are never changed.
+        Entities matching ``exclude`` are skipped.
         """
         result = AreaAssignResult()
         ent_reg = er.async_get(self.hass)
@@ -230,6 +234,8 @@ class Labeler:
 
         for entry in list(ent_reg.entities.values()):
             if entry.area_id:
+                continue
+            if is_excluded(entry.entity_id, exclude):
                 continue
             if entry.device_id:
                 device = dev_reg.async_get(entry.device_id)
