@@ -95,20 +95,31 @@ explicitly mapped, so noise is not a concern).
 The integration creates a device with everything you need to drive it from the
 UI — no need to call services by hand:
 
+**Controls**
+
 - **Run now** (button) — runs according to the selected scope.
 - **Run scope** (select) — *Labels + areas*, *Only labels* or *Only areas*.
 - **Dry run** (switch) — when on, the buttons only preview (write nothing).
 - **Cleanup labels** (button) — removes the labels this integration created.
-- **Last run** (sensor) — number of entities changed, with details (counts,
-  scope, dry-run, timestamp) in its attributes.
+- **Remove all labels** (button) — deletes *every* label in Home Assistant
+  (not just the managed ones). Respects the *Dry run* switch.
+
+**Sensors**
+
+- **Last run** — number of entities changed, with details in its attributes.
+- **Last run time** — timestamp of the last run.
+- **Labeled entities** / **Unlabeled entities** — entities with / without labels.
+- **Entities without area** — entities lacking an area (own or via device).
+- **Managed labels** — number of labels created by this integration.
+- **Label coverage** — percentage of entities that carry at least one label.
 
 ## Labels
 
 Functional (domain / device class):
 Beleuchtung, Schalter, Lüfter, Klima, Rollläden, Schlösser, Staubsauger, Medien,
 Kameras, Szenen, Automationen, Skripte, Anwesenheit, Wetter, Updates,
-Sicherheit, Temperatur, Luftfeuchtigkeit, Batterie, Energie, Wasser, Helligkeit,
-Bewegung, Öffnungen, Leck, Luftqualität, Kosten.
+Sicherheit (incl. doors/windows), Temperatur, Luftfeuchtigkeit, Batterie,
+Energie, Wasser, Helligkeit, Bewegung, Leck, Luftqualität, Kosten.
 
 Curated by integration:
 Haushaltsgeräte (appliances), Garten (garden), Netzwerk & Server (network),
