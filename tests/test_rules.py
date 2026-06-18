@@ -274,6 +274,28 @@ def test_label_names_are_unique_per_language():
         assert len(seen) == len(set(seen)), f"duplicate name in {lang}"
 
 
+def test_binary_climate_device_classes_map_to_klima():
+    for dc in ("cold", "heat"):
+        entry = FakeEntry("binary_sensor.x", original_device_class=dc)
+        assert names(entry) == ["Klima"], dc
+
+
+def test_binary_light_maps_to_light_level():
+    entry = FakeEntry("binary_sensor.x", original_device_class="light")
+    assert names(entry) == ["Helligkeit"]
+
+
+def test_plug_and_energy_distance_map_to_energy():
+    for dc in ("plug", "energy_distance"):
+        entry = FakeEntry("sensor.x", original_device_class=dc)
+        assert names(entry) == ["Energie"], dc
+
+
+def test_update_device_class_maps_to_updates():
+    entry = FakeEntry("binary_sensor.x", original_device_class="update")
+    assert names(entry) == ["Updates"]
+
+
 def test_raw_integration_label_skipped_for_diagnostic():
     opts = LabelerOptions(enable_integration=True, enable_curated=False)
     entry = FakeEntry("sensor.x", platform="foo", entity_category="diagnostic")
