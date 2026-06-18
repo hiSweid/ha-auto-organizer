@@ -63,5 +63,5 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Labels created by the integration are marked internally so `cleanup` never
   removes labels you created by hand.
 
-[Unreleased]: https://github.com/henrykhanke/ha-auto-organizer/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/henrykhanke/ha-auto-organizer/releases/tag/v0.1.0
+[Unreleased]: https://github.com/hiSweid/ha-auto-organizer/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/hiSweid/ha-auto-organizer/releases/tag/v0.1.0

@@ -30,7 +30,7 @@ in label-based automations, dashboards and the entity filter. Labels default to
 ### HACS (custom repository)
 
 1. HACS → ⋮ → *Custom repositories*
-2. Add `https://github.com/henrykhanke/ha-auto-organizer`, category **Integration**
+2. Add `https://github.com/hiSweid/ha-auto-organizer`, category **Integration**
 3. Install *Entity Auto-Organizer*, then restart Home Assistant
 4. *Settings → Devices & Services → Add Integration → Entity Auto-Organizer*
 

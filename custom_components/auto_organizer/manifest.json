@@ -1,12 +1,12 @@
 {
   "domain": "auto_organizer",
   "name": "Entity Auto-Organizer",
-  "codeowners": ["@henrykhanke"],
+  "codeowners": ["@hiSweid"],
   "config_flow": true,
-  "documentation": "https://github.com/henrykhanke/ha-auto-organizer",
+  "documentation": "https://github.com/hiSweid/ha-auto-organizer",
   "integration_type": "hub",
   "iot_class": "local_polling",
-  "issue_tracker": "https://github.com/henrykhanke/ha-auto-organizer/issues",
+  "issue_tracker": "https://github.com/hiSweid/ha-auto-organizer/issues",
   "requirements": [],
   "single_config_entry": true,
   "version": "0.1.0"
