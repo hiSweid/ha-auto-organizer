@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a problem with the Entity Auto-Labeler integration
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to file a bug report!
+  - type: input
+    id: ha_version
+    attributes:
+      label: Home Assistant version
+      placeholder: "2026.6.3"
+    validations:
+      required: true
+  - type: input
+    id: integration_version
+    attributes:
+      label: Auto-Labeler version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Configure options …
+        2. Call auto_labeler.run …
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: From Settings → System → Logs (filter for auto_labeler).
+      render: text
+  - type: textarea
+    id: options
+    attributes:
+      label: Integration options
+      description: Which options are enabled (language, area/floor, skip, …)?
+      render: text

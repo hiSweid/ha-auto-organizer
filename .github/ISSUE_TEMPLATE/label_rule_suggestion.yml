@@ -1,0 +1,35 @@
+name: Label / rule suggestion
+description: Suggest a new label or a domain/device_class/integration mapping
+labels: ["enhancement", "rule"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Suggestion type
+      options:
+        - New label
+        - Domain → label mapping
+        - device_class → label mapping
+        - Integration → theme label mapping
+        - Adjust an existing rule
+    validations:
+      required: true
+  - type: input
+    id: trigger
+    attributes:
+      label: Trigger
+      description: The domain, device_class or integration this should match.
+      placeholder: "device_class: volume_flow_rate / integration: foobar"
+    validations:
+      required: true
+  - type: input
+    id: label
+    attributes:
+      label: Proposed label (DE / EN)
+      placeholder: "Bewässerung / Irrigation"
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why is this useful?
