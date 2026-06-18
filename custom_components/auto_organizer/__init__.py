@@ -1,4 +1,4 @@
-"""The Entity Auto-Labeler integration."""
+"""The Entity Auto-Organizer integration."""
 
 from __future__ import annotations
 
@@ -87,7 +87,7 @@ def _options_from_entry(entry: ConfigEntry) -> LabelerOptions:
 async def async_setup_entry(
     hass: HomeAssistant, entry: AutoLabelerConfigEntry
 ) -> bool:
-    """Set up Auto Labeler from a config entry."""
+    """Set up Auto-Organizer from a config entry."""
     labeler = Labeler(hass)
     entry.runtime_data = labeler
 

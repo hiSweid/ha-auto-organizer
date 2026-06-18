@@ -1,4 +1,4 @@
-"""Rule definitions for the Auto Labeler integration.
+"""Rule definitions for the Auto-Organizer integration.
 
 The ruleset is intentionally pure data so it can be extended, unit-tested and
 later made configurable without touching the engine in ``labeler.py``.

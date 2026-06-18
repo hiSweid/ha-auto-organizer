@@ -1,11 +1,11 @@
-"""Constants for the Auto Labeler integration."""
+"""Constants for the Auto-Organizer integration."""
 
 from __future__ import annotations
 
 from typing import Final
 
-DOMAIN: Final = "auto_labeler"
-NAME: Final = "Entity Auto-Labeler"
+DOMAIN: Final = "auto_organizer"
+NAME: Final = "Entity Auto-Organizer"
 
 # Config / options keys
 CONF_DRY_RUN: Final = "dry_run"
@@ -50,4 +50,4 @@ ATTR_OVERWRITE: Final = "overwrite"
 ATTR_ENTITY_FILTER: Final = "entities"
 
 # Marker stored in label description so cleanup only touches our labels.
-MANAGED_MARKER: Final = "auto_labeler:managed"
+MANAGED_MARKER: Final = "auto_organizer:managed"

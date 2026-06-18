@@ -1,0 +1,13 @@
+{
+  "domain": "auto_organizer",
+  "name": "Entity Auto-Organizer",
+  "codeowners": ["@henrykhanke"],
+  "config_flow": true,
+  "documentation": "https://github.com/henrykhanke/ha-auto-organizer",
+  "integration_type": "service",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/henrykhanke/ha-auto-organizer/issues",
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "0.1.0"
+}

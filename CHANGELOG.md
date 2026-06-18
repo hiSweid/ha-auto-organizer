@@ -7,7 +7,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
-- `auto_labeler.assign_areas` service: auto-assigns entities **without** an
+- `auto_organizer.assign_areas` service: auto-assigns entities **without** an
   area to a matching area by name/alias (longest match wins, ambiguous matches
   skipped). Supports `dry_run`; never changes existing area assignments.
 - Known vehicle names (e-Golf, Tesla, Zoe, Leaf, Kona, Ioniq, …) are labeled
@@ -32,8 +32,8 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - German (default) and English label names via a language-keyed catalog
   (`language` option).
 - Optional **area** and **floor** labels (`enable_area` / `enable_floor`).
-- Services `auto_labeler.run` (with `dry_run`, `overwrite`, `entities`) and
-  `auto_labeler.cleanup`, both returning a result summary.
+- Services `auto_organizer.run` (with `dry_run`, `overwrite`, `entities`) and
+  `auto_organizer.cleanup`, both returning a result summary.
 - Options: dry run, overwrite, per-rule toggles, skip diagnostic/config
   entities, run on startup, recurring re-scan interval, label prefix.
 - Config flow (single instance) and EN/DE translations.
@@ -46,5 +46,5 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Labels created by the integration are marked internally so `cleanup` never
   removes labels you created by hand.
 
-[Unreleased]: https://github.com/henrykhanke/ha-auto-labeler/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/henrykhanke/ha-auto-labeler/releases/tag/v0.1.0
+[Unreleased]: https://github.com/henrykhanke/ha-auto-organizer/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/henrykhanke/ha-auto-organizer/releases/tag/v0.1.0

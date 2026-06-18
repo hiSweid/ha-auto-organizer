@@ -7,7 +7,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 # Make the integration importable as a bare module without installing HA.
-COMPONENT = Path(__file__).resolve().parents[1] / "custom_components" / "auto_labeler"
+COMPONENT = Path(__file__).resolve().parents[1] / "custom_components" / "auto_organizer"
 sys.path.insert(0, str(COMPONENT))
 
 import rules  # noqa: E402

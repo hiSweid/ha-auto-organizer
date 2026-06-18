@@ -2,18 +2,18 @@
   "config": {
     "step": {
       "user": {
-        "title": "Entity Auto-Labeler",
-        "description": "Labelt deine Entitäten automatisch anhand von Domain und Geräteklasse. Die Regeln lassen sich nach der Einrichtung anpassen; ein Durchlauf wird über den Dienst `auto_labeler.run` gestartet."
+        "title": "Entity Auto-Organizer",
+        "description": "Labelt deine Entitäten automatisch anhand von Domain und Geräteklasse. Die Regeln lassen sich nach der Einrichtung anpassen; ein Durchlauf wird über den Dienst `auto_organizer.run` gestartet."
       }
     },
     "abort": {
-      "already_configured": "Auto-Labeler ist bereits eingerichtet."
+      "already_configured": "Auto-Organizer ist bereits eingerichtet."
     }
   },
   "options": {
     "step": {
       "init": {
-        "title": "Auto-Labeler Optionen",
+        "title": "Auto-Organizer Optionen",
         "data": {
           "dry_run": "Testlauf (keine Änderungen schreiben)",
           "overwrite": "Bestehende Labels ersetzen statt ergänzen",
@@ -54,7 +54,7 @@
     },
     "cleanup": {
       "name": "Labels aufräumen",
-      "description": "Vom Auto-Labeler erstellte Labels entfernen.",
+      "description": "Vom Auto-Organizer erstellte Labels entfernen.",
       "fields": {
         "dry_run": {
           "name": "Testlauf",

@@ -1,4 +1,4 @@
-"""Config flow for the Auto Labeler integration."""
+"""Config flow for the Auto-Organizer integration."""
 
 from __future__ import annotations
 

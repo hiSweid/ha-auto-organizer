@@ -1,4 +1,4 @@
-# Entity Auto-Labeler for Home Assistant
+# Entity Auto-Organizer for Home Assistant
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
 
@@ -30,13 +30,13 @@ in label-based automations, dashboards and the entity filter. Labels default to
 ### HACS (custom repository)
 
 1. HACS → ⋮ → *Custom repositories*
-2. Add `https://github.com/henrykhanke/ha-auto-labeler`, category **Integration**
-3. Install *Entity Auto-Labeler*, then restart Home Assistant
-4. *Settings → Devices & Services → Add Integration → Entity Auto-Labeler*
+2. Add `https://github.com/henrykhanke/ha-auto-organizer`, category **Integration**
+3. Install *Entity Auto-Organizer*, then restart Home Assistant
+4. *Settings → Devices & Services → Add Integration → Entity Auto-Organizer*
 
 ### Manual
 
-Copy `custom_components/auto_labeler` into your `config/custom_components/`
+Copy `custom_components/auto_organizer` into your `config/custom_components/`
 directory and restart.
 
 ## Usage
@@ -45,25 +45,25 @@ After setup the integration registers two services:
 
 ```yaml
 # Preview what would change — writes nothing
-action: auto_labeler.run
+action: auto_organizer.run
 data:
   dry_run: true
 
 # Apply labels to everything
-action: auto_labeler.run
+action: auto_organizer.run
 
 # Limit to specific entities
-action: auto_labeler.run
+action: auto_organizer.run
 data:
   entities:
     - light.kitchen
     - sensor.aussentemperatur
 
 # Remove every label this integration created
-action: auto_labeler.cleanup
+action: auto_organizer.cleanup
 ```
 
-`auto_labeler.run` returns a response with `scanned`, `updated`,
+`auto_organizer.run` returns a response with `scanned`, `updated`,
 `labels_created` and the per-entity `changes`, so you can inspect the result in
 *Developer Tools → Actions*.
 
@@ -106,9 +106,9 @@ English names are used when the language option is set to `en`.
 
 ## How it works
 
-The rule set lives in [`rules.py`](custom_components/auto_labeler/rules.py) as
+The rule set lives in [`rules.py`](custom_components/auto_organizer/rules.py) as
 plain, language-keyed data and is applied by the engine in
-[`labeler.py`](custom_components/auto_labeler/labeler.py). Labels created by the
+[`labeler.py`](custom_components/auto_organizer/labeler.py). Labels created by the
 integration are marked internally so `cleanup` never touches labels you made by
 hand.
 

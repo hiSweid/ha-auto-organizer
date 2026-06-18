@@ -1,4 +1,4 @@
-"""Core labeling engine for the Auto Labeler integration."""
+"""Core labeling engine for the Auto-Organizer integration."""
 
 from __future__ import annotations
 
@@ -202,7 +202,7 @@ class Labeler:
                 ent_reg.async_update_entity(entry.entity_id, labels=new_labels)
 
         _LOGGER.info(
-            "Auto Labeler run: scanned=%s updated=%s created=%s dry_run=%s",
+            "Auto-Organizer run: scanned=%s updated=%s created=%s dry_run=%s",
             result.scanned,
             result.updated,
             result.labels_created,
@@ -251,7 +251,7 @@ class Labeler:
                 ent_reg.async_update_entity(entry.entity_id, area_id=area_id)
 
         _LOGGER.info(
-            "Auto Labeler area assign: scanned=%s assigned=%s dry_run=%s",
+            "Auto-Organizer area assign: scanned=%s assigned=%s dry_run=%s",
             result.scanned,
             result.assigned,
             dry_run,

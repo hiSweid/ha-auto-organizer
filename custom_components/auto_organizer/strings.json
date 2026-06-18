@@ -2,18 +2,18 @@
   "config": {
     "step": {
       "user": {
-        "title": "Entity Auto-Labeler",
-        "description": "Automatically label your entities based on their domain and device class. You can configure the rules after setup and trigger a run with the `auto_labeler.run` service."
+        "title": "Entity Auto-Organizer",
+        "description": "Automatically label your entities based on their domain and device class. You can configure the rules after setup and trigger a run with the `auto_organizer.run` service."
       }
     },
     "abort": {
-      "already_configured": "Auto Labeler is already configured."
+      "already_configured": "Auto-Organizer is already configured."
     }
   },
   "options": {
     "step": {
       "init": {
-        "title": "Auto-Labeler options",
+        "title": "Auto-Organizer options",
         "data": {
           "dry_run": "Dry run (don't write changes)",
           "overwrite": "Overwrite existing labels instead of merging",
@@ -54,7 +54,7 @@
     },
     "cleanup": {
       "name": "Cleanup labels",
-      "description": "Remove labels that were created by Auto-Labeler.",
+      "description": "Remove labels that were created by Auto-Organizer.",
       "fields": {
         "dry_run": {
           "name": "Dry run",
