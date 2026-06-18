@@ -16,8 +16,10 @@ from homeassistant.core import (
     ServiceResponse,
     SupportsResponse,
 )
+from homeassistant.helpers import area_registry as ar
 from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers import entity_registry as er
+from homeassistant.helpers import issue_registry as ir
 from homeassistant.helpers.debounce import Debouncer
 from homeassistant.helpers.event import async_track_time_interval
 from homeassistant.helpers.start import async_at_started
@@ -67,7 +69,7 @@ from .const import (
     SERVICE_RUN,
 )
 from .labeler import Labeler, LabelerOptions
-from .rules import parse_custom_rules
+from .rules import invalid_custom_rule_labels, parse_custom_rules
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -187,9 +189,45 @@ async def async_setup_entry(
         async_track_time_interval(hass, _refresh_stats, timedelta(minutes=5))
     )
 
+    _update_issues(hass, entry)
     _register_services(hass)
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     return True
+
+
+def _update_issues(hass: HomeAssistant, entry: ConfigEntry) -> None:
+    """Create/clear repair issues based on the current options."""
+    o = entry.options
+
+    invalid = invalid_custom_rule_labels(o.get(CONF_CUSTOM_RULES, ""))
+    if invalid:
+        ir.async_create_issue(
+            hass,
+            DOMAIN,
+            "invalid_custom_rules",
+            is_fixable=False,
+            severity=ir.IssueSeverity.WARNING,
+            translation_key="invalid_custom_rules",
+            translation_placeholders={"labels": ", ".join(invalid)},
+        )
+    else:
+        ir.async_delete_issue(hass, DOMAIN, "invalid_custom_rules")
+
+    wants_area = o.get(CONF_ENABLE_AREA, DEFAULT_ENABLE_AREA) or o.get(
+        CONF_ENABLE_FLOOR, DEFAULT_ENABLE_FLOOR
+    )
+    has_areas = bool(ar.async_get(hass).async_list_areas())
+    if wants_area and not has_areas:
+        ir.async_create_issue(
+            hass,
+            DOMAIN,
+            "no_areas",
+            is_fixable=False,
+            severity=ir.IssueSeverity.WARNING,
+            translation_key="no_areas",
+        )
+    else:
+        ir.async_delete_issue(hass, DOMAIN, "no_areas")
 
 
 def _register_services(hass: HomeAssistant) -> None:

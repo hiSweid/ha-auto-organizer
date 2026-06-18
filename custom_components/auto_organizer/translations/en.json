@@ -65,6 +65,16 @@
       "coverage": { "name": "Label coverage" }
     }
   },
+  "issues": {
+    "invalid_custom_rules": {
+      "title": "Unknown label in custom rules",
+      "description": "These labels in your custom rules don't exist and are ignored: {labels}. Use a built-in label key (e.g. water, energy, media)."
+    },
+    "no_areas": {
+      "title": "No areas defined",
+      "description": "Area/floor labeling is enabled but Home Assistant has no areas. Create areas, or turn off the area/floor options."
+    }
+  },
   "services": {
     "run": {
       "name": "Run labeler",

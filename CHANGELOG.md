@@ -7,6 +7,8 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **Repair issues**: a warning when custom rules reference unknown labels, and
+  when area/floor labeling is enabled but no areas exist.
 - **Diagnostics**: download config-entry diagnostics (options + stats + last
   run summary, no secrets) from the device page.
 - **Automatic language**: label language now defaults to `auto`, following

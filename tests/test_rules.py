@@ -18,6 +18,7 @@ from rules import (  # noqa: E402
     compute_label_specs,
     is_excluded,
     label_differs,
+    invalid_custom_rule_labels,
     label_spec,
     match_area,
     parse_custom_rules,
@@ -346,6 +347,12 @@ def test_parse_custom_rules_empty():
 def test_custom_rule_applied_as_fallback():
     opts = LabelerOptions(custom_rules={"pool": "water"})
     assert names(FakeEntry("sensor.pool_ph"), opts) == ["Wasser"]
+
+
+def test_invalid_custom_rule_labels():
+    assert invalid_custom_rule_labels("pool=water\nx=nope, y=media") == ["nope"]
+    assert invalid_custom_rule_labels("pool=water") == []
+    assert invalid_custom_rule_labels("") == []
 
 
 def test_custom_rule_not_used_when_specific_match():

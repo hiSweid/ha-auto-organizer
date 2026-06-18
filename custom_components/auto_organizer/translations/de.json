@@ -65,6 +65,16 @@
       "coverage": { "name": "Label-Abdeckung" }
     }
   },
+  "issues": {
+    "invalid_custom_rules": {
+      "title": "Unbekanntes Label in eigenen Regeln",
+      "description": "Diese Labels in deinen eigenen Regeln existieren nicht und werden ignoriert: {labels}. Nutze einen vorhandenen Label-Key (z.B. water, energy, media)."
+    },
+    "no_areas": {
+      "title": "Keine Bereiche definiert",
+      "description": "Bereich-/Etagen-Labeln ist aktiv, aber Home Assistant hat keine Bereiche. Lege Bereiche an oder deaktiviere die Optionen."
+    }
+  },
   "services": {
     "run": {
       "name": "Labeler ausführen",

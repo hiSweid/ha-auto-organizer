@@ -515,6 +515,21 @@ def parse_custom_rules(text: str | None) -> dict[str, str]:
     return result
 
 
+def invalid_custom_rule_labels(text: str | None) -> list[str]:
+    """Return label keys referenced in custom rules that don't exist."""
+    invalid: list[str] = []
+    if not text:
+        return invalid
+    for item in str(text).replace("\n", ",").split(","):
+        if "=" not in item:
+            continue
+        _, _, label = item.partition("=")
+        label = label.strip()
+        if label and label not in LABELS and label not in invalid:
+            invalid.append(label)
+    return invalid
+
+
 def affected_count(last_run: dict | None) -> int:
     """Total entities changed in a run summary (labels/areas/cleanup/remove_all)."""
     if not last_run:
