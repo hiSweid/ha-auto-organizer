@@ -35,9 +35,9 @@ def test_domain_label_applied():
     assert names(FakeEntry("light.kitchen")) == ["Beleuchtung"]
 
 
-def test_device_class_adds_second_label():
+def test_device_class_label():
     entry = FakeEntry("sensor.outdoor", original_device_class="temperature")
-    assert names(entry) == ["Sensoren", "Temperatur"]
+    assert names(entry) == ["Temperatur"]
 
 
 def test_user_device_class_overrides_original():
@@ -94,8 +94,8 @@ def test_config_entity_skipped_by_default():
 
 def test_categories_labeled_when_skip_disabled():
     opts = LabelerOptions(skip_categories=False)
-    entry = FakeEntry("sensor.uptime", entity_category="diagnostic")
-    assert names(entry, opts) == ["Sensoren"]
+    entry = FakeEntry("light.led_config", entity_category="config")
+    assert names(entry, opts) == ["Beleuchtung"]
 
 
 def test_all_labels_have_valid_color_icon_and_names():
@@ -120,7 +120,7 @@ def test_every_mapped_key_exists_in_catalog():
 def test_english_language():
     opts = LabelerOptions(language="en")
     entry = FakeEntry("sensor.outdoor", original_device_class="temperature")
-    assert names(entry, opts) == ["Sensors", "Temperature"]
+    assert names(entry, opts) == ["Temperature"]
 
 
 def test_unsupported_language_falls_back_to_german():
@@ -134,9 +134,9 @@ def test_language_region_code_normalized():
 
 
 def test_curated_integration_label():
-    entry = FakeEntry("sensor.maehroboter_akku", platform="navimow")
-    # curated key comes first, then the domain label
-    assert names(entry) == ["Garten", "Sensoren"]
+    entry = FakeEntry("lawn_mower.vorgarten", platform="navimow")
+    # curated key comes first, then the domain label (both garden -> deduped)
+    assert names(entry) == ["Garten"]
 
 
 def test_curated_applies_even_to_diagnostic():
@@ -149,8 +149,19 @@ def test_curated_applies_even_to_diagnostic():
 
 def test_curated_can_be_disabled():
     opts = LabelerOptions(enable_curated=False)
-    entry = FakeEntry("sensor.maehroboter_akku", platform="navimow")
-    assert names(entry, opts) == ["Sensoren"]
+    # plain sensor with no device_class -> no label once "Sensoren" is gone
+    entry = FakeEntry("sensor.something", platform="navimow")
+    assert names(entry, opts) == []
+
+
+def test_car_label_from_integration():
+    entry = FakeEntry("sensor.evcc_ladestand", platform="evcc_intg")
+    assert names(entry) == ["Auto"]
+
+
+def test_car_label_from_keyword():
+    entry = FakeEntry("sensor.wallbox_leistung")
+    assert names(entry) == ["Auto"]
 
 
 def test_curated_appliance_label():

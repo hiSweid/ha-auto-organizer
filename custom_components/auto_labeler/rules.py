@@ -91,12 +91,6 @@ LABELS: Final[dict[str, LabelDef]] = {
     "vacuums": _ld("deep-purple", "mdi:robot-vacuum", "Staubsauger", "Vacuums"),
     "media": _ld("indigo", "mdi:multimedia", "Medien", "Media"),
     "cameras": _ld("grey", "mdi:cctv", "Kameras", "Cameras"),
-    "binary_sensors": _ld(
-        "light-blue", "mdi:checkbox-marked-circle", "Binärsensoren", "Binary Sensors"
-    ),
-    "sensors": _ld("light-green", "mdi:gauge", "Sensoren", "Sensors"),
-    "controls": _ld("green", "mdi:knob", "Steuerung", "Controls"),
-    "buttons": _ld("green", "mdi:gesture-tap-button", "Taster", "Buttons"),
     "scenes": _ld("purple", "mdi:palette", "Szenen", "Scenes"),
     "automations": _ld("pink", "mdi:robot", "Automationen", "Automations"),
     "scripts": _ld("pink", "mdi:script-text", "Skripte", "Scripts"),
@@ -111,7 +105,6 @@ LABELS: Final[dict[str, LabelDef]] = {
         "deep-orange", "mdi:thermometer", "Temperatur", "Temperature"
     ),
     "humidity": _ld("blue", "mdi:water-percent", "Luftfeuchtigkeit", "Humidity"),
-    "pressure": _ld("blue-grey", "mdi:gauge", "Druck", "Pressure"),
     "battery": _ld("green", "mdi:battery", "Batterie", "Battery"),
     "energy": _ld("amber", "mdi:flash", "Energie", "Energy"),
     "water": _ld("light-blue", "mdi:water", "Wasser", "Water"),
@@ -119,9 +112,9 @@ LABELS: Final[dict[str, LabelDef]] = {
     "motion": _ld("red", "mdi:motion-sensor", "Bewegung", "Motion"),
     "openings": _ld("brown", "mdi:door", "Öffnungen", "Openings"),
     "leak": _ld("light-blue", "mdi:water-alert", "Leck", "Leak"),
-    "connectivity": _ld("grey", "mdi:wifi", "Verbindung", "Connectivity"),
     "air_quality": _ld("teal", "mdi:air-filter", "Luftqualität", "Air Quality"),
     "cost": _ld("green", "mdi:cash", "Kosten", "Cost"),
+    "car": _ld("blue", "mdi:car-electric", "Auto", "Car"),
     # curated, integration-derived themes
     "appliances": _ld(
         "orange", "mdi:washing-machine", "Haushaltsgeräte", "Appliances"
@@ -144,11 +137,6 @@ DOMAIN_LABELS: Final[dict[str, str]] = {
     "vacuum": "vacuums",
     "media_player": "media",
     "camera": "cameras",
-    "binary_sensor": "binary_sensors",
-    "sensor": "sensors",
-    "number": "controls",
-    "select": "controls",
-    "button": "buttons",
     "scene": "scenes",
     "automation": "automations",
     "script": "scripts",
@@ -170,8 +158,6 @@ DOMAIN_LABELS: Final[dict[str, str]] = {
 DEVICE_CLASS_LABELS: Final[dict[str, str]] = {
     "temperature": "temperature",
     "humidity": "humidity",
-    "pressure": "pressure",
-    "atmospheric_pressure": "pressure",
     "battery": "battery",
     "power": "energy",
     "energy": "energy",
@@ -203,8 +189,6 @@ DEVICE_CLASS_LABELS: Final[dict[str, str]] = {
     "tamper": "security",
     "moisture": "leak",
     "battery_charging": "battery",
-    "connectivity": "connectivity",
-    "signal_strength": "connectivity",
     "pm25": "air_quality",
     "pm10": "air_quality",
     "pm1": "air_quality",
@@ -233,6 +217,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "temperature": "temperature",
     "humidity": "humidity",
     "motion": "motion",
+    "wallbox": "car",
 }
 
 # --- integration (platform) -> curated theme label ----------------------
@@ -258,6 +243,12 @@ INTEGRATION_LABELS: Final[dict[str, str]] = {
     "unifi": "network",
     "openwrt": "network",
     "speedtestdotnet": "network",
+    # car / charging
+    "evcc_intg": "car",
+    "wallbox": "car",
+    "easee": "car",
+    "zaptec": "car",
+    "openevse": "car",
 }
 
 
