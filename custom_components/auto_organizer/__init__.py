@@ -10,12 +10,15 @@ import voluptuous as vol
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import Platform
 from homeassistant.core import (
+    Event,
     HomeAssistant,
     ServiceCall,
     ServiceResponse,
     SupportsResponse,
 )
 from homeassistant.helpers import config_validation as cv
+from homeassistant.helpers import entity_registry as er
+from homeassistant.helpers.debounce import Debouncer
 from homeassistant.helpers.event import async_track_time_interval
 from homeassistant.helpers.start import async_at_started
 
@@ -36,9 +39,11 @@ from .const import (
     CONF_ENABLE_AREA,
     CONF_ENABLE_CURATED,
     CONF_ENABLE_FLOOR,
+    CONF_AUTO_LABEL_NEW,
     CONF_LANGUAGE,
     CONF_MAX_LABELS,
     CONF_SKIP_CATEGORIES,
+    DEFAULT_AUTO_LABEL_NEW,
     DEFAULT_DRY_RUN,
     DEFAULT_ENABLE_AREA,
     DEFAULT_ENABLE_CURATED,
@@ -126,6 +131,33 @@ async def async_setup_entry(
         entry.async_on_unload(
             async_track_time_interval(
                 hass, _scheduled, timedelta(minutes=interval)
+            )
+        )
+
+    if entry.options.get(CONF_AUTO_LABEL_NEW, DEFAULT_AUTO_LABEL_NEW):
+        pending: set[str] = set()
+
+        async def _flush_new() -> None:
+            ids = set(pending)
+            pending.clear()
+            if not ids:
+                return
+            await runtime.labeler.run(_options_from_entry(entry), entity_filter=ids)
+            runtime.refresh_stats()
+
+        debouncer = Debouncer(
+            hass, _LOGGER, cooldown=15.0, immediate=False, function=_flush_new
+        )
+
+        async def _on_registry_updated(event: Event) -> None:
+            if event.data.get("action") != "create":
+                return
+            pending.add(event.data["entity_id"])
+            await debouncer.async_call()
+
+        entry.async_on_unload(
+            hass.bus.async_listen(
+                er.EVENT_ENTITY_REGISTRY_UPDATED, _on_registry_updated
             )
         )
 

@@ -7,6 +7,9 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **Auto-label new entities**: newly added entities are labeled automatically
+  (debounced) via the entity-registry event; toggle `auto_label_new`
+  (default on).
 - **Control entities** (a device with): *Run now* and *Cleanup labels* buttons,
   a *Run scope* select (labels+areas / only labels / only areas), a *Dry run*
   switch, and sensors: *Last run* (+ details), *Last run time*, *Labeled

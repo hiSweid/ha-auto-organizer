@@ -26,6 +26,7 @@
           "skip_categories": "Diagnose-/Konfig-Entitäten überspringen",
           "language": "Label-Sprache (de/en)",
           "max_labels": "Maximale Labels pro Entität",
+          "auto_label_new": "Neu hinzugefügte Entitäten automatisch labeln",
           "run_on_startup": "Einmal beim Start von Home Assistant ausführen",
           "scan_interval": "Intervall für erneuten Scan in Minuten (0 = aus)",
           "label_prefix": "Optionales Präfix für erstellte Labels"
