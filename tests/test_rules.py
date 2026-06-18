@@ -276,6 +276,10 @@ def test_heating_domains_go_into_klima():
         assert names(entry) == ["Klima"], domain
 
 
+def test_energy_and_lights_have_distinct_colors():
+    assert rules.LABELS["energy"]["color"] != rules.LABELS["lights"]["color"]
+
+
 def test_label_names_are_unique_per_language():
     for lang in rules.SUPPORTED_LANGUAGES:
         seen = [ld["names"][lang] for ld in rules.LABELS.values()]

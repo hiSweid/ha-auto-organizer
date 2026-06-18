@@ -194,7 +194,7 @@ class Labeler:
         dev_reg = dr.async_get(self.hass)
 
         areas = [
-            {"area_id": a.area_id, "name": a.name, "aliases": list(a.aliases)}
+            {"area_id": a.id, "name": a.name, "aliases": list(a.aliases)}
             for a in area_reg.async_list_areas()
         ]
         if not areas:

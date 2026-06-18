@@ -108,7 +108,7 @@ LABELS: Final[dict[str, LabelDef]] = {
     ),
     "humidity": _ld("blue", "mdi:water-percent", "Luftfeuchtigkeit", "Humidity"),
     "battery": _ld("green", "mdi:battery", "Batterie", "Battery"),
-    "energy": _ld("amber", "mdi:flash", "Energie", "Energy"),
+    "energy": _ld("lime", "mdi:flash", "Energie", "Energy"),
     "water": _ld("light-blue", "mdi:water", "Wasser", "Water"),
     "light_level": _ld("yellow", "mdi:brightness-6", "Helligkeit", "Light Level"),
     "motion": _ld("red", "mdi:motion-sensor", "Bewegung", "Motion"),
