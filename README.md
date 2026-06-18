@@ -83,9 +83,13 @@ Configurable under the integration's *Configure* button:
 | Floor labels | off | Add a label for each entity's floor |
 | Skip diagnostic/config | on | Ignore diagnostic & config helper entities |
 | Label language | `de` | `de` or `en` |
+| Max labels per entity | 2 | Cap on labels assigned to one entity |
+| Auto-label new entities | on | Label newly added entities automatically (debounced) |
 | Run on startup | off | Run once when Home Assistant starts |
 | Re-scan interval | 0 | Minutes between automatic runs (0 = off) |
 | Label prefix | — | Optional prefix for created labels |
+| Exclude | — | Domains, entity_ids or globs to skip (e.g. `sensor.test_*`) |
+| Custom rules | — | `keyword=label` per line (label must already exist) |
 
 Curated theme labels apply even to diagnostic/config entities (they are
 explicitly mapped, so noise is not a concern).
