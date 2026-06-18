@@ -1,0 +1,25 @@
+run:
+  fields:
+    dry_run:
+      example: true
+      default: false
+      selector:
+        boolean:
+    overwrite:
+      example: false
+      default: false
+      selector:
+        boolean:
+    entities:
+      example: "light.kitchen"
+      selector:
+        entity:
+          multiple: true
+
+cleanup:
+  fields:
+    dry_run:
+      example: true
+      default: false
+      selector:
+        boolean:

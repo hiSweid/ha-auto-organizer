@@ -1,0 +1,61 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Entity Auto-Labeler",
+        "description": "Automatically label your entities based on their domain and device class. You can configure the rules after setup and trigger a run with the `auto_labeler.run` service."
+      }
+    },
+    "abort": {
+      "already_configured": "Auto Labeler is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Auto-Labeler options",
+        "data": {
+          "dry_run": "Dry run (don't write changes)",
+          "overwrite": "Overwrite existing labels instead of merging",
+          "enable_domain": "Label by domain (lights, switches, …)",
+          "enable_device_class": "Label by device class (temperature, motion, …)",
+          "enable_integration": "Label by source integration",
+          "skip_categories": "Skip diagnostic/config entities",
+          "run_on_startup": "Run once on Home Assistant start",
+          "scan_interval": "Re-scan interval in minutes (0 = off)",
+          "label_prefix": "Optional prefix for created labels"
+        }
+      }
+    }
+  },
+  "services": {
+    "run": {
+      "name": "Run labeler",
+      "description": "Scan all entities and apply matching labels.",
+      "fields": {
+        "dry_run": {
+          "name": "Dry run",
+          "description": "Compute changes without writing them."
+        },
+        "overwrite": {
+          "name": "Overwrite",
+          "description": "Replace existing labels instead of merging."
+        },
+        "entities": {
+          "name": "Entities",
+          "description": "Limit the run to these entities."
+        }
+      }
+    },
+    "cleanup": {
+      "name": "Cleanup labels",
+      "description": "Remove labels that were created by Auto-Labeler.",
+      "fields": {
+        "dry_run": {
+          "name": "Dry run",
+          "description": "Compute changes without writing them."
+        }
+      }
+    }
+  }
+}

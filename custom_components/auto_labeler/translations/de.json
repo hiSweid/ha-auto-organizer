@@ -1,0 +1,61 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Entity Auto-Labeler",
+        "description": "Labelt deine Entitäten automatisch anhand von Domain und Geräteklasse. Die Regeln lassen sich nach der Einrichtung anpassen; ein Durchlauf wird über den Dienst `auto_labeler.run` gestartet."
+      }
+    },
+    "abort": {
+      "already_configured": "Auto-Labeler ist bereits eingerichtet."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Auto-Labeler Optionen",
+        "data": {
+          "dry_run": "Testlauf (keine Änderungen schreiben)",
+          "overwrite": "Bestehende Labels ersetzen statt ergänzen",
+          "enable_domain": "Nach Domain labeln (Lampen, Schalter, …)",
+          "enable_device_class": "Nach Geräteklasse labeln (Temperatur, Bewegung, …)",
+          "enable_integration": "Nach Quell-Integration labeln",
+          "skip_categories": "Diagnose-/Konfig-Entitäten überspringen",
+          "run_on_startup": "Einmal beim Start von Home Assistant ausführen",
+          "scan_interval": "Intervall für erneuten Scan in Minuten (0 = aus)",
+          "label_prefix": "Optionales Präfix für erstellte Labels"
+        }
+      }
+    }
+  },
+  "services": {
+    "run": {
+      "name": "Labeler ausführen",
+      "description": "Alle Entitäten scannen und passende Labels zuweisen.",
+      "fields": {
+        "dry_run": {
+          "name": "Testlauf",
+          "description": "Änderungen berechnen, aber nicht schreiben."
+        },
+        "overwrite": {
+          "name": "Überschreiben",
+          "description": "Bestehende Labels ersetzen statt ergänzen."
+        },
+        "entities": {
+          "name": "Entitäten",
+          "description": "Lauf auf diese Entitäten beschränken."
+        }
+      }
+    },
+    "cleanup": {
+      "name": "Labels aufräumen",
+      "description": "Vom Auto-Labeler erstellte Labels entfernen.",
+      "fields": {
+        "dry_run": {
+          "name": "Testlauf",
+          "description": "Änderungen berechnen, aber nicht schreiben."
+        }
+      }
+    }
+  }
+}
