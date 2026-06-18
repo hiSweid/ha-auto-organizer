@@ -21,6 +21,8 @@
           "enable_device_class": "Nach Geräteklasse labeln (Temperatur, Bewegung, …)",
           "enable_integration": "Nach Quell-Integration labeln",
           "enable_curated": "Themen-Labels für bekannte Integrationen (Haushaltsgeräte, Garten, Netzwerk …)",
+          "enable_area": "Label für den Bereich jeder Entität hinzufügen",
+          "enable_floor": "Label für die Etage jeder Entität hinzufügen",
           "skip_categories": "Diagnose-/Konfig-Entitäten überspringen",
           "language": "Label-Sprache (de/en)",
           "run_on_startup": "Einmal beim Start von Home Assistant ausführen",

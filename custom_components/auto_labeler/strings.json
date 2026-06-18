@@ -21,6 +21,8 @@
           "enable_device_class": "Label by device class (temperature, motion, …)",
           "enable_integration": "Label by source integration",
           "enable_curated": "Curated theme labels (appliances, garden, network …)",
+          "enable_area": "Add a label for each entity's area",
+          "enable_floor": "Add a label for each entity's floor",
           "skip_categories": "Skip diagnostic/config entities",
           "language": "Label language (de/en)",
           "run_on_startup": "Run once on Home Assistant start",

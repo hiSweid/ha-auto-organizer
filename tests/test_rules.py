@@ -11,7 +11,11 @@ COMPONENT = Path(__file__).resolve().parents[1] / "custom_components" / "auto_la
 sys.path.insert(0, str(COMPONENT))
 
 import rules  # noqa: E402
-from rules import LabelerOptions, compute_label_specs  # noqa: E402
+from rules import (  # noqa: E402
+    LabelerOptions,
+    area_floor_specs,
+    compute_label_specs,
+)
 
 
 @dataclass
@@ -184,3 +188,24 @@ def test_voc_maps_to_air_quality():
         "sensor.x", original_device_class="volatile_organic_compounds"
     )
     assert "Luftqualität" in names(entry)
+
+
+def test_area_floor_specs_disabled_by_default():
+    assert area_floor_specs("Wohnzimmer", "Erdgeschoss", LabelerOptions()) == []
+
+
+def test_area_floor_specs_area_only():
+    opts = LabelerOptions(enable_area=True)
+    specs = area_floor_specs("Wohnzimmer", "Erdgeschoss", opts)
+    assert [s["name"] for s in specs] == ["Wohnzimmer"]
+
+
+def test_area_floor_specs_both():
+    opts = LabelerOptions(enable_area=True, enable_floor=True)
+    specs = area_floor_specs("Küche", "Erdgeschoss", opts)
+    assert [s["name"] for s in specs] == ["Küche", "Erdgeschoss"]
+
+
+def test_area_floor_specs_missing_names_skipped():
+    opts = LabelerOptions(enable_area=True, enable_floor=True)
+    assert area_floor_specs(None, None, opts) == []

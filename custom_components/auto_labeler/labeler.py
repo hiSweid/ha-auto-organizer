@@ -6,11 +6,19 @@ import logging
 from dataclasses import dataclass, field
 
 from homeassistant.core import HomeAssistant
+from homeassistant.helpers import area_registry as ar
+from homeassistant.helpers import device_registry as dr
 from homeassistant.helpers import entity_registry as er
+from homeassistant.helpers import floor_registry as fr
 from homeassistant.helpers import label_registry as lr
 
 from .const import MANAGED_MARKER
-from .rules import LabelSpec, LabelerOptions, compute_label_specs
+from .rules import (
+    LabelSpec,
+    LabelerOptions,
+    area_floor_specs,
+    compute_label_specs,
+)
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -40,6 +48,33 @@ class Labeler:
 
     def __init__(self, hass: HomeAssistant) -> None:
         self.hass = hass
+
+    def _resolve_area_floor(
+        self, entry: er.RegistryEntry
+    ) -> tuple[str | None, str | None]:
+        """Return (area_name, floor_name) for an entity.
+
+        The entity's own area takes precedence; otherwise its device's area is
+        used. The floor is derived from the resolved area.
+        """
+        area_id = entry.area_id
+        if area_id is None and entry.device_id:
+            device = dr.async_get(self.hass).async_get(entry.device_id)
+            if device:
+                area_id = device.area_id
+        if not area_id:
+            return None, None
+
+        area = ar.async_get(self.hass).async_get_area(area_id)
+        if area is None:
+            return None, None
+
+        floor_name: str | None = None
+        if area.floor_id:
+            floor = fr.async_get(self.hass).async_get_floor(area.floor_id)
+            if floor:
+                floor_name = floor.name
+        return area.name, floor_name
 
     async def _resolve_label(
         self, spec: LabelSpec, result: RunResult, *, create: bool
@@ -83,6 +118,15 @@ class Labeler:
             result.scanned += 1
 
             specs = compute_label_specs(entry, options)
+
+            # Area/floor labels apply to any non-diagnostic entity, even when
+            # no functional label matched.
+            if (options.enable_area or options.enable_floor) and not (
+                options.skip_categories and entry.entity_category
+            ):
+                area_name, floor_name = self._resolve_area_floor(entry)
+                specs = specs + area_floor_specs(area_name, floor_name, options)
+
             if not specs:
                 continue
 

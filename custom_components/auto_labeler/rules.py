@@ -58,9 +58,19 @@ class LabelerOptions:
     enable_device_class: bool = True
     enable_integration: bool = False
     enable_curated: bool = True
+    enable_area: bool = False
+    enable_floor: bool = False
     skip_categories: bool = True
     language: str = DEFAULT_LANGUAGE
     label_prefix: str = ""
+
+
+# Area/floor labels use the user-defined names verbatim (not translatable),
+# with a distinct color/icon so they stand out from functional labels.
+AREA_LABEL_COLOR: Final = "blue-grey"
+AREA_LABEL_ICON: Final = "mdi:texture-box"
+FLOOR_LABEL_COLOR: Final = "brown"
+FLOOR_LABEL_ICON: Final = "mdi:stairs"
 
 
 def _ld(color: str, icon: str, de: str, en: str) -> LabelDef:
@@ -256,6 +266,30 @@ def resolve_language(language: str | None) -> str:
     if language and language.split("-", 1)[0] in SUPPORTED_LANGUAGES:
         return language.split("-", 1)[0]
     return DEFAULT_LANGUAGE
+
+
+def area_floor_specs(
+    area_name: str | None, floor_name: str | None, options: LabelerOptions
+) -> list[LabelSpec]:
+    """Build label specs for an entity's area and/or floor.
+
+    Pure helper: the caller resolves the names from the registries and passes
+    them in, so this stays unit-testable without Home Assistant.
+    """
+    specs: list[LabelSpec] = []
+    if options.enable_area and area_name:
+        specs.append(
+            {"name": area_name, "color": AREA_LABEL_COLOR, "icon": AREA_LABEL_ICON}
+        )
+    if options.enable_floor and floor_name:
+        specs.append(
+            {
+                "name": floor_name,
+                "color": FLOOR_LABEL_COLOR,
+                "icon": FLOOR_LABEL_ICON,
+            }
+        )
+    return specs
 
 
 def label_spec(key: str, language: str = DEFAULT_LANGUAGE) -> LabelSpec:

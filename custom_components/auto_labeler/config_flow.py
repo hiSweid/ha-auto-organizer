@@ -23,11 +23,15 @@ from .const import (
     CONF_OVERWRITE,
     CONF_RUN_ON_STARTUP,
     CONF_SCAN_INTERVAL,
+    CONF_ENABLE_AREA,
     CONF_ENABLE_CURATED,
+    CONF_ENABLE_FLOOR,
     CONF_LANGUAGE,
     CONF_SKIP_CATEGORIES,
     DEFAULT_DRY_RUN,
+    DEFAULT_ENABLE_AREA,
     DEFAULT_ENABLE_CURATED,
+    DEFAULT_ENABLE_FLOOR,
     DEFAULT_LANGUAGE,
     DEFAULT_ENABLE_DEVICE_CLASS,
     DEFAULT_ENABLE_DOMAIN,
@@ -101,6 +105,14 @@ class AutoLabelerOptionsFlow(OptionsFlow):
                 vol.Optional(
                     CONF_ENABLE_CURATED,
                     default=o.get(CONF_ENABLE_CURATED, DEFAULT_ENABLE_CURATED),
+                ): bool,
+                vol.Optional(
+                    CONF_ENABLE_AREA,
+                    default=o.get(CONF_ENABLE_AREA, DEFAULT_ENABLE_AREA),
+                ): bool,
+                vol.Optional(
+                    CONF_ENABLE_FLOOR,
+                    default=o.get(CONF_ENABLE_FLOOR, DEFAULT_ENABLE_FLOOR),
                 ): bool,
                 vol.Optional(
                     CONF_SKIP_CATEGORIES,
