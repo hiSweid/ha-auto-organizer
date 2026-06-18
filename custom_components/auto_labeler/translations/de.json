@@ -21,6 +21,7 @@
           "enable_device_class": "Nach Geräteklasse labeln (Temperatur, Bewegung, …)",
           "enable_integration": "Nach Quell-Integration labeln",
           "skip_categories": "Diagnose-/Konfig-Entitäten überspringen",
+          "language": "Label-Sprache (de/en)",
           "run_on_startup": "Einmal beim Start von Home Assistant ausführen",
           "scan_interval": "Intervall für erneuten Scan in Minuten (0 = aus)",
           "label_prefix": "Optionales Präfix für erstellte Labels"

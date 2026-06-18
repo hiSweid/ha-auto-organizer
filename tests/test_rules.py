@@ -94,13 +94,36 @@ def test_categories_labeled_when_skip_disabled():
     assert names(entry, opts) == ["Sensoren"]
 
 
-def test_all_specs_have_valid_color_and_icon():
+def test_all_labels_have_valid_color_icon_and_names():
     valid_colors = {
         "primary", "accent", "red", "pink", "purple", "deep-purple", "indigo",
         "blue", "light-blue", "cyan", "teal", "green", "light-green", "lime",
         "yellow", "amber", "orange", "deep-orange", "brown", "grey", "blue-grey",
     }
+    for key, ld in rules.LABELS.items():
+        assert ld["color"] in valid_colors, key
+        assert ld["icon"].startswith("mdi:"), key
+        for lang in rules.SUPPORTED_LANGUAGES:
+            assert ld["names"].get(lang), f"{key} missing {lang}"
+
+
+def test_every_mapped_key_exists_in_catalog():
     for mapping in (rules.DOMAIN_LABELS, rules.DEVICE_CLASS_LABELS, rules.KEYWORD_LABELS):
-        for s in mapping.values():
-            assert s["color"] in valid_colors, s
-            assert s["icon"].startswith("mdi:"), s
+        for key in mapping.values():
+            assert key in rules.LABELS, key
+
+
+def test_english_language():
+    opts = LabelerOptions(language="en")
+    entry = FakeEntry("sensor.outdoor", original_device_class="temperature")
+    assert names(entry, opts) == ["Sensors", "Temperature"]
+
+
+def test_unsupported_language_falls_back_to_german():
+    opts = LabelerOptions(language="fr")
+    assert names(FakeEntry("light.k"), opts) == ["Beleuchtung"]
+
+
+def test_language_region_code_normalized():
+    opts = LabelerOptions(language="en-US")
+    assert names(FakeEntry("light.k"), opts) == ["Lights"]

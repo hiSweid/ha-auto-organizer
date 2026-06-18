@@ -23,8 +23,10 @@ from .const import (
     CONF_OVERWRITE,
     CONF_RUN_ON_STARTUP,
     CONF_SCAN_INTERVAL,
+    CONF_LANGUAGE,
     CONF_SKIP_CATEGORIES,
     DEFAULT_DRY_RUN,
+    DEFAULT_LANGUAGE,
     DEFAULT_ENABLE_DEVICE_CLASS,
     DEFAULT_ENABLE_DOMAIN,
     DEFAULT_ENABLE_INTEGRATION,
@@ -100,6 +102,10 @@ class AutoLabelerOptionsFlow(OptionsFlow):
                         CONF_SKIP_CATEGORIES, DEFAULT_SKIP_CATEGORIES
                     ),
                 ): bool,
+                vol.Optional(
+                    CONF_LANGUAGE,
+                    default=o.get(CONF_LANGUAGE, DEFAULT_LANGUAGE),
+                ): vol.In(["de", "en"]),
                 vol.Optional(
                     CONF_RUN_ON_STARTUP,
                     default=o.get(

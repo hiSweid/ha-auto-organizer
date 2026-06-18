@@ -30,8 +30,10 @@ from .const import (
     CONF_OVERWRITE,
     CONF_RUN_ON_STARTUP,
     CONF_SCAN_INTERVAL,
+    CONF_LANGUAGE,
     CONF_SKIP_CATEGORIES,
     DEFAULT_DRY_RUN,
+    DEFAULT_LANGUAGE,
     DEFAULT_ENABLE_DEVICE_CLASS,
     DEFAULT_ENABLE_DOMAIN,
     DEFAULT_ENABLE_INTEGRATION,
@@ -64,6 +66,7 @@ def _options_from_entry(entry: ConfigEntry) -> LabelerOptions:
             CONF_ENABLE_INTEGRATION, DEFAULT_ENABLE_INTEGRATION
         ),
         skip_categories=o.get(CONF_SKIP_CATEGORIES, DEFAULT_SKIP_CATEGORIES),
+        language=o.get(CONF_LANGUAGE, DEFAULT_LANGUAGE),
         label_prefix=o.get(CONF_LABEL_PREFIX, DEFAULT_LABEL_PREFIX),
     )
 

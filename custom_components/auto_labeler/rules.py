@@ -3,8 +3,9 @@
 The ruleset is intentionally pure data so it can be extended, unit-tested and
 later made configurable without touching the engine in ``labeler.py``.
 
-Each label spec is ``(name, color, icon)``.  ``color`` must be one of Home
-Assistant's named label colors and ``icon`` an ``mdi:`` icon.
+Labels are referenced by a stable *key* (e.g. ``"lights"``).  A key maps to a
+color, an ``mdi:`` icon and a per-language display name.  Only German (``de``)
+and English (``en``) are supported for now; German is the default.
 """
 
 from __future__ import annotations
@@ -12,13 +13,25 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Final, Protocol, TypedDict
 
+# Supported UI languages. German is the default, English the fallback.
+SUPPORTED_LANGUAGES: Final = ("de", "en")
+DEFAULT_LANGUAGE: Final = "de"
+
 
 class LabelSpec(TypedDict):
-    """A label to create / assign."""
+    """A resolved label to create / assign."""
 
     name: str
     color: str
     icon: str
+
+
+class LabelDef(TypedDict):
+    """Definition of a label keyed by a stable id, with localized names."""
+
+    color: str
+    icon: str
+    names: dict[str, str]
 
 
 class EntityLike(Protocol):
@@ -45,86 +58,146 @@ class LabelerOptions:
     enable_device_class: bool = True
     enable_integration: bool = False
     skip_categories: bool = True
+    language: str = DEFAULT_LANGUAGE
     label_prefix: str = ""
 
 
-def spec(name: str, color: str, icon: str) -> LabelSpec:
-    """Build a :class:`LabelSpec`."""
-    return {"name": name, "color": color, "icon": icon}
+def _ld(color: str, icon: str, de: str, en: str) -> LabelDef:
+    """Build a :class:`LabelDef`."""
+    return {"color": color, "icon": icon, "names": {"de": de, "en": en}}
 
 
-# --- Domain based labels -------------------------------------------------
-# Maps an entity domain to a coarse functional label.
-DOMAIN_LABELS: Final[dict[str, LabelSpec]] = {
-    "light": spec("Beleuchtung", "amber", "mdi:lightbulb-group"),
-    "switch": spec("Schalter", "blue", "mdi:toggle-switch"),
-    "fan": spec("Lüfter", "cyan", "mdi:fan"),
-    "climate": spec("Klima", "teal", "mdi:thermostat"),
-    "cover": spec("Rollläden", "brown", "mdi:window-shutter"),
-    "lock": spec("Schlösser", "blue-grey", "mdi:lock"),
-    "vacuum": spec("Staubsauger", "deep-purple", "mdi:robot-vacuum"),
-    "media_player": spec("Medien", "indigo", "mdi:multimedia"),
-    "camera": spec("Kameras", "grey", "mdi:cctv"),
-    "binary_sensor": spec("Binärsensoren", "light-blue", "mdi:checkbox-marked-circle"),
-    "sensor": spec("Sensoren", "light-green", "mdi:gauge"),
-    "number": spec("Steuerung", "green", "mdi:knob"),
-    "select": spec("Steuerung", "green", "mdi:knob"),
-    "button": spec("Taster", "green", "mdi:gesture-tap-button"),
-    "scene": spec("Szenen", "purple", "mdi:palette"),
-    "automation": spec("Automationen", "pink", "mdi:robot"),
-    "script": spec("Skripte", "pink", "mdi:script-text"),
-    "device_tracker": spec("Anwesenheit", "orange", "mdi:account-question"),
-    "person": spec("Anwesenheit", "orange", "mdi:account"),
-    "weather": spec("Wetter", "light-blue", "mdi:weather-partly-cloudy"),
-    "update": spec("Updates", "deep-orange", "mdi:package-up"),
-    "alarm_control_panel": spec("Sicherheit", "red", "mdi:shield-home"),
-    "siren": spec("Sicherheit", "red", "mdi:bullhorn"),
+# --- Label catalog -------------------------------------------------------
+# Stable key -> color, icon, localized names.
+LABELS: Final[dict[str, LabelDef]] = {
+    # domains
+    "lights": _ld("amber", "mdi:lightbulb-group", "Beleuchtung", "Lights"),
+    "switches": _ld("blue", "mdi:toggle-switch", "Schalter", "Switches"),
+    "fans": _ld("cyan", "mdi:fan", "Lüfter", "Fans"),
+    "climate": _ld("teal", "mdi:thermostat", "Klima", "Climate"),
+    "covers": _ld("brown", "mdi:window-shutter", "Rollläden", "Covers"),
+    "locks": _ld("blue-grey", "mdi:lock", "Schlösser", "Locks"),
+    "vacuums": _ld("deep-purple", "mdi:robot-vacuum", "Staubsauger", "Vacuums"),
+    "media": _ld("indigo", "mdi:multimedia", "Medien", "Media"),
+    "cameras": _ld("grey", "mdi:cctv", "Kameras", "Cameras"),
+    "binary_sensors": _ld(
+        "light-blue", "mdi:checkbox-marked-circle", "Binärsensoren", "Binary Sensors"
+    ),
+    "sensors": _ld("light-green", "mdi:gauge", "Sensoren", "Sensors"),
+    "controls": _ld("green", "mdi:knob", "Steuerung", "Controls"),
+    "buttons": _ld("green", "mdi:gesture-tap-button", "Taster", "Buttons"),
+    "scenes": _ld("purple", "mdi:palette", "Szenen", "Scenes"),
+    "automations": _ld("pink", "mdi:robot", "Automationen", "Automations"),
+    "scripts": _ld("pink", "mdi:script-text", "Skripte", "Scripts"),
+    "presence": _ld("orange", "mdi:account-question", "Anwesenheit", "Presence"),
+    "weather": _ld(
+        "light-blue", "mdi:weather-partly-cloudy", "Wetter", "Weather"
+    ),
+    "updates": _ld("deep-orange", "mdi:package-up", "Updates", "Updates"),
+    "security": _ld("red", "mdi:shield-home", "Sicherheit", "Security"),
+    # device classes
+    "temperature": _ld(
+        "deep-orange", "mdi:thermometer", "Temperatur", "Temperature"
+    ),
+    "humidity": _ld("blue", "mdi:water-percent", "Luftfeuchtigkeit", "Humidity"),
+    "pressure": _ld("blue-grey", "mdi:gauge", "Druck", "Pressure"),
+    "battery": _ld("green", "mdi:battery", "Batterie", "Battery"),
+    "energy": _ld("amber", "mdi:flash", "Energie", "Energy"),
+    "water": _ld("light-blue", "mdi:water", "Wasser", "Water"),
+    "light_level": _ld("yellow", "mdi:brightness-6", "Helligkeit", "Light Level"),
+    "motion": _ld("red", "mdi:motion-sensor", "Bewegung", "Motion"),
+    "openings": _ld("brown", "mdi:door", "Öffnungen", "Openings"),
+    "leak": _ld("light-blue", "mdi:water-alert", "Leck", "Leak"),
+    "connectivity": _ld("grey", "mdi:wifi", "Verbindung", "Connectivity"),
+    "air_quality": _ld("teal", "mdi:air-filter", "Luftqualität", "Air Quality"),
 }
 
-# --- Device-class based labels ------------------------------------------
-# Finer-grained labels derived from a sensor/binary_sensor device_class.
-DEVICE_CLASS_LABELS: Final[dict[str, LabelSpec]] = {
-    "temperature": spec("Temperatur", "deep-orange", "mdi:thermometer"),
-    "humidity": spec("Luftfeuchtigkeit", "blue", "mdi:water-percent"),
-    "pressure": spec("Druck", "blue-grey", "mdi:gauge"),
-    "atmospheric_pressure": spec("Druck", "blue-grey", "mdi:gauge"),
-    "battery": spec("Batterie", "green", "mdi:battery"),
-    "power": spec("Energie", "amber", "mdi:flash"),
-    "energy": spec("Energie", "amber", "mdi:flash"),
-    "current": spec("Energie", "amber", "mdi:flash"),
-    "voltage": spec("Energie", "amber", "mdi:flash"),
-    "gas": spec("Energie", "amber", "mdi:meter-gas"),
-    "water": spec("Wasser", "light-blue", "mdi:water"),
-    "illuminance": spec("Helligkeit", "yellow", "mdi:brightness-6"),
-    "motion": spec("Bewegung", "red", "mdi:motion-sensor"),
-    "occupancy": spec("Anwesenheit", "orange", "mdi:account-question"),
-    "presence": spec("Anwesenheit", "orange", "mdi:account-question"),
-    "door": spec("Öffnungen", "brown", "mdi:door"),
-    "window": spec("Öffnungen", "brown", "mdi:window-closed-variant"),
-    "garage_door": spec("Öffnungen", "brown", "mdi:garage"),
-    "opening": spec("Öffnungen", "brown", "mdi:square-outline"),
-    "smoke": spec("Sicherheit", "red", "mdi:smoke-detector"),
-    "carbon_monoxide": spec("Sicherheit", "red", "mdi:molecule-co"),
-    "gas_safety": spec("Sicherheit", "red", "mdi:gas-cylinder"),
-    "moisture": spec("Leck", "light-blue", "mdi:water-alert"),
-    "connectivity": spec("Verbindung", "grey", "mdi:wifi"),
-    "pm25": spec("Luftqualität", "teal", "mdi:air-filter"),
-    "pm10": spec("Luftqualität", "teal", "mdi:air-filter"),
-    "carbon_dioxide": spec("Luftqualität", "teal", "mdi:molecule-co2"),
-    "aqi": spec("Luftqualität", "teal", "mdi:air-filter"),
-    "signal_strength": spec("Verbindung", "grey", "mdi:wifi"),
+
+# --- Domain -> label key -------------------------------------------------
+DOMAIN_LABELS: Final[dict[str, str]] = {
+    "light": "lights",
+    "switch": "switches",
+    "fan": "fans",
+    "climate": "climate",
+    "cover": "covers",
+    "lock": "locks",
+    "vacuum": "vacuums",
+    "media_player": "media",
+    "camera": "cameras",
+    "binary_sensor": "binary_sensors",
+    "sensor": "sensors",
+    "number": "controls",
+    "select": "controls",
+    "button": "buttons",
+    "scene": "scenes",
+    "automation": "automations",
+    "script": "scripts",
+    "device_tracker": "presence",
+    "person": "presence",
+    "weather": "weather",
+    "update": "updates",
+    "alarm_control_panel": "security",
+    "siren": "security",
+}
+
+# --- device_class -> label key ------------------------------------------
+DEVICE_CLASS_LABELS: Final[dict[str, str]] = {
+    "temperature": "temperature",
+    "humidity": "humidity",
+    "pressure": "pressure",
+    "atmospheric_pressure": "pressure",
+    "battery": "battery",
+    "power": "energy",
+    "energy": "energy",
+    "current": "energy",
+    "voltage": "energy",
+    "gas": "energy",
+    "water": "water",
+    "illuminance": "light_level",
+    "motion": "motion",
+    "occupancy": "presence",
+    "presence": "presence",
+    "door": "openings",
+    "window": "openings",
+    "garage_door": "openings",
+    "opening": "openings",
+    "smoke": "security",
+    "carbon_monoxide": "security",
+    "gas_safety": "security",
+    "moisture": "leak",
+    "connectivity": "connectivity",
+    "signal_strength": "connectivity",
+    "pm25": "air_quality",
+    "pm10": "air_quality",
+    "carbon_dioxide": "air_quality",
+    "aqi": "air_quality",
 }
 
 # --- entity_id keyword fallbacks ----------------------------------------
 # Applied when nothing more specific matched; keyed by substring in entity_id.
-KEYWORD_LABELS: Final[dict[str, LabelSpec]] = {
-    "battery": spec("Batterie", "green", "mdi:battery"),
-    "_power": spec("Energie", "amber", "mdi:flash"),
-    "_energy": spec("Energie", "amber", "mdi:flash"),
-    "temperature": spec("Temperatur", "deep-orange", "mdi:thermometer"),
-    "humidity": spec("Luftfeuchtigkeit", "blue", "mdi:water-percent"),
-    "motion": spec("Bewegung", "red", "mdi:motion-sensor"),
+KEYWORD_LABELS: Final[dict[str, str]] = {
+    "battery": "battery",
+    "_power": "energy",
+    "_energy": "energy",
+    "temperature": "temperature",
+    "humidity": "humidity",
+    "motion": "motion",
 }
+
+
+def resolve_language(language: str | None) -> str:
+    """Return a supported language code, falling back to the default."""
+    if language and language.split("-", 1)[0] in SUPPORTED_LANGUAGES:
+        return language.split("-", 1)[0]
+    return DEFAULT_LANGUAGE
+
+
+def label_spec(key: str, language: str = DEFAULT_LANGUAGE) -> LabelSpec:
+    """Resolve a label key into a localized :class:`LabelSpec`."""
+    ld = LABELS[key]
+    lang = resolve_language(language)
+    name = ld["names"].get(lang) or ld["names"][DEFAULT_LANGUAGE]
+    return {"name": name, "color": ld["color"], "icon": ld["icon"]}
 
 
 def compute_label_specs(
@@ -135,17 +208,17 @@ def compute_label_specs(
     Pure function (no Home Assistant state) so the ruleset can be unit-tested
     in isolation.
     """
-    specs: list[LabelSpec] = []
+    keys: list[str] = []
     seen: set[str] = set()
 
     # Skip config/diagnostic helper entities; they only add noise.
     if options.skip_categories and getattr(entry, "entity_category", None):
-        return specs
+        return []
 
-    def add(s: LabelSpec | None) -> None:
-        if s and s["name"] not in seen:
-            seen.add(s["name"])
-            specs.append(s)
+    def add(key: str | None) -> None:
+        if key and key not in seen:
+            seen.add(key)
+            keys.append(key)
 
     domain = entry.entity_id.split(".", 1)[0]
 
@@ -158,14 +231,18 @@ def compute_label_specs(
             add(DEVICE_CLASS_LABELS.get(device_class))
 
     # Keyword fallbacks only when nothing more specific matched.
-    if not specs:
+    if not keys:
         entity_id = entry.entity_id.lower()
-        for needle, s in KEYWORD_LABELS.items():
+        for needle, key in KEYWORD_LABELS.items():
             if needle in entity_id:
-                add(s)
+                add(key)
+
+    specs = [label_spec(k, options.language) for k in keys]
 
     if options.enable_integration and entry.platform:
-        add({"name": entry.platform, "color": "grey", "icon": "mdi:puzzle"})
+        specs.append(
+            {"name": entry.platform, "color": "grey", "icon": "mdi:puzzle"}
+        )
 
     if options.label_prefix:
         specs = [{**s, "name": f"{options.label_prefix}{s['name']}"} for s in specs]
