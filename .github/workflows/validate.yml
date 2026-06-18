@@ -20,6 +20,8 @@ jobs:
       - uses: hacs/action@main
         with:
           category: integration
+          # No brand assets in the HA brands repo yet; skip that check.
+          ignore: brands
 
   tests:
     runs-on: ubuntu-latest
