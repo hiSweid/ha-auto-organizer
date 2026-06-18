@@ -220,3 +220,61 @@ def test_area_floor_specs_both():
 def test_area_floor_specs_missing_names_skipped():
     opts = LabelerOptions(enable_area=True, enable_floor=True)
     assert area_floor_specs(None, None, opts) == []
+
+
+# --- Regression guards for user label preferences -----------------------
+
+REMOVED_LABEL_NAMES = {
+    "Sensoren",
+    "Binärsensoren",
+    "Steuerung",
+    "Taster",
+    "Druck",
+    "Verbindung",
+}
+
+
+def test_removed_label_names_not_in_catalog():
+    present = {ld["names"]["de"] for ld in rules.LABELS.values()}
+    assert present.isdisjoint(REMOVED_LABEL_NAMES), present & REMOVED_LABEL_NAMES
+
+
+def test_removed_domains_produce_no_label():
+    for domain in ("sensor", "binary_sensor", "number", "select", "button"):
+        entry = FakeEntry(f"{domain}.plain_no_dc")
+        assert names(entry) == [], domain
+
+
+def test_removed_device_classes_produce_no_label():
+    for dc in ("pressure", "atmospheric_pressure", "connectivity", "signal_strength"):
+        entry = FakeEntry("sensor.x", original_device_class=dc)
+        assert names(entry) == [], dc
+
+
+def test_energy_is_a_single_label_not_split():
+    energy_dcs = (
+        "power", "energy", "current", "voltage", "gas",
+        "apparent_power", "reactive_power", "power_factor", "frequency",
+    )
+    produced = set()
+    for dc in energy_dcs:
+        produced.update(names(FakeEntry("sensor.x", original_device_class=dc)))
+    assert produced == {"Energie"}, produced
+
+
+def test_heating_domains_go_into_klima():
+    for domain in ("climate", "water_heater", "humidifier"):
+        entry = FakeEntry(f"{domain}.thermostat")
+        assert names(entry) == ["Klima"], domain
+
+
+def test_label_names_are_unique_per_language():
+    for lang in rules.SUPPORTED_LANGUAGES:
+        seen = [ld["names"][lang] for ld in rules.LABELS.values()]
+        assert len(seen) == len(set(seen)), f"duplicate name in {lang}"
+
+
+def test_raw_integration_label_skipped_for_diagnostic():
+    opts = LabelerOptions(enable_integration=True, enable_curated=False)
+    entry = FakeEntry("sensor.x", platform="foo", entity_category="diagnostic")
+    assert names(entry, opts) == []
