@@ -15,6 +15,8 @@ from rules import (  # noqa: E402
     LabelerOptions,
     area_floor_specs,
     compute_label_specs,
+    label_differs,
+    label_spec,
     match_area,
 )
 
@@ -278,6 +280,13 @@ def test_heating_domains_go_into_klima():
 
 def test_energy_and_lights_have_distinct_colors():
     assert rules.LABELS["energy"]["color"] != rules.LABELS["lights"]["color"]
+
+
+def test_label_differs_detects_color_and_icon_drift():
+    spec = label_spec("energy")  # lime / mdi:flash
+    assert label_differs("amber", spec["icon"], spec) is True
+    assert label_differs(spec["color"], "mdi:other", spec) is True
+    assert label_differs(spec["color"], spec["icon"], spec) is False
 
 
 def test_label_names_are_unique_per_language():

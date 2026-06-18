@@ -18,6 +18,7 @@ from .rules import (
     LabelerOptions,
     area_floor_specs,
     compute_label_specs,
+    label_differs,
     match_area,
 )
 
@@ -39,6 +40,7 @@ class RunResult:
     scanned: int = 0
     updated: int = 0
     labels_created: int = 0
+    labels_updated: int = 0
     labels_removed: int = 0
     changes: list[dict[str, list[str]]] = field(default_factory=list)
 
@@ -47,6 +49,7 @@ class RunResult:
             "scanned": self.scanned,
             "updated": self.updated,
             "labels_created": self.labels_created,
+            "labels_updated": self.labels_updated,
             "labels_removed": self.labels_removed,
             "changes": self.changes,
         }
@@ -102,18 +105,38 @@ class Labeler:
         return area.name, floor_name
 
     async def _resolve_label(
-        self, spec: LabelSpec, result: RunResult, *, create: bool
+        self,
+        spec: LabelSpec,
+        result: RunResult,
+        *,
+        create: bool,
+        synced: set[str],
     ) -> str:
         """Return the label_id for ``spec``.
 
-        Creates the label when missing and ``create`` is set. During a dry run
-        (``create=False``) nothing is written: existing labels resolve to their
-        id, missing ones to a ``(neu) <name>`` placeholder so the preview still
-        shows what would be added.
+        Creates the label when missing and ``create`` is set. For existing
+        labels managed by this integration, the color/icon is re-synced when
+        the rule changed. During a dry run (``create=False``) nothing is
+        written: existing labels resolve to their id, missing ones to a
+        ``(neu) <name>`` placeholder so the preview still shows what would
+        be added.
         """
         reg = lr.async_get(self.hass)
         existing = reg.async_get_label_by_name(spec["name"])
         if existing is not None:
+            if (
+                existing.description == MANAGED_MARKER
+                and spec["name"] not in synced
+                and label_differs(existing.color, existing.icon, spec)
+            ):
+                synced.add(spec["name"])
+                result.labels_updated += 1
+                if create:
+                    reg.async_update(
+                        existing.label_id,
+                        color=spec["color"],
+                        icon=spec["icon"],
+                    )
             return existing.label_id
         if not create:
             return f"(neu) {spec['name']}"
@@ -135,6 +158,7 @@ class Labeler:
         """Scan the entity registry and apply labels."""
         result = RunResult()
         ent_reg = er.async_get(self.hass)
+        synced: set[str] = set()
 
         entries = list(ent_reg.entities.values())
         for entry in entries:
@@ -156,7 +180,9 @@ class Labeler:
                 continue
 
             target_ids = {
-                await self._resolve_label(s, result, create=not options.dry_run)
+                await self._resolve_label(
+                    s, result, create=not options.dry_run, synced=synced
+                )
                 for s in specs
             }
 

@@ -339,6 +339,11 @@ def area_floor_specs(
     return specs
 
 
+def label_differs(color: str | None, icon: str | None, spec: LabelSpec) -> bool:
+    """Return True if an existing label's color/icon no longer match the rule."""
+    return color != spec["color"] or icon != spec["icon"]
+
+
 def label_spec(key: str, language: str = DEFAULT_LANGUAGE) -> LabelSpec:
     """Resolve a label key into a localized :class:`LabelSpec`."""
     ld = LABELS[key]
