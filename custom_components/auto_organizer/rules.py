@@ -425,6 +425,14 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     # media (TV remotes / keyboards)
     "tastatur": "media",
     "keyboard": "media",
+    # air quality
+    "voc": "air_quality",
+    "luftqualitaet": "air_quality",
+    "luftguete": "air_quality",
+    "feinstaub": "air_quality",
+    # climate (AC telemetry)
+    "fanfreq": "climate",
+    "klimaanlage": "climate",
 }
 
 # Known vehicle/model names; matched as whole words in entity_id/name and

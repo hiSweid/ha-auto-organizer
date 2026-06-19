@@ -236,6 +236,14 @@ def test_keyword_lichterkette_lights():
     assert names(FakeEntry("sensor.flur_lichterkette")) == ["Beleuchtung"]
 
 
+def test_keyword_voc_air_quality():
+    assert names(FakeEntry("sensor.wohnzimmer_tvoc_voc")) == ["Luftqualität"]
+
+
+def test_keyword_fanfreq_climate():
+    assert names(FakeEntry("sensor.wohnzimmer_ac_fanfreq")) == ["Klima"]
+
+
 def test_keyword_water_group():
     assert names(FakeEntry("sensor.wasserzaehler_stand")) == ["Wasser"]
 
