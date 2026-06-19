@@ -178,6 +178,28 @@ def test_car_label_from_keyword():
     assert "Auto" in names(FakeEntry("sensor.wallbox_ladung"))
 
 
+def test_keyword_pv_grid_energy():
+    assert names(FakeEntry("sensor.pv_grid_share")) == ["Energie"]
+    assert names(FakeEntry("sensor.spannung_l1")) == ["Energie"]
+
+
+def test_keyword_uv_weather():
+    assert names(FakeEntry("sensor.uv_hoch")) == ["Wetter"]
+
+
+def test_keyword_personal_device_presence():
+    # sensor domain has no label; "iphone" keyword -> presence
+    assert names(FakeEntry("sensor.iphone_von_johanna")) == ["Anwesenheit"]
+
+
+def test_marstek_integration_energy():
+    assert names(FakeEntry("sensor.venus_x", platform="marstek_modbus")) == ["Energie"]
+
+
+def test_reolink_integration_cameras():
+    assert names(FakeEntry("sensor.reolink_x", platform="reolink")) == ["Kameras"]
+
+
 def test_keyword_water_group():
     assert names(FakeEntry("sensor.wasserzaehler_stand")) == ["Wasser"]
 

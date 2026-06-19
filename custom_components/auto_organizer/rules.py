@@ -363,6 +363,38 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "lueftung": "fans",
     # updates
     "firmware": "updates",
+    # energy (PV / grid / storage / electrical quantities)
+    "pv": "energy",
+    "grid": "energy",
+    "einspeisung": "energy",
+    "eigenverbrauch": "energy",
+    "autarkie": "energy",
+    "spannung": "energy",
+    "frequenz": "energy",
+    "wirkleistung": "energy",
+    "blindleistung": "energy",
+    "stromspeicher": "energy",
+    "batteriespeicher": "energy",
+    "marstek": "energy",
+    # weather
+    "uv": "weather",
+    "windrichtung": "weather",
+    "sonnenstunden": "weather",
+    "luftdruck": "weather",
+    # presence (personal devices / occupancy)
+    "iphone": "presence",
+    "ipad": "presence",
+    "macbook": "presence",
+    "airpods": "presence",
+    "smartphone": "presence",
+    "handy": "presence",
+    "occupancy": "presence",
+    "belegung": "presence",
+    "anwesenheit": "presence",
+    "location": "presence",
+    "zuhause": "presence",
+    # network
+    "ssid": "network",
 }
 
 # Known vehicle/model names; matched as whole words in entity_id/name and
@@ -403,6 +435,10 @@ INTEGRATION_LABELS: Final[dict[str, str]] = {
     "openevse": "car",
     # heating oil
     "oilfox": "climate",
+    # home battery storage (Marstek Venus via Modbus) -> energy
+    "marstek_modbus": "energy",
+    # cameras
+    "reolink": "cameras",
 }
 
 
