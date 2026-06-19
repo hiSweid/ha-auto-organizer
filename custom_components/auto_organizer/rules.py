@@ -395,6 +395,15 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "zuhause": "presence",
     # network
     "ssid": "network",
+    # cameras (Reolink models often arrive via MQTT)
+    "reolink": "cameras",
+    # media
+    "wiedergabeliste": "media",
+    "playlist": "media",
+    # light level
+    "brightness": "light_level",
+    # presence
+    "family": "presence",
 }
 
 # Known vehicle/model names; matched as whole words in entity_id/name and
@@ -437,8 +446,20 @@ INTEGRATION_LABELS: Final[dict[str, str]] = {
     "oilfox": "climate",
     # home battery storage (Marstek Venus via Modbus) -> energy
     "marstek_modbus": "energy",
-    # cameras
+    # cameras / NVR
     "reolink": "cameras",
+    "frigate": "cameras",
+    # lights
+    "wled": "lights",
+    # weather
+    "dwd_weather": "weather",
+    "met": "weather",
+    "accuweather": "weather",
+    "openweathermap": "weather",
+    # HA system / add-ons / infrastructure -> network & servers
+    "hassio": "network",
+    "backup": "network",
+    "systemmonitor": "network",
 }
 
 

@@ -200,6 +200,22 @@ def test_reolink_integration_cameras():
     assert names(FakeEntry("sensor.reolink_x", platform="reolink")) == ["Kameras"]
 
 
+def test_integration_themes_extra():
+    cases = {
+        "frigate": "Kameras",
+        "wled": "Beleuchtung",
+        "dwd_weather": "Wetter",
+        "hassio": "Netzwerk & Server",
+        "backup": "Netzwerk & Server",
+    }
+    for platform, label in cases.items():
+        assert names(FakeEntry("sensor.x", platform=platform)) == [label], platform
+
+
+def test_reolink_keyword_via_name():
+    assert names(FakeEntry("sensor.reolink_x906b_motion")) == ["Kameras"]
+
+
 def test_keyword_water_group():
     assert names(FakeEntry("sensor.wasserzaehler_stand")) == ["Wasser"]
 
