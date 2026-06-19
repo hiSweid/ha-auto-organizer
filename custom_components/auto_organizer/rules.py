@@ -1,7 +1,7 @@
 """Rule definitions for the Auto-Organizer integration.
 
 The ruleset is intentionally pure data so it can be extended, unit-tested and
-later made configurable without touching the engine in ``labeler.py``.
+later made configurable without touching the engine in ``organizer.py``.
 
 Labels are referenced by a stable *key* (e.g. ``"lights"``).  A key maps to a
 color, an ``mdi:`` icon and a per-language display name.  Only German (``de``)
@@ -51,7 +51,7 @@ class EntityLike(Protocol):
 
 
 @dataclass
-class LabelerOptions:
+class OrganizerOptions:
     """Runtime options controlling a labeling run."""
 
     dry_run: bool = False
@@ -449,7 +449,7 @@ def match_area(
 
 
 def area_floor_specs(
-    area_name: str | None, floor_name: str | None, options: LabelerOptions
+    area_name: str | None, floor_name: str | None, options: OrganizerOptions
 ) -> list[LabelSpec]:
     """Build label specs for an entity's area and/or floor.
 
@@ -556,7 +556,7 @@ def label_spec(key: str, language: str = DEFAULT_LANGUAGE) -> LabelSpec:
 
 
 def compute_label_specs(
-    entry: EntityLike, options: LabelerOptions
+    entry: EntityLike, options: OrganizerOptions
 ) -> list[LabelSpec]:
     """Return the list of label specs that apply to a single entity.
 

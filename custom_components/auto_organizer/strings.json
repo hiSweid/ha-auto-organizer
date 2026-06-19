@@ -77,7 +77,7 @@
   },
   "services": {
     "run": {
-      "name": "Run labeler",
+      "name": "Run",
       "description": "Scan all entities and apply matching labels.",
       "fields": {
         "dry_run": {

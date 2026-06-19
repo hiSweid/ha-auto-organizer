@@ -68,7 +68,7 @@ from .const import (
     SERVICE_REMOVE_ALL,
     SERVICE_RUN,
 )
-from .labeler import Labeler, LabelerOptions
+from .organizer import Organizer, OrganizerOptions
 from .rules import invalid_custom_rule_labels, parse_custom_rules
 
 _LOGGER = logging.getLogger(__name__)
@@ -83,13 +83,13 @@ PLATFORMS: list[Platform] = [
 type AutoOrganizerConfigEntry = ConfigEntry[AutoOrganizerRuntime]
 
 
-def _options_from_entry(hass: HomeAssistant, entry: ConfigEntry) -> LabelerOptions:
+def _options_from_entry(hass: HomeAssistant, entry: ConfigEntry) -> OrganizerOptions:
     o = entry.options
     language = o.get(CONF_LANGUAGE, DEFAULT_LANGUAGE)
     if language == "auto":
         # Follow Home Assistant's configured language (resolved to de/en).
         language = hass.config.language
-    return LabelerOptions(
+    return OrganizerOptions(
         dry_run=o.get(CONF_DRY_RUN, DEFAULT_DRY_RUN),
         overwrite=o.get(CONF_OVERWRITE, DEFAULT_OVERWRITE),
         enable_domain=o.get(CONF_ENABLE_DOMAIN, DEFAULT_ENABLE_DOMAIN),
@@ -124,11 +124,11 @@ async def async_setup_entry(
     hass: HomeAssistant, entry: AutoOrganizerConfigEntry
 ) -> bool:
     """Set up Auto-Organizer from a config entry."""
-    labeler = Labeler(hass)
+    organizer = Organizer(hass)
     runtime = AutoOrganizerRuntime(
         hass=hass,
         entry=entry,
-        labeler=labeler,
+        organizer=organizer,
         options_factory=lambda: _options_from_entry(hass, entry),
     )
     entry.runtime_data = runtime
@@ -138,7 +138,7 @@ async def async_setup_entry(
     if entry.options.get(CONF_RUN_ON_STARTUP, DEFAULT_RUN_ON_STARTUP):
 
         async def _run_on_start(_now) -> None:
-            await labeler.run(_options_from_entry(hass, entry))
+            await organizer.run(_options_from_entry(hass, entry))
 
         async_at_started(hass, _run_on_start)
 
@@ -146,7 +146,7 @@ async def async_setup_entry(
     if interval and interval > 0:
 
         async def _scheduled(_now) -> None:
-            await labeler.run(_options_from_entry(hass, entry))
+            await organizer.run(_options_from_entry(hass, entry))
 
         entry.async_on_unload(
             async_track_time_interval(
@@ -162,7 +162,7 @@ async def async_setup_entry(
             pending.clear()
             if not ids:
                 return
-            await runtime.labeler.run(_options_from_entry(hass, entry), entity_filter=ids)
+            await runtime.organizer.run(_options_from_entry(hass, entry), entity_filter=ids)
             runtime.refresh_stats()
 
         debouncer = Debouncer(
@@ -248,7 +248,7 @@ def _register_services(hass: HomeAssistant) -> None:
         if ATTR_OVERWRITE in call.data:
             options.overwrite = call.data[ATTR_OVERWRITE]
         entity_filter = call.data.get(ATTR_ENTITY_FILTER)
-        result = await entry.runtime_data.labeler.run(
+        result = await entry.runtime_data.organizer.run(
             options,
             entity_filter=set(entity_filter) if entity_filter else None,
         )
@@ -258,7 +258,7 @@ def _register_services(hass: HomeAssistant) -> None:
         entries = hass.config_entries.async_entries(DOMAIN)
         if not entries:
             return {"error": "no config entry"}
-        result = await entries[0].runtime_data.labeler.cleanup(
+        result = await entries[0].runtime_data.organizer.cleanup(
             dry_run=call.data.get(ATTR_DRY_RUN, False)
         )
         return result.as_dict()
@@ -267,7 +267,7 @@ def _register_services(hass: HomeAssistant) -> None:
         entries = hass.config_entries.async_entries(DOMAIN)
         if not entries:
             return {"error": "no config entry"}
-        result = await entries[0].runtime_data.labeler.assign_areas(
+        result = await entries[0].runtime_data.organizer.assign_areas(
             dry_run=call.data.get(ATTR_DRY_RUN, False),
             exclude=_options_from_entry(hass, entries[0]).exclude,
         )
@@ -277,7 +277,7 @@ def _register_services(hass: HomeAssistant) -> None:
         entries = hass.config_entries.async_entries(DOMAIN)
         if not entries:
             return {"error": "no config entry"}
-        result = await entries[0].runtime_data.labeler.remove_all_labels(
+        result = await entries[0].runtime_data.organizer.remove_all_labels(
             dry_run=call.data.get(ATTR_DRY_RUN, False)
         )
         return result.as_dict()

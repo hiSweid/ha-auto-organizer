@@ -14,17 +14,17 @@ from homeassistant.helpers.device_registry import DeviceEntryType, DeviceInfo
 from homeassistant.util import dt as dt_util
 
 from .const import DOMAIN, MANAGED_MARKER, NAME, SCOPE_AREAS, SCOPE_BOTH, SCOPE_LABELS
-from .labeler import Labeler, LabelerOptions
+from .organizer import Organizer, OrganizerOptions
 
 
 @dataclass
 class AutoOrganizerRuntime:
-    """Holds the labeler plus the state driven by the control entities."""
+    """Holds the organizer plus the state driven by the control entities."""
 
     hass: HomeAssistant
     entry: ConfigEntry
-    labeler: Labeler
-    options_factory: Callable[[], LabelerOptions]
+    organizer: Organizer
+    options_factory: Callable[[], OrganizerOptions]
     scope: str = SCOPE_BOTH
     dry_run: bool = False
     last_run: dict | None = None
@@ -118,10 +118,10 @@ class AutoOrganizerRuntime:
         options = self.options_factory()
         options.dry_run = self.dry_run
         if self.scope in (SCOPE_BOTH, SCOPE_LABELS):
-            summary["labels"] = (await self.labeler.run(options)).as_dict()
+            summary["labels"] = (await self.organizer.run(options)).as_dict()
         if self.scope in (SCOPE_BOTH, SCOPE_AREAS):
             summary["areas"] = (
-                await self.labeler.assign_areas(
+                await self.organizer.assign_areas(
                     dry_run=self.dry_run, exclude=options.exclude
                 )
             ).as_dict()
@@ -131,7 +131,7 @@ class AutoOrganizerRuntime:
 
     async def async_cleanup(self) -> dict:
         """Remove labels created by this integration."""
-        result = (await self.labeler.cleanup(dry_run=self.dry_run)).as_dict()
+        result = (await self.organizer.cleanup(dry_run=self.dry_run)).as_dict()
         self.last_run = {
             "scope": "cleanup",
             "dry_run": self.dry_run,
@@ -144,7 +144,7 @@ class AutoOrganizerRuntime:
     async def async_remove_all(self) -> dict:
         """Remove every label in Home Assistant (not just managed ones)."""
         result = (
-            await self.labeler.remove_all_labels(dry_run=self.dry_run)
+            await self.organizer.remove_all_labels(dry_run=self.dry_run)
         ).as_dict()
         self.last_run = {
             "scope": "remove_all",

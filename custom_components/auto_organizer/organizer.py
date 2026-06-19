@@ -15,7 +15,7 @@ from homeassistant.helpers import label_registry as lr
 from .const import MANAGED_MARKER
 from .rules import (
     LabelSpec,
-    LabelerOptions,
+    OrganizerOptions,
     area_floor_specs,
     compute_label_specs,
     is_excluded,
@@ -27,8 +27,8 @@ _LOGGER = logging.getLogger(__name__)
 
 __all__ = [
     "AreaAssignResult",
-    "Labeler",
-    "LabelerOptions",
+    "Organizer",
+    "OrganizerOptions",
     "RunResult",
     "compute_label_specs",
 ]
@@ -72,7 +72,7 @@ class AreaAssignResult:
         }
 
 
-class Labeler:
+class Organizer:
     """Applies the ruleset to the entity registry."""
 
     def __init__(self, hass: HomeAssistant) -> None:
@@ -153,7 +153,7 @@ class Labeler:
 
     async def run(
         self,
-        options: LabelerOptions,
+        options: OrganizerOptions,
         entity_filter: set[str] | None = None,
     ) -> RunResult:
         """Scan the entity registry and apply labels."""

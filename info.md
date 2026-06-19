@@ -135,7 +135,7 @@ English names are used when the language option is set to `en`.
 
 The rule set lives in [`rules.py`](custom_components/auto_organizer/rules.py) as
 plain, language-keyed data and is applied by the engine in
-[`labeler.py`](custom_components/auto_organizer/labeler.py). Labels created by the
+[`organizer.py`](custom_components/auto_organizer/organizer.py). Labels created by the
 integration are marked internally so `cleanup` never touches labels you made by
 hand.
 

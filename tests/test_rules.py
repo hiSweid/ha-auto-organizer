@@ -12,7 +12,7 @@ sys.path.insert(0, str(COMPONENT))
 
 import rules  # noqa: E402
 from rules import (  # noqa: E402
-    LabelerOptions,
+    OrganizerOptions,
     affected_count,
     area_floor_specs,
     compute_label_specs,
@@ -42,7 +42,7 @@ class FakeEntry:
 
 
 def names(entry, options=None):
-    return [s["name"] for s in compute_label_specs(entry, options or LabelerOptions())]
+    return [s["name"] for s in compute_label_specs(entry, options or OrganizerOptions())]
 
 
 def test_domain_label_applied():
@@ -73,19 +73,19 @@ def test_no_keyword_fallback_when_domain_matched():
 
 
 def test_disable_domain():
-    opts = LabelerOptions(enable_domain=False)
+    opts = OrganizerOptions(enable_domain=False)
     entry = FakeEntry("sensor.x", original_device_class="motion")
     assert names(entry, opts) == ["Bewegung"]
 
 
 def test_integration_label_opt_in():
-    opts = LabelerOptions(enable_integration=True)
+    opts = OrganizerOptions(enable_integration=True)
     entry = FakeEntry("light.k", platform="hue")
     assert names(entry, opts) == ["Beleuchtung", "hue"]
 
 
 def test_prefix_applied():
-    opts = LabelerOptions(label_prefix="auto:")
+    opts = OrganizerOptions(label_prefix="auto:")
     assert names(FakeEntry("light.k"), opts) == ["auto:Beleuchtung"]
 
 
@@ -107,7 +107,7 @@ def test_config_entity_skipped_by_default():
 
 
 def test_categories_labeled_when_skip_disabled():
-    opts = LabelerOptions(skip_categories=False)
+    opts = OrganizerOptions(skip_categories=False)
     entry = FakeEntry("light.led_config", entity_category="config")
     assert names(entry, opts) == ["Beleuchtung"]
 
@@ -132,18 +132,18 @@ def test_every_mapped_key_exists_in_catalog():
 
 
 def test_english_language():
-    opts = LabelerOptions(language="en")
+    opts = OrganizerOptions(language="en")
     entry = FakeEntry("sensor.outdoor", original_device_class="temperature")
     assert names(entry, opts) == ["Temperature"]
 
 
 def test_unsupported_language_falls_back_to_german():
-    opts = LabelerOptions(language="fr")
+    opts = OrganizerOptions(language="fr")
     assert names(FakeEntry("light.k"), opts) == ["Beleuchtung"]
 
 
 def test_language_region_code_normalized():
-    opts = LabelerOptions(language="en-US")
+    opts = OrganizerOptions(language="en-US")
     assert names(FakeEntry("light.k"), opts) == ["Lights"]
 
 
@@ -162,7 +162,7 @@ def test_curated_applies_even_to_diagnostic():
 
 
 def test_curated_can_be_disabled():
-    opts = LabelerOptions(enable_curated=False)
+    opts = OrganizerOptions(enable_curated=False)
     # plain sensor with no device_class -> no label once "Sensoren" is gone
     entry = FakeEntry("sensor.something", platform="navimow")
     assert names(entry, opts) == []
@@ -242,23 +242,23 @@ def test_voc_maps_to_air_quality():
 
 
 def test_area_floor_specs_disabled_by_default():
-    assert area_floor_specs("Wohnzimmer", "Erdgeschoss", LabelerOptions()) == []
+    assert area_floor_specs("Wohnzimmer", "Erdgeschoss", OrganizerOptions()) == []
 
 
 def test_area_floor_specs_area_only():
-    opts = LabelerOptions(enable_area=True)
+    opts = OrganizerOptions(enable_area=True)
     specs = area_floor_specs("Wohnzimmer", "Erdgeschoss", opts)
     assert [s["name"] for s in specs] == ["Wohnzimmer"]
 
 
 def test_area_floor_specs_both():
-    opts = LabelerOptions(enable_area=True, enable_floor=True)
+    opts = OrganizerOptions(enable_area=True, enable_floor=True)
     specs = area_floor_specs("Küche", "Erdgeschoss", opts)
     assert [s["name"] for s in specs] == ["Küche", "Erdgeschoss"]
 
 
 def test_area_floor_specs_missing_names_skipped():
-    opts = LabelerOptions(enable_area=True, enable_floor=True)
+    opts = OrganizerOptions(enable_area=True, enable_floor=True)
     assert area_floor_specs(None, None, opts) == []
 
 
@@ -328,7 +328,7 @@ def test_is_excluded_by_exact_id_and_glob():
 
 
 def test_excluded_entity_gets_no_label():
-    opts = LabelerOptions(exclude=("light",))
+    opts = OrganizerOptions(exclude=("light",))
     assert names(FakeEntry("light.kitchen"), opts) == []
     # other domains unaffected
     assert names(FakeEntry("switch.k"), opts) == ["Schalter"]
@@ -345,7 +345,7 @@ def test_parse_custom_rules_empty():
 
 
 def test_custom_rule_applied_as_fallback():
-    opts = LabelerOptions(custom_rules={"pool": "water"})
+    opts = OrganizerOptions(custom_rules={"pool": "water"})
     assert names(FakeEntry("sensor.pool_ph"), opts) == ["Wasser"]
 
 
@@ -356,7 +356,7 @@ def test_invalid_custom_rule_labels():
 
 
 def test_custom_rule_not_used_when_specific_match():
-    opts = LabelerOptions(custom_rules={"kitchen": "water"})
+    opts = OrganizerOptions(custom_rules={"kitchen": "water"})
     # light domain matches -> custom keyword fallback must not run
     assert names(FakeEntry("light.kitchen"), opts) == ["Beleuchtung"]
 
@@ -417,7 +417,7 @@ def test_update_device_class_maps_to_updates():
 
 
 def test_raw_integration_label_skipped_for_diagnostic():
-    opts = LabelerOptions(enable_integration=True, enable_curated=False)
+    opts = OrganizerOptions(enable_integration=True, enable_curated=False)
     entry = FakeEntry("sensor.x", platform="foo", entity_category="diagnostic")
     assert names(entry, opts) == []
 
@@ -493,7 +493,7 @@ def test_oilfox_integration_maps_to_klima():
 
 
 def test_max_labels_cap():
-    opts = LabelerOptions(max_labels=1)
+    opts = OrganizerOptions(max_labels=1)
     entry = FakeEntry("sensor.maeher", platform="navimow",
                       original_device_class="temperature")
     # curated Garten + Temperatur would be 2, capped to 1

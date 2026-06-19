@@ -54,7 +54,7 @@ from .const import (
 )
 
 
-class AutoLabelerConfigFlow(ConfigFlow, domain=DOMAIN):
+class AutoOrganizerConfigFlow(ConfigFlow, domain=DOMAIN):
     """Handle the initial setup. Single instance only."""
 
     VERSION = 1
@@ -71,10 +71,10 @@ class AutoLabelerConfigFlow(ConfigFlow, domain=DOMAIN):
     @staticmethod
     @callback
     def async_get_options_flow(config_entry: ConfigEntry) -> OptionsFlow:
-        return AutoLabelerOptionsFlow()
+        return AutoOrganizerOptionsFlow()
 
 
-class AutoLabelerOptionsFlow(OptionsFlow):
+class AutoOrganizerOptionsFlow(OptionsFlow):
     """Expose the labeling options."""
 
     async def async_step_init(
