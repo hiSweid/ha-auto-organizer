@@ -404,6 +404,27 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "brightness": "light_level",
     # presence
     "family": "presence",
+    # energy (consumption / feed-in / demand telemetry)
+    "verbraucht": "energy",
+    "eingespeist": "energy",
+    "bedarf": "energy",
+    "leistungsaufnahme": "energy",
+    # weather (Ecowitt station, gusts)
+    "ecowitt": "weather",
+    "boen": "weather",
+    "windboe": "weather",
+    "regenrate": "weather",
+    # security (doors / windows / openings by name)
+    "fenster": "security",
+    "tuer": "security",
+    "garagentor": "security",
+    "oeffnung": "security",
+    "offnung": "security",
+    # lights
+    "lichterkette": "lights",
+    # media (TV remotes / keyboards)
+    "tastatur": "media",
+    "keyboard": "media",
 }
 
 # Known vehicle/model names; matched as whole words in entity_id/name and

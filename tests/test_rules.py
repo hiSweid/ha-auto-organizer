@@ -218,6 +218,24 @@ def test_reolink_keyword_via_name():
     assert "Kameras" in names(FakeEntry("sensor.reolink_x906b_motion"))
 
 
+def test_keyword_consumption_energy():
+    assert names(FakeEntry("sensor.gaming_pc_summe_verbraucht")) == ["Energie"]
+    assert names(FakeEntry("sensor.shelly_em_summe_eingespeist")) == ["Energie"]
+
+
+def test_keyword_doors_windows_by_name():
+    assert names(FakeEntry("binary_sensor.eingangstuer")) == ["Sicherheit"]
+    assert names(FakeEntry("binary_sensor.garagentor")) == ["Sicherheit"]
+
+
+def test_keyword_weather_station():
+    assert names(FakeEntry("sensor.shelly_ecowitt_ws90_boengeschwindigkeit")) == ["Wetter"]
+
+
+def test_keyword_lichterkette_lights():
+    assert names(FakeEntry("sensor.flur_lichterkette")) == ["Beleuchtung"]
+
+
 def test_keyword_water_group():
     assert names(FakeEntry("sensor.wasserzaehler_stand")) == ["Wasser"]
 
