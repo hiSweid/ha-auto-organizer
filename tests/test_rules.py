@@ -213,7 +213,9 @@ def test_integration_themes_extra():
 
 
 def test_reolink_keyword_via_name():
-    assert names(FakeEntry("sensor.reolink_x906b_motion")) == ["Kameras"]
+    assert names(FakeEntry("sensor.reolink_x906b_status")) == ["Kameras"]
+    # with "motion" in the name, both Bewegung and Kameras apply
+    assert "Kameras" in names(FakeEntry("sensor.reolink_x906b_motion"))
 
 
 def test_keyword_water_group():
