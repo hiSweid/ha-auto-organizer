@@ -29,6 +29,8 @@ in label-based automations, dashboards and the entity filter. Labels default to
 
 ### HACS (custom repository)
 
+[![Open in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=hiSweid&repository=ha-auto-organizer&category=integration)
+
 1. HACS → ⋮ → *Custom repositories*
 2. Add `https://github.com/hiSweid/ha-auto-organizer`, category **Integration**
 3. Install *Entity Auto-Organizer*, then restart Home Assistant
