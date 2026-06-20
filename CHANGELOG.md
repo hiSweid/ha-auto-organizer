@@ -6,6 +6,20 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-06-20
+
+### Added
+- Much larger label vocabulary (data-driven from real registries): PV/grid,
+  voltage/frequency, consumption/feed-in, UV & weather stations (Ecowitt),
+  air quality (VOC), personal devices (presence), doors/windows by name,
+  and integration themes (Frigate, WLED, DWD, hassio, Marstek, Reolink, …).
+- Home Assistant integration tests in CI (config flow, services, entities).
+- Brand icon/logo assets in the repository for the HACS listing.
+
+### Changed
+- Renamed the internal engine from "Labeler" to **Organizer** (it manages
+  both labels and areas); the domain stays `auto_organizer`.
+
 ## [0.2.0] - 2026-06-18
 
 ### Added
@@ -69,6 +83,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Labels created by the integration are marked internally so `cleanup` never
   removes labels you created by hand.
 
-[Unreleased]: https://github.com/hiSweid/ha-auto-organizer/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/hiSweid/ha-auto-organizer/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/hiSweid/ha-auto-organizer/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/hiSweid/ha-auto-organizer/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/hiSweid/ha-auto-organizer/releases/tag/v0.1.0
