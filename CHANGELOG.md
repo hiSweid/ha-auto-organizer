@@ -6,6 +6,85 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-07-01
+
+### Added (synonym-cluster pass across all categories)
+Several categories had almost no keyword fallback at all (they relied
+entirely on the HA domain matching, which misses helper/template entities
+that merely *reference* a device type by name). Added German+English
+synonym clusters for:
+- **Lights** (was just "Lichterkette"): Lampe, Glühbirne, Leuchte,
+  Deckenleuchte, Stehlampe, Tischlampe, Wandleuchte, Pendelleuchte,
+  Nachtlicht, LED-Streifen, Licht, Spot, Strahler; lamp, bulb, spotlight,
+  downlight, nightlight, flashlight, chandelier, sconce, floor/table/ceiling
+  lamp, wall/pendant light, LED strip.
+- **Switches** (was empty): Steckdose, Steckdosenleiste, Schalter, outlet,
+  socket, smart plug.
+- **Vacuums** (was empty): Staubsauger, Saugroboter, Wischroboter, vacuum,
+  robot vacuum, Roomba, Roborock, iRobot.
+- **Cameras** (was just "Reolink"): Kamera, Überwachungskamera, camera,
+  webcam, CCTV, NVR, video doorbell.
+- **Waste** (was integration-only): Abfall, Müll, Mülltonne, Restmüll,
+  Biomüll, Gelber Sack, Altpapier, Wertstoff, Entsorgung, trash, garbage,
+  recycling.
+- **Shopping** (was integration-only): Einkaufsliste, Einkauf,
+  Lebensmittel, grocery, shopping list.
+- **Updates** (was just "firmware"): Aktualisierung, software update, new
+  version.
+- **Locks**: Schloss, verriegelt, Verriegelung, Türriegel.
+- **Fans**: Gebläse, blower, ceiling fan, generic "fan".
+- **Media**: TV / television.
+- **Security**: Klingel, Türklingel, doorbell.
+- Smaller top-ups for water (Durchfluss, Wasserstand, flow rate), leak
+  (water overflow), temperature/humidity/motion/light-level (generic temp,
+  dew/damp, movement/PIR, lux), cost (Gebühr, Abrechnung, billing, price),
+  garden (Blumen, Pflanzen, garden hose), network (modem), appliances
+  (Mikrowelle, microwave, toaster), and car (charging station, PHEV).
+- Ambiguous/collision-prone short words (`licht`, `spot`, `strahler`,
+  `socket`, `tv`, `temp`, `pir`, `lux`, `fan`, `damp`, `muell`, `nvr`,
+  `phev`, `blumen`) are matched with explicit word-boundary padding to
+  avoid false positives — confirmed by testing against real collisions
+  such as German "Pflicht"/"Birnensaft"/"Heizstrahler"/"Blumenkohl"/
+  "Müller" (common surname) and English "websocket"/"basket"/"pocket"/
+  "woven"/"infant"/HVAC "damper".
+
+### Added
+- Two new curated theme labels: **Waste** (`waste_collection_schedule`
+  integration) and **Shopping** (`tgtg` / Too Good To Go integration).
+- New domains: `valve` (covers), `air_quality`, `assist_satellite`/`stt`/`tts`
+  (media).
+- New device classes: `volume` and `ph` (water).
+- Much larger keyword vocabulary, in both German and English, derived from a
+  real-registry gap analysis plus a broader pass over common Home Assistant
+  naming conventions: energy (inverter, consumption, feed-in), water/leak
+  (Shelly Flood), garden (lawn/watering, mower, sprinkler), climate (HVAC,
+  heat pump, furnace, boiler, BLE temperature monitors), cost (tariff,
+  savings, heating-oil price), presence (Android/tablet, kiosk, bed sensor),
+  security (door-sensor phrasing, intrusion, smoke detector, additional
+  German door-name compounds), covers (shutters, blinds, awning), locks
+  (deadbolt), appliances (oven, fridge, freezer, dryer, kettle), air quality
+  (CO2, particulate) and EV models (e-tron, Niro, Ariya, Outlander).
+- Many new curated integration themes: solar/inverter brands (SolarEdge,
+  Fronius, Growatt, Victron, Huawei, Solax, GoodWe, Enphase), dynamic
+  electricity tariffs (Tibber, aWATTar, EnergyZero, Nordpool, Octopus),
+  EV/charging brands (Ohme, myenergi, Tesla Wall Connector, Teslemetry, BMW,
+  Mercedes, Kia, Hyundai, Renault, Volvo, Smartcar), HVAC brands (MELCloud,
+  Tado, ecobee, Sensibo, Nibe, OpenTherm), cameras/NVR (Ring, UniFi Protect,
+  Amcrest, Eufy, Arlo), alarm systems (Abode, Verisure, SimpliSafe,
+  Envisalink, Konnected), locks (August, Schlage, Nuki), presence tracking
+  (Life360, OwnTracks, GPSLogger, iCloud, Fully Kiosk), media platforms
+  (Spotify, Cast, Apple TV, webOS, Samsung/Android TV, Denon, MusicCast,
+  HEOS, Roon, Volumio, Squeezebox, BluOS), air quality (AirVisual, Airly,
+  PurpleAir), weather (Pirate Weather, Tomorrow.io, Buienradar, Tempest,
+  Ambient Weather), garden/irrigation (Rachio, Husqvarna Automower, Hunter
+  Hydrawise), and network monitoring (ASUSWRT, Netgear, AdGuard,
+  UptimeRobot, Synology DSM).
+
+### Fixed
+- Removed an unsafe generic keyword ("oven" without word-boundary
+  anchoring) that collided with unrelated words like "woven"; re-added with
+  whole-word matching only.
+
 ## [0.3.0] - 2026-06-20
 
 ### Added

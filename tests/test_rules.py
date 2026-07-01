@@ -580,3 +580,155 @@ def test_match_area_ambiguous_returns_none():
     ]
     # "nord" and "sued" both match with equal length -> ambiguous
     assert match_area("sensor.nord_sued_klima", None, areas) is None
+
+
+def test_waste_collection_schedule_curated():
+    entry = FakeEntry("calendar.waste_collection_schedule_abfallkalender",
+                      platform="waste_collection_schedule")
+    assert names(entry) == ["Abfall"]
+
+
+def test_tgtg_curated():
+    entry = FakeEntry("sensor.tgtg_oh_mother", platform="tgtg")
+    assert names(entry) == ["Einkauf"]
+
+
+def test_ac_verbrauch_keyword():
+    assert names(FakeEntry("sensor.buero_ac_verbrauch")) == ["Energie"]
+
+
+def test_shelly_flood_keyword():
+    assert names(FakeEntry("binary_sensor.shelly_flood")) == ["Leck"]
+
+
+def test_kiosk_and_screensaver_keywords():
+    assert names(FakeEntry("binary_sensor.sm_x906b_kiosk_mode")) == ["Anwesenheit"]
+    assert names(FakeEntry("binary_sensor.sm_x906b_screensaver")) == ["Anwesenheit"]
+
+
+def test_door_compound_keywords():
+    assert names(FakeEntry("binary_sensor.eingangstur")) == ["Sicherheit"]
+    assert names(FakeEntry("binary_sensor.haustuer_kontakt")) == ["Sicherheit"]
+
+
+def test_garden_watering_keywords():
+    assert names(FakeEntry("input_boolean.heute_rasen_giessen")) == ["Garten"]
+
+
+def test_oil_price_keyword():
+    assert names(FakeEntry("input_number.olpreis_pro_liter")) == ["Kosten"]
+
+
+def test_ble_temp_keyword():
+    # "ble temp" (climate) and the generic " temp " (temperature) both apply
+    assert names(FakeEntry("sensor.buero_ac_ble_temp")) == ["Temperatur", "Klima"]
+
+
+def test_new_domains():
+    assert names(FakeEntry("valve.garden_hose")) == ["Rollläden"]
+    assert names(FakeEntry("tts.piper")) == ["Medien"]
+    assert names(FakeEntry("stt.whisper")) == ["Medien"]
+
+
+def test_new_device_classes():
+    assert names(FakeEntry("sensor.tank", original_device_class="volume")) == ["Wasser"]
+    assert names(FakeEntry("sensor.pool", original_device_class="ph")) == ["Wasser"]
+
+
+def test_new_integrations():
+    assert names(FakeEntry("sensor.x", platform="tibber")) == ["Kosten"]
+    assert names(FakeEntry("device_tracker.x", platform="life360")) == ["Anwesenheit"]
+    assert names(FakeEntry("camera.x", platform="ring")) == ["Kameras"]
+    assert names(FakeEntry("lock.x", platform="nuki")) == ["Schlösser"]
+    assert names(FakeEntry("sensor.x", platform="solaredge")) == ["Energie"]
+
+
+def test_no_false_positive_oven_substring():
+    assert names(FakeEntry("sensor.woven_fabric_display")) == []
+    assert names(FakeEntry("sensor.provencal_recipe")) == []
+
+
+def test_english_appliance_words():
+    assert "Haushaltsgeräte" in names(FakeEntry("sensor.kitchen_oven_temp"))
+    assert names(FakeEntry("sensor.wine_fridge")) == ["Haushaltsgeräte"]
+
+
+def test_car_brand_e_tron():
+    assert names(FakeEntry("sensor.audi_e_tron_range")) == ["Auto"]
+
+
+def test_light_synonyms_de_en():
+    assert names(FakeEntry("sensor.wohnzimmer_lampe")) == ["Beleuchtung"]
+    assert names(FakeEntry("sensor.flur_licht")) == ["Beleuchtung"]
+    assert names(FakeEntry("sensor.spot_kueche")) == ["Beleuchtung"]
+    assert names(FakeEntry("sensor.strahler_wohnzimmer")) == ["Beleuchtung"]
+    assert names(FakeEntry("sensor.hallway_nightlight")) == ["Beleuchtung"]
+    assert names(FakeEntry("sensor.living_room_lamp")) == ["Beleuchtung"]
+
+
+def test_light_synonym_word_boundary_no_false_positive():
+    assert names(FakeEntry("input_boolean.wartungspflicht")) == []
+    assert names(FakeEntry("sensor.birnensaft_menge")) == []
+    assert names(FakeEntry("sensor.heizstrahler_terrasse")) == []
+
+
+def test_switch_and_outlet_synonyms():
+    assert names(FakeEntry("sensor.wohnzimmer_steckdose")) == ["Schalter"]
+    assert names(FakeEntry("sensor.kueche_outlet")) == ["Schalter"]
+    assert names(FakeEntry("sensor.buero_smart_plug")) == ["Schalter"]
+
+
+def test_tv_synonym_no_socket_false_positive():
+    assert names(FakeEntry("sensor.tv_wohnzimmer")) == ["Medien"]
+    assert names(FakeEntry("sensor.websocket_status")) == []
+    assert names(FakeEntry("sensor.basket_count")) == []
+
+
+def test_vacuum_synonyms():
+    assert names(FakeEntry("sensor.wohnzimmer_staubsauger")) == ["Staubsauger"]
+    assert names(FakeEntry("sensor.roomba_status")) == ["Staubsauger"]
+    assert names(FakeEntry("binary_sensor.robot_vacuum_error")) == ["Staubsauger"]
+
+
+def test_camera_synonyms():
+    assert names(FakeEntry("sensor.eingang_kamera")) == ["Kameras"]
+    assert names(FakeEntry("sensor.garage_webcam")) == ["Kameras"]
+    assert "Kameras" in names(FakeEntry("sensor.haustuer_video_doorbell"))
+
+
+def test_waste_generic_keywords():
+    assert names(FakeEntry("sensor.restmuell_naechste_abholung")) == ["Abfall"]
+    assert names(FakeEntry("sensor.recycling_pickup")) == ["Abfall"]
+
+
+def test_updates_keywords():
+    assert names(FakeEntry("sensor.aktualisierung_verfuegbar")) == ["Updates"]
+    assert names(FakeEntry("sensor.software_update_check")) == ["Updates"]
+
+
+def test_lock_synonyms():
+    assert "Schlösser" in names(FakeEntry("binary_sensor.haustuer_schloss"))
+    assert "Schlösser" in names(FakeEntry("binary_sensor.tuerriegel_status"))
+
+
+def test_fan_synonyms_no_infant_false_positive():
+    assert names(FakeEntry("sensor.buero_geblaese")) == ["Lüfter"]
+    assert names(FakeEntry("sensor.infant_temperature")) == ["Temperatur"]
+
+
+def test_doorbell_and_klingel():
+    assert names(FakeEntry("binary_sensor.haustuer_klingel")) == ["Sicherheit"]
+
+
+def test_no_false_positive_blumenkohl_and_overflow():
+    assert names(FakeEntry("sensor.blumenkohl_vorrat")) == []
+    assert names(FakeEntry("binary_sensor.buffer_overflow")) == []
+
+
+def test_no_false_positive_snack_riegel():
+    assert names(FakeEntry("sensor.riegel_snack_vorrat")) == []
+
+
+def test_shopping_generic_keywords():
+    assert names(FakeEntry("sensor.einkaufsliste")) == ["Einkauf"]
+    assert names(FakeEntry("sensor.grocery_reminder")) == ["Einkauf"]
