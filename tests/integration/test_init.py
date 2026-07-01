@@ -150,16 +150,18 @@ async def test_diagnostics_strips_changes_from_every_section(
             assert "changes" not in section
 
 
-def test_control_entities_are_config_category() -> None:
-    from homeassistant.const import EntityCategory
+async def test_control_entities_are_config_category(hass: HomeAssistant) -> None:
+    from homeassistant.helpers import entity_registry as er
 
-    from custom_components.auto_organizer.button import _BaseButton
-    from custom_components.auto_organizer.select import ScopeSelect
-    from custom_components.auto_organizer.switch import DryRunSwitch
-
-    assert _BaseButton._attr_entity_category == EntityCategory.CONFIG
-    assert ScopeSelect._attr_entity_category == EntityCategory.CONFIG
-    assert DryRunSwitch._attr_entity_category == EntityCategory.CONFIG
+    await _add_entry(hass)
+    ent_reg = er.async_get(hass)
+    control_entities = [
+        e
+        for e in ent_reg.entities.values()
+        if e.platform == DOMAIN and e.domain in ("button", "select", "switch")
+    ]
+    assert control_entities
+    assert all(e.entity_category == "config" for e in control_entities)
 
 
 async def test_enabled_labels_option_restricts_run(hass: HomeAssistant) -> None:
