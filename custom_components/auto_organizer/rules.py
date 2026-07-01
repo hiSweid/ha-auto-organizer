@@ -68,6 +68,9 @@ class OrganizerOptions:
     max_labels: int = 2
     exclude: tuple[str, ...] = field(default_factory=tuple)
     custom_rules: dict[str, str] = field(default_factory=dict)
+    # Restrict which label *themes* may be assigned at all (by catalog key,
+    # e.g. "lights", "waste"). Empty = no restriction, every label allowed.
+    enabled_labels: frozenset[str] = field(default_factory=frozenset)
 
 
 # Area/floor labels use the user-defined names verbatim (not translatable),
@@ -951,9 +954,12 @@ def compute_label_specs(
     seen: set[str] = set()
 
     def add(key: str | None) -> None:
-        if key and key not in seen:
-            seen.add(key)
-            keys.append(key)
+        if not key or key in seen:
+            return
+        if options.enabled_labels and key not in options.enabled_labels:
+            return
+        seen.add(key)
+        keys.append(key)
 
     platform = getattr(entry, "platform", None)
     is_category = bool(

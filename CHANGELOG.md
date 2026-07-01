@@ -6,6 +6,53 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-07-01
+
+### Added
+- The options flow's "Exclude" field was a single free-text box requiring
+  domains/entity_ids/patterns to be typed by hand. Replaced with two proper
+  pickers: **"Exclude entire domains/groups"** (multi-select dropdown of
+  every domain the rule engine understands) and **"Exclude individual
+  entities"** (native entity picker with search). The old free-text field
+  stays for advanced glob patterns (e.g. `sensor.test_*`) that the pickers
+  can't express. All three sources are merged and de-duplicated.
+- New `preview` service: dry-run labels *and* areas together in a single
+  call, without needing to call `run`/`assign_areas` separately with
+  `dry_run: true`.
+- New options field **"Restrict to only these label themes"**: a
+  multi-select dropdown listing every label in the catalog (Lights,
+  Energy, Waste, Security, …). When any are picked, only those themes may
+  ever be assigned — domain/device_class/integration/keyword matches for
+  anything else are silently skipped. Leave empty (the default) for no
+  restriction.
+
+### Fixed
+- The `run`/`cleanup`/`assign_areas`/`remove_all` **services** called the
+  organizer directly and never updated the "Last run" sensor, coverage
+  stats or diagnostics — only pressing the dashboard buttons did. Since the
+  services are the documented way to trigger a run from automations, this
+  meant the diagnostic sensors silently went stale for that usage pattern.
+  Service calls now update the same shared runtime state as the buttons.
+- The auto-label-new-entities debounce could pick up this integration's
+  *own* button/select/switch/sensor entities (created during its own
+  setup) and try to label them. Entities belonging to this integration's
+  own platform are now skipped.
+- The auto-label-new-entities debouncer wasn't shut down on unload/reload,
+  so a pending 15s timer could fire after reload with stale state.
+- `diagnostics.py` only stripped the (large) per-entity change list from
+  the `labels`/`areas` result sections; `cleanup`/`remove_all` results kept
+  their full list, which can be very large. Now stripped from every section.
+
+### Changed
+- A targeted `run(entity_filter=...)` (used by the auto-label-new
+  debounce) now resolves the handful of entity_ids directly from the
+  registry instead of scanning every entity, which matters once the
+  registry has several thousand entries.
+- The button/select/switch control entities are now `EntityCategory.CONFIG`
+  (matching the existing diagnostic sensors) so they show up under
+  "Configuration" on the device page instead of alongside real dashboard
+  entities.
+
 ## [0.4.0] - 2026-07-01
 
 ### Added (synonym-cluster pass across all categories)

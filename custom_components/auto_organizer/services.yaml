@@ -39,3 +39,6 @@ remove_all:
       default: false
       selector:
         boolean:
+
+preview:
+  fields: {}

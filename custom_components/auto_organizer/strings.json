@@ -21,6 +21,7 @@
           "enable_device_class": "Label by device class (temperature, motion, …)",
           "enable_integration": "Label by source integration",
           "enable_curated": "Curated theme labels (appliances, garden, network …)",
+          "enabled_labels": "Restrict to only these label themes (leave empty = all allowed)",
           "enable_area": "Add a label for each entity's area",
           "enable_floor": "Add a label for each entity's floor",
           "skip_categories": "Skip diagnostic/config entities",
@@ -30,7 +31,9 @@
           "run_on_startup": "Run once on Home Assistant start",
           "scan_interval": "Re-scan interval in minutes (0 = off)",
           "label_prefix": "Optional prefix for created labels",
-          "exclude": "Exclude (comma-separated domains, entity_ids or patterns like sensor.test_*)",
+          "exclude_domains": "Exclude entire domains/groups (select all that apply)",
+          "exclude_entities": "Exclude individual entities",
+          "exclude": "Advanced: exclude by glob pattern (e.g. sensor.test_*)",
           "custom_rules": "Custom rules: keyword=label per line (label must exist, e.g. pool=water)"
         }
       }
@@ -38,9 +41,15 @@
   },
   "entity": {
     "button": {
-      "run": { "name": "Run now" },
-      "cleanup": { "name": "Cleanup labels" },
-      "remove_all": { "name": "Remove all labels" }
+      "run": {
+        "name": "Run now"
+      },
+      "cleanup": {
+        "name": "Cleanup labels"
+      },
+      "remove_all": {
+        "name": "Remove all labels"
+      }
     },
     "select": {
       "scope": {
@@ -53,16 +62,32 @@
       }
     },
     "switch": {
-      "dry_run": { "name": "Dry run" }
+      "dry_run": {
+        "name": "Dry run"
+      }
     },
     "sensor": {
-      "last_run": { "name": "Last run" },
-      "last_run_time": { "name": "Last run time" },
-      "labeled": { "name": "Labeled entities" },
-      "unlabeled": { "name": "Unlabeled entities" },
-      "without_area": { "name": "Entities without area" },
-      "managed_labels": { "name": "Managed labels" },
-      "coverage": { "name": "Label coverage" }
+      "last_run": {
+        "name": "Last run"
+      },
+      "last_run_time": {
+        "name": "Last run time"
+      },
+      "labeled": {
+        "name": "Labeled entities"
+      },
+      "unlabeled": {
+        "name": "Unlabeled entities"
+      },
+      "without_area": {
+        "name": "Entities without area"
+      },
+      "managed_labels": {
+        "name": "Managed labels"
+      },
+      "coverage": {
+        "name": "Label coverage"
+      }
     }
   },
   "issues": {
@@ -123,6 +148,10 @@
           "description": "Compute changes without writing them."
         }
       }
+    },
+    "preview": {
+      "name": "Preview",
+      "description": "Preview both labels and areas together, without writing any changes."
     }
   }
 }

@@ -22,7 +22,10 @@ CONF_SKIP_CATEGORIES: Final = "skip_categories"
 CONF_LANGUAGE: Final = "language"
 CONF_MAX_LABELS: Final = "max_labels"
 CONF_AUTO_LABEL_NEW: Final = "auto_label_new"
+CONF_EXCLUDE_DOMAINS: Final = "exclude_domains"
+CONF_EXCLUDE_ENTITIES: Final = "exclude_entities"
 CONF_EXCLUDE: Final = "exclude"
+CONF_ENABLED_LABELS: Final = "enabled_labels"
 CONF_CUSTOM_RULES: Final = "custom_rules"
 CONF_LABEL_PREFIX: Final = "label_prefix"
 
@@ -41,7 +44,11 @@ DEFAULT_SKIP_CATEGORIES: Final = True
 DEFAULT_LANGUAGE: Final = "auto"
 DEFAULT_MAX_LABELS: Final = 2
 DEFAULT_AUTO_LABEL_NEW: Final = True
+DEFAULT_EXCLUDE_DOMAINS: Final = []
+DEFAULT_EXCLUDE_ENTITIES: Final = []
 DEFAULT_EXCLUDE: Final = ""
+# Empty = no restriction, every label theme is allowed.
+DEFAULT_ENABLED_LABELS: Final = []
 DEFAULT_CUSTOM_RULES: Final = ""
 DEFAULT_LABEL_PREFIX: Final = ""
 
@@ -50,6 +57,7 @@ SERVICE_RUN: Final = "run"
 SERVICE_CLEANUP: Final = "cleanup"
 SERVICE_ASSIGN_AREAS: Final = "assign_areas"
 SERVICE_REMOVE_ALL: Final = "remove_all"
+SERVICE_PREVIEW: Final = "preview"
 
 # Control-entity run scope (select)
 SCOPE_BOTH: Final = "labels_and_areas"

@@ -23,6 +23,7 @@ from homeassistant.helpers import issue_registry as ir
 from homeassistant.helpers.debounce import Debouncer
 from homeassistant.helpers.event import async_track_time_interval
 from homeassistant.helpers.start import async_at_started
+from homeassistant.util import dt as dt_util
 
 from .coordinator import AutoOrganizerRuntime
 
@@ -43,7 +44,10 @@ from .const import (
     CONF_ENABLE_FLOOR,
     CONF_AUTO_LABEL_NEW,
     CONF_CUSTOM_RULES,
+    CONF_ENABLED_LABELS,
     CONF_EXCLUDE,
+    CONF_EXCLUDE_DOMAINS,
+    CONF_EXCLUDE_ENTITIES,
     CONF_LANGUAGE,
     CONF_MAX_LABELS,
     CONF_SKIP_CATEGORIES,
@@ -52,6 +56,9 @@ from .const import (
     DEFAULT_ENABLE_AREA,
     DEFAULT_ENABLE_CURATED,
     DEFAULT_ENABLE_FLOOR,
+    DEFAULT_ENABLED_LABELS,
+    DEFAULT_EXCLUDE_DOMAINS,
+    DEFAULT_EXCLUDE_ENTITIES,
     DEFAULT_LANGUAGE,
     DEFAULT_MAX_LABELS,
     DEFAULT_ENABLE_DEVICE_CLASS,
@@ -65,6 +72,7 @@ from .const import (
     DOMAIN,
     SERVICE_ASSIGN_AREAS,
     SERVICE_CLEANUP,
+    SERVICE_PREVIEW,
     SERVICE_REMOVE_ALL,
     SERVICE_RUN,
 )
@@ -105,9 +113,16 @@ def _options_from_entry(hass: HomeAssistant, entry: ConfigEntry) -> OrganizerOpt
         skip_categories=o.get(CONF_SKIP_CATEGORIES, DEFAULT_SKIP_CATEGORIES),
         language=language,
         max_labels=o.get(CONF_MAX_LABELS, DEFAULT_MAX_LABELS),
-        exclude=_parse_exclude(o.get(CONF_EXCLUDE, "")),
+        exclude=_merge_exclude(
+            o.get(CONF_EXCLUDE_DOMAINS, DEFAULT_EXCLUDE_DOMAINS),
+            o.get(CONF_EXCLUDE_ENTITIES, DEFAULT_EXCLUDE_ENTITIES),
+            o.get(CONF_EXCLUDE, ""),
+        ),
         custom_rules=parse_custom_rules(o.get(CONF_CUSTOM_RULES, "")),
         label_prefix=o.get(CONF_LABEL_PREFIX, DEFAULT_LABEL_PREFIX),
+        enabled_labels=frozenset(
+            o.get(CONF_ENABLED_LABELS, DEFAULT_ENABLED_LABELS)
+        ),
     )
 
 
@@ -118,6 +133,24 @@ def _parse_exclude(raw: str | list) -> tuple[str, ...]:
     else:
         items = str(raw).replace("\n", ",").split(",")
     return tuple(p.strip() for p in items if p.strip())
+
+
+def _merge_exclude(
+    domains: list | None, entities: list | None, text: str | list
+) -> tuple[str, ...]:
+    """Combine the domain selector, entity selector and free-text patterns.
+
+    Preserves order and drops duplicates so the same pattern picked via two
+    different UI fields doesn't get evaluated twice.
+    """
+    combined = list(domains or []) + list(entities or []) + list(_parse_exclude(text))
+    seen: set[str] = set()
+    result: list[str] = []
+    for item in combined:
+        if item and item not in seen:
+            seen.add(item)
+            result.append(item)
+    return tuple(result)
 
 
 async def async_setup_entry(
@@ -162,17 +195,29 @@ async def async_setup_entry(
             pending.clear()
             if not ids:
                 return
-            await runtime.organizer.run(_options_from_entry(hass, entry), entity_filter=ids)
-            runtime.refresh_stats()
+            result = await runtime.organizer.run(
+                _options_from_entry(hass, entry), entity_filter=ids
+            )
+            if result.updated:
+                # Skip the full registry walk when the new entities didn't
+                # end up labeled (nothing changed for the stats to reflect).
+                runtime.refresh_stats()
 
         debouncer = Debouncer(
             hass, _LOGGER, cooldown=15.0, immediate=False, function=_flush_new
         )
+        entry.async_on_unload(debouncer.async_shutdown)
 
         async def _on_registry_updated(event: Event) -> None:
             if event.data.get("action") != "create":
                 return
-            pending.add(event.data["entity_id"])
+            entity_id = event.data["entity_id"]
+            reg_entry = er.async_get(hass).async_get(entity_id)
+            if reg_entry is not None and reg_entry.platform == DOMAIN:
+                # Don't auto-label this integration's own control/diagnostic
+                # entities (created during our own async_setup_entry).
+                return
+            pending.add(entity_id)
             await debouncer.async_call()
 
         entry.async_on_unload(
@@ -231,9 +276,25 @@ def _update_issues(hass: HomeAssistant, entry: ConfigEntry) -> None:
 
 
 def _register_services(hass: HomeAssistant) -> None:
-    """Register integration services once."""
+    """Register integration services once.
+
+    Handlers below use ``entries[0]`` — safe today because ``manifest.json``
+    sets ``single_config_entry: true``. Revisit if that ever changes.
+    """
     if hass.services.has_service(DOMAIN, SERVICE_RUN):
         return
+
+    def _record_last_run(runtime, scope: str, dry_run: bool, **sections) -> None:
+        """Update the shared runtime state so control-entity sensors/
+        diagnostics reflect service-triggered runs, not just button presses.
+        """
+        runtime.last_run = {
+            "scope": scope,
+            "dry_run": dry_run,
+            "timestamp": dt_util.utcnow().isoformat(),
+            **sections,
+        }
+        runtime.refresh_stats()
 
     async def _handle_run(call: ServiceCall) -> ServiceResponse:
         entries: list[AutoOrganizerConfigEntry] = hass.config_entries.async_entries(
@@ -252,14 +313,19 @@ def _register_services(hass: HomeAssistant) -> None:
             options,
             entity_filter=set(entity_filter) if entity_filter else None,
         )
+        _record_last_run(
+            entry.runtime_data, "labels", options.dry_run, labels=result.as_dict()
+        )
         return result.as_dict()
 
     async def _handle_cleanup(call: ServiceCall) -> ServiceResponse:
         entries = hass.config_entries.async_entries(DOMAIN)
         if not entries:
             return {"error": "no config entry"}
-        result = await entries[0].runtime_data.organizer.cleanup(
-            dry_run=call.data.get(ATTR_DRY_RUN, False)
+        dry_run = call.data.get(ATTR_DRY_RUN, False)
+        result = await entries[0].runtime_data.organizer.cleanup(dry_run=dry_run)
+        _record_last_run(
+            entries[0].runtime_data, "cleanup", dry_run, cleanup=result.as_dict()
         )
         return result.as_dict()
 
@@ -267,9 +333,13 @@ def _register_services(hass: HomeAssistant) -> None:
         entries = hass.config_entries.async_entries(DOMAIN)
         if not entries:
             return {"error": "no config entry"}
+        dry_run = call.data.get(ATTR_DRY_RUN, False)
         result = await entries[0].runtime_data.organizer.assign_areas(
-            dry_run=call.data.get(ATTR_DRY_RUN, False),
+            dry_run=dry_run,
             exclude=_options_from_entry(hass, entries[0]).exclude,
+        )
+        _record_last_run(
+            entries[0].runtime_data, "areas", dry_run, areas=result.as_dict()
         )
         return result.as_dict()
 
@@ -277,10 +347,32 @@ def _register_services(hass: HomeAssistant) -> None:
         entries = hass.config_entries.async_entries(DOMAIN)
         if not entries:
             return {"error": "no config entry"}
+        dry_run = call.data.get(ATTR_DRY_RUN, False)
         result = await entries[0].runtime_data.organizer.remove_all_labels(
-            dry_run=call.data.get(ATTR_DRY_RUN, False)
+            dry_run=dry_run
+        )
+        _record_last_run(
+            entries[0].runtime_data, "remove_all", dry_run, remove_all=result.as_dict()
         )
         return result.as_dict()
+
+    async def _handle_preview(call: ServiceCall) -> ServiceResponse:
+        """Preview both labels and areas together; never writes anything."""
+        entries = hass.config_entries.async_entries(DOMAIN)
+        if not entries:
+            return {"error": "no config entry"}
+        entry = entries[0]
+        options = _options_from_entry(hass, entry)
+        options.dry_run = True
+        organizer = entry.runtime_data.organizer
+        labels_result = await organizer.run(options)
+        areas_result = await organizer.assign_areas(
+            dry_run=True, exclude=options.exclude
+        )
+        return {
+            "labels": labels_result.as_dict(),
+            "areas": areas_result.as_dict(),
+        }
 
     hass.services.async_register(
         DOMAIN,
@@ -318,6 +410,13 @@ def _register_services(hass: HomeAssistant) -> None:
         schema=vol.Schema({vol.Optional(ATTR_DRY_RUN): cv.boolean}),
         supports_response=SupportsResponse.OPTIONAL,
     )
+    hass.services.async_register(
+        DOMAIN,
+        SERVICE_PREVIEW,
+        _handle_preview,
+        schema=vol.Schema({}),
+        supports_response=SupportsResponse.ONLY,
+    )
 
 
 async def _async_update_listener(
@@ -342,6 +441,7 @@ async def async_unload_entry(
             SERVICE_CLEANUP,
             SERVICE_ASSIGN_AREAS,
             SERVICE_REMOVE_ALL,
+            SERVICE_PREVIEW,
         ):
             hass.services.async_remove(DOMAIN, service)
     return unloaded

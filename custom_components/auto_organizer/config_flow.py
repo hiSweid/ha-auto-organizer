@@ -13,11 +13,16 @@ from homeassistant.config_entries import (
 )
 from homeassistant.core import callback
 from homeassistant.config_entries import ConfigEntry
+from homeassistant.helpers import selector
 
+from .rules import DOMAIN_LABELS, LABELS
 from .const import (
     CONF_AUTO_LABEL_NEW,
     CONF_CUSTOM_RULES,
+    CONF_ENABLED_LABELS,
     CONF_EXCLUDE,
+    CONF_EXCLUDE_DOMAINS,
+    CONF_EXCLUDE_ENTITIES,
     CONF_DRY_RUN,
     CONF_ENABLE_DEVICE_CLASS,
     CONF_ENABLE_DOMAIN,
@@ -44,6 +49,9 @@ from .const import (
     DEFAULT_ENABLE_DEVICE_CLASS,
     DEFAULT_ENABLE_DOMAIN,
     DEFAULT_ENABLE_INTEGRATION,
+    DEFAULT_ENABLED_LABELS,
+    DEFAULT_EXCLUDE_DOMAINS,
+    DEFAULT_EXCLUDE_ENTITIES,
     DEFAULT_LABEL_PREFIX,
     DEFAULT_SKIP_CATEGORIES,
     DEFAULT_OVERWRITE,
@@ -115,6 +123,16 @@ class AutoOrganizerOptionsFlow(OptionsFlow):
                     default=o.get(CONF_ENABLE_CURATED, DEFAULT_ENABLE_CURATED),
                 ): bool,
                 vol.Optional(
+                    CONF_ENABLED_LABELS,
+                    default=o.get(CONF_ENABLED_LABELS, DEFAULT_ENABLED_LABELS),
+                ): selector.SelectSelector(
+                    selector.SelectSelectorConfig(
+                        options=sorted(LABELS),
+                        multiple=True,
+                        mode=selector.SelectSelectorMode.DROPDOWN,
+                    )
+                ),
+                vol.Optional(
                     CONF_ENABLE_AREA,
                     default=o.get(CONF_ENABLE_AREA, DEFAULT_ENABLE_AREA),
                 ): bool,
@@ -154,6 +172,22 @@ class AutoOrganizerOptionsFlow(OptionsFlow):
                     CONF_LABEL_PREFIX,
                     default=o.get(CONF_LABEL_PREFIX, DEFAULT_LABEL_PREFIX),
                 ): str,
+                vol.Optional(
+                    CONF_EXCLUDE_DOMAINS,
+                    default=o.get(CONF_EXCLUDE_DOMAINS, DEFAULT_EXCLUDE_DOMAINS),
+                ): selector.SelectSelector(
+                    selector.SelectSelectorConfig(
+                        options=sorted(DOMAIN_LABELS),
+                        multiple=True,
+                        mode=selector.SelectSelectorMode.DROPDOWN,
+                    )
+                ),
+                vol.Optional(
+                    CONF_EXCLUDE_ENTITIES,
+                    default=o.get(CONF_EXCLUDE_ENTITIES, DEFAULT_EXCLUDE_ENTITIES),
+                ): selector.EntitySelector(
+                    selector.EntitySelectorConfig(multiple=True)
+                ),
                 vol.Optional(
                     CONF_EXCLUDE,
                     default=o.get(CONF_EXCLUDE, DEFAULT_EXCLUDE),

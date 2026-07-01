@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from homeassistant.components.button import ButtonEntity
+from homeassistant.const import EntityCategory
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
@@ -23,6 +24,7 @@ async def async_setup_entry(
 
 class _BaseButton(ButtonEntity):
     _attr_has_entity_name = True
+    _attr_entity_category = EntityCategory.CONFIG
 
     def __init__(self, runtime: AutoOrganizerRuntime, key: str, icon: str) -> None:
         self._runtime = runtime

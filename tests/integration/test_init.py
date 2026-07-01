@@ -18,7 +18,7 @@ async def _add_entry(hass: HomeAssistant) -> MockConfigEntry:
 
 async def test_setup_registers_services(hass: HomeAssistant) -> None:
     await _add_entry(hass)
-    for service in ("run", "cleanup", "assign_areas", "remove_all"):
+    for service in ("run", "cleanup", "assign_areas", "remove_all", "preview"):
         assert hass.services.has_service(DOMAIN, service)
 
 
@@ -45,3 +45,144 @@ async def test_unload(hass: HomeAssistant) -> None:
     entry = await _add_entry(hass)
     assert await hass.config_entries.async_unload(entry.entry_id)
     await hass.async_block_till_done()
+
+
+async def test_exclude_merges_domains_entities_and_patterns(
+    hass: HomeAssistant,
+) -> None:
+    from custom_components.auto_organizer import _merge_exclude
+
+    assert _merge_exclude(["light", "switch"], [], "") == ("light", "switch")
+    assert _merge_exclude([], ["sensor.foo"], "") == ("sensor.foo",)
+    assert _merge_exclude(["light"], ["sensor.foo"], "sensor.test_*") == (
+        "light",
+        "sensor.foo",
+        "sensor.test_*",
+    )
+    # the same pattern picked via two fields is only evaluated once
+    assert _merge_exclude(["light"], ["sensor.foo"], "light, sensor.foo") == (
+        "light",
+        "sensor.foo",
+    )
+    assert _merge_exclude(None, None, "") == ()
+
+
+async def test_options_from_entry_uses_domain_and_entity_selectors(
+    hass: HomeAssistant,
+) -> None:
+    from custom_components.auto_organizer import _options_from_entry
+    from custom_components.auto_organizer.const import (
+        CONF_EXCLUDE_DOMAINS,
+        CONF_EXCLUDE_ENTITIES,
+    )
+
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        options={
+            CONF_EXCLUDE_DOMAINS: ["scene"],
+            CONF_EXCLUDE_ENTITIES: ["sensor.keep_out"],
+        },
+    )
+    entry.add_to_hass(hass)
+    options = _options_from_entry(hass, entry)
+    assert "scene" in options.exclude
+    assert "sensor.keep_out" in options.exclude
+
+
+def test_exclude_domains_selector_lists_known_domains() -> None:
+    from custom_components.auto_organizer.rules import DOMAIN_LABELS
+
+    # every domain the rule engine understands is offered in the picker
+    assert "light" in DOMAIN_LABELS
+    assert "switch" in DOMAIN_LABELS
+    assert len(DOMAIN_LABELS) >= 20
+
+
+async def test_preview_service_never_writes(hass: HomeAssistant) -> None:
+    await _add_entry(hass)
+    result = await hass.services.async_call(
+        DOMAIN, "preview", {}, blocking=True, return_response=True
+    )
+    assert "labels" in result
+    assert "areas" in result
+    assert "scanned" in result["labels"]
+    assert "scanned" in result["areas"]
+
+
+async def test_own_control_entities_not_auto_labeled(hass: HomeAssistant) -> None:
+    from homeassistant.helpers import entity_registry as er
+
+    from custom_components.auto_organizer.const import CONF_AUTO_LABEL_NEW
+
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        title="Entity Auto-Organizer",
+        options={CONF_AUTO_LABEL_NEW: True},
+    )
+    entry.add_to_hass(hass)
+    assert await hass.config_entries.async_setup(entry.entry_id)
+    await hass.async_block_till_done()
+
+    ent_reg = er.async_get(hass)
+    own_entities = [
+        e for e in ent_reg.entities.values() if e.platform == DOMAIN
+    ]
+    assert own_entities
+    # None of our own button/select/switch/sensor entities should carry
+    # auto-assigned labels from their own creation event.
+    assert all(not e.labels for e in own_entities)
+
+
+async def test_diagnostics_strips_changes_from_every_section(
+    hass: HomeAssistant,
+) -> None:
+    from custom_components.auto_organizer.diagnostics import (
+        async_get_config_entry_diagnostics,
+    )
+
+    entry = await _add_entry(hass)
+    await hass.services.async_call(
+        DOMAIN, "cleanup", {"dry_run": True}, blocking=True, return_response=True
+    )
+    diagnostics = await async_get_config_entry_diagnostics(hass, entry)
+    for section in diagnostics["last_run"].values():
+        if isinstance(section, dict):
+            assert "changes" not in section
+
+
+def test_control_entities_are_config_category() -> None:
+    from homeassistant.const import EntityCategory
+
+    from custom_components.auto_organizer.button import _BaseButton
+    from custom_components.auto_organizer.select import ScopeSelect
+    from custom_components.auto_organizer.switch import DryRunSwitch
+
+    assert _BaseButton._attr_entity_category == EntityCategory.CONFIG
+    assert ScopeSelect._attr_entity_category == EntityCategory.CONFIG
+    assert DryRunSwitch._attr_entity_category == EntityCategory.CONFIG
+
+
+async def test_enabled_labels_option_restricts_run(hass: HomeAssistant) -> None:
+    from custom_components.auto_organizer.const import CONF_ENABLED_LABELS
+
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        title="Entity Auto-Organizer",
+        options={CONF_ENABLED_LABELS: ["lights"]},
+    )
+    entry.add_to_hass(hass)
+    assert await hass.config_entries.async_setup(entry.entry_id)
+    await hass.async_block_till_done()
+
+    from custom_components.auto_organizer import _options_from_entry
+
+    options = _options_from_entry(hass, entry)
+    assert options.enabled_labels == frozenset({"lights"})
+
+
+def test_enabled_labels_selector_lists_every_catalog_label() -> None:
+    from custom_components.auto_organizer.rules import LABELS
+
+    assert "lights" in LABELS
+    assert "waste" in LABELS
+    assert len(LABELS) >= 30

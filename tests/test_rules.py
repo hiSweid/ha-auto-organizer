@@ -732,3 +732,21 @@ def test_no_false_positive_snack_riegel():
 def test_shopping_generic_keywords():
     assert names(FakeEntry("sensor.einkaufsliste")) == ["Einkauf"]
     assert names(FakeEntry("sensor.grocery_reminder")) == ["Einkauf"]
+
+
+def test_enabled_labels_restricts_to_allowlist():
+    opts = OrganizerOptions(enabled_labels=frozenset({"lights"}))
+    assert names(FakeEntry("light.k"), opts) == ["Beleuchtung"]
+    assert names(FakeEntry("switch.k"), opts) == []
+
+
+def test_enabled_labels_empty_means_unrestricted():
+    opts = OrganizerOptions(enabled_labels=frozenset())
+    assert names(FakeEntry("light.k"), opts) == ["Beleuchtung"]
+    assert names(FakeEntry("switch.k"), opts) == ["Schalter"]
+
+
+def test_enabled_labels_filters_curated_and_keyword_matches():
+    opts = OrganizerOptions(enabled_labels=frozenset({"car"}))
+    # "wallbox" keyword -> car (allowed) and "leistung" -> energy (blocked)
+    assert names(FakeEntry("sensor.wallbox_ladung"), opts) == ["Auto"]

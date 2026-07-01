@@ -26,17 +26,14 @@ async def async_get_config_entry_diagnostics(
             "dry_run": runtime.dry_run,
         },
         "stats": runtime.stats,
-        # Drop the (large) per-entity change lists; keep the summary.
+        # Drop the (large) per-entity change lists from every result section
+        # ("labels", "areas", "cleanup", "remove_all"); keep the summary.
         "last_run": {
-            k: v for k, v in last_run.items() if k not in ("labels", "areas")
-        }
-        | {
-            section: {
-                key: val
-                for key, val in last_run[section].items()
-                if key != "changes"
-            }
-            for section in ("labels", "areas")
-            if isinstance(last_run.get(section), dict)
+            key: (
+                {k: v for k, v in val.items() if k != "changes"}
+                if isinstance(val, dict)
+                else val
+            )
+            for key, val in last_run.items()
         },
     }

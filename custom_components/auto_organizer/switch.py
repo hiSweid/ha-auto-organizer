@@ -5,6 +5,7 @@ from __future__ import annotations
 from typing import Any
 
 from homeassistant.components.switch import SwitchEntity
+from homeassistant.const import EntityCategory
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.restore_state import RestoreEntity
@@ -27,6 +28,7 @@ class DryRunSwitch(SwitchEntity, RestoreEntity):
     _attr_has_entity_name = True
     _attr_translation_key = "dry_run"
     _attr_icon = "mdi:test-tube"
+    _attr_entity_category = EntityCategory.CONFIG
 
     def __init__(self, runtime: AutoOrganizerRuntime) -> None:
         self._runtime = runtime

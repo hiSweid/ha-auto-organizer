@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from homeassistant.components.select import SelectEntity
+from homeassistant.const import EntityCategory
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.restore_state import RestoreEntity
@@ -27,6 +28,7 @@ class ScopeSelect(SelectEntity, RestoreEntity):
     _attr_translation_key = "scope"
     _attr_options = SCOPES
     _attr_icon = "mdi:format-list-checks"
+    _attr_entity_category = EntityCategory.CONFIG
 
     def __init__(self, runtime: AutoOrganizerRuntime) -> None:
         self._runtime = runtime

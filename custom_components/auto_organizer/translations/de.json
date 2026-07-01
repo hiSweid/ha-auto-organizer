@@ -21,6 +21,7 @@
           "enable_device_class": "Nach Geräteklasse labeln (Temperatur, Bewegung, …)",
           "enable_integration": "Nach Quell-Integration labeln",
           "enable_curated": "Themen-Labels für bekannte Integrationen (Haushaltsgeräte, Garten, Netzwerk …)",
+          "enabled_labels": "Nur diese Label-Themen erlauben (leer = alle erlaubt)",
           "enable_area": "Label für den Bereich jeder Entität hinzufügen",
           "enable_floor": "Label für die Etage jeder Entität hinzufügen",
           "skip_categories": "Diagnose-/Konfig-Entitäten überspringen",
@@ -30,7 +31,9 @@
           "run_on_startup": "Einmal beim Start von Home Assistant ausführen",
           "scan_interval": "Intervall für erneuten Scan in Minuten (0 = aus)",
           "label_prefix": "Optionales Präfix für erstellte Labels",
-          "exclude": "Ausschluss (kommagetrennt: Domains, entity_ids oder Muster wie sensor.test_*)",
+          "exclude_domains": "Ganze Domains/Gruppen ausschließen (Mehrfachauswahl)",
+          "exclude_entities": "Einzelne Entitäten ausschließen",
+          "exclude": "Erweitert: Ausschluss per Muster (z.B. sensor.test_*)",
           "custom_rules": "Eigene Regeln: Schlüsselwort=Label pro Zeile (Label muss existieren, z.B. pool=water)"
         }
       }
@@ -38,9 +41,15 @@
   },
   "entity": {
     "button": {
-      "run": { "name": "Jetzt ausführen" },
-      "cleanup": { "name": "Labels aufräumen" },
-      "remove_all": { "name": "Alle Labels entfernen" }
+      "run": {
+        "name": "Jetzt ausführen"
+      },
+      "cleanup": {
+        "name": "Labels aufräumen"
+      },
+      "remove_all": {
+        "name": "Alle Labels entfernen"
+      }
     },
     "select": {
       "scope": {
@@ -53,16 +62,32 @@
       }
     },
     "switch": {
-      "dry_run": { "name": "Testlauf" }
+      "dry_run": {
+        "name": "Testlauf"
+      }
     },
     "sensor": {
-      "last_run": { "name": "Letzter Lauf" },
-      "last_run_time": { "name": "Zuletzt gelaufen" },
-      "labeled": { "name": "Gelabelte Entitäten" },
-      "unlabeled": { "name": "Nicht gelabelte Entitäten" },
-      "without_area": { "name": "Entitäten ohne Bereich" },
-      "managed_labels": { "name": "Verwaltete Labels" },
-      "coverage": { "name": "Label-Abdeckung" }
+      "last_run": {
+        "name": "Letzter Lauf"
+      },
+      "last_run_time": {
+        "name": "Zuletzt gelaufen"
+      },
+      "labeled": {
+        "name": "Gelabelte Entitäten"
+      },
+      "unlabeled": {
+        "name": "Nicht gelabelte Entitäten"
+      },
+      "without_area": {
+        "name": "Entitäten ohne Bereich"
+      },
+      "managed_labels": {
+        "name": "Verwaltete Labels"
+      },
+      "coverage": {
+        "name": "Label-Abdeckung"
+      }
     }
   },
   "issues": {
@@ -123,6 +148,10 @@
           "description": "Änderungen berechnen, aber nicht schreiben."
         }
       }
+    },
+    "preview": {
+      "name": "Vorschau",
+      "description": "Vorschau für Labels und Bereiche zusammen, ohne etwas zu schreiben."
     }
   }
 }

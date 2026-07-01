@@ -105,7 +105,7 @@ class Organizer:
                 floor_name = floor.name
         return area.name, floor_name
 
-    async def _resolve_label(
+    def _resolve_label(
         self,
         spec: LabelSpec,
         result: RunResult,
@@ -161,10 +161,19 @@ class Organizer:
         ent_reg = er.async_get(self.hass)
         synced: set[str] = set()
 
-        entries = list(ent_reg.entities.values())
+        if entity_filter is not None:
+            # Small, targeted runs (e.g. the auto-label-new debounce) resolve
+            # the handful of entity_ids directly instead of scanning the
+            # whole registry (which can be several thousand entries).
+            entries = [
+                e
+                for eid in entity_filter
+                if (e := ent_reg.async_get(eid)) is not None
+            ]
+        else:
+            entries = list(ent_reg.entities.values())
+
         for entry in entries:
-            if entity_filter is not None and entry.entity_id not in entity_filter:
-                continue
             result.scanned += 1
 
             specs = compute_label_specs(entry, options)
@@ -181,7 +190,7 @@ class Organizer:
                 continue
 
             target_ids = {
-                await self._resolve_label(
+                self._resolve_label(
                     s, result, create=not options.dry_run, synced=synced
                 )
                 for s in specs
