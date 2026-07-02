@@ -16,7 +16,7 @@ body:
     id: integration_version
     attributes:
       label: Auto-Organizer version
-      placeholder: "0.1.0"
+      placeholder: "0.6.0"
     validations:
       required: true
   - type: textarea
@@ -46,5 +46,5 @@ body:
     id: options
     attributes:
       label: Integration options
-      description: Which options are enabled (language, area/floor, skip, …)?
+      description: Which options are enabled (language, area/floor, icon suggestions, restricted label themes, excludes, …)?
       render: text

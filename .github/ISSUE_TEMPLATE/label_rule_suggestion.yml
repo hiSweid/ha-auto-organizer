@@ -1,5 +1,5 @@
-name: Label / rule suggestion
-description: Suggest a new label or a domain/device_class/integration mapping
+name: Label / icon / rule suggestion
+description: Suggest a new label, icon mapping, or a domain/device_class/integration/keyword rule
 labels: ["enhancement", "rule"]
 body:
   - type: dropdown
@@ -7,7 +7,9 @@ body:
     attributes:
       label: Suggestion type
       options:
-        - New label
+        - New label theme
+        - New keyword (labels an entity by name)
+        - New specific icon mapping (set_entity_icons option)
         - Domain → label mapping
         - device_class → label mapping
         - Integration → theme label mapping
@@ -18,17 +20,21 @@ body:
     id: trigger
     attributes:
       label: Trigger
-      description: The domain, device_class or integration this should match.
-      placeholder: "device_class: volume_flow_rate / integration: foobar"
+      description: The keyword, domain, device_class or integration this should match.
+      placeholder: "keyword: Bewässerung / device_class: volume_flow_rate / integration: foobar"
     validations:
       required: true
   - type: input
     id: label
     attributes:
       label: Proposed label (DE / EN)
+      description: Leave blank if this is purely an icon suggestion for an existing label.
       placeholder: "Bewässerung / Irrigation"
-    validations:
-      required: true
+  - type: input
+    id: icon
+    attributes:
+      label: Proposed icon (if suggesting one)
+      placeholder: "mdi:sprinkler"
   - type: textarea
     id: rationale
     attributes:
