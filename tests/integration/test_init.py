@@ -227,12 +227,16 @@ async def test_entities_with_specific_icon_stat(hass: HomeAssistant) -> None:
 async def test_last_run_sensor_strips_changes_from_remove_all(
     hass: HomeAssistant,
 ) -> None:
-    entry = await _add_entry(hass)
+    # The raw runtime.last_run keeps the changes list (service responses
+    # need it) — the stripping happens in the sensor's state attributes.
+    await _add_entry(hass)
     await hass.services.async_call(
         DOMAIN, "remove_all", {"dry_run": True}, blocking=True, return_response=True
     )
-    runtime = entry.runtime_data
-    assert "changes" not in runtime.last_run.get("remove_all", {})
+    await hass.async_block_till_done()
+    state = hass.states.get("sensor.entity_auto_organizer_last_run")
+    assert state is not None
+    assert "changes" not in state.attributes.get("remove_all", {})
 
 
 async def test_last_run_sensor_surfaces_icons_set(hass: HomeAssistant) -> None:
@@ -253,8 +257,12 @@ async def test_last_run_sensor_surfaces_icons_set(hass: HomeAssistant) -> None:
         "sensor", "test", "coffee_2", suggested_object_id="kaffeemaschine2"
     )
 
-    runtime = entry.runtime_data
     await hass.services.async_call(
         DOMAIN, "run", {"dry_run": True}, blocking=True, return_response=True
     )
-    assert "icons_set" in runtime.last_run
+    await hass.async_block_till_done()
+    # icons_set lives nested in the raw data but is lifted to a top-level
+    # attribute on the Last run sensor for visibility.
+    state = hass.states.get("sensor.entity_auto_organizer_last_run")
+    assert state is not None
+    assert state.attributes.get("icons_set", 0) >= 1
