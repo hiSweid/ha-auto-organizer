@@ -6,6 +6,11 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Docs
+- README/info.md trimmed from 221 to ~100 lines — same facts, less prose
+  (tighter tables, one usage example instead of six, shorter feature
+  bullets).
+
 ## [0.6.0] - 2026-07-02
 
 ### Added
