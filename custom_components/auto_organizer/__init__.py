@@ -50,6 +50,7 @@ from .const import (
     CONF_EXCLUDE_ENTITIES,
     CONF_LANGUAGE,
     CONF_MAX_LABELS,
+    CONF_SET_ENTITY_ICONS,
     CONF_SKIP_CATEGORIES,
     DEFAULT_AUTO_LABEL_NEW,
     DEFAULT_DRY_RUN,
@@ -57,6 +58,7 @@ from .const import (
     DEFAULT_ENABLE_CURATED,
     DEFAULT_ENABLE_FLOOR,
     DEFAULT_ENABLED_LABELS,
+    DEFAULT_SET_ENTITY_ICONS,
     DEFAULT_EXCLUDE_DOMAINS,
     DEFAULT_EXCLUDE_ENTITIES,
     DEFAULT_LANGUAGE,
@@ -123,6 +125,7 @@ def _options_from_entry(hass: HomeAssistant, entry: ConfigEntry) -> OrganizerOpt
         enabled_labels=frozenset(
             o.get(CONF_ENABLED_LABELS, DEFAULT_ENABLED_LABELS)
         ),
+        set_entity_icons=o.get(CONF_SET_ENTITY_ICONS, DEFAULT_SET_ENTITY_ICONS),
     )
 
 

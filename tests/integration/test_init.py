@@ -188,3 +188,22 @@ def test_enabled_labels_selector_lists_every_catalog_label() -> None:
     assert "lights" in LABELS
     assert "waste" in LABELS
     assert len(LABELS) >= 30
+
+
+async def test_set_entity_icons_option_wired(hass: HomeAssistant) -> None:
+    from custom_components.auto_organizer import _options_from_entry
+    from custom_components.auto_organizer.const import CONF_SET_ENTITY_ICONS
+
+    entry = MockConfigEntry(domain=DOMAIN, options={CONF_SET_ENTITY_ICONS: True})
+    entry.add_to_hass(hass)
+    options = _options_from_entry(hass, entry)
+    assert options.set_entity_icons is True
+
+
+async def test_set_entity_icons_defaults_off(hass: HomeAssistant) -> None:
+    from custom_components.auto_organizer import _options_from_entry
+
+    entry = MockConfigEntry(domain=DOMAIN, options={})
+    entry.add_to_hass(hass)
+    options = _options_from_entry(hass, entry)
+    assert options.set_entity_icons is False

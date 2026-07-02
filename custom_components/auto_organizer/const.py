@@ -26,6 +26,7 @@ CONF_EXCLUDE_DOMAINS: Final = "exclude_domains"
 CONF_EXCLUDE_ENTITIES: Final = "exclude_entities"
 CONF_EXCLUDE: Final = "exclude"
 CONF_ENABLED_LABELS: Final = "enabled_labels"
+CONF_SET_ENTITY_ICONS: Final = "set_entity_icons"
 CONF_CUSTOM_RULES: Final = "custom_rules"
 CONF_LABEL_PREFIX: Final = "label_prefix"
 
@@ -49,6 +50,7 @@ DEFAULT_EXCLUDE_ENTITIES: Final = []
 DEFAULT_EXCLUDE: Final = ""
 # Empty = no restriction, every label theme is allowed.
 DEFAULT_ENABLED_LABELS: Final = []
+DEFAULT_SET_ENTITY_ICONS: Final = False
 DEFAULT_CUSTOM_RULES: Final = ""
 DEFAULT_LABEL_PREFIX: Final = ""
 

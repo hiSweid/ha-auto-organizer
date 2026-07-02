@@ -750,3 +750,128 @@ def test_enabled_labels_filters_curated_and_keyword_matches():
     opts = OrganizerOptions(enabled_labels=frozenset({"car"}))
     # "wallbox" keyword -> car (allowed) and "leistung" -> energy (blocked)
     assert names(FakeEntry("sensor.wallbox_ladung"), opts) == ["Auto"]
+
+
+def test_suggest_entity_icon_keyword_beats_domain():
+    from rules import suggest_entity_icon
+    # domain "media_player" -> Medien (generic), but "tv" keyword is more specific
+    entry = FakeEntry("media_player.wohnzimmer_tv")
+    assert suggest_entity_icon(entry, OrganizerOptions()) == "mdi:television"
+
+
+def test_suggest_entity_icon_appliance_keyword():
+    from rules import suggest_entity_icon
+    entry = FakeEntry("sensor.kaffeemaschine_kueche")
+    assert suggest_entity_icon(entry, OrganizerOptions()) == "mdi:coffee-maker"
+
+
+def test_suggest_entity_icon_integration_platform():
+    from rules import suggest_entity_icon
+    entry = FakeEntry("media_player.x", platform="spotify")
+    assert suggest_entity_icon(entry, OrganizerOptions()) == "mdi:spotify"
+
+
+def test_suggest_entity_icon_none_when_nothing_specific():
+    from rules import suggest_entity_icon
+    # "sensor" has no domain-level icon (relies on device_class instead),
+    # and this entity has neither a recognizable keyword nor a device_class
+    entry = FakeEntry("sensor.plain_thing_xyz")
+    assert suggest_entity_icon(entry, OrganizerOptions()) is None
+
+
+def test_suggest_entity_icon_domain_fallback_covers_every_domain():
+    from rules import suggest_entity_icon
+    for domain in rules.DOMAIN_LABELS:
+        entry = FakeEntry(f"{domain}.some_generic_entity_name")
+        assert suggest_entity_icon(entry, OrganizerOptions()) is not None, domain
+
+
+def test_suggest_entity_icon_platform_beats_domain():
+    from rules import suggest_entity_icon
+    # Spotify (a specific service) should win over the generic media_player
+    # domain icon, since it names the actual product, not just the category
+    entry = FakeEntry("media_player.x", platform="spotify")
+    assert suggest_entity_icon(entry, OrganizerOptions()) == "mdi:spotify"
+
+
+def test_suggest_entity_icon_respects_exclude():
+    from rules import suggest_entity_icon
+    opts = OrganizerOptions(exclude=("sensor.kaffeemaschine_kueche",))
+    entry = FakeEntry("sensor.kaffeemaschine_kueche")
+    assert suggest_entity_icon(entry, opts) is None
+
+
+def test_specific_icons_keys_are_reachable():
+    # Every SPECIFIC_ICONS key must match a real keyword/domain/device_class/
+    # platform/car-name — otherwise it's dead code from a typo and can never
+    # be suggested.
+    known = (
+        set(rules.KEYWORD_LABELS)
+        | set(rules.DOMAIN_LABELS)
+        | set(rules.DEVICE_CLASS_LABELS)
+        | set(rules.INTEGRATION_LABELS)
+        | set(rules.CAR_NAME_KEYWORDS)
+    )
+    known_stripped = {k.strip() for k in known}
+    for key in rules.SPECIFIC_ICONS:
+        assert key in known_stripped, f"orphaned SPECIFIC_ICONS key: {key!r}"
+
+
+def test_specific_icons_are_valid_mdi_strings():
+    for key, icon in rules.SPECIFIC_ICONS.items():
+        assert icon.startswith("mdi:"), key
+
+
+def test_new_specific_icon_words():
+    from rules import suggest_entity_icon as icon_for
+    opts = OrganizerOptions()
+    cases = {
+        "sensor.kaffee_vorrat": "mdi:coffee-maker",
+        "sensor.wasserkocher_kueche": "mdi:kettle",
+        "sensor.nuki_battery_level": "mdi:lock",
+        "sensor.access_point_status": "mdi:access-point",
+        "binary_sensor.feuermelder_flur": "mdi:smoke-detector",
+        "sensor.dunstabzugshaube_stufe": "mdi:air-filter",
+        "sensor.iphone_von_johanna": "mdi:cellphone-iphone",
+        "sensor.heizkoerper_wohnzimmer": "mdi:radiator",
+        "sensor.rasenroboter_status": "mdi:robot-mower",
+        "sensor.tiefkuehltruhe_temp": "mdi:fridge-outline",
+        "sensor.aquarium_ph": "mdi:fishbowl",
+        "sensor.drucker_tinte": "mdi:printer",
+        "sensor.luftreiniger_pm25": "mdi:air-purifier",
+        "sensor.luftbefeuchter_status": "mdi:air-humidifier",
+        "sensor.deckenventilator_speed": "mdi:ceiling-fan",
+        "sensor.stromspeicher_soc": "mdi:home-battery",
+        "sensor.co2_buero": "mdi:molecule-co2",
+        "binary_sensor.haustuer_kontakt": "mdi:door",
+        "binary_sensor.terrassentuer_kontakt": "mdi:door-sliding",
+        "sensor.gelbersack_naechste_abholung": "mdi:recycle",
+        "sensor.vorhang_wohnzimmer": "mdi:curtains",
+        "sensor.futterautomat_katze": "mdi:paw",
+        "sensor.whirlpool_temp": "mdi:hot-tub",
+        "sensor.kuechenwaage_gewicht": "mdi:scale-balance",
+        "sensor.swimming_pool_ph": "mdi:pool",
+        "sensor.synology_status": "mdi:nas",
+        "sensor.windrichtung_grad": "mdi:compass",
+        "sensor.family_location": "mdi:account-group",
+        "binary_sensor.ring_video_doorbell": "mdi:doorbell-video",
+        "binary_sensor.wohnung_klingel": "mdi:doorbell",
+        "binary_sensor.kohlenmonoxid_melder": "mdi:molecule-co",
+    }
+    for eid, expected in cases.items():
+        assert icon_for(FakeEntry(eid), opts) == expected, eid
+
+
+def test_no_false_positive_smartlockdown_and_ofenrohr():
+    assert names(FakeEntry("binary_sensor.smartlockdown_status")) == []
+    assert names(FakeEntry("sensor.ofenrohr_status")) == []
+    assert names(FakeEntry("sensor.infektionsherd_counter")) == []
+
+
+def test_specific_icons_word_coverage_per_icon():
+    # Loose sanity metric: most curated icons should have multiple matching
+    # words, not just a single one-off keyword.
+    from collections import Counter
+    counts = Counter(rules.SPECIFIC_ICONS.values())
+    multi_word_icons = sum(1 for n in counts.values() if n >= 2)
+    assert multi_word_icons >= 20

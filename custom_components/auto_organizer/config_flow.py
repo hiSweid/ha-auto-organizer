@@ -28,6 +28,7 @@ from .const import (
     CONF_ENABLE_DOMAIN,
     CONF_ENABLE_INTEGRATION,
     CONF_LABEL_PREFIX,
+    CONF_SET_ENTITY_ICONS,
     CONF_OVERWRITE,
     CONF_RUN_ON_STARTUP,
     CONF_SCAN_INTERVAL,
@@ -50,6 +51,7 @@ from .const import (
     DEFAULT_ENABLE_DOMAIN,
     DEFAULT_ENABLE_INTEGRATION,
     DEFAULT_ENABLED_LABELS,
+    DEFAULT_SET_ENTITY_ICONS,
     DEFAULT_EXCLUDE_DOMAINS,
     DEFAULT_EXCLUDE_ENTITIES,
     DEFAULT_LABEL_PREFIX,
@@ -132,6 +134,10 @@ class AutoOrganizerOptionsFlow(OptionsFlow):
                         mode=selector.SelectSelectorMode.DROPDOWN,
                     )
                 ),
+                vol.Optional(
+                    CONF_SET_ENTITY_ICONS,
+                    default=o.get(CONF_SET_ENTITY_ICONS, DEFAULT_SET_ENTITY_ICONS),
+                ): bool,
                 vol.Optional(
                     CONF_ENABLE_AREA,
                     default=o.get(CONF_ENABLE_AREA, DEFAULT_ENABLE_AREA),

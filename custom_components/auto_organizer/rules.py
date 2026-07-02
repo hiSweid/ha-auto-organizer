@@ -71,6 +71,10 @@ class OrganizerOptions:
     # Restrict which label *themes* may be assigned at all (by catalog key,
     # e.g. "lights", "waste"). Empty = no restriction, every label allowed.
     enabled_labels: frozenset[str] = field(default_factory=frozenset)
+    # When set, also apply a more specific icon (see SPECIFIC_ICONS) to
+    # entities that already got a label from this run. Never overwrites an
+    # icon the user picked manually.
+    set_entity_icons: bool = False
 
 
 # Area/floor labels use the user-defined names verbatim (not translatable),
@@ -229,6 +233,292 @@ DEVICE_CLASS_LABELS: Final[dict[str, str]] = {
     "irradiance": "weather",
 }
 
+# --- specific entity icons ------------------------------------------------
+# Keyed by the same "reason" that also picked a label (a domain, device_class,
+# integration platform, or keyword — after stripping the whole-word padding
+# spaces some keywords use). Only entries that are meaningfully more precise
+# than the label's own icon are listed here; everything else falls back to
+# the label icon (or no override at all).
+SPECIFIC_ICONS: Final[dict[str, str]] = {
+    # appliances — coffee
+    "kaffeemaschine": "mdi:coffee-maker",
+    "coffee maker": "mdi:coffee-maker",
+    "kaffee": "mdi:coffee-maker",
+    "espressomaschine": "mdi:coffee-maker",
+    "kaffeevollautomat": "mdi:coffee-maker",
+    "coffee machine": "mdi:coffee-maker",
+    "espresso machine": "mdi:coffee-maker",
+    # appliances — dryer
+    "trockner": "mdi:tumble-dryer",
+    "dryer": "mdi:tumble-dryer",
+    # appliances — dishwasher
+    "geschirrspuel": "mdi:dishwasher",
+    "spuelmaschine": "mdi:dishwasher",
+    "dishwasher": "mdi:dishwasher",
+    # appliances — oven / stove
+    "backofen": "mdi:stove",
+    "oven": "mdi:stove",
+    "ofen": "mdi:stove",
+    "herd": "mdi:stove",
+    "cooktop": "mdi:stove",
+    # appliances — fridge / freezer
+    "kuehlschrank": "mdi:fridge-outline",
+    "fridge": "mdi:fridge-outline",
+    "refrigerator": "mdi:fridge-outline",
+    "gefrier": "mdi:fridge-outline",
+    "freezer": "mdi:fridge-outline",
+    "tiefkuehler": "mdi:fridge-outline",
+    "tiefkuehltruhe": "mdi:fridge-outline",
+    # appliances — kettle
+    "kettle": "mdi:kettle",
+    "wasserkocher": "mdi:kettle",
+    # appliances — microwave / toaster
+    "mikrowelle": "mdi:microwave",
+    "microwave": "mdi:microwave",
+    "toaster": "mdi:toaster-oven",
+    # media — TV
+    "tv": "mdi:television",
+    "fernseher": "mdi:television",
+    "television": "mdi:television",
+    # media — speakers
+    "lautsprecher": "mdi:speaker",
+    "sonos": "mdi:speaker",
+    "speaker": "mdi:speaker",
+    "soundbar": "mdi:soundbar",
+    # media — misc
+    "projector": "mdi:projector",
+    "amplifier": "mdi:amplifier",
+    "tastatur": "mdi:keyboard",
+    "keyboard": "mdi:keyboard",
+    "spotify": "mdi:spotify",
+    # lights
+    "lichterkette": "mdi:string-lights",
+    "chandelier": "mdi:chandelier",
+    "led strip": "mdi:led-strip-variant",
+    "ceiling lamp": "mdi:ceiling-light",
+    "deckenleuchte": "mdi:ceiling-light",
+    "floor lamp": "mdi:floor-lamp",
+    "stehlampe": "mdi:floor-lamp",
+    "table lamp": "mdi:desk-lamp",
+    "tischlampe": "mdi:desk-lamp",
+    "wandleuchte": "mdi:wall-sconce",
+    "wall light": "mdi:wall-sconce",
+    # locks
+    "schloss": "mdi:lock",
+    "tuerschloss": "mdi:lock",
+    "deadbolt": "mdi:lock",
+    "vorhangschloss": "mdi:lock",
+    "smartlock": "mdi:lock",
+    "nuki": "mdi:lock",
+    # cameras
+    "video doorbell": "mdi:doorbell-video",
+    "ring doorbell": "mdi:doorbell-video",
+    "webcam": "mdi:webcam",
+    "nvr": "mdi:cctv",
+    # car / charging
+    "wallbox": "mdi:ev-station",
+    "ladestation": "mdi:ev-station",
+    "charging station": "mdi:ev-station",
+    "chargepoint": "mdi:ev-station",
+    "charge point": "mdi:ev-station",
+    "ladepunkt": "mdi:ev-station",
+    "ev charger": "mdi:ev-station",
+    # garden — mowing
+    "mower": "mdi:robot-mower",
+    "maehroboter": "mdi:robot-mower",
+    "rasenmaeher": "mdi:robot-mower",
+    "rasenroboter": "mdi:robot-mower",
+    # garden — watering
+    "sprinkler": "mdi:sprinkler",
+    "rasensprenger": "mdi:sprinkler",
+    "sprinkleranlage": "mdi:sprinkler",
+    "bewaesser": "mdi:water-pump",
+    "irrigation": "mdi:water-pump",
+    "garden hose": "mdi:water-pump",
+    "tropfbewaesserung": "mdi:water-pump",
+    # network
+    "router": "mdi:router-wireless",
+    "fritzbox": "mdi:router-wireless",
+    "access point": "mdi:access-point",
+    # climate — heating
+    "heizkoerper": "mdi:radiator",
+    "radiator": "mdi:radiator",
+    # weather
+    "sunrise": "mdi:weather-sunset-up",
+    "sonnenaufgang": "mdi:weather-sunset-up",
+    "sunset": "mdi:weather-sunset-down",
+    "sonnenuntergang": "mdi:weather-sunset-down",
+    "rainfall": "mdi:weather-pouring",
+    "regenmenge": "mdi:weather-pouring",
+    "wind gust": "mdi:weather-windy",
+    "windboe": "mdi:weather-windy",
+    # security — smoke / fire
+    "rauchmelder": "mdi:smoke-detector",
+    "smoke detector": "mdi:smoke-detector",
+    "feuermelder": "mdi:smoke-detector",
+    "fire alarm": "mdi:smoke-detector",
+    # security — openings
+    "fenster": "mdi:window-closed-variant",
+    "window sensor": "mdi:window-closed-variant",
+    "window contact": "mdi:window-closed-variant",
+    "garagentor": "mdi:garage",
+    "garage door": "mdi:garage",
+    # covers
+    "jalousie": "mdi:blinds",
+    "blinds": "mdi:blinds",
+    "rollos": "mdi:blinds",
+    "venetian blinds": "mdi:blinds",
+    # fans
+    "range hood": "mdi:air-filter",
+    "exhaust fan": "mdi:air-filter",
+    "dunstabzugshaube": "mdi:air-filter",
+    # presence — mobile devices
+    "iphone": "mdi:cellphone-iphone",
+    "ipad": "mdi:tablet-ipad",
+    "tablet": "mdi:tablet",
+    "android": "mdi:cellphone-android",
+    "smartphone": "mdi:cellphone",
+    "handy": "mdi:cellphone",
+    "kiosk": "mdi:tablet",
+    "bettsensor": "mdi:bed",
+    # energy — solar / storage
+    "solar": "mdi:solar-power",
+    "photovolt": "mdi:solar-power",
+    "pv": "mdi:solar-power",
+    "stromspeicher": "mdi:home-battery",
+    "batteriespeicher": "mdi:home-battery",
+    "marstek": "mdi:home-battery",
+    # appliances — misc
+    "drucker": "mdi:printer",
+    "printer": "mdi:printer",
+    "luftreiniger": "mdi:air-purifier",
+    # climate — humidity control
+    "luftbefeuchter": "mdi:air-humidifier",
+    # fans — ceiling
+    "deckenventilator": "mdi:ceiling-fan",
+    # water — aquarium
+    "aquarium": "mdi:fishbowl",
+    # air quality
+    "co2": "mdi:molecule-co2",
+    # weather — extra
+    "frost": "mdi:snowflake",
+    "pollen": "mdi:flower-pollen",
+    # waste — subtypes
+    "gelbersack": "mdi:recycle",
+    "recycling": "mdi:recycle",
+    "altpapier": "mdi:recycle",
+    "biomuell": "mdi:leaf",
+    # security — front/balcony/patio doors
+    "eingangstuer": "mdi:door",
+    "eingangstur": "mdi:door",
+    "haustuer": "mdi:door",
+    "haustur": "mdi:door",
+    "wohnungstuer": "mdi:door",
+    "wohnungstur": "mdi:door",
+    "balkontuer": "mdi:door-sliding",
+    "balkontur": "mdi:door-sliding",
+    "terrassentuer": "mdi:door-sliding",
+    "terrassentur": "mdi:door-sliding",
+    # security — plain (non-video) doorbell / CO detector
+    "klingel": "mdi:doorbell",
+    "tuerklingel": "mdi:doorbell",
+    "doorbell": "mdi:doorbell",
+    "kohlenmonoxid": "mdi:molecule-co",
+    "carbon monoxide detector": "mdi:molecule-co",
+    # covers — curtains
+    "vorhang": "mdi:curtains",
+    "curtain": "mdi:curtains",
+    "curtains": "mdi:curtains",
+    # appliances — pets / pool / misc
+    "futterautomat": "mdi:paw",
+    "pet feeder": "mdi:paw",
+    "katzenklo": "mdi:paw",
+    "litter box": "mdi:paw",
+    "whirlpool": "mdi:hot-tub",
+    "kuechenwaage": "mdi:scale-balance",
+    # water — pool
+    "swimming pool": "mdi:pool",
+    # network — NAS
+    "synology": "mdi:nas",
+    # weather — wind direction
+    "windrichtung": "mdi:compass",
+    # presence — group
+    "family": "mdi:account-group",
+    # closing the remaining label categories that had zero icon
+    # differentiation — one word each, so every label theme can produce a
+    # specific icon, not just the label's own generic one.
+    # automations / scenes / scripts
+    "zeitgesteuert": "mdi:calendar-clock",
+    "scheduled": "mdi:calendar-clock",
+    "szene": "mdi:palette-swatch",
+    "skript": "mdi:script-text-outline",
+    # battery
+    "battery_charging": "mdi:battery-charging",
+    # cost
+    "abrechnung": "mdi:receipt",
+    "billing": "mdi:receipt",
+    "ersparnis": "mdi:piggy-bank",
+    "savings": "mdi:piggy-bank",
+    # humidity — dew point
+    "taupunkt": "mdi:thermometer-water",
+    "dew point": "mdi:thermometer-water",
+    # leak — sensor devices specifically
+    "wassermelder": "mdi:water-alert-outline",
+    "shelly flood": "mdi:water-alert-outline",
+    # light level — lux unit
+    "lux": "mdi:brightness-7",
+    # motion — vibration sensors
+    "vibration": "mdi:vibrate",
+    # shopping — groceries
+    "lebensmittel": "mdi:basket",
+    "grocery": "mdi:basket",
+    # switches — outlets / plugs
+    "steckdose": "mdi:power-plug",
+    "steckdosenleiste": "mdi:power-plug",
+    "outlet": "mdi:power-plug",
+    "smart plug": "mdi:power-plug",
+    # temperature (completeness — same as the label's own icon)
+    "temperature": "mdi:thermometer",
+    # updates — firmware specifically
+    "firmware": "mdi:chip",
+    # vacuums — mop robots
+    "wischroboter": "mdi:robot-vacuum-variant",
+    # --- domain-level fallback -------------------------------------------
+    # Keyed by the bare HA domain (exact dict lookup in suggest_entity_icon,
+    # not a substring scan — zero collision risk regardless of the string).
+    # Guarantees every entity gets an icon suggestion even when its name has
+    # no recognizable keyword, not just entities with a "specific" name.
+    # Some reuse the label's own icon; others are genuinely more precise
+    # than the label icon for that exact domain.
+    "air_quality": "mdi:air-filter",
+    "alarm_control_panel": "mdi:shield-home",
+    "assist_satellite": "mdi:account-voice",
+    "automation": "mdi:robot",
+    "camera": "mdi:cctv",
+    "climate": "mdi:thermostat",
+    "cover": "mdi:window-shutter",
+    "device_tracker": "mdi:crosshairs-gps",
+    "fan": "mdi:fan",
+    "humidifier": "mdi:air-humidifier",
+    "light": "mdi:lightbulb-group",
+    "lock": "mdi:lock",
+    "media_player": "mdi:cast",
+    "person": "mdi:account",
+    "remote": "mdi:remote",
+    "scene": "mdi:palette",
+    "script": "mdi:script-text",
+    "siren": "mdi:alarm-light",
+    "stt": "mdi:microphone-message",
+    "sun": "mdi:weather-sunny",
+    "switch": "mdi:toggle-switch",
+    "tts": "mdi:volume-high",
+    "update": "mdi:package-up",
+    "vacuum": "mdi:robot-vacuum",
+    "valve": "mdi:valve",
+    "water_heater": "mdi:water-boiler",
+    "weather": "mdi:weather-partly-cloudy",
+}
+
 # --- keyword fallbacks --------------------------------------------------
 # Applied only when nothing more specific matched. Substrings are tested
 # against the normalized (lowercased, de-umlauted) entity_id AND friendly
@@ -263,6 +553,8 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "nass": "water",
     "durchfluss": "water",
     "wasserstand": "water",
+    "aquarium": "water",
+    "swimming pool": "water",
     "water level": "water",
     "flow rate": "water",
     # leak
@@ -366,6 +658,8 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "charging station": "car",
     " phev ": "car",
     "plug in hybrid": "car",
+    "ladepunkt": "car",
+    "ev charger": "car",
     # media
     "fernseher": "media",
     "lautsprecher": "media",
@@ -397,6 +691,26 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "mikrowelle": "appliances",
     "microwave": "appliances",
     "toaster": "appliances",
+    "kaffee": "appliances",
+    "espressomaschine": "appliances",
+    "kaffeevollautomat": "appliances",
+    "coffee machine": "appliances",
+    "espresso machine": "appliances",
+    " ofen ": "appliances",
+    " herd ": "appliances",
+    "cooktop": "appliances",
+    "tiefkuehler": "appliances",
+    "tiefkuehltruhe": "appliances",
+    "wasserkocher": "appliances",
+    "drucker": "appliances",
+    "printer": "appliances",
+    "luftreiniger": "appliances",
+    "futterautomat": "appliances",
+    "pet feeder": "appliances",
+    "katzenklo": "appliances",
+    "litter box": "appliances",
+    "whirlpool": "appliances",
+    "kuechenwaage": "appliances",
     # garden
     "garten": "garden",
     "maehroboter": "garden",
@@ -410,6 +724,10 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     " blumen ": "garden",
     "pflanzen": "garden",
     "garden hose": "garden",
+    "rasenroboter": "garden",
+    "rasensprenger": "garden",
+    "sprinkleranlage": "garden",
+    "tropfbewaesserung": "garden",
     # network
     "fritzbox": "network",
     "proxmox": "network",
@@ -420,10 +738,14 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "wireguard": "network",
     "pihole": "network",
     "modem": "network",
+    "access point": "network",
+    "synology": "network",
     # climate / heating
     "klima": "climate",
     "heizung": "climate",
     "heizkoerper": "climate",
+    "radiator": "climate",
+    "luftbefeuchter": "climate",
     "thermostat": "climate",
     "klimaanlage": "climate",
     "heizoel": "climate",
@@ -463,6 +785,11 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "shutters": "covers",
     "blinds": "covers",
     "awning": "covers",
+    "rollos": "covers",
+    "venetian blinds": "covers",
+    "vorhang": "covers",
+    "curtain": "covers",
+    "curtains": "covers",
     # locks
     "tuerschloss": "locks",
     "schliessanlage": "locks",
@@ -472,6 +799,9 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "verriegelt": "locks",
     "verriegelung": "locks",
     "tuerriegel": "locks",
+    "vorhangschloss": "locks",
+    " smartlock ": "locks",
+    "nuki": "locks",
     # switches / outlets
     "steckdose": "switches",
     "steckdosenleiste": "switches",
@@ -488,6 +818,8 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "lueftung": "fans",
     "exhaust fan": "fans",
     "range hood": "fans",
+    "dunstabzugshaube": "fans",
+    "deckenventilator": "fans",
     "geblaese": "fans",
     "blower": "fans",
     "ceiling fan": "fans",
@@ -538,6 +870,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "cctv": "cameras",
     " nvr ": "cameras",
     "video doorbell": "cameras",
+    "ring doorbell": "cameras",
     # vacuums
     "staubsauger": "vacuums",
     "saugroboter": "vacuums",
@@ -593,6 +926,19 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "klingel": "security",
     "tuerklingel": "security",
     "doorbell": "security",
+    "feuermelder": "security",
+    "fire alarm": "security",
+    "window contact": "security",
+    "garage door": "security",
+    "kohlenmonoxid": "security",
+    "carbon monoxide detector": "security",
+    # automations / scenes / scripts (mostly domain-matched; these extend
+    # the fallback so template/helper entities describing one by name
+    # still get labeled and can pick a specific icon)
+    "zeitgesteuert": "automations",
+    "scheduled": "automations",
+    " szene ": "scenes",
+    " skript ": "scripts",
     # lights
     "lichterkette": "lights",
     "lampe": "lights",
@@ -938,6 +1284,141 @@ def label_spec(key: str, language: str = DEFAULT_LANGUAGE) -> LabelSpec:
     return {"name": name, "color": ld["color"], "icon": ld["icon"]}
 
 
+def _collect_label_keys(
+    entry: EntityLike, options: OrganizerOptions
+) -> tuple[list[str], list[str]]:
+    """Return (label keys, match reasons) in priority order.
+
+    A "reason" is the raw thing that matched (a domain name, device_class,
+    integration platform, or keyword) — more specific than the label key
+    it maps to, and used to look up a more specific icon in
+    :data:`SPECIFIC_ICONS`. Shared by :func:`compute_label_specs` and
+    :func:`suggest_entity_icon` so both stay in sync.
+    """
+    keys: list[str] = []
+    reasons: list[str] = []
+    seen: set[str] = set()
+
+    def add(key: str | None, reason: str | None = None) -> None:
+        if not key or key in seen:
+            return
+        if options.enabled_labels and key not in options.enabled_labels:
+            return
+        seen.add(key)
+        keys.append(key)
+        if reason:
+            reasons.append(reason)
+
+    platform = getattr(entry, "platform", None)
+    is_category = bool(
+        options.skip_categories and getattr(entry, "entity_category", None)
+    )
+
+    # Curated integration themes apply even to diagnostic/config entities.
+    if options.enable_curated:
+        if platform:
+            add(INTEGRATION_LABELS.get(platform), reason=platform)
+        # Known vehicle names always count as "car".
+        ename = getattr(entry, "name", None) or getattr(
+            entry, "original_name", None
+        )
+        hay = _normalize(f"{entry.entity_id} {ename or ''}")
+        for kw in CAR_NAME_KEYWORDS:
+            if f" {kw} " in hay:
+                add("car", reason=kw)
+                break
+
+    # Domain/device_class labels are skipped for config/diagnostic helpers.
+    if not is_category:
+        domain = entry.entity_id.split(".", 1)[0]
+
+        if options.enable_domain:
+            add(DOMAIN_LABELS.get(domain), reason=domain)
+
+        if options.enable_device_class:
+            device_class = entry.device_class or entry.original_device_class
+            if device_class:
+                add(DEVICE_CLASS_LABELS.get(device_class), reason=device_class)
+
+        # Keyword fallbacks only when nothing more specific matched. Matched
+        # against the normalized entity_id and friendly name. User-defined
+        # custom rules take precedence over the built-in vocabulary.
+        if not keys:
+            ename = getattr(entry, "name", None) or getattr(
+                entry, "original_name", None
+            )
+            hay = _normalize(f"{entry.entity_id} {ename or ''}")
+            for needle, key in options.custom_rules.items():
+                if needle in hay:
+                    add(key, reason=needle)
+            for needle, key in KEYWORD_LABELS.items():
+                if needle in hay:
+                    add(key, reason=needle)
+
+    return keys, reasons
+
+
+def suggest_entity_icon(
+    entry: EntityLike, options: OrganizerOptions
+) -> str | None:
+    """Return a more specific icon for the entity, if one is known.
+
+    Checked in order from most to least specific: keyword/custom-rule (a
+    named device like "Kaffeemaschine" or "Wohnzimmer TV") > source
+    integration (e.g. "spotify", "nuki" — the actual product/service) >
+    device_class > bare HA domain (the broadest fallback, e.g. every
+    ``light.*`` entity). Unlike label matching, this always checks keywords
+    first regardless of whether a domain/device_class already matched,
+    since a keyword names the actual device while the domain only names its
+    HA category. Every domain in :data:`DOMAIN_LABELS` has an entry in
+    :data:`SPECIFIC_ICONS`, so this only returns ``None`` for an excluded
+    entity or an unrecognized domain.
+    """
+    if is_excluded(entry.entity_id, options.exclude):
+        return None
+
+    ename = getattr(entry, "name", None) or getattr(entry, "original_name", None)
+    hay = _normalize(f"{entry.entity_id} {ename or ''}")
+
+    for needle in options.custom_rules:
+        if needle in hay:
+            icon = SPECIFIC_ICONS.get(needle.strip())
+            if icon:
+                return icon
+    for needle in KEYWORD_LABELS:
+        if needle in hay:
+            icon = SPECIFIC_ICONS.get(needle.strip())
+            if icon:
+                return icon
+    for kw in CAR_NAME_KEYWORDS:
+        if f" {kw} " in hay:
+            icon = SPECIFIC_ICONS.get(kw)
+            if icon:
+                return icon
+
+    # The source integration (e.g. "spotify", "nuki", "ring") names the
+    # actual product/service, which is more specific than the bare HA
+    # domain/device_class it happens to expose — check it first.
+    platform = getattr(entry, "platform", None)
+    if platform:
+        icon = SPECIFIC_ICONS.get(platform)
+        if icon:
+            return icon
+
+    device_class = entry.device_class or entry.original_device_class
+    if device_class:
+        icon = SPECIFIC_ICONS.get(device_class)
+        if icon:
+            return icon
+
+    domain = entry.entity_id.split(".", 1)[0]
+    icon = SPECIFIC_ICONS.get(domain)
+    if icon:
+        return icon
+
+    return None
+
+
 def compute_label_specs(
     entry: EntityLike, options: OrganizerOptions
 ) -> list[LabelSpec]:
@@ -950,63 +1431,13 @@ def compute_label_specs(
     if is_excluded(entry.entity_id, options.exclude):
         return []
 
-    keys: list[str] = []
-    seen: set[str] = set()
-
-    def add(key: str | None) -> None:
-        if not key or key in seen:
-            return
-        if options.enabled_labels and key not in options.enabled_labels:
-            return
-        seen.add(key)
-        keys.append(key)
+    keys, _ = _collect_label_keys(entry, options)
+    specs = [label_spec(k, options.language) for k in keys]
 
     platform = getattr(entry, "platform", None)
     is_category = bool(
         options.skip_categories and getattr(entry, "entity_category", None)
     )
-
-    # Curated integration themes apply even to diagnostic/config entities.
-    if options.enable_curated:
-        if platform:
-            add(INTEGRATION_LABELS.get(platform))
-        # Known vehicle names always count as "car".
-        ename = getattr(entry, "name", None) or getattr(
-            entry, "original_name", None
-        )
-        hay = _normalize(f"{entry.entity_id} {ename or ''}")
-        if any(f" {kw} " in hay for kw in CAR_NAME_KEYWORDS):
-            add("car")
-
-    # Domain/device_class labels are skipped for config/diagnostic helpers.
-    if not is_category:
-        domain = entry.entity_id.split(".", 1)[0]
-
-        if options.enable_domain:
-            add(DOMAIN_LABELS.get(domain))
-
-        if options.enable_device_class:
-            device_class = entry.device_class or entry.original_device_class
-            if device_class:
-                add(DEVICE_CLASS_LABELS.get(device_class))
-
-        # Keyword fallbacks only when nothing more specific matched. Matched
-        # against the normalized entity_id and friendly name. User-defined
-        # custom rules take precedence over the built-in vocabulary.
-        if not keys:
-            ename = getattr(entry, "name", None) or getattr(
-                entry, "original_name", None
-            )
-            hay = _normalize(f"{entry.entity_id} {ename or ''}")
-            for needle, key in options.custom_rules.items():
-                if needle in hay:
-                    add(key)
-            for needle, key in KEYWORD_LABELS.items():
-                if needle in hay:
-                    add(key)
-
-    specs = [label_spec(k, options.language) for k in keys]
-
     if options.enable_integration and not is_category and platform:
         specs.append(
             {"name": platform, "color": "grey", "icon": "mdi:puzzle"}

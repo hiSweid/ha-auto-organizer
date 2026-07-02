@@ -6,6 +6,57 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-07-02
+
+### Added
+- New option **"Also set a more specific icon per entity"** (off by
+  default). When enabled, entities that get a label from a run may also
+  receive a more specific icon than the label's own generic one — e.g. a
+  "Kaffeemaschine"/"coffee maker" gets `mdi:coffee-maker` instead of the
+  generic Appliances icon, "Wohnzimmer TV" gets `mdi:television` instead
+  of the generic Media icon. **Full coverage: all 32 label themes and all
+  28 entity domains are guaranteed a specific icon** — every domain in
+  `DOMAIN_LABELS` has its own `SPECIFIC_ICONS` entry (checked as an exact
+  dict key, not a substring, so this carries zero collision risk), so
+  `set_entity_icons` never leaves an entity without a suggestion just
+  because its name has no recognizable keyword. Icon priority is now
+  keyword/custom-rule > source integration (e.g. "spotify", "nuki" — the
+  actual product) > device_class > bare domain, so a specific integration
+  match correctly wins over its generic domain icon (e.g. a Spotify
+  media_player gets `mdi:spotify`, not the generic `mdi:cast` every
+  media_player would otherwise get). Covers 215 curated keywords/domains/
+  device-classes/platforms (DE+EN synonyms) across 110 distinct icons —
+  appliances (incl. printer, air purifier/
+  humidifier, aquarium, pet feeder/litter box, whirlpool, kitchen scale),
+  media, lights, locks, cameras (incl. plain vs. video doorbell), covers
+  (incl. curtains), car/charging, garden, network (incl. NAS), climate
+  (incl. radiator), weather (incl. frost/pollen/wind direction), security
+  (incl. per-door-type icons for front/balcony/patio doors, CO detector),
+  waste subtypes (recycling/organic), solar/home-battery, pool, presence
+  (mobile devices, family group), and every remaining label theme that
+  had zero icon differentiation before (automations, battery, cost,
+  humidity, leak, light level, motion, scenes, scripts, shopping,
+  switches, temperature, updates, vacuums).
+- Never overwrites an icon that's already set (whether picked by the user
+  or a previous run) — only fills in entities that have none yet.
+- `RunResult` gained an `icons_set` count, surfaced via the `run` service
+  response and the diagnostics.
+
+### Docs
+- README/info.md were rewritten to match the current feature set — they
+  still described the early "labels only" version (2 services, ~4 curated
+  themes) even though the integration now has 5 services, 32 label themes,
+  408 keyword mappings, 116 curated integrations and icon suggestion.
+  Added a full Options table, a services table with YAML examples for all
+  five services, and an accurate Labels/Control-entities list.
+- Considered renaming the integration given the expanded scope; decided
+  against it. The domain identifier `auto_organizer` can't change without
+  breaking every existing install (orphaned config entry, dead service
+  calls), and "Entity Auto-Organizer" still accurately describes the
+  product — "organizing" is Home Assistant's own umbrella term for
+  labels/areas/floors, so covering areas and icons too doesn't strain the
+  name. Only the stale docs needed fixing, not the name itself.
+
 ## [0.5.0] - 2026-07-01
 
 ### Added

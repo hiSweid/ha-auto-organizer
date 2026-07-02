@@ -22,6 +22,7 @@
           "enable_integration": "Nach Quell-Integration labeln",
           "enable_curated": "Themen-Labels für bekannte Integrationen (Haushaltsgeräte, Garten, Netzwerk …)",
           "enabled_labels": "Nur diese Label-Themen erlauben (leer = alle erlaubt)",
+          "set_entity_icons": "Zusätzlich ein spezifischeres Icon pro Entität setzen, wo bekannt (z.B. Kaffeemaschine, TV) — überschreibt nie ein bereits gesetztes Icon",
           "enable_area": "Label für den Bereich jeder Entität hinzufügen",
           "enable_floor": "Label für die Etage jeder Entität hinzufügen",
           "skip_categories": "Diagnose-/Konfig-Entitäten überspringen",

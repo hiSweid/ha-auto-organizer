@@ -22,6 +22,7 @@
           "enable_integration": "Label by source integration",
           "enable_curated": "Curated theme labels (appliances, garden, network …)",
           "enabled_labels": "Restrict to only these label themes (leave empty = all allowed)",
+          "set_entity_icons": "Also set a more specific icon per entity where known (e.g. Coffee Maker, TV) — never overwrites an icon you already set",
           "enable_area": "Add a label for each entity's area",
           "enable_floor": "Add a label for each entity's floor",
           "skip_categories": "Skip diagnostic/config entities",

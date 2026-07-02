@@ -21,6 +21,7 @@ from .rules import (
     is_excluded,
     label_differs,
     match_area,
+    suggest_entity_icon,
 )
 
 _LOGGER = logging.getLogger(__name__)
@@ -43,6 +44,7 @@ class RunResult:
     labels_created: int = 0
     labels_updated: int = 0
     labels_removed: int = 0
+    icons_set: int = 0
     changes: list[dict[str, list[str]]] = field(default_factory=list)
 
     def as_dict(self) -> dict:
@@ -52,6 +54,7 @@ class RunResult:
             "labels_created": self.labels_created,
             "labels_updated": self.labels_updated,
             "labels_removed": self.labels_removed,
+            "icons_set": self.icons_set,
             "changes": self.changes,
         }
 
@@ -200,16 +203,32 @@ class Organizer:
                 new_labels = target_ids
             else:
                 new_labels = set(entry.labels) | target_ids
+            labels_changed = new_labels != set(entry.labels)
 
-            if new_labels == set(entry.labels):
+            # Only fill in an icon when the entity has none yet — never
+            # overwrite one the user (or a past run) already set, since the
+            # registry can't tell those two apart.
+            icon = None
+            if options.set_entity_icons and not entry.icon:
+                icon = suggest_entity_icon(entry, options)
+
+            if not labels_changed and not icon:
                 continue
 
-            added = sorted(new_labels - set(entry.labels))
-            result.changes.append({"entity_id": entry.entity_id, "added": added})
-            result.updated += 1
+            update_kwargs: dict = {}
+            if labels_changed:
+                added = sorted(new_labels - set(entry.labels))
+                result.changes.append(
+                    {"entity_id": entry.entity_id, "added": added}
+                )
+                result.updated += 1
+                update_kwargs["labels"] = new_labels
+            if icon:
+                result.icons_set += 1
+                update_kwargs["icon"] = icon
 
             if not options.dry_run:
-                ent_reg.async_update_entity(entry.entity_id, labels=new_labels)
+                ent_reg.async_update_entity(entry.entity_id, **update_kwargs)
 
         _LOGGER.info(
             "Auto-Organizer run: scanned=%s updated=%s created=%s dry_run=%s",
