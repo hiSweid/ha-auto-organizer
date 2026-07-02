@@ -71,8 +71,9 @@ Under the integration's *Configure* button:
 **Buttons/switch:** Run now · Cleanup labels · Remove all labels · Dry run
 toggle · Run scope select.
 
-**Sensors:** Last run · Last run time · Labeled/Unlabeled entities ·
-Entities without area · Managed labels · Label coverage.
+**Sensors:** Last run (incl. `icons_set` attribute) · Last run time ·
+Labeled/Unlabeled entities · Entities without area · Managed labels ·
+Entities with icon · Label coverage.
 
 ## Labels
 

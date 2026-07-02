@@ -207,3 +207,54 @@ async def test_set_entity_icons_defaults_off(hass: HomeAssistant) -> None:
     entry.add_to_hass(hass)
     options = _options_from_entry(hass, entry)
     assert options.set_entity_icons is False
+
+
+async def test_entities_with_specific_icon_stat(hass: HomeAssistant) -> None:
+    from homeassistant.helpers import entity_registry as er
+
+    entry = await _add_entry(hass)
+    ent_reg = er.async_get(hass)
+    ent_reg.async_get_or_create(
+        "sensor", "test", "coffee_1", suggested_object_id="kaffeemaschine"
+    )
+    ent_reg.async_update_entity("sensor.kaffeemaschine", icon="mdi:coffee-maker")
+
+    runtime = entry.runtime_data
+    stats = runtime.refresh_stats()
+    assert stats["entities_with_specific_icon"] >= 1
+
+
+async def test_last_run_sensor_strips_changes_from_remove_all(
+    hass: HomeAssistant,
+) -> None:
+    entry = await _add_entry(hass)
+    await hass.services.async_call(
+        DOMAIN, "remove_all", {"dry_run": True}, blocking=True, return_response=True
+    )
+    runtime = entry.runtime_data
+    assert "changes" not in runtime.last_run.get("remove_all", {})
+
+
+async def test_last_run_sensor_surfaces_icons_set(hass: HomeAssistant) -> None:
+    from custom_components.auto_organizer.const import CONF_SET_ENTITY_ICONS
+
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        title="Entity Auto-Organizer",
+        options={CONF_SET_ENTITY_ICONS: True},
+    )
+    entry.add_to_hass(hass)
+    assert await hass.config_entries.async_setup(entry.entry_id)
+    await hass.async_block_till_done()
+
+    from homeassistant.helpers import entity_registry as er
+    ent_reg = er.async_get(hass)
+    ent_reg.async_get_or_create(
+        "sensor", "test", "coffee_2", suggested_object_id="kaffeemaschine2"
+    )
+
+    runtime = entry.runtime_data
+    await hass.services.async_call(
+        DOMAIN, "run", {"dry_run": True}, blocking=True, return_response=True
+    )
+    assert "icons_set" in runtime.last_run

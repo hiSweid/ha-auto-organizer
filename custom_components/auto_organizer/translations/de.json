@@ -86,6 +86,9 @@
       "managed_labels": {
         "name": "Verwaltete Labels"
       },
+      "with_icon": {
+        "name": "Entitäten mit Icon"
+      },
       "coverage": {
         "name": "Label-Abdeckung"
       }

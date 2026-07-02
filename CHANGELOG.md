@@ -6,6 +6,24 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-07-02
+
+### Added
+- New **"Entities with icon"** diagnostic sensor — a persistent,
+  registry-wide count of entities currently carrying one of the curated
+  `SPECIFIC_ICONS` values, so the icon-suggestion feature is actually
+  visible somewhere in the UI instead of only in a service-call response.
+- The **Last run** sensor now surfaces `icons_set` as a top-level
+  attribute (it was previously buried inside the nested `labels`
+  attribute, easy to miss).
+
+### Fixed
+- The **Last run** sensor's `changes` list was stripped from the
+  `labels`/`areas`/`cleanup` result sections but not from `remove_all`,
+  so a `remove_all` run could leave a very large `changes` list sitting
+  in that sensor's state attributes. Now stripped from every section,
+  consistent with the diagnostics download.
+
 ### Docs
 - README/info.md trimmed from 221 to ~100 lines — same facts, less prose
   (tighter tables, one usage example instead of six, shorter feature

@@ -35,6 +35,9 @@ async def async_setup_entry(
             StatsSensor(runtime, "entities_without_area", "without_area", "mdi:map-marker-off", "entities"),
             StatsSensor(runtime, "managed_labels", "managed_labels", "mdi:label-multiple", "labels"),
             StatsSensor(
+                runtime, "entities_with_specific_icon", "with_icon", "mdi:palette", "entities"
+            ),
+            StatsSensor(
                 runtime, "coverage_pct", "coverage", "mdi:chart-donut", "%",
                 attrs_key="by_label",
             ),
@@ -78,14 +81,20 @@ class LastRunSensor(_BaseSensor):
         last = self._runtime.last_run
         if not last:
             return None
+        sections = ("labels", "areas", "cleanup", "remove_all")
         attrs: dict[str, Any] = {
-            k: v for k, v in last.items() if k not in ("labels", "areas", "cleanup")
+            k: v for k, v in last.items() if k not in sections
         }
-        for section in ("labels", "areas", "cleanup"):
+        for section in sections:
             if section in last:
                 attrs[section] = {
                     k: v for k, v in last[section].items() if k != "changes"
                 }
+        # Surface icons_set at the top level too — it's otherwise buried
+        # inside attrs["labels"], easy to miss when just glancing at state.
+        icons_set = last.get("labels", {}).get("icons_set")
+        if icons_set:
+            attrs["icons_set"] = icons_set
         return attrs
 
 

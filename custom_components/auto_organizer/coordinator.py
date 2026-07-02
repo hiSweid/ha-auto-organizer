@@ -15,6 +15,7 @@ from homeassistant.util import dt as dt_util
 
 from .const import DOMAIN, MANAGED_MARKER, NAME, SCOPE_AREAS, SCOPE_BOTH, SCOPE_LABELS
 from .organizer import Organizer, OrganizerOptions
+from .rules import SPECIFIC_ICONS
 
 
 @dataclass
@@ -71,8 +72,9 @@ class AutoOrganizerRuntime:
 
         names = {label.label_id: label.name for label in label_reg.async_list_labels()}
         per_label: dict[str, int] = {}
+        known_icons = set(SPECIFIC_ICONS.values())
 
-        total = labeled = unlabeled = without_area = managed_on = 0
+        total = labeled = unlabeled = without_area = managed_on = with_icon = 0
         for entry in ent_reg.entities.values():
             total += 1
             if entry.labels:
@@ -84,6 +86,11 @@ class AutoOrganizerRuntime:
             for label_id in entry.labels:
                 name = names.get(label_id, label_id)
                 per_label[name] = per_label.get(name, 0) + 1
+            # entry.icon could be user-picked or set by a previous run — we
+            # can't tell those apart, so this counts "has one of our known
+            # specific icons", not strictly "we set this".
+            if entry.icon and entry.icon in known_icons:
+                with_icon += 1
 
             area_id = entry.area_id
             if area_id is None and entry.device_id:
@@ -100,6 +107,7 @@ class AutoOrganizerRuntime:
             "entities_without_area": without_area,
             "managed_labels": len(managed),
             "managed_labeled_entities": managed_on,
+            "entities_with_specific_icon": with_icon,
             "coverage_pct": coverage,
             "by_label": dict(
                 sorted(per_label.items(), key=lambda kv: kv[1], reverse=True)
