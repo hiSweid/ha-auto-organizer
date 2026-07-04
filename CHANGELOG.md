@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.8.1] - 2026-07-04
+
+### Added
+- First run of the new small-batch incremental vocabulary process (see
+  `/home/claude/vocab_tools/` — reusable validator + merger, collision
+  sweep against DE/EN frequency corpora, real MDI icon validation): 92
+  new keywords and 74 new icon mappings, focused on the three
+  previously thinnest label themes (scripts, scenes, automations) plus a
+  small batch of additional Material Design Icons. Keyword vocabulary:
+  3,541 → 3,634. Icon mappings: 1,332 → 1,406.
+
 ## [0.8.0] - 2026-07-03
 
 ### Added
