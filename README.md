@@ -3,13 +3,13 @@
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
 
 Automatically assigns [Labels](https://www.home-assistant.io/docs/organizing/labels/),
-**Areas** and **Icons** to your entities — by domain, device class, and 400+
-keyword/integration rules. Local only, no cloud, no API keys.
+**Areas** and **Icons** to your entities — by domain, device class, and
+3,500+ keyword/integration rules. Local only, no cloud, no API keys.
 
 ## Features
 
-- 🏷️ 32 label themes, 400+ keywords, 116+ curated integrations
-- 🖼️ Optional icon suggestions — full coverage of every label & domain (215 mappings / 110 icons), never overwrites an existing icon
+- 🏷️ 32 label themes, 3,541 keywords (DE+EN), 116+ curated integrations
+- 🖼️ Optional icon suggestions — 1,332 mappings across 393 icons, full coverage of every label & domain, never overwrites an existing icon
 - 🏠 Optional area & floor labels, plus a standalone area-assignment service
 - 🎯 Restrict to chosen label themes; exclude by domain, entity, or glob pattern
 - 🧪 Dry-run mode + `preview` service — see changes before writing anything
