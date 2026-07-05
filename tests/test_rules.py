@@ -219,7 +219,7 @@ def test_reolink_keyword_via_name():
 
 
 def test_keyword_consumption_energy():
-    assert names(FakeEntry("sensor.gaming_pc_summe_verbraucht")) == ["Energie"]
+    assert names(FakeEntry("sensor.plug1_summe_verbraucht")) == ["Energie"]
     assert names(FakeEntry("sensor.shelly_em_summe_eingespeist")) == ["Energie"]
 
 

@@ -2098,6 +2098,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "farblicht": "mdi:led-variant-on",
     "farbwechsel": "mdi:led-variant-on",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "autolader": "mdi:ev-station",
+    "autoladestation": "mdi:ev-station",
+    "computer": "mdi:desktop-tower",
+    "gaming pc": "mdi:desktop-tower",
+    "desktop pc": "mdi:desktop-tower",
+
+    # --- fill missing icons for existing keywords (2026-07-05) ---
+    "waschmaschine": "mdi:washing-machine",
+    "klimaanlage": "mdi:air-conditioner",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "fenstergriff": "mdi:window-open-variant",
+    "fensterhaltegriff": "mdi:window-open-variant",
+    "window handle": "mdi:window-open-variant",
+    "dimmerschalter": "mdi:tune-vertical-variant",
+
+    # --- fill missing icon for existing keyword (2026-07-05) ---
+    "dimmer switch": "mdi:tune-vertical-variant",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -6346,6 +6366,19 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "ziehbrunnen": "water",
     "feuerloescher": "security",
     "ananas": "shopping",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "autolader": "car",
+    "autoladestation": "car",
+    "computer": "network",
+    "gaming pc": "network",
+    "desktop pc": "network",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "fenstergriff": "security",
+    "fensterhaltegriff": "security",
+    "window handle": "security",
+    "dimmerschalter": "switches",
 
 }
 

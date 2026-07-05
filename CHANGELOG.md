@@ -6,6 +6,16 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.3] - 2026-07-05
+
+### Added
+- Real-world ZHA/Matter device coverage gaps closed: washing machine
+  (icon only, label already existed), air conditioner (icon only), EV
+  charger synonyms (`autolader`/`autoladestation`), generic PC power-plug
+  monitoring (`computer`/`gaming pc`/`desktop pc`), smart window handles
+  (`fenstergriff`/`fensterhaltegriff`/`window handle`) and dimmer switches
+  (`dimmerschalter` + an icon for the existing `dimmer switch`).
+
 ## [0.9.2] - 2026-07-05
 
 ### Added
