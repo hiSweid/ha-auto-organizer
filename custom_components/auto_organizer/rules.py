@@ -6757,6 +6757,32 @@ def _collect_label_keys(
     return keys, reasons
 
 
+#: Domains where Home Assistant's own frontend already picks a different
+#: icon per state (locked/unlocked, open/closed, armed, cleaning/docked...)
+#: independent of device_class. A registry ``icon`` override always wins
+#: over that built-in logic and freezes the icon to one shape forever — so
+#: these never get a suggested icon, no matter how specific the keyword
+#: match (e.g. "Eingangstür" naming a lock) is.
+STATEFUL_ICON_DOMAINS: Final[frozenset[str]] = frozenset(
+    {
+        "lock",
+        "cover",
+        "valve",
+        "alarm_control_panel",
+        "vacuum",
+    }
+)
+
+#: binary_sensor is only stateful-icon when it has a device_class (door,
+#: motion, smoke, ... each get their own open/closed / detected/clear icon
+#: built into HA). Without one (many generic/quirky Zigbee or template
+#: sensors don't expose one), HA shows one static generic icon regardless
+#: of state, so a keyword-based suggestion is safe and actually useful.
+STATEFUL_ICON_DOMAINS_IF_DEVICE_CLASS: Final[frozenset[str]] = frozenset(
+    {"binary_sensor"}
+)
+
+
 def suggest_entity_icon(
     entry: EntityLike, options: OrganizerOptions
 ) -> str | None:
@@ -6771,9 +6797,18 @@ def suggest_entity_icon(
     since a keyword names the actual device while the domain only names its
     HA category. Every domain in :data:`DOMAIN_LABELS` has an entry in
     :data:`SPECIFIC_ICONS`, so this only returns ``None`` for an excluded
-    entity or an unrecognized domain.
+    entity, an unrecognized domain, a domain in
+    :data:`STATEFUL_ICON_DOMAINS`, or a :data:`STATEFUL_ICON_DOMAINS_IF_DEVICE_CLASS`
+    domain that actually has a device_class.
     """
     if is_excluded(entry.entity_id, options.exclude):
+        return None
+    domain = entry.entity_id.split(".", 1)[0]
+    if domain in STATEFUL_ICON_DOMAINS:
+        return None
+    if domain in STATEFUL_ICON_DOMAINS_IF_DEVICE_CLASS and (
+        entry.device_class or entry.original_device_class
+    ):
         return None
 
     ename = getattr(entry, "name", None) or getattr(entry, "original_name", None)
@@ -6810,7 +6845,6 @@ def suggest_entity_icon(
         if icon:
             return icon
 
-    domain = entry.entity_id.split(".", 1)[0]
     icon = SPECIFIC_ICONS.get(domain)
     if icon:
         return icon

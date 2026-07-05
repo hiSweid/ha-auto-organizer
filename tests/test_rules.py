@@ -790,7 +790,36 @@ def test_suggest_entity_icon_domain_fallback_covers_every_domain():
     from rules import suggest_entity_icon
     for domain in rules.DOMAIN_LABELS:
         entry = FakeEntry(f"{domain}.some_generic_entity_name")
-        assert suggest_entity_icon(entry, OrganizerOptions()) is not None, domain
+        result = suggest_entity_icon(entry, OrganizerOptions())
+        if domain in rules.STATEFUL_ICON_DOMAINS:
+            # These always keep HA's own per-state icon (locked/unlocked,
+            # open/closed, armed, cleaning/docked...) — a registry override
+            # would freeze it to one shape, so no suggestion is correct.
+            assert result is None, domain
+        else:
+            assert result is not None, domain
+
+
+def test_suggest_entity_icon_never_overrides_stateful_domains():
+    from rules import suggest_entity_icon
+    for domain in rules.STATEFUL_ICON_DOMAINS:
+        # Even a specific keyword match must not win here.
+        entry = FakeEntry(f"{domain}.eingangstuer")
+        assert suggest_entity_icon(entry, OrganizerOptions()) is None, domain
+
+
+def test_suggest_entity_icon_binary_sensor_only_stateful_with_device_class():
+    from rules import suggest_entity_icon
+
+    # No device_class -> HA shows one static icon regardless of state, so a
+    # keyword-based suggestion is safe and useful.
+    entry = FakeEntry("binary_sensor.feuermelder_flur")
+    assert suggest_entity_icon(entry, OrganizerOptions()) == "mdi:smoke-detector"
+
+    # With a device_class -> HA already swaps the icon per state, so no
+    # suggestion must be made even though the same keyword matches.
+    entry = FakeEntry("binary_sensor.feuermelder_flur", device_class="smoke")
+    assert suggest_entity_icon(entry, OrganizerOptions()) is None
 
 
 def test_suggest_entity_icon_platform_beats_domain():

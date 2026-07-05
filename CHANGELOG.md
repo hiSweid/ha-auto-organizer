@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.4] - 2026-07-05
+
+### Fixed
+- **Icon suggestions could permanently break Home Assistant's built-in
+  per-state icons.** `lock`, `cover`, `valve`, `alarm_control_panel` and
+  `vacuum` entities (and any `binary_sensor` with a `device_class`) get a
+  different icon per state from HA core itself (locked/unlocked,
+  open/closed, armed/disarmed, cleaning/docked, ...). A registry `icon`
+  override always wins over that built-in logic, freezing the icon to one
+  shape forever. `suggest_entity_icon()` now skips these entirely — no
+  keyword match, however specific (e.g. "Eingangstür" naming a lock), can
+  override them anymore. A plain `binary_sensor` with no `device_class`
+  (many generic/quirky Zigbee sensors don't expose one) still gets a
+  keyword icon, since HA shows one static icon there regardless of state
+  anyway.
+
 ## [0.9.3] - 2026-07-05
 
 ### Added
