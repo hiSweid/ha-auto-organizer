@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.8.3] - 2026-07-05
+
+### Added
+- Third small incremental vocabulary batch: 122 new keywords and 64 new
+  icon mappings, focused on the three thinnest label themes (scripts,
+  leak, scenes) plus another batch of Material Design Icons. Keyword
+  vocabulary: 3,732 → 3,854. Icon mappings: 1,488 → 1,552.
+
 ## [0.8.2] - 2026-07-04
 
 ### Added
