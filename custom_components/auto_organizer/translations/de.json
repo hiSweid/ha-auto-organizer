@@ -103,30 +103,6 @@
       "last_iconed": {
         "name": "Zuletzt mit Icon versehene Entitäten"
       },
-      "with_area": {
-        "name": "Entitäten mit Bereich"
-      },
-      "custom_rule_matches": {
-        "name": "Treffer eigener Regeln"
-      },
-      "language": {
-        "name": "Aktive Sprache"
-      },
-      "max_labels": {
-        "name": "Max. Labels pro Entität"
-      },
-      "scan_interval": {
-        "name": "Scan-Intervall"
-      },
-      "exclude_count": {
-        "name": "Ausschluss-Muster"
-      },
-      "custom_rules_count": {
-        "name": "Eigene Regeln"
-      },
-      "error_count": {
-        "name": "Fehler seit Neustart"
-      },
       "last_error": {
         "name": "Letzter Fehler"
       }

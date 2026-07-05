@@ -325,34 +325,9 @@ async def test_history_sensors_track_last_10_changes(hass: HomeAssistant) -> Non
     assert grouped.state == "unknown"
 
 
-async def test_config_overview_sensors(hass: HomeAssistant) -> None:
-    from custom_components.auto_organizer.const import (
-        CONF_CUSTOM_RULES,
-        CONF_MAX_LABELS,
-        CONF_SCAN_INTERVAL,
-    )
-
-    entry = MockConfigEntry(
-        domain=DOMAIN,
-        title="Entity Auto-Organizer",
-        options={
-            CONF_MAX_LABELS: 3,
-            CONF_SCAN_INTERVAL: 15,
-            CONF_CUSTOM_RULES: "kaffeemaschine=appliances",
-        },
-    )
-    entry.add_to_hass(hass)
-    assert await hass.config_entries.async_setup(entry.entry_id)
-    await hass.async_block_till_done()
-
-    assert hass.states.get("sensor.entity_auto_organizer_max_labels_per_entity").state == "3"
-    assert hass.states.get("sensor.entity_auto_organizer_scan_interval").state == "15"
-    assert hass.states.get("sensor.entity_auto_organizer_custom_rules").state == "1"
-    lang = hass.states.get("sensor.entity_auto_organizer_effective_language")
-    assert lang is not None and lang.state in ("de", "en")
-
-
 async def test_custom_rule_matches_stat(hass: HomeAssistant) -> None:
+    # No dedicated sensor for this (kept out of the entity list on
+    # purpose) — it's still computed into runtime.stats for diagnostics.
     from homeassistant.helpers import entity_registry as er
     from custom_components.auto_organizer.const import CONF_CUSTOM_RULES
 
@@ -369,11 +344,10 @@ async def test_custom_rule_matches_stat(hass: HomeAssistant) -> None:
     ent_reg.async_get_or_create(
         "sensor", "test", "coffee_4", suggested_object_id="kaffeemaschine4"
     )
-    entry.runtime_data.refresh_stats()
+    stats = entry.runtime_data.refresh_stats()
 
-    state = hass.states.get("sensor.entity_auto_organizer_custom_rule_matches")
-    assert state is not None
-    assert int(state.state) >= 1
+    assert stats["custom_rule_matches"] >= 1
+    assert stats["entities_with_area"] == stats["entities_total"] - stats["entities_without_area"]
 
 
 async def test_error_tracked_on_service_failure(hass: HomeAssistant) -> None:
@@ -391,7 +365,36 @@ async def test_error_tracked_on_service_failure(hass: HomeAssistant) -> None:
         pass
     await hass.async_block_till_done()
 
-    count = hass.states.get("sensor.entity_auto_organizer_errors_since_restart")
     last_error = hass.states.get("sensor.entity_auto_organizer_last_error")
-    assert count is not None and int(count.state) >= 1
     assert last_error is not None and "boom" in last_error.state
+    assert last_error.attributes["count"] >= 1
+
+
+async def test_icons_scope_surfaces_in_last_run_sensor(hass: HomeAssistant) -> None:
+    from custom_components.auto_organizer.const import CONF_SET_ENTITY_ICONS
+
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        title="Entity Auto-Organizer",
+        options={CONF_SET_ENTITY_ICONS: True},
+    )
+    entry.add_to_hass(hass)
+    assert await hass.config_entries.async_setup(entry.entry_id)
+    await hass.async_block_till_done()
+
+    from homeassistant.helpers import entity_registry as er
+    ent_reg = er.async_get(hass)
+    ent_reg.async_get_or_create(
+        "sensor", "test", "coffee_5", suggested_object_id="kaffeemaschine5"
+    )
+
+    await hass.services.async_call(
+        DOMAIN, "assign_icons", {"dry_run": True}, blocking=True, return_response=True
+    )
+    await hass.async_block_till_done()
+
+    state = hass.states.get("sensor.entity_auto_organizer_last_run")
+    assert state is not None
+    assert "icons" in state.attributes
+    assert "changes" not in state.attributes["icons"]
+    assert state.attributes.get("icons_set", 0) >= 1

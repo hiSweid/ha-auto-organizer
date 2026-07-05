@@ -16,12 +16,8 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.restore_state import RestoreEntity
 from homeassistant.util import dt as dt_util
 
-from collections.abc import Callable
-
 from . import AutoOrganizerConfigEntry
-from .const import CONF_SCAN_INTERVAL, DEFAULT_SCAN_INTERVAL
 from .coordinator import AutoOrganizerRuntime
-from .organizer import OrganizerOptions
 from .rules import affected_count
 
 
@@ -46,13 +42,6 @@ async def async_setup_entry(
                 runtime, "coverage_pct", "coverage", "mdi:chart-donut", "%",
                 attrs_key="by_label",
             ),
-            StatsSensor(
-                runtime, "entities_with_area", "with_area", "mdi:map-marker-radius", "entities"
-            ),
-            StatsSensor(
-                runtime, "custom_rule_matches", "custom_rule_matches",
-                "mdi:filter-cog", "entities",
-            ),
             LastChangedSensor(
                 runtime, "last_labeled", "last_labeled", "mdi:tag-check"
             ),
@@ -62,28 +51,6 @@ async def async_setup_entry(
             LastChangedSensor(
                 runtime, "last_iconed", "last_iconed", "mdi:palette-outline"
             ),
-            OptionSensor(
-                runtime, "language", "language", "mdi:translate", lambda o: o.language
-            ),
-            OptionSensor(
-                runtime, "max_labels", "max_labels", "mdi:tag-multiple",
-                lambda o: o.max_labels, unit="labels",
-            ),
-            OptionSensor(
-                runtime, "scan_interval", "scan_interval", "mdi:timer-cog-outline",
-                lambda o: entry.options.get(CONF_SCAN_INTERVAL, DEFAULT_SCAN_INTERVAL),
-                unit="min",
-            ),
-            OptionSensor(
-                runtime, "exclude_count", "exclude_count", "mdi:filter-remove-outline",
-                lambda o: len(o.exclude), unit="patterns",
-            ),
-            OptionSensor(
-                runtime, "custom_rules_count", "custom_rules_count",
-                "mdi:script-text-outline",
-                lambda o: len(o.custom_rules), unit="rules",
-            ),
-            ErrorCountSensor(runtime),
             LastErrorSensor(runtime),
         ]
     )
@@ -125,7 +92,7 @@ class LastRunSensor(_BaseSensor):
         last = self._runtime.last_run
         if not last:
             return None
-        sections = ("labels", "areas", "cleanup", "remove_all")
+        sections = ("labels", "areas", "icons", "cleanup", "remove_all")
         attrs: dict[str, Any] = {
             k: v for k, v in last.items() if k not in sections
         }
@@ -136,9 +103,13 @@ class LastRunSensor(_BaseSensor):
                     for k, v in last[section].items()
                     if k not in ("changes", "icon_changes")
                 }
-        # Surface icons_set at the top level too — it's otherwise buried
-        # inside attrs["labels"], easy to miss when just glancing at state.
-        icons_set = last.get("labels", {}).get("icons_set")
+        # Surface icons_set at the top level too — it's otherwise buried in
+        # a section, easy to miss when just glancing at state. Icons can be
+        # set either as a side effect of a labels run or by a dedicated
+        # icons-scope run, so add both up.
+        icons_set = last.get("labels", {}).get("icons_set", 0) + last.get(
+            "icons", {}
+        ).get("icons_set", 0)
         if icons_set:
             attrs["icons_set"] = icons_set
         return attrs
@@ -235,49 +206,13 @@ class StatsSensor(_BaseSensor):
         return {self._attrs_key: value} if value else None
 
 
-class OptionSensor(_BaseSensor):
-    """Read-only reflection of one currently effective config-entry option.
-
-    Lets you see at a glance what's configured (language, limits, exclude
-    patterns, ...) without opening the options flow — resolved values like
-    `language: auto` -> `de` are shown as HA actually applies them.
-    """
-
-    def __init__(
-        self,
-        runtime: AutoOrganizerRuntime,
-        key: str,
-        translation_key: str,
-        icon: str,
-        getter: Callable[[OrganizerOptions], Any],
-        unit: str | None = None,
-    ) -> None:
-        super().__init__(runtime, translation_key, icon)
-        self._getter = getter
-        if unit:
-            self._attr_native_unit_of_measurement = unit
-
-    @property
-    def native_value(self) -> Any:
-        return self._getter(self._runtime.options_factory())
-
-
-class ErrorCountSensor(_BaseSensor):
-    """Number of run/service failures since the last restart."""
-
-    _attr_state_class = SensorStateClass.TOTAL_INCREASING
-    _attr_native_unit_of_measurement = "errors"
-
-    def __init__(self, runtime: AutoOrganizerRuntime) -> None:
-        super().__init__(runtime, "error_count", "mdi:alert-circle-outline")
-
-    @property
-    def native_value(self) -> int:
-        return self._runtime.error_count
-
-
 class LastErrorSensor(_BaseSensor):
-    """Message of the most recent run/service failure, if any."""
+    """Message of the most recent run/service failure, if any.
+
+    Combines what used to be two sensors (count + message) into one to
+    avoid cluttering the entity list — the count is still available as an
+    attribute for automations/dashboards that want to alert on it.
+    """
 
     def __init__(self, runtime: AutoOrganizerRuntime) -> None:
         super().__init__(runtime, "last_error", "mdi:alert-octagon-outline")
@@ -287,7 +222,7 @@ class LastErrorSensor(_BaseSensor):
         if not self._runtime.last_error:
             return None
         # Entity states are capped at 255 chars; the full text is still
-        # available in the timestamp-paired attribute for diagnostics.
+        # available in the "message" attribute.
         return self._runtime.last_error[:255]
 
     @property
@@ -297,4 +232,5 @@ class LastErrorSensor(_BaseSensor):
         return {
             "message": self._runtime.last_error,
             "timestamp": self._runtime.last_error_time,
+            "count": self._runtime.error_count,
         }

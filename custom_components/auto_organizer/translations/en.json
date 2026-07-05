@@ -103,30 +103,6 @@
       "last_iconed": {
         "name": "Last entities with new icon"
       },
-      "with_area": {
-        "name": "Entities with area"
-      },
-      "custom_rule_matches": {
-        "name": "Custom rule matches"
-      },
-      "language": {
-        "name": "Effective language"
-      },
-      "max_labels": {
-        "name": "Max labels per entity"
-      },
-      "scan_interval": {
-        "name": "Scan interval"
-      },
-      "exclude_count": {
-        "name": "Exclude patterns"
-      },
-      "custom_rules_count": {
-        "name": "Custom rules"
-      },
-      "error_count": {
-        "name": "Errors since restart"
-      },
       "last_error": {
         "name": "Last error"
       }

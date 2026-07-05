@@ -6,6 +6,24 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.1] - 2026-07-05
+
+### Changed
+- Trimmed the 0.9.0 sensor additions down to the ones actually worth their
+  own entity: kept the 3 rolling-history sensors, dropped the 5
+  config-overview sensors and the 2 stat sensors (`entities_with_area`,
+  `custom_rule_matches` — still computed into `runtime.stats` for
+  diagnostics, just not surfaced as entities) and merged the 2 error
+  sensors into one (`last_error`, with `count` as an attribute).
+
+### Fixed
+- The Last run sensor's `sections` list never included `"icons"`, so a
+  dedicated icons-scope/service run showed no diagnostics at all on that
+  sensor (worse: the raw per-entity `changes` list leaked into its
+  attributes unfiltered instead of being stripped like every other
+  section). `icons_set` now also adds up icons set via a `labels` run and
+  a dedicated `icons` run instead of only ever reading the former.
+
 ## [0.9.0] - 2026-07-05
 
 ### Added
