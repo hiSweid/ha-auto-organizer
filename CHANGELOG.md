@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.2] - 2026-07-05
+
+### Added
+- 47 `lights` keywords that previously fell back to the generic domain
+  icon (`mdi:lightbulb-group`) now get an icon matching their actual
+  fixture type: bedside/pendant/table lamps, spotlights, night lights,
+  LED strip/panel/matrix, pool and stair lighting, cabinet/sconce
+  lighting, grow lights, and more.
+
 ## [0.9.1] - 2026-07-05
 
 ### Changed
