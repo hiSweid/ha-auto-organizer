@@ -6,6 +6,24 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-07-05
+
+### Added
+- New run-scope options `Everything (labels + areas + icons)` and
+  `Only icons`, backed by a full-registry `Organizer.assign_icons()` pass
+  (and matching `assign_icons` service) that reaches every entity, not just
+  ones that also matched a label — with an overwrite option instead of the
+  previous "never touch an existing icon" rule.
+- Three rolling-history sensors (survive restarts): last labeled, last
+  grouped (area-assigned) and last icon-assigned entities, each showing the
+  10 most recent changes across all runs/services.
+- Config-overview sensors: effective language, max labels per entity, scan
+  interval, exclude-pattern count, custom-rule count.
+- Runtime-stat sensors: entities with area, custom-rule match count.
+- Error tracking: error count since restart + last error message/timestamp,
+  wired into every service call and the coordinator's run/cleanup/remove-all
+  paths; also surfaced in diagnostics.
+
 ## [0.8.5] - 2026-07-05
 
 ### Added

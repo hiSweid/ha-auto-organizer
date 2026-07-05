@@ -58,14 +58,17 @@ DEFAULT_LABEL_PREFIX: Final = ""
 SERVICE_RUN: Final = "run"
 SERVICE_CLEANUP: Final = "cleanup"
 SERVICE_ASSIGN_AREAS: Final = "assign_areas"
+SERVICE_ASSIGN_ICONS: Final = "assign_icons"
 SERVICE_REMOVE_ALL: Final = "remove_all"
 SERVICE_PREVIEW: Final = "preview"
 
 # Control-entity run scope (select)
+SCOPE_ALL: Final = "labels_areas_icons"
 SCOPE_BOTH: Final = "labels_and_areas"
 SCOPE_LABELS: Final = "labels"
 SCOPE_AREAS: Final = "areas"
-SCOPES: Final = [SCOPE_BOTH, SCOPE_LABELS, SCOPE_AREAS]
+SCOPE_ICONS: Final = "icons"
+SCOPES: Final = [SCOPE_ALL, SCOPE_BOTH, SCOPE_LABELS, SCOPE_AREAS, SCOPE_ICONS]
 
 # Service call attributes
 ATTR_DRY_RUN: Final = "dry_run"

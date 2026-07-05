@@ -28,6 +28,7 @@ _LOGGER = logging.getLogger(__name__)
 
 __all__ = [
     "AreaAssignResult",
+    "IconAssignResult",
     "Organizer",
     "OrganizerOptions",
     "RunResult",
@@ -46,6 +47,7 @@ class RunResult:
     labels_removed: int = 0
     icons_set: int = 0
     changes: list[dict[str, list[str]]] = field(default_factory=list)
+    icon_changes: list[dict[str, str]] = field(default_factory=list)
 
     def as_dict(self) -> dict:
         return {
@@ -54,6 +56,23 @@ class RunResult:
             "labels_created": self.labels_created,
             "labels_updated": self.labels_updated,
             "labels_removed": self.labels_removed,
+            "icons_set": self.icons_set,
+            "changes": self.changes,
+            "icon_changes": self.icon_changes,
+        }
+
+
+@dataclass
+class IconAssignResult:
+    """Summary of an icon-only assignment run."""
+
+    scanned: int = 0
+    icons_set: int = 0
+    changes: list[dict[str, str]] = field(default_factory=list)
+
+    def as_dict(self) -> dict:
+        return {
+            "scanned": self.scanned,
             "icons_set": self.icons_set,
             "changes": self.changes,
         }
@@ -225,6 +244,9 @@ class Organizer:
                 update_kwargs["labels"] = new_labels
             if icon:
                 result.icons_set += 1
+                result.icon_changes.append(
+                    {"entity_id": entry.entity_id, "icon": icon}
+                )
                 update_kwargs["icon"] = icon
 
             if not options.dry_run:
@@ -288,6 +310,45 @@ class Organizer:
             "Auto-Organizer area assign: scanned=%s assigned=%s dry_run=%s",
             result.scanned,
             result.assigned,
+            dry_run,
+        )
+        return result
+
+    async def assign_icons(
+        self, options: OrganizerOptions, dry_run: bool = False
+    ) -> IconAssignResult:
+        """Suggest and apply icons across the whole entity registry.
+
+        Unlike the icon side-effect in :meth:`run` (which only ever touches
+        entities that also matched a label this run), this scans every
+        entity so it also reaches ones with no label match. Existing icons
+        are only replaced when ``options.overwrite`` is set.
+        """
+        result = IconAssignResult()
+        ent_reg = er.async_get(self.hass)
+
+        for entry in ent_reg.entities.values():
+            if is_excluded(entry.entity_id, options.exclude):
+                continue
+            if options.skip_categories and entry.entity_category:
+                continue
+            if entry.icon and not options.overwrite:
+                continue
+
+            result.scanned += 1
+            icon = suggest_entity_icon(entry, options)
+            if not icon or icon == entry.icon:
+                continue
+
+            result.icons_set += 1
+            result.changes.append({"entity_id": entry.entity_id, "icon": icon})
+            if not dry_run:
+                ent_reg.async_update_entity(entry.entity_id, icon=icon)
+
+        _LOGGER.info(
+            "Auto-Organizer icon assign: scanned=%s icons_set=%s dry_run=%s",
+            result.scanned,
+            result.icons_set,
             dry_run,
         )
         return result

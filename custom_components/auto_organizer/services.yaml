@@ -32,6 +32,14 @@ assign_areas:
       selector:
         boolean:
 
+assign_icons:
+  fields:
+    dry_run:
+      example: true
+      default: false
+      selector:
+        boolean:
+
 remove_all:
   fields:
     dry_run:

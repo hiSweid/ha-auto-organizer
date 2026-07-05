@@ -56,9 +56,11 @@
       "scope": {
         "name": "Umfang",
         "state": {
+          "labels_areas_icons": "Alles (Labels + Bereiche + Icons)",
           "labels_and_areas": "Labels + Bereiche",
           "labels": "Nur Labels",
-          "areas": "Nur Bereiche"
+          "areas": "Nur Bereiche",
+          "icons": "Nur Icons"
         }
       }
     },
@@ -91,6 +93,42 @@
       },
       "coverage": {
         "name": "Label-Abdeckung"
+      },
+      "last_labeled": {
+        "name": "Zuletzt gelabelte Entitäten"
+      },
+      "last_grouped": {
+        "name": "Zuletzt gruppierte Entitäten"
+      },
+      "last_iconed": {
+        "name": "Zuletzt mit Icon versehene Entitäten"
+      },
+      "with_area": {
+        "name": "Entitäten mit Bereich"
+      },
+      "custom_rule_matches": {
+        "name": "Treffer eigener Regeln"
+      },
+      "language": {
+        "name": "Aktive Sprache"
+      },
+      "max_labels": {
+        "name": "Max. Labels pro Entität"
+      },
+      "scan_interval": {
+        "name": "Scan-Intervall"
+      },
+      "exclude_count": {
+        "name": "Ausschluss-Muster"
+      },
+      "custom_rules_count": {
+        "name": "Eigene Regeln"
+      },
+      "error_count": {
+        "name": "Fehler seit Neustart"
+      },
+      "last_error": {
+        "name": "Letzter Fehler"
       }
     }
   },
@@ -136,6 +174,16 @@
     "assign_areas": {
       "name": "Bereiche zuweisen",
       "description": "Entitäten ohne Bereich automatisch einem passenden Bereich anhand des Namens zuordnen.",
+      "fields": {
+        "dry_run": {
+          "name": "Testlauf",
+          "description": "Änderungen berechnen, aber nicht schreiben."
+        }
+      }
+    },
+    "assign_icons": {
+      "name": "Icons zuweisen",
+      "description": "Passende Icons für alle Entitäten vorschlagen und setzen, unabhängig von Labels.",
       "fields": {
         "dry_run": {
           "name": "Testlauf",

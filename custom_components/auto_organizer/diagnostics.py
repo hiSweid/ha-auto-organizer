@@ -19,6 +19,7 @@ async def async_get_config_entry_diagnostics(
     """
     runtime = entry.runtime_data
     last_run = runtime.last_run or {}
+    drop_keys = ("changes", "icon_changes")
     return {
         "options": dict(entry.options),
         "state": {
@@ -26,11 +27,16 @@ async def async_get_config_entry_diagnostics(
             "dry_run": runtime.dry_run,
         },
         "stats": runtime.stats,
+        "errors": {
+            "error_count": runtime.error_count,
+            "last_error": runtime.last_error,
+            "last_error_time": runtime.last_error_time,
+        },
         # Drop the (large) per-entity change lists from every result section
         # ("labels", "areas", "cleanup", "remove_all"); keep the summary.
         "last_run": {
             key: (
-                {k: v for k, v in val.items() if k != "changes"}
+                {k: v for k, v in val.items() if k not in drop_keys}
                 if isinstance(val, dict)
                 else val
             )

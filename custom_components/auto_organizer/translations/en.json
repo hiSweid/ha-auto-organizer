@@ -56,9 +56,11 @@
       "scope": {
         "name": "Run scope",
         "state": {
+          "labels_areas_icons": "Everything (labels + areas + icons)",
           "labels_and_areas": "Labels + areas",
           "labels": "Only labels",
-          "areas": "Only areas"
+          "areas": "Only areas",
+          "icons": "Only icons"
         }
       }
     },
@@ -91,6 +93,42 @@
       },
       "coverage": {
         "name": "Label coverage"
+      },
+      "last_labeled": {
+        "name": "Last labeled entities"
+      },
+      "last_grouped": {
+        "name": "Last grouped entities"
+      },
+      "last_iconed": {
+        "name": "Last entities with new icon"
+      },
+      "with_area": {
+        "name": "Entities with area"
+      },
+      "custom_rule_matches": {
+        "name": "Custom rule matches"
+      },
+      "language": {
+        "name": "Effective language"
+      },
+      "max_labels": {
+        "name": "Max labels per entity"
+      },
+      "scan_interval": {
+        "name": "Scan interval"
+      },
+      "exclude_count": {
+        "name": "Exclude patterns"
+      },
+      "custom_rules_count": {
+        "name": "Custom rules"
+      },
+      "error_count": {
+        "name": "Errors since restart"
+      },
+      "last_error": {
+        "name": "Last error"
       }
     }
   },
@@ -136,6 +174,16 @@
     "assign_areas": {
       "name": "Assign areas",
       "description": "Auto-assign entities without an area to a matching area by name.",
+      "fields": {
+        "dry_run": {
+          "name": "Dry run",
+          "description": "Compute changes without writing them."
+        }
+      }
+    },
+    "assign_icons": {
+      "name": "Assign icons",
+      "description": "Suggest and apply specific icons across all entities, independent of labels.",
       "fields": {
         "dry_run": {
           "name": "Dry run",
