@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.8.4] - 2026-07-05
+
+### Added
+- Fourth small incremental vocabulary batch: 153 new keywords and 85 new
+  icon mappings, focused on the three thinnest label themes (motion,
+  temperature, shopping) plus another batch of Material Design Icons.
+  Keyword vocabulary: 3,854 → 4,007. Icon mappings: 1,552 → 1,637.
+
 ## [0.8.3] - 2026-07-05
 
 ### Added
