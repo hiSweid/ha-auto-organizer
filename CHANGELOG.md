@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.7] - 2026-07-06
+
+### Added
+- Incremental vocabulary batch: 172 new keywords and 135 new icon mappings.
+  Focused on the three thinnest label themes (light_level, waste, locks) and
+  another batch of Material Design Icons for existing and new smart-home
+  terms (appliance alarms, gate/shutter/sliding-door states, network signal
+  strength, moon phases, and more). Also added lock-brand synonyms (August,
+  Yale Linus, Schlage, Level Lock, Abus, Assa Abloy, Ring Alarm, Friday,
+  Eufy, Wyze, Aqara, Sifely, RemoteLock, Salto Systems, Somfy Protect) and
+  German waste-calendar-service terms (Abfall.io, Müllmax, AWIDO, RegioIT).
+  Keyword vocabulary: 4,509 → 4,681. Icon mappings: 1,942 → 2,077.
+
 ## [0.9.6] - 2026-07-06
 
 ### Added
