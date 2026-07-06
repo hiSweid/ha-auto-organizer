@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.8] - 2026-07-06
+
+### Added
+- Incremental vocabulary batch: 155 new keywords and 105 new icon mappings.
+  Focused on the three thinnest label themes (motion, air_quality, switches),
+  another batch of Material Design Icons for existing and new smart-home
+  terms, and real-world ZHA/Matter/brand device synonyms (Aqara, Hue, IKEA
+  Vallhorn, Sonoff, Reolink, Wyze, Tapo). Also added icon-only mappings for
+  existing keywords that previously fell back to the generic domain icon
+  (wandtaster, sonoff, reolink, wyze cam, tapo cam).
+  Keyword vocabulary: 4,681 → 4,836. Icon mappings: 2,077 → 2,182.
+
 ## [0.9.7] - 2026-07-06
 
 ### Added
