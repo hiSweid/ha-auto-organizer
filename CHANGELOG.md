@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.11] - 2026-07-06
+
+### Added
+- Incremental vocabulary batch: 147 new keywords and 139 new icon mappings.
+  Focused on the three thinnest label themes (updates, scripts, fans),
+  another batch of Material Design Icons for vehicles/transport, tools and
+  garden terms, and real-world ZHA/Matter/brand device synonyms (inverters,
+  battery storage, pool equipment, cover/window controls, air quality).
+  Also added icon-only mappings for existing keywords that previously fell
+  back to the generic domain icon (wechselrichter, hausspeicher, feinstaub,
+  griffschloss, poolabdeckung, rollladenposition, hutschienenaktor).
+  Keyword vocabulary: 5,156 → 5,303. Icon mappings: 2,497 → 2,636.
+
 ## [0.9.10] - 2026-07-06
 
 ### Added
