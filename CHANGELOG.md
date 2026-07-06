@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.19] - 2026-07-06
+
+### Added
+- Incremental vocabulary batch: 171 new keywords and 119 new icon mappings.
+  Focused on the three thinnest label themes (light_level, shopping,
+  automations: brightness/dimming/lux terms, shopping-list/grocery/receipt
+  terms, automation/blueprint/routine-engine terms), another batch of
+  Material Design Icons for existing and new smart-home terms across
+  multiple labels, and real-world ZHA/Matter/brand device synonyms (Shelly,
+  Tuya, IKEA, Aqara, Eve Systems, tado, SIEGENIA, Gardena) including icon
+  additions for existing keywords that previously had none.
+
 ## [0.9.18] - 2026-07-06
 
 ### Added
