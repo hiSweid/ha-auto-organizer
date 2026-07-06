@@ -6,6 +6,23 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.15] - 2026-07-06
+
+### Added
+- Incremental vocabulary batch: 177 new keywords and 138 new icon mappings.
+  Focused on the three thinnest label themes (air_quality, waste, vacuums:
+  pollen/particulate matter, waste collection apps and recycling terms,
+  robot vacuum brands/models and mopping/mapping features), another batch
+  of Material Design Icons for existing and new smart-home terms (garden,
+  leak, security), and real-world ZHA/Matter/brand device synonyms (window
+  shutters/blinds, door/glass-break sensors, pumps, extractor fans). Also
+  added icon-only mappings for existing keywords that previously fell back
+  to the generic domain icon (fensterladen, fensterrollo, doppelrollo,
+  raffstores, riegelschloss, gasleckmelder, heizungspumpe, kondensatpumpe,
+  circulator pump, door sensor, extractor fan, bathroom extractor fan,
+  glasbruchsensor, garagenluefter, bewegungsmelder, poolleck).
+  Keyword vocabulary: 5,847 → 6,024. Icon mappings: 3,039 → 3,177.
+
 ## [0.9.14] - 2026-07-06
 
 ### Added
