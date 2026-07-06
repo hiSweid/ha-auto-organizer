@@ -6,6 +6,16 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.10] - 2026-07-06
+
+### Added
+- Incremental vocabulary batch: 177 new keywords and 148 new icon mappings.
+  Focused on the three thinnest label themes (water, vacuums, motion),
+  another batch of Material Design Icons for existing and new smart-home
+  terms, and real-world ZHA/Matter/brand device synonyms (Aqara, Eve
+  Systems, IKEA, tado, Shelly, SIEGENIA, Tuya, Bosch, Fibaro, Aeotec).
+  Keyword vocabulary: 4,979 → 5,156. Icon mappings: 2,349 → 2,497.
+
 ## [0.9.9] - 2026-07-06
 
 ### Added
