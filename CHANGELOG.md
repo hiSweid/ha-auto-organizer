@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.9] - 2026-07-06
+
+### Added
+- Incremental vocabulary batch: 143 new keywords and 47 new icon mappings.
+  Focused on the three thinnest label themes (temperature, cameras, cost),
+  another batch of Material Design Icons for existing and new smart-home
+  terms, and real-world ZHA/Matter/brand device synonyms (Aqara, Eve
+  Systems, IKEA TRADFRI, tado, Shelly, SIEGENIA, Tuya). Also added
+  icon-only mappings for existing keywords that previously fell back to
+  the generic domain icon (fensterkontakt, eve door, shelly uni, range
+  extender, innr, risco, beko, smeg, sesame, conga).
+  Keyword vocabulary: 4,836 → 4,979. Icon mappings: 2,182 → 2,349.
+
 ## [0.9.8] - 2026-07-06
 
 ### Added
