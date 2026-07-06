@@ -6,6 +6,20 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.18] - 2026-07-06
+
+### Added
+- Incremental vocabulary batch: 156 new keywords and 131 new icon mappings.
+  Focused on the three thinnest label themes (fans, water, scripts:
+  ventilation/exhaust-fan/blower brand and speed-stage terms, water/moisture/
+  flow/pool/aquarium sensor and device terms, script/scene/routine naming
+  conventions), another batch of Material Design Icons for existing and new
+  smart-home terms across multiple labels, and real-world ZHA/Matter/brand
+  device synonyms (IKEA, Shelly, Tuya, Aqara, tado, Eve Systems, SIEGENIA,
+  Hue, deCONZ/Sonoff hardware, plus generic German device terms like
+  Drehdimmer and Salzwasserchlorinator).
+  Keyword vocabulary: 6,369 → 6,525. Icon mappings: 3,445 → 3,576.
+
 ## [0.9.17] - 2026-07-06
 
 ### Added
