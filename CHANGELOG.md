@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.12] - 2026-07-06
+
+### Added
+- Incremental vocabulary batch: 196 new keywords and 137 new icon mappings.
+  Focused on the three thinnest label themes (battery, shopping, leak),
+  another batch of Material Design Icons for existing and new smart-home
+  terms (covers, lighting, network, produce, tools, phones), and real-world
+  ZHA/Matter/brand device synonyms (Zooz, Tuya, SmartThings, LeakSmart, Eve
+  Systems, irrigation and pool equipment, air quality sensors).
+  Keyword vocabulary: 5,303 → 5,499. Icon mappings: 2,636 → 2,773.
+
 ## [0.9.11] - 2026-07-06
 
 ### Added
