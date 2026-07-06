@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.6] - 2026-07-06
+
+### Added
+- Incremental vocabulary batch: 175 new keywords and 91 new icon mappings.
+  Focused on the three thinnest label themes (scenes, leak, humidity), another
+  batch of Material Design Icons, and real-world ZHA/Matter/brand device
+  synonyms (Aqara, Eve Systems, IKEA, tado, Shelly, SIEGENIA, Tuya), including
+  icon-only additions for existing keywords that previously fell back to the
+  generic domain icon (rollladen, nas laufwerk, gartenteich, and others).
+  Keyword vocabulary: 4,334 → 4,509. Icon mappings: 1,851 → 1,942.
+
 ## [0.9.5] - 2026-07-06
 
 ### Added
