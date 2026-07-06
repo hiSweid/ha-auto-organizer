@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.5] - 2026-07-06
+
+### Added
+- Incremental vocabulary batch: 169 new keywords and 88 new icon mappings,
+  focused on the three thinnest label themes (battery, scripts, fans),
+  another batch of Material Design Icons, and real-world ZHA/Matter/brand
+  device synonyms (Aqara, Tuya, Homematic IP, Husqvarna, Rademacher, and
+  more), including icon-only additions for existing keywords that
+  previously fell back to the generic domain icon (markise, ladekabel,
+  schliesszylinder, and others). Keyword vocabulary: 4,165 → 4,334. Icon
+  mappings: 1,763 → 1,851.
+
 ## [0.9.4] - 2026-07-05
 
 ### Fixed
