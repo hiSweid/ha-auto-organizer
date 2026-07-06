@@ -6,6 +6,23 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.16] - 2026-07-06
+
+### Added
+- Incremental vocabulary batch: 172 new keywords and 140 new icon mappings.
+  Focused on the three thinnest label themes (cost, temperature, cameras:
+  tariffs/billing/rebate terms, core/regulator/freeze-protection temperature
+  terms, location-specific and pet cameras with lens/mount/power vocabulary),
+  another batch of Material Design Icons for existing and new smart-home
+  terms (appliances, presence, car, garden, media, lights, energy, battery,
+  weather, network), and real-world ZHA/Matter/brand device synonyms (EV
+  charger brands, robot lawn mower brands, IKEA smart-home product lines,
+  universal-remote/IR-hub brands, curtain motor and irrigation brands). Also
+  added icon-only mappings for existing keywords that previously fell back
+  to the generic domain icon (rasierer, rasierapparat, elektrorasierer,
+  shaver, electric shaver).
+  Keyword vocabulary: 6,024 → 6,196. Icon mappings: 3,177 → 3,317.
+
 ## [0.9.15] - 2026-07-06
 
 ### Added
