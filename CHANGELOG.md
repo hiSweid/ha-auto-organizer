@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.29] - 2026-07-07
+
+### Added
+- Incremental vocabulary batch: 113 new keywords and 89 new icon mappings.
+  Focused on the three thinnest label themes (locks, scripts, water: door/gate
+  lock hardware and smart-lock brand synonyms, script/routine/condition-block
+  automation terms, pool/irrigation/water-treatment device terms), plus real
+  ecosystem device synonyms (Fibaro keyfob/smoke sensor, Matter fan/lock/valve,
+  Nuki bridge/opener, Velux/Roto window covers, reed switch, staircase light
+  switch) and a small set of curated Material Design Icons for media playback
+  and network/cover states.
+
 ## [0.9.28] - 2026-07-07
 
 ### Added
