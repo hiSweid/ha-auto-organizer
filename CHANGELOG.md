@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.23] - 2026-07-07
+
+### Added
+- Incremental vocabulary batch: 150 new keywords and 96 new icon mappings.
+  Focused on the three thinnest label themes (temperature, scripts,
+  air_quality: thermometer/probe/outdoor-temp terms, script/routine/scene
+  automation terms, air quality/pollen/particulate/mold/allergen terms),
+  plus a batch of Material Design Icons for existing and new smart-home
+  terms not yet mapped to a specific icon.
+  Keyword vocabulary: 7,148 → 7,298. Icon mappings: 4,048 → 4,144.
+
 ## [0.9.22] - 2026-07-07
 
 ### Added
