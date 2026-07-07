@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.24] - 2026-07-07
+
+### Added
+- Incremental vocabulary batch: 185 new keywords and 171 new icon mappings.
+  Focused on the three thinnest label themes (presence, fans, cameras:
+  occupancy/away-mode terms, fan speed/oscillation/exhaust terms,
+  doorbell/NVR/PTZ/night-vision camera terms), plus a batch of Material
+  Design Icons for existing and new smart-home terms, and real-world
+  ZHA/Matter/brand device synonyms (window handles, pool/irrigation/garden
+  hardware, sauna/infrared heating, pet doors, wildlife cameras).
+  Keyword vocabulary: 7,298 → 7,483. Icon mappings: 4,144 → 4,315.
+
 ## [0.9.23] - 2026-07-07
 
 ### Added
