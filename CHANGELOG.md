@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.21] - 2026-07-07
+
+### Added
+- Incremental vocabulary batch: 122 new keywords and 76 new icon mappings.
+  Focused on the three thinnest label themes (covers, waste, battery:
+  awning/shutter/blind/gate-motor brand and mechanism terms, waste
+  collection/recycling/bin terms, battery health/charge-planning/backup
+  terms), plus real-world ZHA/Matter/brand device synonyms (TRADFRI,
+  Homematic, Bosch Spexor, tado) and icon-only additions for existing
+  keywords that previously fell back to generic icons.
+  Keyword vocabulary: 6,838 → 6,960. Icon mappings: 3,816 → 3,892.
+
 ## [0.9.20] - 2026-07-07
 
 ### Added
