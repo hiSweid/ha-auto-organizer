@@ -6,6 +6,20 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.31] - 2026-07-07
+
+### Added
+- Incremental vocabulary batch: 170 new keywords and 144 new icon mappings.
+  Focused on the two thinnest label themes (cameras: camera-hub brands,
+  detection-event terms, doorbell/intercom and recording/privacy terms;
+  air_quality: gas/smoke/combustion odor terms, pollen and allergen terms,
+  air-quality-index and ventilation terms) plus a fans batch (KWL/ventilation
+  abbreviations, PC/laptop fan terms, directional and pressure fan terms),
+  a curated batch of Material Design Icons for existing smart-home terms
+  (doorbell, molecule/gas, blinds, fence, water-boiler, Z-Wave/Zigbee), and
+  real ecosystem device synonyms (SwitchBot, Qubino, Heatit, ESP32, storage
+  heaters, waste-bin types, air purifiers/diffusers).
+
 ## [0.9.30] - 2026-07-07
 
 ### Added
