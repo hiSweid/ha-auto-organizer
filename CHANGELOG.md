@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.22] - 2026-07-07
+
+### Added
+- Incremental vocabulary batch: 188 new keywords and 156 new icon mappings.
+  Focused on the three thinnest label themes (locks, cost, vacuums:
+  door/window handle and access-control hardware terms, tariff/billing/
+  invoice/rebate terms, robot vacuum docking/mopping/mapping terms),
+  plus a batch of Material Design Icons for existing and new smart-home
+  terms, real-world ZHA/Matter/brand device synonyms, and icon-only
+  additions for existing keywords that previously fell back to generic
+  icons (e.g. air conditioner, wallbox plug, Aqara/repeater).
+  Keyword vocabulary: 6,960 → 7,148. Icon mappings: 3,892 → 4,048.
+
 ## [0.9.21] - 2026-07-07
 
 ### Added
