@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.25] - 2026-07-07
+
+### Added
+- Incremental vocabulary batch: 208 new keywords and 123 new icon mappings.
+  Focused on the three thinnest label themes (updates, humidity, motion:
+  firmware/OTA/patch-notification terms, humidity/dehumidifier/dew-point/
+  mold-warning terms, PIR/mmWave/motion-detection terms), plus a batch of
+  Material Design Icons for existing and new smart-home terms, and
+  real-world ZHA/Matter/brand device synonyms (window handles, pool/pump
+  hardware, dimmer modules, vibration/lux sensors), including 9 icon-only
+  additions for existing keywords that had no specific icon yet.
+  Keyword vocabulary: 7,483 → 7,691. Icon mappings: 4,315 → 4,438.
+
 ## [0.9.24] - 2026-07-07
 
 ### Added
