@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.32] - 2026-07-07
+
+### Added
+- Incremental vocabulary batch: 178 new keywords and 136 new icon mappings.
+  Focused on the three thinnest label themes (updates: firmware/OTA/patch and
+  platform-specific update terms; leak: brand smoke/water/gas sensors and
+  flooding/moisture-damage terms; shopping: delivery-service brands, pantry
+  restocking and low-stock terms), plus a curated batch of Material Design
+  Icons for previously icon-less smart-home terms (vehicles, garden/farm,
+  network/telephony, weather, security-unlock states), and real ecosystem
+  device synonyms (ZHA/Matter/Aqara/Eve/IKEA/Shelly device and sensor names).
+
 ## [0.9.31] - 2026-07-07
 
 ### Added
