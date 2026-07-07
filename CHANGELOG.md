@@ -6,6 +6,20 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.26] - 2026-07-07
+
+### Added
+- Incremental vocabulary batch: 186 new keywords and 131 new icon mappings.
+  Focused on the three thinnest label themes (light_level, leak, shopping:
+  lux/illuminance/twilight-sensor terms, water-leak/flood/moisture-detector
+  and pump/backup-water terms, shopping-list/order-tracking/delivery/
+  discount terms), plus a batch of Material Design Icons for existing and
+  new smart-home terms, and real-world ZHA/Matter/brand device synonyms
+  (Aqara/tado/Shelly/Tuya/IKEA device names, EV charging synonyms, AC
+  indoor/outdoor units, dimmer modules), including 2 icon-only additions
+  for existing keywords (conbee, deconz) that had no specific icon yet.
+  Keyword vocabulary: 7,691 → 7,877. Icon mappings: 4,438 → 4,569.
+
 ## [0.9.25] - 2026-07-07
 
 ### Added
