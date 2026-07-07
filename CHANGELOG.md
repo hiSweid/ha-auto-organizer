@@ -6,6 +6,25 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.27] - 2026-07-07
+
+### Added
+- Incremental vocabulary batch: 177 new keywords and 136 new icon mappings.
+  Focused on the three thinnest label themes (waste, scenes, switches:
+  garbage/recycling/collection-schedule terms, mood/occasion/time-of-day
+  scene terms, relay/dimmer/wall-switch/power-strip terms), plus a batch of
+  Material Design Icons for existing and new smart-home terms (animals,
+  garden/agriculture, food, tools, solar/wind energy, weather, automotive),
+  and real-world ZHA/Matter/brand device synonyms (Somfy, Rademacher, Velux,
+  Danfoss, Netatmo, Sonoff, deCONZ, Hue, LIFX, innr, Paulmann, Homematic,
+  Jung, Gira, SIEGENIA, Zigbee coordinator/dongle, Z-Wave stick, Thread,
+  HomeKit bridge, EVSE), including 12 icon-only additions for existing
+  keywords that had no specific icon yet (gateway, homebridge, hubitat,
+  drehschalter, chlorpumpe, durchflussmelder, erdgasmelder,
+  fehlerstromschutzschalter, bodenroboter, hacs repository,
+  beschleunigungssensor, footstep sensor).
+  Keyword vocabulary: 7,877 → 8,054. Icon mappings: 4,569 → 4,705.
+
 ## [0.9.26] - 2026-07-07
 
 ### Added
