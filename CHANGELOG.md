@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.30] - 2026-07-07
+
+### Added
+- Incremental vocabulary batch: 162 new keywords and 137 new icon mappings.
+  Focused on the three thinnest label themes (cost: billing/tariff/tax/
+  banking terms; vacuums: robot-vacuum brand, mopping, and mapping/no-go-zone
+  terms; temperature: sensor brand names, industrial/food cold-chain and
+  probe thermometer terms), plus a batch of Material Design Icons for
+  existing lights/appliances/locks/security/energy/vacuums/covers terms,
+  and real ecosystem device synonyms (Aqara/Shelly/Sonoff/Xiaomi/Tuya/Moes
+  temperature sensors and TRVs, window/door hardware, garage lock terms).
+
 ## [0.9.29] - 2026-07-07
 
 ### Added
