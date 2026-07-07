@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.20] - 2026-07-07
+
+### Added
+- Incremental vocabulary batch: 142 new keywords and 121 new icon mappings.
+  Focused on the three thinnest label themes (leak, humidity, scenes:
+  water-leak/flood/shutoff-valve sensor terms, hygrometer/dehumidifier/
+  soil-moisture/dew-point terms, mood/scene naming conventions like
+  movie-night, bedtime, and wake-up scenes), plus another batch of
+  Material Design Icons for existing and new smart-home terms across
+  multiple labels.
+  Keyword vocabulary: 6,696 → 6,838. Icon mappings: 3,695 → 3,816.
+
 ## [0.9.19] - 2026-07-06
 
 ### Added
