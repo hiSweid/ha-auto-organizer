@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.28] - 2026-07-07
+
+### Added
+- Incremental vocabulary batch: 144 new keywords and 124 new icon mappings.
+  Focused on the three thinnest label themes (battery, media, automations:
+  battery chemistry/charging/backup-power terms, streaming/audio-zone/
+  media-player terms, automation trigger/condition/blueprint terms), plus a
+  batch of Material Design Icons for existing and new smart-home terms
+  (appliances, weather, security, network), and real-world device synonyms
+  (water softener, dehumidifier, air fryer, anemometer, rain sensor, EV
+  charging port/flap, Matter window contact/dimmer/lock, ZHA coordinator,
+  sump pump, rainwater harvesting, garage door sensor).
+
 ## [0.9.27] - 2026-07-07
 
 ### Added
