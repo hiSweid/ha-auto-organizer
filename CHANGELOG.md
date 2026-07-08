@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.39] - 2026-07-08
+
+### Added
+- Incremental vocabulary batch: 171 new keywords and 122 new icon mappings.
+  Focused on the three thinnest label themes (weather: weather station and
+  forecast/phenomenon terms; switches: relay, actuator and smart-plug brand
+  terms; scripts: routine/scenario/workflow terms), plus a curated batch of
+  Material Design Icons for previously icon-less entries, and real device/
+  platform synonyms from ZHA/Zigbee2MQTT/Matter catalogs and brands such as
+  Aqara, Eve Systems, IKEA, tado, Shelly, SIEGENIA and Tuya (window handles,
+  dimmer switches, pool pumps, EV charging stations, climate accessories).
+
 ## [0.9.38] - 2026-07-08
 
 ### Added
