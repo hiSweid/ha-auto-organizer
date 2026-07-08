@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.35] - 2026-07-08
+
+### Added
+- Incremental vocabulary batch: 183 new keywords and 125 new icon mappings.
+  Focused on the three thinnest label themes (scenes: card-night, TV/crime-show,
+  holiday and life-event mood terms, fire/outdoor and reading/lounge/bar
+  ambience terms; presence: check-in/check-out and arrival/departure phrasing,
+  workplace/school presence context, tracking terminology, travel-away
+  context; covers: Somfy/Tahoma brand terms, garage door accessories,
+  motor/drive terms, shading/awning accessories, curtain hardware and
+  pleated-shade terms), plus a curated batch of Material Design Icons for
+  previously icon-less garden/appliance/car/network/water/energy/media terms,
+  and real device-ecosystem synonyms (Aqara, Bosch Smart Home, Homematic IP,
+  IKEA TRADFRI, Tuya, Shelly, Matter) including one icon-only addition for an
+  existing keyword that previously had no dedicated icon.
+
 ## [0.9.34] - 2026-07-08
 
 ### Added
