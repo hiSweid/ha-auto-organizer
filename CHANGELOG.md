@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.33] - 2026-07-08
+
+### Added
+- Incremental vocabulary batch: 193 new keywords and 149 new icon mappings.
+  Focused on the three thinnest label themes (humidity: hygrometer/dehumidifier
+  terms, condensation and mold-risk terms, greenhouse/plant humidity terms;
+  battery: coin-cell/battery-type designations, low-battery warning terms in
+  German and English, per-device battery terms for remotes/smoke detectors/
+  door-window sensors; light_level: lux/illuminance terms, twilight and
+  daylight sensor terms), plus a curated batch of Material Design Icons for
+  previously icon-less smart-home terms (security, shopping, car, cost,
+  media, air_quality and more), and real ecosystem device synonyms
+  (Shelly/Aqara/Homematic IP/Eve/Tado/Tuya/Bosch/deCONZ/Somfy/Ring device and
+  sensor names, plus icon-only completions for existing keywords that still
+  fell back to generic label icons).
+
 ## [0.9.32] - 2026-07-07
 
 ### Added
