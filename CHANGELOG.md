@@ -6,6 +6,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.41] - 2026-07-08
+
+### Added
+- Incremental vocabulary batch: 169 new keywords and 141 new icon mappings.
+  Focused on the three thinnest label themes (air_quality: gas/odor
+  terms, pollen types and air-quality sensor brands; light_level:
+  illuminance/lux measurement, dusk/dawn and UV-radiation sensor terms;
+  waste: waste-stream, recycling and collection-logistics terms), plus a
+  curated batch of Material Design Icons for previously icon-less
+  entries, and real device/platform synonyms from ZHA/Zigbee2MQTT/Matter
+  catalogs and brands such as IKEA, Loxone, KNX, Gira, Sonoff, Chamberlain,
+  Hörmann, Marantec, Elero, Becker, Somfy, Rademacher, WAREMA, Aeotec,
+  Zooz, Inovelli, SmartThings, Wiser, bticino, Niko, ABB-Welcome and
+  Xiaomi/Aqara.
+
 ## [0.9.40] - 2026-07-08
 
 ### Added
