@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.34] - 2026-07-08
+
+### Added
+- Incremental vocabulary batch: 158 new keywords and 131 new icon mappings.
+  Focused on the three thinnest label themes (waste: regional bin-color and
+  dialect terms, packaging-law and reusable-cup deposit terms, UK/AU
+  disposal phrasing; automations: assistant-ecosystem routine terms,
+  additional trigger/condition jargon, presence- and light-simulation
+  terms; scripts: automation-app and platform names, batch/macro
+  terminology), plus a curated batch of Material Design Icons for
+  previously icon-less appliance/food/light/network terms, and real
+  device-ecosystem synonyms (Shelly, IKEA TRADFRI, Matter, ZHA/Z2M,
+  Homematic IP, Fibaro, Gardena, Velux, Philips Hue, Nuki) including
+  icon-only additions for existing keywords (awning/blind/lock variants)
+  that previously had no dedicated icon.
+
 ## [0.9.33] - 2026-07-08
 
 ### Added
