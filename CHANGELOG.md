@@ -6,6 +6,20 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.40] - 2026-07-08
+
+### Added
+- Incremental vocabulary batch: 132 new keywords and 135 new icon mappings.
+  Focused on the three thinnest label themes (updates: firmware signing,
+  compatibility and support-lifecycle terms; leak: pipe/appliance/roof leak
+  and smart shutoff-valve terms; humidity: hygrometer models, psychrometry
+  terms and humidifier/dehumidifier brands), plus a curated batch of
+  Material Design Icons for previously icon-less entries, and real device/
+  platform synonyms from ZHA/Zigbee2MQTT/Matter catalogs and brands such as
+  Aqara, Eve Systems, IKEA, tado, Shelly, SIEGENIA and Tuya, including
+  icon-only additions for existing keywords that previously had no
+  dedicated icon.
+
 ## [0.9.39] - 2026-07-08
 
 ### Added
