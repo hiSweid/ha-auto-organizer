@@ -6,6 +6,20 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.36] - 2026-07-08
+
+### Added
+- Incremental vocabulary batch: 152 new keywords and 87 new icon mappings.
+  Focused on the three thinnest label themes (vacuums: robotic mower brands
+  and mop/lawn-robot synonyms; cost: contract types, fees/deadlines,
+  dynamic/prepaid pricing terms; locks: fingerprint/keypad access terms,
+  locksmith/emergency-unlock services, video doorbell), plus a curated batch
+  of Material Design Icons for previously icon-less garden/energy/shopping/
+  network/weather/media/car/appliance terms, and real device-ecosystem
+  synonyms (Aqara, Eve Systems, IKEA, tado, Shelly, Matter, EV charging
+  phase-switching terms) including icon-only additions for existing
+  keywords that previously had no dedicated icon.
+
 ## [0.9.35] - 2026-07-08
 
 ### Added
