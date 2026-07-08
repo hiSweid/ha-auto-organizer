@@ -6,6 +6,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.37] - 2026-07-08
+
+### Added
+- Incremental vocabulary batch: 186 new keywords and 133 new icon mappings.
+  Focused on the three thinnest label themes (motion: PIR/mmWave/radar
+  presence-sensor terms, occupancy-vs-motion distinctions, motion-cooldown
+  and clear-timeout terminology; water: water-meter/consumption/pressure
+  terms, hot/cold-water and well/cistern/pool-level terms; temperature:
+  indoor/outdoor, fridge/freezer, floor and water-temperature sensor terms,
+  frost/heat-threshold phrasing), plus a curated batch of Material Design
+  Icons for previously icon-less smart-home terms across multiple
+  categories, and real device-ecosystem synonyms (Aqara, Eve Systems, IKEA
+  TRADFRI, tado, Shelly, SIEGENIA, Tuya, Matter) including icon-only
+  additions for existing keywords that previously had no dedicated icon.
+
 ## [0.9.36] - 2026-07-08
 
 ### Added
