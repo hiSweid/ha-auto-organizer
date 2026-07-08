@@ -6,6 +6,24 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.38] - 2026-07-08
+
+### Added
+- Incremental vocabulary batch: 175 new keywords and 90 new icon mappings.
+  Focused on the three thinnest label themes (fans: fan/ventilation brands
+  and model names, speed/oscillation/tilt control terms, kitchen extractor
+  hood and fault-alert terms; cameras: SD/cloud storage and privacy-zone
+  terms, PTZ and zoom terms, doorbell/siren/two-way-audio terms, recording
+  and resolution terms; media: podcast/audiobook/DAB+ terms, HDR/Dolby/DTS
+  audio-format terms, room-correction and multiroom-audio terms, cable and
+  headphone-connectivity terms), plus a curated batch of Material Design
+  Icons for previously icon-less appliance/climate/car/garden/energy/
+  battery/media/network/weather terms, and real device-ecosystem synonyms
+  (Aqara, Eve Systems, IKEA TRADFRI, tado, Shelly, SIEGENIA, Tuya, Matter)
+  including icon-only additions for existing keywords that previously had
+  no dedicated icon (Gardena, Intercom, SmartThings, Nanoleaf, Somfy,
+  Velux, Netatmo, Tuya).
+
 ## [0.9.37] - 2026-07-08
 
 ### Added
