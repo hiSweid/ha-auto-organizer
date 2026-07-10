@@ -6,6 +6,20 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.47] - 2026-07-10
+
+### Added
+- Incremental vocabulary batch: 159 new keywords and 108 new icon mappings.
+  Focused on the three thinnest label themes (scripts: script naming and
+  execution/trigger vocabulary; updates: firmware/OTA, release-channel and
+  HACS/add-on update terminology; temperature: appliance/CPU/floor/flow-return
+  measurement points and sensor hardware such as DS18B20, PT100 and ESPHome),
+  plus a curated batch of Material Design Icons for previously icon-less
+  entries across many themes, and real device/platform synonyms and
+  icon-only additions for existing brand keywords (Homematic IP, Philips
+  Hue Go/Iris/Play, Ledvance, Fibaro, Shelly Plus/Addon, Moes, Xiaomi,
+  Somfy Protect, Trust Zigbee).
+
 ## [0.9.46] - 2026-07-10
 
 ### Added
