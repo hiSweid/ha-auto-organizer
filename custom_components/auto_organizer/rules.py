@@ -7346,6 +7346,64 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "raumklang": "mdi:surround-sound-5-1",
     "szenenwechsel": "mdi:transition",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+
+
+    # --- incremental vocabulary batch (icon backfill for new keywords) ---
+    "verzoegerung": "mdi:timer-sand",
+    "webhook": "mdi:webhook",
+    "daemmerung": "mdi:weather-sunset",
+    "benachrichtigung": "mdi:bell-ring",
+    "kino abend": "mdi:movie",
+    "leselicht": "mdi:book-open-page-variant",
+    "arbeitslicht": "mdi:desk-lamp",
+    "aufgeschlossen": "mdi:lock-open",
+    "latch": "mdi:lock",
+    "yale schloss": "mdi:lock",
+    "august schloss": "mdi:lock",
+    "schlage schloss": "mdi:lock",
+    "abus schloss": "mdi:lock",
+    "eqiva schloss": "mdi:lock",
+    "lock jammed": "mdi:lock-alert",
+    "unlock failed": "mdi:lock-alert",
+    "geofence unlock": "mdi:lock-open",
+    "remote unlock": "mdi:lock-open",
+    "schluessel": "mdi:key",
+    "fingerprint": "mdi:fingerprint",
+    "mennekes amtron": "mdi:ev-station",
+    "abl emh1": "mdi:ev-station",
+    "goe charger": "mdi:ev-station",
+    "wolf heiztechnik": "mdi:radiator",
+    "legrand celiane": "mdi:light-switch",
+    "hager tebis": "mdi:home-automation",
+    "busch jaeger dimmer": "mdi:tune-vertical",
+    "busch jaeger bewegungsmelder": "mdi:motion-sensor",
+    "eufy security cam": "mdi:cctv",
+    "starlink dish": "mdi:satellite-variant",
+    "openwrt router": "mdi:router-network",
+    "unifi dream machine": "mdi:router-wireless",
+    "jarolift rolladen": "mdi:blinds",
+    "liebherr kuehlschrank": "mdi:fridge-outline",
+    "vzug geschirrspueler": "mdi:dishwasher",
+    "neff backofen": "mdi:stove",
+    "ekey fingerscanner": "mdi:fingerprint",
+    "burg waechter tresor": "mdi:safe",
+    "hunter bewaesserungssteuerung": "mdi:sprinkler",
+    "wolf garten maehroboter": "mdi:robot-mower",
+    "orbit bewaesserungstimer": "mdi:sprinkler-variant",
+    "huawei fusion solar": "mdi:solar-power",
+    "e3dc hauskraftwerk": "mdi:home-battery",
+    "senec heimspeicher": "mdi:home-battery-outline",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -18275,6 +18333,77 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "pool heating": "garden",
     "dimmaktor": "lights",
     "tuya szenenschalter": "scenes",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "schwellenwert": "automations",
+    "verzoegerung": "automations",
+    "webhook": "automations",
+    "daemmerung": "automations",
+    "ereignis": "automations",
+    "eskalation": "automations",
+    "benachrichtigung": "automations",
+    "ifttt": "automations",
+    " condition ": "automations",
+    "helfer": "automations",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "kino abend": "scenes",
+    "romantikmodus": "scenes",
+    "leselicht": "scenes",
+    "arbeitslicht": "scenes",
+    "schlummerszene": "scenes",
+    "ambientebeleuchtung": "scenes",
+    "feierabendmodus": "scenes",
+    "fruehstuecksszene": "scenes",
+    "loungemodus": "scenes",
+    "dinnerszene": "scenes",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "aufgeschlossen": "locks",
+    "latch": "locks",
+    "yale schloss": "locks",
+    "august schloss": "locks",
+    "schlage schloss": "locks",
+    "abus schloss": "locks",
+    "eqiva schloss": "locks",
+    "lock jammed": "locks",
+    "unlock failed": "locks",
+    "geofence unlock": "locks",
+    "remote unlock": "locks",
+    "schluessel": "locks",
+    "fingerprint": "locks",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "mennekes amtron": "car",
+    "abl emh1": "car",
+    "goe charger": "car",
+    "evbox elvi": "car",
+    "wolf heiztechnik": "climate",
+    "wolf ism7i": "climate",
+    "legrand celiane": "switches",
+    "hager tebis": "switches",
+    "busch jaeger dimmer": "lights",
+    "busch jaeger bewegungsmelder": "security",
+    "eufy security cam": "security",
+    "starlink dish": "network",
+    "openwrt router": "network",
+    "unifi dream machine": "network",
+    "gl inet router": "network",
+    "asus router": "network",
+    "jarolift rolladen": "covers",
+    "griesser storenmotor": "covers",
+    "liebherr kuehlschrank": "appliances",
+    "vzug geschirrspueler": "appliances",
+    "siemens home connect": "appliances",
+    "neff backofen": "appliances",
+    "ekey fingerscanner": "locks",
+    "burg waechter tresor": "locks",
+    "hunter bewaesserungssteuerung": "garden",
+    "wolf garten maehroboter": "garden",
+    "orbit bewaesserungstimer": "garden",
+    "huawei fusion solar": "energy",
+    "e3dc hauskraftwerk": "energy",
+    "senec heimspeicher": "energy",
 
 }
 

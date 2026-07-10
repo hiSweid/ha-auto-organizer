@@ -6,6 +6,23 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.44] - 2026-07-10
+
+### Added
+- Incremental vocabulary batch: 63 new keywords and 44 new icon mappings.
+  Focused on the three thinnest label themes (automations: rule-engine and
+  trigger/condition terminology, IFTTT/webhook/pyscript integrations,
+  presence and schedule triggers; scenes: mood and routine names such as
+  reading light, work light, lounge mode, breakfast/dinner scenes; locks:
+  lock/unlock states, keypad and fingerprint terms, Yale/August/Schlage/Abus/
+  eQ-3 brand entries), plus real device/platform synonyms across several
+  themes (EV chargers: Mennekes, ABL, go-e, EVBox; heating: Wolf; KNX-style
+  switch/dimmer systems: Legrand, Hager, Busch-Jaeger; networking: Starlink,
+  OpenWrt, UniFi, GL.iNet, Asus; covers: Jarolift, Griesser; appliances:
+  Liebherr, V-ZUG, Siemens Home Connect, Neff; locks: eKey, Burg-Wächter;
+  garden irrigation/robotic mowers: Hunter, Wolf-Garten, Orbit; and home
+  battery/solar systems: Huawei FusionSolar, E3/DC, SENEC).
+
 ## [0.9.43] - 2026-07-10
 
 ### Added
