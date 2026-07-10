@@ -6,6 +6,24 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.46] - 2026-07-10
+
+### Added
+- Incremental vocabulary batch: 137 new keywords and 157 new icon mappings.
+  Focused on the three thinnest label themes (automations: trigger/routine
+  vocabulary such as automationsverlauf, tuerklingeltrigger, notfallautomation
+  and hysterese regel; motion: PIR hardware and mounting variants like
+  fresnellinse, walktest and dual technology sensor, plus location-specific
+  motion sensors for haustuer, vordach and carport; scenes: mood/scene naming
+  vocabulary for dinner, wellness, night-sky and holiday moments such as
+  gluehweinstimmung, sternenhimmel szene and kinonacht), plus a curated batch
+  of Material Design Icons for previously icon-less entries across climate,
+  garden, security, network, shopping, cost, waste, weather, lights,
+  air_quality, energy and car, and icon-only additions for existing brand
+  and device-synonym keywords (Arlo, Bose, Eufycam, Govee, Tasmota, Yale,
+  Danalock and Aqara/IKEA/SIEGENIA/Tado device terms) that previously fell
+  back to a generic icon.
+
 ## [0.9.45] - 2026-07-10
 
 ### Added
