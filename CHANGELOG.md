@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.42] - 2026-07-10
+
+### Added
+- Four missing native Home Assistant integration domains mapped to their
+  category: `smlight` (Zigbee coordinator hardware) to network, `homewizard`
+  (energy meters/plugs) to energy, `govee_light_local` to lights, and
+  `music_assistant` to media.
+
 ## [0.9.41] - 2026-07-08
 
 ### Added

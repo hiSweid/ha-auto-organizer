@@ -18017,6 +18017,7 @@ INTEGRATION_LABELS: Final[dict[str, str]] = {
     "adguard": "network",
     "uptimerobot": "network",
     "synology_dsm": "network",
+    "smlight": "network",
     "nmap_tracker": "presence",
     # car / charging
     "evcc_intg": "car",
@@ -18058,6 +18059,7 @@ INTEGRATION_LABELS: Final[dict[str, str]] = {
     "goodwe": "energy",
     "enphase_envoy": "energy",
     "solarlog": "energy",
+    "homewizard": "energy",
     # dynamic electricity tariffs
     "tibber": "cost",
     "awattar": "cost",
@@ -18090,6 +18092,7 @@ INTEGRATION_LABELS: Final[dict[str, str]] = {
     "fully_kiosk": "presence",
     # lights
     "wled": "lights",
+    "govee_light_local": "lights",
     # media
     "spotify": "media",
     "cast": "media",
@@ -18104,6 +18107,7 @@ INTEGRATION_LABELS: Final[dict[str, str]] = {
     "volumio": "media",
     "squeezebox": "media",
     "bluesound": "media",
+    "music_assistant": "media",
     # air quality
     "airvisual": "air_quality",
     "airly": "air_quality",
