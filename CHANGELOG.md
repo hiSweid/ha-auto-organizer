@@ -6,6 +6,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.43] - 2026-07-10
+
+### Added
+- Incremental vocabulary batch: 137 new keywords and 140 new icon mappings.
+  Focused on the three thinnest label themes (shopping: grocery expiry
+  tracking, loyalty programs, returns/exchanges, quick-commerce apps and
+  discount events; battery: battery chemistries/form factors, diagnostics
+  terms like internal resistance and cell balancing, and backup power
+  terms; presence: room/seat occupancy, pet tracking, NVR-based person
+  detection such as Frigate/Doubletake/CompreFace, BLE beacons and
+  geofencing), plus a curated batch of Material Design Icons for
+  previously icon-less entries, and real device/platform synonyms from
+  ZHA/Zigbee2MQTT/Matter catalogs and brands such as Aqara, Eve Systems,
+  IKEA, tado, Shelly, SIEGENIA and Tuya.
+
 ## [0.9.42] - 2026-07-10
 
 ### Added
