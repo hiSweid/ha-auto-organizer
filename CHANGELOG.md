@@ -6,6 +6,23 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.45] - 2026-07-10
+
+### Added
+- Incremental vocabulary batch: 127 new keywords and 102 new icon mappings.
+  Focused on the three thinnest label themes (cost: off-peak/dynamic-tariff
+  market terms such as Schwachlast, Regelenergie, Bilanzkreis, Netzausbauumlage,
+  and English billing terms like time of use, peak pricing, arrears, autopay,
+  plus dynamic-tariff supplier names Corrently, Ostrom, Rabot, EnBW, Yello;
+  vacuums: mop hardware parts, map import/export and room-segmentation terms,
+  vendor features like sonic mopping and auto water refill station, and
+  budget brands Mova and Lefant; fans: KWL/MVHR ventilation-system brands
+  such as Lunos, Inventer, Meltem, Wolf and Stiebel Eltron, portable-fan
+  brands like Dreo, Duux and Klarstein, and heat-exchanger/filter component
+  terms), plus a curated batch of Material Design Icons for previously
+  icon-less entries across EV/car sensors, wireless charging, billing and
+  finance, pool water chemistry, cellular/Wi-Fi security and media controls.
+
 ## [0.9.44] - 2026-07-10
 
 ### Added
