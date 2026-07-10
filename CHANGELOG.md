@@ -6,6 +6,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.48] - 2026-07-10
+
+### Added
+- Incremental vocabulary batch: 161 new keywords and 138 new icon mappings.
+  Focused on the three thinnest label themes (locks: smart-lock brands and
+  hardware such as Nuki, Tedee, Danalock, Schliesszylinder and Fingerprint-
+  Schloss; water: softener, cistern, well-pump and drinking-water vocabulary
+  including Wasserenthaerter, Zisterne and Osmoseanlage; air_quality: CO2,
+  VOC, particulate, pollen and radon terms such as Feinstaub, Pollenflug and
+  Radonmessung), plus a curated batch of Material Design Icons for
+  previously icon-less entries across many themes, and real device/platform
+  synonyms and icon-only additions for existing brand keywords (Zigbee2MQTT
+  TRVZB, Matter smoke sensors, Ecobee/Hive/Drayton thermostats, Hekatron,
+  Griesser/Tahoma covers).
+
 ## [0.9.47] - 2026-07-10
 
 ### Added
