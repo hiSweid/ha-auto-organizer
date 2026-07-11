@@ -6,6 +6,16 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.51] - 2026-07-11
+
+### Added
+- Incremental vocabulary batch: 45 new keywords and 29 new icon mappings.
+  Focused on real device/platform synonyms across many themes — IKEA controllers
+  (Rodret, Somrig, Parasoll, Skydrag, Inspelning), Aqara cubes, Sonoff SNZB
+  sensors, Bosch Twinguard/Spexor, Shelly RGBW, Rademacher DuoFern, Schellenberg,
+  Velux Active, Lupusec, FRITZ!DECT, and German installer terms (Aufputzaktor,
+  Beschattungsaktor, Zwischensteckdose, Impulszaehler, Phasenabschnitt).
+
 ## [0.9.50] - 2026-07-11
 
 ### Added
