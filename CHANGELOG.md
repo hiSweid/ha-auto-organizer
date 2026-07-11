@@ -6,6 +6,16 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.53] - 2026-07-11
+
+### Added
+- Incremental vocabulary batch: 110 new keywords and 98 new icon mappings.
+  Grew the three thinnest label categories (automations, cost, fans) with
+  triggers/routines, energy tariff and billing terms, and ventilation/fan
+  hardware, plus real device and platform synonyms across many themes
+  (Hoppe handles, reed contacts, Warema, Hunter/Orbit irrigation, Bosch
+  Twinguard/Spexor, Noctua/be quiet PC fans, Eve/Gledopto/Namron devices).
+
 ## [0.9.52] - 2026-07-11
 
 ### Added
