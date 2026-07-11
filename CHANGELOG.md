@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.55] - 2026-07-11
+
+### Added
+- Incremental vocabulary batch: 150 new keywords and 164 new icon mappings.
+  Grew the three thinnest label categories (media, updates, scenes) with
+  speaker/AV-receiver/streaming/multiroom media terms, firmware/OTA/release
+  update vocabulary, and named scene/mood terms (seasonal, activity, focus and
+  ambience scenes). Added real device and platform synonyms across covers,
+  switches, motion, security, leak, water, car and climate (Aqara, Shelly,
+  Tuya, Eve, tado, Homematic IP), plus 14 icon-only mappings for existing
+  keywords that previously fell back to the generic domain icon.
+
 ## [0.9.54] - 2026-07-11
 
 ### Added
