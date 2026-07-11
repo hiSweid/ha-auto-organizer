@@ -6,6 +6,16 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.58] - 2026-07-11
+
+### Added
+- Incremental vocabulary batch: 162 new keywords and 155 new icon mappings.
+  Grew the three thinnest label categories (cost, locks, leak) with
+  tariff/billing/payment-provider, smart-lock/access-control/keypad and
+  leak/flood/damp/gas-detector terminology, plus real device/platform
+  synonyms from ZHA/Matter ecosystems. All icons validated against the MDI
+  metadata set (no invented names).
+
 ## [0.9.57] - 2026-07-11
 
 ### Added
