@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.56] - 2026-07-11
+
+### Added
+- Incremental vocabulary batch: 163 new keywords and 164 new icon mappings.
+  Grew the three thinnest label categories (air_quality, humidity, temperature)
+  with additional sensor chips/models, brand sub-models and pollutant/pollen,
+  dew-point/mold and probe/thermostat terminology. Added real device and
+  platform synonyms across covers, energy, car, temperature, light_level, fans
+  and more (Aqara, Sonoff, Shelly, tado, SIEGENIA, KEBA, go-e, Marstek, Bosch,
+  Tapo), plus 12 icon-only mappings for existing keywords that previously fell
+  back to the generic domain icon.
+
 ## [0.9.55] - 2026-07-11
 
 ### Added
