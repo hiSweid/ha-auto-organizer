@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.54] - 2026-07-11
+
+### Added
+- Incremental vocabulary batch: 171 new keywords and 140 new icon mappings.
+  Grew the three thinnest label categories (scripts, light_level, motion) with
+  script/sequence/macro verbs, illuminance measurement terms (lux/lumen/EV and
+  sensor chips), and presence/mmWave/PIR motion vocabulary, plus real device
+  and platform synonyms across many themes (Shelly Plus, Aqara/Eve/IKEA leak
+  and cover devices, Nuki/tedee locks, Homematic actuators, go-e/openWB
+  chargers, SwitchBot curtain/bot, ratgdo).
+
 ## [0.9.53] - 2026-07-11
 
 ### Added
