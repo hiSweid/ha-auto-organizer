@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.50] - 2026-07-11
+
+### Added
+- Incremental vocabulary batch: 171 new keywords and 146 new icon mappings.
+  Focused on the three thinnest label themes (battery: cell chemistries, brands
+  such as Ansmann/Zendure/Pylontech, discharge and capacity terms; shopping:
+  German grocery-delivery services, pantry staples, checkout and deposit-machine
+  terminology; vacuums: robot/handheld vacuum models from Roborock/Dreame/Eufy/
+  iRobot, nozzles, filters and mopping features) plus real device/platform
+  synonyms across many themes (mmWave presence radar, mesh nodes, DIN-rail
+  relays, blinds, radiators and more).
+
 ## [0.9.49] - 2026-07-11
 
 ### Added
