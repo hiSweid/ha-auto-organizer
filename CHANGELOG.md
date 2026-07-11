@@ -6,6 +6,16 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.52] - 2026-07-11
+
+### Added
+- Incremental vocabulary batch: 175 new keywords and 202 new icon mappings.
+  Filled out the three thinnest label categories (weather, cameras, presence)
+  with device names, synonyms and meteorological terms, added real device/
+  platform synonyms across many themes (IKEA Dirigera, ConBee, Sonoff, Nuki,
+  Nanoleaf, Govee, tado, Dreame, Gardena), and enriched 45 existing keywords
+  that previously fell back to the generic domain icon with specific MDI icons.
+
 ## [0.9.51] - 2026-07-11
 
 ### Added
