@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.49] - 2026-07-11
+
+### Added
+- Incremental vocabulary batch: 193 new keywords and 171 new icon mappings.
+  Focused on the three thinnest label themes (humidity: hygrometer/sensor
+  models and dampness terms such as Taupunktunterschreitung, Adsorptionstrockner
+  and specific-humidity vocabulary; waste: bin/collection terminology including
+  Abrollcontainer, Wertstoffsack, kerbside recycling and bottle bank; leak:
+  water/freeze-alarm devices and brands such as Flo by Moen, LeakBot, YoLink,
+  Rueckstauventil and Rohrfrostschutz), plus a curated batch of previously
+  unused Material Design Icons and real device/platform synonyms across many
+  themes (Versenkregner, Rohrventilator, Nachtspeicher, Radonsensor).
+
 ## [0.9.48] - 2026-07-10
 
 ### Added
