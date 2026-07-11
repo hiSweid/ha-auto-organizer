@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.57] - 2026-07-11
+
+### Added
+- Incremental vocabulary batch: 144 new keywords and 172 new icon mappings.
+  Grew the three thinnest label categories (automations, water, waste) with
+  workflow/trigger/blueprint, plumbing/flow/cistern and bin/recycling/disposal
+  terminology. Added new MDI icon-to-keyword mappings and real device/platform
+  synonyms (ZHA/Zigbee2MQTT, Matter, Aqara/Eve/IKEA/tado/Shelly/Tuya), including
+  38 icon-only additions that give existing keywords (netflix, staubsauger,
+  heizung, photovoltaikanlage, schalter, …) a fitting icon instead of the
+  generic domain/label fallback.
+
 ## [0.9.56] - 2026-07-11
 
 ### Added
