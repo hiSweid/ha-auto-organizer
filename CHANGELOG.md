@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.74] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 126 new keywords and 142 new icon mappings.
+  Focus categories security, waste and cost, plus device/platform synonyms
+  (Ajax/Hikvision/Aqara/tado/Tradfri Dirigera/Nous/Tuya etc.) and icon-only
+  mappings for 19 existing keywords that previously fell back to a generic icon.
+
 ## [0.9.73] - 2026-07-12
 
 ### Added
