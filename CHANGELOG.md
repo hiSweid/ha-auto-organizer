@@ -6,7 +6,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-## [0.9.65] - 2026-07-12
+## [0.9.66] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 191 new keywords and 186 new icon mappings.
+  Grew the three thinnest label categories: leak (burst-pipe / hose / siphon /
+  boiler-tank / condensate-drain / sump-pump leak terms plus Gigaset/Eqiva/
+  Sonoff/Dragino water sensors), cost (tariff / budget / kWh-price / billing /
+  price-forecast terms) and fans (supply/exhaust dampers, room/basement/garage
+  ventilation, workshop/PC/aquarium fans, fan controllers, EC/radial/axial
+  blowers). Added real device/platform synonyms from ZHA/Zigbee2MQTT/Matter
+  ecosystems (Aqara/Eve/Moes/Tuya roller shutters, Becker/Jarolift/Rademacher
+  motors, Bosch/Danfoss/Moes radiator thermostats, Homematic/Bosch switches and
+  wall transmitters, presence/smoke/contact sensors) and mapped previously
+  unused MDI icons to smart-home terms (phone/call-list states, home/property
+  presence, parental-control media locks, network keys).
 
 ### Added
 - Incremental vocabulary batch: 180 new keywords and 172 new icon mappings.
