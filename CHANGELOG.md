@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.69] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 198 new keywords and 179 new icon mappings.
+  Grew the three thinnest label categories (light_level, humidity, motion) with
+  ambient-light/illuminance sensor chips (BH1750, TSL2591, OPT3001, VEML6031,
+  APDS9007, LTR-series, etc.), humidity terms and sensor models (SHT41/45, DHT20,
+  HTU31, SwitchBot/Ecowitt/Netatmo modules), and mmWave/PIR/radar motion terms
+  and devices (LD2411/2461, Panasonic Grid-EYE, Aqara/Sonoff/Zooz presence).
+  Added device/platform synonyms from real Zigbee/Matter ecosystems plus a batch
+  of previously unused Material Design Icons for smart-home concepts.
+
 ## [0.9.68] - 2026-07-12
 
 ### Added
