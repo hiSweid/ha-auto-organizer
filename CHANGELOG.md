@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.77] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 151 new keywords and 162 new icon mappings.
+  Focus categories water, weather and light_level (rain/cistern/well/flow terms,
+  hail/frost/dew-point/UV/pollen weather terms, lux/illuminance/ambient-light
+  terms), a sweep of previously uncovered smart-home MDI icons, and real
+  device/platform synonyms. Also added icons to 36 existing icon-less keywords
+  (roller-shutter actuators, tube motors, relays, dual-tariff meters, thermal
+  cameras, tamper contacts, Victron/Develco device names).
+
 ## [0.9.76] - 2026-07-12
 
 ### Added
