@@ -6,6 +6,20 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.62] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 198 new keywords and 169 new icon mappings.
+  Grew the three thinnest label categories (air_quality, switches, humidity)
+  with air-purifier/particulate/VOC/pollen terms and sensor chips, smart
+  switch/relay/plug brands and models (Shelly/Sonoff/Zooz/Inovelli/Tapo/
+  Meross/Aqara), and humidity/hygrometer/dehumidifier/dew-point terminology.
+  Added icon-driven device concepts from previously unused smart-home MDI
+  icons and further real device/platform synonyms from ZHA/Matter/Zigbee
+  ecosystems (Aqara/Eve/IKEA/tado/SIEGENIA/Tuya/SELVE tubular motors,
+  handles, blinds, charging stations). All icons validated against the MDI
+  metadata set (no invented names).
+
 ## [0.9.61] - 2026-07-12
 
 ### Added
