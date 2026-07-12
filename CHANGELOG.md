@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.79] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 167 new keywords and 165 new icon mappings.
+  Focus categories temperature, cost and presence (room/sensor-IC/heating and
+  beverage temperature terms; taxes, loan/interest, price and fee terms; mmWave
+  radar hardware, network/BLE-tag presence and bed/seat occupancy), plus a set of
+  real device/platform synonyms (Fibaro/Qubino/Danfoss/Somfy/Elero window and
+  cover drives, Homematic/Nanoleaf/Govee/Innr lights, MyQ/Chamberlain garage
+  doors, Danalock/ekey locks, Ubiquiti/Frigate cameras, Yamaha/WiiM media).
+
 ## [0.9.78] - 2026-07-12
 
 ### Added
