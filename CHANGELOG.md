@@ -6,6 +6,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.64] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 168 new keywords and 141 new icon mappings.
+  Grew the three thinnest label categories (temperature, cameras, scenes) with
+  temperature sensor chips and thermometer/probe types (SHT40/MCP9808/TMP117,
+  brewing/3D-printing/engine/oven probes), camera types and features (speed/
+  mini/eyeball dome, varifocal, WDR/HDR, AI line-crossing and people counting,
+  NVR/DVR recording, RTSP/H.265 streaming, PTZ, brands like Frigate/Scrypted/
+  Mobotix/Axis/Nest), and scene/mood names (drink occasions, music/audio
+  evenings, themed parties, times-of-day, cooking events). Added real
+  cross-ecosystem device synonyms with icons from Zigbee/Matter/Aqara/Shelly/
+  Eve catalogs (dew-point sensors, mop robots, presence detectors, phase-cut
+  dimmers, door/window contacts, garden heat pumps, water shutoff valves).
+
 ## [0.9.63] - 2026-07-12
 
 ### Added
