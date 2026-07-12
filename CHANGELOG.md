@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.73] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 133 new keywords and 156 new icon mappings.
+  Focus categories scripts, leak and climate, plus device/platform synonyms
+  (ZHA/Matter/Aqara/Shelly/SIEGENIA etc.) and icon-only mappings for existing
+  keywords that previously fell back to a generic icon.
+
 ## [0.9.72] - 2026-07-12
 
 ### Added
