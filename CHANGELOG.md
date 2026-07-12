@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.67] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 154 new keywords and 145 new icon mappings.
+  Grew the three thinnest label categories: battery (cell chemistries like
+  LiFePO4/NMC/LTO/sodium-ion, UPS/backup-power terms, coin-cell formats,
+  kWh storage/inverter batteries, SoC/DoD/cycle-count metrics, super/ultra
+  capacitors), weather (meteorological terms — dew point, fronts, pressure
+  tendency, precipitation types, gusts, cloud ceiling, advisories) and media
+  (streaming platforms/renderers like Bluesound/Navidrome/Music Assistant/
+  DLNA renderer plus AV playback terms — subtitles, audio track, playlist,
+  channel list, speaker groups). Also added real device/platform synonyms from
+  ZHA/Zigbee2MQTT/Matter ecosystems (Sonoff ZBMINI, mmWave 24/60 GHz presence,
+  SMA/Huawei/E3DC/SENEC/sonnen inverters and storage, universal actuators,
+  tank/cistern level sensors, CO2/PM10 meters, phase switching).
+
 ## [0.9.66] - 2026-07-12
 
 ### Added
