@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.63] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 195 new keywords and 163 new icon mappings.
+  Grew the three thinnest label categories (automations, motion, light_level)
+  with trigger/condition/flow-node terms, mmWave/radar presence sensors and
+  chips (LD2410/LD2450, mmWave, ToF, fall-detection radar), and lux/UV/
+  illuminance terms. Added cross-category smart-home devices with icons
+  (tools, kitchen items, car parts, groceries) and real ecosystem device
+  synonyms (shutter/blind/curtain actuators, radiator actuators, metering
+  plugs, valve controllers) from Zigbee/Matter/Aqara/Shelly/Eve catalogs.
+
 ## [0.9.62] - 2026-07-12
 
 ### Added
