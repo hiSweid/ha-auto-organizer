@@ -6,6 +6,23 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.68] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 132 new keywords and 127 new icon mappings.
+  Grew the three thinnest label categories: vacuums (robot-vacuum brands/models,
+  accessories like brush rolls, mop pads, dust bags, suction turbines, cleaning
+  and maintenance terms, navigation/cleaning modes, and error/status states such
+  as stuck/tangled/tipped-over/bin-full/dock-lost), updates (firmware/software
+  versioning, release channels like stable/beta/nightly, HA-specific update terms
+  for core/supervisor/os/addon, and update states like installing/pending-reboot),
+  and air_quality (pollutants and gases — formaldehyde, benzene, PM1/PM2.5/PM10,
+  NOx/TVOC — air-purifier terms, pollen/allergens, AQI/CAQI indices, and air-quality
+  sensor brands like Airthings/Awair/uHoo). Also added real device/platform synonyms
+  from smart-home ecosystems (Aqara, Shelly, Eve, tado, IKEA/Tradfri, ZHA/Matter),
+  and enriched 13 existing keywords with dedicated icons (e.g. giesscomputer,
+  ozonsensor, wegeleuchte, einspeisezaehler, schluesseltresor).
+
 ## [0.9.67] - 2026-07-12
 
 ### Added
