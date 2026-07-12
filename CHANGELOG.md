@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.76] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 148 new keywords and 114 new icon mappings.
+  Focus categories media, updates and air_quality, plus real device/platform
+  synonyms (Aqara/Eve/IKEA/tado/Shelly/Homematic/Eltako/Nodon switches, WLED/DALI
+  lighting, window-handle brands, energy meters, home batteries, robot
+  mowers/vacuums, AV/HiFi brands, air purifiers and ventilation units).
+
 ## [0.9.75] - 2026-07-12
 
 ### Added
