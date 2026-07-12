@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.60] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 175 new keywords and 81 new icon mappings.
+  Grew the three thinnest label categories (weather, scripts, shopping) with
+  rare weather phenomena/cloud types, automation-platform/routine terminology
+  and delivery-service/grocery/pantry terms, added a batch of smart-home MDI
+  icon-to-keyword mappings, plus real device/platform synonyms from
+  ZHA/Matter/Zigbee ecosystems (Aqara U200/U300 & E1 locks, IKEA Fyrtur/
+  Praktlysing blinds, SwitchBot curtain/lock/plug, Reolink/Eufy doorbells,
+  SkyConnect/SLZB Zigbee coordinators, etc.). All icons validated against the
+  MDI metadata set (no invented names).
+
 ## [0.9.59] - 2026-07-12
 
 ### Added
