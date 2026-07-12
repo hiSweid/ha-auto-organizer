@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.78] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 204 new keywords and 198 new icon mappings.
+  Focus categories shopping, scenes and humidity (grocery/delivery/restock and
+  brand terms, light-scene/mood/routine names, humidity-sensor chips, hygrometer
+  brands and room-moisture terms), a sweep of previously uncovered smart-home MDI
+  icons, and real device/platform synonyms (balcony-power-plant storage, radon
+  detectors, video door stations, Lutron Caseta/Pico, shunt/converter meters,
+  wallbox enable, blackout blinds, gate/barrier drives, leak sensors).
+
 ## [0.9.77] - 2026-07-12
 
 ### Added
