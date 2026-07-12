@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.80] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 166 new keywords and 180 new icon mappings.
+  Focus categories scripts, energy and waste (script/macro/routine and job
+  scheduling terms; power-factor, meter, transformer, storage and forecast terms;
+  compost, collection-day, recycling and hazardous-waste terms), plus a set of
+  real device/platform synonyms and icon-only additions for existing keywords
+  (fans, lights, appliances, media, garden and water devices) that previously
+  fell back to their generic domain icon.
+
 ## [0.9.79] - 2026-07-12
 
 ### Added
