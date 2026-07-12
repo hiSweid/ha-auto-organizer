@@ -6,7 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-## [0.9.71] - 2026-07-12
+## [0.9.72] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 141 new keywords and 138 new icon mappings.
+  Expanded the three smallest categories — `automations` (triggers, helpers,
+  geofence/zone events, brand remotes), `locks` (smart-lock brands/models,
+  cylinder and safe terms) and `temperature` (sensor ICs, degree-day and
+  weather-day terms, process/junction temperatures) — plus real
+  device/platform synonyms from Zigbee/Matter/brand ecosystems.
+
+
 
 ### Added
 - Incremental vocabulary batch: 184 new keywords and 184 new icon mappings.
