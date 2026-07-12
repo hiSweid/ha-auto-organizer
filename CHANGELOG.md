@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.75] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 173 new keywords and 149 new icon mappings.
+  Focus categories fans, vacuums and battery, plus real device/platform
+  synonyms (Aqara/Eve/IKEA/tado/Shelly/Homematic taster, dimmers, actuators,
+  meter reading heads, radio motion/presence sensors etc.).
+
 ## [0.9.74] - 2026-07-12
 
 ### Added
