@@ -6,6 +6,20 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.61] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 128 new keywords and 138 new icon mappings.
+  Grew the three thinnest label categories (vacuums, presence, updates) with
+  robot-vacuum brands/parts/mopping terms, presence-detection systems
+  (mmWave/ESPresense/LD2410) and away/arrival concepts, and firmware/OTA/
+  version/release-channel terminology. Added real device/platform synonyms
+  from ZHA/Matter/Zigbee ecosystems (Aqara/Eve/IKEA/tado/Shelly/SIEGENIA/
+  Tuya window handles, dimmers, blinds, sirens, LED strips) and icon-only
+  mappings for existing keywords that still fell back to a generic icon
+  (fans, blinds, locks, doorbells, smoke detectors). All icons validated
+  against the MDI metadata set (no invented names).
+
 ## [0.9.60] - 2026-07-12
 
 ### Added
