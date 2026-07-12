@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.59] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 196 new keywords and 194 new icon mappings.
+  Grew the three thinnest label categories (covers, fans, battery) with
+  shutter/blind/awning/gate, ventilation/exhaust/blower and
+  battery-chemistry/charge-state/power-station terminology, added a batch of
+  smart-home MDI icon-to-keyword mappings, plus real device/platform synonyms
+  from ZHA/Matter ecosystems (fingerbot, mmwave presence, valve actuators,
+  keypad locks, etc.). All icons validated against the MDI metadata set (no
+  invented names).
+
 ## [0.9.58] - 2026-07-11
 
 ### Added
