@@ -6,6 +6,16 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.70] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 35 new keywords and 39 new icon mappings.
+  Expanded the `cameras` category with brands, NVR/surveillance platforms and
+  camera features (Frigate NVR, Scrypted, Nest Doorbell/Hello, Blink, Axis,
+  Mobotix, Avigilon, thermal camera, object tracking, face database, etc.), and
+  filled icon gaps on existing device keywords (akku, abwesenheit,
+  aktualisierung, abfall, abgastemperatur, ac verbrauch).
+
 ## [0.9.69] - 2026-07-12
 
 ### Added
