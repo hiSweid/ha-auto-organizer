@@ -6,7 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-## [0.9.64] - 2026-07-12
+## [0.9.65] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 180 new keywords and 172 new icon mappings.
+  Grew the three thinnest label categories: waste (bin/collection/recycling
+  and disposal-app terms), scripts (sequence/routine/procedure/macro names),
+  and water (sprinkler/valve/pump types, pressure tank, pond/well/hydrant/
+  filter terms). Added real device/platform synonyms from ZHA/Zigbee2MQTT/
+  Matter ecosystems (roller-shutter motors, glass/touch wall switches,
+  radiator thermostats and actuators, window-contact/shock sensors, wallbox
+  controllers, Zigbee bridges/sticks) and mapped previously unused MDI icons
+  to smart-home terms (cloud sync states, lock add/remove, color picker,
+  battery charge/discharge, turn-signal indicators).
 
 ### Added
 - Incremental vocabulary batch: 168 new keywords and 141 new icon mappings.
