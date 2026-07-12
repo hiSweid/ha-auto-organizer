@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.71] - 2026-07-12
+
+### Added
+- Incremental vocabulary batch: 184 new keywords and 184 new icon mappings.
+  Expanded the three smallest categories — `shopping` (groceries, payment
+  methods, store types), `scenes` (mood/lighting/seasonal scenes) and
+  `presence` (location, geofence, occupancy terms) — plus a batch of
+  smart-home-relevant MDI icon mappings and real device/platform synonyms
+  (Zigbee/Matter/brand device terms). Also filled icon gaps on existing
+  keywords. Dropped the overly generic brand keyword `shelly` (ambiguous
+  across relays, energy meters and dimmers).
+
 ## [0.9.70] - 2026-07-12
 
 ### Added
