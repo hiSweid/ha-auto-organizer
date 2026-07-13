@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.97] - 2026-07-13
+
+### Added
+- **153 new keywords and 134 new specific icons.** Incremental vocabulary
+  growth across the three smallest categories — scenes (named mood/routine
+  scenes and ambiance phrases), humidity (thermo-hygrometer models such as
+  Govee H5101/H5103, SwitchBot Meter Pro, ThermoPro TP55, sensor chips and
+  per-room humidity phrases), and leak (water-leak/flood detectors and shutoff
+  phrases like Moen Smart Water, Meross/Onvis/Leviton water sensors, dripping
+  pipe/faucet, wet floor/wall) — plus a batch of real device/ecosystem
+  synonyms across presence, lights, covers, climate, locks, energy, vacuums
+  and garden (Aqara FP2/T1 presence, Ubisys S1/J1, IKEA DIRIGERA, Eve
+  Energy/Aqua/Thermo, Hörmann gate drive, wischsaugroboter, and more).
+  Physical scene-controller buttons, tank-level sensors and ambiguous generic
+  valves/plugs were deliberately excluded to avoid mislabeling.
+
 ## [0.9.96] - 2026-07-13
 
 ### Added
