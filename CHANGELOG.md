@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.85] - 2026-07-13
+
+### Added
+- Incremental vocabulary batch: 107 new keywords and 96 new icon mappings.
+  Focus categories water, switches and automations (irrigation and pool gear
+  like Regentonne/Zisterne/Tauchpumpe/Rasensprenger/Versenkregner, water
+  boilers and pumps; switch/actuator terms like Reedschalter/Halbleiterrelais/
+  Zeitschaltuhr and plug/switch brands Tapo/Meross/Lutron/Third Reality/Leviton;
+  automation logic like Zustandsautomat/Schrittkette/Boolean gates AND/OR/XOR,
+  frost- and shading-automatics, ESPHome/Zigbee2MQTT triggers), plus device
+  synonyms across lights, covers, network, media and other domains (mmWave
+  presence, tubular/shade motors, EV wall connectors, mesh/network switches).
+
 ## [0.9.84] - 2026-07-13
 
 ### Added
