@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.90] - 2026-07-13
+
+### Added
+- **104 new keywords and 61 new specific icons.** Incremental vocabulary
+  growth focused on the three smallest categories — temperature (sensor chips
+  like si7021/bme280, brand thermostats, culinary/industrial temperature
+  terms), waste (commercial-waste ordinances, bin/collection terms,
+  recycling schemes, food-waste digesters), leak (water/gas/flood detector
+  brands and models such as WaterCop, FloodStop, Fibaro FGFS, Milesight
+  EM300, plus pipe/pressure/gas-leak vocabulary).
+
 ## [0.9.89] - 2026-07-13
 
 ### Added
