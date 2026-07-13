@@ -6,7 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-## [0.9.90] - 2026-07-13
+## [0.9.91] - 2026-07-13
+
+### Added
+- **128 new keywords and 109 new specific icons.** Incremental vocabulary
+  growth across the three smallest categories — motion (mmWave/radar chips
+  like HLK-LD2450, presence-sensor brands, pet-immune and multi-zone radar
+  terms), lights (LED brands milight/miboxer/lohas/feit/cree, ring/studio/
+  stage/blacklight fixtures, seasonal Schwibbogen/Adventsbeleuchtung), and
+  shopping (grocery/drugstore delivery, staple food items, order/return and
+  best-before vocabulary) — plus real device/platform synonyms (window-handle
+  and gate-motor sensors, inverters, boilers, soundbars, bollard lights) and a
+  batch of validated MDI-icon-backed terms.
+
 
 ### Added
 - **104 new keywords and 61 new specific icons.** Incremental vocabulary
