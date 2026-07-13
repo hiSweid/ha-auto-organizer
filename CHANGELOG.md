@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.96] - 2026-07-13
+
+### Added
+- **167 new keywords and 166 new specific icons.** Incremental vocabulary
+  growth across the three smallest categories — battery (storage/BMS brands
+  like Fox ESS, Enphase IQ, LG RESU, Victron SmartShunt and Orion/JBD/ANT BMS,
+  plus cell codes and terms like coulombic efficiency, sulfation, capacity
+  fade), motion (real mmWave/PIR/accelerometer chips such as LD2413, LD1115,
+  DFRobot C4001, Apollo MSR2, ADXL345, MLX90640, plus radar gate/energy and
+  wifi-sensing terms), and temperature (sensor ICs like TMP36, ADT7420,
+  DS1631, grill/BBQ probes, and radiant/globe/refrigerant temperature terms) —
+  plus a batch of real device/ecosystem synonyms across network, lights,
+  switches, energy, water, climate, covers, cameras, presence, security and
+  more (range extenders, metering sockets, load-shedding relays, bollard
+  lights, pool cleaning robots, intercom modules, storm protection).
+
 ## [0.9.95] - 2026-07-13
 
 ### Added
