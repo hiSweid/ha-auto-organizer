@@ -6,7 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-## [0.9.94] - 2026-07-13
+## [0.9.95] - 2026-07-13
+
+### Added
+- **135 new keywords and 124 new specific icons.** Incremental vocabulary
+  growth across the three smallest categories — air_quality (aerosols, spores,
+  allergens, gas/particulate concentration terms), automations (weekly/window
+  schedules, hysteresis, macro/loop/chaining flows, sunset/brightness/presence/
+  motion switching triggers), and light_level (luminance sensors, lux
+  range/limit/data, twilight and indoor/outdoor brightness) — plus a batch of
+  smart-home icons (grills, ovens, snow removal tools, patio heater, scent
+  diffusers, workshop lamps) and real device/ecosystem synonyms (scene
+  controllers, clamp meters, IR blasters, Thread border routers, valve
+  actuators, salt/pressure-boost water systems).
 
 ### Added
 - **104 new keywords and 102 new specific icons.** Incremental vocabulary
