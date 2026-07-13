@@ -6,6 +6,23 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.93] - 2026-07-13
+
+### Added
+- **151 new keywords and 154 new specific icons.** Incremental vocabulary
+  growth across the three smallest categories — scripts (shell/regex/cron
+  constructs, concurrency primitives like mutex/semaphore/deadlock, retry and
+  watchdog/self-healing logic, scheduler and job-queue terms), locks (cylinder
+  and latch internals, key variants, trailer/hasp locks, access-schedule and
+  invalid-code states, Dessmann/Mijia lock naming) and vacuums (mopping and
+  dock-heating features, brush types, obstacle/AI navigation, wear indicators,
+  Dreame/Ecovacs model names). Plus a device-synonym pass covering real
+  ZHA/Zigbee2MQTT and Homematic IP device names (IKEA RODRET/SOMRIG/PARASOLL,
+  Sonoff SNZB, Ubiquiti G4 doorbell, Aqara, Homematic IP actors/sensors),
+  including icon-only additions for existing keywords that previously fell back
+  to the generic domain icon (rodret, somrig, parasoll, soil sensor, ir
+  blaster, mmwave, lux sensor).
+
 ## [0.9.92] - 2026-07-13
 
 ### Added
