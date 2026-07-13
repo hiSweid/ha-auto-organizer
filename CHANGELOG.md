@@ -6,6 +6,16 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.81] - 2026-07-13
+
+### Added
+- Incremental vocabulary batch: 145 new keywords and 146 new icon mappings.
+  Focus categories motion, locks and cameras (PIR/mmWave/radar and presence-motion
+  terms; smart-lock, deadbolt, cylinder and lock-brand terms like Nuki/Yale/Danalock;
+  surveillance/IP/PTZ/doorbell-camera terms and brands like Reolink/Hikvision/UniFi/
+  Frigate), plus 35 icon-only additions to existing device-synonym keywords
+  (Aqara, IKEA Dirigera, Sonoff, Meross, Levoit and cover/lock/fan/valve terms).
+
 ## [0.9.80] - 2026-07-12
 
 ### Added
