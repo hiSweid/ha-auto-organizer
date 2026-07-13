@@ -620,8 +620,10 @@ def test_oil_price_keyword():
 
 
 def test_ble_temp_keyword():
-    # "ble temp" (climate) and the generic " temp " (temperature) both apply
-    assert names(FakeEntry("sensor.buero_ac_ble_temp")) == ["Temperatur", "Klima"]
+    # "ble temp" (climate) and the generic " temp " (temperature) both apply;
+    # the longer, more specific "ble temp" now takes priority (see
+    # KEYWORD_LABELS_BY_LENGTH in rules.py).
+    assert names(FakeEntry("sensor.buero_ac_ble_temp")) == ["Klima", "Temperatur"]
 
 
 def test_new_domains():
@@ -896,6 +898,28 @@ def test_new_specific_icon_words():
     }
     for eid, expected in cases.items():
         assert icon_for(FakeEntry(eid), opts) == expected, eid
+
+
+def test_suggest_entity_icon_longer_keyword_beats_shorter_substring():
+    from rules import suggest_entity_icon
+    # Regression test for the "first match in dict order wins" bug: a
+    # generic keyword ("power" -> mdi:power) must not shadow a more specific
+    # compound word ("powerwall" -> mdi:home-battery) that contains it as a
+    # substring, no matter which one was merged into KEYWORD_LABELS first.
+    entry = FakeEntry("sensor.tesla_powerwall_soc")
+    assert suggest_entity_icon(entry, OrganizerOptions()) == "mdi:home-battery"
+
+
+def test_keyword_labels_by_length_is_sorted_and_complete():
+    # KEYWORD_LABELS_BY_LENGTH is what makes the longest-match fix above
+    # (and the equivalent priority fix in _collect_label_keys) actually
+    # take effect — guard its two invariants directly so a future refactor
+    # can't silently regress back to dict-insertion-order matching.
+    pairs = rules.KEYWORD_LABELS_BY_LENGTH
+    assert len(pairs) == len(rules.KEYWORD_LABELS)
+    assert dict(pairs) == rules.KEYWORD_LABELS
+    lengths = [len(needle) for needle, _key in pairs]
+    assert lengths == sorted(lengths, reverse=True)
 
 
 def test_no_false_positive_smartlockdown_and_ofenrohr():

@@ -6,6 +6,20 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.87] - 2026-07-13
+
+### Fixed
+- Keyword matching in `suggest_entity_icon()` and `_collect_label_keys()` now
+  prefers the longest matching keyword instead of the first one found in
+  dict insertion order. Previously a generic keyword (e.g. "power") could
+  silently shadow a more specific compound word (e.g. "powerwall") that
+  contains it as a substring, giving the entity the wrong icon or the wrong
+  label priority under the `max_labels` cap — and since icons are only ever
+  set once, the wrong icon stuck permanently. Fixes e.g.
+  `sensor.tesla_powerwall_soc` getting `mdi:power` instead of
+  `mdi:home-battery`. The fix applies regardless of the order future
+  vocabulary batches get merged in.
+
 ## [0.9.86] - 2026-07-13
 
 ### Added

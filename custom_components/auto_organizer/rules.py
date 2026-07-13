@@ -31644,6 +31644,19 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
 
 }
 
+# KEYWORD_LABELS sorted longest-needle-first so callers that stop at the
+# first match (suggest_entity_icon) or that care about match priority
+# (_collect_label_keys, under the max_labels cap) prefer the most specific
+# keyword rather than whichever happens to sit earlier in dict insertion
+# order. A generic word like "power" and a specific compound like
+# "powerwall" can both be substrings of the same entity name; without this,
+# whichever was added to the dict first would always win, silently shadowing
+# the other's icon/label forever (the fix stays correct regardless of the
+# order new vocabulary batches get merged in).
+KEYWORD_LABELS_BY_LENGTH: Final[tuple[tuple[str, str], ...]] = tuple(
+    sorted(KEYWORD_LABELS.items(), key=lambda item: len(item[0]), reverse=True)
+)
+
 # Known vehicle/model names; matched as whole words in entity_id/name and
 # always labeled "car" (even when a device_class also applies).
 CAR_NAME_KEYWORDS: Final[tuple[str, ...]] = (
@@ -31958,7 +31971,10 @@ def _collect_label_keys(
     integration platform, or keyword) — more specific than the label key
     it maps to, and used to look up a more specific icon in
     :data:`SPECIFIC_ICONS`. Shared by :func:`compute_label_specs` and
-    :func:`suggest_entity_icon` so both stay in sync.
+    :func:`suggest_entity_icon` so both stay in sync. Keyword needles are
+    checked longest-first (see :data:`KEYWORD_LABELS_BY_LENGTH`) so a
+    compound word's label takes priority over a shorter substring under the
+    ``max_labels`` cap.
     """
     keys: list[str] = []
     reasons: list[str] = []
@@ -32013,10 +32029,12 @@ def _collect_label_keys(
                 entry, "original_name", None
             )
             hay = _normalize(f"{entry.entity_id} {ename or ''}")
-            for needle, key in options.custom_rules.items():
+            for needle, key in sorted(
+                options.custom_rules.items(), key=lambda item: len(item[0]), reverse=True
+            ):
                 if needle in hay:
                     add(key, reason=needle)
-            for needle, key in KEYWORD_LABELS.items():
+            for needle, key in KEYWORD_LABELS_BY_LENGTH:
                 if needle in hay:
                     add(key, reason=needle)
 
@@ -32055,11 +32073,13 @@ def suggest_entity_icon(
     """Return a more specific icon for the entity, if one is known.
 
     Checked in order from most to least specific: keyword/custom-rule (a
-    named device like "Kaffeemaschine" or "Wohnzimmer TV") > source
-    integration (e.g. "spotify", "nuki" — the actual product/service) >
-    device_class > bare HA domain (the broadest fallback, e.g. every
-    ``light.*`` entity). Unlike label matching, this always checks keywords
-    first regardless of whether a domain/device_class already matched,
+    named device like "Kaffeemaschine" or "Wohnzimmer TV", longest matching
+    keyword wins so a compound like "powerwall" isn't shadowed by a shorter
+    substring like "power") > source integration (e.g. "spotify", "nuki" —
+    the actual product/service) > device_class > bare HA domain (the
+    broadest fallback, e.g. every ``light.*`` entity). Unlike label
+    matching, this always checks keywords first regardless of whether a
+    domain/device_class already matched,
     since a keyword names the actual device while the domain only names its
     HA category. Every domain in :data:`DOMAIN_LABELS` has an entry in
     :data:`SPECIFIC_ICONS`, so this only returns ``None`` for an excluded
@@ -32080,12 +32100,12 @@ def suggest_entity_icon(
     ename = getattr(entry, "name", None) or getattr(entry, "original_name", None)
     hay = _normalize(f"{entry.entity_id} {ename or ''}")
 
-    for needle in options.custom_rules:
+    for needle in sorted(options.custom_rules, key=len, reverse=True):
         if needle in hay:
             icon = SPECIFIC_ICONS.get(needle.strip())
             if icon:
                 return icon
-    for needle in KEYWORD_LABELS:
+    for needle, _key in KEYWORD_LABELS_BY_LENGTH:
         if needle in hay:
             icon = SPECIFIC_ICONS.get(needle.strip())
             if icon:
