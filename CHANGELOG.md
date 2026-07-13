@@ -6,6 +6,26 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.98] - 2026-07-13
+
+### Added
+- **182 new keywords and 171 new specific icons.** Incremental vocabulary
+  growth across the three smallest categories — cameras (brand cams like
+  SimpliSafe/Somfy Outdoor, Docker Wyze bridge, IR/night-vision range,
+  pre/post-alarm recording), shopping (returns/refunds, pre-order, sold out,
+  wholesale, price match, next-day delivery, self checkout, garden centre,
+  Christmas market), and energy (inverter/meter brands such as RCT Power, SAX
+  Power, Carlo Gavazzi, Powerfox, SolarFlow, direct marketing, micro/smart
+  grid, ammeter) — plus real device/ecosystem synonyms (Velux Integra, Fibaro
+  shutter, SwitchBot hub/bot, Tapo/LIFX/Nanoleaf lights, Osram/Theben/Eltako
+  switches, SolarEdge/Sofar/Growatt/Sungrow/Enphase inverters, Pylontech,
+  Tibber Pulse, Yale Doorman, Tedee, LOQED, Gardena smart, Warema) and a batch
+  of untapped smart-home MDI icons (blinds-vertical, coach-lamp, power-socket,
+  fuse-blade, portable generator, pool/snowflake thermometer, weather
+  hurricane/tornado/sunset, industrial fridge, wireless speaker, car door lock).
+  Several existing brand keywords gained their first icon. All collision-checked
+  against 50k DE/EN frequency lists; tests green.
+
 ## [0.9.97] - 2026-07-13
 
 ### Added
