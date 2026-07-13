@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.84] - 2026-07-13
+
+### Added
+- Incremental vocabulary batch: 140 new keywords and 140 new icon mappings.
+  Focus categories vacuums, battery and light_level (robot vacuum brands like
+  Coredy/Winbot/Mamibot/Neabot, ToF/AIVI/TrueDetect navigation, pet-hair and
+  filter terms; home-battery brands Dyness/Pytes/Relion/Litime, BMS chips
+  Daly/JK/Seplos, fuel-gauge ICs MAX17048/BQ27441, cell formats 4680/CR1632;
+  ambient-light sensor ICs RPR0521/BH1780/TSL2585, lux-sensor brands and
+  luminance/illuminance terms), plus device synonyms across media, climate,
+  garden and other domains (incl. Alfen EV charger).
+
 ## [0.9.83] - 2026-07-13
 
 ### Added
