@@ -6,6 +6,20 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.94] - 2026-07-13
+
+### Added
+- **104 new keywords and 102 new specific icons.** Incremental vocabulary
+  growth across the three smallest categories — fans (heat/energy recovery
+  ventilators, extractor/chimney hoods, tower/pedestal/bladeless fans, cross-flow
+  and tangential blowers, HVAC brands like Dyson/Vornado/Meaco), garden (robotic
+  mowers and brands Gardena/Husqvarna/Worx/Navimow, drip/greenhouse/raised-bed
+  terms, fruit trees and plant sensors), and presence (mmWave radar modules
+  LD2412/LD2413/MR60 and brands Aqara FP1/FP2/Everything Presence, geofence and
+  room-occupancy logic, tracker platforms Owntracks/Overland/Traccar) — plus a
+  batch of real-world device/ecosystem synonyms (IKEA Styrbar/Rodret, Nuki Go/
+  Ultra, Shelly/Sonoff/Aqara/Eve/Moes device names).
+
 ## [0.9.93] - 2026-07-13
 
 ### Added
