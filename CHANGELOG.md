@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.83] - 2026-07-13
+
+### Added
+- Incremental vocabulary batch: 209 new keywords and 206 new icon mappings.
+  Focus categories fans, air_quality and network (extract/supply ventilation, cooker
+  hoods and fan brands like Fantech/Hunter/Big Ass Fans; CO/CO2 sensor chips like
+  CozIR/SenseAir, VOC/particulate/pollen/odour terms; VLAN, DNS, firewall, PoE, VPN
+  and router brands like Tenda/EdgeRouter/SonicWall), plus an MDI icon-assignment
+  pass across media, car, garden, security and locks, and a device-synonym pass adding
+  common product terms (window handle, dimmer relay, presence sensor, pool pump,
+  skylight motor, portable power station).
+
 ## [0.9.82] - 2026-07-13
 
 ### Added
