@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.89] - 2026-07-13
+
+### Added
+- **179 new keywords and 173 new specific icons.** Incremental vocabulary
+  growth focused on the three smallest categories — humidity (condensation,
+  mold, hygrometer chips and models), water (boilers, pumps, valves, tank
+  levels, aquarium/pond water quality), weather (wind, cloud types,
+  pressure, precipitation) — plus a batch of real device/platform synonyms
+  across ecosystems (Aqara, Gardena, IKEA Tradfri, Shelly, Sonoff, Jung,
+  Fronius/Kostal inverters, EV chargers, and more).
+
 ## [0.9.88] - 2026-07-13
 
 ### Fixed
