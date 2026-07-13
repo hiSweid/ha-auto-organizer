@@ -167,6 +167,11 @@ async def async_setup_entry(
         entry=entry,
         organizer=organizer,
         options_factory=lambda: _options_from_entry(hass, entry),
+        # Seed from the configured default so a fresh (never-toggled) switch
+        # doesn't silently start as "off" and override an explicitly
+        # configured dry-run default with real writes. The dry-run switch's
+        # RestoreEntity still wins once it restores an actual prior state.
+        dry_run=entry.options.get(CONF_DRY_RUN, DEFAULT_DRY_RUN),
     )
     entry.runtime_data = runtime
 

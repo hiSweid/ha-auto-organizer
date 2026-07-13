@@ -57,6 +57,13 @@ class CleanupButton(_BaseButton):
 class RemoveAllButton(_BaseButton):
     """Remove EVERY label in Home Assistant (not just managed ones)."""
 
+    # Irreversible and not limited to this integration's own labels — an
+    # accidental tap (e.g. in the mobile app's device dialog) wipes the
+    # entire label structure with no undo. Off by default; the user must
+    # deliberately enable it. Still reachable via the auto_organizer.remove_all
+    # service regardless of this entity's enabled state.
+    _attr_entity_registry_enabled_default = False
+
     def __init__(self, runtime: AutoOrganizerRuntime) -> None:
         super().__init__(runtime, "remove_all", "mdi:label-off")
 

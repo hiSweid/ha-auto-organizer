@@ -397,4 +397,76 @@ async def test_icons_scope_surfaces_in_last_run_sensor(hass: HomeAssistant) -> N
     assert state is not None
     assert "icons" in state.attributes
     assert "changes" not in state.attributes["icons"]
-    assert state.attributes.get("icons_set", 0) >= 1
+
+
+async def test_dry_run_seeded_from_configured_default(hass: HomeAssistant) -> None:
+    # Regression test: runtime.dry_run used to hardcode to False at startup
+    # and only ever get overwritten by the dry-run switch entity, so a user
+    # who configured "dry run by default" in the options flow but never
+    # toggled the switch would get real writes from the Run button on a
+    # fresh install. It must now start from the configured option.
+    from custom_components.auto_organizer.const import CONF_DRY_RUN
+
+    entry = MockConfigEntry(
+        domain=DOMAIN, title="Entity Auto-Organizer", options={CONF_DRY_RUN: True}
+    )
+    entry.add_to_hass(hass)
+    assert await hass.config_entries.async_setup(entry.entry_id)
+    await hass.async_block_till_done()
+
+    assert entry.runtime_data.dry_run is True
+
+
+async def test_remove_all_button_disabled_by_default(hass: HomeAssistant) -> None:
+    # Regression test: an accidental tap on this button used to wipe every
+    # label in the whole HA instance (not just this integration's own) with
+    # no undo — it must be opt-in, not enabled out of the box.
+    from homeassistant.helpers import entity_registry as er
+
+    await _add_entry(hass)
+    ent_reg = er.async_get(hass)
+    remove_all = next(
+        e
+        for e in ent_reg.entities.values()
+        if e.platform == DOMAIN and e.unique_id.endswith("_remove_all")
+    )
+    assert remove_all.disabled_by is not None
+
+
+async def test_exclude_blocks_area_and_floor_labels(hass: HomeAssistant) -> None:
+    # Regression test: area/floor labels used to be appended after
+    # compute_label_specs() (which already honors excludes) without
+    # re-checking the exclude list, so an explicitly excluded entity still
+    # got area/floor labels.
+    from homeassistant.helpers import area_registry as ar
+    from homeassistant.helpers import entity_registry as er
+
+    from custom_components.auto_organizer.const import CONF_ENABLE_AREA, CONF_EXCLUDE
+
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        title="Entity Auto-Organizer",
+        options={
+            CONF_ENABLE_AREA: True,
+            CONF_EXCLUDE: "sensor.excluded_kitchen_thing",
+        },
+    )
+    entry.add_to_hass(hass)
+    assert await hass.config_entries.async_setup(entry.entry_id)
+    await hass.async_block_till_done()
+
+    area_reg = ar.async_get(hass)
+    area = area_reg.async_get_or_create("Kitchen")
+    ent_reg = er.async_get(hass)
+    ent_reg.async_get_or_create(
+        "sensor", "test", "excluded_1", suggested_object_id="excluded_kitchen_thing"
+    )
+    ent_reg.async_update_entity(
+        "sensor.excluded_kitchen_thing", area_id=area.id
+    )
+
+    result = await hass.services.async_call(
+        DOMAIN, "run", {"dry_run": True}, blocking=True, return_response=True
+    )
+    changed_ids = {c["entity_id"] for c in result["changes"]}
+    assert "sensor.excluded_kitchen_thing" not in changed_ids

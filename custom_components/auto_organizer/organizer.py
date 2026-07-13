@@ -198,6 +198,13 @@ class Organizer:
         for entry in entries:
             result.scanned += 1
 
+            # User exclusions take priority over everything else — including
+            # area/floor labels, which compute_label_specs() itself can't
+            # guard since they're computed separately below and appended
+            # unconditionally.
+            if is_excluded(entry.entity_id, options.exclude):
+                continue
+
             specs = compute_label_specs(entry, options)
 
             # Area/floor labels apply to any non-diagnostic entity, even when

@@ -6,6 +6,33 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.88] - 2026-07-13
+
+### Fixed
+- **Run/Cleanup/Remove-All now honor a configured dry-run default.**
+  `runtime.dry_run` used to hardcode to `False` at startup and only ever get
+  set from the dry-run switch entity's state. On a fresh install (or before
+  the switch had ever been toggled), pressing "Run now" would write real
+  labels/icons even if "Testlauf (keine Änderungen schreiben)" was enabled
+  in the options flow. It's now seeded from the configured option at setup;
+  the switch's restored state still takes over once it exists.
+- **Excluded entities no longer get area/floor labels.** `exclude` patterns
+  were only checked inside the functional-label matching, not before the
+  area/floor labels that get appended afterwards — an explicitly excluded
+  entity could still pick up its area/floor label. Exclusions are now
+  checked once per entity before any labeling happens.
+
+### Changed
+- The "Remove ALL labels" button is now disabled by default. It deletes
+  every label in the whole Home Assistant instance — not just ones this
+  integration created — with no undo, and Home Assistant buttons have no
+  confirmation dialog. Enable it explicitly if you need it; the
+  `auto_organizer.remove_all` service is unaffected.
+
+### Added
+- Three regression tests covering the fixes above
+  (`tests/integration/test_init.py`).
+
 ## [0.9.87] - 2026-07-13
 
 ### Fixed
