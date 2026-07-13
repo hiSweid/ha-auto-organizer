@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.86] - 2026-07-13
+
+### Added
+- Incremental vocabulary batch: 185 new keywords and 182 new icon mappings.
+  Focus categories scenes, covers and security (mood/activity scenes like
+  Filmabend/Guten Morgen/Neonparty/Lichtwecker; cover device types and brands
+  like Raffstore/Kassettenrollo/Schnelllauftor/Somfy/Velux/Warema; security
+  systems and terms like Glasbruchdetektor/Sabotage/Scharfschaltmodus and
+  brands SimpliSafe/Frontpoint/Ring), plus a cross-domain icon batch and real
+  device/platform synonyms from ZHA/KNX/Matter ecosystems (actuators, sensors
+  and meters like Fluegelantrieb/Lueftungsaktor/Zweirichtungszaehler).
+
 ## [0.9.85] - 2026-07-13
 
 ### Added
