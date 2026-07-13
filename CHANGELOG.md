@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.92] - 2026-07-13
+
+### Added
+- **117 new keywords and 109 new specific icons.** Incremental vocabulary
+  growth across the three smallest categories — cost (dynamic/time-of-use and
+  day-ahead tariffs, EPEX/wholesale pricing, SEPA/direct-debit and payment
+  terms, energy-provider billing, LCOE and return-on-capital), updates
+  (firmware release/branch/flash/download flows, Tasmota/Docker/database
+  migrations, security-update and rollout states, changelog and channel
+  vocabulary), and climate (inverter/compressor AC, Buderus/Remeha/Namron/
+  Silvercrest heating and thermostat brands, heating curve and AC remote
+  terms) — plus a real device synonym (network repeater). German and English.
+
 ## [0.9.91] - 2026-07-13
 
 ### Added
