@@ -6,7 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-## [0.9.81] - 2026-07-13
+## [0.9.82] - 2026-07-13
+
+### Added
+- Incremental vocabulary batch: 136 new keywords and 124 new icon mappings.
+  Focus categories automations, leak and updates (Node-RED node names, condition/
+  error-handling and routine terms; gas/CO detector, damp and appliance-leak terms;
+  firmware/patch/release-channel and package-signature terms), plus a device-synonym
+  pass adding common product terms across covers, climate, appliances, network, car
+  and switches (fancoil, sous-vide, managed switch, Type 2, OBD dongle, smart faucet).
 
 ### Added
 - Incremental vocabulary batch: 145 new keywords and 146 new icon mappings.
