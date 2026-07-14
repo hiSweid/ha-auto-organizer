@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.117] - 2026-07-14
+
+### Added
+- Vocabulary growth: 165 new keywords (72 with icon mappings). Category batches
+  for the smallest labels (updates, temperature, weather), a batch of previously
+  unused Material Design Icons, and a batch of real device/platform synonyms
+  (ZHA/Zigbee2MQTT, Matter, brands like Aqara/Eve/IKEA/Shelly/tado/Bosch).
+  KEYWORD_LABELS now totals 21115.
+
 ## [0.9.116] - 2026-07-14
 
 ### Added
