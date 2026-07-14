@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.110] - 2026-07-14
+
+### Added
+- Vocabulary growth: 146 new keywords and 136 icon mappings across the three
+  smallest categories (air_quality, cost, climate) plus a cross-ecosystem
+  device-synonym pass. Adds pollen species and pollutant/vapour terms for
+  air quality, tax/insurance/fee and provider terms for cost, heat-pump and
+  thermostat brand/model and HVAC component terms for climate, and real
+  device names from ZHA/Matter ecosystems (Homematic IP, Aqara, Shelly,
+  Sonoff, IKEA, doorbell/intercom stations, Zigbee coordinators). Total
+  keywords: 20123.
+
 ## [0.9.109] - 2026-07-14
 
 ### Added
