@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.101] - 2026-07-14
+
+### Added
+- **162 new keywords and 119 new specific icons.** Incremental vocabulary
+  growth focused on the three smallest categories (waste, updates, water)
+  plus a batch of previously unused Material Design Icons mapped to smart-home
+  device terms and a batch of real-world device/platform synonyms across
+  ecosystems (ZHA/Zigbee2MQTT, Matter, KNX, Aqara/Eve/Shelly/Tuya). Additions
+  include waste collection and recycling terms, firmware/OTA update vocabulary,
+  water-supply/valve/hot-water terms, and device synonyms such as DIN-rail
+  actuators, ceiling/in-wall speakers, shutter drives and pond aerators.
+
 ## [0.9.100] - 2026-07-14
 
 ### Added
