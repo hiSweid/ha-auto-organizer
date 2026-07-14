@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.100] - 2026-07-14
+
+### Added
+- **147 new keywords and 138 new specific icons.** Incremental vocabulary
+  growth focused on the three smallest categories (car, security, network)
+  plus a batch of real-world device/platform synonyms across ecosystems
+  (ZHA/Zigbee2MQTT, Matter, Aqara/Eve/Shelly/Tuya and alarm-panel brands).
+  Additions include EV charging and model terms, alarm-panel brands and
+  arming/entry-delay vocabulary, networking terms (latency, uplink/downlink,
+  subnet, mesh) and device synonyms such as motorized projector screens,
+  pool covers and water-damage sensors.
+
 ## [0.9.99] - 2026-07-14
 
 ### Added
