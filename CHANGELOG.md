@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.114] - 2026-07-14
+
+### Added
+- Vocabulary growth: 96 new keywords with icon mappings across the three
+  smallest categories (fans, network, locks). Adds ventilation and fan-brand
+  terms (Schwenkventilator, Deckenventilator, Wrasenabzug, Alpenfoehn/Sharkoon
+  cooling fans, ESPHome/Sonoff/Aqara fans), network/telephony terms (VoIP/SIP
+  phones, Fritzfon, Yealink, Snom, Datenvolumen, Netzwerkauslastung), and
+  access-control/lock terms (Handschuhfachschloss, Zuendschloss, palm/face
+  scanners, Schluesselverwaltung, Zutrittshistorie). Total keyword count now
+  20677.
+
 ## [0.9.113] - 2026-07-14
 
 ### Added
