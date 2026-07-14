@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.104] - 2026-07-14
+
+### Added
+- **113 new keywords and 101 new specific icons.** Incremental vocabulary
+  growth focused on the three smallest categories (scripts, fans, temperature)
+  plus MDI-icon coverage and real-world device/platform synonyms. Highlights:
+  fan/blower types and PC/ceiling-fan brands (Arctic, Scythe, NZXT, Atomberg,
+  Crompton, Havells), flow/return/oil/engine/water/soil temperature sensors and
+  probes, script/macro/command-sequence terms, plus assorted appliances,
+  shopping, locks, covers and weather-sensor keywords. Icons validated against
+  MDI metadata and collision-checked against the frequency word lists.
+
 ## [0.9.103] - 2026-07-14
 
 ### Added
