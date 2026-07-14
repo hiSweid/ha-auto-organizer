@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.103] - 2026-07-14
+
+### Added
+- **173 new keywords and 140 new specific icons.** Incremental vocabulary
+  growth focused on the three smallest categories (automations, weather,
+  motion) plus a batch of real-world device/platform synonyms across
+  ecosystems (EV charging brands go-e/Mennekes/Compleo, FRITZ!DECT models,
+  Aqara/SwitchBot device types, mmWave radar modules). Automations gained
+  compound trigger/schedule terms, weather gained meteorological and
+  astronomical vocabulary, motion gained radar/vibration/gesture terms.
+
 ## [0.9.102] - 2026-07-14
 
 ### Added
