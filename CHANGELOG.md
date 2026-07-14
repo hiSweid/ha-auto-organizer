@@ -6,6 +6,23 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.113] - 2026-07-14
+
+### Added
+- Vocabulary growth: 138 new keywords with icon mappings across the three
+  smallest categories (automations, motion, scenes) plus a cross-ecosystem
+  device-synonym pass. Adds switching/timing/ramp and reminder-automation
+  terms (Wechselschaltung, Sanftanlauf, Dimmrampe, Boostmodus, Frostwaechter,
+  Jalousie-/Garagentor-/Torautomatik) for automations; presence-radar and
+  mmWave terms plus motion-sensor brands (Acconeer XM125, AWR1642, Everything
+  Presence One, Innr/Ledvance/Osram/Namron/Opple/Zemismart, target/distance
+  gating) for motion; light-scene and mood names (Kerzenschimmer, Milchstrasse,
+  Regenwald, Backabend, Werkstatt, Journaling, Heiligabend) for scenes; and
+  real device synonyms (heat pumps: Viessmann Vitocal, Daikin Altherma,
+  Mitsubishi Ecodan, LG Therma; wallboxes: Alfen Eve, ABL, Webasto, Vestel;
+  BYD/Delta Pro storage, Deye/Sofar inverters, Dreame vacuum, Orbit B-hyve,
+  pellet boilers). Total keywords: 20581.
+
 ## [0.9.112] - 2026-07-14
 
 ### Added
