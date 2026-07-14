@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.115] - 2026-07-14
+
+### Added
+- Vocabulary growth: 119 new keywords with icon mappings across the three
+  smallest categories (security, covers, lights) plus a device-synonym batch.
+  Adds security terms (biometric/iris scanners, ALPR, tamper/duress alarms,
+  dome/turret/facade cameras, security shutter), shutter/awning terms
+  (Gurtwickler, Roma/Warema shutters, patio awnings, conservatory roof, solar
+  shade motor), lighting terms (wall washers, Nanoleaf/LIFX/Hue Signe/Livarno
+  fixtures, floodlights, RGBIC/star projectors) and cross-ecosystem device
+  synonyms (radiator/actuator valves, irrigation valve, dimmer button, Zigbee
+  heating actuator, wallbox power). 119 regression tests added.
+
 ## [0.9.114] - 2026-07-14
 
 ### Added
