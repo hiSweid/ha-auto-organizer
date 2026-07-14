@@ -6,6 +6,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.108] - 2026-07-14
+
+### Added
+- Vocabulary growth: 155 new keywords and 151 icon mappings across the
+  smallest categories (switches, light_level, waste) plus MDI-icon and
+  cross-ecosystem device-synonym passes. Adds switch/plug/relay product
+  names (Shelly Pro, Sonoff, Kasa, Zooz, Inovelli, Schneider Wiser, Feller,
+  MDT, Zennio) and German terms (Schiebeschalter, Pilztaster, Schlüsseltaster,
+  Bistabilrelais, Brandschutzschalter), lux/illuminance sensor chips
+  (OPT4048, BH175x, CM32xx, VCNL4200, APDS93xx) and brightness-sensor
+  synonyms, waste/recycling terms (Mischabfall, Kompostwerk, Wertstoff bins,
+  Absetzmulde, pedal/swing/sensor bins), plus household/lighting/car/food
+  icon vocabulary (Wandlaterne, Roboterrasenmäher, Schallplattenspieler,
+  Motorölstand, Turboaufladung).
+
 ## [0.9.107] - 2026-07-14
 
 ### Added
