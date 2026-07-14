@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.106] - 2026-07-14
+
+### Added
+- Vocabulary growth: 121 new keywords and 93 icon mappings across the
+  smallest categories (garden, locks, battery) plus a cross-ecosystem
+  device-synonym pass. Includes robotic-mower and irrigation brands,
+  smart-lock product lines (SimpliSafe, Level, SwitchBot, Tedee, Ultraloq,
+  eufy, Yale, Schlage, ISEO, Salto, …), home-storage/inverter brands
+  (Growatt, Victron, Fronius, SolarEdge, Enphase, E3DC, …), per-device
+  battery sensors, and Matter/Zigbee device names (covers, presence,
+  light-level, EV charging control, weather).
+
 ## [0.9.105] - 2026-07-14
 
 ### Added
