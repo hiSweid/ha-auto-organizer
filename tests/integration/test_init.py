@@ -470,3 +470,27 @@ async def test_exclude_blocks_area_and_floor_labels(hass: HomeAssistant) -> None
     )
     changed_ids = {c["entity_id"] for c in result["changes"]}
     assert "sensor.excluded_kitchen_thing" not in changed_ids
+
+
+async def test_run_service_surfaces_match_reasons(hass: HomeAssistant) -> None:
+    # The keyword/domain/device_class/platform that actually matched used to
+    # be computed (_collect_label_keys) and then thrown away — surfacing it
+    # in the run/preview response lets a user see *why* an entity got
+    # labeled without reading rules.py, which is especially useful for
+    # tracking down an unexpected/wrong label.
+    from homeassistant.helpers import entity_registry as er
+
+    await _add_entry(hass)
+    ent_reg = er.async_get(hass)
+    ent_reg.async_get_or_create(
+        "sensor", "test", "coffee_reason", suggested_object_id="kaffeemaschine_reason"
+    )
+
+    result = await hass.services.async_call(
+        DOMAIN, "run", {"dry_run": True}, blocking=True, return_response=True
+    )
+    change = next(
+        c for c in result["changes"]
+        if c["entity_id"] == "sensor.kaffeemaschine_reason"
+    )
+    assert "kaffeemaschine" in change["reasons"]

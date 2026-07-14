@@ -18,6 +18,7 @@ from .rules import (
     OrganizerOptions,
     area_floor_specs,
     compute_label_specs,
+    compute_label_specs_and_reasons,
     is_excluded,
     label_differs,
     match_area,
@@ -205,7 +206,7 @@ class Organizer:
             if is_excluded(entry.entity_id, options.exclude):
                 continue
 
-            specs = compute_label_specs(entry, options)
+            specs, reasons = compute_label_specs_and_reasons(entry, options)
 
             # Area/floor labels apply to any non-diagnostic entity, even when
             # no functional label matched.
@@ -244,9 +245,13 @@ class Organizer:
             update_kwargs: dict = {}
             if labels_changed:
                 added = sorted(new_labels - set(entry.labels))
-                result.changes.append(
-                    {"entity_id": entry.entity_id, "added": added}
-                )
+                change: dict = {"entity_id": entry.entity_id, "added": added}
+                if reasons:
+                    # Debugging aid: which keyword/domain/device_class/
+                    # platform actually matched, so a wrong or unexpected
+                    # label can be traced back without reading rules.py.
+                    change["reasons"] = reasons
+                result.changes.append(change)
                 result.updated += 1
                 update_kwargs["labels"] = new_labels
             if icon:

@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.105] - 2026-07-14
+
+### Added
+- `run`/`preview` responses now include a `reasons` field per changed entity
+  listing which keyword/domain/device_class/platform actually matched, so a
+  wrong or unexpected label can be traced without reading rules.py.
+- New `tests/test_vocab_batches.py`: the vocabulary-growth tooling now
+  appends one regression test per merged word here, so a later vocabulary
+  batch that shadows or breaks an earlier word's match fails a concrete,
+  named test instead of silently regressing.
+
+### Changed
+- `compute_label_specs()` is now a thin wrapper around the new
+  `compute_label_specs_and_reasons()`; no behavior change for existing
+  callers.
+
 ## [0.9.104] - 2026-07-14
 
 ### Added

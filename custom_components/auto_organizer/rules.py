@@ -36730,13 +36730,34 @@ def compute_label_specs(
     """Return the list of label specs that apply to a single entity.
 
     Pure function (no Home Assistant state) so the ruleset can be unit-tested
-    in isolation.
+    in isolation. Thin wrapper around :func:`compute_label_specs_and_reasons`
+    for callers that don't need the match reasons.
+    """
+    specs, _reasons = compute_label_specs_and_reasons(entry, options)
+    return specs
+
+
+def compute_label_specs_and_reasons(
+    entry: EntityLike, options: OrganizerOptions
+) -> tuple[list[LabelSpec], list[str]]:
+    """Like :func:`compute_label_specs`, but also return the raw match
+    reasons (matched keyword/domain/device_class/platform) from
+    :func:`_collect_label_keys`.
+
+    The reasons are *not* kept position-aligned with the returned specs —
+    the integration-theme label, the label prefix and the ``max_labels`` cap
+    all reshape ``specs`` afterwards in ways that don't map cleanly back to
+    individual reasons. They're meant as an at-a-glance "why did this entity
+    get touched at all" for previews/diagnostics, not a per-label reason.
+    Kept as a single combined function (rather than a separate
+    ``match_reasons()`` next to :func:`compute_label_specs`) so callers that
+    want both don't pay for the keyword scan twice.
     """
     # User exclusions take priority over everything else.
     if is_excluded(entry.entity_id, options.exclude):
-        return []
+        return [], []
 
-    keys, _ = _collect_label_keys(entry, options)
+    keys, reasons = _collect_label_keys(entry, options)
     specs = [label_spec(k, options.language) for k in keys]
 
     platform = getattr(entry, "platform", None)
@@ -36755,4 +36776,4 @@ def compute_label_specs(
     if options.max_labels and len(specs) > options.max_labels:
         specs = specs[: options.max_labels]
 
-    return specs
+    return specs, reasons
