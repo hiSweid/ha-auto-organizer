@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.102] - 2026-07-14
+
+### Added
+- **133 new keywords and 131 new specific icons.** Incremental vocabulary
+  growth focused on the three smallest categories (light_level, vacuums,
+  air_quality) plus a batch of real-world device/platform synonyms across
+  ecosystems (ZHA/Zigbee2MQTT, Matter, Aqara/Eve/Shelly/Sonoff/Homematic IP).
+  Additions include ambient-light/lux sensor chips and dusk/daylight-threshold
+  terms, robot vacuum & mower brands/models and cleaning-cycle vocabulary,
+  air-quality sensor chips (SCD4x, SGP4x, SEN5x) plus pollen/particulate/VOC
+  terms, and device synonyms such as in-wall dimmers, wallbox actuators,
+  door-contact magnets and leak/water-guard sensors.
+
 ## [0.9.101] - 2026-07-14
 
 ### Added
