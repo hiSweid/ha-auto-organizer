@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.112] - 2026-07-14
+
+### Added
+- Vocabulary growth: 171 new keywords with icon mappings across the three
+  smallest categories (water, cameras, scripts) plus a cross-ecosystem
+  device-synonym pass and an MDI-icon-driven pass. Adds plumbing valves,
+  tanks, hot-water/legionella and drainage terms for water; camera brands and
+  product lines (Reolink, Arlo, Tapo, Amcrest/EmpireTech, Ctronics) plus
+  NVR/PTZ/ONVIF terms for cameras; wake/bedtime/arrival/leaving script names
+  and skript-prefixed phrases for scripts; and real device synonyms (Aqara,
+  Eve, Shelly, Tuya lock actuators, contact/tilt sensors, floodlights, roller
+  shutter motors, feed-in meters and more). Total keywords: 20456.
+
 ## [0.9.111] - 2026-07-14
 
 ### Added
