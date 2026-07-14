@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.109] - 2026-07-14
+
+### Added
+- Vocabulary growth: 175 new keywords and 175 icon mappings across the
+  smallest categories (leak, updates, temperature) plus an MDI-icon sweep and
+  a cross-ecosystem device-synonym pass. Adds fuel/oil/coolant and
+  moisture-ingress leak terms, firmware/OTA update phrasings, flow/return and
+  component temperature readings (CPU/GPU/disk, condenser/evaporator, dew
+  point), and device synonyms (change-over/flow valves, current transformer,
+  bolt drive, IR blaster, garden solenoid valve). Total keywords: 19977.
+
 ## [0.9.108] - 2026-07-14
 
 ### Added

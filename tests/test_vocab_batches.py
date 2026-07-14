@@ -2039,3 +2039,878 @@ def test_batch_gemuesemais():
 def test_batch_waschturm():
     assert _has_label("sensor.waschturm", "appliances")
     assert suggest_entity_icon(_FakeEntry("sensor.waschturm"), OrganizerOptions()) == "mdi:washing-machine"
+
+
+def test_batch_gaswarngeraet():
+    assert _has_label("sensor.gaswarngeraet", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.gaswarngeraet"), OrganizerOptions()) == "mdi:gas-cylinder"
+
+
+def test_batch_naessemelder():
+    assert _has_label("sensor.naessemelder", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.naessemelder"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_batch_naessesensor():
+    assert _has_label("sensor.naessesensor", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.naessesensor"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_batch_oil_leak():
+    assert _has_label("sensor.oil_leak", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.oil_leak"), OrganizerOptions()) == "mdi:oil"
+
+
+def test_batch_oil_spill():
+    assert _has_label("sensor.oil_spill", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.oil_spill"), OrganizerOptions()) == "mdi:oil"
+
+
+def test_batch_leak_alert():
+    assert _has_label("sensor.leak_alert", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.leak_alert"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_batch_leaking_pipe():
+    assert _has_label("sensor.leaking_pipe", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.leaking_pipe"), OrganizerOptions()) == "mdi:pipe-leak"
+
+
+def test_batch_pipe_rupture():
+    assert _has_label("sensor.pipe_rupture", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.pipe_rupture"), OrganizerOptions()) == "mdi:pipe-disconnected"
+
+
+def test_batch_leaking_tap():
+    assert _has_label("sensor.leaking_tap", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.leaking_tap"), OrganizerOptions()) == "mdi:faucet"
+
+
+def test_batch_dripping_tap():
+    assert _has_label("sensor.dripping_tap", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.dripping_tap"), OrganizerOptions()) == "mdi:faucet"
+
+
+def test_batch_wet_basement():
+    assert _has_label("sensor.wet_basement", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.wet_basement"), OrganizerOptions()) == "mdi:home-flood"
+
+
+def test_batch_flood_switch():
+    assert _has_label("sensor.flood_switch", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.flood_switch"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_batch_oelleck():
+    assert _has_label("sensor.oelleck", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.oelleck"), OrganizerOptions()) == "mdi:oil"
+
+
+def test_batch_oelwanne_leck():
+    assert _has_label("sensor.oelwanne_leck", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.oelwanne_leck"), OrganizerOptions()) == "mdi:oil"
+
+
+def test_batch_motoroelleck():
+    assert _has_label("sensor.motoroelleck", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.motoroelleck"), OrganizerOptions()) == "mdi:oil"
+
+
+def test_batch_getriebeoelleck():
+    assert _has_label("sensor.getriebeoelleck", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.getriebeoelleck"), OrganizerOptions()) == "mdi:oil"
+
+
+def test_batch_kraftstoffleck():
+    assert _has_label("sensor.kraftstoffleck", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.kraftstoffleck"), OrganizerOptions()) == "mdi:fuel"
+
+
+def test_batch_brennstoffleck():
+    assert _has_label("sensor.brennstoffleck", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.brennstoffleck"), OrganizerOptions()) == "mdi:fuel"
+
+
+def test_batch_tankleck():
+    assert _has_label("sensor.tankleck", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.tankleck"), OrganizerOptions()) == "mdi:barrel"
+
+
+def test_batch_fluessiggastank_leck():
+    assert _has_label("sensor.fluessiggastank_leck", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.fluessiggastank_leck"), OrganizerOptions()) == "mdi:gas-cylinder"
+
+
+def test_batch_schwitzwassermelder():
+    assert _has_label("sensor.schwitzwassermelder", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.schwitzwassermelder"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_batch_pegelstandalarm():
+    assert _has_label("sensor.pegelstandalarm", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.pegelstandalarm"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_batch_wandfeuchtigkeit():
+    assert _has_label("sensor.wandfeuchtigkeit", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.wandfeuchtigkeit"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_batch_bauteilfeuchte():
+    assert _has_label("sensor.bauteilfeuchte", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.bauteilfeuchte"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_batch_fugenfeuchte():
+    assert _has_label("sensor.fugenfeuchte", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.fugenfeuchte"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_batch_feuchteeintritt():
+    assert _has_label("sensor.feuchteeintritt", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchteeintritt"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_batch_fuel_leak():
+    assert _has_label("sensor.fuel_leak", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.fuel_leak"), OrganizerOptions()) == "mdi:fuel"
+
+
+def test_batch_fuel_spill():
+    assert _has_label("sensor.fuel_spill", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.fuel_spill"), OrganizerOptions()) == "mdi:fuel"
+
+
+def test_batch_coolant_leak():
+    assert _has_label("sensor.coolant_leak", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.coolant_leak"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_batch_leaking_faucet():
+    assert _has_label("sensor.leaking_faucet", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.leaking_faucet"), OrganizerOptions()) == "mdi:faucet"
+
+
+def test_batch_dripping_faucet():
+    assert _has_label("sensor.dripping_faucet", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.dripping_faucet"), OrganizerOptions()) == "mdi:faucet"
+
+
+def test_batch_water_egress():
+    assert _has_label("sensor.water_egress", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.water_egress"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_batch_water_probe():
+    assert _has_label("sensor.water_probe", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.water_probe"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_batch_water_sensor_cable():
+    assert _has_label("sensor.water_sensor_cable", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.water_sensor_cable"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_batch_seepage_alarm():
+    assert _has_label("sensor.seepage_alarm", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.seepage_alarm"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_batch_damp_sensor():
+    assert _has_label("sensor.damp_sensor", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.damp_sensor"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_batch_damp_alarm():
+    assert _has_label("sensor.damp_alarm", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.damp_alarm"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_batch_condensate_overflow():
+    assert _has_label("sensor.condensate_overflow", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.condensate_overflow"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_batch_hvac_leak():
+    assert _has_label("sensor.hvac_leak", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.hvac_leak"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_batch_upgrade_verfuegbar():
+    assert _has_label("sensor.upgrade_verfuegbar", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.upgrade_verfuegbar"), OrganizerOptions()) == "mdi:package-up"
+
+
+def test_batch_neueste_firmware():
+    assert _has_label("sensor.neueste_firmware", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.neueste_firmware"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_batch_aktuellste_version():
+    assert _has_label("sensor.aktuellste_version", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.aktuellste_version"), OrganizerOptions()) == "mdi:tag"
+
+
+def test_batch_rollback_verfuegbar():
+    assert _has_label("sensor.rollback_verfuegbar", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.rollback_verfuegbar"), OrganizerOptions()) == "mdi:backup-restore"
+
+
+def test_batch_neuer_patch():
+    assert _has_label("sensor.neuer_patch", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.neuer_patch"), OrganizerOptions()) == "mdi:package-up"
+
+
+def test_batch_neuer_treiber():
+    assert _has_label("sensor.neuer_treiber", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.neuer_treiber"), OrganizerOptions()) == "mdi:expansion-card"
+
+
+def test_batch_versionspruefung():
+    assert _has_label("sensor.versionspruefung", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.versionspruefung"), OrganizerOptions()) == "mdi:magnify"
+
+
+def test_batch_updateverlauf():
+    assert _has_label("sensor.updateverlauf", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.updateverlauf"), OrganizerOptions()) == "mdi:history"
+
+
+def test_batch_updatehinweis():
+    assert _has_label("sensor.updatehinweis", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.updatehinweis"), OrganizerOptions()) == "mdi:information-outline"
+
+
+def test_batch_softwareupgrade():
+    assert _has_label("sensor.softwareupgrade", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.softwareupgrade"), OrganizerOptions()) == "mdi:package-up"
+
+
+def test_batch_systemupgrade():
+    assert _has_label("sensor.systemupgrade", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.systemupgrade"), OrganizerOptions()) == "mdi:package-up"
+
+
+def test_batch_os_upgrade():
+    assert _has_label("sensor.os_upgrade", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.os_upgrade"), OrganizerOptions()) == "mdi:package-up"
+
+
+def test_batch_kernel_version():
+    assert _has_label("sensor.kernel_version", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.kernel_version"), OrganizerOptions()) == "mdi:memory"
+
+
+def test_batch_client_update():
+    assert _has_label("sensor.client_update", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.client_update"), OrganizerOptions()) == "mdi:monitor-arrow-down"
+
+
+def test_batch_jetzt_aktualisieren():
+    assert _has_label("sensor.jetzt_aktualisieren", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.jetzt_aktualisieren"), OrganizerOptions()) == "mdi:update"
+
+
+def test_batch_updaten():
+    assert _has_label("sensor.updaten", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.updaten"), OrganizerOptions()) == "mdi:update"
+
+
+def test_batch_warten_auf_update():
+    assert _has_label("sensor.warten_auf_update", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.warten_auf_update"), OrganizerOptions()) == "mdi:clock-alert"
+
+
+def test_batch_up_to_date():
+    assert _has_label("sensor.up_to_date", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.up_to_date"), OrganizerOptions()) == "mdi:check-circle"
+
+
+def test_batch_out_of_date():
+    assert _has_label("sensor.out_of_date", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.out_of_date"), OrganizerOptions()) == "mdi:alert"
+
+
+def test_batch_new_firmware():
+    assert _has_label("sensor.new_firmware", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.new_firmware"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_batch_new_release():
+    assert _has_label("sensor.new_release", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.new_release"), OrganizerOptions()) == "mdi:tag-arrow-up"
+
+
+def test_batch_install_update():
+    assert _has_label("sensor.install_update", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.install_update"), OrganizerOptions()) == "mdi:download"
+
+
+def test_batch_update_now():
+    assert _has_label("sensor.update_now", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.update_now"), OrganizerOptions()) == "mdi:update"
+
+
+def test_batch_check_for_updates():
+    assert _has_label("sensor.check_for_updates", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.check_for_updates"), OrganizerOptions()) == "mdi:magnify"
+
+
+def test_batch_latest_firmware():
+    assert _has_label("sensor.latest_firmware", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.latest_firmware"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_batch_system_upgrade():
+    assert _has_label("sensor.system_upgrade", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.system_upgrade"), OrganizerOptions()) == "mdi:package-up"
+
+
+def test_batch_paket_aktualisieren():
+    assert _has_label("sensor.paket_aktualisieren", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.paket_aktualisieren"), OrganizerOptions()) == "mdi:package-variant"
+
+
+def test_batch_aktualisierungsfehler():
+    assert _has_label("sensor.aktualisierungsfehler", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.aktualisierungsfehler"), OrganizerOptions()) == "mdi:alert-circle"
+
+
+def test_batch_firmwarefehler():
+    assert _has_label("sensor.firmwarefehler", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.firmwarefehler"), OrganizerOptions()) == "mdi:alert-circle-outline"
+
+
+def test_batch_server_update():
+    assert _has_label("sensor.server_update", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.server_update"), OrganizerOptions()) == "mdi:server-network"
+
+
+def test_batch_hub_aktualisierung():
+    assert _has_label("sensor.hub_aktualisierung", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.hub_aktualisierung"), OrganizerOptions()) == "mdi:hub"
+
+
+def test_batch_aktualisierung_ausstehend():
+    assert _has_label("sensor.aktualisierung_ausstehend", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.aktualisierung_ausstehend"), OrganizerOptions()) == "mdi:clock-alert-outline"
+
+
+def test_batch_neue_softwareversion():
+    assert _has_label("sensor.neue_softwareversion", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.neue_softwareversion"), OrganizerOptions()) == "mdi:package-up"
+
+
+def test_batch_firmware_available():
+    assert _has_label("sensor.firmware_available", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.firmware_available"), OrganizerOptions()) == "mdi:cloud-download"
+
+
+def test_batch_hauttemperatur():
+    assert _has_label("sensor.hauttemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.hauttemperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_batch_betontemperatur():
+    assert _has_label("sensor.betontemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.betontemperatur"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_batch_flurtemperatur():
+    assert _has_label("sensor.flurtemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.flurtemperatur"), OrganizerOptions()) == "mdi:home-thermometer"
+
+
+def test_batch_dachtemperatur():
+    assert _has_label("sensor.dachtemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.dachtemperatur"), OrganizerOptions()) == "mdi:home-thermometer-outline"
+
+
+def test_batch_prozesstemperatur():
+    assert _has_label("sensor.prozesstemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.prozesstemperatur"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_batch_flusstemperatur():
+    assert _has_label("sensor.flusstemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.flusstemperatur"), OrganizerOptions()) == "mdi:water-thermometer"
+
+
+def test_batch_meerestemperatur():
+    assert _has_label("sensor.meerestemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.meerestemperatur"), OrganizerOptions()) == "mdi:water-thermometer"
+
+
+def test_batch_gletschertemperatur():
+    assert _has_label("sensor.gletschertemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.gletschertemperatur"), OrganizerOptions()) == "mdi:snowflake-thermometer"
+
+
+def test_batch_zwischenkreistemperatur():
+    assert _has_label("sensor.zwischenkreistemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.zwischenkreistemperatur"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_batch_transporttemperatur():
+    assert _has_label("sensor.transporttemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.transporttemperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_batch_kondensattemperatur():
+    assert _has_label("sensor.kondensattemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.kondensattemperatur"), OrganizerOptions()) == "mdi:coolant-temperature"
+
+
+def test_batch_schmelzpunkt():
+    assert _has_label("sensor.schmelzpunkt", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.schmelzpunkt"), OrganizerOptions()) == "mdi:thermometer-high"
+
+
+def test_batch_body_temperature():
+    assert _has_label("sensor.body_temperature", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.body_temperature"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_batch_kuechentemperatur():
+    assert _has_label("sensor.kuechentemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.kuechentemperatur"), OrganizerOptions()) == "mdi:home-thermometer"
+
+
+def test_batch_deckentemperatur():
+    assert _has_label("sensor.deckentemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.deckentemperatur"), OrganizerOptions()) == "mdi:home-thermometer-outline"
+
+
+def test_batch_fassadentemperatur():
+    assert _has_label("sensor.fassadentemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.fassadentemperatur"), OrganizerOptions()) == "mdi:home-thermometer-outline"
+
+
+def test_batch_reaktortemperatur():
+    assert _has_label("sensor.reaktortemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.reaktortemperatur"), OrganizerOptions()) == "mdi:thermometer-high"
+
+
+def test_batch_abwassertemperatur():
+    assert _has_label("sensor.abwassertemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.abwassertemperatur"), OrganizerOptions()) == "mdi:water-thermometer"
+
+
+def test_batch_heizwassertemperatur():
+    assert _has_label("sensor.heizwassertemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.heizwassertemperatur"), OrganizerOptions()) == "mdi:coolant-temperature"
+
+
+def test_batch_solarvorlauftemperatur():
+    assert _has_label("sensor.solarvorlauftemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.solarvorlauftemperatur"), OrganizerOptions()) == "mdi:sun-thermometer"
+
+
+def test_batch_frischwassertemperatur():
+    assert _has_label("sensor.frischwassertemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.frischwassertemperatur"), OrganizerOptions()) == "mdi:water-thermometer"
+
+
+def test_batch_regenwassertemperatur():
+    assert _has_label("sensor.regenwassertemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.regenwassertemperatur"), OrganizerOptions()) == "mdi:water-thermometer"
+
+
+def test_batch_laderaumtemperatur():
+    assert _has_label("sensor.laderaumtemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.laderaumtemperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_batch_dew_point_temperature():
+    assert _has_label("sensor.dew_point_temperature", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.dew_point_temperature"), OrganizerOptions()) == "mdi:thermometer-water"
+
+
+def test_batch_flue_gas_temperature():
+    assert _has_label("sensor.flue_gas_temperature", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.flue_gas_temperature"), OrganizerOptions()) == "mdi:thermometer-high"
+
+
+def test_batch_exhaust_temperature():
+    assert _has_label("sensor.exhaust_temperature", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.exhaust_temperature"), OrganizerOptions()) == "mdi:thermometer-high"
+
+
+def test_batch_cabin_temperature():
+    assert _has_label("sensor.cabin_temperature", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.cabin_temperature"), OrganizerOptions()) == "mdi:home-thermometer"
+
+
+def test_batch_cabinet_temperature():
+    assert _has_label("sensor.cabinet_temperature", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.cabinet_temperature"), OrganizerOptions()) == "mdi:server"
+
+
+def test_batch_inlet_temperature():
+    assert _has_label("sensor.inlet_temperature", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.inlet_temperature"), OrganizerOptions()) == "mdi:thermometer-chevron-down"
+
+
+def test_batch_outlet_temperature():
+    assert _has_label("sensor.outlet_temperature", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.outlet_temperature"), OrganizerOptions()) == "mdi:thermometer-chevron-up"
+
+
+def test_batch_condenser_temperature():
+    assert _has_label("sensor.condenser_temperature", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.condenser_temperature"), OrganizerOptions()) == "mdi:coolant-temperature"
+
+
+def test_batch_evaporator_temperature():
+    assert _has_label("sensor.evaporator_temperature", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.evaporator_temperature"), OrganizerOptions()) == "mdi:snowflake-thermometer"
+
+
+def test_batch_gpu_temperature():
+    assert _has_label("sensor.gpu_temperature", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.gpu_temperature"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_batch_cpu_temperature():
+    assert _has_label("sensor.cpu_temperature", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.cpu_temperature"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_batch_disk_temperature():
+    assert _has_label("sensor.disk_temperature", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.disk_temperature"), OrganizerOptions()) == "mdi:harddisk"
+
+
+def test_batch_milk_temperature():
+    assert _has_label("sensor.milk_temperature", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.milk_temperature"), OrganizerOptions()) == "mdi:baby-bottle"
+
+
+def test_batch_kilometerzaehler():
+    assert _has_label("sensor.kilometerzaehler", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.kilometerzaehler"), OrganizerOptions()) == "mdi:counter"
+
+
+def test_batch_felge():
+    assert _has_label("sensor.felge", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.felge"), OrganizerOptions()) == "mdi:tire"
+
+
+def test_batch_schnaps():
+    assert _has_label("sensor.schnaps", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.schnaps"), OrganizerOptions()) == "mdi:glass-stange"
+
+
+def test_batch_suppe():
+    assert _has_label("sensor.suppe", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.suppe"), OrganizerOptions()) == "mdi:bowl-mix"
+
+
+def test_batch_muesli():
+    assert _has_label("sensor.muesli", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.muesli"), OrganizerOptions()) == "mdi:nutrition"
+
+
+def test_batch_haehnchen():
+    assert _has_label("sensor.haehnchen", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.haehnchen"), OrganizerOptions()) == "mdi:food-drumstick"
+
+
+def test_batch_schnitzel():
+    assert _has_label("sensor.schnitzel", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.schnitzel"), OrganizerOptions()) == "mdi:food-steak"
+
+
+def test_batch_spaghetti():
+    assert _has_label("sensor.spaghetti", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.spaghetti"), OrganizerOptions()) == "mdi:pasta"
+
+
+def test_batch_salami():
+    assert _has_label("sensor.salami", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.salami"), OrganizerOptions()) == "mdi:sausage"
+
+
+def test_batch_videokassette():
+    assert _has_label("sensor.videokassette", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.videokassette"), OrganizerOptions()) == "mdi:vhs"
+
+
+def test_batch_scart():
+    assert _has_label("sensor.scart", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.scart"), OrganizerOptions()) == "mdi:video-input-scart"
+
+
+def test_batch_serienbild():
+    assert _has_label("sensor.serienbild", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.serienbild"), OrganizerOptions()) == "mdi:camera-burst"
+
+
+def test_batch_schwarzweiss():
+    assert _has_label("sensor.schwarzweiss", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.schwarzweiss"), OrganizerOptions()) == "mdi:image-filter-black-white"
+
+
+def test_batch_sinuswelle():
+    assert _has_label("sensor.sinuswelle", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.sinuswelle"), OrganizerOptions()) == "mdi:sine-wave"
+
+
+def test_batch_dreieckswelle():
+    assert _has_label("sensor.dreieckswelle", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.dreieckswelle"), OrganizerOptions()) == "mdi:triangle-wave"
+
+
+def test_batch_rechteckwelle():
+    assert _has_label("sensor.rechteckwelle", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.rechteckwelle"), OrganizerOptions()) == "mdi:square-wave"
+
+
+def test_batch_cinch():
+    assert _has_label("sensor.cinch", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.cinch"), OrganizerOptions()) == "mdi:audio-input-rca"
+
+
+def test_batch_wellenform():
+    assert _has_label("sensor.wellenform", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.wellenform"), OrganizerOptions()) == "mdi:waveform"
+
+
+def test_batch_tonausgabe():
+    assert _has_label("sensor.tonausgabe", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.tonausgabe"), OrganizerOptions()) == "mdi:volume-source"
+
+
+def test_batch_kippeffekt():
+    assert _has_label("sensor.kippeffekt", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.kippeffekt"), OrganizerOptions()) == "mdi:image-filter-tilt-shift"
+
+
+def test_batch_kugelpanorama():
+    assert _has_label("sensor.kugelpanorama", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.kugelpanorama"), OrganizerOptions()) == "mdi:panorama-sphere"
+
+
+def test_batch_klee():
+    assert _has_label("sensor.klee", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.klee"), OrganizerOptions()) == "mdi:clover"
+
+
+def test_batch_haferbrei():
+    assert _has_label("sensor.haferbrei", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.haferbrei"), OrganizerOptions()) == "mdi:pot-mix"
+
+
+def test_batch_meeresfruechte():
+    assert _has_label("sensor.meeresfruechte", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.meeresfruechte"), OrganizerOptions()) == "mdi:fish"
+
+
+def test_batch_cabrio():
+    assert _has_label("sensor.cabrio", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.cabrio"), OrganizerOptions()) == "mdi:car-convertible"
+
+
+def test_batch_pferd():
+    assert _has_label("sensor.pferd", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.pferd"), OrganizerOptions()) == "mdi:horse"
+
+
+def test_batch_schaf():
+    assert _has_label("sensor.schaf", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.schaf"), OrganizerOptions()) == "mdi:sheep"
+
+
+def test_batch_schwein():
+    assert _has_label("sensor.schwein", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.schwein"), OrganizerOptions()) == "mdi:pig"
+
+
+def test_batch_acker():
+    assert _has_label("sensor.acker", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.acker"), OrganizerOptions()) == "mdi:land-fields"
+
+
+def test_batch_kaefer():
+    assert _has_label("sensor.kaefer", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.kaefer"), OrganizerOptions()) == "mdi:bug"
+
+
+def test_batch_weizen():
+    assert _has_label("sensor.weizen", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.weizen"), OrganizerOptions()) == "mdi:grain"
+
+
+def test_batch_limonade():
+    assert _has_label("sensor.limonade", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.limonade"), OrganizerOptions()) == "mdi:bottle-soda"
+
+
+def test_batch_pute():
+    assert _has_label("sensor.pute", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.pute"), OrganizerOptions()) == "mdi:food-turkey"
+
+
+def test_batch_kirsche():
+    assert _has_label("sensor.kirsche", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.kirsche"), OrganizerOptions()) == "mdi:fruit-cherries"
+
+
+def test_batch_ramen():
+    assert _has_label("sensor.ramen", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.ramen"), OrganizerOptions()) == "mdi:noodles"
+
+
+def test_batch_gewuerz():
+    assert _has_label("sensor.gewuerz", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.gewuerz"), OrganizerOptions()) == "mdi:shaker"
+
+
+def test_batch_zucker():
+    assert _has_label("sensor.zucker", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.zucker"), OrganizerOptions()) == "mdi:spoon-sugar"
+
+
+def test_batch_panorama():
+    assert _has_label("sensor.panorama", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.panorama"), OrganizerOptions()) == "mdi:panorama"
+
+
+def test_batch_weitwinkel():
+    assert _has_label("sensor.weitwinkel", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.weitwinkel"), OrganizerOptions()) == "mdi:panorama-wide-angle"
+
+
+def test_batch_durchsage():
+    assert _has_label("sensor.durchsage", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.durchsage"), OrganizerOptions()) == "mdi:speaker-message"
+
+
+def test_batch_ahorn():
+    assert _has_label("sensor.ahorn", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.ahorn"), OrganizerOptions()) == "mdi:leaf-maple"
+
+
+def test_batch_teich():
+    assert _has_label("sensor.teich", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.teich"), OrganizerOptions()) == "mdi:waves"
+
+
+def test_batch_taco():
+    assert _has_label("sensor.taco", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.taco"), OrganizerOptions()) == "mdi:taco"
+
+
+def test_batch_kubischer_sensor():
+    assert _has_label("sensor.kubischer_sensor", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.kubischer_sensor"), OrganizerOptions()) == "mdi:cube-outline"
+
+
+def test_batch_funk_wandschalter():
+    assert _has_label("sensor.funk_wandschalter", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.funk_wandschalter"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_batch_aktormodul():
+    assert _has_label("sensor.aktormodul", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.aktormodul"), OrganizerOptions()) == "mdi:electric-switch-closed"
+
+
+def test_batch_wasserhaupthahn():
+    assert _has_label("sensor.wasserhaupthahn", "water")
+    assert suggest_entity_icon(_FakeEntry("sensor.wasserhaupthahn"), OrganizerOptions()) == "mdi:pipe-valve"
+
+
+def test_batch_rollo_motor():
+    assert _has_label("sensor.rollo_motor", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.rollo_motor"), OrganizerOptions()) == "mdi:roller-shade"
+
+
+def test_batch_aussenrolladen():
+    assert _has_label("sensor.aussenrolladen", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.aussenrolladen"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_batch_vorbaurolladen():
+    assert _has_label("sensor.vorbaurolladen", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.vorbaurolladen"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_batch_aussenmelder():
+    assert _has_label("sensor.aussenmelder", "motion")
+    assert suggest_entity_icon(_FakeEntry("sensor.aussenmelder"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_batch_funk_gong():
+    assert _has_label("sensor.funk_gong", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.funk_gong"), OrganizerOptions()) == "mdi:bell-ring"
+
+
+def test_batch_batterieloser_schalter():
+    assert _has_label("sensor.batterieloser_schalter", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.batterieloser_schalter"), OrganizerOptions()) == "mdi:gesture-tap-button"
+
+
+def test_batch_pendeltaster():
+    assert _has_label("sensor.pendeltaster", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.pendeltaster"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_umschaltventil():
+    assert _has_label("sensor.umschaltventil", "water")
+    assert suggest_entity_icon(_FakeEntry("sensor.umschaltventil"), OrganizerOptions()) == "mdi:pipe-valve"
+
+
+def test_batch_vorlaufventil():
+    assert _has_label("sensor.vorlaufventil", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.vorlaufventil"), OrganizerOptions()) == "mdi:valve"
+
+
+def test_batch_ruecklaufventil():
+    assert _has_label("sensor.ruecklaufventil", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.ruecklaufventil"), OrganizerOptions()) == "mdi:valve"
+
+
+def test_batch_waterstop():
+    assert _has_label("sensor.waterstop", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.waterstop"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_batch_dewpoint_sensor():
+    assert _has_label("sensor.dewpoint_sensor", "humidity")
+    assert suggest_entity_icon(_FakeEntry("sensor.dewpoint_sensor"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_batch_stromwandler():
+    assert _has_label("sensor.stromwandler", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.stromwandler"), OrganizerOptions()) == "mdi:current-ac"
+
+
+def test_batch_riegelantrieb():
+    assert _has_label("sensor.riegelantrieb", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.riegelantrieb"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_batch_tv_box():
+    assert _has_label("sensor.tv_box", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.tv_box"), OrganizerOptions()) == "mdi:television-box"
+
+
+def test_batch_projektor_beamer():
+    assert _has_label("sensor.projektor_beamer", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.projektor_beamer"), OrganizerOptions()) == "mdi:projector"
+
+
+def test_batch_fountain():
+    assert _has_label("sensor.fountain", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.fountain"), OrganizerOptions()) == "mdi:fountain"
+
+
+def test_batch_magnetventil_garten():
+    assert _has_label("sensor.magnetventil_garten", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.magnetventil_garten"), OrganizerOptions()) == "mdi:sprinkler-variant"
+
+
+def test_batch_infrarot_blaster():
+    assert _has_label("sensor.infrarot_blaster", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.infrarot_blaster"), OrganizerOptions()) == "mdi:remote"
