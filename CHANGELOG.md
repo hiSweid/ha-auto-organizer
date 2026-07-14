@@ -6,7 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-## [0.9.98] - 2026-07-13
+## [0.9.99] - 2026-07-14
+
+### Added
+- **175 new keywords and 155 new specific icons.** Incremental vocabulary
+  growth across the three smallest categories — media (orchestral and band
+  instruments like cello/kontrabass/klarinette/posaune/synthesizer, vintage
+  playback such as walkman/minidisc/laserdisc/grammophon, shortwave/longwave
+  radio, karaoke, pre-amps and tone controls), cost (taxes and fees such as
+  lohnsteuer/gewerbesteuer/maut/vignette/bussgeld, mortgage and savings terms
+  like bauzins/sondertilgung/bausparvertrag/festgeld/tagesgeld, insurance and
+  services like kaskoversicherung/schornsteinfeger) and presence (mmWave radar
+  models LD2451/MR60FDA2, human static presence, BLE/Wi-Fi client tracking,
+  occupancy states such as buero besetzt/wc besetzt/parkplatz frei) — plus real
+  device/ecosystem synonyms (heat pump dryer, sauna heater, steam generator,
+  gas fireplace, Eve Spirit TRV, CT clamp, Leviton switches, motion/pantry
+  lights, water fountain, terrarium).
 
 ### Added
 - **182 new keywords and 171 new specific icons.** Incremental vocabulary
