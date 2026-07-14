@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.107] - 2026-07-14
+
+### Added
+- Vocabulary growth: 130 new keywords and icon mappings across the smallest
+  categories (scripts, humidity, scenes) plus a cross-ecosystem device-synonym
+  pass. Adds named-routine/script phrases (morning/away/travel/guest/cleanup
+  routines, panic button), humidity terms (dew point, mould risk, VPD,
+  hygrometers, greenhouse/terrarium moisture), light-scene names (hygge, movie
+  marathon, aurora, campfire, twilight), and real device synonyms (Aqara
+  presence, Eve MotionBlind, VELUX roller shade, go-eCharger, DECT phone,
+  fiber modem, Govee light strip, oil-tank/cistern level, particulate sensor).
+
 ## [0.9.106] - 2026-07-14
 
 ### Added
