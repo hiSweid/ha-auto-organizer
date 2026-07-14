@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.111] - 2026-07-14
+
+### Added
+- Vocabulary growth: 149 new keywords and 166 icon mappings across the three
+  smallest categories (battery, vacuums, presence) plus a cross-ecosystem
+  device-synonym pass. Adds tool-battery brands, cell types and charging/BMS
+  terms for battery; robot-vacuum brand/model names and tank/dock/cleaning
+  terms for vacuums; mmWave/radar presence sensors, BLE trackers and
+  arrival/away state phrases for presence; and real device/platform synonyms
+  (Nous, Paulmann, Rademacher, Busch-Jaeger, ESPHome, SMLIGHT, Fibaro, and
+  more), including 18 icon-only additions for existing brand keywords that
+  previously fell back to the generic domain icon. Total keywords: 20272.
+
 ## [0.9.110] - 2026-07-14
 
 ### Added
