@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.124] - 2026-07-15
+
+### Added
+- Vocabulary growth: 125 new keywords (122 with icon mappings). Category batches
+  for the three smallest labels (cost, fans, appliances) plus batches of unused
+  smart-home MDI icons and real device/platform synonyms spanning media, garden,
+  water, climate, temperature, car, weather, energy, covers, locks, network and
+  leak. Highlights: electricity-price and charging-cost terms (current/next-hour
+  price, wallbox charging cost, tariff caps), supply/exhaust ventilation parts
+  (dampers, filters, boost mode, room fans), kitchen and cleaning appliances
+  (raclette/sandwich grills, pad coffee makers, robot/handheld vacuums, water
+  heaters), and motorized window/skylight drives (Velux, tilt-window, smoke vent).
+
 ## [0.9.123] - 2026-07-15
 
 ### Added
