@@ -6,6 +6,20 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.123] - 2026-07-15
+
+### Added
+- Vocabulary growth: 162 new keywords (150 with icon mappings). Category batches
+  for the three smallest labels (scenes, vacuums, water) plus a batch of real
+  device/platform synonyms spanning switches, security, lights, covers, motion,
+  energy, network, presence and cameras. Highlights: scene/mood presets (golden
+  hour, deep work, candlelight scene, festive scene), robot- and stick-vacuum
+  brands and dock/mop-station parts (Kobold, Bissell CrossWave, Samsung Jet,
+  self-cleaning/mop-washing stations), water-system terms (booster/piston/lift
+  pumps, sample and inlet valves, softener salt level, expansion vessel), and
+  Zigbee/KNX/EnOcean/Matter device model names (Sonoff SNZB-06P, Aqara E1 button,
+  Fibaro smoke, Develco, Ubisys shutter, Zemismart roller, Nous A1).
+
 ## [0.9.122] - 2026-07-15
 
 ### Added

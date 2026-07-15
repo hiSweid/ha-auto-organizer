@@ -1,7 +1,9 @@
 {
   "domain": "auto_organizer",
   "name": "Entity Auto-Organizer",
-  "codeowners": ["@hiSweid"],
+  "codeowners": [
+    "@hiSweid"
+  ],
   "config_flow": true,
   "documentation": "https://github.com/hiSweid/ha-auto-organizer",
   "integration_type": "hub",
@@ -9,5 +11,5 @@
   "issue_tracker": "https://github.com/hiSweid/ha-auto-organizer/issues",
   "requirements": [],
   "single_config_entry": true,
-  "version": "0.9.122"
+  "version": "0.9.123"
 }
