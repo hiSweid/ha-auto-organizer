@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.125] - 2026-07-15
+
+### Added
+- Vocabulary growth: 138 new keywords (62 with icon mappings). Category batches
+  for the three smallest labels (updates, network, presence) plus a real
+  device/platform synonym batch spanning car, energy, cameras, appliances,
+  climate, covers, water, vacuums, security, scenes, waste and network.
+  Highlights: firmware/update terms (firmware backup and timestamp, rollback,
+  dependency and add-on updates), networking (frequency band, fiber optic,
+  port mirroring/forwarding, channel utilization, failover, mesh nodes),
+  presence/location (geofence enter/exit, phone and GPS trackers, occupancy and
+  presence monitoring, position/location determination), and smart-home devices
+  (wallbox charger/current, public charger, power-measuring sockets and energy
+  plugs, battery-storage inverter, venetian blind motor, pool cleaner robot,
+  ceiling presence detectors, alarm siren, IP/baby/birdhouse cameras).
+
 ## [0.9.124] - 2026-07-15
 
 ### Added
