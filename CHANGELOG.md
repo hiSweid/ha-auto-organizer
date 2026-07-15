@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.118] - 2026-07-15
+
+### Added
+- Vocabulary growth: 121 new keywords (98 with icon mappings). Category batches
+  for the smallest labels (cost, waste, car) plus a batch of real
+  device/platform synonyms (ZHA/Zigbee2MQTT, Matter, brands like
+  Aqara/Eve/IKEA/Shelly/tado/Nuki). KEYWORD_LABELS now totals 21236.
+
 ## [0.9.117] - 2026-07-14
 
 ### Added
