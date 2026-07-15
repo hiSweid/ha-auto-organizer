@@ -6,6 +6,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.127] - 2026-07-15
+
+### Added
+- Vocabulary growth: 144 new keywords (142 with icon mappings). Category batches
+  for the three smallest labels (shopping, leak, temperature) plus a real
+  device/platform synonym batch spanning switches, scenes, covers, climate,
+  lights, energy, network, cameras, locks, motion and garden.
+  Highlights: shopping (delivery/dispatch terms, store types like
+  markthalle/verbrauchermarkt/spaetkauf, grocery consumables), leak (moisture
+  and flood detectors, sump-pump failure, leak/flood guards, pipe-break valves),
+  temperature (flow/return and outdoor/indoor readings, per-room temperatures in
+  German and English, fridge/min/max/server sensors) and device synonyms
+  (KNX/DALI dimmers and gateways, Z-Wave controller, Victron charge regulator,
+  DECT radiator valves, Velux/skylight actuators, battery cameras).
+
 ## [0.9.126] - 2026-07-15
 
 ### Added
