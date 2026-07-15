@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.119] - 2026-07-15
+
+### Added
+- Vocabulary growth: 146 new keywords (131 with icon mappings). Category batches
+  for the smallest labels (energy, leak, scripts) plus an icon-driven batch
+  (sport/leisure MDI icons) and a batch of real device/platform synonyms
+  (ZHA/Zigbee2MQTT, Matter, brands like Avatto/Linptech/Heiman/Zanussi/Haier/
+  Vorwerk/Shark/Marantec/IKEA Tradfri). KEYWORD_LABELS now totals 21382.
+
 ## [0.9.118] - 2026-07-15
 
 ### Added
