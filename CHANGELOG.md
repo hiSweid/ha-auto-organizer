@@ -6,6 +6,16 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.120] - 2026-07-15
+
+### Added
+- Vocabulary growth: 145 new keywords (123 with icon mappings). Category batches
+  for the smallest labels (motion, automations, battery) plus a batch of real
+  device/platform synonyms (ZHA/Zigbee2MQTT, Matter, brands like Aqara/Eve/
+  IKEA Tradfri/tado/Shelly/Tuya). Covers mmWave/PIR presence terms, automation
+  trigger/condition vocabulary, cell-chemistry and BMS protection terms, and
+  common device names. KEYWORD_LABELS now totals 21527.
+
 ## [0.9.119] - 2026-07-15
 
 ### Added
