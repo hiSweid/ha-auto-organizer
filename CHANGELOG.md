@@ -6,6 +6,24 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.126] - 2026-07-15
+
+### Added
+- Vocabulary growth: 126 new keywords (105 with icon mappings). Category batches
+  for the three smallest labels (scripts, weather, waste) plus a real
+  device/platform synonym batch spanning switches, covers, climate, energy,
+  lights, temperature, security, media, presence and leak.
+  Highlights: script/routine terms (arrival and departure sequences, wake/night
+  and startup routines, macros, cron/timer/scheduled scripts), weather (rain and
+  snowfall rate, air/atmospheric pressure, gust and cold-wave, provider brands
+  like VisualCrossing/Gismeteo/AEMET, severe-weather and thaw warnings), waste
+  (bin fill level, collection calendars, deposit/reverse-vending, green-waste
+  drop-off, provider brands like Jumomind/CitiesApps/Interseroh), and devices
+  (Shelly Wave shutter/plug/relays, pilot-wire heating, module inverters, E14
+  bulbs, flush-mount switches/actuators, CO detector, Sonos Amp, Aqara/Fibaro
+  device codes). Generic next-collection date phrases are kept as keywords
+  without a specific icon so bin-type icons still win in combined entity names.
+
 ## [0.9.125] - 2026-07-15
 
 ### Added
