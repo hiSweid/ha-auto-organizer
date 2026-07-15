@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.122] - 2026-07-15
+
+### Added
+- Vocabulary growth: 171 new keywords (170 with icon mappings). Category batches
+  for the three smallest labels (locks, humidity, light_level) plus two batches of
+  real device/platform synonyms spanning security, car, covers, lights, network,
+  climate, garden, water and more. Highlights: smart-lock and locksmith brands
+  (SwitchBot Lock Ultra, Aqara U-series, Abus Bordo, Winkhaus, MACO, Roto window
+  handles), humidity sensor chips and (de)humidifiers (SHT4x, SCD4x, VEML/BH1750
+  lux chips), wallbox synonyms (Warp Charger, cFos Power Brain, go-e, Senec),
+  and Shelly/Sonoff/SwitchBot/Aqara/Homematic IP device model names.
+
 ## [0.9.121] - 2026-07-15
 
 ### Added
