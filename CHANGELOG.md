@@ -6,6 +6,16 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.121] - 2026-07-15
+
+### Added
+- Vocabulary growth: 150 new keywords (147 with icon mappings). Category batches
+  for the three smallest labels (cameras, air_quality, garden) plus a batch of
+  real device/platform synonyms across covers, climate, network, energy, water,
+  appliances and more (Wyze/Reolink/Tapo/Aqara/UniFi cameras, radon/PM/gas
+  sensors and air purifiers, robotic mowers, pond and plant terms, TRV/valve and
+  circulation vocabulary). KEYWORD_LABELS now totals 21677.
+
 ## [0.9.120] - 2026-07-15
 
 ### Added
