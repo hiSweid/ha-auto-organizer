@@ -740,7 +740,9 @@ def test_no_false_positive_snack_riegel():
 
 def test_shopping_generic_keywords():
     assert names(FakeEntry("sensor.einkaufsliste")) == ["Einkauf"]
-    assert names(FakeEntry("sensor.grocery_reminder")) == ["Einkauf"]
+    # "reminder" also (correctly) matches the automations vocab since the
+    # 2026-07-16 batch, so check membership instead of exact equality.
+    assert "Einkauf" in names(FakeEntry("sensor.grocery_reminder"))
 
 
 def test_enabled_labels_restricts_to_allowlist():
