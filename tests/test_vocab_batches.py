@@ -23251,3 +23251,748 @@ def test_batch_jetstrom():
 def test_batch_water_control():
     assert _has_label("sensor.water_control", "garden")
     assert suggest_entity_icon(_FakeEntry("sensor.water_control"), OrganizerOptions()) == "mdi:sprinkler"
+
+
+def test_batch_kaltgeraetestecker():
+    assert _has_label("sensor.kaltgeraetestecker", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.kaltgeraetestecker"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_batch_geraetestecker():
+    assert _has_label("sensor.geraetestecker", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.geraetestecker"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_batch_perilex():
+    assert _has_label("sensor.perilex", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.perilex"), OrganizerOptions()) == "mdi:power-socket-de"
+
+
+def test_batch_laenderadapter():
+    assert _has_label("sensor.laenderadapter", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.laenderadapter"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_batch_festkoerperrelais():
+    assert _has_label("sensor.festkoerperrelais", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.festkoerperrelais"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_optokoppler():
+    assert _has_label("sensor.optokoppler", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.optokoppler"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_shelly_1_mini():
+    assert _has_label("sensor.shelly_1_mini", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_1_mini"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_batch_zooz_zen30():
+    assert _has_label("sensor.zooz_zen30", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.zooz_zen30"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_batch_koogeek_plug():
+    assert _has_label("sensor.koogeek_plug", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.koogeek_plug"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_ewelink_plug():
+    assert _has_label("sensor.ewelink_plug", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.ewelink_plug"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_raumtaster():
+    assert _has_label("sensor.raumtaster", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.raumtaster"), OrganizerOptions()) == "mdi:gesture-tap-button"
+
+
+def test_batch_kaltgeraetekupplung():
+    assert _has_label("sensor.kaltgeraetekupplung", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.kaltgeraetekupplung"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_batch_perilex_steckdose():
+    assert _has_label("sensor.perilex_steckdose", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.perilex_steckdose"), OrganizerOptions()) == "mdi:power-socket-de"
+
+
+def test_batch_cee_kupplung():
+    assert _has_label("sensor.cee_kupplung", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.cee_kupplung"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_batch_starkstromsteckdose():
+    assert _has_label("sensor.starkstromsteckdose", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.starkstromsteckdose"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_kraftstromsteckdose():
+    assert _has_label("sensor.kraftstromsteckdose", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.kraftstromsteckdose"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_drehstromsteckdose():
+    assert _has_label("sensor.drehstromsteckdose", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.drehstromsteckdose"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_bodensteckdose():
+    assert _has_label("sensor.bodensteckdose", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.bodensteckdose"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_einbausteckdose():
+    assert _has_label("sensor.einbausteckdose", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.einbausteckdose"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_usb_steckdose():
+    assert _has_label("sensor.usb_steckdose", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.usb_steckdose"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_usb_ladesteckdose():
+    assert _has_label("sensor.usb_ladesteckdose", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.usb_ladesteckdose"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_sterndreieckschalter():
+    assert _has_label("sensor.sterndreieckschalter", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.sterndreieckschalter"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_paketschalter():
+    assert _has_label("sensor.paketschalter", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.paketschalter"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_wendeschalter():
+    assert _has_label("sensor.wendeschalter", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.wendeschalter"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_daemmerungsschaltuhr():
+    assert _has_label("sensor.daemmerungsschaltuhr", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.daemmerungsschaltuhr"), OrganizerOptions()) == "mdi:timer"
+
+
+def test_batch_treppenlichtzeitschalter():
+    assert _has_label("sensor.treppenlichtzeitschalter", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.treppenlichtzeitschalter"), OrganizerOptions()) == "mdi:timer"
+
+
+def test_batch_sonoff_basicr2():
+    assert _has_label("sensor.sonoff_basicr2", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonoff_basicr2"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_batch_sonoff_minir4m():
+    assert _has_label("sensor.sonoff_minir4m", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonoff_minir4m"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_batch_sonoff_4ch():
+    assert _has_label("sensor.sonoff_4ch", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonoff_4ch"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_batch_shelly_plus_1_mini():
+    assert _has_label("sensor.shelly_plus_1_mini", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_plus_1_mini"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_batch_tapo_p105():
+    assert _has_label("sensor.tapo_p105", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.tapo_p105"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_meross_mss110():
+    assert _has_label("sensor.meross_mss110", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.meross_mss110"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_gosund_sp211():
+    assert _has_label("sensor.gosund_sp211", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.gosund_sp211"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_zooz_zen15():
+    assert _has_label("sensor.zooz_zen15", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.zooz_zen15"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_amazon_smart_plug():
+    assert _has_label("sensor.amazon_smart_plug", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.amazon_smart_plug"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_wiz_smart_plug():
+    assert _has_label("sensor.wiz_smart_plug", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.wiz_smart_plug"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_govee_smart_plug():
+    assert _has_label("sensor.govee_smart_plug", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.govee_smart_plug"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_innr_sp120():
+    assert _has_label("sensor.innr_sp120", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.innr_sp120"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_aqara_switch_h2():
+    assert _has_label("sensor.aqara_switch_h2", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.aqara_switch_h2"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_batch_nebenstellentaster():
+    assert _has_label("sensor.nebenstellentaster", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.nebenstellentaster"), OrganizerOptions()) == "mdi:gesture-tap-button"
+
+
+def test_batch_nanoe():
+    assert _has_label("sensor.nanoe", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.nanoe"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_batch_airdog():
+    assert _has_label("sensor.airdog", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.airdog"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_batch_airfree():
+    assert _has_label("sensor.airfree", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.airfree"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_batch_helty():
+    assert _has_label("sensor.helty", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.helty"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_batch_aereco():
+    assert _has_label("sensor.aereco", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.aereco"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_batch_bayernluft():
+    assert _has_label("sensor.bayernluft", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.bayernluft"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_batch_atmotube_pro():
+    assert _has_label("sensor.atmotube_pro", "air_quality")
+
+
+def test_batch_plume_labs():
+    assert _has_label("sensor.plume_labs", "air_quality")
+
+
+def test_batch_airbeam():
+    assert _has_label("sensor.airbeam", "air_quality")
+
+
+def test_batch_airwits():
+    assert _has_label("sensor.airwits", "air_quality")
+
+
+def test_batch_natede():
+    assert _has_label("sensor.natede", "air_quality")
+
+
+def test_batch_tgs2600():
+    assert _has_label("sensor.tgs2600", "air_quality")
+
+
+def test_batch_mq7_sensor():
+    assert _has_label("sensor.mq7_sensor", "air_quality")
+
+
+def test_batch_pmsa003i():
+    assert _has_label("sensor.pmsa003i", "air_quality")
+
+
+def test_batch_shinyei():
+    assert _has_label("sensor.shinyei", "air_quality")
+
+
+def test_batch_explorir():
+    assert _has_label("sensor.explorir", "air_quality")
+
+
+def test_batch_acrylnitril():
+    assert _has_label("sensor.acrylnitril", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.acrylnitril"), OrganizerOptions()) == "mdi:molecule"
+
+
+def test_batch_peroxyacetylnitrat():
+    assert _has_label("sensor.peroxyacetylnitrat", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.peroxyacetylnitrat"), OrganizerOptions()) == "mdi:molecule"
+
+
+def test_batch_kanalgeruch():
+    assert _has_label("sensor.kanalgeruch", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.kanalgeruch"), OrganizerOptions()) == "mdi:scent"
+
+
+def test_batch_verwesungsgeruch():
+    assert _has_label("sensor.verwesungsgeruch", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.verwesungsgeruch"), OrganizerOptions()) == "mdi:scent"
+
+
+def test_batch_ulpa_filter():
+    assert _has_label("sensor.ulpa_filter", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.ulpa_filter"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_batch_daikin_streamer():
+    assert _has_label("sensor.daikin_streamer", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.daikin_streamer"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_batch_trichlorethylen():
+    assert _has_label("sensor.trichlorethylen", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.trichlorethylen"), OrganizerOptions()) == "mdi:molecule"
+
+
+def test_batch_tetrachlorethylen():
+    assert _has_label("sensor.tetrachlorethylen", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.tetrachlorethylen"), OrganizerOptions()) == "mdi:molecule"
+
+
+def test_batch_vinylchlorid():
+    assert _has_label("sensor.vinylchlorid", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.vinylchlorid"), OrganizerOptions()) == "mdi:molecule"
+
+
+def test_batch_cyanwasserstoff():
+    assert _has_label("sensor.cyanwasserstoff", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.cyanwasserstoff"), OrganizerOptions()) == "mdi:molecule"
+
+
+def test_batch_abwassergeruch():
+    assert _has_label("sensor.abwassergeruch", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.abwassergeruch"), OrganizerOptions()) == "mdi:scent"
+
+
+def test_batch_photokatalysator():
+    assert _has_label("sensor.photokatalysator", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.photokatalysator"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_batch_getreidepollen():
+    assert _has_label("sensor.getreidepollen", "weather")
+    assert suggest_entity_icon(_FakeEntry("sensor.getreidepollen"), OrganizerOptions()) == "mdi:flower-pollen"
+
+
+def test_batch_goldrute_pollen():
+    assert _has_label("sensor.goldrute_pollen", "weather")
+    assert suggest_entity_icon(_FakeEntry("sensor.goldrute_pollen"), OrganizerOptions()) == "mdi:flower-pollen"
+
+
+def test_batch_laerchenpollen():
+    assert _has_label("sensor.laerchenpollen", "weather")
+    assert suggest_entity_icon(_FakeEntry("sensor.laerchenpollen"), OrganizerOptions()) == "mdi:flower-pollen"
+
+
+def test_batch_traubenkraut():
+    assert _has_label("sensor.traubenkraut", "weather")
+    assert suggest_entity_icon(_FakeEntry("sensor.traubenkraut"), OrganizerOptions()) == "mdi:flower-pollen"
+
+
+def test_batch_wacholderpollen():
+    assert _has_label("sensor.wacholderpollen", "weather")
+    assert suggest_entity_icon(_FakeEntry("sensor.wacholderpollen"), OrganizerOptions()) == "mdi:flower-pollen"
+
+
+def test_batch_riegelmotor():
+    assert _has_label("sensor.riegelmotor", "locks")
+
+
+def test_batch_schliessvorgang():
+    assert _has_label("sensor.schliessvorgang", "locks")
+
+
+def test_batch_sperrmechanismus():
+    assert _has_label("sensor.sperrmechanismus", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.sperrmechanismus"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_batch_verschlussmechanismus():
+    assert _has_label("sensor.verschlussmechanismus", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.verschlussmechanismus"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_batch_riegelbolzen():
+    assert _has_label("sensor.riegelbolzen", "locks")
+
+
+def test_batch_drueckerschloss():
+    assert _has_label("sensor.drueckerschloss", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.drueckerschloss"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_batch_hotelschloss():
+    assert _has_label("sensor.hotelschloss", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.hotelschloss"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_batch_sattelschloss():
+    assert _has_label("sensor.sattelschloss", "locks")
+
+
+def test_batch_helmschloss():
+    assert _has_label("sensor.helmschloss", "locks")
+
+
+def test_batch_ovalzylinder():
+    assert _has_label("sensor.ovalzylinder", "locks")
+
+
+def test_batch_wechselstift():
+    assert _has_label("sensor.wechselstift", "locks")
+
+
+def test_batch_entriegelungscode():
+    assert _has_label("sensor.entriegelungscode", "locks")
+
+
+def test_batch_touchpad_lock():
+    assert _has_label("sensor.touchpad_lock", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.touchpad_lock"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_batch_smart_bolt():
+    assert _has_label("sensor.smart_bolt", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.smart_bolt"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_batch_retrofit_lock():
+    assert _has_label("sensor.retrofit_lock", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.retrofit_lock"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_batch_cabinet_latch():
+    assert _has_label("sensor.cabinet_latch", "locks")
+
+
+def test_batch_drawer_lock():
+    assert _has_label("sensor.drawer_lock", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.drawer_lock"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_batch_sliding_bolt():
+    assert _has_label("sensor.sliding_bolt", "locks")
+
+
+def test_batch_barrel_bolt():
+    assert _has_label("sensor.barrel_bolt", "locks")
+
+
+def test_batch_combination_padlock():
+    assert _has_label("sensor.combination_padlock", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.combination_padlock"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_batch_gantner():
+    assert _has_label("sensor.gantner", "locks")
+
+
+def test_batch_commax():
+    assert _has_label("sensor.commax", "locks")
+
+
+def test_batch_milre():
+    assert _has_label("sensor.milre", "locks")
+
+
+def test_batch_unikey():
+    assert _has_label("sensor.unikey", "locks")
+
+
+def test_batch_lockly_duo():
+    assert _has_label("sensor.lockly_duo", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.lockly_duo"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_batch_level_lock_plus():
+    assert _has_label("sensor.level_lock_plus", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.level_lock_plus"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_batch_simonsvoss_smartintego():
+    assert _has_label("sensor.simonsvoss_smartintego", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.simonsvoss_smartintego"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_batch_zylinderabdeckung():
+    assert _has_label("sensor.zylinderabdeckung", "locks")
+
+
+def test_batch_sperrhaken():
+    assert _has_label("sensor.sperrhaken", "locks")
+
+
+def test_batch_verschlussriegel():
+    assert _has_label("sensor.verschlussriegel", "locks")
+
+
+def test_batch_schlossnuss():
+    assert _has_label("sensor.schlossnuss", "locks")
+
+
+def test_batch_schlossfeder():
+    assert _has_label("sensor.schlossfeder", "locks")
+
+
+def test_batch_tuerdrehknauf():
+    assert _has_label("sensor.tuerdrehknauf", "locks")
+
+
+def test_batch_zimmersafe():
+    assert _has_label("sensor.zimmersafe", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.zimmersafe"), OrganizerOptions()) == "mdi:safe"
+
+
+def test_batch_reifenschloss():
+    assert _has_label("sensor.reifenschloss", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.reifenschloss"), OrganizerOptions()) == "mdi:motorbike"
+
+
+def test_batch_einbruchhemmung():
+    assert _has_label("sensor.einbruchhemmung", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.einbruchhemmung"), OrganizerOptions()) == "mdi:shield-lock"
+
+
+def test_batch_tuerschnaepper():
+    assert _has_label("sensor.tuerschnaepper", "locks")
+
+
+def test_batch_e_bike_schloss():
+    assert _has_label("sensor.e_bike_schloss", "locks")
+
+
+def test_batch_tresorriegel():
+    assert _has_label("sensor.tresorriegel", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.tresorriegel"), OrganizerOptions()) == "mdi:safe"
+
+
+def test_batch_schlossmodul():
+    assert _has_label("sensor.schlossmodul", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.schlossmodul"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_batch_smart_deadbolt():
+    assert _has_label("sensor.smart_deadbolt", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.smart_deadbolt"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_batch_keyless_deadbolt():
+    assert _has_label("sensor.keyless_deadbolt", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.keyless_deadbolt"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_batch_wifi_lock():
+    assert _has_label("sensor.wifi_lock", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.wifi_lock"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_batch_z_wave_lock():
+    assert _has_label("sensor.z_wave_lock", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.z_wave_lock"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_batch_gun_safe():
+    assert _has_label("sensor.gun_safe", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.gun_safe"), OrganizerOptions()) == "mdi:safe"
+
+
+def test_batch_smart_deadlatch():
+    assert _has_label("sensor.smart_deadlatch", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.smart_deadlatch"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_batch_philips_deadbolt():
+    assert _has_label("sensor.philips_deadbolt", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.philips_deadbolt"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_batch_yale_assure_lock_2():
+    assert _has_label("sensor.yale_assure_lock_2", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.yale_assure_lock_2"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_batch_dormakaba_evolo():
+    assert _has_label("sensor.dormakaba_evolo", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.dormakaba_evolo"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_batch_handsender_schloss():
+    assert _has_label("sensor.handsender_schloss", "locks")
+
+
+def test_batch_tuertransponder():
+    assert _has_label("sensor.tuertransponder", "locks")
+
+
+def test_batch_refoss_plug():
+    assert _has_label("sensor.refoss_plug", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.refoss_plug"), OrganizerOptions()) == "mdi:power-socket-de"
+
+
+def test_batch_aussensprechstelle():
+    assert _has_label("sensor.aussensprechstelle", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.aussensprechstelle"), OrganizerOptions()) == "mdi:doorbell-video"
+
+
+def test_batch_signalhorn():
+    assert _has_label("sensor.signalhorn", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.signalhorn"), OrganizerOptions()) == "mdi:bullhorn"
+
+
+def test_batch_aufsteckmotor():
+    assert _has_label("sensor.aufsteckmotor", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.aufsteckmotor"), OrganizerOptions()) == "mdi:roller-shade"
+
+
+def test_batch_seilzugmotor():
+    assert _has_label("sensor.seilzugmotor", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.seilzugmotor"), OrganizerOptions()) == "mdi:roller-shade"
+
+
+def test_batch_designheizkoerper():
+    assert _has_label("sensor.designheizkoerper", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.designheizkoerper"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_batch_siegenia_senso():
+    assert _has_label("sensor.siegenia_senso", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.siegenia_senso"), OrganizerOptions()) == "mdi:window-closed-variant"
+
+
+def test_batch_frient_sensor():
+    assert _has_label("sensor.frient_sensor", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.frient_sensor"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_batch_develco_sensor():
+    assert _has_label("sensor.develco_sensor", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.develco_sensor"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_batch_netatmo_station():
+    assert _has_label("sensor.netatmo_station", "weather")
+    assert suggest_entity_icon(_FakeEntry("sensor.netatmo_station"), OrganizerOptions()) == "mdi:home-thermometer"
+
+
+def test_batch_kasa_plug():
+    assert _has_label("sensor.kasa_plug", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.kasa_plug"), OrganizerOptions()) == "mdi:power-socket-de"
+
+
+def test_batch_wemo_insight():
+    assert _has_label("sensor.wemo_insight", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.wemo_insight"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_batch_toraktor():
+    assert _has_label("sensor.toraktor", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.toraktor"), OrganizerOptions()) == "mdi:gate"
+
+
+def test_batch_haustuerklingel():
+    assert _has_label("sensor.haustuerklingel", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.haustuerklingel"), OrganizerOptions()) == "mdi:doorbell"
+
+
+def test_batch_blitzsirene():
+    assert _has_label("sensor.blitzsirene", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.blitzsirene"), OrganizerOptions()) == "mdi:alarm-light"
+
+
+def test_batch_schueler():
+    assert _has_label("sensor.schueler", "presence")
+    assert suggest_entity_icon(_FakeEntry("sensor.schueler"), OrganizerOptions()) == "mdi:account-school"
+
+
+def test_batch_hausmeister():
+    assert _has_label("sensor.hausmeister", "presence")
+    assert suggest_entity_icon(_FakeEntry("sensor.hausmeister"), OrganizerOptions()) == "mdi:account-wrench"
+
+
+def test_batch_mitarbeiter():
+    assert _has_label("sensor.mitarbeiter", "presence")
+    assert suggest_entity_icon(_FakeEntry("sensor.mitarbeiter"), OrganizerOptions()) == "mdi:account-badge"
+
+
+def test_batch_tagesmutter():
+    assert _has_label("sensor.tagesmutter", "presence")
+    assert suggest_entity_icon(_FakeEntry("sensor.tagesmutter"), OrganizerOptions()) == "mdi:mother-nurse"
+
+
+def test_batch_babysitter():
+    assert _has_label("sensor.babysitter", "presence")
+    assert suggest_entity_icon(_FakeEntry("sensor.babysitter"), OrganizerOptions()) == "mdi:mother-nurse"
+
+
+def test_batch_kinderfrau():
+    assert _has_label("sensor.kinderfrau", "presence")
+    assert suggest_entity_icon(_FakeEntry("sensor.kinderfrau"), OrganizerOptions()) == "mdi:mother-nurse"
+
+
+def test_batch_vorgesetzter():
+    assert _has_label("sensor.vorgesetzter", "presence")
+    assert suggest_entity_icon(_FakeEntry("sensor.vorgesetzter"), OrganizerOptions()) == "mdi:account-supervisor-circle"
+
+
+def test_batch_betreuer():
+    assert _has_label("sensor.betreuer", "presence")
+    assert suggest_entity_icon(_FakeEntry("sensor.betreuer"), OrganizerOptions()) == "mdi:account-supervisor-circle"
+
+
+def test_batch_buecherei():
+    assert _has_label("sensor.buecherei", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.buecherei"), OrganizerOptions()) == "mdi:library"
+
+
+def test_batch_rundumsicht():
+    assert _has_label("sensor.rundumsicht", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.rundumsicht"), OrganizerOptions()) == "mdi:panorama-variant-outline"
+
+
+def test_batch_drahtesel():
+    assert _has_label("sensor.drahtesel", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.drahtesel"), OrganizerOptions()) == "mdi:bicycle-penny-farthing"
+
+
+def test_batch_arbeitsplatz():
+    assert _has_label("sensor.arbeitsplatz", "presence")
+    assert suggest_entity_icon(_FakeEntry("sensor.arbeitsplatz"), OrganizerOptions()) == "mdi:briefcase-account"
+
+
+def test_batch_schule():
+    assert _has_label("sensor.schule", "presence")
+    assert suggest_entity_icon(_FakeEntry("sensor.schule"), OrganizerOptions()) == "mdi:account-school"
+
+
+def test_batch_handwerker():
+    assert _has_label("sensor.handwerker", "presence")
+    assert suggest_entity_icon(_FakeEntry("sensor.handwerker"), OrganizerOptions()) == "mdi:account-wrench"
+
+
+def test_batch_sprachsteuerung():
+    assert _has_label("sensor.sprachsteuerung", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.sprachsteuerung"), OrganizerOptions()) == "mdi:account-tie-voice"
+
+
+def test_batch_bezahlung():
+    assert _has_label("sensor.bezahlung", "cost")
+    assert suggest_entity_icon(_FakeEntry("sensor.bezahlung"), OrganizerOptions()) == "mdi:account-credit-card"
+
+
+def test_batch_pedelec():
+    assert _has_label("sensor.pedelec", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.pedelec"), OrganizerOptions()) == "mdi:bicycle-penny-farthing"
