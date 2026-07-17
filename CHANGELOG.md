@@ -6,6 +6,23 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.128] - 2026-07-17
+
+### Added
+- Vocabulary growth (bundled from 20 daily batches since v0.9.127): 2721 new
+  keywords, 2630 of them with icon mappings, spanning all 32 organizer labels.
+  Each daily batch targeted the smallest-vocabulary categories plus real
+  device/platform synonyms and an unused-MDI-icon backfill. Highlights across
+  the period: light metering and lux sensors (KNX/DALI/EnOcean/Loxone/Gira
+  light sensors, PAR/PPFD quantum sensors, photometry units), humidity
+  (dew-point and mold detectors, humidifier/dehumidifier tanks, ThermoPro and
+  Govee hygrometer models, terrarium/cellar/room readings), air quality (pollen
+  types and forecasts, MVOC/black-carbon/radon, gas sensor modules, air
+  purifiers), plus broad device-synonym coverage across car (light/fuel/washer
+  terms, wallboxes, V2G), media (receivers, bookshelf speakers), appliances
+  (kitchen and cleaning gadgets), energy, network, presence, scenes, covers,
+  waste, updates and more.
+
 ## [0.9.127] - 2026-07-15
 
 ### Added
