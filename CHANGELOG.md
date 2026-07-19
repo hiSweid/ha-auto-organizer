@@ -6,6 +6,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.129] - 2026-07-19
+
+### Added
+- Vocabulary growth (bundled from 6 daily batches since v0.9.128): ~756 new
+  keywords plus 25 icon-only additions, spanning garden, temperature, battery,
+  lights, automations, cameras, waste, motion, scripts, vacuums, weather,
+  water, climate, updates, leak, scenes, shopping and device synonyms.
+
+### Fixed
+- Removed 14 duplicate dictionary keys introduced by same-day batches (e.g.
+  `yale doorman`, `growatt`, `pylontech`) that silently shadowed earlier
+  entries. For `klimaautomatik`, kept the original `automations` category
+  (consistent with sibling `*automatik` keywords) over a later duplicate that
+  had drifted to `climate`.
+
 ## [0.9.128] - 2026-07-17
 
 ### Added
