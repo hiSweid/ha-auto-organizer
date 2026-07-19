@@ -37781,3 +37781,462 @@ def test_batch_worx_maehroboter():
 def test_batch_ecoflow_powerstation():
     assert _has_label("sensor.ecoflow_powerstation", "battery")
     assert suggest_entity_icon(_FakeEntry("sensor.ecoflow_powerstation"), OrganizerOptions()) == "mdi:home-battery"
+
+
+def test_batch_ring_firmware():
+    assert _has_label("sensor.ring_firmware", "updates")
+
+
+def test_batch_xiaomi_firmware():
+    assert _has_label("sensor.xiaomi_firmware", "updates")
+
+
+def test_batch_eq3_firmware():
+    assert _has_label("sensor.eq3_firmware", "updates")
+
+
+def test_batch_deco_firmware():
+    assert _has_label("sensor.deco_firmware", "updates")
+
+
+def test_batch_release_cadence():
+    assert _has_label("sensor.release_cadence", "updates")
+
+
+def test_batch_update_backlog():
+    assert _has_label("sensor.update_backlog", "updates")
+
+
+def test_batch_firmware_baseline():
+    assert _has_label("sensor.firmware_baseline", "updates")
+
+
+def test_batch_changelog_url():
+    assert _has_label("sensor.changelog_url", "updates")
+
+
+def test_batch_update_manifest():
+    assert _has_label("sensor.update_manifest", "updates")
+
+
+def test_batch_delta_package():
+    assert _has_label("sensor.delta_package", "updates")
+
+
+def test_batch_update_payload():
+    assert _has_label("sensor.update_payload", "updates")
+
+
+def test_batch_rollback_strategy():
+    assert _has_label("sensor.rollback_strategy", "updates")
+
+
+def test_batch_patch_tuesday():
+    assert _has_label("sensor.patch_tuesday", "updates")
+
+
+def test_batch_hotfix_patch():
+    assert _has_label("sensor.hotfix_patch", "updates")
+
+
+def test_batch_firmware_repository():
+    assert _has_label("sensor.firmware_repository", "updates")
+
+
+def test_batch_bootloader_version():
+    assert _has_label("sensor.bootloader_version", "updates")
+
+
+def test_batch_firmwarequelle():
+    assert _has_label("sensor.firmwarequelle", "updates")
+
+
+def test_batch_aktualisierungsintervall():
+    assert _has_label("sensor.aktualisierungsintervall", "updates")
+
+
+def test_batch_eufy_firmware():
+    assert _has_label("sensor.eufy_firmware", "updates")
+
+
+def test_batch_ecobee_firmware():
+    assert _has_label("sensor.ecobee_firmware", "updates")
+
+
+def test_batch_homematic_firmware():
+    assert _has_label("sensor.homematic_firmware", "updates")
+
+
+def test_batch_tradfri_firmware():
+    assert _has_label("sensor.tradfri_firmware", "updates")
+
+
+def test_batch_broadlink_firmware():
+    assert _has_label("sensor.broadlink_firmware", "updates")
+
+
+def test_batch_meross_firmware():
+    assert _has_label("sensor.meross_firmware", "updates")
+
+
+def test_batch_netgear_firmware():
+    assert _has_label("sensor.netgear_firmware", "updates")
+
+
+def test_batch_mikrotik_firmware():
+    assert _has_label("sensor.mikrotik_firmware", "updates")
+
+
+def test_batch_homebridge_update():
+    assert _has_label("sensor.homebridge_update", "updates")
+
+
+def test_batch_innr_firmware():
+    assert _has_label("sensor.innr_firmware", "updates")
+
+
+def test_batch_danfoss_firmware():
+    assert _has_label("sensor.danfoss_firmware", "updates")
+
+
+def test_batch_tapo_firmware():
+    assert _has_label("sensor.tapo_firmware", "updates")
+
+
+def test_batch_kasa_firmware():
+    assert _has_label("sensor.kasa_firmware", "updates")
+
+
+def test_batch_eero_firmware():
+    assert _has_label("sensor.eero_firmware", "updates")
+
+
+def test_batch_wemo_firmware():
+    assert _has_label("sensor.wemo_firmware", "updates")
+
+
+def test_batch_arlo_firmware():
+    assert _has_label("sensor.arlo_firmware", "updates")
+
+
+def test_batch_update_pipeline():
+    assert _has_label("sensor.update_pipeline", "updates")
+
+
+def test_batch_device_handler():
+    assert _has_label("sensor.device_handler", "automations")
+
+
+def test_batch_rule_machine():
+    assert _has_label("sensor.rule_machine", "automations")
+
+
+def test_batch_automation_ordner():
+    assert _has_label("sensor.automation_ordner", "automations")
+
+
+def test_batch_automation_label():
+    assert _has_label("sensor.automation_label", "automations")
+
+
+def test_batch_automation_kategorie():
+    assert _has_label("sensor.automation_kategorie", "automations")
+
+
+def test_batch_initial_state():
+    assert _has_label("sensor.initial_state", "automations")
+
+
+def test_batch_event_data():
+    assert _has_label("sensor.event_data", "automations")
+
+
+def test_batch_aktionsvorlage():
+    assert _has_label("sensor.aktionsvorlage", "automations")
+
+
+def test_batch_yolink_automation():
+    assert _has_label("sensor.yolink_automation", "automations")
+
+
+def test_batch_last_triggered():
+    assert _has_label("sensor.last_triggered", "automations")
+
+
+def test_batch_flow_trigger():
+    assert _has_label("sensor.flow_trigger", "automations")
+
+
+def test_batch_morning_briefing():
+    assert _has_label("sensor.morning_briefing", "automations")
+
+
+def test_batch_evening_briefing():
+    assert _has_label("sensor.evening_briefing", "automations")
+
+
+def test_batch_commute_trigger():
+    assert _has_label("sensor.commute_trigger", "automations")
+
+
+def test_batch_vera_controller():
+    assert _has_label("sensor.vera_controller", "automations")
+
+
+def test_batch_openzwave():
+    assert _has_label("sensor.openzwave", "automations")
+
+
+def test_batch_programmierbare_schaltuhr():
+    assert _has_label("sensor.programmierbare_schaltuhr", "automations")
+
+
+def test_batch_ereignisspeicher():
+    assert _has_label("sensor.ereignisspeicher", "automations")
+
+
+def test_batch_hubitat_app():
+    assert _has_label("sensor.hubitat_app", "automations")
+
+
+def test_batch_wyze_rule():
+    assert _has_label("sensor.wyze_rule", "automations")
+
+
+def test_batch_openhab_rule_dsl():
+    assert _has_label("sensor.openhab_rule_dsl", "automations")
+
+
+def test_batch_ewelink_automation():
+    assert _has_label("sensor.ewelink_automation", "automations")
+
+
+def test_batch_broadlink_automation():
+    assert _has_label("sensor.broadlink_automation", "automations")
+
+
+def test_batch_arrival_trigger():
+    assert _has_label("sensor.arrival_trigger", "automations")
+
+
+def test_batch_firmware_update_trigger():
+    assert _has_label("sensor.firmware_update_trigger", "automations")
+
+
+def test_batch_teleco_antrieb():
+    assert _has_label("sensor.teleco_antrieb", "covers")
+
+
+def test_batch_beninca_antrieb():
+    assert _has_label("sensor.beninca_antrieb", "covers")
+
+
+def test_batch_proteco_antrieb():
+    assert _has_label("sensor.proteco_antrieb", "covers")
+
+
+def test_batch_roger_antrieb():
+    assert _has_label("sensor.roger_antrieb", "covers")
+
+
+def test_batch_v2_antrieb():
+    assert _has_label("sensor.v2_antrieb", "covers")
+
+
+def test_batch_schlupftor():
+    assert _has_label("sensor.schlupftor", "covers")
+
+
+def test_batch_rollladensteuerzentrale():
+    assert _has_label("sensor.rollladensteuerzentrale", "covers")
+
+
+def test_batch_funkrolladenaktor():
+    assert _has_label("sensor.funkrolladenaktor", "covers")
+
+
+def test_batch_rolladensteuergeraet():
+    assert _has_label("sensor.rolladensteuergeraet", "covers")
+
+
+def test_batch_deckenrollo():
+    assert _has_label("sensor.deckenrollo", "covers")
+
+
+def test_batch_lamellenneigung():
+    assert _has_label("sensor.lamellenneigung", "covers")
+
+
+def test_batch_behanghoehe():
+    assert _has_label("sensor.behanghoehe", "covers")
+
+
+def test_batch_becker_centronic():
+    assert _has_label("sensor.becker_centronic", "covers")
+
+
+def test_batch_hoermann_supramatic():
+    assert _has_label("sensor.hoermann_supramatic", "covers")
+
+
+def test_batch_novoferm_novomatic():
+    assert _has_label("sensor.novoferm_novomatic", "covers")
+
+
+def test_batch_chamberlain_liftmaster():
+    assert _has_label("sensor.chamberlain_liftmaster", "covers")
+
+
+def test_batch_unterflurantrieb():
+    assert _has_label("sensor.unterflurantrieb", "covers")
+
+
+def test_batch_internorm_fenster():
+    assert _has_label("sensor.internorm_fenster", "covers")
+
+
+def test_batch_deceuninck_fenster():
+    assert _has_label("sensor.deceuninck_fenster", "covers")
+
+
+def test_batch_rehau_fenster():
+    assert _has_label("sensor.rehau_fenster", "covers")
+
+
+def test_batch_veka_fenster():
+    assert _has_label("sensor.veka_fenster", "covers")
+
+
+def test_batch_niko_rolluik():
+    assert _has_label("sensor.niko_rolluik", "covers")
+
+
+def test_batch_torfluegelantrieb():
+    assert _has_label("sensor.torfluegelantrieb", "covers")
+
+
+def test_batch_garagentorfernbedienung():
+    assert _has_label("sensor.garagentorfernbedienung", "covers")
+
+
+def test_batch_vorhangfernbedienung():
+    assert _has_label("sensor.vorhangfernbedienung", "covers")
+
+
+def test_batch_rollladensimulation():
+    assert _has_label("sensor.rollladensimulation", "covers")
+
+
+def test_batch_fensterladenautomatik():
+    assert _has_label("sensor.fensterladenautomatik", "covers")
+
+
+def test_batch_torzeitschaltuhr():
+    assert _has_label("sensor.torzeitschaltuhr", "covers")
+
+
+def test_batch_vorhangzeitschaltuhr():
+    assert _has_label("sensor.vorhangzeitschaltuhr", "covers")
+
+
+def test_batch_video_peephole():
+    assert _has_label("sensor.video_peephole", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.video_peephole"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_batch_self_empty_dock():
+    assert _has_label("sensor.self_empty_dock", "vacuums")
+
+
+def test_batch_recyclingbehaelter():
+    assert _has_label("sensor.recyclingbehaelter", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.recyclingbehaelter"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_batch_torwaechter():
+    assert _has_label("sensor.torwaechter", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.torwaechter"), OrganizerOptions()) == "mdi:garage-alert"
+
+
+def test_batch_package_box():
+    assert _has_label("sensor.package_box", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.package_box"), OrganizerOptions()) == "mdi:package-variant-closed"
+
+
+def test_batch_boost_mode():
+    assert _has_label("sensor.boost_mode", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.boost_mode"), OrganizerOptions()) == "mdi:thermometer-chevron-up"
+
+
+def test_batch_bosch_smart_home_controller():
+    assert _has_label("sensor.bosch_smart_home_controller", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.bosch_smart_home_controller"), OrganizerOptions()) == "mdi:hub-outline"
+
+
+def test_batch_wassererhitzer():
+    assert _has_label("sensor.wassererhitzer", "water")
+    assert suggest_entity_icon(_FakeEntry("sensor.wassererhitzer"), OrganizerOptions()) == "mdi:water-boiler"
+
+
+def test_batch_elektrofahrzeug_ladestation():
+    assert _has_label("sensor.elektrofahrzeug_ladestation", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.elektrofahrzeug_ladestation"), OrganizerOptions()) == "mdi:ev-station"
+
+
+def test_batch_elektronischer_tuerbeschlag():
+    assert _has_label("sensor.elektronischer_tuerbeschlag", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.elektronischer_tuerbeschlag"), OrganizerOptions()) == "mdi:door-closed-lock"
+
+
+def test_batch_rolloschalter():
+    assert _has_label("sensor.rolloschalter", "covers")
+
+
+def test_batch_storenschalter():
+    assert _has_label("sensor.storenschalter", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.storenschalter"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_batch_wischmop():
+    assert _has_label("sensor.wischmop", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.wischmop"), OrganizerOptions()) == "mdi:broom"
+
+
+def test_batch_mop_robot():
+    assert _has_label("sensor.mop_robot", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.mop_robot"), OrganizerOptions()) == "mdi:robot-vacuum-variant"
+
+
+def test_batch_kobold_vr():
+    assert _has_label("sensor.kobold_vr", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.kobold_vr"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_dust_bin():
+    assert _has_label("sensor.dust_bin", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.dust_bin"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_batch_ladestation_roboter():
+    assert _has_label("sensor.ladestation_roboter", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.ladestation_roboter"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_muellabfuhr_kalender():
+    assert _has_label("sensor.muellabfuhr_kalender", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.muellabfuhr_kalender"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_batch_level_sensor_tank():
+    assert _has_label("sensor.level_sensor_tank", "water")
+    assert suggest_entity_icon(_FakeEntry("sensor.level_sensor_tank"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_batch_frostschutzmodus():
+    assert _has_label("sensor.frostschutzmodus", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.frostschutzmodus"), OrganizerOptions()) == "mdi:snowflake-thermometer"
+
+
+def test_batch_pressure_sensor():
+    assert _has_label("sensor.pressure_sensor", "water")
+    assert suggest_entity_icon(_FakeEntry("sensor.pressure_sensor"), OrganizerOptions()) == "mdi:gauge"
