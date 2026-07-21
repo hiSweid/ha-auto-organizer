@@ -6,6 +6,20 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.130] - 2026-07-21
+
+### Added
+- Vocabulary growth (bundled from 16 daily batches since v0.9.129): 2091 new
+  keywords plus 1477 icon additions, spanning all 32 organizer labels.
+  Category highlights: air_quality, vacuums, fans, network, covers, humidity,
+  waste and battery led growth, alongside locks, light_level, temperature,
+  scripts, cameras, cost, security, presence, energy, weather, water, car,
+  garden, climate, media, appliances, switches, motion, leak, automations,
+  lights, shopping, updates and scenes. Each daily batch targeted the
+  smallest-vocabulary categories plus real device/platform synonyms (ZHA/
+  Zigbee2MQTT catalogs, Matter device types, Aqara/Eve/IKEA/tado/Shelly/Tuya/
+  Bosch product lines) and an unused-MDI-icon backfill.
+
 ## [0.9.129] - 2026-07-19
 
 ### Added
