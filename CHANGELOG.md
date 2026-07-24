@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.131] - 2026-07-24
+
+### Added
+- Vocabulary growth (bundled from 2 daily batches since v0.9.130): 253 new
+  keywords plus 13 icon-only additions, spanning automations, motion,
+  updates, device synonyms, appliances, scenes, media and cost icons.
+
 ## [0.9.130] - 2026-07-21
 
 ### Added
