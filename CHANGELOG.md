@@ -6,6 +6,12 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.132] - 2026-07-25
+
+### Added
+- Vocabulary growth: 149 new keywords plus icon additions, spanning humidity,
+  light level, climate and device synonyms.
+
 ## [0.9.131] - 2026-07-24
 
 ### Added
