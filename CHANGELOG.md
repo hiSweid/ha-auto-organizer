@@ -6,6 +6,16 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.133] - 2026-08-05
+
+### Added
+- Vocabulary growth: 150 new keywords plus 74 icon additions, spanning
+  temperature, shopping, weather, real device/platform synonyms (go-e,
+  Zaptec, Keba, Growatt, BYD, EcoFlow, Tibber, Somfy, Velux, Niko, Eltako,
+  Hager, ABB free@home, Tedee, August, ABUS, Kaadas, Bosch Indego, Ambrogio,
+  Gardena, Unifi, Reolink, eufy, Victure, Netgear Orbi, SkyConnect, Plex) and
+  icon-only additions.
+
 ## [0.9.132] - 2026-07-25
 
 ### Added
