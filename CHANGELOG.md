@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.134] - 2026-08-07
+
+### Added
+- Vocabulary growth: 135 new keywords, spanning power tool/appliance
+  batteries (Einhell, Hilti, Bosch, Makita, Ryobi, Worx), presence/occupancy
+  sensing (mmWave radar brands: Sonoff, Tuya, Avatto, Nous, Zigbee2MQTT
+  presence), water/plumbing (filters, valves, faucets), and further device
+  synonyms (Alexa Show, Modbus TCP, Vornado, Bresser, Webasto Next, Genie,
+  Sommer, Mysa, Aqara leak, Netro, coulisse blinds, Zappi, CTEK, Aeotec
+  doorbell).
+
 ## [0.9.133] - 2026-08-05
 
 ### Added
