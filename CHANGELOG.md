@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.135] - 2026-08-10
+
+### Added
+- Vocabulary growth (bundled from 2 daily batches since v0.9.134): 309 new
+  keywords plus 249 icon additions, spanning leak, fans, cost, lights,
+  scripts, switches, appliances, security, shopping, presence and further
+  real device/platform synonyms (EV charging, window handles, pool
+  equipment, dimmers, radar/weather stations).
+
 ## [0.9.134] - 2026-08-07
 
 ### Added
