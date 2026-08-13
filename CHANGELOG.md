@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.136] - 2026-08-13
+
+### Added
+- Vocabulary growth (bundled from 2 daily batches since v0.9.135): 205 new
+  keywords plus 35 icon additions, spanning motion, air quality, locks,
+  waste, car and energy devices, and further real device/platform synonyms.
+
 ## [0.9.135] - 2026-08-10
 
 ### Added
