@@ -6,6 +6,12 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.137] - 2026-08-14
+
+### Added
+- Vocabulary growth: 158 new keywords plus icons, spanning updates, vacuums,
+  scenes, and further real device/platform synonyms.
+
 ## [0.9.136] - 2026-08-13
 
 ### Added
