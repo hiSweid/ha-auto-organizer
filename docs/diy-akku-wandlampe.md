@@ -212,7 +212,71 @@ weiternutzen.
 
 ---
 
-## 5. Praxis-Tipps für maximale Laufzeit
+## 5. Die 6-Monats-Edition: die „Glut-Lampe"
+
+6 Monate bei 4 h/Tag sind machbar — wenn man die Lampe konsequent als
+**Kerzenschein-/Glut-Lampe** auslegt und den Akku eine Nummer größer wählt.
+Elektronik und YAML sind identisch zu Option A, nur zwei Dinge ändern sich:
+der Akku und die Default-Helligkeit.
+
+### Das Budget
+
+- 6 Monate × 4 h/Tag = **~730 Leuchtstunden**
+- Akkupack: **74 Wh** (nutzbar ~65 Wh) — dazu unten mehr
+- Thread-Standby über 6 Monate: ~10 Wh (deshalb ist der Sleepy-End-Device-Modus
+  hier nicht optional, sondern Pflicht)
+- Bleiben **~55 Wh fürs Licht** → 55 Wh ÷ 730 h ≈ **75 mW mittlere LED-Leistung**
+
+75 mW sind bei effizienten LED-Filamenten **10–15 Lumen: echtes
+Kerzenlicht.** Für eine Vintage-Lampe ist genau das der Look — glimmender
+Faden hinter Glas, Akzent- und Stimmungslicht, kein Leselicht. Volle
+Helligkeit bleibt jederzeit per HA abrufbar, sie kostet nur Budget:
+
+| Nutzung (74-Wh-Pack, 4 h/Tag) | Laufzeit |
+|---|---|
+| 10–15 lm Kerzenglut (Default) | **~6 Monate** |
+| ~30 lm | ~2 Monate |
+| ~50 lm | ~5–6 Wochen |
+| ~150 lm („gemütlich hell") | ~11 Tage |
+| 1 h Boost auf 150 lm | kostet ~4 Tage Kerzenbudget |
+
+Wer 6 Monate bei ~30 lm will, verdoppelt einfach den Pack (148 Wh, zwei
+Pouches) — die Elektronik bleibt gleich, nur der Sockel wird klobiger.
+
+### Der Akku (die einzige echte Änderung)
+
+Zwei gleichwertige Wege, beide ohne Löten an Zellen:
+
+1. **1S-LiPo-Pouch 3,7 V / 20 000 mAh mit Schutzplatine und JST-Stecker**
+   (~104/105-er Bauform, ca. 12×6×1 cm, ~20 €) — ein Stecker, fertig.
+   Der einfachste Weg.
+2. **4× 21700 (5000 mAh) parallel im 4er-Halter** + 1S-Schutzplatine —
+   etwas kompakter im Querschnitt, Markenzellen (Samsung 50E, Molicel)
+   altern besser als No-Name-Pouches.
+
+Wichtig bei der Größe: **nur Zellen/Packs mit Schutzschaltung**, Markenware,
+und beim ersten Laden dabeibleiben. 74 Wh an der Wand sind kein Spielzeug —
+das ist der Energieinhalt von fünf Smartphones.
+
+**Laden:** Der TP4056 schafft nur 1 A → ~20 h für den vollen Pack. Bei zwei
+Ladungen pro Jahr ist „übers Wochenende an die Strippe" ehrlich gesagt
+verschmerzbar. Wer es schneller will, nimmt statt des TP4056 ein
+USB-C-Ladeboard mit 2–3 A (z. B. auf IP2312-Basis, ~3 €) → über Nacht voll.
+
+### Feintuning für die Glut
+
+- **Default-Szene „Glut"** in HA: Helligkeit ~10 %, 2200 K — das ist der
+  Zustand, in dem die Lampe ihre 6 Monate schafft. Boost-Szenen bewusst
+  benutzen.
+- In ESPHome dem Licht einen sauberen unteren Dimmbereich geben, damit
+  10 lm flackerfrei gehen: `gamma_correct: 2.8` (schon gesetzt) und die
+  LEDC-Frequenz von 1220 Hz belassen — das gibt genug Auflösung im Keller.
+- **Ein einzelnes 2200-K-Filament** als Default-Kanal reicht für die Glut;
+  der Kaltweiß-Kanal ist dann nur für die (seltenen) hellen Momente da.
+- Akkusensor + HA-Automation „unter 20 % → Push-Nachricht" — bei 6 Monaten
+  Laufzeit vergisst man sonst schlicht, dass das Ding einen Akku hat.
+
+## 6. Praxis-Tipps für maximale Laufzeit
 
 1. **Default-Helligkeit niedrig** halten (HA-Szene „Abend" = 20–30 %); volle
    Helligkeit nur auf Abruf.
