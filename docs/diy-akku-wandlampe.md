@@ -263,6 +263,54 @@ Ladungen pro Jahr ist „übers Wochenende an die Strippe" ehrlich gesagt
 verschmerzbar. Wer es schneller will, nimmt statt des TP4056 ein
 USB-C-Ladeboard mit 2–3 A (z. B. auf IP2312-Basis, ~3 €) → über Nacht voll.
 
+### Noch einfacher: die Ein-Kanal-Variante (eine LED, nur Dimmen)
+
+Wer auf die Farbtemperatur verzichtet, halbiert den Bau nochmal. Ein einzelnes
+warmes 2200-K-Filament, ein PWM-Kanal, fertig — in HA erscheint die Lampe als
+dimmbares Licht. Zwei Ausbaustufen:
+
+**Ultra-minimal (4–6 Lötstellen, ~10 Minuten Lötarbeit):** Ein einzelnes
+3-V-Filament zieht nur 10–15 mA — das kann der GPIO des XIAO **direkt**
+treiben, ganz ohne MOSFET:
+
+```
+Akku +  ──► BAT+ Pad          (Lötstelle 1)
+Akku -  ──► BAT-  Pad          (Lötstelle 2)
+D0/GPIO0 ──► 27 Ω ──► Filament +   (Lötstellen 3+4)
+Filament - ──► GND-Pin             (Lötstelle 5)
+```
+
+Maximal sind so ~15 lm drin — für die Glut-Lampe ist das exakt der
+Betriebspunkt, ein „Boost" auf hell existiert dann schlicht nicht. Weniger
+kann kaputtgehen, nichts kann zu viel Strom ziehen.
+
+**Mit Helligkeitsreserve (~7 Lötstellen):** Ein MOSFET-Kanal (einzelnes
+D4184/AO3400-Breakout) zwischen GPIO und LED wie in Option A, dann geht auch
+eine 1-W-Star-LED oder zwei Filamente parallel — Kerzenglut als Default,
+~100 lm auf Abruf.
+
+Die YAML schrumpft entsprechend:
+
+```yaml
+output:
+  - platform: ledc
+    pin: GPIO0
+    id: pwm_licht
+    frequency: 1220Hz
+
+light:
+  - platform: monochromatic
+    name: "Wandlampe"
+    output: pwm_licht
+    gamma_correct: 2.8
+    restore_mode: RESTORE_DEFAULT_OFF
+    default_transition_length: 300ms
+```
+
+Wichtig: **Die Laufzeit bestimmt weiter der Akku, nicht die LED-Anzahl.**
+Auch die Ein-Kanal-Glut braucht für 6 Monate den 74-Wh-Pack; mit einer
+einzelnen 21700 sind es ~5–6 Wochen.
+
 ### Feintuning für die Glut
 
 - **Default-Szene „Glut"** in HA: Helligkeit ~10 %, 2200 K — das ist der
