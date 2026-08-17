@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.138] - 2026-08-17
+
+### Added
+- Vocabulary growth (bundled from 3 daily batches since v0.9.137): 395 new
+  keywords, spanning automations, light level, media, humidity, temperature,
+  security, cameras, motion, garden, and further real device/platform
+  synonyms.
+
 ## [0.9.137] - 2026-08-14
 
 ### Added
