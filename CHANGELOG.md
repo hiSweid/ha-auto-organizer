@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.139] - 2026-08-21
+
+### Added
+- Vocabulary growth (bundled from 3 daily batches since v0.9.138): 519 new
+  keywords plus icons, spanning scripts, weather, air quality, battery, car,
+  appliances, shopping, leak, fans, presence, climate, lights, and further
+  real device/platform synonyms.
+
 ## [0.9.138] - 2026-08-17
 
 ### Added
