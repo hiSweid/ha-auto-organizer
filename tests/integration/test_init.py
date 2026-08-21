@@ -2,8 +2,10 @@
 
 from __future__ import annotations
 
-from homeassistant.core import HomeAssistant
-from pytest_homeassistant_custom_component.common import MockConfigEntry
+import pytest
+from homeassistant.core import Context, HomeAssistant
+from homeassistant.exceptions import HomeAssistantError
+from pytest_homeassistant_custom_component.common import MockConfigEntry, MockUser
 
 from custom_components.auto_organizer.const import DOMAIN
 
@@ -494,3 +496,53 @@ async def test_run_service_surfaces_match_reasons(hass: HomeAssistant) -> None:
         if c["entity_id"] == "sensor.kaffeemaschine_reason"
     )
     assert "kaffeemaschine" in change["reasons"]
+
+
+_MUTATING_SERVICES = ("run", "cleanup", "assign_areas", "assign_icons", "remove_all")
+
+
+@pytest.mark.parametrize("service", _MUTATING_SERVICES)
+async def test_mutating_service_rejects_non_admin_user(
+    hass: HomeAssistant, hass_read_only_user: MockUser, service: str
+) -> None:
+    await _add_entry(hass)
+    with pytest.raises(HomeAssistantError):
+        await hass.services.async_call(
+            DOMAIN,
+            service,
+            {"dry_run": True},
+            blocking=True,
+            context=Context(user_id=hass_read_only_user.id),
+        )
+
+
+@pytest.mark.parametrize("service", _MUTATING_SERVICES)
+async def test_mutating_service_allows_admin_user(
+    hass: HomeAssistant, hass_admin_user: MockUser, service: str
+) -> None:
+    await _add_entry(hass)
+    result = await hass.services.async_call(
+        DOMAIN,
+        service,
+        {"dry_run": True},
+        blocking=True,
+        return_response=True,
+        context=Context(user_id=hass_admin_user.id),
+    )
+    assert result is not None
+
+
+@pytest.mark.parametrize("service", _MUTATING_SERVICES)
+async def test_mutating_service_allows_system_call_without_user_id(
+    hass: HomeAssistant, service: str
+) -> None:
+    """Automations/scripts call services with no user_id and must keep working."""
+    await _add_entry(hass)
+    result = await hass.services.async_call(
+        DOMAIN,
+        service,
+        {"dry_run": True},
+        blocking=True,
+        return_response=True,
+    )
+    assert result is not None

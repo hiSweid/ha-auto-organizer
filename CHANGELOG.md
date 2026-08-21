@@ -6,6 +6,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.140] - 2026-08-21
+
+### Fixed
+- `run`, `cleanup`, `assign_areas`, `assign_icons` and `remove_all` now reject
+  service calls from an authenticated non-admin user. `remove_all` in
+  particular deletes every label in Home Assistant, not only ones this
+  integration created, so an unprivileged caller had a much larger blast
+  radius than intended. Calls with no `user_id` (automations, scripts) are
+  unaffected.
+- Raised the declared `homeassistant` floor in `hacs.json` from `2024.4.0` to
+  `2024.11.0` to match what the code actually requires: `entry.runtime_data`
+  (2024.6) and the implicit `OptionsFlow.config_entry` (2024.11) used by the
+  options flow. Installs below that floor would previously fail instead of
+  degrading gracefully.
+
 ## [0.9.139] - 2026-08-21
 
 ### Added

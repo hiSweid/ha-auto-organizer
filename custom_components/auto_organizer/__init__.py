@@ -16,6 +16,7 @@ from homeassistant.core import (
     ServiceResponse,
     SupportsResponse,
 )
+from homeassistant.exceptions import HomeAssistantError
 from homeassistant.helpers import area_registry as ar
 from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers import entity_registry as er
@@ -305,7 +306,26 @@ def _register_services(hass: HomeAssistant) -> None:
         }
         runtime.refresh_stats()
 
+    async def _async_require_admin(call: ServiceCall) -> None:
+        """Reject mutating service calls from a non-admin user.
+
+        ``remove_all`` deletes every label in Home Assistant, not just ones
+        this integration created; ``run``/``cleanup``/``assign_areas``/
+        ``assign_icons`` write labels, areas and icons across the entity
+        registry. A missing user_id (automations, scripts, the UI's own
+        service-call developer tools acting as the system) is left
+        untouched — only an authenticated non-admin user is rejected.
+        """
+        if call.context.user_id is None:
+            return
+        user = await hass.auth.async_get_user(call.context.user_id)
+        if user is None or not user.is_admin:
+            raise HomeAssistantError(
+                "This service can only be called by an administrator"
+            )
+
     async def _handle_run(call: ServiceCall) -> ServiceResponse:
+        await _async_require_admin(call)
         entries: list[AutoOrganizerConfigEntry] = hass.config_entries.async_entries(
             DOMAIN
         )
@@ -340,6 +360,7 @@ def _register_services(hass: HomeAssistant) -> None:
         return result.as_dict()
 
     async def _handle_cleanup(call: ServiceCall) -> ServiceResponse:
+        await _async_require_admin(call)
         entries = hass.config_entries.async_entries(DOMAIN)
         if not entries:
             return {"error": "no config entry"}
@@ -355,6 +376,7 @@ def _register_services(hass: HomeAssistant) -> None:
         return result.as_dict()
 
     async def _handle_assign_areas(call: ServiceCall) -> ServiceResponse:
+        await _async_require_admin(call)
         entries = hass.config_entries.async_entries(DOMAIN)
         if not entries:
             return {"error": "no config entry"}
@@ -379,6 +401,7 @@ def _register_services(hass: HomeAssistant) -> None:
         return result.as_dict()
 
     async def _handle_assign_icons(call: ServiceCall) -> ServiceResponse:
+        await _async_require_admin(call)
         entries = hass.config_entries.async_entries(DOMAIN)
         if not entries:
             return {"error": "no config entry"}
@@ -403,6 +426,7 @@ def _register_services(hass: HomeAssistant) -> None:
         return result.as_dict()
 
     async def _handle_remove_all(call: ServiceCall) -> ServiceResponse:
+        await _async_require_admin(call)
         entries = hass.config_entries.async_entries(DOMAIN)
         if not entries:
             return {"error": "no config entry"}
