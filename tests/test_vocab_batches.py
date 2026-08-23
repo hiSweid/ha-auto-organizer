@@ -53706,3 +53706,459 @@ def test_batch_dimplex_waermepumpe():
 def test_batch_aeotec_smart_lock():
     assert _has_label("sensor.aeotec_smart_lock", "locks")
     assert suggest_entity_icon(_FakeEntry("sensor.aeotec_smart_lock"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_batch_messkosten():
+    assert _has_label("sensor.messkosten", "cost")
+
+
+def test_batch_oekosteuer():
+    assert _has_label("sensor.oekosteuer", "cost")
+
+
+def test_batch_netzentgeltbefreiung():
+    assert _has_label("sensor.netzentgeltbefreiung", "cost")
+
+
+def test_batch_flexumlage():
+    assert _has_label("sensor.flexumlage", "cost")
+
+
+def test_batch_gerichtskosten():
+    assert _has_label("sensor.gerichtskosten", "cost")
+
+
+def test_batch_anwaltskosten():
+    assert _has_label("sensor.anwaltskosten", "cost")
+
+
+def test_batch_notargebuehr():
+    assert _has_label("sensor.notargebuehr", "cost")
+
+
+def test_batch_vermittlungsgebuehr():
+    assert _has_label("sensor.vermittlungsgebuehr", "cost")
+
+
+def test_batch_abschlussgebuehr():
+    assert _has_label("sensor.abschlussgebuehr", "cost")
+
+
+def test_batch_kontowechselpraemie():
+    assert _has_label("sensor.kontowechselpraemie", "cost")
+
+
+def test_batch_jahresgebuehr():
+    assert _has_label("sensor.jahresgebuehr", "cost")
+
+
+def test_batch_teilrueckzahlung():
+    assert _has_label("sensor.teilrueckzahlung", "cost")
+
+
+def test_batch_inzahlungnahme():
+    assert _has_label("sensor.inzahlungnahme", "cost")
+
+
+def test_batch_biogasaufschlag():
+    assert _has_label("sensor.biogasaufschlag", "cost")
+
+
+def test_batch_differenzkosten():
+    assert _has_label("sensor.differenzkosten", "cost")
+
+
+def test_batch_mehrkostenanteil():
+    assert _has_label("sensor.mehrkostenanteil", "cost")
+
+
+def test_batch_minderkosten():
+    assert _has_label("sensor.minderkosten", "cost")
+
+
+def test_batch_opportunitaetskosten():
+    assert _has_label("sensor.opportunitaetskosten", "cost")
+
+
+def test_batch_flexibilitaetspraemie():
+    assert _has_label("sensor.flexibilitaetspraemie", "cost")
+
+
+def test_batch_imbalance_settlement():
+    assert _has_label("sensor.imbalance_settlement", "cost")
+
+
+def test_batch_capacity_market():
+    assert _has_label("sensor.capacity_market", "cost")
+
+
+def test_batch_congestion_fee():
+    assert _has_label("sensor.congestion_fee", "cost")
+
+
+def test_batch_balancing_cost():
+    assert _has_label("sensor.balancing_cost", "cost")
+
+
+def test_batch_ruecklastschriftgebuehr():
+    assert _has_label("sensor.ruecklastschriftgebuehr", "cost")
+
+
+def test_batch_inkassokosten():
+    assert _has_label("sensor.inkassokosten", "cost")
+
+
+def test_batch_vollstreckungskosten():
+    assert _has_label("sensor.vollstreckungskosten", "cost")
+
+
+def test_batch_stromvertrag():
+    assert _has_label("sensor.stromvertrag", "cost")
+
+
+def test_batch_gasvertrag():
+    assert _has_label("sensor.gasvertrag", "cost")
+
+
+def test_batch_energievertrag():
+    assert _has_label("sensor.energievertrag", "cost")
+
+
+def test_batch_klimaabgabe():
+    assert _has_label("sensor.klimaabgabe", "cost")
+
+
+def test_batch_klimapreis():
+    assert _has_label("sensor.klimapreis", "cost")
+
+
+def test_batch_bestandskundenrabatt():
+    assert _has_label("sensor.bestandskundenrabatt", "cost")
+
+
+def test_batch_restwertversicherung():
+    assert _has_label("sensor.restwertversicherung", "cost")
+
+
+def test_batch_fernwaermeabschlag():
+    assert _has_label("sensor.fernwaermeabschlag", "cost")
+
+
+def test_batch_fernwaermegrundpreis():
+    assert _has_label("sensor.fernwaermegrundpreis", "cost")
+
+
+def test_batch_wasserstoffpreis():
+    assert _has_label("sensor.wasserstoffpreis", "cost")
+
+
+def test_batch_ladesaeulenpreis():
+    assert _has_label("sensor.ladesaeulenpreis", "cost")
+
+
+def test_batch_roaming_gebuehr():
+    assert _has_label("sensor.roaming_gebuehr", "cost")
+
+
+def test_batch_ladekartengebuehr():
+    assert _has_label("sensor.ladekartengebuehr", "cost")
+
+
+def test_batch_dc_schnellladepreis():
+    assert _has_label("sensor.dc_schnellladepreis", "cost")
+
+
+def test_batch_reservepreis():
+    assert _has_label("sensor.reservepreis", "cost")
+
+
+def test_batch_squire_stronghold():
+    assert _has_label("sensor.squire_stronghold", "locks")
+
+
+def test_batch_squire_warrior():
+    assert _has_label("sensor.squire_warrior", "locks")
+
+
+def test_batch_gainsborough():
+    assert _has_label("sensor.gainsborough", "locks")
+
+
+def test_batch_lockwood():
+    assert _has_label("sensor.lockwood", "locks")
+
+
+def test_batch_codelocks():
+    assert _has_label("sensor.codelocks", "locks")
+
+
+def test_batch_abloy_protec2():
+    assert _has_label("sensor.abloy_protec2", "locks")
+
+
+def test_batch_abloy_classic():
+    assert _has_label("sensor.abloy_classic", "locks")
+
+
+def test_batch_abloy_exec():
+    assert _has_label("sensor.abloy_exec", "locks")
+
+
+def test_batch_abloy_sento():
+    assert _has_label("sensor.abloy_sento", "locks")
+
+
+def test_batch_dom_ix():
+    assert _has_label("sensor.dom_ix", "locks")
+
+
+def test_batch_erreka():
+    assert _has_label("sensor.erreka", "locks")
+
+
+def test_batch_vachette():
+    assert _has_label("sensor.vachette", "locks")
+
+
+def test_batch_ruko():
+    assert _has_label("sensor.ruko", "locks")
+
+
+def test_batch_meroni():
+    assert _has_label("sensor.meroni", "locks")
+
+
+def test_batch_geze_schloss():
+    assert _has_label("sensor.geze_schloss", "locks")
+
+
+def test_batch_hoermann_schloss():
+    assert _has_label("sensor.hoermann_schloss", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.hoermann_schloss"), OrganizerOptions()) == "mdi:garage-lock"
+
+
+def test_batch_burg_waechter_diskus():
+    assert _has_label("sensor.burg_waechter_diskus", "locks")
+
+
+def test_batch_shark_stratos():
+    assert _has_label("sensor.shark_stratos", "vacuums")
+
+
+def test_batch_eureka_nes():
+    assert _has_label("sensor.eureka_nes", "vacuums")
+
+
+def test_batch_bobsweep():
+    assert _has_label("sensor.bobsweep", "vacuums")
+
+
+def test_batch_moosoo():
+    assert _has_label("sensor.moosoo", "vacuums")
+
+
+def test_batch_roidmi_eve():
+    assert _has_label("sensor.roidmi_eve", "vacuums")
+
+
+def test_batch_hobot_legee():
+    assert _has_label("sensor.hobot_legee", "vacuums")
+
+
+def test_batch_samsung_bespoke_jet():
+    assert _has_label("sensor.samsung_bespoke_jet", "vacuums")
+
+
+def test_batch_ilife_a11():
+    assert _has_label("sensor.ilife_a11", "vacuums")
+
+
+def test_batch_ilife_v8s():
+    assert _has_label("sensor.ilife_v8s", "vacuums")
+
+
+def test_batch_moneual():
+    assert _has_label("sensor.moneual", "vacuums")
+
+
+def test_batch_vorabscheider():
+    assert _has_label("sensor.vorabscheider", "vacuums")
+
+
+def test_batch_pause_taste_sauger():
+    assert _has_label("sensor.pause_taste_sauger", "vacuums")
+
+
+def test_batch_werkseinstellung_sauger():
+    assert _has_label("sensor.werkseinstellung_sauger", "vacuums")
+
+
+def test_batch_diagnosemodus_sauger():
+    assert _has_label("sensor.diagnosemodus_sauger", "vacuums")
+
+
+def test_batch_serviceintervall_sauger():
+    assert _has_label("sensor.serviceintervall_sauger", "vacuums")
+
+
+def test_batch_moppdosierung():
+    assert _has_label("sensor.moppdosierung", "vacuums")
+
+
+def test_batch_lidar_turm():
+    assert _has_label("sensor.lidar_turm", "vacuums")
+
+
+def test_batch_selbstwaschende_walze():
+    assert _has_label("sensor.selbstwaschende_walze", "vacuums")
+
+
+def test_batch_bodenbelagserkennung():
+    assert _has_label("sensor.bodenbelagserkennung", "vacuums")
+
+
+def test_batch_philips_speedpro():
+    assert _has_label("sensor.philips_speedpro", "vacuums")
+
+
+def test_batch_miele_complete_c3():
+    assert _has_label("sensor.miele_complete_c3", "vacuums")
+
+
+def test_batch_irobot_genius():
+    assert _has_label("sensor.irobot_genius", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.irobot_genius"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_neato_d9():
+    assert _has_label("sensor.neato_d9", "vacuums")
+
+
+def test_batch_neato_d7():
+    assert _has_label("sensor.neato_d7", "vacuums")
+
+
+def test_batch_proscenic_850t():
+    assert _has_label("sensor.proscenic_850t", "vacuums")
+
+
+def test_batch_cecotec_conga_3690():
+    assert _has_label("sensor.cecotec_conga_3690", "vacuums")
+
+
+def test_batch_dreame_bot():
+    assert _has_label("sensor.dreame_bot", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.dreame_bot"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_black_decker_dustbuster():
+    assert _has_label("sensor.black_decker_dustbuster", "vacuums")
+
+
+def test_batch_dustbuster():
+    assert _has_label("sensor.dustbuster", "vacuums")
+
+
+def test_batch_vax_vacuum():
+    assert _has_label("sensor.vax_vacuum", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.vax_vacuum"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_batch_rowenta_silence_force():
+    assert _has_label("sensor.rowenta_silence_force", "vacuums")
+
+
+def test_batch_akkukapazitaet_sauger():
+    assert _has_label("sensor.akkukapazitaet_sauger", "vacuums")
+
+
+def test_batch_zyklonabscheider():
+    assert _has_label("sensor.zyklonabscheider", "vacuums")
+
+
+def test_batch_fehlerspeicher_sauger():
+    assert _has_label("sensor.fehlerspeicher_sauger", "vacuums")
+
+
+def test_batch_wasserdosierung():
+    assert _has_label("sensor.wasserdosierung", "vacuums")
+
+
+def test_batch_kamera_sauger():
+    assert _has_label("sensor.kamera_sauger", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.kamera_sauger"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_batch_siegenia_sensoric():
+    assert _has_label("sensor.siegenia_sensoric", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.siegenia_sensoric"), OrganizerOptions()) == "mdi:door-open"
+
+
+def test_batch_homematic_ip_wired():
+    assert _has_label("sensor.homematic_ip_wired", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.homematic_ip_wired"), OrganizerOptions()) == "mdi:lan"
+
+
+def test_batch_moes_zigbee_thermostat():
+    assert _has_label("sensor.moes_zigbee_thermostat", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.moes_zigbee_thermostat"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_batch_third_reality_button():
+    assert _has_label("sensor.third_reality_button", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.third_reality_button"), OrganizerOptions()) == "mdi:gesture-tap-button"
+
+
+def test_batch_tado_zusatzfuehler():
+    assert _has_label("sensor.tado_zusatzfuehler", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.tado_zusatzfuehler"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_batch_tado_smartes_heizkoerperthermostat():
+    assert _has_label("sensor.tado_smartes_heizkoerperthermostat", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.tado_smartes_heizkoerperthermostat"), OrganizerOptions()) == "mdi:thermostat-box"
+
+
+def test_batch_aqara_wasseralarm():
+    assert _has_label("sensor.aqara_wasseralarm", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.aqara_wasseralarm"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_batch_ikea_tradfri_kadrilj():
+    assert _has_label("sensor.ikea_tradfri_kadrilj", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.ikea_tradfri_kadrilj"), OrganizerOptions()) == "mdi:roller-shade"
+
+
+def test_batch_shelly_blu_doorwindow():
+    assert _has_label("sensor.shelly_blu_doorwindow", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_blu_doorwindow"), OrganizerOptions()) == "mdi:door"
+
+
+def test_batch_homematic_funk_taster():
+    assert _has_label("sensor.homematic_funk_taster", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.homematic_funk_taster"), OrganizerOptions()) == "mdi:gesture-tap-button"
+
+
+def test_batch_eve_systems_weather():
+    assert _has_label("sensor.eve_systems_weather", "weather")
+    assert suggest_entity_icon(_FakeEntry("sensor.eve_systems_weather"), OrganizerOptions()) == "mdi:weather-partly-cloudy"
+
+
+def test_batch_tuya_rgbw_lampe():
+    assert _has_label("sensor.tuya_rgbw_lampe", "lights")
+    assert suggest_entity_icon(_FakeEntry("sensor.tuya_rgbw_lampe"), OrganizerOptions()) == "mdi:led-strip"
+
+
+def test_batch_zigbee_router_repeater():
+    assert _has_label("sensor.zigbee_router_repeater", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.zigbee_router_repeater"), OrganizerOptions()) == "mdi:router-wireless"
+
+
+def test_batch_z2m_firmware():
+    assert _has_label("sensor.z2m_firmware", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.z2m_firmware"), OrganizerOptions()) == "mdi:update"
+
+
+def test_batch_matter_multi_admin():
+    assert _has_label("sensor.matter_multi_admin", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.matter_multi_admin"), OrganizerOptions()) == "mdi:access-point"
