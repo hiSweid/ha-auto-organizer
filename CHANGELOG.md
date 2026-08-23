@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.141] - 2026-08-23
+
+### Added
+- Vocabulary growth: 147 new keywords plus icons, spanning waste, automations,
+  light level, and further real device/platform synonyms (Reencle, Schneider
+  EVLink, Elgato Eve Thermo, INA219/INA226, Hyundai Kona, Maytronics, Toshiba
+  Estia, Samsung EcoBubble, and more), plus 25 icon-only entries for existing
+  keywords that previously had none.
+
 ## [0.9.140] - 2026-08-21
 
 ### Fixed
