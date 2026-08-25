@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.142] - 2026-08-25
+
+### Added
+- Vocabulary growth (bundled from 2 daily batches since v0.9.141): 266 new
+  keywords plus icons, spanning cost, locks, vacuums, water, covers, updates,
+  and further real device/platform synonyms (Shelly, Denon/Yamaha/Ubiquiti/
+  Epson/SMA/Goodwe/Deye firmware, Unraid/Portainer/Traefik/pfSense/OPNsense
+  updates, KNX/Zwave/Aeotec/Qubino/Tuya cover actuators, well/pond/flood
+  water sensors, and more), plus 24 icon-only entries for existing keywords
+  that previously had none.
+
 ## [0.9.141] - 2026-08-23
 
 ### Added
