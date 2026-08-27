@@ -28161,6 +28161,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "final bill": "mdi:currency-eur",
     "solar eclipse": "mdi:weather-sunny-alert",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "kartoffelschaeler": "mdi:pot",
+    "warmwasserzulauf": "mdi:water-boiler",
+    "gp batterie": "mdi:battery",
+    "stickstoffmonoxid": "mdi:molecule",
+    "xylophon": "mdi:music-box",
+    "hauslicht": "mdi:lightbulb",
+    "energiebudget": "mdi:currency-eur",
+    "abhaengigkeitsupdate": "mdi:update",
+    "riegelwerk": "mdi:lock",
+    "teppichbooster": "mdi:vacuum",
+    "temperaturmaximum": "mdi:thermometer-high",
+    "nachfuellpackung": "mdi:package-variant-closed",
+    "motorschutzrelais": "mdi:power-plug",
+    "tageslichtautomatik": "mdi:weather-sunny",
+    "rollbuerste": "mdi:brush",
+    "werkstattabsaugung": "mdi:fan",
+    "bilgenwasser": "mdi:water-alert",
+    "kippschutz": "mdi:shield-check",
+    "solarthermie": "mdi:solar-panel",
+    "pir field of view": "mdi:eye",
+    "retentionsbecken": "mdi:water-well",
+    "automation blueprint": "mdi:clipboard-list",
+    "lifepo4": "mdi:battery-charging-low",
+    "shopping list": "mdi:cart",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
