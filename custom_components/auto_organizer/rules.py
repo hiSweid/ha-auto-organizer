@@ -27085,6 +27085,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "firmware build": "mdi:package-up",
     "enocean": "mdi:bluetooth",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "rohrundichtigkeit": "mdi:leak",
+    "kellerdecke feucht": "mdi:leak",
+    "bedtime routine": "mdi:script",
+    "zh03b": "mdi:air-filter",
+    "luefterabdeckung": "mdi:fan",
+    "kraeuterbeet": "mdi:flower-tulip",
+    "monsunregen": "mdi:weather-pouring",
+    "kwk umlage": "mdi:cash-multiple",
+    "sauerstoffkonzentration": "mdi:air-filter",
+    "telematik": "mdi:car-connected",
+    "abkuendigung produkt": "mdi:update",
+    "belegung": "mdi:home-account",
+    "knx markise": "mdi:blinds",
+    "cold front": "mdi:weather-snowy-rainy",
+    "water hammer arrestor": "mdi:water-pump",
+    "oelpreis": "mdi:gas-station",
+    "innenhofkamera": "mdi:camera",
+    "anonyme funktion": "mdi:function",
+    "pferdestalllueftung": "mdi:fan",
+    "neustartmodus": "mdi:script",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
