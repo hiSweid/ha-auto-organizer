@@ -29397,6 +29397,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "emissionswert": "mdi:chart-line",
     "yello": "mdi:currency-usd",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "swipe sensor": "mdi:fingerprint",
+    "light level reading": "mdi:brightness-5",
+    "galaxy smarttag": "mdi:cellphone-wireless",
+    "zg 205z": "mdi:cellphone-wireless",
+    "feuchtekompensation": "mdi:water-percent",
+    "stuffiness": "mdi:air-filter",
+    "stable release": "mdi:update",
+    "knopfdruck": "mdi:gesture-tap-button",
+    "sauganschluss": "mdi:vacuum",
+    "mq2 sensor": "mdi:smoke-detector",
+    "bestellstatus": "mdi:package-variant-closed",
+    "festivalstimmung": "mdi:party-popper",
+    "weatherxm": "mdi:weather-cloudy",
+    "lichtklima": "mdi:brightness-6",
+    "endabrechnung": "mdi:receipt-text-outline",
+    "kaskadenimpaktor": "mdi:air-filter",
+    "privacy zone": "mdi:shield-account",
+    "wetter com": "mdi:weather-cloudy",
+    "muggy": "mdi:water-percent",
+    "stockpunkt": "mdi:thermometer-low",
+    "stapelbefehl": "mdi:script-text",
+    "sublimationstemperatur": "mdi:thermometer-high",
+    "ilife": "mdi:vacuum",
+    "marktpraemie": "mdi:cash-multiple",
+    "temperature log": "mdi:chart-line",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

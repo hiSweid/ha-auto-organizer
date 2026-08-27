@@ -68586,3 +68586,103 @@ def test_icon_backfill_emissionswert():
 
 def test_icon_backfill_yello():
     assert suggest_entity_icon(_FakeEntry("sensor.yello"), OrganizerOptions()) == "mdi:currency-usd"
+
+
+def test_icon_backfill_swipe_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.swipe_sensor"), OrganizerOptions()) == "mdi:fingerprint"
+
+
+def test_icon_backfill_light_level_reading():
+    assert suggest_entity_icon(_FakeEntry("sensor.light_level_reading"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_galaxy_smarttag():
+    assert suggest_entity_icon(_FakeEntry("sensor.galaxy_smarttag"), OrganizerOptions()) == "mdi:cellphone-wireless"
+
+
+def test_icon_backfill_zg_205z():
+    assert suggest_entity_icon(_FakeEntry("sensor.zg_205z"), OrganizerOptions()) == "mdi:cellphone-wireless"
+
+
+def test_icon_backfill_feuchtekompensation():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchtekompensation"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_stuffiness():
+    assert suggest_entity_icon(_FakeEntry("sensor.stuffiness"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_stable_release():
+    assert suggest_entity_icon(_FakeEntry("sensor.stable_release"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_knopfdruck():
+    assert suggest_entity_icon(_FakeEntry("sensor.knopfdruck"), OrganizerOptions()) == "mdi:gesture-tap-button"
+
+
+def test_icon_backfill_sauganschluss():
+    assert suggest_entity_icon(_FakeEntry("sensor.sauganschluss"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_mq2_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.mq2_sensor"), OrganizerOptions()) == "mdi:smoke-detector"
+
+
+def test_icon_backfill_bestellstatus():
+    assert suggest_entity_icon(_FakeEntry("sensor.bestellstatus"), OrganizerOptions()) == "mdi:package-variant-closed"
+
+
+def test_icon_backfill_festivalstimmung():
+    assert suggest_entity_icon(_FakeEntry("sensor.festivalstimmung"), OrganizerOptions()) == "mdi:party-popper"
+
+
+def test_icon_backfill_weatherxm():
+    assert suggest_entity_icon(_FakeEntry("sensor.weatherxm"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_lichtklima():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtklima"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_endabrechnung():
+    assert suggest_entity_icon(_FakeEntry("sensor.endabrechnung"), OrganizerOptions()) == "mdi:receipt-text-outline"
+
+
+def test_icon_backfill_kaskadenimpaktor():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaskadenimpaktor"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_privacy_zone():
+    assert suggest_entity_icon(_FakeEntry("sensor.privacy_zone"), OrganizerOptions()) == "mdi:shield-account"
+
+
+def test_icon_backfill_wetter_com():
+    assert suggest_entity_icon(_FakeEntry("sensor.wetter_com"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_muggy():
+    assert suggest_entity_icon(_FakeEntry("sensor.muggy"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_stockpunkt():
+    assert suggest_entity_icon(_FakeEntry("sensor.stockpunkt"), OrganizerOptions()) == "mdi:thermometer-low"
+
+
+def test_icon_backfill_stapelbefehl():
+    assert suggest_entity_icon(_FakeEntry("sensor.stapelbefehl"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_sublimationstemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.sublimationstemperatur"), OrganizerOptions()) == "mdi:thermometer-high"
+
+
+def test_icon_backfill_ilife():
+    assert suggest_entity_icon(_FakeEntry("sensor.ilife"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_marktpraemie():
+    assert suggest_entity_icon(_FakeEntry("sensor.marktpraemie"), OrganizerOptions()) == "mdi:cash-multiple"
+
+
+def test_icon_backfill_temperature_log():
+    assert suggest_entity_icon(_FakeEntry("sensor.temperature_log"), OrganizerOptions()) == "mdi:chart-line"
