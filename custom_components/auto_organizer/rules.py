@@ -32086,6 +32086,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "homeseer": "mdi:home-assistant",
     "deliveroo": "mdi:food-drumstick",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "ablaufplan": "mdi:calendar-range",
+    "single use plastic": "mdi:trash-can",
+    "honeywell kamera": "mdi:camera",
+    "capacity market": "mdi:currency-usd",
+    "omada": "mdi:network",
+    "teuerungsrate": "mdi:currency-usd",
+    "huawei sun2000": "mdi:solar-power",
+    "niederschlagsereignis": "mdi:weather-rainy",
+    "ozon": "mdi:air-filter",
+    "wintergartenhelligkeit": "mdi:brightness-6",
+    "bootloader update": "mdi:update",
+    "lsm6ds3": "mdi:motion-sensor",
+    "yogastudio": "mdi:account-circle",
+    "gesamtverbrauch": "mdi:power-plug",
+    "gasoline": "mdi:gas-station",
+    "etagenplan": "mdi:floor-plan",
+    "kanalschacht": "mdi:pipe-leak",
+    "play store update": "mdi:update",
+    "nachhauseweg": "mdi:home-map-marker",
+    "verbindungstimeout": "mdi:network-off",
+    "ophaalkalender": "mdi:calendar-clock",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

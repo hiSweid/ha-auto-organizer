@@ -78390,3 +78390,87 @@ def test_icon_backfill_homeseer():
 
 def test_icon_backfill_deliveroo():
     assert suggest_entity_icon(_FakeEntry("sensor.deliveroo"), OrganizerOptions()) == "mdi:food-drumstick"
+
+
+def test_icon_backfill_ablaufplan():
+    assert suggest_entity_icon(_FakeEntry("sensor.ablaufplan"), OrganizerOptions()) == "mdi:calendar-range"
+
+
+def test_icon_backfill_single_use_plastic():
+    assert suggest_entity_icon(_FakeEntry("sensor.single_use_plastic"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_honeywell_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.honeywell_kamera"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_capacity_market():
+    assert suggest_entity_icon(_FakeEntry("sensor.capacity_market"), OrganizerOptions()) == "mdi:currency-usd"
+
+
+def test_icon_backfill_omada():
+    assert suggest_entity_icon(_FakeEntry("sensor.omada"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_teuerungsrate():
+    assert suggest_entity_icon(_FakeEntry("sensor.teuerungsrate"), OrganizerOptions()) == "mdi:currency-usd"
+
+
+def test_icon_backfill_huawei_sun2000():
+    assert suggest_entity_icon(_FakeEntry("sensor.huawei_sun2000"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_niederschlagsereignis():
+    assert suggest_entity_icon(_FakeEntry("sensor.niederschlagsereignis"), OrganizerOptions()) == "mdi:weather-rainy"
+
+
+def test_icon_backfill_ozon():
+    assert suggest_entity_icon(_FakeEntry("sensor.ozon"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_wintergartenhelligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.wintergartenhelligkeit"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_bootloader_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.bootloader_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_lsm6ds3():
+    assert suggest_entity_icon(_FakeEntry("sensor.lsm6ds3"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_yogastudio():
+    assert suggest_entity_icon(_FakeEntry("sensor.yogastudio"), OrganizerOptions()) == "mdi:account-circle"
+
+
+def test_icon_backfill_gesamtverbrauch():
+    assert suggest_entity_icon(_FakeEntry("sensor.gesamtverbrauch"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_gasoline():
+    assert suggest_entity_icon(_FakeEntry("sensor.gasoline"), OrganizerOptions()) == "mdi:gas-station"
+
+
+def test_icon_backfill_etagenplan():
+    assert suggest_entity_icon(_FakeEntry("sensor.etagenplan"), OrganizerOptions()) == "mdi:floor-plan"
+
+
+def test_icon_backfill_kanalschacht():
+    assert suggest_entity_icon(_FakeEntry("sensor.kanalschacht"), OrganizerOptions()) == "mdi:pipe-leak"
+
+
+def test_icon_backfill_play_store_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.play_store_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_nachhauseweg():
+    assert suggest_entity_icon(_FakeEntry("sensor.nachhauseweg"), OrganizerOptions()) == "mdi:home-map-marker"
+
+
+def test_icon_backfill_verbindungstimeout():
+    assert suggest_entity_icon(_FakeEntry("sensor.verbindungstimeout"), OrganizerOptions()) == "mdi:network-off"
+
+
+def test_icon_backfill_ophaalkalender():
+    assert suggest_entity_icon(_FakeEntry("sensor.ophaalkalender"), OrganizerOptions()) == "mdi:calendar-clock"
