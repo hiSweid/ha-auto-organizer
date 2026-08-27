@@ -67685,7 +67685,7 @@ def test_icon_backfill_digitale_sperrzone():
 
 
 def test_icon_backfill_raumreihenfolge():
-    assert suggest_entity_icon(_FakeEntry("sensor.raumreihenfolge"), OrganizerOptions()) == "mdi:room-service"
+    assert suggest_entity_icon(_FakeEntry("sensor.raumreihenfolge"), OrganizerOptions()) == "mdi:map-marker-path"
 
 
 def test_icon_backfill_kurzzeitpraesenz():
@@ -67941,7 +67941,7 @@ def test_icon_backfill_mtu_groesse():
 
 
 def test_icon_backfill_nightcap():
-    assert suggest_entity_icon(_FakeEntry("sensor.nightcap"), OrganizerOptions()) == "mdi:movie-open"
+    assert suggest_entity_icon(_FakeEntry("sensor.nightcap"), OrganizerOptions()) == "mdi:sleep"
 
 
 def test_icon_backfill_kontrolltaster():
@@ -68185,7 +68185,7 @@ def test_icon_backfill_gravimetrische_energiedichte():
 
 
 def test_icon_backfill_teigschaber():
-    assert suggest_entity_icon(_FakeEntry("sensor.teigschaber"), OrganizerOptions()) == "mdi:food-croissant"
+    assert suggest_entity_icon(_FakeEntry("sensor.teigschaber"), OrganizerOptions()) == "mdi:knife"
 
 
 def test_icon_backfill_rivian():
@@ -68901,7 +68901,7 @@ def test_icon_backfill_solis_inverter():
 
 
 def test_icon_backfill_kamerarauschen():
-    assert suggest_entity_icon(_FakeEntry("sensor.kamerarauschen"), OrganizerOptions()) == "mdi:microphone-message"
+    assert suggest_entity_icon(_FakeEntry("sensor.kamerarauschen"), OrganizerOptions()) == "mdi:image-broken"
 
 
 def test_icon_backfill_notlichtbewegungsmelder():
@@ -69885,7 +69885,7 @@ def test_icon_backfill_amazon_echo_studio():
 
 
 def test_icon_backfill_eva_dry():
-    assert suggest_entity_icon(_FakeEntry("sensor.eva_dry"), OrganizerOptions()) == "mdi:hair-dryer"
+    assert suggest_entity_icon(_FakeEntry("sensor.eva_dry"), OrganizerOptions()) == "mdi:air-humidifier"
 
 
 def test_icon_backfill_patchen():
