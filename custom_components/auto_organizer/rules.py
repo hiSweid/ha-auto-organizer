@@ -26541,6 +26541,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "outdoor lux": "mdi:brightness-7",
     "late fee": "mdi:currency-usd",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "trienekens": "mdi:trash-can",
+    "unterhaltungselektronik": "mdi:television-classic",
+    "gartenfeststimmung": "mdi:flower-tulip",
+    "einbruchsicherung": "mdi:lock-alert",
+    "raumverbinden sauger": "mdi:vacuum",
+    "homekit secure video motion": "mdi:motion-sensor",
+    "wildkamera akku": "mdi:battery-charging",
+    "teichbeluefter": "mdi:fountain",
+    "sousvide stick": "mdi:pot-steam",
+    "durchgangssensor": "mdi:motion-sensor",
+    "duenger": "mdi:seed",
+    "pluviometer": "mdi:weather-rainy",
+    "parking motion sensor": "mdi:motion-sensor",
+    "erfassungsbereich": "mdi:motion-sensor",
+    "baustellenabfall": "mdi:delete",
+    "simplisafe kamera": "mdi:camera",
+    "water stain": "mdi:water",
+    "ota fehler": "mdi:update",
+    "spotreinigung": "mdi:vacuum",
+    "wetterinfo": "mdi:weather-cloudy",
+    "entsorgungsnachweis": "mdi:recycle",
+    "haltbarkeit": "mdi:package",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
