@@ -26590,6 +26590,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ventilatorladestation": "mdi:fan-chevron-up",
     "dmz host": "mdi:server-network",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "moon phase": "mdi:weather-night",
+    "maxell": "mdi:battery-charging",
+    "luftionisator": "mdi:air-filter",
+    "teleco antrieb": "mdi:window-closed",
+    "cve eintrag": "mdi:security",
+    "tefal": "mdi:toaster",
+    "tiefgaragenkamera": "mdi:cctv",
+    "unterprogramm": "mdi:script-text",
+    "lichtstaerke": "mdi:brightness-5",
+    "acconeer a121": "mdi:motion-sensor",
+    "megawattstunde": "mdi:flash",
+    "ereignistrigger": "mdi:bell-plus",
+    "lieferschein": "mdi:package-variant-closed",
+    "automate app": "mdi:script",
+    "schlafzimmer belegt": "mdi:bed",
+    "stromnetzbetreiber": "mdi:power-plug",
+    "smart lock akku": "mdi:lock-clock",
+    "davis vantage": "mdi:weather-cloudy",
+    "maskenballstimmung": "mdi:palette",
+    "modem update": "mdi:update",
+    "trittschallsensor": "mdi:walk",
+    "winterprogramm": "mdi:snowflake",
+    "lr1120": "mdi:battery-50",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
