@@ -27505,6 +27505,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "wps taste": "mdi:wifi",
     "schokoladentemperatur": "mdi:thermometer",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "dimmautomatik": "mdi:lightbulb-auto",
+    "dauerlueftung": "mdi:fan-chevron-up",
+    "nilfisk": "mdi:water-pump",
+    "video verschluesselung": "mdi:camera-lock",
+    "ladekontakte verschmutzt": "mdi:battery-charging-wireless",
+    "miele": "mdi:washing-machine",
+    "theben": "mdi:toggle-switch",
+    "druckabfall heizung": "mdi:gauge-empty",
+    "waterpik": "mdi:toilet",
+    "sunrise lamp": "mdi:weather-sunny",
+    "firmware aktuell": "mdi:update",
+    "linux update": "mdi:update",
+    "waermefuehler": "mdi:thermometer-lines",
+    "wasserwarner": "mdi:water-alert",
+    "drehkreuz": "mdi:lock-clock",
+    "update fehlgeschlagen": "mdi:update",
+    "makita akku": "mdi:battery-charging-100",
+    "pergola": "mdi:blinds",
+    "ionentauscherharz": "mdi:water-pump",
+    "bidirectional meter": "mdi:gauge",
+    "spitzentemperatur": "mdi:thermometer-high",
+    "kamera bewegungserkennung": "mdi:motion-sensor",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
