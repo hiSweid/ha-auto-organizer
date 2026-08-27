@@ -26340,6 +26340,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "iobroker automatisierung": "mdi:script-text-outline",
     "warm front": "mdi:weather-windy",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "atemwegsreizung": "mdi:air-filter",
+    "erdgasleck": "mdi:gas-cylinder",
+    "ventusky": "mdi:weather-windy",
+    "notenstaender": "mdi:music-note",
+    "ansauglufttemperatur": "mdi:thermometer-low",
+    "automator": "mdi:robot",
+    "wassersprudler": "mdi:water-boiler",
+    "siebenschlaefer": "mdi:cloud",
+    "gamepadbatterie": "mdi:battery-charging",
+    "videofeed": "mdi:video",
+    "netzwerkscan": "mdi:network",
+    "feinstaubsensor pm1": "mdi:air-purifier",
+    "kondensationsrisiko": "mdi:water-percent-alert",
+    "solar bewegungsmelder": "mdi:motion-sensor",
+    "salzgehalt": "mdi:water-off",
+    "luftmessstation": "mdi:weather-cloudy",
+    "wasserflosser": "mdi:shower-head",
+    "tibber preis": "mdi:currency-eur",
+    "broadcast adresse": "mdi:ip-network",
+    "abloy sento": "mdi:lock",
+    "auftauprogramm": "mdi:thermostat-auto",
+    "range remaining": "mdi:car-cruise-control",
+    "in ear": "mdi:headphones",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
