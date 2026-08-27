@@ -76130,3 +76130,71 @@ def test_icon_backfill_pir_walktest():
 
 def test_icon_backfill_estrichtrocknung():
     assert suggest_entity_icon(_FakeEntry("sensor.estrichtrocknung"), OrganizerOptions()) == "mdi:heat-wave"
+
+
+def test_icon_backfill_modbus():
+    assert suggest_entity_icon(_FakeEntry("sensor.modbus"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_netzwerk():
+    assert suggest_entity_icon(_FakeEntry("sensor.netzwerk"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_waschkellerhelligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.waschkellerhelligkeit"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_kaffeevorrat():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaffeevorrat"), OrganizerOptions()) == "mdi:coffee"
+
+
+def test_icon_backfill_wolf_ism7i():
+    assert suggest_entity_icon(_FakeEntry("sensor.wolf_ism7i"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_icon_backfill_wasserpfuetze():
+    assert suggest_entity_icon(_FakeEntry("sensor.wasserpfuetze"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_icon_backfill_gridwatch():
+    assert suggest_entity_icon(_FakeEntry("sensor.gridwatch"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_octavia_iv():
+    assert suggest_entity_icon(_FakeEntry("sensor.octavia_iv"), OrganizerOptions()) == "mdi:car"
+
+
+def test_icon_backfill_water_softener():
+    assert suggest_entity_icon(_FakeEntry("sensor.water_softener"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_daylight_factor():
+    assert suggest_entity_icon(_FakeEntry("sensor.daylight_factor"), OrganizerOptions()) == "mdi:white-balance-sunny"
+
+
+def test_icon_backfill_azorenhoch():
+    assert suggest_entity_icon(_FakeEntry("sensor.azorenhoch"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_prozentualer_rollout():
+    assert suggest_entity_icon(_FakeEntry("sensor.prozentualer_rollout"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_dieselleck():
+    assert suggest_entity_icon(_FakeEntry("sensor.dieselleck"), OrganizerOptions()) == "mdi:gas-station"
+
+
+def test_icon_backfill_weatherbit():
+    assert suggest_entity_icon(_FakeEntry("sensor.weatherbit"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_tarifmodell():
+    assert suggest_entity_icon(_FakeEntry("sensor.tarifmodell"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_proficook():
+    assert suggest_entity_icon(_FakeEntry("sensor.proficook"), OrganizerOptions()) == "mdi:microwave"
+
+
+def test_icon_backfill_kaufliste():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaufliste"), OrganizerOptions()) == "mdi:cart"

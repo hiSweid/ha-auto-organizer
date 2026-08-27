@@ -31461,6 +31461,25 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "pir walktest": "mdi:motion-sensor",
     "estrichtrocknung": "mdi:heat-wave",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "modbus": "mdi:network",
+    "netzwerk": "mdi:network",
+    "waschkellerhelligkeit": "mdi:lightbulb",
+    "kaffeevorrat": "mdi:coffee",
+    "wolf ism7i": "mdi:thermostat",
+    "wasserpfuetze": "mdi:water-alert",
+    "gridwatch": "mdi:power-plug",
+    "octavia iv": "mdi:car",
+    "water softener": "mdi:water-pump",
+    "daylight factor": "mdi:white-balance-sunny",
+    "azorenhoch": "mdi:weather-windy",
+    "prozentualer rollout": "mdi:update",
+    "dieselleck": "mdi:gas-station",
+    "weatherbit": "mdi:weather-cloudy",
+    "tarifmodell": "mdi:currency-eur",
+    "proficook": "mdi:microwave",
+    "kaufliste": "mdi:cart",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
