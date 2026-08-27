@@ -30370,6 +30370,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "einweihungsfeier": "mdi:party-popper",
     "tuerschnaepper": "mdi:door-closed",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "neon sign": "mdi:led-strip",
+    "cleaning report": "mdi:robot-vacuum",
+    "erzeugung": "mdi:solar-power",
+    "toyota mirai": "mdi:car-electric",
+    "lux einheit": "mdi:brightness-5",
+    "flymo": "mdi:grass",
+    "akkutemperatur": "mdi:thermometer",
+    "v2 antrieb": "mdi:window-shutter",
+    "normalladen": "mdi:ev-station",
+    "photoschalter": "mdi:light-switch",
+    "geraeteverfolgung": "mdi:cellphone",
+    "geskriptete routine": "mdi:script-text-outline",
+    "meter rent": "mdi:currency-eur",
+    "rolladensteuergeraet": "mdi:window-shutter",
+    "muelltonne": "mdi:trash-can",
+    "automatisierungsprofil": "mdi:account-cog",
+    "beta programm": "mdi:alpha-b-box",
+    "hoehenhoch": "mdi:weather-hurricane",
+    "halloweenstimmung": "mdi:halloween",
+    "initskript": "mdi:script-text-outline",
+    "fotozelle": "mdi:sun-wireless",
+    "ip adresse": "mdi:network",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
