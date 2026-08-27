@@ -28413,6 +28413,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "warmwasserdurchfluss": "mdi:water-pump",
     "surge protector": "mdi:power-plug-off",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "schuetzenfest": "mdi:shield-lock",
+    "belegt": "mdi:account-clock",
+    "gefahrene kilometer": "mdi:map-marker-distance",
+    "vermittlungsgebuehr": "mdi:currency-eur",
+    "luefterlautstaerke": "mdi:fan-speed-1",
+    "flue gas": "mdi:gas-cylinder",
+    "cr2016": "mdi:battery-charging-10",
+    "vlc player": "mdi:play-circle",
+    "leerung morgen": "mdi:trash-can-outline",
+    "doppeltarif": "mdi:scale-balance",
+    "litter picker": "mdi:cat",
+    "rekuperation": "mdi:air-filter",
+    "batteriepflege": "mdi:battery-sync",
+    "geraet flashen": "mdi:update",
+    "self empty dock": "mdi:home-map-marker",
+    "main meter": "mdi:gauge",
+    "soda maker": "mdi:glass-mug",
+    "farasis": "mdi:battery-heart-variant",
+    "bewegungshistorie": "mdi:history",
+    "letzte aktualisierung": "mdi:clock-time-eight-outline",
+    "sicherheitsfix verfuegbar": "mdi:shield-check",
+    "schwimmbadueberlauf": "mdi:pool",
+    "home connect": "mdi:home-automation",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
