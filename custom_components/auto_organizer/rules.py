@@ -30923,6 +30923,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "lueftungssteuerung": "mdi:fan-auto",
     "duschablauf": "mdi:water-pump-off",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "regensensor terrasse": "mdi:water-off",
+    "energiesteuer": "mdi:power-plug",
+    "bticino": "mdi:light-switch",
+    "aufwachsequenz": "mdi:weather-sunny",
+    "trocknertuch": "mdi:tshirt-crew",
+    "schieflastgrenze": "mdi:car-wash",
+    "tageslichtquotient": "mdi:white-balance-sunny",
+    "phoscon": "mdi:wifi",
+    "schwenkneigekamera": "mdi:cctv",
+    "alarmzone kamera": "mdi:camera-off",
+    "gardena firmware": "mdi:cellphone-arrow-down",
+    "abloy exec": "mdi:lock-open",
+    "la crosse": "mdi:weather-cloudy",
+    "gebuehrenmarke": "mdi:trash-can",
+    "batteriehalter": "mdi:battery-charging",
+    "bluetti eb": "mdi:battery-medium",
+    "hygroskopisch": "mdi:water-percent",
+    "fruehlingsbrise szene": "mdi:flower",
+    "solarplane": "mdi:solar-panel",
+    "e bike schloss": "mdi:lock",
+    "workerprozess": "mdi:account-cog",
+    "fan night mode": "mdi:fan-off",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
