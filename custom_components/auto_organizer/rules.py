@@ -26197,6 +26197,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "treppenhausentlueftung": "mdi:fan",
     "ereignisvideo": "mdi:video",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "immissionsgrenzwert": "mdi:air-filter",
+    "joghurtbereiter": "mdi:blender",
+    "cell temperature": "mdi:thermometer",
+    "mmwave sensitivity": "mdi:motion-sensor",
+    "clutter map": "mdi:map-marker-radius",
+    "supervisor version": "mdi:update",
+    "pressure reducer": "mdi:valve",
+    "schadstoffmelder": "mdi:air-purifier",
+    "energieerzeugung": "mdi:solar-power",
+    "sonnencreme": "mdi:sun-compass",
+    "aktionsplan": "mdi:playlist-edit",
+    "oeffnungscode": "mdi:lock-open",
+    "heisswasserspuelung": "mdi:washing-machine",
+    "good morning": "mdi:weather-sunny",
+    "gartenlicht": "mdi:lightbulb",
+    "peha jalousie": "mdi:blinds",
+    "gepatcht": "mdi:package-up",
+    "weathercloud": "mdi:weather-cloudy",
+    "gruenkohl": "mdi:carrot",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
