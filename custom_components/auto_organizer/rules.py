@@ -27970,6 +27970,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "frischekick szene": "mdi:palette",
     "mini pv": "mdi:solar-power",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "temperature inversion": "mdi:thermometer-alert",
+    "im anmarsch": "mdi:account-arrow-right",
+    "aaa batterie": "mdi:battery",
+    "raumbewegungsmelder": "mdi:motion-sensor",
+    "optischer zoom kamera": "mdi:camera-enhance",
+    "gyroskop": "mdi:axis-z-rotate-clockwise",
+    "automation deaktivieren": "mdi:robot-off",
+    "immissionsschutz": "mdi:air-filter",
+    "shock alarm": "mdi:vibrate",
+    "illuminance threshold": "mdi:lightbulb-on-outline",
+    "hilook": "mdi:camera",
+    "feuchte luft": "mdi:water-percent",
+    "defrosting": "mdi:snowflake-melt",
+    "bootloader flashen": "mdi:flash",
+    "abluftsystem": "mdi:fan-alert",
+    "batterielos": "mdi:battery-unknown",
+    "geschirrspueler leck": "mdi:leak",
+    "multi etagen mapping": "mdi:map-marker-multiple",
+    "immax presence": "mdi:account-check",
+    "wiegesystem": "mdi:scale-bathroom",
+    "folgeaktion": "mdi:script-text",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
