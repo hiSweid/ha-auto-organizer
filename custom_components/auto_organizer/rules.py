@@ -28963,6 +28963,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "abfallwirtschaftsplan": "mdi:recycle",
     "verteilerdose": "mdi:power-plug",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "analogthermometer": "mdi:thermometer",
+    "vingcard": "mdi:lock",
+    "humidor feuchte": "mdi:water-percent",
+    "gewaechshaushelligkeit": "mdi:brightness-5",
+    "nasszelle": "mdi:water-percent",
+    "restkapazitaet": "mdi:battery",
+    "flue": "mdi:air-conditioner",
+    "einkaufswagenchip": "mdi:cart",
+    "yoosee": "mdi:cctv",
+    "spannung": "mdi:sine-wave",
+    "visual crossing": "mdi:weather-sunny",
+    "vernissage": "mdi:palette",
+    "nebenschalter": "mdi:toggle-switch",
+    "trittmatte": "mdi:security",
+    "muffige luft": "mdi:air-filter",
+    "rollback strategy": "mdi:update",
+    "luefterkalibrieren": "mdi:fan",
+    "lautsprecherkabel": "mdi:speaker-wireless",
+    "studer": "mdi:power-plug",
+    "leading edge": "mdi:lightbulb",
+    "zitrusbaum": "mdi:fruit-cherries",
+    "brauchwasserverbrauch": "mdi:water",
+    "atemfrequenzsensor": "mdi:motion-sensor",
+    "gaskostenanteil": "mdi:gas-cylinder",
+    "eisregen sensor": "mdi:weather-hail",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
