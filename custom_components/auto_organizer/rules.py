@@ -27853,6 +27853,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "terrassenbeschattung": "mdi:blinds",
     "stromvertrag": "mdi:file-document",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "tageslicht": "mdi:white-balance-sunny",
+    "tonnengroesse": "mdi:trash-can-outline",
+    "muellsackspender": "mdi:delete-empty",
+    "kellertrocknung": "mdi:water-percent",
+    "fenstersensorbatterie": "mdi:battery",
+    "loxone baustein": "mdi:chip",
+    "fitnessraum belegt": "mdi:account-alert",
+    "wohnzimmerdisco": "mdi:party-popper",
+    "schliessbolzen": "mdi:lock",
+    "beitragssatz": "mdi:currency-eur",
+    "tauchthermometer": "mdi:thermometer",
+    "vakuumierer": "mdi:vacuum",
+    "thumb turn cylinder": "mdi:lock-reset",
+    "boen": "mdi:weather-cloudy",
+    "makroaufnahme": "mdi:camera-burst",
+    "kilowattstunde": "mdi:flash",
+    "torlicht": "mdi:doorbell",
+    "slv strahler": "mdi:lightbulb",
+    "release cadence": "mdi:update",
+    "einwegverpackung": "mdi:recycle",
+    "delta package": "mdi:package-variant-closed",
+    "merkzettel": "mdi:note-text",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
