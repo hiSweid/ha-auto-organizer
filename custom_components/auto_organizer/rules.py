@@ -26615,6 +26615,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "winterprogramm": "mdi:snowflake",
     "lr1120": "mdi:battery-50",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "datenpaket": "mdi:package",
+    "dunkeladaptation": "mdi:weather-night",
+    "sauerstoffpumpe": "mdi:water-pump",
+    "zen modus": "mdi:seat-recline-extra",
+    "deno skript": "mdi:script-text",
+    "arrival trigger": "mdi:bell",
+    "finanzamt": "mdi:cash-multiple",
+    "rueckreise": "mdi:map-marker-check",
+    "rust skript": "mdi:script-text",
+    "sonnenenergie": "mdi:solar-power",
+    "domoticz automatisierung": "mdi:robot",
+    "trockenlaufschutz luefter": "mdi:fan",
+    "kuechenbeleuchtung": "mdi:lightbulb",
+    "schlauchriss": "mdi:pipe-leak",
+    "fuenffachschalter": "mdi:toggle-switch",
+    "carportlichtsensor": "mdi:brightness-6",
+    "national weather service": "mdi:weather-cloudy",
+    "ventilatorersatzteile": "mdi:fan",
+    "getraenkevorrat": "mdi:cup-water",
+    "fensterhelligkeit": "mdi:brightness-5",
+    "wiedergabe": "mdi:play",
+    "panfloete": "mdi:record-rec",
+    "reisend": "mdi:map-marker-distance",
+    "kitchen sink": "mdi:water-pump",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
