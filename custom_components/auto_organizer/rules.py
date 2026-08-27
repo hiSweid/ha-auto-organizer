@@ -33128,6 +33128,13 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "max31865": "mdi:thermometer",
     "balkonabend": "mdi:balcony",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "diensthandy": "mdi:cellphone",
+    "freigabebedingung": "mdi:lock-question",
+    "glaetteisen": "mdi:iron",
+    "verbindungsabbruch": "mdi:network-off",
+    "staudenbeet": "mdi:flower-tulip",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

@@ -82110,3 +82110,23 @@ def test_icon_backfill_max31865():
 
 def test_icon_backfill_balkonabend():
     assert suggest_entity_icon(_FakeEntry("sensor.balkonabend"), OrganizerOptions()) == "mdi:balcony"
+
+
+def test_icon_backfill_diensthandy():
+    assert suggest_entity_icon(_FakeEntry("sensor.diensthandy"), OrganizerOptions()) == "mdi:cellphone"
+
+
+def test_icon_backfill_freigabebedingung():
+    assert suggest_entity_icon(_FakeEntry("sensor.freigabebedingung"), OrganizerOptions()) == "mdi:lock-question"
+
+
+def test_icon_backfill_glaetteisen():
+    assert suggest_entity_icon(_FakeEntry("sensor.glaetteisen"), OrganizerOptions()) == "mdi:iron"
+
+
+def test_icon_backfill_verbindungsabbruch():
+    assert suggest_entity_icon(_FakeEntry("sensor.verbindungsabbruch"), OrganizerOptions()) == "mdi:network-off"
+
+
+def test_icon_backfill_staudenbeet():
+    assert suggest_entity_icon(_FakeEntry("sensor.staudenbeet"), OrganizerOptions()) == "mdi:flower-tulip"
