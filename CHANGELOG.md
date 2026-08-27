@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.152] - 2026-08-27
+
+### Added
+- Further `SPECIFIC_ICONS` entries from the ongoing local-LLM icon backfill
+  batch job (~4143 total merged so far this run, ~2.3k of the original
+  6.9k gap remaining — about two-thirds done).
+
+### Fixed
+- 4 more icon mismatches: `bierabend` (a beer-night scene) had
+  `mdi:movie-open` — another instance of the movie-open lazy scenes
+  fallback, `kettenreaktion` (a scripted chain reaction) had `mdi:react`
+  (the React.js framework logo — pure name collision), `deckelkontakt`
+  (a lid/cover contact sensor) had `mdi:contactless-payment` (an NFC
+  payment icon, collision on "Kontakt"), `konserven` (canned goods) had
+  `mdi:food-drumstick` (wrong food category).
+
 ## [0.9.151] - 2026-08-27
 
 ### Added
