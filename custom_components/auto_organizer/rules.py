@@ -28897,6 +28897,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "rasenpflege": "mdi:grass",
     "knabbergebaeck": "mdi:cookie",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "bh1750": "mdi:brightness-5",
+    "zwei wege audio": "mdi:speaker-wireless",
+    "multizyklon": "mdi:air-filter",
+    "warteschlange": "mdi:priority-high",
+    "motion pattern": "mdi:motion-sensor",
+    "inselhaube": "mdi:ceiling-fan",
+    "la nina": "mdi:weather-snowy-heavy",
+    "kaltwasserzulauf": "mdi:water-boiler",
+    "zaehlerablesung": "mdi:counter",
+    "damp air": "mdi:water-percent",
+    "varta akku": "mdi:battery-charging-90",
+    "dvb s2": "mdi:signal",
+    "illuminance ratio": "mdi:brightness-auto",
+    "trigger entprellen": "mdi:timer-sand-complete",
+    "comfortex": "mdi:blinds",
+    "muelltonnennummer": "mdi:trash-can-outline",
+    "windows task": "mdi:window-open",
+    "spaetfrost": "mdi:weather-fog",
+    "schadstoffcontainer": "mdi:recycle",
+    "in line fan": "mdi:fan-chevron-up",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

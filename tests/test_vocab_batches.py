@@ -66754,3 +66754,83 @@ def test_icon_backfill_rasenpflege():
 
 def test_icon_backfill_knabbergebaeck():
     assert suggest_entity_icon(_FakeEntry("sensor.knabbergebaeck"), OrganizerOptions()) == "mdi:cookie"
+
+
+def test_icon_backfill_bh1750():
+    assert suggest_entity_icon(_FakeEntry("sensor.bh1750"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_zwei_wege_audio():
+    assert suggest_entity_icon(_FakeEntry("sensor.zwei_wege_audio"), OrganizerOptions()) == "mdi:speaker-wireless"
+
+
+def test_icon_backfill_multizyklon():
+    assert suggest_entity_icon(_FakeEntry("sensor.multizyklon"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_warteschlange():
+    assert suggest_entity_icon(_FakeEntry("sensor.warteschlange"), OrganizerOptions()) == "mdi:priority-high"
+
+
+def test_icon_backfill_motion_pattern():
+    assert suggest_entity_icon(_FakeEntry("sensor.motion_pattern"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_inselhaube():
+    assert suggest_entity_icon(_FakeEntry("sensor.inselhaube"), OrganizerOptions()) == "mdi:ceiling-fan"
+
+
+def test_icon_backfill_la_nina():
+    assert suggest_entity_icon(_FakeEntry("sensor.la_nina"), OrganizerOptions()) == "mdi:weather-snowy-heavy"
+
+
+def test_icon_backfill_kaltwasserzulauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaltwasserzulauf"), OrganizerOptions()) == "mdi:water-boiler"
+
+
+def test_icon_backfill_zaehlerablesung():
+    assert suggest_entity_icon(_FakeEntry("sensor.zaehlerablesung"), OrganizerOptions()) == "mdi:counter"
+
+
+def test_icon_backfill_damp_air():
+    assert suggest_entity_icon(_FakeEntry("sensor.damp_air"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_varta_akku():
+    assert suggest_entity_icon(_FakeEntry("sensor.varta_akku"), OrganizerOptions()) == "mdi:battery-charging-90"
+
+
+def test_icon_backfill_dvb_s2():
+    assert suggest_entity_icon(_FakeEntry("sensor.dvb_s2"), OrganizerOptions()) == "mdi:signal"
+
+
+def test_icon_backfill_illuminance_ratio():
+    assert suggest_entity_icon(_FakeEntry("sensor.illuminance_ratio"), OrganizerOptions()) == "mdi:brightness-auto"
+
+
+def test_icon_backfill_trigger_entprellen():
+    assert suggest_entity_icon(_FakeEntry("sensor.trigger_entprellen"), OrganizerOptions()) == "mdi:timer-sand-complete"
+
+
+def test_icon_backfill_comfortex():
+    assert suggest_entity_icon(_FakeEntry("sensor.comfortex"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_icon_backfill_muelltonnennummer():
+    assert suggest_entity_icon(_FakeEntry("sensor.muelltonnennummer"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_icon_backfill_windows_task():
+    assert suggest_entity_icon(_FakeEntry("sensor.windows_task"), OrganizerOptions()) == "mdi:window-open"
+
+
+def test_icon_backfill_spaetfrost():
+    assert suggest_entity_icon(_FakeEntry("sensor.spaetfrost"), OrganizerOptions()) == "mdi:weather-fog"
+
+
+def test_icon_backfill_schadstoffcontainer():
+    assert suggest_entity_icon(_FakeEntry("sensor.schadstoffcontainer"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_in_line_fan():
+    assert suggest_entity_icon(_FakeEntry("sensor.in_line_fan"), OrganizerOptions()) == "mdi:fan-chevron-up"
