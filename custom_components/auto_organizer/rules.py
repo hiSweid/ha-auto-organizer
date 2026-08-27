@@ -26687,6 +26687,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "sharps bin": "mdi:medical-bag",
     "worx akku": "mdi:battery-charging",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "hygrostatsteuerung": "mdi:water-percent",
+    "klemmfuehler": "mdi:thermometer",
+    "pendelzeit": "mdi:account-clock",
+    "uhoo": "mdi:air-filter",
+    "desiccant": "mdi:water-off",
+    "bixby": "mdi:remote",
+    "e mtb": "mdi:car-electric",
+    "pyrgeometer": "mdi:brightness-5",
+    "kwh": "mdi:flash",
+    "home charging": "mdi:ev-station",
+    "muelltonnenausgabe": "mdi:trash-can",
+    "kompaktanlage": "mdi:cast",
+    "power bank": "mdi:power-plug",
+    "pfuetze": "mdi:leak",
+    "batch datei": "mdi:file-multiple",
+    "leave home": "mdi:door-open",
+    "silvercrest firmware": "mdi:update",
+    "ci pipeline": "mdi:pipe",
+    "einspeisetarif": "mdi:solar-power",
+    "teichpflege": "mdi:water",
+    "caddy server": "mdi:server-network",
+    "two way meter": "mdi:meter-electric",
+    "regalbeleuchtung": "mdi:lightbulb",
+    "allergenkonzentration": "mdi:air-purifier",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
