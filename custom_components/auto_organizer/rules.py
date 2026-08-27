@@ -28795,6 +28795,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "geplanter ablauf": "mdi:timeline-text-outline",
     "nikolausstimmung": "mdi:snowflake",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "gaswarnanlage": "mdi:gas-cylinder",
+    "personenschutzschalter": "mdi:toggle-switch",
+    "find my iphone": "mdi:cellphone-marker",
+    "biomuelltonnenleerung": "mdi:trash-can-outline",
+    "linienkoppler": "mdi:network",
+    "seilleuchte": "mdi:floor-lamp",
+    "oszillierender mopp": "mdi:vacuum",
+    "schleierleuchtdichte": "mdi:brightness-6",
+    "feuchtraumklima": "mdi:water-percent",
+    "luftguetegrad": "mdi:air-filter",
+    "rule machine": "mdi:script-text",
+    "wo ist app": "mdi:map-marker-radius",
+    "openhab rule dsl": "mdi:script-text",
+    "funkmotor": "mdi:blinds",
+    "gruenschnittcontainer": "mdi:leaf",
+    "sonnensegelmotor": "mdi:blinds",
+    "2k kamera": "mdi:camera",
+    "luftfeuchtealarm": "mdi:water-percent-alert",
+    "lightfighter": "mdi:camera",
+    "unverpackt laden": "mdi:recycle",
+    "raumauswahl saugroboter": "mdi:vacuum",
+    "nebenzeit": "mdi:currency-eur",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
