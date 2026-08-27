@@ -28718,6 +28718,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "restafval": "mdi:trash-can-outline",
     "virenkonzentration": "mdi:air-filter",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "wasseraufbereitungsanlage": "mdi:water-pump",
+    "futterhaus": "mdi:flower-tulip",
+    "usb kamera": "mdi:camera",
+    "ersthelfer": "mdi:medical-bag",
+    "homematic ip automatisierung": "mdi:script-text-outline",
+    "hygrochron": "mdi:water-percent",
+    "meteogram": "mdi:weather-cloudy",
+    "feuchtekarte": "mdi:chart-bar",
+    "drumcomputer": "mdi:music-note",
+    "iobroker skript": "mdi:script-text-outline",
+    "preis pro kwh": "mdi:currency-eur",
+    "mopp spuelen": "mdi:vacuum",
+    "ts0201": "mdi:water-percent",
+    "sr621": "mdi:battery-charging-90",
+    "moulinex": "mdi:blender",
+    "automatisierungsassistent": "mdi:robot",
+    "motion clear time": "mdi:motion-sensor",
+    "miele connect": "mdi:washing-machine",
+    "bodenfilter": "mdi:air-filter",
+    "akkualterung": "mdi:battery-sync",
+    "auto tracking kamera": "mdi:camera-enhance",
+    "tanztee": "mdi:movie-open",
+    "skriptsprache": "mdi:script-text-outline",
+    "recovery image": "mdi:update",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
