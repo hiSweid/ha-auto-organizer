@@ -26265,6 +26265,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "cirrus": "mdi:weather-cloudy",
     "hallsensor": "mdi:motion-sensor",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "mediaplayer": "mdi:play-circle",
+    "wiederholung": "mdi:reload",
+    "changelog verfuegbar": "mdi:file-document-outline",
+    "mehrwegsystem": "mdi:recycle",
+    "euro cylinder": "mdi:lock",
+    "dhcp server": "mdi:server-network",
+    "heiman lichtsensor": "mdi:brightness-6",
+    "peacock": "mdi:cast",
+    "kraftstoffpreis": "mdi:fuel",
+    "zimmerhelligkeit": "mdi:brightness-5",
+    "sanitaer": "mdi:water-pump",
+    "voltage drop": "mdi:battery-alert",
+    "ebay kleinanzeigen": "mdi:shopping",
+    "stickoxide": "mdi:air-filter",
+    "methangas": "mdi:gas-cylinder",
+    "damp proofing": "mdi:water-off",
+    "humidity buffer": "mdi:water-percent",
+    "nebenkosten": "mdi:currency-eur",
+    "uniview": "mdi:cctv",
+    "poollichtsensor": "mdi:brightness-7",
+    "wiederholungsreinigung": "mdi:autorenew",
+    "luminance value": "mdi:brightness-auto",
+    "unraid update": "mdi:update",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
