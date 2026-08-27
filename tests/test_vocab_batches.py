@@ -77778,3 +77778,87 @@ def test_icon_backfill_ladeschwelle():
 
 def test_icon_backfill_firmwarewechsel():
     assert suggest_entity_icon(_FakeEntry("sensor.firmwarewechsel"), OrganizerOptions()) == "mdi:download"
+
+
+def test_icon_backfill_gartenwetterstation():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenwetterstation"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_scotopic():
+    assert suggest_entity_icon(_FakeEntry("sensor.scotopic"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_mauerwerkstrocknung():
+    assert suggest_entity_icon(_FakeEntry("sensor.mauerwerkstrocknung"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_dachfensterhelligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.dachfensterhelligkeit"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_kobaltfrei():
+    assert suggest_entity_icon(_FakeEntry("sensor.kobaltfrei"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_sperrlinie():
+    assert suggest_entity_icon(_FakeEntry("sensor.sperrlinie"), OrganizerOptions()) == "mdi:delete"
+
+
+def test_icon_backfill_eventhandler():
+    assert suggest_entity_icon(_FakeEntry("sensor.eventhandler"), OrganizerOptions()) == "mdi:code-braces"
+
+
+def test_icon_backfill_grundwassereinbruch():
+    assert suggest_entity_icon(_FakeEntry("sensor.grundwassereinbruch"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_icon_backfill_akkubohrer():
+    assert suggest_entity_icon(_FakeEntry("sensor.akkubohrer"), OrganizerOptions()) == "mdi:battery-medium"
+
+
+def test_icon_backfill_gewuerzmischung():
+    assert suggest_entity_icon(_FakeEntry("sensor.gewuerzmischung"), OrganizerOptions()) == "mdi:silverware-fork-knife"
+
+
+def test_icon_backfill_sampler():
+    assert suggest_entity_icon(_FakeEntry("sensor.sampler"), OrganizerOptions()) == "mdi:music-note"
+
+
+def test_icon_backfill_hygrostat():
+    assert suggest_entity_icon(_FakeEntry("sensor.hygrostat"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_firmware_installieren():
+    assert suggest_entity_icon(_FakeEntry("sensor.firmware_installieren"), OrganizerOptions()) == "mdi:download"
+
+
+def test_icon_backfill_monsun():
+    assert suggest_entity_icon(_FakeEntry("sensor.monsun"), OrganizerOptions()) == "mdi:weather-pouring"
+
+
+def test_icon_backfill_uebersteuerung():
+    assert suggest_entity_icon(_FakeEntry("sensor.uebersteuerung"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_icon_backfill_moppwalze():
+    assert suggest_entity_icon(_FakeEntry("sensor.moppwalze"), OrganizerOptions()) == "mdi:robot-vacuum-variant"
+
+
+def test_icon_backfill_shade_sail():
+    assert suggest_entity_icon(_FakeEntry("sensor.shade_sail"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_icon_backfill_unterbauhaube():
+    assert suggest_entity_icon(_FakeEntry("sensor.unterbauhaube"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_vivotek():
+    assert suggest_entity_icon(_FakeEntry("sensor.vivotek"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_aussenwandbewegungsmelder():
+    assert suggest_entity_icon(_FakeEntry("sensor.aussenwandbewegungsmelder"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_wischmodus():
+    assert suggest_entity_icon(_FakeEntry("sensor.wischmodus"), OrganizerOptions()) == "mdi:vacuum"

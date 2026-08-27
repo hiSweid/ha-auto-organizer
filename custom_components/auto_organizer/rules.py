@@ -31915,6 +31915,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ladeschwelle": "mdi:battery-charging-wireless",
     "firmwarewechsel": "mdi:download",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "gartenwetterstation": "mdi:weather-windy",
+    "scotopic": "mdi:brightness-6",
+    "mauerwerkstrocknung": "mdi:water-percent",
+    "dachfensterhelligkeit": "mdi:brightness-5",
+    "kobaltfrei": "mdi:battery-charging",
+    "sperrlinie": "mdi:delete",
+    "eventhandler": "mdi:code-braces",
+    "grundwassereinbruch": "mdi:water-alert",
+    "akkubohrer": "mdi:battery-medium",
+    "gewuerzmischung": "mdi:silverware-fork-knife",
+    "sampler": "mdi:music-note",
+    "hygrostat": "mdi:water-percent",
+    "firmware installieren": "mdi:download",
+    "monsun": "mdi:weather-pouring",
+    "uebersteuerung": "mdi:toggle-switch",
+    "moppwalze": "mdi:robot-vacuum-variant",
+    "shade sail": "mdi:blinds",
+    "unterbauhaube": "mdi:fan-chevron-up",
+    "vivotek": "mdi:cctv",
+    "aussenwandbewegungsmelder": "mdi:motion-sensor",
+    "wischmodus": "mdi:vacuum",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
