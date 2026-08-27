@@ -6,6 +6,24 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.151] - 2026-08-27
+
+### Added
+- Further `SPECIFIC_ICONS` entries from the ongoing local-LLM icon backfill
+  batch job (~3662 total merged so far this run, ~2.8k of the original
+  6.9k gap remaining).
+
+### Fixed
+- 6 more icon mismatches from the same surface-similarity failure pattern:
+  `essiggurken` (pickled gherkins) had `mdi:pickaxe`, `wischlappen` (a
+  cleaning cloth) had `mdi:tshirt-crew`, `wurmkiste` (a worm compost bin)
+  had `mdi:bee-flower` (now `mdi:compost`, a direct match), `vegetable
+  garden` had `mdi:flower-tulip` (now `mdi:carrot`). Also noticed
+  `konzentrationsszene` and `tanzflaeche an` (both scenes) both had
+  `mdi:movie-open` — an apparent lazy-default the model reaches for
+  regardless of actual scene type — switched both to the generic scenes
+  icon (`mdi:palette`) already used consistently elsewhere.
+
 ## [0.9.150] - 2026-08-27
 
 ### Added
