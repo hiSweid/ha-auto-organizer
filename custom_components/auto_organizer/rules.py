@@ -31067,6 +31067,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ventilatorachse": "mdi:fan-chevron-up",
     "toilettenspuelung": "mdi:toilet",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "servietten": "mdi:tshirt-crew",
+    "dachrinnenroboter": "mdi:robot-vacuum",
+    "bresser wetterstation": "mdi:weather-cloudy",
+    "vorlaufaufnahme": "mdi:camera",
+    "departure routine": "mdi:script-text",
+    "rate plan": "mdi:currency-eur",
+    "sabotageschutz": "mdi:shield-lock",
+    "nassraum": "mdi:water-percent",
+    "ladelufttemperatur": "mdi:thermometer",
+    "ladeabbruch": "mdi:car-electric",
+    "aeroqual": "mdi:air-filter",
+    "hilook kamera": "mdi:camera",
+    "akkudiagnose": "mdi:battery-check",
+    "aroma diffuser": "mdi:scent",
+    "energy price": "mdi:currency-eur",
+    "marantz receiver": "mdi:audio-video",
+    "infrarot": "mdi:motion-sensor",
+    "xiaomi mijia": "mdi:water-percent",
+    "nitecore": "mdi:battery-charging",
+    "brightness sensor zigbee": "mdi:brightness-6",
+    "gateway firmware": "mdi:update",
+    "dyson": "mdi:fan",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

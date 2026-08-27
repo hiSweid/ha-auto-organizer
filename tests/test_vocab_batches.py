@@ -74690,3 +74690,91 @@ def test_icon_backfill_ventilatorachse():
 
 def test_icon_backfill_toilettenspuelung():
     assert suggest_entity_icon(_FakeEntry("sensor.toilettenspuelung"), OrganizerOptions()) == "mdi:toilet"
+
+
+def test_icon_backfill_servietten():
+    assert suggest_entity_icon(_FakeEntry("sensor.servietten"), OrganizerOptions()) == "mdi:tshirt-crew"
+
+
+def test_icon_backfill_dachrinnenroboter():
+    assert suggest_entity_icon(_FakeEntry("sensor.dachrinnenroboter"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_bresser_wetterstation():
+    assert suggest_entity_icon(_FakeEntry("sensor.bresser_wetterstation"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_vorlaufaufnahme():
+    assert suggest_entity_icon(_FakeEntry("sensor.vorlaufaufnahme"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_departure_routine():
+    assert suggest_entity_icon(_FakeEntry("sensor.departure_routine"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_rate_plan():
+    assert suggest_entity_icon(_FakeEntry("sensor.rate_plan"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_sabotageschutz():
+    assert suggest_entity_icon(_FakeEntry("sensor.sabotageschutz"), OrganizerOptions()) == "mdi:shield-lock"
+
+
+def test_icon_backfill_nassraum():
+    assert suggest_entity_icon(_FakeEntry("sensor.nassraum"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_ladelufttemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.ladelufttemperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_ladeabbruch():
+    assert suggest_entity_icon(_FakeEntry("sensor.ladeabbruch"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_aeroqual():
+    assert suggest_entity_icon(_FakeEntry("sensor.aeroqual"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_hilook_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.hilook_kamera"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_akkudiagnose():
+    assert suggest_entity_icon(_FakeEntry("sensor.akkudiagnose"), OrganizerOptions()) == "mdi:battery-check"
+
+
+def test_icon_backfill_aroma_diffuser():
+    assert suggest_entity_icon(_FakeEntry("sensor.aroma_diffuser"), OrganizerOptions()) == "mdi:scent"
+
+
+def test_icon_backfill_energy_price():
+    assert suggest_entity_icon(_FakeEntry("sensor.energy_price"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_marantz_receiver():
+    assert suggest_entity_icon(_FakeEntry("sensor.marantz_receiver"), OrganizerOptions()) == "mdi:audio-video"
+
+
+def test_icon_backfill_infrarot():
+    assert suggest_entity_icon(_FakeEntry("sensor.infrarot"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_xiaomi_mijia():
+    assert suggest_entity_icon(_FakeEntry("sensor.xiaomi_mijia"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_nitecore():
+    assert suggest_entity_icon(_FakeEntry("sensor.nitecore"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_brightness_sensor_zigbee():
+    assert suggest_entity_icon(_FakeEntry("sensor.brightness_sensor_zigbee"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_gateway_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.gateway_firmware"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_dyson():
+    assert suggest_entity_icon(_FakeEntry("sensor.dyson"), OrganizerOptions()) == "mdi:fan"
