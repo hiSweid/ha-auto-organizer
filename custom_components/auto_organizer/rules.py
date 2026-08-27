@@ -31516,6 +31516,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "intel nuc": "mdi:network",
     "flurlichtautomatik": "mdi:motion",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "fernzugriff": "mdi:network",
+    "coway": "mdi:air-filter",
+    "kwkumlage": "mdi:cash",
+    "dual fuel heating": "mdi:heating-coil",
+    "frostschutz luefter": "mdi:fan-alert",
+    "chemiethermometer": "mdi:thermometer",
+    "zaehlpunktnummer": "mdi:counter",
+    "eingangshelligkeit": "mdi:brightness-6",
+    "nachtmodus kamera": "mdi:camera-off",
+    "eero firmware": "mdi:cellphone-arrow-down",
+    "outdated": "mdi:package-up",
+    "onboard reinigungsmittel": "mdi:cup-water",
+    "gummidichtung": "mdi:seal",
+    "verlobungsfeier": "mdi:heart-outline",
+    "zwave shutter": "mdi:window-shutter",
+    "podimo": "mdi:cast-audio",
+    "sonnenwind": "mdi:weather-windy",
+    "freelexo": "mdi:leaf",
+    "natede": "mdi:air-filter",
+    "aufrufparameter": "mdi:code-tags",
+    "mediathekview": "mdi:television-classic",
+    "visonic": "mdi:shield-alert",
+    "morgenroutine szene": "mdi:sun-clock",
+    "stundenvorhersage": "mdi:weather-partly-cloudy",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

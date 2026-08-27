@@ -76326,3 +76326,99 @@ def test_icon_backfill_intel_nuc():
 
 def test_icon_backfill_flurlichtautomatik():
     assert suggest_entity_icon(_FakeEntry("sensor.flurlichtautomatik"), OrganizerOptions()) == "mdi:motion"
+
+
+def test_icon_backfill_fernzugriff():
+    assert suggest_entity_icon(_FakeEntry("sensor.fernzugriff"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_coway():
+    assert suggest_entity_icon(_FakeEntry("sensor.coway"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_kwkumlage():
+    assert suggest_entity_icon(_FakeEntry("sensor.kwkumlage"), OrganizerOptions()) == "mdi:cash"
+
+
+def test_icon_backfill_dual_fuel_heating():
+    assert suggest_entity_icon(_FakeEntry("sensor.dual_fuel_heating"), OrganizerOptions()) == "mdi:heating-coil"
+
+
+def test_icon_backfill_frostschutz_luefter():
+    assert suggest_entity_icon(_FakeEntry("sensor.frostschutz_luefter"), OrganizerOptions()) == "mdi:fan-alert"
+
+
+def test_icon_backfill_chemiethermometer():
+    assert suggest_entity_icon(_FakeEntry("sensor.chemiethermometer"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_zaehlpunktnummer():
+    assert suggest_entity_icon(_FakeEntry("sensor.zaehlpunktnummer"), OrganizerOptions()) == "mdi:counter"
+
+
+def test_icon_backfill_eingangshelligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.eingangshelligkeit"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_nachtmodus_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.nachtmodus_kamera"), OrganizerOptions()) == "mdi:camera-off"
+
+
+def test_icon_backfill_eero_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.eero_firmware"), OrganizerOptions()) == "mdi:cellphone-arrow-down"
+
+
+def test_icon_backfill_outdated():
+    assert suggest_entity_icon(_FakeEntry("sensor.outdated"), OrganizerOptions()) == "mdi:package-up"
+
+
+def test_icon_backfill_onboard_reinigungsmittel():
+    assert suggest_entity_icon(_FakeEntry("sensor.onboard_reinigungsmittel"), OrganizerOptions()) == "mdi:cup-water"
+
+
+def test_icon_backfill_gummidichtung():
+    assert suggest_entity_icon(_FakeEntry("sensor.gummidichtung"), OrganizerOptions()) == "mdi:seal"
+
+
+def test_icon_backfill_verlobungsfeier():
+    assert suggest_entity_icon(_FakeEntry("sensor.verlobungsfeier"), OrganizerOptions()) == "mdi:heart-outline"
+
+
+def test_icon_backfill_zwave_shutter():
+    assert suggest_entity_icon(_FakeEntry("sensor.zwave_shutter"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_podimo():
+    assert suggest_entity_icon(_FakeEntry("sensor.podimo"), OrganizerOptions()) == "mdi:cast-audio"
+
+
+def test_icon_backfill_sonnenwind():
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenwind"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_freelexo():
+    assert suggest_entity_icon(_FakeEntry("sensor.freelexo"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_natede():
+    assert suggest_entity_icon(_FakeEntry("sensor.natede"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_aufrufparameter():
+    assert suggest_entity_icon(_FakeEntry("sensor.aufrufparameter"), OrganizerOptions()) == "mdi:code-tags"
+
+
+def test_icon_backfill_mediathekview():
+    assert suggest_entity_icon(_FakeEntry("sensor.mediathekview"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_visonic():
+    assert suggest_entity_icon(_FakeEntry("sensor.visonic"), OrganizerOptions()) == "mdi:shield-alert"
+
+
+def test_icon_backfill_morgenroutine_szene():
+    assert suggest_entity_icon(_FakeEntry("sensor.morgenroutine_szene"), OrganizerOptions()) == "mdi:sun-clock"
+
+
+def test_icon_backfill_stundenvorhersage():
+    assert suggest_entity_icon(_FakeEntry("sensor.stundenvorhersage"), OrganizerOptions()) == "mdi:weather-partly-cloudy"
