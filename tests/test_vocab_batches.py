@@ -80734,3 +80734,63 @@ def test_icon_backfill_netgear_firmware():
 
 def test_icon_backfill_bad_leer():
     assert suggest_entity_icon(_FakeEntry("sensor.bad_leer"), OrganizerOptions()) == "mdi:door-open"
+
+
+def test_icon_backfill_scene_trigger():
+    assert suggest_entity_icon(_FakeEntry("sensor.scene_trigger"), OrganizerOptions()) == "mdi:movie-open-play"
+
+
+def test_icon_backfill_funkreichweite():
+    assert suggest_entity_icon(_FakeEntry("sensor.funkreichweite"), OrganizerOptions()) == "mdi:wifi-star"
+
+
+def test_icon_backfill_schnappschalter():
+    assert suggest_entity_icon(_FakeEntry("sensor.schnappschalter"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_icon_backfill_kompostwurm():
+    assert suggest_entity_icon(_FakeEntry("sensor.kompostwurm"), OrganizerOptions()) == "mdi:bee-flower"
+
+
+def test_icon_backfill_mineral_cartridge():
+    assert suggest_entity_icon(_FakeEntry("sensor.mineral_cartridge"), OrganizerOptions()) == "mdi:filter-cog"
+
+
+def test_icon_backfill_nutzbare_kapazitaet():
+    assert suggest_entity_icon(_FakeEntry("sensor.nutzbare_kapazitaet"), OrganizerOptions()) == "mdi:battery-charging-100"
+
+
+def test_icon_backfill_sondertarif():
+    assert suggest_entity_icon(_FakeEntry("sensor.sondertarif"), OrganizerOptions()) == "mdi:tag-multiple"
+
+
+def test_icon_backfill_stable_kanal():
+    assert suggest_entity_icon(_FakeEntry("sensor.stable_kanal"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_aufenthaltsermittlung():
+    assert suggest_entity_icon(_FakeEntry("sensor.aufenthaltsermittlung"), OrganizerOptions()) == "mdi:account-search"
+
+
+def test_icon_backfill_blueprint_import():
+    assert suggest_entity_icon(_FakeEntry("sensor.blueprint_import"), OrganizerOptions()) == "mdi:file-import"
+
+
+def test_icon_backfill_selbstbehalt():
+    assert suggest_entity_icon(_FakeEntry("sensor.selbstbehalt"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_veml6070():
+    assert suggest_entity_icon(_FakeEntry("sensor.veml6070"), OrganizerOptions()) == "mdi:eye"
+
+
+def test_icon_backfill_hedge_trimmer():
+    assert suggest_entity_icon(_FakeEntry("sensor.hedge_trimmer"), OrganizerOptions()) == "mdi:scissors-cutting"
+
+
+def test_icon_backfill_heizfuehler():
+    assert suggest_entity_icon(_FakeEntry("sensor.heizfuehler"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_gewaechshausbeleuchtung():
+    assert suggest_entity_icon(_FakeEntry("sensor.gewaechshausbeleuchtung"), OrganizerOptions()) == "mdi:greenhouse"

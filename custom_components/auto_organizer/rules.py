@@ -32734,6 +32734,23 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "netgear firmware": "mdi:download-circle",
     "bad leer": "mdi:door-open",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "scene trigger": "mdi:movie-open-play",
+    "funkreichweite": "mdi:wifi-star",
+    "schnappschalter": "mdi:toggle-switch",
+    "kompostwurm": "mdi:bee-flower",
+    "mineral cartridge": "mdi:filter-cog",
+    "nutzbare kapazitaet": "mdi:battery-charging-100",
+    "sondertarif": "mdi:tag-multiple",
+    "stable kanal": "mdi:update",
+    "aufenthaltsermittlung": "mdi:account-search",
+    "blueprint import": "mdi:file-import",
+    "selbstbehalt": "mdi:currency-eur",
+    "veml6070": "mdi:eye",
+    "hedge trimmer": "mdi:scissors-cutting",
+    "heizfuehler": "mdi:thermometer-lines",
+    "gewaechshausbeleuchtung": "mdi:greenhouse",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
