@@ -62250,3 +62250,103 @@ def test_icon_backfill_preisstufe():
 
 def test_icon_backfill_kamerabatterie():
     assert suggest_entity_icon(_FakeEntry("sensor.kamerabatterie"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_oven_temperature():
+    assert suggest_entity_icon(_FakeEntry("sensor.oven_temperature"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_russpartikel():
+    assert suggest_entity_icon(_FakeEntry("sensor.russpartikel"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_pixelleiste():
+    assert suggest_entity_icon(_FakeEntry("sensor.pixelleiste"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_vertikutierer():
+    assert suggest_entity_icon(_FakeEntry("sensor.vertikutierer"), OrganizerOptions()) == "mdi:grass"
+
+
+def test_icon_backfill_efest():
+    assert suggest_entity_icon(_FakeEntry("sensor.efest"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_l3_strom():
+    assert suggest_entity_icon(_FakeEntry("sensor.l3_strom"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_netzentgelt():
+    assert suggest_entity_icon(_FakeEntry("sensor.netzentgelt"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_variable_kosten():
+    assert suggest_entity_icon(_FakeEntry("sensor.variable_kosten"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_gehaeusetemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.gehaeusetemperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_musty():
+    assert suggest_entity_icon(_FakeEntry("sensor.musty"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_luftzug_erzeugen():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftzug_erzeugen"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_babycam():
+    assert suggest_entity_icon(_FakeEntry("sensor.babycam"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_pollenkonzentration():
+    assert suggest_entity_icon(_FakeEntry("sensor.pollenkonzentration"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_launchagent():
+    assert suggest_entity_icon(_FakeEntry("sensor.launchagent"), OrganizerOptions()) == "mdi:play-circle"
+
+
+def test_icon_backfill_drainageschacht():
+    assert suggest_entity_icon(_FakeEntry("sensor.drainageschacht"), OrganizerOptions()) == "mdi:pipe-leak"
+
+
+def test_icon_backfill_sackgebuehr():
+    assert suggest_entity_icon(_FakeEntry("sensor.sackgebuehr"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_cleaning_supplies():
+    assert suggest_entity_icon(_FakeEntry("sensor.cleaning_supplies"), OrganizerOptions()) == "mdi:broom"
+
+
+def test_icon_backfill_batteriekamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.batteriekamera"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_automatisierter_ablauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.automatisierter_ablauf"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_flurbewegung():
+    assert suggest_entity_icon(_FakeEntry("sensor.flurbewegung"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_lautsprecherakku():
+    assert suggest_entity_icon(_FakeEntry("sensor.lautsprecherakku"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_solarteichbeleuchtung():
+    assert suggest_entity_icon(_FakeEntry("sensor.solarteichbeleuchtung"), OrganizerOptions()) == "mdi:lamp"
+
+
+def test_icon_backfill_voltage():
+    assert suggest_entity_icon(_FakeEntry("sensor.voltage"), OrganizerOptions()) == "mdi:sine-wave"
+
+
+def test_icon_backfill_damprid():
+    assert suggest_entity_icon(_FakeEntry("sensor.damprid"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_monodeponie():
+    assert suggest_entity_icon(_FakeEntry("sensor.monodeponie"), OrganizerOptions()) == "mdi:trash-can"

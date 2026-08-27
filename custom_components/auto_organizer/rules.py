@@ -27671,6 +27671,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "preisstufe": "mdi:currency-eur",
     "kamerabatterie": "mdi:battery",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "oven temperature": "mdi:thermometer",
+    "russpartikel": "mdi:air-filter",
+    "pixelleiste": "mdi:lightbulb",
+    "vertikutierer": "mdi:grass",
+    "efest": "mdi:battery",
+    "l3 strom": "mdi:flash",
+    "netzentgelt": "mdi:currency-eur",
+    "variable kosten": "mdi:currency-eur",
+    "gehaeusetemperatur": "mdi:thermometer",
+    "musty": "mdi:water-percent",
+    "luftzug erzeugen": "mdi:fan",
+    "babycam": "mdi:cctv",
+    "pollenkonzentration": "mdi:air-filter",
+    "launchagent": "mdi:play-circle",
+    "drainageschacht": "mdi:pipe-leak",
+    "sackgebuehr": "mdi:trash-can",
+    "cleaning supplies": "mdi:broom",
+    "batteriekamera": "mdi:cctv",
+    "automatisierter ablauf": "mdi:script-text-outline",
+    "flurbewegung": "mdi:motion-sensor",
+    "lautsprecherakku": "mdi:battery",
+    "solarteichbeleuchtung": "mdi:lamp",
+    "voltage": "mdi:sine-wave",
+    "damprid": "mdi:water-percent",
+    "monodeponie": "mdi:trash-can",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
