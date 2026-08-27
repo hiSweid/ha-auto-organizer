@@ -69750,3 +69750,83 @@ def test_icon_backfill_gartenarbeitslicht():
 
 def test_icon_backfill_heating_schedule():
     assert suggest_entity_icon(_FakeEntry("sensor.heating_schedule"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_peha_bewegungsmelder():
+    assert suggest_entity_icon(_FakeEntry("sensor.peha_bewegungsmelder"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_lucid_air():
+    assert suggest_entity_icon(_FakeEntry("sensor.lucid_air"), OrganizerOptions()) == "mdi:car"
+
+
+def test_icon_backfill_softener_salt():
+    assert suggest_entity_icon(_FakeEntry("sensor.softener_salt"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_trickle_charge():
+    assert suggest_entity_icon(_FakeEntry("sensor.trickle_charge"), OrganizerOptions()) == "mdi:battery-charging-wireless"
+
+
+def test_icon_backfill_laserprojektor():
+    assert suggest_entity_icon(_FakeEntry("sensor.laserprojektor"), OrganizerOptions()) == "mdi:projector"
+
+
+def test_icon_backfill_taskrunner():
+    assert suggest_entity_icon(_FakeEntry("sensor.taskrunner"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_junctek():
+    assert suggest_entity_icon(_FakeEntry("sensor.junctek"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_energiebezug():
+    assert suggest_entity_icon(_FakeEntry("sensor.energiebezug"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_restart_mode():
+    assert suggest_entity_icon(_FakeEntry("sensor.restart_mode"), OrganizerOptions()) == "mdi:robot"
+
+
+def test_icon_backfill_lr41():
+    assert suggest_entity_icon(_FakeEntry("sensor.lr41"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_tonnenfarbe():
+    assert suggest_entity_icon(_FakeEntry("sensor.tonnenfarbe"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_mhd_warnung():
+    assert suggest_entity_icon(_FakeEntry("sensor.mhd_warnung"), OrganizerOptions()) == "mdi:shopping"
+
+
+def test_icon_backfill_klimalogger():
+    assert suggest_entity_icon(_FakeEntry("sensor.klimalogger"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_konstsmide():
+    assert suggest_entity_icon(_FakeEntry("sensor.konstsmide"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_auftautemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.auftautemperatur"), OrganizerOptions()) == "mdi:temperature-celsius"
+
+
+def test_icon_backfill_update_queue():
+    assert suggest_entity_icon(_FakeEntry("sensor.update_queue"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_spill():
+    assert suggest_entity_icon(_FakeEntry("sensor.spill"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_icon_backfill_b22_lampe():
+    assert suggest_entity_icon(_FakeEntry("sensor.b22_lampe"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_traumreise_szene():
+    assert suggest_entity_icon(_FakeEntry("sensor.traumreise_szene"), OrganizerOptions()) == "mdi:palette"
+
+
+def test_icon_backfill_rehau_fussbodenheizung():
+    assert suggest_entity_icon(_FakeEntry("sensor.rehau_fussbodenheizung"), OrganizerOptions()) == "mdi:radiator"

@@ -29714,6 +29714,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "gartenarbeitslicht": "mdi:lightbulb-group-outline",
     "heating schedule": "mdi:calendar-clock",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "peha bewegungsmelder": "mdi:motion-sensor",
+    "lucid air": "mdi:car",
+    "softener salt": "mdi:water",
+    "trickle charge": "mdi:battery-charging-wireless",
+    "laserprojektor": "mdi:projector",
+    "taskrunner": "mdi:script-text-outline",
+    "junctek": "mdi:battery",
+    "energiebezug": "mdi:power-plug",
+    "restart mode": "mdi:robot",
+    "lr41": "mdi:battery",
+    "tonnenfarbe": "mdi:trash-can",
+    "mhd warnung": "mdi:shopping",
+    "klimalogger": "mdi:thermometer",
+    "konstsmide": "mdi:lightbulb",
+    "auftautemperatur": "mdi:temperature-celsius",
+    "update queue": "mdi:update",
+    "spill": "mdi:water-alert",
+    "b22 lampe": "mdi:lightbulb",
+    "traumreise szene": "mdi:palette",
+    "rehau fussbodenheizung": "mdi:radiator",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
