@@ -26910,6 +26910,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "dachfenstersensor": "mdi:window-open",
     "toslink": "mdi:audio-video",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "tropfwasser": "mdi:water",
+    "kinderzimmerlicht": "mdi:lightbulb",
+    "abfallhierarchie": "mdi:trash-can",
+    "albedometer": "mdi:weather-sunny",
+    "pin tumbler": "mdi:lock",
+    "nettopreis": "mdi:currency-eur",
+    "schlafueberwachung": "mdi:sleep",
+    "kueche bewegungsmelder": "mdi:motion-sensor",
+    "departure trigger": "mdi:play-circle",
+    "wassereinbruch": "mdi:water-alert",
+    "netzfrequenz": "mdi:current-ac",
+    "solar radiation": "mdi:white-balance-sunny",
+    "stromkreisunterbrecher": "mdi:power-plug",
+    "detektivabend": "mdi:movie-open",
+    "hausroutine": "mdi:run-fast",
+    "gruenabfallcontainer": "mdi:leaf",
+    "secvest": "mdi:shield-lock",
+    "sensative": "mdi:security",
+    "gewaechshaussteuerung": "mdi:sprinkler",
+    "kraenzle": "mdi:microwave",
+    "jumomind": "mdi:trash-can-outline",
+    "terrassenhelligkeit": "mdi:brightness-6",
+    "ozone": "mdi:air-filter",
+    "notkurbel": "mdi:window-closed",
+    "estimated range": "mdi:map-marker-distance",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
