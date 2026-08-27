@@ -29279,6 +29279,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ladeleistungsbegrenzer": "mdi:ev-station",
     "lastprofil": "mdi:chart-line",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "teigknetmaschine": "mdi:food-drumstick",
+    "dead man switch": "mdi:toggle-switch",
+    "kondenswasserbehaelter": "mdi:water",
+    "gleichzeitige ausfuehrungen": "mdi:run-fast",
+    "rowenta silence force": "mdi:vacuum",
+    "geruchsentferner": "mdi:air-purifier",
+    "gravimetrische energiedichte": "mdi:battery-high",
+    "teigschaber": "mdi:food-croissant",
+    "rivian": "mdi:car-electric",
+    "rowenta turbo silence": "mdi:fan",
+    "musikkanal": "mdi:music-note",
+    "momentanleistung": "mdi:flash",
+    "vytal": "mdi:trash-can",
+    "audiokanal": "mdi:speaker",
+    "wischmopp anheben": "mdi:bucket",
+    "terrarienbeleuchtung": "mdi:lightbulb",
+    "xc40 recharge": "mdi:car-electric",
+    "zusatzheizung": "mdi:radiator",
+    "initial state": "mdi:state-machine",
+    "saturation deficit": "mdi:water-percent",
+    "growatt firmware": "mdi:update",
+    "flexibilitaetspraemie": "mdi:cash-multiple",
+    "genetec": "mdi:cctv",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

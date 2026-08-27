@@ -68154,3 +68154,95 @@ def test_icon_backfill_ladeleistungsbegrenzer():
 
 def test_icon_backfill_lastprofil():
     assert suggest_entity_icon(_FakeEntry("sensor.lastprofil"), OrganizerOptions()) == "mdi:chart-line"
+
+
+def test_icon_backfill_teigknetmaschine():
+    assert suggest_entity_icon(_FakeEntry("sensor.teigknetmaschine"), OrganizerOptions()) == "mdi:food-drumstick"
+
+
+def test_icon_backfill_dead_man_switch():
+    assert suggest_entity_icon(_FakeEntry("sensor.dead_man_switch"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_icon_backfill_kondenswasserbehaelter():
+    assert suggest_entity_icon(_FakeEntry("sensor.kondenswasserbehaelter"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_gleichzeitige_ausfuehrungen():
+    assert suggest_entity_icon(_FakeEntry("sensor.gleichzeitige_ausfuehrungen"), OrganizerOptions()) == "mdi:run-fast"
+
+
+def test_icon_backfill_rowenta_silence_force():
+    assert suggest_entity_icon(_FakeEntry("sensor.rowenta_silence_force"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_geruchsentferner():
+    assert suggest_entity_icon(_FakeEntry("sensor.geruchsentferner"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_icon_backfill_gravimetrische_energiedichte():
+    assert suggest_entity_icon(_FakeEntry("sensor.gravimetrische_energiedichte"), OrganizerOptions()) == "mdi:battery-high"
+
+
+def test_icon_backfill_teigschaber():
+    assert suggest_entity_icon(_FakeEntry("sensor.teigschaber"), OrganizerOptions()) == "mdi:food-croissant"
+
+
+def test_icon_backfill_rivian():
+    assert suggest_entity_icon(_FakeEntry("sensor.rivian"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_rowenta_turbo_silence():
+    assert suggest_entity_icon(_FakeEntry("sensor.rowenta_turbo_silence"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_musikkanal():
+    assert suggest_entity_icon(_FakeEntry("sensor.musikkanal"), OrganizerOptions()) == "mdi:music-note"
+
+
+def test_icon_backfill_momentanleistung():
+    assert suggest_entity_icon(_FakeEntry("sensor.momentanleistung"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_vytal():
+    assert suggest_entity_icon(_FakeEntry("sensor.vytal"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_audiokanal():
+    assert suggest_entity_icon(_FakeEntry("sensor.audiokanal"), OrganizerOptions()) == "mdi:speaker"
+
+
+def test_icon_backfill_wischmopp_anheben():
+    assert suggest_entity_icon(_FakeEntry("sensor.wischmopp_anheben"), OrganizerOptions()) == "mdi:bucket"
+
+
+def test_icon_backfill_terrarienbeleuchtung():
+    assert suggest_entity_icon(_FakeEntry("sensor.terrarienbeleuchtung"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_xc40_recharge():
+    assert suggest_entity_icon(_FakeEntry("sensor.xc40_recharge"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_zusatzheizung():
+    assert suggest_entity_icon(_FakeEntry("sensor.zusatzheizung"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_icon_backfill_initial_state():
+    assert suggest_entity_icon(_FakeEntry("sensor.initial_state"), OrganizerOptions()) == "mdi:state-machine"
+
+
+def test_icon_backfill_saturation_deficit():
+    assert suggest_entity_icon(_FakeEntry("sensor.saturation_deficit"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_growatt_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.growatt_firmware"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_flexibilitaetspraemie():
+    assert suggest_entity_icon(_FakeEntry("sensor.flexibilitaetspraemie"), OrganizerOptions()) == "mdi:cash-multiple"
+
+
+def test_icon_backfill_genetec():
+    assert suggest_entity_icon(_FakeEntry("sensor.genetec"), OrganizerOptions()) == "mdi:cctv"
