@@ -33027,6 +33027,19 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "lywsd02": "mdi:thermometer-lines",
     "waschpulver": "mdi:washing-machine",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "gasabrechnung": "mdi:currency-eur",
+    "entkalker": "mdi:water-pump",
+    "produktivkanal": "mdi:update",
+    "loewe": "mdi:play-circle",
+    "odometer": "mdi:counter",
+    "airrohr": "mdi:air-filter",
+    "nulltarif": "mdi:currency-usd",
+    "amazon music": "mdi:music-note",
+    "rollcontainer": "mdi:trash-can",
+    "inertabfall": "mdi:delete",
+    "dampfreiniger": "mdi:steam",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

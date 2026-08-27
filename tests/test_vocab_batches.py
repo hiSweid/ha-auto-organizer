@@ -81762,3 +81762,47 @@ def test_icon_backfill_lywsd02():
 
 def test_icon_backfill_waschpulver():
     assert suggest_entity_icon(_FakeEntry("sensor.waschpulver"), OrganizerOptions()) == "mdi:washing-machine"
+
+
+def test_icon_backfill_gasabrechnung():
+    assert suggest_entity_icon(_FakeEntry("sensor.gasabrechnung"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_entkalker():
+    assert suggest_entity_icon(_FakeEntry("sensor.entkalker"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_produktivkanal():
+    assert suggest_entity_icon(_FakeEntry("sensor.produktivkanal"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_loewe():
+    assert suggest_entity_icon(_FakeEntry("sensor.loewe"), OrganizerOptions()) == "mdi:play-circle"
+
+
+def test_icon_backfill_odometer():
+    assert suggest_entity_icon(_FakeEntry("sensor.odometer"), OrganizerOptions()) == "mdi:counter"
+
+
+def test_icon_backfill_airrohr():
+    assert suggest_entity_icon(_FakeEntry("sensor.airrohr"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_nulltarif():
+    assert suggest_entity_icon(_FakeEntry("sensor.nulltarif"), OrganizerOptions()) == "mdi:currency-usd"
+
+
+def test_icon_backfill_amazon_music():
+    assert suggest_entity_icon(_FakeEntry("sensor.amazon_music"), OrganizerOptions()) == "mdi:music-note"
+
+
+def test_icon_backfill_rollcontainer():
+    assert suggest_entity_icon(_FakeEntry("sensor.rollcontainer"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_inertabfall():
+    assert suggest_entity_icon(_FakeEntry("sensor.inertabfall"), OrganizerOptions()) == "mdi:delete"
+
+
+def test_icon_backfill_dampfreiniger():
+    assert suggest_entity_icon(_FakeEntry("sensor.dampfreiniger"), OrganizerOptions()) == "mdi:steam"
