@@ -31938,6 +31938,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "aussenwandbewegungsmelder": "mdi:motion-sensor",
     "wischmodus": "mdi:vacuum",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "met office": "mdi:weather-cloudy",
+    "rotationsmelder": "mdi:rotate-right",
+    "spitzenleistung": "mdi:speedometer",
+    "kondensationspunkt": "mdi:water-percent",
+    "optorelais": "mdi:electric-switch",
+    "hydrozyklon": "mdi:water-pump",
+    "fisker ocean": "mdi:car-door",
+    "window unit": "mdi:air-conditioner",
+    "ersatzmopp": "mdi:broom",
+    "privatzone kamera": "mdi:cctv",
+    "kontaktrelais": "mdi:electric-switch",
+    "urlaubsprogramm": "mdi:calendar-clock",
+    "tageslichtverlauf": "mdi:white-balance-sunny",
+    "gurke": "mdi:carrot",
+    "pppoe verbindung": "mdi:network",
+    "kodi mediacenter": "mdi:play-circle",
+    "hilfsschalter": "mdi:toggle-switch",
+    "partikelmessung": "mdi:air-filter",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
