@@ -27012,6 +27012,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "neolink": "mdi:camera",
     "imou kamera": "mdi:camera",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "temperaturlogger": "mdi:thermometer",
+    "schrittkette": "mdi:script-text-outline",
+    "einzeiler": "mdi:script-text-outline",
+    "jahrhundertwinter": "mdi:snowflake",
+    "heimkehrszene": "mdi:movie-open-outline",
+    "48v batterie": "mdi:battery-charging-100",
+    "seeed xiao": "mdi:motion-sensor",
+    "buerstenlaufzeit": "mdi:vacuum",
+    "widerstandsklasse": "mdi:lock-outline",
+    "radschlupf": "mdi:vacuum",
+    "grundgebuehr": "mdi:currency-eur",
+    "whole house dehumidifier": "mdi:water-off",
+    "raumueberwachung": "mdi:cctv",
+    "tropenstimmung": "mdi:weather-partly-cloudy",
+    "smb freigabe": "mdi:network",
+    "junk day": "mdi:trash-can-outline",
+    "kurbelgehaeusetemperatur": "mdi:thermometer",
+    "air q": "mdi:air-filter",
+    "reinstwasser": "mdi:water-check",
+    "migros": "mdi:cart-outline",
+    "yale kamera": "mdi:cctv",
+    "burg waechter diskus": "mdi:lock-alert",
+    "lux wert": "mdi:brightness-5",
+    "poe kamera": "mdi:cctv",
+    "personennotrufsensor": "mdi:motion-sensor",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
