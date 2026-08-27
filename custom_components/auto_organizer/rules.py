@@ -30027,6 +30027,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "kindergeburtstagsfeier": "mdi:cake-variant",
     "lux level": "mdi:brightness-5",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "grundstuecksueberwachung": "mdi:cctv",
+    "eq3 firmware": "mdi:cellphone-arrow-down",
+    "lichtabhaengiger widerstand": "mdi:lightbulb-on-outline",
+    "energieumlage": "mdi:currency-eur",
+    "vorlauf temperatur": "mdi:thermometer-chevron-up",
+    "floodstop": "mdi:water-alert",
+    "aussenhelligkeit": "mdi:brightness-6",
+    "eingangslicht": "mdi:lightbulb-multiple",
+    "wetterdaten": "mdi:weather-cloudy",
+    "blueiris motion": "mdi:motion-sensor",
+    "dolby atmos": "mdi:speaker-wireless",
+    "trailcam": "mdi:camera-off",
+    "inkompatibles update": "mdi:alert-circle-outline",
+    "alexa skill routine": "mdi:robot",
+    "kellerluke": "mdi:door-closed",
+    "moist": "mdi:water-percent",
+    "diffusionsroehrchen": "mdi:air-filter",
+    "humidity setpoint": "mdi:water-percent",
+    "vorlegeschloss": "mdi:lock-clock",
+    "august firmware": "mdi:cellphone-arrow-down",
+    "diivoo": "mdi:flower-tulip",
+    "photopic sensor": "mdi:brightness-5",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

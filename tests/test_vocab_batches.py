@@ -70890,3 +70890,91 @@ def test_icon_backfill_kindergeburtstagsfeier():
 
 def test_icon_backfill_lux_level():
     assert suggest_entity_icon(_FakeEntry("sensor.lux_level"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_grundstuecksueberwachung():
+    assert suggest_entity_icon(_FakeEntry("sensor.grundstuecksueberwachung"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_eq3_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.eq3_firmware"), OrganizerOptions()) == "mdi:cellphone-arrow-down"
+
+
+def test_icon_backfill_lichtabhaengiger_widerstand():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtabhaengiger_widerstand"), OrganizerOptions()) == "mdi:lightbulb-on-outline"
+
+
+def test_icon_backfill_energieumlage():
+    assert suggest_entity_icon(_FakeEntry("sensor.energieumlage"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_vorlauf_temperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.vorlauf_temperatur"), OrganizerOptions()) == "mdi:thermometer-chevron-up"
+
+
+def test_icon_backfill_floodstop():
+    assert suggest_entity_icon(_FakeEntry("sensor.floodstop"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_icon_backfill_aussenhelligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.aussenhelligkeit"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_eingangslicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.eingangslicht"), OrganizerOptions()) == "mdi:lightbulb-multiple"
+
+
+def test_icon_backfill_wetterdaten():
+    assert suggest_entity_icon(_FakeEntry("sensor.wetterdaten"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_blueiris_motion():
+    assert suggest_entity_icon(_FakeEntry("sensor.blueiris_motion"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_dolby_atmos():
+    assert suggest_entity_icon(_FakeEntry("sensor.dolby_atmos"), OrganizerOptions()) == "mdi:speaker-wireless"
+
+
+def test_icon_backfill_trailcam():
+    assert suggest_entity_icon(_FakeEntry("sensor.trailcam"), OrganizerOptions()) == "mdi:camera-off"
+
+
+def test_icon_backfill_inkompatibles_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.inkompatibles_update"), OrganizerOptions()) == "mdi:alert-circle-outline"
+
+
+def test_icon_backfill_alexa_skill_routine():
+    assert suggest_entity_icon(_FakeEntry("sensor.alexa_skill_routine"), OrganizerOptions()) == "mdi:robot"
+
+
+def test_icon_backfill_kellerluke():
+    assert suggest_entity_icon(_FakeEntry("sensor.kellerluke"), OrganizerOptions()) == "mdi:door-closed"
+
+
+def test_icon_backfill_moist():
+    assert suggest_entity_icon(_FakeEntry("sensor.moist"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_diffusionsroehrchen():
+    assert suggest_entity_icon(_FakeEntry("sensor.diffusionsroehrchen"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_humidity_setpoint():
+    assert suggest_entity_icon(_FakeEntry("sensor.humidity_setpoint"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_vorlegeschloss():
+    assert suggest_entity_icon(_FakeEntry("sensor.vorlegeschloss"), OrganizerOptions()) == "mdi:lock-clock"
+
+
+def test_icon_backfill_august_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.august_firmware"), OrganizerOptions()) == "mdi:cellphone-arrow-down"
+
+
+def test_icon_backfill_diivoo():
+    assert suggest_entity_icon(_FakeEntry("sensor.diivoo"), OrganizerOptions()) == "mdi:flower-tulip"
+
+
+def test_icon_backfill_photopic_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.photopic_sensor"), OrganizerOptions()) == "mdi:brightness-5"
