@@ -26834,6 +26834,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "rest command trigger": "mdi:flash",
     "hifi anlage": "mdi:speaker",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "bluesound pulse": "mdi:speaker-wireless",
+    "pollenwarnung": "mdi:flower-pollen",
+    "kellerueberwachung": "mdi:cctv",
+    "chlordosieranlage": "mdi:water-pump",
+    "patch management": "mdi:update",
+    "whirlpoolabend": "mdi:movie-open",
+    "reactor hub": "mdi:script-text",
+    "pm25": "mdi:air-filter",
+    "disco light": "mdi:lightbulb-multiple",
+    "raumluftentfeuchtung": "mdi:fan-remove",
+    "strommenge": "mdi:flash",
+    "wiederaufladbar": "mdi:battery-charging",
+    "tonnenreinigung": "mdi:trash-can",
+    "konfigurationsmigration": "mdi:content-copy",
+    "wasp in a box": "mdi:bee-flower",
+    "brennenstuhl firmware": "mdi:chip",
+    "tonnen rausstellen": "mdi:delete",
+    "update kanal stabil": "mdi:update",
+    "nursery cam": "mdi:cctv",
+    "feinstaubkonzentration": "mdi:air-filter",
+    "warmhalteplatte": "mdi:microwave",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
