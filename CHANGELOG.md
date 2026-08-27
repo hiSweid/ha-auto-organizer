@@ -6,6 +6,23 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.155] - 2026-08-27
+
+### Added
+- Further `SPECIFIC_ICONS` entries from the ongoing local-LLM icon backfill
+  batch job (~5942 total merged so far this run, ~457 of the original
+  6.9k gap remaining — should complete very soon).
+
+### Fixed
+- 9 more icon mismatches: four more instances of the movie-open lazy
+  scenes fallback (`spieleabend`, `spieleabend szene`, `hochzeitstag
+  szene`, `gastszene`), `frosch` (a frog) had `mdi:duck`,
+  `taschentuecher`/`mikrofaserpad` (tissues/a microfiber cleaning pad)
+  had `mdi:tshirt-crew` (textile-word collision, same class as the
+  earlier `wischlappen`/`servietten` fixes), `schadstoff` (a pollutant)
+  had `mdi:chemical-weapon` again, `battery heater` had
+  `mdi:battery-unknown` (a well-defined accessory, not an unknown type).
+
 ## [0.9.154] - 2026-08-27
 
 ### Added
