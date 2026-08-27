@@ -64886,3 +64886,95 @@ def test_icon_backfill_kosmetikspiegel_licht():
 
 def test_icon_backfill_superkondensator():
     assert suggest_entity_icon(_FakeEntry("sensor.superkondensator"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_gev_bewegungsmelder():
+    assert suggest_entity_icon(_FakeEntry("sensor.gev_bewegungsmelder"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_hobbyraum_szene():
+    assert suggest_entity_icon(_FakeEntry("sensor.hobbyraum_szene"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_reiheneinbaugeraet():
+    assert suggest_entity_icon(_FakeEntry("sensor.reiheneinbaugeraet"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_bauknecht():
+    assert suggest_entity_icon(_FakeEntry("sensor.bauknecht"), OrganizerOptions()) == "mdi:washing-machine"
+
+
+def test_icon_backfill_skriptparameter():
+    assert suggest_entity_icon(_FakeEntry("sensor.skriptparameter"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_hair_straightener():
+    assert suggest_entity_icon(_FakeEntry("sensor.hair_straightener"), OrganizerOptions()) == "mdi:hair-dryer"
+
+
+def test_icon_backfill_lastrelais():
+    assert suggest_entity_icon(_FakeEntry("sensor.lastrelais"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_icon_backfill_aktionsablauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.aktionsablauf"), OrganizerOptions()) == "mdi:run-fast"
+
+
+def test_icon_backfill_restbewegung():
+    assert suggest_entity_icon(_FakeEntry("sensor.restbewegung"), OrganizerOptions()) == "mdi:motion-sensor-off"
+
+
+def test_icon_backfill_fuellstand_tonne():
+    assert suggest_entity_icon(_FakeEntry("sensor.fuellstand_tonne"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_lueftungsrohr():
+    assert suggest_entity_icon(_FakeEntry("sensor.lueftungsrohr"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_wall_dampness():
+    assert suggest_entity_icon(_FakeEntry("sensor.wall_dampness"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_petfriendly_bewegungsmelder():
+    assert suggest_entity_icon(_FakeEntry("sensor.petfriendly_bewegungsmelder"), OrganizerOptions()) == "mdi:cat"
+
+
+def test_icon_backfill_firmware_version():
+    assert suggest_entity_icon(_FakeEntry("sensor.firmware_version"), OrganizerOptions()) == "mdi:information-outline"
+
+
+def test_icon_backfill_foot_candle():
+    assert suggest_entity_icon(_FakeEntry("sensor.foot_candle"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_openmediavault_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.openmediavault_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_glasdachbeschattung():
+    assert suggest_entity_icon(_FakeEntry("sensor.glasdachbeschattung"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_icon_backfill_support_ende():
+    assert suggest_entity_icon(_FakeEntry("sensor.support_ende"), OrganizerOptions()) == "mdi:calendar-end"
+
+
+def test_icon_backfill_meross_presence():
+    assert suggest_entity_icon(_FakeEntry("sensor.meross_presence"), OrganizerOptions()) == "mdi:account-check"
+
+
+def test_icon_backfill_downgrade():
+    assert suggest_entity_icon(_FakeEntry("sensor.downgrade"), OrganizerOptions()) == "mdi:arrow-down-bold-circle"
+
+
+def test_icon_backfill_rfbeam_radar():
+    assert suggest_entity_icon(_FakeEntry("sensor.rfbeam_radar"), OrganizerOptions()) == "mdi:radiobox-marked"
+
+
+def test_icon_backfill_warmwasserdurchfluss():
+    assert suggest_entity_icon(_FakeEntry("sensor.warmwasserdurchfluss"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_surge_protector():
+    assert suggest_entity_icon(_FakeEntry("sensor.surge_protector"), OrganizerOptions()) == "mdi:power-plug-off"

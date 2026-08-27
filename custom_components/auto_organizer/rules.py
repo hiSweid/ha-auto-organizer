@@ -28388,6 +28388,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "kosmetikspiegel licht": "mdi:mirror",
     "superkondensator": "mdi:flash",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "gev bewegungsmelder": "mdi:motion-sensor",
+    "hobbyraum szene": "mdi:movie-open",
+    "reiheneinbaugeraet": "mdi:power-plug",
+    "bauknecht": "mdi:washing-machine",
+    "skriptparameter": "mdi:script-text",
+    "hair straightener": "mdi:hair-dryer",
+    "lastrelais": "mdi:light-switch",
+    "aktionsablauf": "mdi:run-fast",
+    "restbewegung": "mdi:motion-sensor-off",
+    "fuellstand tonne": "mdi:trash-can",
+    "lueftungsrohr": "mdi:air-filter",
+    "wall dampness": "mdi:water-percent",
+    "petfriendly bewegungsmelder": "mdi:cat",
+    "firmware version": "mdi:information-outline",
+    "foot candle": "mdi:brightness-5",
+    "openmediavault update": "mdi:update",
+    "glasdachbeschattung": "mdi:blinds",
+    "support ende": "mdi:calendar-end",
+    "meross presence": "mdi:account-check",
+    "downgrade": "mdi:arrow-down-bold-circle",
+    "rfbeam radar": "mdi:radiobox-marked",
+    "warmwasserdurchfluss": "mdi:water-pump",
+    "surge protector": "mdi:power-plug-off",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
