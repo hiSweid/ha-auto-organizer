@@ -33058,6 +33058,23 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "lesezirkel": "mdi:book-open-page-variant",
     "puddle": "mdi:water",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "einspeiseverguetung": "mdi:solar-power",
+    "automatisierungslogik": "mdi:script-text-outline",
+    "duerreindex": "mdi:water-alert",
+    "jinja2 vorlage": "mdi:file-document-edit-outline",
+    "klaerschlamm": "mdi:trash-can-outline",
+    "sfh5711": "mdi:brightness-6",
+    "night tariff": "mdi:currency-eur-off",
+    "pv spannung": "mdi:solar-power",
+    "gaggenau": "mdi:tune-vertical",
+    "mode queued": "mdi:timer-sand-complete",
+    "heat exchanger": "mdi:fire",
+    "hostname": "mdi:network",
+    "head up display": "mdi:car-back",
+    "nachttemperatur": "mdi:thermometer-low",
+    "video puffer": "mdi:video-input-component",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

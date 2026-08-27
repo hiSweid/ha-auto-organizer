@@ -81870,3 +81870,63 @@ def test_icon_backfill_lesezirkel():
 
 def test_icon_backfill_puddle():
     assert suggest_entity_icon(_FakeEntry("sensor.puddle"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_einspeiseverguetung():
+    assert suggest_entity_icon(_FakeEntry("sensor.einspeiseverguetung"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_automatisierungslogik():
+    assert suggest_entity_icon(_FakeEntry("sensor.automatisierungslogik"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_duerreindex():
+    assert suggest_entity_icon(_FakeEntry("sensor.duerreindex"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_icon_backfill_jinja2_vorlage():
+    assert suggest_entity_icon(_FakeEntry("sensor.jinja2_vorlage"), OrganizerOptions()) == "mdi:file-document-edit-outline"
+
+
+def test_icon_backfill_klaerschlamm():
+    assert suggest_entity_icon(_FakeEntry("sensor.klaerschlamm"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_icon_backfill_sfh5711():
+    assert suggest_entity_icon(_FakeEntry("sensor.sfh5711"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_night_tariff():
+    assert suggest_entity_icon(_FakeEntry("sensor.night_tariff"), OrganizerOptions()) == "mdi:currency-eur-off"
+
+
+def test_icon_backfill_pv_spannung():
+    assert suggest_entity_icon(_FakeEntry("sensor.pv_spannung"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_gaggenau():
+    assert suggest_entity_icon(_FakeEntry("sensor.gaggenau"), OrganizerOptions()) == "mdi:tune-vertical"
+
+
+def test_icon_backfill_mode_queued():
+    assert suggest_entity_icon(_FakeEntry("sensor.mode_queued"), OrganizerOptions()) == "mdi:timer-sand-complete"
+
+
+def test_icon_backfill_heat_exchanger():
+    assert suggest_entity_icon(_FakeEntry("sensor.heat_exchanger"), OrganizerOptions()) == "mdi:fire"
+
+
+def test_icon_backfill_hostname():
+    assert suggest_entity_icon(_FakeEntry("sensor.hostname"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_head_up_display():
+    assert suggest_entity_icon(_FakeEntry("sensor.head_up_display"), OrganizerOptions()) == "mdi:car-back"
+
+
+def test_icon_backfill_nachttemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.nachttemperatur"), OrganizerOptions()) == "mdi:thermometer-low"
+
+
+def test_icon_backfill_video_puffer():
+    assert suggest_entity_icon(_FakeEntry("sensor.video_puffer"), OrganizerOptions()) == "mdi:video-input-component"
