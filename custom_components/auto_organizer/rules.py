@@ -26290,6 +26290,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "luminance value": "mdi:brightness-auto",
     "unraid update": "mdi:update",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "loitering": "mdi:motion-sensor",
+    "uv sterilisator": "mdi:air-filter",
+    "ambient weather": "mdi:weather-cloudy",
+    "cr123a": "mdi:battery",
+    "verdunstung": "mdi:water-off",
+    "oeffentliche ip": "mdi:network",
+    "rcwl0516": "mdi:motion-sensor",
+    "giessen": "mdi:sprinkler",
+    "aufgabenplanung": "mdi:calendar-clock",
+    "netzteilluefter": "mdi:fan",
+    "one liner": "mdi:text-short",
+    "updatestand": "mdi:update",
+    "automation label": "mdi:robot",
+    "damp alert": "mdi:alert-decagram",
+    "temperaturaufzeichnung": "mdi:thermometer-lines",
+    "badezimmerbeleuchtung": "mdi:lightbulb",
+    "smartthings automation": "mdi:robot",
+    "diffusion tube": "mdi:air-filter",
+    "aufwachroutine": "mdi:alarm",
+    "axiallaufrad": "mdi:fan",
+    "power to gas": "mdi:gas-cylinder",
+    "szenenablauf": "mdi:play-circle",
+    "vierfachschalter": "mdi:toggle-switch",
+    "pumpenkennlinie": "mdi:pump",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
