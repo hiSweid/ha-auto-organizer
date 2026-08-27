@@ -30467,6 +30467,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "hygrostatregelung": "mdi:water-percent",
     "wasserfilterkapazitaet": "mdi:water-pump",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "pruefskript": "mdi:script-text",
+    "kernelupdate": "mdi:update",
+    "teigtemperatur": "mdi:thermometer",
+    "nest aware": "mdi:camera",
+    "schrotthaendler": "mdi:recycle",
+    "kwh meter": "mdi:flash",
+    "abendablauf": "mdi:script-text",
+    "muelltonnenapp": "mdi:trash-can",
+    "silent update": "mdi:update",
+    "wc luefter": "mdi:fan",
+    "humidity spike": "mdi:water-percent",
+    "maingau": "mdi:currency-eur",
+    "try catch": "mdi:script-text",
+    "bewegungsaufnahme kamera": "mdi:camera",
+    "angle of arrival": "mdi:motion-sensor",
+    "abschlag": "mdi:currency-eur",
+    "motion illuminance": "mdi:motion-sensor",
+    "engpassmanagement": "mdi:power-plug",
+    "zelltemperatur": "mdi:thermometer",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

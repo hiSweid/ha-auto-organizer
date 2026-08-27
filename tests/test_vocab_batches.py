@@ -72498,3 +72498,79 @@ def test_icon_backfill_hygrostatregelung():
 
 def test_icon_backfill_wasserfilterkapazitaet():
     assert suggest_entity_icon(_FakeEntry("sensor.wasserfilterkapazitaet"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_pruefskript():
+    assert suggest_entity_icon(_FakeEntry("sensor.pruefskript"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_kernelupdate():
+    assert suggest_entity_icon(_FakeEntry("sensor.kernelupdate"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_teigtemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.teigtemperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_nest_aware():
+    assert suggest_entity_icon(_FakeEntry("sensor.nest_aware"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_schrotthaendler():
+    assert suggest_entity_icon(_FakeEntry("sensor.schrotthaendler"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_kwh_meter():
+    assert suggest_entity_icon(_FakeEntry("sensor.kwh_meter"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_abendablauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.abendablauf"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_muelltonnenapp():
+    assert suggest_entity_icon(_FakeEntry("sensor.muelltonnenapp"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_silent_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.silent_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_wc_luefter():
+    assert suggest_entity_icon(_FakeEntry("sensor.wc_luefter"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_humidity_spike():
+    assert suggest_entity_icon(_FakeEntry("sensor.humidity_spike"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_maingau():
+    assert suggest_entity_icon(_FakeEntry("sensor.maingau"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_try_catch():
+    assert suggest_entity_icon(_FakeEntry("sensor.try_catch"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_bewegungsaufnahme_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.bewegungsaufnahme_kamera"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_angle_of_arrival():
+    assert suggest_entity_icon(_FakeEntry("sensor.angle_of_arrival"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_abschlag():
+    assert suggest_entity_icon(_FakeEntry("sensor.abschlag"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_motion_illuminance():
+    assert suggest_entity_icon(_FakeEntry("sensor.motion_illuminance"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_engpassmanagement():
+    assert suggest_entity_icon(_FakeEntry("sensor.engpassmanagement"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_zelltemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.zelltemperatur"), OrganizerOptions()) == "mdi:thermometer"
