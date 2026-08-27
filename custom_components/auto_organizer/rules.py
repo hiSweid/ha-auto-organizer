@@ -26440,6 +26440,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "glasbruch erkennung": "mdi:camera-off",
     "wandpaneel": "mdi:palette",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "state of health": "mdi:battery-heart",
+    "ifttt rezept": "mdi:script-text-outline",
+    "sternenhimmellampe": "mdi:star-box-multiple-outline",
+    "umluft": "mdi:air-filter",
+    "storm warning": "mdi:weather-lightning-rainy",
+    "pflanzenfeuchtigkeitssensor": "mdi:sprinkler-variant",
+    "kleinmengensammlung": "mdi:package-variant-closed",
+    "off peak": "mdi:power-plug-off-outline",
+    "remote lock": "mdi:lock-open-alert-outline",
+    "wasserhaertegrad": "mdi:water-pump",
+    "ambient lux": "mdi:brightness-5",
+    "negative ionen": "mdi:air-purifier",
+    "tagesstart szene": "mdi:calendar-today",
+    "medienabspieler": "mdi:play-circle",
+    "wegwerfartikel": "mdi:trash-can-outline",
+    "sternenprojektor": "mdi:movie-open-outline",
+    "abfuhrapp": "mdi:delete-outline",
+    "wyze firmware": "mdi:cellphone-wireless",
+    "vattenfall": "mdi:currency-eur",
+    "genuatief": "mdi:weather-partly-cloudy",
+    "verivox": "mdi:currency-eur",
+    "vogelfutter": "mdi:bird",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
