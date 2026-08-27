@@ -29956,6 +29956,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "kueche leer": "mdi:door-open",
     "altmetallentsorgung": "mdi:recycle",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "shutdown trigger": "mdi:power-cycle",
+    "base station kamera": "mdi:cctv",
+    "inline duct fan": "mdi:fan-chevron-up",
+    "whole house fan": "mdi:fan-alert",
+    "supervisor": "mdi:shield-check",
+    "einzelskript": "mdi:script-text-play",
+    "sensoaxxo": "mdi:window-shutter",
+    "cleargrass": "mdi:air-filter",
+    "raumreinigung": "mdi:robot-vacuum",
+    "tageslichteinfall": "mdi:white-balance-sunny",
+    "apple kurzbefehl": "mdi:apple-keyboard-command",
+    "schlafzimmerlicht": "mdi:bed",
+    "muellchip": "mdi:trash-can-outline",
+    "cr2025": "mdi:battery-medium",
+    "kommt spaeter": "mdi:account-clock",
+    "luftreinheit": "mdi:air-purifier",
+    "unbesetzt": "mdi:home-lock-open",
+    "triggerdefinition": "mdi:toggle-switch",
+    "intraday price": "mdi:currency-usd",
+    "attributtrigger": "mdi:tag-text",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
