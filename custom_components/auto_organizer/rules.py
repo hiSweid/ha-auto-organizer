@@ -26761,6 +26761,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "schadstoffgrenzwert": "mdi:chemical-weapon",
     "energiemanagement": "mdi:power-settings",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "otbr update": "mdi:update",
+    "balkonalarm": "mdi:alarm",
+    "oekosteuer": "mdi:currency-eur",
+    "energie": "mdi:lightbulb",
+    "key safe": "mdi:lock",
+    "kaminfeuerabend": "mdi:fireplace",
+    "eureka nes": "mdi:vacuum",
+    "heiman motion": "mdi:motion-sensor",
+    "aufenthalt": "mdi:home-outline",
+    "sperrgut": "mdi:trash-can",
+    "nehlsen": "mdi:trash-can",
+    "melnor": "mdi:sprinkler",
+    "fusspflegegeraet": "mdi:foot-print",
+    "tado firmware": "mdi:update",
+    "odroid": "mdi:router-wireless",
+    "athom firmware": "mdi:update",
+    "aliexpress bestellung": "mdi:package-variant-closed",
+    "ivms 4200": "mdi:cctv",
+    "ifttt applet": "mdi:script-text",
+    "lux measurement": "mdi:brightness-5",
+    "kanaldeckel": "mdi:water-pump",
+    "sen0623": "mdi:motion-sensor",
+    "feuchteschwankung": "mdi:water-percent",
+    "fernbedienung akku": "mdi:battery",
+    "wint water": "mdi:leak",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
