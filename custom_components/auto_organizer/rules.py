@@ -31635,6 +31635,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "energiefluss": "mdi:solar-power",
     "wandtrocknung": "mdi:hair-dryer",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "regensumme": "mdi:weather-rainy",
+    "abb bewegungsmelder": "mdi:motion-sensor",
+    "exceptional": "mdi:alert-circle",
+    "algenbekaempfung": "mdi:water-pump",
+    "rauchgasabzug": "mdi:fan",
+    "beta firmware": "mdi:update",
+    "vollladezyklen": "mdi:battery-charging",
+    "batterieturm": "mdi:battery-50",
+    "gateway ausfall": "mdi:network-off",
+    "occupancy sensing": "mdi:account-question",
+    "ambient light": "mdi:brightness-6",
+    "chance of rain": "mdi:weather-rainy",
+    "fish tank leak": "mdi:leak",
+    "flipperautomat": "mdi:gamepad",
+    "neato d7": "mdi:robot-vacuum",
+    "footstep detector": "mdi:walk",
+    "rekursive funktion": "mdi:function",
+    "aussenraumhelligkeit": "mdi:brightness-5",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
