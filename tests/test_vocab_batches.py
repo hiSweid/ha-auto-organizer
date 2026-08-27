@@ -78761,7 +78761,7 @@ def test_icon_backfill_lichtsensor_kalibrieren():
 
 
 def test_icon_backfill_mikrofaserpad():
-    assert suggest_entity_icon(_FakeEntry("sensor.mikrofaserpad"), OrganizerOptions()) == "mdi:tshirt-crew"
+    assert suggest_entity_icon(_FakeEntry("sensor.mikrofaserpad"), OrganizerOptions()) == "mdi:broom"
 
 
 def test_icon_backfill_luftdrucktrigger():
@@ -78913,7 +78913,7 @@ def test_icon_backfill_tuerschwelle_ueberwinden():
 
 
 def test_icon_backfill_frosch():
-    assert suggest_entity_icon(_FakeEntry("sensor.frosch"), OrganizerOptions()) == "mdi:duck"
+    assert suggest_entity_icon(_FakeEntry("sensor.frosch"), OrganizerOptions()) == "mdi:leaf"
 
 
 def test_icon_backfill_estrichtemperatur():
@@ -79161,7 +79161,7 @@ def test_icon_backfill_wash_basin():
 
 
 def test_icon_backfill_taschentuecher():
-    assert suggest_entity_icon(_FakeEntry("sensor.taschentuecher"), OrganizerOptions()) == "mdi:tshirt-crew"
+    assert suggest_entity_icon(_FakeEntry("sensor.taschentuecher"), OrganizerOptions()) == "mdi:shopping-outline"
 
 
 def test_icon_backfill_arbeitspreis():
@@ -79261,7 +79261,7 @@ def test_icon_backfill_nutzgarten():
 
 
 def test_icon_backfill_gastszene():
-    assert suggest_entity_icon(_FakeEntry("sensor.gastszene"), OrganizerOptions()) == "mdi:movie-open"
+    assert suggest_entity_icon(_FakeEntry("sensor.gastszene"), OrganizerOptions()) == "mdi:palette"
 
 
 def test_icon_backfill_zanussi():
@@ -79781,7 +79781,7 @@ def test_icon_backfill_flaechenleistung():
 
 
 def test_icon_backfill_schadstoff():
-    assert suggest_entity_icon(_FakeEntry("sensor.schadstoff"), OrganizerOptions()) == "mdi:chemical-weapon"
+    assert suggest_entity_icon(_FakeEntry("sensor.schadstoff"), OrganizerOptions()) == "mdi:air-filter"
 
 
 def test_icon_backfill_naehrstoff():
@@ -79961,7 +79961,7 @@ def test_icon_backfill_extractor_hood():
 
 
 def test_icon_backfill_spieleabend_szene():
-    assert suggest_entity_icon(_FakeEntry("sensor.spieleabend_szene"), OrganizerOptions()) == "mdi:movie-open"
+    assert suggest_entity_icon(_FakeEntry("sensor.spieleabend_szene"), OrganizerOptions()) == "mdi:cards"
 
 
 def test_icon_backfill_redispatch():
@@ -80409,7 +80409,7 @@ def test_icon_backfill_zustandswechsel_trigger():
 
 
 def test_icon_backfill_hochzeitstag_szene():
-    assert suggest_entity_icon(_FakeEntry("sensor.hochzeitstag_szene"), OrganizerOptions()) == "mdi:movie-open"
+    assert suggest_entity_icon(_FakeEntry("sensor.hochzeitstag_szene"), OrganizerOptions()) == "mdi:heart"
 
 
 def test_icon_backfill_rivian_r1t():
@@ -80849,7 +80849,7 @@ def test_icon_backfill_dsl_anschluss():
 
 
 def test_icon_backfill_battery_heater():
-    assert suggest_entity_icon(_FakeEntry("sensor.battery_heater"), OrganizerOptions()) == "mdi:battery-unknown"
+    assert suggest_entity_icon(_FakeEntry("sensor.battery_heater"), OrganizerOptions()) == "mdi:radiator"
 
 
 def test_icon_backfill_schluesseldienst():
@@ -80981,7 +80981,7 @@ def test_icon_backfill_holzfeuchtigkeit():
 
 
 def test_icon_backfill_spieleabend():
-    assert suggest_entity_icon(_FakeEntry("sensor.spieleabend"), OrganizerOptions()) == "mdi:movie-open"
+    assert suggest_entity_icon(_FakeEntry("sensor.spieleabend"), OrganizerOptions()) == "mdi:cards"
 
 
 def test_icon_backfill_peak_tariff():
