@@ -77130,3 +77130,87 @@ def test_icon_backfill_jenkinsfile():
 
 def test_icon_backfill_brandschutzklappe():
     assert suggest_entity_icon(_FakeEntry("sensor.brandschutzklappe"), OrganizerOptions()) == "mdi:fire"
+
+
+def test_icon_backfill_brennstoffzellenleck():
+    assert suggest_entity_icon(_FakeEntry("sensor.brennstoffzellenleck"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_prepaidstrom():
+    assert suggest_entity_icon(_FakeEntry("sensor.prepaidstrom"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_neustartaufforderung():
+    assert suggest_entity_icon(_FakeEntry("sensor.neustartaufforderung"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_bsblan():
+    assert suggest_entity_icon(_FakeEntry("sensor.bsblan"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_icon_backfill_lichtwellenleiter():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtwellenleiter"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_auslaufen():
+    assert suggest_entity_icon(_FakeEntry("sensor.auslaufen"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_yogurt_maker():
+    assert suggest_entity_icon(_FakeEntry("sensor.yogurt_maker"), OrganizerOptions()) == "mdi:microwave"
+
+
+def test_icon_backfill_ruhestrom_tueroeffner():
+    assert suggest_entity_icon(_FakeEntry("sensor.ruhestrom_tueroeffner"), OrganizerOptions()) == "mdi:lock-open"
+
+
+def test_icon_backfill_watt():
+    assert suggest_entity_icon(_FakeEntry("sensor.watt"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_heizungswasserverlust():
+    assert suggest_entity_icon(_FakeEntry("sensor.heizungswasserverlust"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_water_damage():
+    assert suggest_entity_icon(_FakeEntry("sensor.water_damage"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_update_erinnerung():
+    assert suggest_entity_icon(_FakeEntry("sensor.update_erinnerung"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_temperaturhysterese():
+    assert suggest_entity_icon(_FakeEntry("sensor.temperaturhysterese"), OrganizerOptions()) == "mdi:temperature-celsius"
+
+
+def test_icon_backfill_solarstrahlung():
+    assert suggest_entity_icon(_FakeEntry("sensor.solarstrahlung"), OrganizerOptions()) == "mdi:white-balance-sunny"
+
+
+def test_icon_backfill_ventilatorkippfunktion():
+    assert suggest_entity_icon(_FakeEntry("sensor.ventilatorkippfunktion"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_node_red():
+    assert suggest_entity_icon(_FakeEntry("sensor.node_red"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_unstable_channel():
+    assert suggest_entity_icon(_FakeEntry("sensor.unstable_channel"), OrganizerOptions()) == "mdi:signal-variant"
+
+
+def test_icon_backfill_video_loop():
+    assert suggest_entity_icon(_FakeEntry("sensor.video_loop"), OrganizerOptions()) == "mdi:video"
+
+
+def test_icon_backfill_camera_battery_grip():
+    assert suggest_entity_icon(_FakeEntry("sensor.camera_battery_grip"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_schlossfeder():
+    assert suggest_entity_icon(_FakeEntry("sensor.schlossfeder"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_installment():
+    assert suggest_entity_icon(_FakeEntry("sensor.installment"), OrganizerOptions()) == "mdi:currency-eur"

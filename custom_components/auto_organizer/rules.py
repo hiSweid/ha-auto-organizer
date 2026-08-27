@@ -31737,6 +31737,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "jenkinsfile": "mdi:script-text-key",
     "brandschutzklappe": "mdi:fire",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "brennstoffzellenleck": "mdi:leak",
+    "prepaidstrom": "mdi:currency-eur",
+    "neustartaufforderung": "mdi:update",
+    "bsblan": "mdi:thermostat",
+    "lichtwellenleiter": "mdi:network",
+    "auslaufen": "mdi:leak",
+    "yogurt maker": "mdi:microwave",
+    "ruhestrom tueroeffner": "mdi:lock-open",
+    "watt": "mdi:flash",
+    "heizungswasserverlust": "mdi:leak",
+    "water damage": "mdi:leak",
+    "update erinnerung": "mdi:update",
+    "temperaturhysterese": "mdi:temperature-celsius",
+    "solarstrahlung": "mdi:white-balance-sunny",
+    "ventilatorkippfunktion": "mdi:fan",
+    "node red": "mdi:network",
+    "unstable channel": "mdi:signal-variant",
+    "video loop": "mdi:video",
+    "camera battery grip": "mdi:battery-charging",
+    "schlossfeder": "mdi:lock",
+    "installment": "mdi:currency-eur",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
