@@ -30535,6 +30535,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "sturzalarm": "mdi:bell-alert",
     "wechselstromzaehler": "mdi:counter",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "black ice": "mdi:snowflake",
+    "wintergartendach": "mdi:awning",
+    "lichtstimmung": "mdi:lightbulb-group",
+    "wechselstift": "mdi:power-plug",
+    "ddns": "mdi:network",
+    "schlafzimmer bewegungsmelder": "mdi:motion-sensor",
+    "update ueberspringen": "mdi:skip-next",
+    "abfallberatung": "mdi:trash-can",
+    "fernwaermetemperatur": "mdi:thermometer",
+    "household appliance": "mdi:home-automation",
+    "assist pipeline": "mdi:pipe",
+    "webrtc stream": "mdi:video",
+    "memory effekt": "mdi:memory",
+    "konserven": "mdi:food-drumstick",
+    "waste pickup": "mdi:trash-can-outline",
+    "staubbeutellos": "mdi:air-filter",
+    "lasernavigation": "mdi:map-marker-radius",
+    "autoempty station": "mdi:robot-vacuum",
+    "sonnendeck stimmung": "mdi:sun-wireless",
+    "ring alarm trigger": "mdi:alarm-light",
+    "ifttt": "mdi:cloud-sync",
+    "desinfektionsmittelgeruch": "mdi:air-purifier",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
