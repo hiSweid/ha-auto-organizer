@@ -73474,3 +73474,107 @@ def test_icon_backfill_zutrittscode():
 
 def test_icon_backfill_texecom():
     assert suggest_entity_icon(_FakeEntry("sensor.texecom"), OrganizerOptions()) == "mdi:security"
+
+
+def test_icon_backfill_zeitfensterbedingung():
+    assert suggest_entity_icon(_FakeEntry("sensor.zeitfensterbedingung"), OrganizerOptions()) == "mdi:window-close"
+
+
+def test_icon_backfill_tizen():
+    assert suggest_entity_icon(_FakeEntry("sensor.tizen"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_abklingzeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.abklingzeit"), OrganizerOptions()) == "mdi:timer-sand"
+
+
+def test_icon_backfill_gestenaktion():
+    assert suggest_entity_icon(_FakeEntry("sensor.gestenaktion"), OrganizerOptions()) == "mdi:gesture-tap"
+
+
+def test_icon_backfill_luftzirkulation():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftzirkulation"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_jahresverbrauch():
+    assert suggest_entity_icon(_FakeEntry("sensor.jahresverbrauch"), OrganizerOptions()) == "mdi:chart-line"
+
+
+def test_icon_backfill_treiberaktualisierung():
+    assert suggest_entity_icon(_FakeEntry("sensor.treiberaktualisierung"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_energievertrag():
+    assert suggest_entity_icon(_FakeEntry("sensor.energievertrag"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_schwenkfunktion_ventilator():
+    assert suggest_entity_icon(_FakeEntry("sensor.schwenkfunktion_ventilator"), OrganizerOptions()) == "mdi:fan-auto"
+
+
+def test_icon_backfill_byd_tang():
+    assert suggest_entity_icon(_FakeEntry("sensor.byd_tang"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_pyroelectric_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.pyroelectric_sensor"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_zuluft():
+    assert suggest_entity_icon(_FakeEntry("sensor.zuluft"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_reolink_go():
+    assert suggest_entity_icon(_FakeEntry("sensor.reolink_go"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_ueberlastrelais():
+    assert suggest_entity_icon(_FakeEntry("sensor.ueberlastrelais"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_heizregelung():
+    assert suggest_entity_icon(_FakeEntry("sensor.heizregelung"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_icon_backfill_bakterienbelastung():
+    assert suggest_entity_icon(_FakeEntry("sensor.bakterienbelastung"), OrganizerOptions()) == "mdi:bacteria"
+
+
+def test_icon_backfill_garden_shed():
+    assert suggest_entity_icon(_FakeEntry("sensor.garden_shed"), OrganizerOptions()) == "mdi:warehouse"
+
+
+def test_icon_backfill_systemupdate():
+    assert suggest_entity_icon(_FakeEntry("sensor.systemupdate"), OrganizerOptions()) == "mdi:package-up"
+
+
+def test_icon_backfill_beacon_tracker():
+    assert suggest_entity_icon(_FakeEntry("sensor.beacon_tracker"), OrganizerOptions()) == "mdi:bluetooth-connect"
+
+
+def test_icon_backfill_kohlenwasserstoff():
+    assert suggest_entity_icon(_FakeEntry("sensor.kohlenwasserstoff"), OrganizerOptions()) == "mdi:molecule"
+
+
+def test_icon_backfill_brightness():
+    assert suggest_entity_icon(_FakeEntry("sensor.brightness"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_feuchtedifferenz():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchtedifferenz"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_kettenreaktion():
+    assert suggest_entity_icon(_FakeEntry("sensor.kettenreaktion"), OrganizerOptions()) == "mdi:react"
+
+
+def test_icon_backfill_energy():
+    assert suggest_entity_icon(_FakeEntry("sensor.energy"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_motion():
+    assert suggest_entity_icon(_FakeEntry("sensor.motion"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_humidity():
+    assert suggest_entity_icon(_FakeEntry("sensor.humidity"), OrganizerOptions()) == "mdi:water"

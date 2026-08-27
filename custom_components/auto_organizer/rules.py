@@ -30733,6 +30733,34 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "zutrittscode": "mdi:lock-outline",
     "texecom": "mdi:security",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "zeitfensterbedingung": "mdi:window-close",
+    "tizen": "mdi:television-classic",
+    "abklingzeit": "mdi:timer-sand",
+    "gestenaktion": "mdi:gesture-tap",
+    "luftzirkulation": "mdi:fan-chevron-up",
+    "jahresverbrauch": "mdi:chart-line",
+    "treiberaktualisierung": "mdi:update",
+    "energievertrag": "mdi:currency-eur",
+    "schwenkfunktion ventilator": "mdi:fan-auto",
+    "byd tang": "mdi:car-electric",
+    "pyroelectric sensor": "mdi:motion-sensor",
+    "zuluft": "mdi:air-filter",
+    "reolink go": "mdi:cctv",
+    "ueberlastrelais": "mdi:power-plug",
+    "heizregelung": "mdi:radiator",
+    "bakterienbelastung": "mdi:bacteria",
+    "garden shed": "mdi:warehouse",
+    "systemupdate": "mdi:package-up",
+    "beacon tracker": "mdi:bluetooth-connect",
+    "kohlenwasserstoff": "mdi:molecule",
+    "brightness": "mdi:brightness-6",
+    "feuchtedifferenz": "mdi:water-percent",
+    "kettenreaktion": "mdi:react",
+    "energy": "mdi:lightbulb",
+    "motion": "mdi:motion-sensor",
+    "humidity": "mdi:water",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
