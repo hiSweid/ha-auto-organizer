@@ -26664,6 +26664,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "aufgabenkette": "mdi:playlist-edit",
     "heizkennlinie": "mdi:radiator",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "teppicherhoehung": "mdi:floor-plan",
+    "werksreset nach update": "mdi:restore",
+    "gls paket": "mdi:package-variant-closed",
+    "bodenbelagserkennung": "mdi:texture-box",
+    "no go zone": "mdi:minus-circle-outline",
+    "aktivierungsfenster": "mdi:window-open",
+    "appdaemon app": "mdi:application-cog",
+    "durchlaufkuehler": "mdi:coolant-temperature",
+    "aktualisierungspflicht": "mdi:update",
+    "release notizen": "mdi:note-text",
+    "thinq": "mdi:alpha-t-box",
+    "bandalux": "mdi:blinds",
+    "mistkuebel": "mdi:water-well",
+    "pfannenwender": "mdi:pan",
+    "smartmi fan": "mdi:fan-chevron-up",
+    "shipping label": "mdi:label-outline",
+    "hilti akku": "mdi:battery-charging",
+    "daylight": "mdi:white-balance-sunny",
+    "luftvolumenstrom": "mdi:air-filter",
+    "sharps bin": "mdi:medical-bag",
+    "worx akku": "mdi:battery-charging",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
