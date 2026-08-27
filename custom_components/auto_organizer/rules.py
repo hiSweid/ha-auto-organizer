@@ -32676,6 +32676,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "point cloud radar": "mdi:radiobox-marked",
     "batch verarbeitung": "mdi:package",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "zuluftrate": "mdi:fan",
+    "hintergrundjob": "mdi:script-text-outline",
+    "netvox water leak": "mdi:water-alert",
+    "gramm pro kilogramm": "mdi:water-percent",
+    "spuelbecken ueberlauf": "mdi:water-well",
+    "schoenmackers": "mdi:trash-can",
+    "last seen home": "mdi:home-account",
+    "rankhilfe": "mdi:sprinkler-variant",
+    "waldbrandindex": "mdi:fire-alert",
+    "johannisbeere": "mdi:fruit-grapes",
+    "freischneider": "mdi:leaf",
+    "cloud backup": "mdi:backup-restore",
+    "black bin": "mdi:trash-can-outline",
+    "balkonstimmung": "mdi:palette",
+    "ajax glassprotect": "mdi:shield-home",
+    "handtuchwaermer": "mdi:radiator",
+    "infrarot nachtsicht": "mdi:camera-off",
+    "garagentor bewegungsmelder": "mdi:motion-sensor",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
