@@ -30394,6 +30394,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "fotozelle": "mdi:sun-wireless",
     "ip adresse": "mdi:network",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "hautschuppen": "mdi:air-filter",
+    "knopfsensor": "mdi:button-pointer",
+    "kontrollierte wohnraumlueftung": "mdi:fan-auto",
+    "docker tag": "mdi:tag-text-outline",
+    "wartevorlage": "mdi:timer-star",
+    "automatische updates": "mdi:update",
+    "ausgasung": "mdi:air-purifier",
+    "aussenluftklappe": "mdi:window-open",
+    "vordachmarkise": "mdi:blinds-horizontal",
+    "mhz jalousie": "mdi:blinds",
+    "batterietonne": "mdi:battery-heart-variant",
+    "rain probability": "mdi:weather-rainy",
+    "shortcuts app": "mdi:apps-box",
+    "veml6075": "mdi:sun-wireless",
+    "wassereinbruchsschutz": "mdi:leak-off",
+    "tigerbox": "mdi:television-classic",
+    "gait detection": "mdi:walk",
+    "multiroom verstaerker": "mdi:speaker-multiple",
+    "youtube music": "mdi:music-note",
+    "regieplan": "mdi:script-text-outline",
+    "blendungssensor": "mdi:brightness-6",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
