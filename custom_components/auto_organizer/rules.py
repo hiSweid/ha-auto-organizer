@@ -28670,6 +28670,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "wertstoff": "mdi:recycle",
     "fensterfeuchtigkeit": "mdi:window-open",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "linescan sensor": "mdi:motion-sensor",
+    "rotationsmopp": "mdi:vacuum",
+    "hitzerekord": "mdi:thermometer-high",
+    "hotfix": "mdi:update",
+    "powerbank": "mdi:battery-charging",
+    "fluessig": "mdi:water",
+    "detektionswinkel": "mdi:motion-sensor",
+    "fotoresistor": "mdi:lightbulb",
+    "date night": "mdi:movie-open",
+    "discolicht": "mdi:lightbulb",
+    "zersetzungstemperatur": "mdi:thermometer",
+    "volvo ex30": "mdi:car",
+    "clean water tank": "mdi:vacuum",
+    "absturzschutz": "mdi:vacuum",
+    "brel home": "mdi:window-shutter",
+    "loqed keypad": "mdi:lock",
+    "mehretagen": "mdi:vacuum",
+    "aerosolbelastung": "mdi:air-filter",
+    "wake up light": "mdi:weather-sunny",
+    "klimaschranktemperatur": "mdi:thermometer",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
