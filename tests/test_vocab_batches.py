@@ -81466,3 +81466,27 @@ def test_icon_backfill_muedigkeitswarner():
 
 def test_icon_backfill_grundpreis():
     assert suggest_entity_icon(_FakeEntry("sensor.grundpreis"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_feuchteabweichung():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchteabweichung"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_mpu9250():
+    assert suggest_entity_icon(_FakeEntry("sensor.mpu9250"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_thx_zertifiziert():
+    assert suggest_entity_icon(_FakeEntry("sensor.thx_zertifiziert"), OrganizerOptions()) == "mdi:check-decagram"
+
+
+def test_icon_backfill_heizprogramm():
+    assert suggest_entity_icon(_FakeEntry("sensor.heizprogramm"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_icon_backfill_vapor_pressure():
+    assert suggest_entity_icon(_FakeEntry("sensor.vapor_pressure"), OrganizerOptions()) == "mdi:water-off"
+
+
+def test_icon_backfill_photopic():
+    assert suggest_entity_icon(_FakeEntry("sensor.photopic"), OrganizerOptions()) == "mdi:brightness-6"

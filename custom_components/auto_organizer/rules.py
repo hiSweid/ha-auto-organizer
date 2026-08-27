@@ -32941,6 +32941,14 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "muedigkeitswarner": "mdi:sleep-off",
     "grundpreis": "mdi:currency-eur",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "feuchteabweichung": "mdi:water-percent",
+    "mpu9250": "mdi:motion-sensor",
+    "thx zertifiziert": "mdi:check-decagram",
+    "heizprogramm": "mdi:thermostat",
+    "vapor pressure": "mdi:water-off",
+    "photopic": "mdi:brightness-6",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
