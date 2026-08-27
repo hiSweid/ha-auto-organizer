@@ -28239,6 +28239,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "serienmarathon": "mdi:movie-roll",
     "bonfire night": "mdi:fire",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "nordsense": "mdi:trash-can",
+    "airwits": "mdi:air-filter",
+    "teigwaren": "mdi:cart-outline",
+    "kapazitaetsverlust": "mdi:battery-minus",
+    "vorratsapp": "mdi:cart-plus",
+    "reinigungsprotokoll": "mdi:vacuum",
+    "stale air": "mdi:air-purifier",
+    "nanny cam": "mdi:cctv",
+    "taskplaner": "mdi:calendar-clock",
+    "google standortverlauf": "mdi:map-marker-path",
+    "medienplayer": "mdi:play-circle",
+    "release ankuendigung": "mdi:bell-badge",
+    "eventbus": "mdi:lightbulb-multiple",
+    "erfassungsfeld": "mdi:motion-sensor",
+    "windelvorrat": "mdi:baby-bottle-outline",
+    "objekterkennung": "mdi:eye-outline",
+    "brine tank": "mdi:water-off",
+    "feinstaubmesser": "mdi:air-humidifier",
+    "einbruch": "mdi:home-alert",
+    "verlassensroutine": "mdi:run-fast",
+    "natrium ionen akku": "mdi:battery-charging-50",
+    "rasierer akku": "mdi:battery-unknown",
+    "pollution": "mdi:chemical-weapon",
+    "moisture reading": "mdi:water-percent",
+    "schlafzimmerhelligkeit": "mdi:brightness-6",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

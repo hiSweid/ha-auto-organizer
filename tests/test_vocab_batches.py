@@ -64338,3 +64338,103 @@ def test_icon_backfill_serienmarathon():
 
 def test_icon_backfill_bonfire_night():
     assert suggest_entity_icon(_FakeEntry("sensor.bonfire_night"), OrganizerOptions()) == "mdi:fire"
+
+
+def test_icon_backfill_nordsense():
+    assert suggest_entity_icon(_FakeEntry("sensor.nordsense"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_airwits():
+    assert suggest_entity_icon(_FakeEntry("sensor.airwits"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_teigwaren():
+    assert suggest_entity_icon(_FakeEntry("sensor.teigwaren"), OrganizerOptions()) == "mdi:cart-outline"
+
+
+def test_icon_backfill_kapazitaetsverlust():
+    assert suggest_entity_icon(_FakeEntry("sensor.kapazitaetsverlust"), OrganizerOptions()) == "mdi:battery-minus"
+
+
+def test_icon_backfill_vorratsapp():
+    assert suggest_entity_icon(_FakeEntry("sensor.vorratsapp"), OrganizerOptions()) == "mdi:cart-plus"
+
+
+def test_icon_backfill_reinigungsprotokoll():
+    assert suggest_entity_icon(_FakeEntry("sensor.reinigungsprotokoll"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_stale_air():
+    assert suggest_entity_icon(_FakeEntry("sensor.stale_air"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_icon_backfill_nanny_cam():
+    assert suggest_entity_icon(_FakeEntry("sensor.nanny_cam"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_taskplaner():
+    assert suggest_entity_icon(_FakeEntry("sensor.taskplaner"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_google_standortverlauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.google_standortverlauf"), OrganizerOptions()) == "mdi:map-marker-path"
+
+
+def test_icon_backfill_medienplayer():
+    assert suggest_entity_icon(_FakeEntry("sensor.medienplayer"), OrganizerOptions()) == "mdi:play-circle"
+
+
+def test_icon_backfill_release_ankuendigung():
+    assert suggest_entity_icon(_FakeEntry("sensor.release_ankuendigung"), OrganizerOptions()) == "mdi:bell-badge"
+
+
+def test_icon_backfill_eventbus():
+    assert suggest_entity_icon(_FakeEntry("sensor.eventbus"), OrganizerOptions()) == "mdi:lightbulb-multiple"
+
+
+def test_icon_backfill_erfassungsfeld():
+    assert suggest_entity_icon(_FakeEntry("sensor.erfassungsfeld"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_windelvorrat():
+    assert suggest_entity_icon(_FakeEntry("sensor.windelvorrat"), OrganizerOptions()) == "mdi:baby-bottle-outline"
+
+
+def test_icon_backfill_objekterkennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.objekterkennung"), OrganizerOptions()) == "mdi:eye-outline"
+
+
+def test_icon_backfill_brine_tank():
+    assert suggest_entity_icon(_FakeEntry("sensor.brine_tank"), OrganizerOptions()) == "mdi:water-off"
+
+
+def test_icon_backfill_feinstaubmesser():
+    assert suggest_entity_icon(_FakeEntry("sensor.feinstaubmesser"), OrganizerOptions()) == "mdi:air-humidifier"
+
+
+def test_icon_backfill_einbruch():
+    assert suggest_entity_icon(_FakeEntry("sensor.einbruch"), OrganizerOptions()) == "mdi:home-alert"
+
+
+def test_icon_backfill_verlassensroutine():
+    assert suggest_entity_icon(_FakeEntry("sensor.verlassensroutine"), OrganizerOptions()) == "mdi:run-fast"
+
+
+def test_icon_backfill_natrium_ionen_akku():
+    assert suggest_entity_icon(_FakeEntry("sensor.natrium_ionen_akku"), OrganizerOptions()) == "mdi:battery-charging-50"
+
+
+def test_icon_backfill_rasierer_akku():
+    assert suggest_entity_icon(_FakeEntry("sensor.rasierer_akku"), OrganizerOptions()) == "mdi:battery-unknown"
+
+
+def test_icon_backfill_pollution():
+    assert suggest_entity_icon(_FakeEntry("sensor.pollution"), OrganizerOptions()) == "mdi:chemical-weapon"
+
+
+def test_icon_backfill_moisture_reading():
+    assert suggest_entity_icon(_FakeEntry("sensor.moisture_reading"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_schlafzimmerhelligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.schlafzimmerhelligkeit"), OrganizerOptions()) == "mdi:brightness-6"
