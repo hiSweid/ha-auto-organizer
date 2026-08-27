@@ -28310,6 +28310,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "plume labs": "mdi:air-purifier",
     "luftmassengrenze": "mdi:weather-windy",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "luxmessung": "mdi:brightness-5",
+    "stroboskop": "mdi:flashlight",
+    "arrears": "mdi:currency-eur",
+    "entladeschluss": "mdi:battery-alert",
+    "fluegelrad": "mdi:fan",
+    "vinted verkauf": "mdi:shopping",
+    "mdns": "mdi:network",
+    "fernsehprogramm": "mdi:television-classic",
+    "gleichgewichtsfeuchte": "mdi:water-percent",
+    "kinderzimmerhelligkeit": "mdi:brightness-6",
+    "green energy": "mdi:solar-power",
+    "netzladung": "mdi:power-plug",
+    "spuelgang skript": "mdi:script-text",
+    "ip66": "mdi:cctv",
+    "entprellung": "mdi:timer-sand",
+    "gartenueberwachung": "mdi:camera-off",
+    "rollladenbatterie": "mdi:battery-50",
+    "oeffnung": "mdi:door-open",
+    "offshore netzumlage": "mdi:currency-eur",
+    "powerline adapter": "mdi:wifi",
+    "boersenpreis": "mdi:cash-multiple",
+    "geraeteupdate": "mdi:update",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
