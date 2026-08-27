@@ -31655,6 +31655,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "rekursive funktion": "mdi:function",
     "aussenraumhelligkeit": "mdi:brightness-5",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "leakfrog": "mdi:leak",
+    "gehrichtung": "mdi:motion-sensor",
+    "gesichtsentsperrung": "mdi:face-recognition",
+    "automatisierungsplan": "mdi:calendar-clock",
+    "allradantrieb": "mdi:car-traction-control",
+    "druckluftleck": "mdi:air-filter",
+    "miele triflex": "mdi:vacuum",
+    "mac adresse": "mdi:network",
+    "agent dvr": "mdi:cctv",
+    "hacs": "mdi:home-assistant",
+    "schwenkriegel": "mdi:lock-smart",
+    "soaker hose": "mdi:sprinkler",
+    "in der naehe": "mdi:home-outline",
+    "signalqualitaet": "mdi:wifi-star",
+    "kvar": "mdi:flash-auto",
+    "geraeteakku": "mdi:battery-charging",
+    "openwakeword update": "mdi:update",
+    "levoit": "mdi:air-purifier",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

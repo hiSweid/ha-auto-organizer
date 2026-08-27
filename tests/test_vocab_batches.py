@@ -76834,3 +76834,75 @@ def test_icon_backfill_rekursive_funktion():
 
 def test_icon_backfill_aussenraumhelligkeit():
     assert suggest_entity_icon(_FakeEntry("sensor.aussenraumhelligkeit"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_leakfrog():
+    assert suggest_entity_icon(_FakeEntry("sensor.leakfrog"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_gehrichtung():
+    assert suggest_entity_icon(_FakeEntry("sensor.gehrichtung"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_gesichtsentsperrung():
+    assert suggest_entity_icon(_FakeEntry("sensor.gesichtsentsperrung"), OrganizerOptions()) == "mdi:face-recognition"
+
+
+def test_icon_backfill_automatisierungsplan():
+    assert suggest_entity_icon(_FakeEntry("sensor.automatisierungsplan"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_allradantrieb():
+    assert suggest_entity_icon(_FakeEntry("sensor.allradantrieb"), OrganizerOptions()) == "mdi:car-traction-control"
+
+
+def test_icon_backfill_druckluftleck():
+    assert suggest_entity_icon(_FakeEntry("sensor.druckluftleck"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_miele_triflex():
+    assert suggest_entity_icon(_FakeEntry("sensor.miele_triflex"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_mac_adresse():
+    assert suggest_entity_icon(_FakeEntry("sensor.mac_adresse"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_agent_dvr():
+    assert suggest_entity_icon(_FakeEntry("sensor.agent_dvr"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_hacs():
+    assert suggest_entity_icon(_FakeEntry("sensor.hacs"), OrganizerOptions()) == "mdi:home-assistant"
+
+
+def test_icon_backfill_schwenkriegel():
+    assert suggest_entity_icon(_FakeEntry("sensor.schwenkriegel"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_icon_backfill_soaker_hose():
+    assert suggest_entity_icon(_FakeEntry("sensor.soaker_hose"), OrganizerOptions()) == "mdi:sprinkler"
+
+
+def test_icon_backfill_in_der_naehe():
+    assert suggest_entity_icon(_FakeEntry("sensor.in_der_naehe"), OrganizerOptions()) == "mdi:home-outline"
+
+
+def test_icon_backfill_signalqualitaet():
+    assert suggest_entity_icon(_FakeEntry("sensor.signalqualitaet"), OrganizerOptions()) == "mdi:wifi-star"
+
+
+def test_icon_backfill_kvar():
+    assert suggest_entity_icon(_FakeEntry("sensor.kvar"), OrganizerOptions()) == "mdi:flash-auto"
+
+
+def test_icon_backfill_geraeteakku():
+    assert suggest_entity_icon(_FakeEntry("sensor.geraeteakku"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_openwakeword_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.openwakeword_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_levoit():
+    assert suggest_entity_icon(_FakeEntry("sensor.levoit"), OrganizerOptions()) == "mdi:air-purifier"
