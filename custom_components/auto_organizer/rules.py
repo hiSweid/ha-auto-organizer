@@ -27156,6 +27156,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "besucherprotokoll": "mdi:account-check",
     "wisenet": "mdi:cctv",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "treiberpaket": "mdi:update",
+    "inkassokosten": "mdi:cash-multiple",
+    "burgwaechter": "mdi:security",
+    "emissionszertifikat": "mdi:certificate",
+    "knettenbrech": "mdi:trash-can",
+    "himmelsstrahlung": "mdi:white-balance-sunny",
+    "power monitor": "mdi:flash",
+    "lichtsensormessung": "mdi:brightness-5",
+    "virtuelle sperrzone": "mdi:shield-alert",
+    "ozonator": "mdi:water-pump",
+    "standing charge": "mdi:cash-multiple",
+    "streamdeck": "mdi:tablet-dashboard",
+    "flash firmware": "mdi:chip",
+    "fan speed low": "mdi:fan-speed-1",
+    "wasserenthaerterstand": "mdi:water-off",
+    "luftfeuchteistwert": "mdi:water-percent",
+    "trigger variablen": "mdi:variable",
+    "lux tagesverlauf": "mdi:brightness-6",
+    "lockenstab": "mdi:hair-dryer",
+    "abluftqualitaet": "mdi:air-filter",
+    "terrariensteuerung": "mdi:leaf",
+    "dsl modem": "mdi:router-wireless",
+    "blockbatterie": "mdi:battery-charging-100",
+    "motion interval": "mdi:motion-sensor",
+    "hoverboard akku": "mdi:battery",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

@@ -60366,3 +60366,103 @@ def test_icon_backfill_besucherprotokoll():
 
 def test_icon_backfill_wisenet():
     assert suggest_entity_icon(_FakeEntry("sensor.wisenet"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_treiberpaket():
+    assert suggest_entity_icon(_FakeEntry("sensor.treiberpaket"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_inkassokosten():
+    assert suggest_entity_icon(_FakeEntry("sensor.inkassokosten"), OrganizerOptions()) == "mdi:cash-multiple"
+
+
+def test_icon_backfill_burgwaechter():
+    assert suggest_entity_icon(_FakeEntry("sensor.burgwaechter"), OrganizerOptions()) == "mdi:security"
+
+
+def test_icon_backfill_emissionszertifikat():
+    assert suggest_entity_icon(_FakeEntry("sensor.emissionszertifikat"), OrganizerOptions()) == "mdi:certificate"
+
+
+def test_icon_backfill_knettenbrech():
+    assert suggest_entity_icon(_FakeEntry("sensor.knettenbrech"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_himmelsstrahlung():
+    assert suggest_entity_icon(_FakeEntry("sensor.himmelsstrahlung"), OrganizerOptions()) == "mdi:white-balance-sunny"
+
+
+def test_icon_backfill_power_monitor():
+    assert suggest_entity_icon(_FakeEntry("sensor.power_monitor"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_lichtsensormessung():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtsensormessung"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_virtuelle_sperrzone():
+    assert suggest_entity_icon(_FakeEntry("sensor.virtuelle_sperrzone"), OrganizerOptions()) == "mdi:shield-alert"
+
+
+def test_icon_backfill_ozonator():
+    assert suggest_entity_icon(_FakeEntry("sensor.ozonator"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_standing_charge():
+    assert suggest_entity_icon(_FakeEntry("sensor.standing_charge"), OrganizerOptions()) == "mdi:cash-multiple"
+
+
+def test_icon_backfill_streamdeck():
+    assert suggest_entity_icon(_FakeEntry("sensor.streamdeck"), OrganizerOptions()) == "mdi:tablet-dashboard"
+
+
+def test_icon_backfill_flash_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.flash_firmware"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_icon_backfill_fan_speed_low():
+    assert suggest_entity_icon(_FakeEntry("sensor.fan_speed_low"), OrganizerOptions()) == "mdi:fan-speed-1"
+
+
+def test_icon_backfill_wasserenthaerterstand():
+    assert suggest_entity_icon(_FakeEntry("sensor.wasserenthaerterstand"), OrganizerOptions()) == "mdi:water-off"
+
+
+def test_icon_backfill_luftfeuchteistwert():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftfeuchteistwert"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_trigger_variablen():
+    assert suggest_entity_icon(_FakeEntry("sensor.trigger_variablen"), OrganizerOptions()) == "mdi:variable"
+
+
+def test_icon_backfill_lux_tagesverlauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.lux_tagesverlauf"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_lockenstab():
+    assert suggest_entity_icon(_FakeEntry("sensor.lockenstab"), OrganizerOptions()) == "mdi:hair-dryer"
+
+
+def test_icon_backfill_abluftqualitaet():
+    assert suggest_entity_icon(_FakeEntry("sensor.abluftqualitaet"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_terrariensteuerung():
+    assert suggest_entity_icon(_FakeEntry("sensor.terrariensteuerung"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_dsl_modem():
+    assert suggest_entity_icon(_FakeEntry("sensor.dsl_modem"), OrganizerOptions()) == "mdi:router-wireless"
+
+
+def test_icon_backfill_blockbatterie():
+    assert suggest_entity_icon(_FakeEntry("sensor.blockbatterie"), OrganizerOptions()) == "mdi:battery-charging-100"
+
+
+def test_icon_backfill_motion_interval():
+    assert suggest_entity_icon(_FakeEntry("sensor.motion_interval"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_hoverboard_akku():
+    assert suggest_entity_icon(_FakeEntry("sensor.hoverboard_akku"), OrganizerOptions()) == "mdi:battery"
