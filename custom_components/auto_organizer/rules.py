@@ -26316,6 +26316,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "vierfachschalter": "mdi:toggle-switch",
     "pumpenkennlinie": "mdi:pump",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "backblech": "mdi:microwave",
+    "pfand": "mdi:bottle-wine-outline",
+    "paket": "mdi:package-variant-closed",
+    "haupteingang": "mdi:doorbell-video",
+    "bosch radion": "mdi:motion-sensor",
+    "uploadgeschwindigkeit": "mdi:upload-network",
+    "philio motion": "mdi:motion-sensor",
+    "garlic": "mdi:carrot",
+    "panik knopf klingel": "mdi:doorbell",
+    "dynamischer tarif": "mdi:currency-eur",
+    "kulissenschalldaempfer": "mdi:fan-alert",
+    "input number trigger": "mdi:numeric",
+    "moving energy": "mdi:speedometer",
+    "streulichtsensor": "mdi:lightbulb-on-outline",
+    "referral bonus": "mdi:gift",
+    "damp problem": "mdi:water-percent",
+    "blaupause": "mdi:file-document-edit-outline",
+    "blumentopfsensor": "mdi:flower-tulip-outline",
+    "preisbremse": "mdi:cash-multiple",
+    "psychrometrie": "mdi:thermometer-lines",
+    "iobroker automatisierung": "mdi:script-text-outline",
+    "warm front": "mdi:weather-windy",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

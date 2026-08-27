@@ -57278,3 +57278,91 @@ def test_icon_backfill_vierfachschalter():
 
 def test_icon_backfill_pumpenkennlinie():
     assert suggest_entity_icon(_FakeEntry("sensor.pumpenkennlinie"), OrganizerOptions()) == "mdi:pump"
+
+
+def test_icon_backfill_backblech():
+    assert suggest_entity_icon(_FakeEntry("sensor.backblech"), OrganizerOptions()) == "mdi:microwave"
+
+
+def test_icon_backfill_pfand():
+    assert suggest_entity_icon(_FakeEntry("sensor.pfand"), OrganizerOptions()) == "mdi:bottle-wine-outline"
+
+
+def test_icon_backfill_paket():
+    assert suggest_entity_icon(_FakeEntry("sensor.paket"), OrganizerOptions()) == "mdi:package-variant-closed"
+
+
+def test_icon_backfill_haupteingang():
+    assert suggest_entity_icon(_FakeEntry("sensor.haupteingang"), OrganizerOptions()) == "mdi:doorbell-video"
+
+
+def test_icon_backfill_bosch_radion():
+    assert suggest_entity_icon(_FakeEntry("sensor.bosch_radion"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_uploadgeschwindigkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.uploadgeschwindigkeit"), OrganizerOptions()) == "mdi:upload-network"
+
+
+def test_icon_backfill_philio_motion():
+    assert suggest_entity_icon(_FakeEntry("sensor.philio_motion"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_garlic():
+    assert suggest_entity_icon(_FakeEntry("sensor.garlic"), OrganizerOptions()) == "mdi:carrot"
+
+
+def test_icon_backfill_panik_knopf_klingel():
+    assert suggest_entity_icon(_FakeEntry("sensor.panik_knopf_klingel"), OrganizerOptions()) == "mdi:doorbell"
+
+
+def test_icon_backfill_dynamischer_tarif():
+    assert suggest_entity_icon(_FakeEntry("sensor.dynamischer_tarif"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_kulissenschalldaempfer():
+    assert suggest_entity_icon(_FakeEntry("sensor.kulissenschalldaempfer"), OrganizerOptions()) == "mdi:fan-alert"
+
+
+def test_icon_backfill_input_number_trigger():
+    assert suggest_entity_icon(_FakeEntry("sensor.input_number_trigger"), OrganizerOptions()) == "mdi:numeric"
+
+
+def test_icon_backfill_moving_energy():
+    assert suggest_entity_icon(_FakeEntry("sensor.moving_energy"), OrganizerOptions()) == "mdi:speedometer"
+
+
+def test_icon_backfill_streulichtsensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.streulichtsensor"), OrganizerOptions()) == "mdi:lightbulb-on-outline"
+
+
+def test_icon_backfill_referral_bonus():
+    assert suggest_entity_icon(_FakeEntry("sensor.referral_bonus"), OrganizerOptions()) == "mdi:gift"
+
+
+def test_icon_backfill_damp_problem():
+    assert suggest_entity_icon(_FakeEntry("sensor.damp_problem"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_blaupause():
+    assert suggest_entity_icon(_FakeEntry("sensor.blaupause"), OrganizerOptions()) == "mdi:file-document-edit-outline"
+
+
+def test_icon_backfill_blumentopfsensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.blumentopfsensor"), OrganizerOptions()) == "mdi:flower-tulip-outline"
+
+
+def test_icon_backfill_preisbremse():
+    assert suggest_entity_icon(_FakeEntry("sensor.preisbremse"), OrganizerOptions()) == "mdi:cash-multiple"
+
+
+def test_icon_backfill_psychrometrie():
+    assert suggest_entity_icon(_FakeEntry("sensor.psychrometrie"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_iobroker_automatisierung():
+    assert suggest_entity_icon(_FakeEntry("sensor.iobroker_automatisierung"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_warm_front():
+    assert suggest_entity_icon(_FakeEntry("sensor.warm_front"), OrganizerOptions()) == "mdi:weather-windy"
