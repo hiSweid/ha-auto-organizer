@@ -81606,3 +81606,27 @@ def test_icon_backfill_graustrom():
 
 def test_icon_backfill_oszillationsfunktion():
     assert suggest_entity_icon(_FakeEntry("sensor.oszillationsfunktion"), OrganizerOptions()) == "mdi:fan-alert"
+
+
+def test_icon_backfill_candy_thermometer():
+    assert suggest_entity_icon(_FakeEntry("sensor.candy_thermometer"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_kernseife():
+    assert suggest_entity_icon(_FakeEntry("sensor.kernseife"), OrganizerOptions()) == "mdi:shopping"
+
+
+def test_icon_backfill_waschmittelvorrat():
+    assert suggest_entity_icon(_FakeEntry("sensor.waschmittelvorrat"), OrganizerOptions()) == "mdi:shopping"
+
+
+def test_icon_backfill_curtain_lens_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.curtain_lens_sensor"), OrganizerOptions()) == "mdi:motion"
+
+
+def test_icon_backfill_wasserhahntropfen():
+    assert suggest_entity_icon(_FakeEntry("sensor.wasserhahntropfen"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_chlortabletten():
+    assert suggest_entity_icon(_FakeEntry("sensor.chlortabletten"), OrganizerOptions()) == "mdi:water"

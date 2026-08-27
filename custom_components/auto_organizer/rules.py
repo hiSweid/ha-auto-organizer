@@ -32982,6 +32982,14 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "graustrom": "mdi:power-plug",
     "oszillationsfunktion": "mdi:fan-alert",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "candy thermometer": "mdi:thermometer",
+    "kernseife": "mdi:shopping",
+    "waschmittelvorrat": "mdi:shopping",
+    "curtain lens sensor": "mdi:motion",
+    "wasserhahntropfen": "mdi:leak",
+    "chlortabletten": "mdi:water",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
