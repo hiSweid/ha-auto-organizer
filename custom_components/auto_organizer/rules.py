@@ -26173,6 +26173,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "target distance": "mdi:ruler",
     "dts hd": "mdi:hdmi-port",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "retro console": "mdi:gamepad-variant",
+    "gaestemodus": "mdi:account-star",
+    "bmp280": "mdi:thermometer",
+    "benutzerdefinierte aktion": "mdi:script-text",
+    "dreamcast": "mdi:gamepad-variant",
+    "collection schedule": "mdi:calendar-clock",
+    "igloohome": "mdi:lock",
+    "openalpr": "mdi:camera",
+    "pit probe": "mdi:thermometer",
+    "mesh system": "mdi:wifi-star",
+    "selbstabholung": "mdi:truck-delivery",
+    "homeofficetag": "mdi:home-account",
+    "shutdown routine": "mdi:power-plug-off",
+    "holsystem": "mdi:trash-can",
+    "gateway update": "mdi:update",
+    "lg codezero": "mdi:robot-vacuum",
+    "last fm": "mdi:lastpass",
+    "sattdampfdruck": "mdi:water-percent",
+    "garden party": "mdi:flower-tulip",
+    "patch tuesday": "mdi:update",
+    "treppenhausentlueftung": "mdi:fan",
+    "ereignisvideo": "mdi:video",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
