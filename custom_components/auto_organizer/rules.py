@@ -28919,6 +28919,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "schadstoffcontainer": "mdi:recycle",
     "in line fan": "mdi:fan-chevron-up",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "hifi rack": "mdi:speaker",
+    "snzb 02": "mdi:thermometer",
+    "roborock app": "mdi:robot-vacuum",
+    "water dispenser": "mdi:faucet",
+    "beta kanal": "mdi:alpha-b-box",
+    "rowenta": "mdi:hair-dryer",
+    "condensate": "mdi:water-percent",
+    "yeedi mop": "mdi:robot-mower",
+    "go skript": "mdi:script-text-outline",
+    "feinstaubmessung": "mdi:air-filter",
+    "lux sensor calibration": "mdi:brightness-5",
+    "manipulationsschutz kamera": "mdi:cctv",
+    "domintell": "mdi:home-automation",
+    "pool leak detector": "mdi:leak",
+    "aufwachen": "mdi:sleep",
+    "asbestentsorgung": "mdi:trash-can",
+    "schliessblech": "mdi:lock",
+    "firmwarestatus": "mdi:information-outline",
+    "winkhaus": "mdi:door-open",
+    "echo dot": "mdi:google-assistant",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

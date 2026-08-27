@@ -66834,3 +66834,83 @@ def test_icon_backfill_schadstoffcontainer():
 
 def test_icon_backfill_in_line_fan():
     assert suggest_entity_icon(_FakeEntry("sensor.in_line_fan"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_hifi_rack():
+    assert suggest_entity_icon(_FakeEntry("sensor.hifi_rack"), OrganizerOptions()) == "mdi:speaker"
+
+
+def test_icon_backfill_snzb_02():
+    assert suggest_entity_icon(_FakeEntry("sensor.snzb_02"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_roborock_app():
+    assert suggest_entity_icon(_FakeEntry("sensor.roborock_app"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_water_dispenser():
+    assert suggest_entity_icon(_FakeEntry("sensor.water_dispenser"), OrganizerOptions()) == "mdi:faucet"
+
+
+def test_icon_backfill_beta_kanal():
+    assert suggest_entity_icon(_FakeEntry("sensor.beta_kanal"), OrganizerOptions()) == "mdi:alpha-b-box"
+
+
+def test_icon_backfill_rowenta():
+    assert suggest_entity_icon(_FakeEntry("sensor.rowenta"), OrganizerOptions()) == "mdi:hair-dryer"
+
+
+def test_icon_backfill_condensate():
+    assert suggest_entity_icon(_FakeEntry("sensor.condensate"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_yeedi_mop():
+    assert suggest_entity_icon(_FakeEntry("sensor.yeedi_mop"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_icon_backfill_go_skript():
+    assert suggest_entity_icon(_FakeEntry("sensor.go_skript"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_feinstaubmessung():
+    assert suggest_entity_icon(_FakeEntry("sensor.feinstaubmessung"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_lux_sensor_calibration():
+    assert suggest_entity_icon(_FakeEntry("sensor.lux_sensor_calibration"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_manipulationsschutz_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.manipulationsschutz_kamera"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_domintell():
+    assert suggest_entity_icon(_FakeEntry("sensor.domintell"), OrganizerOptions()) == "mdi:home-automation"
+
+
+def test_icon_backfill_pool_leak_detector():
+    assert suggest_entity_icon(_FakeEntry("sensor.pool_leak_detector"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_aufwachen():
+    assert suggest_entity_icon(_FakeEntry("sensor.aufwachen"), OrganizerOptions()) == "mdi:sleep"
+
+
+def test_icon_backfill_asbestentsorgung():
+    assert suggest_entity_icon(_FakeEntry("sensor.asbestentsorgung"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_schliessblech():
+    assert suggest_entity_icon(_FakeEntry("sensor.schliessblech"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_firmwarestatus():
+    assert suggest_entity_icon(_FakeEntry("sensor.firmwarestatus"), OrganizerOptions()) == "mdi:information-outline"
+
+
+def test_icon_backfill_winkhaus():
+    assert suggest_entity_icon(_FakeEntry("sensor.winkhaus"), OrganizerOptions()) == "mdi:door-open"
+
+
+def test_icon_backfill_echo_dot():
+    assert suggest_entity_icon(_FakeEntry("sensor.echo_dot"), OrganizerOptions()) == "mdi:google-assistant"
