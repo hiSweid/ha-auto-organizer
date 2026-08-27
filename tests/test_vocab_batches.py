@@ -80086,3 +80086,67 @@ def test_icon_backfill_batterieklammer():
 
 def test_icon_backfill_olivenglas():
     assert suggest_entity_icon(_FakeEntry("sensor.olivenglas"), OrganizerOptions()) == "mdi:glass-mug"
+
+
+def test_icon_backfill_wetterbericht():
+    assert suggest_entity_icon(_FakeEntry("sensor.wetterbericht"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_kofferschloss():
+    assert suggest_entity_icon(_FakeEntry("sensor.kofferschloss"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_windchill_index():
+    assert suggest_entity_icon(_FakeEntry("sensor.windchill_index"), OrganizerOptions()) == "mdi:snowflake-alert"
+
+
+def test_icon_backfill_update_fortschritt():
+    assert suggest_entity_icon(_FakeEntry("sensor.update_fortschritt"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_roller_brush():
+    assert suggest_entity_icon(_FakeEntry("sensor.roller_brush"), OrganizerOptions()) == "mdi:brush"
+
+
+def test_icon_backfill_smart_lock_hub():
+    assert suggest_entity_icon(_FakeEntry("sensor.smart_lock_hub"), OrganizerOptions()) == "mdi:hub"
+
+
+def test_icon_backfill_eierschneider():
+    assert suggest_entity_icon(_FakeEntry("sensor.eierschneider"), OrganizerOptions()) == "mdi:egg"
+
+
+def test_icon_backfill_veml7700():
+    assert suggest_entity_icon(_FakeEntry("sensor.veml7700"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_staubbeutelwechsel():
+    assert suggest_entity_icon(_FakeEntry("sensor.staubbeutelwechsel"), OrganizerOptions()) == "mdi:filter"
+
+
+def test_icon_backfill_waffle_maker():
+    assert suggest_entity_icon(_FakeEntry("sensor.waffle_maker"), OrganizerOptions()) == "mdi:pan"
+
+
+def test_icon_backfill_signed_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.signed_firmware"), OrganizerOptions()) == "mdi:signature"
+
+
+def test_icon_backfill_regenerative_braking():
+    assert suggest_entity_icon(_FakeEntry("sensor.regenerative_braking"), OrganizerOptions()) == "mdi:car-brake-abs"
+
+
+def test_icon_backfill_muellschlucker():
+    assert suggest_entity_icon(_FakeEntry("sensor.muellschlucker"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_nox_einheit():
+    assert suggest_entity_icon(_FakeEntry("sensor.nox_einheit"), OrganizerOptions()) == "mdi:eye"
+
+
+def test_icon_backfill_ecovacs_app():
+    assert suggest_entity_icon(_FakeEntry("sensor.ecovacs_app"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_meraki():
+    assert suggest_entity_icon(_FakeEntry("sensor.meraki"), OrganizerOptions()) == "mdi:wifi"

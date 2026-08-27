@@ -32554,6 +32554,24 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "batterieklammer": "mdi:battery-unknown",
     "olivenglas": "mdi:glass-mug",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "wetterbericht": "mdi:weather-cloudy",
+    "kofferschloss": "mdi:lock",
+    "windchill index": "mdi:snowflake-alert",
+    "update fortschritt": "mdi:update",
+    "roller brush": "mdi:brush",
+    "smart lock hub": "mdi:hub",
+    "eierschneider": "mdi:egg",
+    "veml7700": "mdi:brightness-5",
+    "staubbeutelwechsel": "mdi:filter",
+    "waffle maker": "mdi:pan",
+    "signed firmware": "mdi:signature",
+    "regenerative braking": "mdi:car-brake-abs",
+    "muellschlucker": "mdi:trash-can",
+    "nox einheit": "mdi:eye",
+    "ecovacs app": "mdi:robot-vacuum",
+    "meraki": "mdi:wifi",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
