@@ -81410,3 +81410,59 @@ def test_icon_backfill_rtl_plus():
 
 def test_icon_backfill_bebbi_sagg():
     assert suggest_entity_icon(_FakeEntry("sensor.bebbi_sagg"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_lichtmesser():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtmesser"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_jahresbetrag():
+    assert suggest_entity_icon(_FakeEntry("sensor.jahresbetrag"), OrganizerOptions()) == "mdi:cash-multiple"
+
+
+def test_icon_backfill_nutzungsgrad():
+    assert suggest_entity_icon(_FakeEntry("sensor.nutzungsgrad"), OrganizerOptions()) == "mdi:gauge"
+
+
+def test_icon_backfill_erdbodenfeuchte():
+    assert suggest_entity_icon(_FakeEntry("sensor.erdbodenfeuchte"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_waschbecken():
+    assert suggest_entity_icon(_FakeEntry("sensor.waschbecken"), OrganizerOptions()) == "mdi:washing-machine"
+
+
+def test_icon_backfill_vl53l5cx():
+    assert suggest_entity_icon(_FakeEntry("sensor.vl53l5cx"), OrganizerOptions()) == "mdi:radar"
+
+
+def test_icon_backfill_macbook():
+    assert suggest_entity_icon(_FakeEntry("sensor.macbook"), OrganizerOptions()) == "mdi:laptop"
+
+
+def test_icon_backfill_prozessfuehler():
+    assert suggest_entity_icon(_FakeEntry("sensor.prozessfuehler"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_kunstlichtsensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.kunstlichtsensor"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_api_trigger():
+    assert suggest_entity_icon(_FakeEntry("sensor.api_trigger"), OrganizerOptions()) == "mdi:lightning-bolt"
+
+
+def test_icon_backfill_sleepover():
+    assert suggest_entity_icon(_FakeEntry("sensor.sleepover"), OrganizerOptions()) == "mdi:sleep"
+
+
+def test_icon_backfill_tonnenidentifikation():
+    assert suggest_entity_icon(_FakeEntry("sensor.tonnenidentifikation"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_muedigkeitswarner():
+    assert suggest_entity_icon(_FakeEntry("sensor.muedigkeitswarner"), OrganizerOptions()) == "mdi:sleep-off"
+
+
+def test_icon_backfill_grundpreis():
+    assert suggest_entity_icon(_FakeEntry("sensor.grundpreis"), OrganizerOptions()) == "mdi:currency-eur"

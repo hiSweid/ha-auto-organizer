@@ -32925,6 +32925,22 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "rtl plus": "mdi:television-classic",
     "bebbi sagg": "mdi:trash-can",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "lichtmesser": "mdi:brightness-5",
+    "jahresbetrag": "mdi:cash-multiple",
+    "nutzungsgrad": "mdi:gauge",
+    "erdbodenfeuchte": "mdi:water-percent",
+    "waschbecken": "mdi:washing-machine",
+    "vl53l5cx": "mdi:radar",
+    "macbook": "mdi:laptop",
+    "prozessfuehler": "mdi:thermometer-lines",
+    "kunstlichtsensor": "mdi:brightness-6",
+    "api trigger": "mdi:lightning-bolt",
+    "sleepover": "mdi:sleep",
+    "tonnenidentifikation": "mdi:trash-can",
+    "muedigkeitswarner": "mdi:sleep-off",
+    "grundpreis": "mdi:currency-eur",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
