@@ -65506,3 +65506,75 @@ def test_icon_backfill_sichtweitensensor():
 
 def test_icon_backfill_letztes_mal_gesehen():
     assert suggest_entity_icon(_FakeEntry("sensor.letztes_mal_gesehen"), OrganizerOptions()) == "mdi:clock-outline"
+
+
+def test_icon_backfill_marktlokation():
+    assert suggest_entity_icon(_FakeEntry("sensor.marktlokation"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_fahrzeugdetektion():
+    assert suggest_entity_icon(_FakeEntry("sensor.fahrzeugdetektion"), OrganizerOptions()) == "mdi:car-door"
+
+
+def test_icon_backfill_abfallschluesselnummer():
+    assert suggest_entity_icon(_FakeEntry("sensor.abfallschluesselnummer"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_dvb_c():
+    assert suggest_entity_icon(_FakeEntry("sensor.dvb_c"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_luftfeuchtewert():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftfeuchtewert"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_renson_fixscreen():
+    assert suggest_entity_icon(_FakeEntry("sensor.renson_fixscreen"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_surface_temperature():
+    assert suggest_entity_icon(_FakeEntry("sensor.surface_temperature"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_wasserkosten():
+    assert suggest_entity_icon(_FakeEntry("sensor.wasserkosten"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_partymodus_luefter():
+    assert suggest_entity_icon(_FakeEntry("sensor.partymodus_luefter"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_wc_reiniger():
+    assert suggest_entity_icon(_FakeEntry("sensor.wc_reiniger"), OrganizerOptions()) == "mdi:toilet"
+
+
+def test_icon_backfill_lichtverhaeltnis():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtverhaeltnis"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_temperaturausgleich():
+    assert suggest_entity_icon(_FakeEntry("sensor.temperaturausgleich"), OrganizerOptions()) == "mdi:temperature-celsius"
+
+
+def test_icon_backfill_muellmann():
+    assert suggest_entity_icon(_FakeEntry("sensor.muellmann"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_icon_backfill_strombilanz():
+    assert suggest_entity_icon(_FakeEntry("sensor.strombilanz"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_gastroback():
+    assert suggest_entity_icon(_FakeEntry("sensor.gastroback"), OrganizerOptions()) == "mdi:microwave"
+
+
+def test_icon_backfill_abloy_classic():
+    assert suggest_entity_icon(_FakeEntry("sensor.abloy_classic"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_juice_press():
+    assert suggest_entity_icon(_FakeEntry("sensor.juice_press"), OrganizerOptions()) == "mdi:glass-cocktail"
+
+
+def test_icon_backfill_staubbeutel():
+    assert suggest_entity_icon(_FakeEntry("sensor.staubbeutel"), OrganizerOptions()) == "mdi:filter"

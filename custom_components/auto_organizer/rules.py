@@ -28557,6 +28557,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "sichtweitensensor": "mdi:eye",
     "letztes mal gesehen": "mdi:clock-outline",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "marktlokation": "mdi:currency-eur",
+    "fahrzeugdetektion": "mdi:car-door",
+    "abfallschluesselnummer": "mdi:trash-can",
+    "dvb c": "mdi:television-classic",
+    "luftfeuchtewert": "mdi:water-percent",
+    "renson fixscreen": "mdi:window-shutter",
+    "surface temperature": "mdi:thermometer-lines",
+    "wasserkosten": "mdi:water",
+    "partymodus luefter": "mdi:fan-chevron-up",
+    "wc reiniger": "mdi:toilet",
+    "lichtverhaeltnis": "mdi:brightness-6",
+    "temperaturausgleich": "mdi:temperature-celsius",
+    "muellmann": "mdi:trash-can-outline",
+    "strombilanz": "mdi:flash",
+    "gastroback": "mdi:microwave",
+    "abloy classic": "mdi:lock",
+    "juice press": "mdi:glass-cocktail",
+    "staubbeutel": "mdi:filter",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
