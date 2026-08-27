@@ -78474,3 +78474,95 @@ def test_icon_backfill_verbindungstimeout():
 
 def test_icon_backfill_ophaalkalender():
     assert suggest_entity_icon(_FakeEntry("sensor.ophaalkalender"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_gegenlicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.gegenlicht"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_buerokamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.buerokamera"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_environment_canada():
+    assert suggest_entity_icon(_FakeEntry("sensor.environment_canada"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_brown_bin():
+    assert suggest_entity_icon(_FakeEntry("sensor.brown_bin"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_icon_backfill_saunaszene():
+    assert suggest_entity_icon(_FakeEntry("sensor.saunaszene"), OrganizerOptions()) == "mdi:spa"
+
+
+def test_icon_backfill_espresense():
+    assert suggest_entity_icon(_FakeEntry("sensor.espresense"), OrganizerOptions()) == "mdi:account-check"
+
+
+def test_icon_backfill_scriptbibliothek():
+    assert suggest_entity_icon(_FakeEntry("sensor.scriptbibliothek"), OrganizerOptions()) == "mdi:file-document-multiple"
+
+
+def test_icon_backfill_shark_iq_robot():
+    assert suggest_entity_icon(_FakeEntry("sensor.shark_iq_robot"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_hot_tub_temperature():
+    assert suggest_entity_icon(_FakeEntry("sensor.hot_tub_temperature"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_schlauchbruch():
+    assert suggest_entity_icon(_FakeEntry("sensor.schlauchbruch"), OrganizerOptions()) == "mdi:pipe-leak"
+
+
+def test_icon_backfill_peak_shaving_automatik():
+    assert suggest_entity_icon(_FakeEntry("sensor.peak_shaving_automatik"), OrganizerOptions()) == "mdi:power-sleep"
+
+
+def test_icon_backfill_sewing_machine():
+    assert suggest_entity_icon(_FakeEntry("sensor.sewing_machine"), OrganizerOptions()) == "mdi:printer-3d-nozzle"
+
+
+def test_icon_backfill_backofenreiniger():
+    assert suggest_entity_icon(_FakeEntry("sensor.backofenreiniger"), OrganizerOptions()) == "mdi:toilet"
+
+
+def test_icon_backfill_erdwaerme():
+    assert suggest_entity_icon(_FakeEntry("sensor.erdwaerme"), OrganizerOptions()) == "mdi:fire"
+
+
+def test_icon_backfill_stream_url_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.stream_url_kamera"), OrganizerOptions()) == "mdi:camera-off"
+
+
+def test_icon_backfill_vacuum_sealer():
+    assert suggest_entity_icon(_FakeEntry("sensor.vacuum_sealer"), OrganizerOptions()) == "mdi:package-variant-closed"
+
+
+def test_icon_backfill_nest_hub_max():
+    assert suggest_entity_icon(_FakeEntry("sensor.nest_hub_max"), OrganizerOptions()) == "mdi:tablet-dashboard"
+
+
+def test_icon_backfill_upload_speed():
+    assert suggest_entity_icon(_FakeEntry("sensor.upload_speed"), OrganizerOptions()) == "mdi:upload-network"
+
+
+def test_icon_backfill_geraeteschuppen():
+    assert suggest_entity_icon(_FakeEntry("sensor.geraeteschuppen"), OrganizerOptions()) == "mdi:warehouse"
+
+
+def test_icon_backfill_renata():
+    assert suggest_entity_icon(_FakeEntry("sensor.renata"), OrganizerOptions()) == "mdi:battery-charging-wireless"
+
+
+def test_icon_backfill_restmuell():
+    assert suggest_entity_icon(_FakeEntry("sensor.restmuell"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_trockenluft():
+    assert suggest_entity_icon(_FakeEntry("sensor.trockenluft"), OrganizerOptions()) == "mdi:air-humidifier"
+
+
+def test_icon_backfill_fruehabend():
+    assert suggest_entity_icon(_FakeEntry("sensor.fruehabend"), OrganizerOptions()) == "mdi:weather-sunny"

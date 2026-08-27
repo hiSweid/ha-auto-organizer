@@ -32109,6 +32109,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "verbindungstimeout": "mdi:network-off",
     "ophaalkalender": "mdi:calendar-clock",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "gegenlicht": "mdi:brightness-5",
+    "buerokamera": "mdi:camera",
+    "environment canada": "mdi:weather-cloudy",
+    "brown bin": "mdi:trash-can-outline",
+    "saunaszene": "mdi:spa",
+    "espresense": "mdi:account-check",
+    "scriptbibliothek": "mdi:file-document-multiple",
+    "shark iq robot": "mdi:robot-vacuum",
+    "hot tub temperature": "mdi:thermometer",
+    "schlauchbruch": "mdi:pipe-leak",
+    "peak shaving automatik": "mdi:power-sleep",
+    "sewing machine": "mdi:printer-3d-nozzle",
+    "backofenreiniger": "mdi:toilet",
+    "erdwaerme": "mdi:fire",
+    "stream url kamera": "mdi:camera-off",
+    "vacuum sealer": "mdi:package-variant-closed",
+    "nest hub max": "mdi:tablet-dashboard",
+    "upload speed": "mdi:upload-network",
+    "geraeteschuppen": "mdi:warehouse",
+    "renata": "mdi:battery-charging-wireless",
+    "restmuell": "mdi:trash-can",
+    "trockenluft": "mdi:air-humidifier",
+    "fruehabend": "mdi:weather-sunny",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
