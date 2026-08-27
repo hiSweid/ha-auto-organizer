@@ -30094,6 +30094,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "regelablauf": "mdi:script-text-outline",
     "notstrom akku": "mdi:battery",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "nanit": "mdi:camera",
+    "desiccant wheel": "mdi:fan",
+    "canister filter": "mdi:water-pump",
+    "schwebeteilchen": "mdi:air-filter",
+    "leuchtmittelsammelstelle": "mdi:trash-can",
+    "selbstwaschende walze": "mdi:washing-machine",
+    "tonnengriff": "mdi:trash-can",
+    "bewegungszaehler": "mdi:motion-sensor",
+    "nass trockensauger": "mdi:vacuum",
+    "fagott": "mdi:cast-audio",
+    "fondue": "mdi:pot",
+    "gaestecode": "mdi:lock-question",
+    "image flashen": "mdi:update",
+    "smart lux sensor": "mdi:brightness-5",
+    "voice assistant": "mdi:account-voice",
+    "transponderschluessel": "mdi:key-star",
+    "scd30": "mdi:air-filter",
+    "dauerabwesenheit": "mdi:home-minus",
+    "skin temperature": "mdi:thermometer",
+    "kohlendioxidbelastung": "mdi:molecule-co2",
+    "tapo automatisierung": "mdi:robot",
+    "elgato stream deck": "mdi:monitor-dashboard",
+    "wischlappen": "mdi:tshirt-crew",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

@@ -71134,3 +71134,95 @@ def test_icon_backfill_regelablauf():
 
 def test_icon_backfill_notstrom_akku():
     assert suggest_entity_icon(_FakeEntry("sensor.notstrom_akku"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_nanit():
+    assert suggest_entity_icon(_FakeEntry("sensor.nanit"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_desiccant_wheel():
+    assert suggest_entity_icon(_FakeEntry("sensor.desiccant_wheel"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_canister_filter():
+    assert suggest_entity_icon(_FakeEntry("sensor.canister_filter"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_schwebeteilchen():
+    assert suggest_entity_icon(_FakeEntry("sensor.schwebeteilchen"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_leuchtmittelsammelstelle():
+    assert suggest_entity_icon(_FakeEntry("sensor.leuchtmittelsammelstelle"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_selbstwaschende_walze():
+    assert suggest_entity_icon(_FakeEntry("sensor.selbstwaschende_walze"), OrganizerOptions()) == "mdi:washing-machine"
+
+
+def test_icon_backfill_tonnengriff():
+    assert suggest_entity_icon(_FakeEntry("sensor.tonnengriff"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_bewegungszaehler():
+    assert suggest_entity_icon(_FakeEntry("sensor.bewegungszaehler"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_nass_trockensauger():
+    assert suggest_entity_icon(_FakeEntry("sensor.nass_trockensauger"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_fagott():
+    assert suggest_entity_icon(_FakeEntry("sensor.fagott"), OrganizerOptions()) == "mdi:cast-audio"
+
+
+def test_icon_backfill_fondue():
+    assert suggest_entity_icon(_FakeEntry("sensor.fondue"), OrganizerOptions()) == "mdi:pot"
+
+
+def test_icon_backfill_gaestecode():
+    assert suggest_entity_icon(_FakeEntry("sensor.gaestecode"), OrganizerOptions()) == "mdi:lock-question"
+
+
+def test_icon_backfill_image_flashen():
+    assert suggest_entity_icon(_FakeEntry("sensor.image_flashen"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_smart_lux_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.smart_lux_sensor"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_voice_assistant():
+    assert suggest_entity_icon(_FakeEntry("sensor.voice_assistant"), OrganizerOptions()) == "mdi:account-voice"
+
+
+def test_icon_backfill_transponderschluessel():
+    assert suggest_entity_icon(_FakeEntry("sensor.transponderschluessel"), OrganizerOptions()) == "mdi:key-star"
+
+
+def test_icon_backfill_scd30():
+    assert suggest_entity_icon(_FakeEntry("sensor.scd30"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_dauerabwesenheit():
+    assert suggest_entity_icon(_FakeEntry("sensor.dauerabwesenheit"), OrganizerOptions()) == "mdi:home-minus"
+
+
+def test_icon_backfill_skin_temperature():
+    assert suggest_entity_icon(_FakeEntry("sensor.skin_temperature"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_kohlendioxidbelastung():
+    assert suggest_entity_icon(_FakeEntry("sensor.kohlendioxidbelastung"), OrganizerOptions()) == "mdi:molecule-co2"
+
+
+def test_icon_backfill_tapo_automatisierung():
+    assert suggest_entity_icon(_FakeEntry("sensor.tapo_automatisierung"), OrganizerOptions()) == "mdi:robot"
+
+
+def test_icon_backfill_elgato_stream_deck():
+    assert suggest_entity_icon(_FakeEntry("sensor.elgato_stream_deck"), OrganizerOptions()) == "mdi:monitor-dashboard"
+
+
+def test_icon_backfill_wischlappen():
+    assert suggest_entity_icon(_FakeEntry("sensor.wischlappen"), OrganizerOptions()) == "mdi:tshirt-crew"
