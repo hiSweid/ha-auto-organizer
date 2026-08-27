@@ -32769,6 +32769,22 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "schluesseldienst": "mdi:key-chain",
     "guenstigster preis": "mdi:tag-check",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "praesenzregel": "mdi:motion-sensor",
+    "sofastunde": "mdi:timer-cog",
+    "ertrag": "mdi:solar-power",
+    "firmware ueberpruefung": "mdi:checkbox-marked-circle-outline",
+    "belichtungsindex": "mdi:lightbulb-on-outline",
+    "ble temp": "mdi:thermometer-lines",
+    "medienschrank": "mdi:television-classic",
+    "hausdisco": "mdi:party-popper",
+    "bildschirmschoner": "mdi:monitor-shimmer",
+    "infrared light": "mdi:led-off",
+    "langhaarschneider": "mdi:hair-dryer",
+    "cherubini": "mdi:blinds",
+    "ausfuehrungsplan": "mdi:script-text-outline",
+    "obstgarten": "mdi:tree-outline",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

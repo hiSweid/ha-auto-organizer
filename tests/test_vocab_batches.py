@@ -80858,3 +80858,59 @@ def test_icon_backfill_schluesseldienst():
 
 def test_icon_backfill_guenstigster_preis():
     assert suggest_entity_icon(_FakeEntry("sensor.guenstigster_preis"), OrganizerOptions()) == "mdi:tag-check"
+
+
+def test_icon_backfill_praesenzregel():
+    assert suggest_entity_icon(_FakeEntry("sensor.praesenzregel"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_sofastunde():
+    assert suggest_entity_icon(_FakeEntry("sensor.sofastunde"), OrganizerOptions()) == "mdi:timer-cog"
+
+
+def test_icon_backfill_ertrag():
+    assert suggest_entity_icon(_FakeEntry("sensor.ertrag"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_firmware_ueberpruefung():
+    assert suggest_entity_icon(_FakeEntry("sensor.firmware_ueberpruefung"), OrganizerOptions()) == "mdi:checkbox-marked-circle-outline"
+
+
+def test_icon_backfill_belichtungsindex():
+    assert suggest_entity_icon(_FakeEntry("sensor.belichtungsindex"), OrganizerOptions()) == "mdi:lightbulb-on-outline"
+
+
+def test_icon_backfill_ble_temp():
+    assert suggest_entity_icon(_FakeEntry("sensor.ble_temp"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_medienschrank():
+    assert suggest_entity_icon(_FakeEntry("sensor.medienschrank"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_hausdisco():
+    assert suggest_entity_icon(_FakeEntry("sensor.hausdisco"), OrganizerOptions()) == "mdi:party-popper"
+
+
+def test_icon_backfill_bildschirmschoner():
+    assert suggest_entity_icon(_FakeEntry("sensor.bildschirmschoner"), OrganizerOptions()) == "mdi:monitor-shimmer"
+
+
+def test_icon_backfill_infrared_light():
+    assert suggest_entity_icon(_FakeEntry("sensor.infrared_light"), OrganizerOptions()) == "mdi:led-off"
+
+
+def test_icon_backfill_langhaarschneider():
+    assert suggest_entity_icon(_FakeEntry("sensor.langhaarschneider"), OrganizerOptions()) == "mdi:hair-dryer"
+
+
+def test_icon_backfill_cherubini():
+    assert suggest_entity_icon(_FakeEntry("sensor.cherubini"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_icon_backfill_ausfuehrungsplan():
+    assert suggest_entity_icon(_FakeEntry("sensor.ausfuehrungsplan"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_obstgarten():
+    assert suggest_entity_icon(_FakeEntry("sensor.obstgarten"), OrganizerOptions()) == "mdi:tree-outline"
