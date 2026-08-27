@@ -71050,3 +71050,87 @@ def test_icon_backfill_object_tracking():
 
 def test_icon_backfill_distance_sensor():
     assert suggest_entity_icon(_FakeEntry("sensor.distance_sensor"), OrganizerOptions()) == "mdi:ruler"
+
+
+def test_icon_backfill_poolplane():
+    assert suggest_entity_icon(_FakeEntry("sensor.poolplane"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_hikvision_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.hikvision_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_aktionsabfolge():
+    assert suggest_entity_icon(_FakeEntry("sensor.aktionsabfolge"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_action_call():
+    assert suggest_entity_icon(_FakeEntry("sensor.action_call"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_ventilatorfuss():
+    assert suggest_entity_icon(_FakeEntry("sensor.ventilatorfuss"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_spot_clean():
+    assert suggest_entity_icon(_FakeEntry("sensor.spot_clean"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_kobold_vr300():
+    assert suggest_entity_icon(_FakeEntry("sensor.kobold_vr300"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_schwachlasttarif():
+    assert suggest_entity_icon(_FakeEntry("sensor.schwachlasttarif"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_charging_rate():
+    assert suggest_entity_icon(_FakeEntry("sensor.charging_rate"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_inselnetz():
+    assert suggest_entity_icon(_FakeEntry("sensor.inselnetz"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_stable_channel():
+    assert suggest_entity_icon(_FakeEntry("sensor.stable_channel"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_softwarestand():
+    assert suggest_entity_icon(_FakeEntry("sensor.softwarestand"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_elexa_guardian():
+    assert suggest_entity_icon(_FakeEntry("sensor.elexa_guardian"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_house_consumption():
+    assert suggest_entity_icon(_FakeEntry("sensor.house_consumption"), OrganizerOptions()) == "mdi:home-lightbulb"
+
+
+def test_icon_backfill_oboe():
+    assert suggest_entity_icon(_FakeEntry("sensor.oboe"), OrganizerOptions()) == "mdi:speaker"
+
+
+def test_icon_backfill_luftfeuchtegrenzwert():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftfeuchtegrenzwert"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_firestick():
+    assert suggest_entity_icon(_FakeEntry("sensor.firestick"), OrganizerOptions()) == "mdi:remote"
+
+
+def test_icon_backfill_autohotkey():
+    assert suggest_entity_icon(_FakeEntry("sensor.autohotkey"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_brew_upgrade():
+    assert suggest_entity_icon(_FakeEntry("sensor.brew_upgrade"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_regelablauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.regelablauf"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_notstrom_akku():
+    assert suggest_entity_icon(_FakeEntry("sensor.notstrom_akku"), OrganizerOptions()) == "mdi:battery"

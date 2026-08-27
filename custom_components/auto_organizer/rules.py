@@ -30071,6 +30071,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "object tracking": "mdi:trackpad",
     "distance sensor": "mdi:ruler",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "poolplane": "mdi:water",
+    "hikvision update": "mdi:update",
+    "aktionsabfolge": "mdi:script-text-outline",
+    "action call": "mdi:script-text-outline",
+    "ventilatorfuss": "mdi:fan",
+    "spot clean": "mdi:vacuum",
+    "kobold vr300": "mdi:vacuum",
+    "schwachlasttarif": "mdi:currency-eur",
+    "charging rate": "mdi:car-electric",
+    "inselnetz": "mdi:power-plug",
+    "stable channel": "mdi:update",
+    "softwarestand": "mdi:update",
+    "elexa guardian": "mdi:leak",
+    "house consumption": "mdi:home-lightbulb",
+    "oboe": "mdi:speaker",
+    "luftfeuchtegrenzwert": "mdi:water-percent",
+    "firestick": "mdi:remote",
+    "autohotkey": "mdi:script-text-outline",
+    "brew upgrade": "mdi:update",
+    "regelablauf": "mdi:script-text-outline",
+    "notstrom akku": "mdi:battery",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
