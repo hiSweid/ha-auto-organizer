@@ -29229,6 +29229,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "vayyar care": "mdi:motion-sensor",
     "kraftmax": "mdi:battery-high",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "late night modus": "mdi:weather-night",
+    "elektroverriegler": "mdi:lock",
+    "zemismart bulb": "mdi:lightbulb",
+    "allergieindex": "mdi:allergy",
+    "irradiance": "mdi:sun-wireless",
+    "am43": "mdi:window-shutter",
+    "angelcare": "mdi:cctv",
+    "guten abend": "mdi:weather-sunset",
+    "uv": "mdi:weather-sunny",
+    "tarif": "mdi:currency-eur",
+    "sadp tool": "mdi:camera-off",
+    "wischaufsatz": "mdi:vacuum",
+    "resideo water": "mdi:water",
+    "muellordnung": "mdi:trash-can",
+    "haarentfernung": "mdi:hair-dryer",
+    "kaiterra": "mdi:air-purifier",
+    "firmware image": "mdi:update",
+    "stirnlampe akku": "mdi:battery-charging",
+    "waste hierarchy": "mdi:recycle",
+    "button sensor": "mdi:gesture-tap-button",
+    "hauptbuerste austauschen": "mdi:vacuum",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
