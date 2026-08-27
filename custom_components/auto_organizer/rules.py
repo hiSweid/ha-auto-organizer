@@ -28266,6 +28266,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "moisture reading": "mdi:water-percent",
     "schlafzimmerhelligkeit": "mdi:brightness-6",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "bash skript": "mdi:script-text",
+    "wiederhole bis": "mdi:repeat",
+    "jahrhundertsommer": "mdi:white-balance-sunny",
+    "mosquitto": "mdi:network",
+    "assisted collection": "mdi:trash-can-outline",
+    "abgasmessung": "mdi:air-filter",
+    "eventlistener": "mdi:bell-plus",
+    "dockerfile": "mdi:docker",
+    "proscenic 850t": "mdi:robot-vacuum",
+    "aussenfilter": "mdi:water-pump",
+    "grid export": "mdi:transmission-tower-export",
+    "regendauer": "mdi:weather-rainy",
+    "stallabluft": "mdi:fan-alert",
+    "staubbehaeter": "mdi:robot-vacuum-variant",
+    "zoneminder motion": "mdi:motion-sensor",
+    "sonnenfinsternis": "mdi:weather-cloudy",
+    "backorder": "mdi:cart-arrow-down",
+    "nginx proxy manager": "mdi:nas",
+    "waterbug": "mdi:leak",
+    "wifi presence trigger": "mdi:wifi-star",
+    "ladedauer": "mdi:battery-charging",
+    "lichtdauer": "mdi:brightness-6",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
