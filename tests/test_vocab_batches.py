@@ -71662,3 +71662,79 @@ def test_icon_backfill_veka_fenster():
 
 def test_icon_backfill_grillfeststimmung():
     assert suggest_entity_icon(_FakeEntry("sensor.grillfeststimmung"), OrganizerOptions()) == "mdi:chef-hat"
+
+
+def test_icon_backfill_feuchteeintrag():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchteeintrag"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_feucht():
+    assert suggest_entity_icon(_FakeEntry("sensor.feucht"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_rueckgabeautomat():
+    assert suggest_entity_icon(_FakeEntry("sensor.rueckgabeautomat"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_hikvision():
+    assert suggest_entity_icon(_FakeEntry("sensor.hikvision"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_westernabend():
+    assert suggest_entity_icon(_FakeEntry("sensor.westernabend"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_warmlufteinbruch():
+    assert suggest_entity_icon(_FakeEntry("sensor.warmlufteinbruch"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_dishwasher_leak():
+    assert suggest_entity_icon(_FakeEntry("sensor.dishwasher_leak"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_richtfunk():
+    assert suggest_entity_icon(_FakeEntry("sensor.richtfunk"), OrganizerOptions()) == "mdi:radio-tower"
+
+
+def test_icon_backfill_luftaustausch():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftaustausch"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_amperestunden():
+    assert suggest_entity_icon(_FakeEntry("sensor.amperestunden"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_nimh():
+    assert suggest_entity_icon(_FakeEntry("sensor.nimh"), OrganizerOptions()) == "mdi:battery-unknown"
+
+
+def test_icon_backfill_tageslaenge():
+    assert suggest_entity_icon(_FakeEntry("sensor.tageslaenge"), OrganizerOptions()) == "mdi:white-balance-sunny"
+
+
+def test_icon_backfill_stadler_form():
+    assert suggest_entity_icon(_FakeEntry("sensor.stadler_form"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_partikelmasse():
+    assert suggest_entity_icon(_FakeEntry("sensor.partikelmasse"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_icon_backfill_ioniq():
+    assert suggest_entity_icon(_FakeEntry("sensor.ioniq"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_lux_value():
+    assert suggest_entity_icon(_FakeEntry("sensor.lux_value"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_kondensatortemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.kondensatortemperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_entriegelungscode():
+    assert suggest_entity_icon(_FakeEntry("sensor.entriegelungscode"), OrganizerOptions()) == "mdi:lock-open"
+
+
+def test_icon_backfill_sub_meter():
+    assert suggest_entity_icon(_FakeEntry("sensor.sub_meter"), OrganizerOptions()) == "mdi:meter-electric"

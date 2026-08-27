@@ -30238,6 +30238,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "veka fenster": "mdi:window-open",
     "grillfeststimmung": "mdi:chef-hat",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "feuchteeintrag": "mdi:water-percent",
+    "feucht": "mdi:water-percent",
+    "rueckgabeautomat": "mdi:recycle",
+    "hikvision": "mdi:cctv",
+    "westernabend": "mdi:movie-open",
+    "warmlufteinbruch": "mdi:weather-windy",
+    "dishwasher leak": "mdi:leak",
+    "richtfunk": "mdi:radio-tower",
+    "luftaustausch": "mdi:air-filter",
+    "amperestunden": "mdi:battery-charging",
+    "nimh": "mdi:battery-unknown",
+    "tageslaenge": "mdi:white-balance-sunny",
+    "stadler form": "mdi:fan",
+    "partikelmasse": "mdi:air-purifier",
+    "ioniq": "mdi:car-electric",
+    "lux value": "mdi:brightness-5",
+    "kondensatortemperatur": "mdi:thermometer",
+    "entriegelungscode": "mdi:lock-open",
+    "sub meter": "mdi:meter-electric",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
