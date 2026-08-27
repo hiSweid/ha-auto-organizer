@@ -69234,3 +69234,99 @@ def test_icon_backfill_rueckfallwert():
 
 def test_icon_backfill_kondensatpumpe_stoerung():
     assert suggest_entity_icon(_FakeEntry("sensor.kondensatpumpe_stoerung"), OrganizerOptions()) == "mdi:alert-circle"
+
+
+def test_icon_backfill_kontextvariable():
+    assert suggest_entity_icon(_FakeEntry("sensor.kontextvariable"), OrganizerOptions()) == "mdi:variable"
+
+
+def test_icon_backfill_wechselanbieter():
+    assert suggest_entity_icon(_FakeEntry("sensor.wechselanbieter"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_sensibo_sky():
+    assert suggest_entity_icon(_FakeEntry("sensor.sensibo_sky"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_icon_backfill_bewegungsempfindlichkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.bewegungsempfindlichkeit"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_leichtverpackung():
+    assert suggest_entity_icon(_FakeEntry("sensor.leichtverpackung"), OrganizerOptions()) == "mdi:package-variant-closed"
+
+
+def test_icon_backfill_ambient_light_module():
+    assert suggest_entity_icon(_FakeEntry("sensor.ambient_light_module"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_einlauftemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.einlauftemperatur"), OrganizerOptions()) == "mdi:temperature-celsius"
+
+
+def test_icon_backfill_warmwasserzaehler():
+    assert suggest_entity_icon(_FakeEntry("sensor.warmwasserzaehler"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_smartthings():
+    assert suggest_entity_icon(_FakeEntry("sensor.smartthings"), OrganizerOptions()) == "mdi:wifi"
+
+
+def test_icon_backfill_gaming_room():
+    assert suggest_entity_icon(_FakeEntry("sensor.gaming_room"), OrganizerOptions()) == "mdi:gamepad-variant"
+
+
+def test_icon_backfill_dichtungsriss():
+    assert suggest_entity_icon(_FakeEntry("sensor.dichtungsriss"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_schneebrett():
+    assert suggest_entity_icon(_FakeEntry("sensor.schneebrett"), OrganizerOptions()) == "mdi:snowflake"
+
+
+def test_icon_backfill_reststrommenge():
+    assert suggest_entity_icon(_FakeEntry("sensor.reststrommenge"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_light_exposure():
+    assert suggest_entity_icon(_FakeEntry("sensor.light_exposure"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_trockenmittel():
+    assert suggest_entity_icon(_FakeEntry("sensor.trockenmittel"), OrganizerOptions()) == "mdi:hair-dryer"
+
+
+def test_icon_backfill_radial_velocity():
+    assert suggest_entity_icon(_FakeEntry("sensor.radial_velocity"), OrganizerOptions()) == "mdi:speedometer"
+
+
+def test_icon_backfill_schimmelgeruch():
+    assert suggest_entity_icon(_FakeEntry("sensor.schimmelgeruch"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_rim_lock():
+    assert suggest_entity_icon(_FakeEntry("sensor.rim_lock"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_fensterkondensation():
+    assert suggest_entity_icon(_FakeEntry("sensor.fensterkondensation"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_kindle():
+    assert suggest_entity_icon(_FakeEntry("sensor.kindle"), OrganizerOptions()) == "mdi:book-open-page-variant"
+
+
+def test_icon_backfill_undichtigkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.undichtigkeit"), OrganizerOptions()) == "mdi:leak-off"
+
+
+def test_icon_backfill_fernsehton():
+    assert suggest_entity_icon(_FakeEntry("sensor.fernsehton"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_autoalarm():
+    assert suggest_entity_icon(_FakeEntry("sensor.autoalarm"), OrganizerOptions()) == "mdi:car-connected"
+
+
+def test_icon_backfill_nahwaerme():
+    assert suggest_entity_icon(_FakeEntry("sensor.nahwaerme"), OrganizerOptions()) == "mdi:radiator"

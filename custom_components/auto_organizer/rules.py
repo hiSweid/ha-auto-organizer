@@ -29573,6 +29573,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "rueckfallwert": "mdi:arrow-u-left-top",
     "kondensatpumpe stoerung": "mdi:alert-circle",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "kontextvariable": "mdi:variable",
+    "wechselanbieter": "mdi:currency-eur",
+    "sensibo sky": "mdi:thermostat",
+    "bewegungsempfindlichkeit": "mdi:motion-sensor",
+    "leichtverpackung": "mdi:package-variant-closed",
+    "ambient light module": "mdi:brightness-5",
+    "einlauftemperatur": "mdi:temperature-celsius",
+    "warmwasserzaehler": "mdi:water-pump",
+    "smartthings": "mdi:wifi",
+    "gaming room": "mdi:gamepad-variant",
+    "dichtungsriss": "mdi:leak",
+    "schneebrett": "mdi:snowflake",
+    "reststrommenge": "mdi:flash",
+    "light exposure": "mdi:brightness-6",
+    "trockenmittel": "mdi:hair-dryer",
+    "radial velocity": "mdi:speedometer",
+    "schimmelgeruch": "mdi:air-filter",
+    "rim lock": "mdi:lock",
+    "fensterkondensation": "mdi:water-percent",
+    "kindle": "mdi:book-open-page-variant",
+    "undichtigkeit": "mdi:leak-off",
+    "fernsehton": "mdi:television-classic",
+    "autoalarm": "mdi:car-connected",
+    "nahwaerme": "mdi:radiator",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
