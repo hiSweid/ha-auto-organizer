@@ -32884,6 +32884,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "purkinje shift": "mdi:brightness-6",
     "fallsensor": "mdi:alert-circle-outline",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "intervalllueftung": "mdi:fan",
+    "hochdruckreiniger": "mdi:water-pump",
+    "chillmodus": "mdi:snowflake",
+    "enyaq": "mdi:car",
+    "morgenroutine": "mdi:weather-sunny",
+    "focal": "mdi:speaker",
+    "haferflocken": "mdi:grain",
+    "app benachrichtigung sauger": "mdi:robot-vacuum",
+    "kaltwasserfuehler": "mdi:thermometer",
+    "serenity scene": "mdi:spa",
+    "schachnacht": "mdi:chess-king",
+    "knx logikbaustein": "mdi:chip",
+    "moosoo": "mdi:robot-vacuum",
+    "feuchtraum": "mdi:water-percent",
+    "bluetooth deadbolt": "mdi:lock",
+    "luminea": "mdi:lightbulb",
+    "bewaesserungszeitplan": "mdi:calendar-clock",
+    "hebeanlage ueberlauf": "mdi:alert-circle",
+    "energy monitor": "mdi:flash",
+    "mopp fehlt": "mdi:broom",
+    "callback funktion": "mdi:function",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
