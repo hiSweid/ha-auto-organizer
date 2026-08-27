@@ -61198,3 +61198,91 @@ def test_icon_backfill_reizhusten():
 
 def test_icon_backfill_18650():
     assert suggest_entity_icon(_FakeEntry("sensor.18650"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_gaslecksuchgeraet():
+    assert suggest_entity_icon(_FakeEntry("sensor.gaslecksuchgeraet"), OrganizerOptions()) == "mdi:gas-cylinder"
+
+
+def test_icon_backfill_manifold_temperature():
+    assert suggest_entity_icon(_FakeEntry("sensor.manifold_temperature"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_vibrationswischen():
+    assert suggest_entity_icon(_FakeEntry("sensor.vibrationswischen"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_verlassenes_objekt():
+    assert suggest_entity_icon(_FakeEntry("sensor.verlassenes_objekt"), OrganizerOptions()) == "mdi:camera-off"
+
+
+def test_icon_backfill_sensirion_scd():
+    assert suggest_entity_icon(_FakeEntry("sensor.sensirion_scd"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_sr626():
+    assert suggest_entity_icon(_FakeEntry("sensor.sr626"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_ventilatorabdeckung():
+    assert suggest_entity_icon(_FakeEntry("sensor.ventilatorabdeckung"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_reflexionslicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.reflexionslicht"), OrganizerOptions()) == "mdi:lightbulb-on-outline"
+
+
+def test_icon_backfill_daitem():
+    assert suggest_entity_icon(_FakeEntry("sensor.daitem"), OrganizerOptions()) == "mdi:shield-lock"
+
+
+def test_icon_backfill_loxone_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.loxone_firmware"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_getriebetemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.getriebetemperatur"), OrganizerOptions()) == "mdi:thermometer-high"
+
+
+def test_icon_backfill_gaeste():
+    assert suggest_entity_icon(_FakeEntry("sensor.gaeste"), OrganizerOptions()) == "mdi:account-multiple"
+
+
+def test_icon_backfill_zapier_zap():
+    assert suggest_entity_icon(_FakeEntry("sensor.zapier_zap"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_zumtobel_praesenzmelder():
+    assert suggest_entity_icon(_FakeEntry("sensor.zumtobel_praesenzmelder"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_duschkabine_feuchte():
+    assert suggest_entity_icon(_FakeEntry("sensor.duschkabine_feuchte"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_fan_curve():
+    assert suggest_entity_icon(_FakeEntry("sensor.fan_curve"), OrganizerOptions()) == "mdi:chart-line-variant"
+
+
+def test_icon_backfill_sonnensensor_markise():
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnensensor_markise"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_icon_backfill_fernwaermeabschlag():
+    assert suggest_entity_icon(_FakeEntry("sensor.fernwaermeabschlag"), OrganizerOptions()) == "mdi:cash-remove"
+
+
+def test_icon_backfill_carportmarkise():
+    assert suggest_entity_icon(_FakeEntry("sensor.carportmarkise"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_icon_backfill_skriptbedingung():
+    assert suggest_entity_icon(_FakeEntry("sensor.skriptbedingung"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_lr06():
+    assert suggest_entity_icon(_FakeEntry("sensor.lr06"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_anti_pick():
+    assert suggest_entity_icon(_FakeEntry("sensor.anti_pick"), OrganizerOptions()) == "mdi:lock-alert"

@@ -27384,6 +27384,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "reizhusten": "mdi:air-filter",
     "18650": "mdi:battery-charging",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "gaslecksuchgeraet": "mdi:gas-cylinder",
+    "manifold temperature": "mdi:thermometer",
+    "vibrationswischen": "mdi:vacuum",
+    "verlassenes objekt": "mdi:camera-off",
+    "sensirion scd": "mdi:air-filter",
+    "sr626": "mdi:battery",
+    "ventilatorabdeckung": "mdi:fan-chevron-up",
+    "reflexionslicht": "mdi:lightbulb-on-outline",
+    "daitem": "mdi:shield-lock",
+    "loxone firmware": "mdi:update",
+    "getriebetemperatur": "mdi:thermometer-high",
+    "gaeste": "mdi:account-multiple",
+    "zapier zap": "mdi:script-text",
+    "zumtobel praesenzmelder": "mdi:motion-sensor",
+    "duschkabine feuchte": "mdi:water-percent",
+    "fan curve": "mdi:chart-line-variant",
+    "sonnensensor markise": "mdi:blinds",
+    "fernwaermeabschlag": "mdi:cash-remove",
+    "carportmarkise": "mdi:blinds",
+    "skriptbedingung": "mdi:script-text-outline",
+    "lr06": "mdi:battery",
+    "anti pick": "mdi:lock-alert",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
