@@ -27107,6 +27107,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "pferdestalllueftung": "mdi:fan",
     "neustartmodus": "mdi:script",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "wischtuchwechsel": "mdi:calendar-clock",
+    "wischsensor": "mdi:motion-sensor",
+    "verundung": "mdi:robot",
+    "indoor unit": "mdi:air-conditioner",
+    "batteriesammelstelle": "mdi:battery-charging",
+    "rabot": "mdi:cash-multiple",
+    "massagemodus": "mdi:spa",
+    "heimnetz": "mdi:wifi",
+    "bbq probe": "mdi:thermometer",
+    "flowzustand": "mdi:state-machine",
+    "klipsch": "mdi:speaker",
+    "kaminzugverstaerker": "mdi:fan-chevron-up",
+    "systemtemperatur": "mdi:thermometer-high",
+    "nachtsichtmodus": "mdi:eye-outline",
+    "e2v mics": "mdi:microphone",
+    "disney plus": "mdi:movie-open",
+    "familienmitgliederstatus": "mdi:account-group",
+    "pm10": "mdi:air-filter",
+    "patch": "mdi:update",
+    "beutellos": "mdi:delete-empty",
+    "nat typ": "mdi:network",
+    "kirschlorbeer": "mdi:tree",
+    "dolby vision": "mdi:movie",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
