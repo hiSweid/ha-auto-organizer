@@ -29473,6 +29473,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "guten abend szene": "mdi:weather-night",
     "traefik": "mdi:router-wireless",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "geraeteausloeser": "mdi:lightbulb-on-outline",
+    "haarschneider": "mdi:scissors-cutting",
+    "kurzschlussauswertung": "mdi:alert-circle-check",
+    "squire stronghold": "mdi:shield-lock",
+    "currently away": "mdi:account-arrow-right",
+    "delay node": "mdi:timer-sand",
+    "heizschleife": "mdi:radiator",
+    "solis inverter": "mdi:solar-power",
+    "kamerarauschen": "mdi:microphone-message",
+    "notlichtbewegungsmelder": "mdi:run-fast",
+    "leuchtdichtewert": "mdi:brightness-6",
+    "luftverteiler": "mdi:fan-chevron-up",
+    "olivenschild": "mdi:shield-star",
+    "geraeuscherkennung": "mdi:microphone-outline",
+    "restladung": "mdi:battery-charging-low",
+    "aufsteigende feuchtigkeit": "mdi:water-percent-alert",
+    "rueckfahrt": "mdi:car-traction-control",
+    "winix air": "mdi:air-purifier",
+    "wetterphaenomen": "mdi:weather-cloudy",
+    "bme680": "mdi:air-filter",
+    "stream deck": "mdi:keyboard-settings",
+    "lichtwertmessung": "mdi:brightness-auto",
+    "uv index": "mdi:weather-sunny-alert",
+    "heat recovery": "mdi:heat-pump",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
