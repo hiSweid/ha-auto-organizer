@@ -32281,6 +32281,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "bezugsstrom": "mdi:flash",
     "querriegel": "mdi:lock",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "sonderabfall": "mdi:trash-can",
+    "mold spores": "mdi:air-filter",
+    "trigger sequence": "mdi:script-text-outline",
+    "luftguetemesser": "mdi:air-filter",
+    "freezing rain": "mdi:weather-snowy-rainy",
+    "tageslichtmesser": "mdi:brightness-5",
+    "klippensensor": "mdi:robot-vacuum",
+    "tropfenlampe": "mdi:lightbulb",
+    "farbgeruch": "mdi:air-filter",
+    "config script": "mdi:script-text-outline",
+    "novoferm novomatic": "mdi:window-closed",
+    "ladekosten": "mdi:ev-station",
+    "broadlink firmware": "mdi:update",
+    "konditorei": "mdi:cake",
+    "wash basin": "mdi:water-pump",
+    "taschentuecher": "mdi:tshirt-crew",
+    "arbeitspreis": "mdi:currency-eur",
+    "hochtarif": "mdi:currency-eur",
+    "power import": "mdi:flash",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
