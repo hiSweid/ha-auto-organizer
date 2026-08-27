@@ -56690,3 +56690,67 @@ def test_icon_backfill_medienraum():
 
 def test_icon_backfill_beta_release():
     assert suggest_entity_icon(_FakeEntry("sensor.beta_release"), OrganizerOptions()) == "mdi:alpha-b-box"
+
+
+def test_icon_backfill_wasseraustritt():
+    assert suggest_entity_icon(_FakeEntry("sensor.wasseraustritt"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_tempest():
+    assert suggest_entity_icon(_FakeEntry("sensor.tempest"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_langzeit_support():
+    assert suggest_entity_icon(_FakeEntry("sensor.langzeit_support"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_node_red_flow():
+    assert suggest_entity_icon(_FakeEntry("sensor.node_red_flow"), OrganizerOptions()) == "mdi:pipe"
+
+
+def test_icon_backfill_netzgebuehr():
+    assert suggest_entity_icon(_FakeEntry("sensor.netzgebuehr"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_brauchwasser():
+    assert suggest_entity_icon(_FakeEntry("sensor.brauchwasser"), OrganizerOptions()) == "mdi:water-boiler"
+
+
+def test_icon_backfill_abfallentsorger():
+    assert suggest_entity_icon(_FakeEntry("sensor.abfallentsorger"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_sammelbehaelter():
+    assert suggest_entity_icon(_FakeEntry("sensor.sammelbehaelter"), OrganizerOptions()) == "mdi:dump-truck"
+
+
+def test_icon_backfill_obstabo():
+    assert suggest_entity_icon(_FakeEntry("sensor.obstabo"), OrganizerOptions()) == "mdi:cart"
+
+
+def test_icon_backfill_link_aggregation():
+    assert suggest_entity_icon(_FakeEntry("sensor.link_aggregation"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_kombitherme():
+    assert suggest_entity_icon(_FakeEntry("sensor.kombitherme"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_icon_backfill_restmuellwaage():
+    assert suggest_entity_icon(_FakeEntry("sensor.restmuellwaage"), OrganizerOptions()) == "mdi:scale"
+
+
+def test_icon_backfill_verzweigungspunkt():
+    assert suggest_entity_icon(_FakeEntry("sensor.verzweigungspunkt"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_trustfire():
+    assert suggest_entity_icon(_FakeEntry("sensor.trustfire"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_target_distance():
+    assert suggest_entity_icon(_FakeEntry("sensor.target_distance"), OrganizerOptions()) == "mdi:ruler"
+
+
+def test_icon_backfill_dts_hd():
+    assert suggest_entity_icon(_FakeEntry("sensor.dts_hd"), OrganizerOptions()) == "mdi:hdmi-port"

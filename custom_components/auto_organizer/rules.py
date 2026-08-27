@@ -26155,6 +26155,24 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "medienraum": "mdi:television-classic",
     "beta release": "mdi:alpha-b-box",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "wasseraustritt": "mdi:leak",
+    "tempest": "mdi:weather-cloudy",
+    "langzeit support": "mdi:update",
+    "node red flow": "mdi:pipe",
+    "netzgebuehr": "mdi:power-plug",
+    "brauchwasser": "mdi:water-boiler",
+    "abfallentsorger": "mdi:trash-can",
+    "sammelbehaelter": "mdi:dump-truck",
+    "obstabo": "mdi:cart",
+    "link aggregation": "mdi:network",
+    "kombitherme": "mdi:thermostat",
+    "restmuellwaage": "mdi:scale",
+    "verzweigungspunkt": "mdi:script-text",
+    "trustfire": "mdi:battery-charging",
+    "target distance": "mdi:ruler",
+    "dts hd": "mdi:hdmi-port",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
