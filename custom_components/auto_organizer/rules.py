@@ -26883,6 +26883,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "housewarming party": "mdi:party-popper",
     "movement duration": "mdi:motion-sensor",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "dj mixer": "mdi:audio-video",
+    "speicherlicht": "mdi:lightbulb",
+    "niederschlagswahrscheinlichkeit": "mdi:weather-rainy",
+    "parameteruebergabe": "mdi:code-braces",
+    "milieustraat": "mdi:trash-can",
+    "zweitbatterie": "mdi:battery-charging",
+    "lithium": "mdi:battery-high",
+    "slats": "mdi:blinds",
+    "digitalausgang": "mdi:power-plug",
+    "wasserfiltertimer": "mdi:water-pump",
+    "hygrodaten": "mdi:water-percent",
+    "lua skript": "mdi:script-text",
+    "wassertimer": "mdi:timer-outline",
+    "lichtklassifizierung": "mdi:lightbulb-on",
+    "h265 codec": "mdi:video",
+    "schadstoffmessung": "mdi:air-filter",
+    "wartungserinnerung": "mdi:calendar-clock",
+    "watercop": "mdi:leak-off",
+    "sedentary detection": "mdi:human",
+    "rowenta explorer": "mdi:vacuum",
+    "winkelschleifer": "mdi:screwdriver",
+    "litter bin": "mdi:trash-can",
+    "stop aktion": "mdi:stop-circle",
+    "dachfenstersensor": "mdi:window-open",
+    "toslink": "mdi:audio-video",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
