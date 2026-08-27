@@ -26987,6 +26987,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "explorir": "mdi:air-filter",
     "kesselstein": "mdi:water",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "owlet": "mdi:camera",
+    "ersatzbatterie": "mdi:battery",
+    "muellsackpflicht": "mdi:trash-can",
+    "verbotene zone": "mdi:alert-octagon",
+    "seitenbuerste reinigen": "mdi:vacuum",
+    "gartenlichtsensor": "mdi:lightbulb",
+    "notstromautomatik": "mdi:power-plug",
+    "supervisord": "mdi:script-text",
+    "moebelduese": "mdi:vacuum",
+    "ice maker": "mdi:fridge",
+    "pufferakku": "mdi:battery",
+    "errand": "mdi:cart",
+    "sechsfachschalter": "mdi:toggle-switch",
+    "wasserzulaufmenge": "mdi:water-pump",
+    "jahresrechnung": "mdi:calculator",
+    "zufahrtskamera": "mdi:camera",
+    "severin": "mdi:blender",
+    "continue on error": "mdi:alert-circle",
+    "orientation sensor": "mdi:compass",
+    "banderole": "mdi:package-variant-closed",
+    "ereignisfolge": "mdi:script-text",
+    "neolink": "mdi:camera",
+    "imou kamera": "mdi:camera",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
