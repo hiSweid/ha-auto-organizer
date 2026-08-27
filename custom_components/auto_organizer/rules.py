@@ -29014,6 +29014,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "bag tag": "mdi:tag",
     "restricted keyway": "mdi:lock-alert",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "abschaeumer": "mdi:water",
+    "zockernacht": "mdi:movie-open",
+    "marktpreis": "mdi:currency-eur",
+    "spa day": "mdi:spa",
+    "hive": "mdi:thermostat",
+    "bleiakku": "mdi:battery",
+    "tonformat": "mdi:music-note",
+    "heimeier": "mdi:thermostat",
+    "wochenendmodus": "mdi:calendar-star",
+    "starlight sensor": "mdi:camera-off",
+    "wetterbeobachtung": "mdi:weather-cloudy",
+    "kaufreue": "mdi:cart-arrow-right",
+    "wandschalterbatterie": "mdi:battery",
+    "fritzbox repeater": "mdi:wifi",
+    "netzwerksegment": "mdi:network",
+    "raumklima": "mdi:thermometer",
+    "preisalarm": "mdi:alarm",
+    "second hand": "mdi:shopping-outline",
+    "tgs2600": "mdi:air-filter",
+    "netzentgeltbefreiung": "mdi:currency-eur",
+    "heizmodus": "mdi:fire",
+    "rommelsbacher": "mdi:microwave",
+    "stielstaubsauger": "mdi:vacuum",
+    "atemluft": "mdi:air-filter",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
