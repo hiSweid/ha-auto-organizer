@@ -55386,3 +55386,55 @@ def test_icon_backfill_unrat():
 
 def test_icon_backfill_pergola_motor():
     assert suggest_entity_icon(_FakeEntry("sensor.pergola_motor"), OrganizerOptions()) == "mdi:blinds-open"
+
+
+def test_icon_backfill_testlauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.testlauf"), OrganizerOptions()) == "mdi:play-circle"
+
+
+def test_icon_backfill_qubino_shutter():
+    assert suggest_entity_icon(_FakeEntry("sensor.qubino_shutter"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_kaltfront():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaltfront"), OrganizerOptions()) == "mdi:weather-snowy"
+
+
+def test_icon_backfill_minor_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.minor_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_stromsteuer():
+    assert suggest_entity_icon(_FakeEntry("sensor.stromsteuer"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_papiertonne():
+    assert suggest_entity_icon(_FakeEntry("sensor.papiertonne"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_akkuzelle():
+    assert suggest_entity_icon(_FakeEntry("sensor.akkuzelle"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_gartenparty():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenparty"), OrganizerOptions()) == "mdi:palette"
+
+
+def test_icon_backfill_led_fluter_bewegungsmelder():
+    assert suggest_entity_icon(_FakeEntry("sensor.led_fluter_bewegungsmelder"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_ghettoblaster():
+    assert suggest_entity_icon(_FakeEntry("sensor.ghettoblaster"), OrganizerOptions()) == "mdi:speaker"
+
+
+def test_icon_backfill_myfox():
+    assert suggest_entity_icon(_FakeEntry("sensor.myfox"), OrganizerOptions()) == "mdi:security"
+
+
+def test_icon_backfill_druckausdehnungsgefaess():
+    assert suggest_entity_icon(_FakeEntry("sensor.druckausdehnungsgefaess"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_discharge_air_temperature():
+    assert suggest_entity_icon(_FakeEntry("sensor.discharge_air_temperature"), OrganizerOptions()) == "mdi:thermometer"

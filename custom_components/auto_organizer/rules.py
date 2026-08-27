@@ -25809,6 +25809,21 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "unrat": "mdi:trash-can",
     "pergola motor": "mdi:blinds-open",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "testlauf": "mdi:play-circle",
+    "qubino shutter": "mdi:window-shutter",
+    "kaltfront": "mdi:weather-snowy",
+    "minor update": "mdi:update",
+    "stromsteuer": "mdi:currency-eur",
+    "papiertonne": "mdi:trash-can",
+    "akkuzelle": "mdi:battery-charging",
+    "gartenparty": "mdi:palette",
+    "led fluter bewegungsmelder": "mdi:motion-sensor",
+    "ghettoblaster": "mdi:speaker",
+    "myfox": "mdi:security",
+    "druckausdehnungsgefaess": "mdi:water-pump",
+    "discharge air temperature": "mdi:thermometer",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
