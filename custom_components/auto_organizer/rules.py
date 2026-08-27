@@ -26391,6 +26391,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "oventrop": "mdi:fan",
     "entry sensor": "mdi:door-open",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "fridge camera": "mdi:camera",
+    "restkraftstoff": "mdi:fuel",
+    "windeln": "mdi:baby-bottle",
+    "full hd kamera": "mdi:camera",
+    "eingang": "mdi:doorbell",
+    "batch script": "mdi:script-text",
+    "kuehltasche": "mdi:snowflake",
+    "endotoxine": "mdi:air-filter",
+    "lte cam": "mdi:camera",
+    "day tariff": "mdi:currency-eur",
+    "vakuumiergeraet": "mdi:vacuum",
+    "feuchtebereich": "mdi:water-percent",
+    "grenzwerttrigger": "mdi:alert-circle",
+    "boho stimmung": "mdi:palette",
+    "kirby vacuum": "mdi:vacuum",
+    "ota firmware": "mdi:update",
+    "update richtlinie": "mdi:update",
+    "universalrelais": "mdi:power-socket",
+    "gewaechshauslueftung": "mdi:fan",
+    "movement": "mdi:motion-sensor",
+    "talwind": "mdi:weather-windy",
+    "netbird": "mdi:network",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
