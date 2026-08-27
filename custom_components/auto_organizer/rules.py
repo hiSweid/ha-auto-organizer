@@ -28187,6 +28187,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "lifepo4": "mdi:battery-charging-low",
     "shopping list": "mdi:cart",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "cancellation fee": "mdi:currency-usd",
+    "evening lux": "mdi:brightness-6",
+    "windchill": "mdi:weather-windy",
+    "dockingfehler": "mdi:robot-vacuum",
+    "clientraw": "mdi:weather-cloudy",
+    "warmweiss": "mdi:lightbulb",
+    "nulleinspeisung": "mdi:solar-power",
+    "area cleaning": "mdi:robot-vacuum",
+    "storm cell": "mdi:weather-lightning",
+    "step sequence": "mdi:playlist-play",
+    "profalux": "mdi:window-shutter",
+    "condition": "mdi:check-circle-outline",
+    "wassernapf": "mdi:water-pump",
+    "dac wandler": "mdi:digital-ocean",
+    "trigger aktion": "mdi:flash",
+    "teppichlifting": "mdi:robot-vacuum",
+    "eichhoernchen": "mdi:duck",
+    "wechseltaster": "mdi:toggle-switch",
+    "denon": "mdi:audio-video",
+    "window vac": "mdi:vacuum",
+    "verriegelungssequenz": "mdi:lock-pattern",
+    "systemaktualisierung": "mdi:update",
+    "grid frequency": "mdi:sine-wave",
+    "herb garden": "mdi:leaf",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
