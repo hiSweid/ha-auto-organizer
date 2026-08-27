@@ -27304,6 +27304,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "abluftrate": "mdi:fan-speed-1",
     "kabinentemperatur": "mdi:thermometer-low",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "eiweissabschaeumer": "mdi:water",
+    "plex": "mdi:plex",
+    "elac": "mdi:speaker",
+    "lichtempfindlich": "mdi:brightness-5",
+    "underfloor": "mdi:radiator",
+    "einzelmodus": "mdi:script-text-outline",
+    "fiskars": "mdi:leaf",
+    "bewegungsmeldeleuchte": "mdi:motion-sensor",
+    "besorgung": "mdi:cart",
+    "aktualisierungsintervall": "mdi:update",
+    "reinigungsmodus sauger": "mdi:vacuum",
+    "windmaschine": "mdi:fan",
+    "am2302": "mdi:water-percent",
+    "aussenbeleuchtungsstaerke": "mdi:brightness-6",
+    "buerstenkasten": "mdi:brush",
+    "fehlerspeicher sauger": "mdi:alert-circle",
+    "furnace": "mdi:radiator",
+    "rueckschlagklappe": "mdi:valve",
+    "speiseabfall": "mdi:trash-can",
+    "notstromversorgung": "mdi:power-plug",
+    "hoerspielabend": "mdi:movie-open",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
