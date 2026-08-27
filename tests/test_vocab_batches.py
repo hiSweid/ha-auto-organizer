@@ -69050,3 +69050,95 @@ def test_icon_backfill_netzparallelbetrieb():
 
 def test_icon_backfill_wischteller():
     assert suggest_entity_icon(_FakeEntry("sensor.wischteller"), OrganizerOptions()) == "mdi:blender"
+
+
+def test_icon_backfill_humidity_deviation():
+    assert suggest_entity_icon(_FakeEntry("sensor.humidity_deviation"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_heckenscherenakku():
+    assert suggest_entity_icon(_FakeEntry("sensor.heckenscherenakku"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_moppaufsatz():
+    assert suggest_entity_icon(_FakeEntry("sensor.moppaufsatz"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_brightness_level():
+    assert suggest_entity_icon(_FakeEntry("sensor.brightness_level"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_luefterspannung():
+    assert suggest_entity_icon(_FakeEntry("sensor.luefterspannung"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_adaptive_automation():
+    assert suggest_entity_icon(_FakeEntry("sensor.adaptive_automation"), OrganizerOptions()) == "mdi:robot"
+
+
+def test_icon_backfill_hackschnitzeltemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.hackschnitzeltemperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_psychrometerdifferenz():
+    assert suggest_entity_icon(_FakeEntry("sensor.psychrometerdifferenz"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_refrigerator_leak():
+    assert suggest_entity_icon(_FakeEntry("sensor.refrigerator_leak"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_pflanzkasten():
+    assert suggest_entity_icon(_FakeEntry("sensor.pflanzkasten"), OrganizerOptions()) == "mdi:flower-tulip"
+
+
+def test_icon_backfill_disco_modus():
+    assert suggest_entity_icon(_FakeEntry("sensor.disco_modus"), OrganizerOptions()) == "mdi:palette"
+
+
+def test_icon_backfill_tesla_model_y():
+    assert suggest_entity_icon(_FakeEntry("sensor.tesla_model_y"), OrganizerOptions()) == "mdi:car"
+
+
+def test_icon_backfill_zeitsteuerung():
+    assert suggest_entity_icon(_FakeEntry("sensor.zeitsteuerung"), OrganizerOptions()) == "mdi:timer-cog"
+
+
+def test_icon_backfill_smart_cam():
+    assert suggest_entity_icon(_FakeEntry("sensor.smart_cam"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_unwetter():
+    assert suggest_entity_icon(_FakeEntry("sensor.unwetter"), OrganizerOptions()) == "mdi:weather-lightning-rainy"
+
+
+def test_icon_backfill_loxone():
+    assert suggest_entity_icon(_FakeEntry("sensor.loxone"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_kachelmann():
+    assert suggest_entity_icon(_FakeEntry("sensor.kachelmann"), OrganizerOptions()) == "mdi:weather-sunny"
+
+
+def test_icon_backfill_diy_karte():
+    assert suggest_entity_icon(_FakeEntry("sensor.diy_karte"), OrganizerOptions()) == "mdi:map-marker"
+
+
+def test_icon_backfill_ftp_server():
+    assert suggest_entity_icon(_FakeEntry("sensor.ftp_server"), OrganizerOptions()) == "mdi:server-network"
+
+
+def test_icon_backfill_outdoor_light_level():
+    assert suggest_entity_icon(_FakeEntry("sensor.outdoor_light_level"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_naechste_leerung():
+    assert suggest_entity_icon(_FakeEntry("sensor.naechste_leerung"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_milight():
+    assert suggest_entity_icon(_FakeEntry("sensor.milight"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_hygrostatschaltung():
+    assert suggest_entity_icon(_FakeEntry("sensor.hygrostatschaltung"), OrganizerOptions()) == "mdi:water-percent"

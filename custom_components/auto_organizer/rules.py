@@ -29523,6 +29523,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "netzparallelbetrieb": "mdi:transmission-tower",
     "wischteller": "mdi:blender",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "humidity deviation": "mdi:water-percent",
+    "heckenscherenakku": "mdi:battery-charging",
+    "moppaufsatz": "mdi:vacuum",
+    "brightness level": "mdi:brightness-6",
+    "luefterspannung": "mdi:fan",
+    "adaptive automation": "mdi:robot",
+    "hackschnitzeltemperatur": "mdi:thermometer",
+    "psychrometerdifferenz": "mdi:water-percent",
+    "refrigerator leak": "mdi:leak",
+    "pflanzkasten": "mdi:flower-tulip",
+    "disco modus": "mdi:palette",
+    "tesla model y": "mdi:car",
+    "zeitsteuerung": "mdi:timer-cog",
+    "smart cam": "mdi:cctv",
+    "unwetter": "mdi:weather-lightning-rainy",
+    "loxone": "mdi:network",
+    "kachelmann": "mdi:weather-sunny",
+    "diy karte": "mdi:map-marker",
+    "ftp server": "mdi:server-network",
+    "outdoor light level": "mdi:brightness-5",
+    "naechste leerung": "mdi:trash-can",
+    "milight": "mdi:lightbulb",
+    "hygrostatschaltung": "mdi:water-percent",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
