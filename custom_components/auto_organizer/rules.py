@@ -29647,6 +29647,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "negationsbedingung": "mdi:not-equal-variant",
     "3d dnr": "mdi:camera-iris",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "unterspannung": "mdi:battery-alert",
+    "fensterlichtsensor": "mdi:sun-wireless",
+    "thermopro hygrometer": "mdi:thermometer-lines",
+    "update strategie": "mdi:update",
+    "veroderung": "mdi:alert-circle-outline",
+    "jackery": "mdi:battery-charging-wireless",
+    "orchideenfeuchte": "mdi:water-percent",
+    "heizol": "mdi:fire",
+    "wetterzentrale": "mdi:weather-cloudy",
+    "slow juicer": "mdi:blender",
+    "gaesteempfang": "mdi:account-group",
+    "abschlagszahlung": "mdi:currency-usd-off",
+    "startbedingung": "mdi:flag-variant",
+    "mustang mach e": "mdi:car-electric",
+    "dispatcher": "mdi:script-text",
+    "fan natural mode": "mdi:fan-chevron-up",
+    "gyroskopsensor": "mdi:axis-arrow",
+    "shelly automatisierung": "mdi:home-automation",
+    "ds18b20": "mdi:thermometer",
+    "batteriealter": "mdi:battery-heart-outline",
+    "daheim": "mdi:home-account",
+    "proofing temperature": "mdi:temperature-celsius",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
