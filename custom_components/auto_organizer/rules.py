@@ -27826,6 +27826,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "muellgebuehrenbescheid": "mdi:receipt",
     "proteus aquo": "mdi:leak",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "gpu temp": "mdi:thermometer",
+    "arbeitszimmerhelligkeit": "mdi:brightness-6",
+    "audio streaming": "mdi:radio-tower",
+    "argus kamera": "mdi:camera",
+    "kaercher fc7": "mdi:vacuum",
+    "leaf blower": "mdi:fan",
+    "jahresgebuehr": "mdi:currency-eur",
+    "raumpraesenzmelder": "mdi:motion-sensor",
+    "vorlauf": "mdi:heating-coil",
+    "heizplan": "mdi:calendar-clock",
+    "lichtquelle": "mdi:lightbulb",
+    "gy 30 sensor": "mdi:lightbulb",
+    "muellapp erinnerung": "mdi:trash-can",
+    "illuminanzmessung": "mdi:brightness-5",
+    "usb dac": "mdi:audio-video",
+    "abus firmware": "mdi:cellphone-arrow-down",
+    "l1 leistung": "mdi:flash",
+    "ecoair": "mdi:water-percent",
+    "dsmr": "mdi:transmission-tower",
+    "leviton": "mdi:power-plug",
+    "veolia": "mdi:trash-can",
+    "gartenpavillon": "mdi:umbrella-beach",
+    "stromerzeugung": "mdi:solar-power",
+    "terrassenbeschattung": "mdi:blinds",
+    "stromvertrag": "mdi:file-document",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

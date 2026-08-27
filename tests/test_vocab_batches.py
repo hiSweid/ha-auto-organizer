@@ -62822,3 +62822,103 @@ def test_icon_backfill_muellgebuehrenbescheid():
 
 def test_icon_backfill_proteus_aquo():
     assert suggest_entity_icon(_FakeEntry("sensor.proteus_aquo"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_gpu_temp():
+    assert suggest_entity_icon(_FakeEntry("sensor.gpu_temp"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_arbeitszimmerhelligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.arbeitszimmerhelligkeit"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_audio_streaming():
+    assert suggest_entity_icon(_FakeEntry("sensor.audio_streaming"), OrganizerOptions()) == "mdi:radio-tower"
+
+
+def test_icon_backfill_argus_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.argus_kamera"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_kaercher_fc7():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaercher_fc7"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_leaf_blower():
+    assert suggest_entity_icon(_FakeEntry("sensor.leaf_blower"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_jahresgebuehr():
+    assert suggest_entity_icon(_FakeEntry("sensor.jahresgebuehr"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_raumpraesenzmelder():
+    assert suggest_entity_icon(_FakeEntry("sensor.raumpraesenzmelder"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_vorlauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.vorlauf"), OrganizerOptions()) == "mdi:heating-coil"
+
+
+def test_icon_backfill_heizplan():
+    assert suggest_entity_icon(_FakeEntry("sensor.heizplan"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_lichtquelle():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtquelle"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_gy_30_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.gy_30_sensor"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_muellapp_erinnerung():
+    assert suggest_entity_icon(_FakeEntry("sensor.muellapp_erinnerung"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_illuminanzmessung():
+    assert suggest_entity_icon(_FakeEntry("sensor.illuminanzmessung"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_usb_dac():
+    assert suggest_entity_icon(_FakeEntry("sensor.usb_dac"), OrganizerOptions()) == "mdi:audio-video"
+
+
+def test_icon_backfill_abus_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.abus_firmware"), OrganizerOptions()) == "mdi:cellphone-arrow-down"
+
+
+def test_icon_backfill_l1_leistung():
+    assert suggest_entity_icon(_FakeEntry("sensor.l1_leistung"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_ecoair():
+    assert suggest_entity_icon(_FakeEntry("sensor.ecoair"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_dsmr():
+    assert suggest_entity_icon(_FakeEntry("sensor.dsmr"), OrganizerOptions()) == "mdi:transmission-tower"
+
+
+def test_icon_backfill_leviton():
+    assert suggest_entity_icon(_FakeEntry("sensor.leviton"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_veolia():
+    assert suggest_entity_icon(_FakeEntry("sensor.veolia"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_gartenpavillon():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenpavillon"), OrganizerOptions()) == "mdi:umbrella-beach"
+
+
+def test_icon_backfill_stromerzeugung():
+    assert suggest_entity_icon(_FakeEntry("sensor.stromerzeugung"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_terrassenbeschattung():
+    assert suggest_entity_icon(_FakeEntry("sensor.terrassenbeschattung"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_icon_backfill_stromvertrag():
+    assert suggest_entity_icon(_FakeEntry("sensor.stromvertrag"), OrganizerOptions()) == "mdi:file-document"
