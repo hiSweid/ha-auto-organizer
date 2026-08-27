@@ -29859,6 +29859,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "lekker": "mdi:currency-eur",
     "teichuvklaerer": "mdi:water-pump",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "saugwischstation": "mdi:vacuum",
+    "cabinet latch": "mdi:lock",
+    "moisture": "mdi:water-percent",
+    "wertueberschreitung": "mdi:auto-fix",
+    "reservebatterie": "mdi:battery-charging-10",
+    "pollenflug": "mdi:flower-pollen",
+    "openweathermap": "mdi:weather-partly-cloudy",
+    "dns server": "mdi:server-network",
+    "discokugel": "mdi:lightbulb",
+    "reifentemperatur": "mdi:thermometer",
+    "last triggered": "mdi:timeline-clock-outline",
+    "e waste drop off": "mdi:recycle",
+    "abfrageskript": "mdi:script-text",
+    "charge cycle": "mdi:battery-sync",
+    "sony kamera": "mdi:camera",
+    "grundig": "mdi:fridge",
+    "abwaertskompatibilitaet": "mdi:arrow-down-bold-box",
+    "pressure washer": "mdi:washing-machine",
+    "ambient brightness": "mdi:brightness-6",
+    "cree": "mdi:lightbulb-multiple",
+    "jutebeutel": "mdi:bag-personal",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
