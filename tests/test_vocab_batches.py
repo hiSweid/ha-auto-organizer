@@ -66190,3 +66190,103 @@ def test_icon_backfill_skriptsprache():
 
 def test_icon_backfill_recovery_image():
     assert suggest_entity_icon(_FakeEntry("sensor.recovery_image"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_hygrometeranzeige():
+    assert suggest_entity_icon(_FakeEntry("sensor.hygrometeranzeige"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_rheinenergie():
+    assert suggest_entity_icon(_FakeEntry("sensor.rheinenergie"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_muskatnuss():
+    assert suggest_entity_icon(_FakeEntry("sensor.muskatnuss"), OrganizerOptions()) == "mdi:shopping-outline"
+
+
+def test_icon_backfill_zurueckgekehrt():
+    assert suggest_entity_icon(_FakeEntry("sensor.zurueckgekehrt"), OrganizerOptions()) == "mdi:home-circle"
+
+
+def test_icon_backfill_sternenhimmelmodus():
+    assert suggest_entity_icon(_FakeEntry("sensor.sternenhimmelmodus"), OrganizerOptions()) == "mdi:movie-open-outline"
+
+
+def test_icon_backfill_power_production():
+    assert suggest_entity_icon(_FakeEntry("sensor.power_production"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_grosshandelspreis():
+    assert suggest_entity_icon(_FakeEntry("sensor.grosshandelspreis"), OrganizerOptions()) == "mdi:currency-usd"
+
+
+def test_icon_backfill_schnappschuss():
+    assert suggest_entity_icon(_FakeEntry("sensor.schnappschuss"), OrganizerOptions()) == "mdi:camera-burst"
+
+
+def test_icon_backfill_leaf_wetness_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.leaf_wetness_sensor"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_lueftung():
+    assert suggest_entity_icon(_FakeEntry("sensor.lueftung"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_update_deaktiviert():
+    assert suggest_entity_icon(_FakeEntry("sensor.update_deaktiviert"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_staubpartikel():
+    assert suggest_entity_icon(_FakeEntry("sensor.staubpartikel"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_eneloop():
+    assert suggest_entity_icon(_FakeEntry("sensor.eneloop"), OrganizerOptions()) == "mdi:battery-charging-100"
+
+
+def test_icon_backfill_pfingststimmung():
+    assert suggest_entity_icon(_FakeEntry("sensor.pfingststimmung"), OrganizerOptions()) == "mdi:flower-tulip"
+
+
+def test_icon_backfill_lichtintensitaet():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtintensitaet"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_auswaertig():
+    assert suggest_entity_icon(_FakeEntry("sensor.auswaertig"), OrganizerOptions()) == "mdi:map-marker-distance"
+
+
+def test_icon_backfill_bedarf():
+    assert suggest_entity_icon(_FakeEntry("sensor.bedarf"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_kennzeichenerkennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.kennzeichenerkennung"), OrganizerOptions()) == "mdi:card-account-details-outline"
+
+
+def test_icon_backfill_busankoppler():
+    assert suggest_entity_icon(_FakeEntry("sensor.busankoppler"), OrganizerOptions()) == "mdi:usb"
+
+
+def test_icon_backfill_update_pruefen():
+    assert suggest_entity_icon(_FakeEntry("sensor.update_pruefen"), OrganizerOptions()) == "mdi:check-circle-outline"
+
+
+def test_icon_backfill_popcornzeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.popcornzeit"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_saugkopf():
+    assert suggest_entity_icon(_FakeEntry("sensor.saugkopf"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_firmware_baseline():
+    assert suggest_entity_icon(_FakeEntry("sensor.firmware_baseline"), OrganizerOptions()) == "mdi:download"
+
+
+def test_icon_backfill_wischpad():
+    assert suggest_entity_icon(_FakeEntry("sensor.wischpad"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_radiogeraet():
+    assert suggest_entity_icon(_FakeEntry("sensor.radiogeraet"), OrganizerOptions()) == "mdi:radio"

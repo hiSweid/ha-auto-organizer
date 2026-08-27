@@ -28744,6 +28744,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "skriptsprache": "mdi:script-text-outline",
     "recovery image": "mdi:update",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "hygrometeranzeige": "mdi:water-percent",
+    "rheinenergie": "mdi:currency-eur",
+    "muskatnuss": "mdi:shopping-outline",
+    "zurueckgekehrt": "mdi:home-circle",
+    "sternenhimmelmodus": "mdi:movie-open-outline",
+    "power production": "mdi:solar-power",
+    "grosshandelspreis": "mdi:currency-usd",
+    "schnappschuss": "mdi:camera-burst",
+    "leaf wetness sensor": "mdi:leaf",
+    "lueftung": "mdi:fan",
+    "update deaktiviert": "mdi:update",
+    "staubpartikel": "mdi:air-filter",
+    "eneloop": "mdi:battery-charging-100",
+    "pfingststimmung": "mdi:flower-tulip",
+    "lichtintensitaet": "mdi:brightness-5",
+    "auswaertig": "mdi:map-marker-distance",
+    "bedarf": "mdi:power-plug",
+    "kennzeichenerkennung": "mdi:card-account-details-outline",
+    "busankoppler": "mdi:usb",
+    "update pruefen": "mdi:check-circle-outline",
+    "popcornzeit": "mdi:movie-open",
+    "saugkopf": "mdi:robot-vacuum",
+    "firmware baseline": "mdi:download",
+    "wischpad": "mdi:window-shutter",
+    "radiogeraet": "mdi:radio",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
