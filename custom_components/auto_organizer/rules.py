@@ -32450,6 +32450,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "flurlichtsensor": "mdi:brightness-5",
     "zwischenzeit trigger": "mdi:timer-sand",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "water seepage": "mdi:water-alert",
+    "range doppler": "mdi:radar",
+    "haarentferner": "mdi:hair-dryer",
+    "evaporation": "mdi:water-off",
+    "helligkeitsmesser": "mdi:brightness-5",
+    "fan child lock": "mdi:fan-alert",
+    "tiefentladung": "mdi:battery-charging-low",
+    "greenworks optimow": "mdi:leaf",
+    "thermocouple": "mdi:thermometer-lines",
+    "firmware nicht aktuell": "mdi:update",
+    "hinderniserkennung": "mdi:eye-outline",
+    "kerzenlampe": "mdi:candle",
+    "hyundai nexo": "mdi:car-electric",
+    "blindleistung": "mdi:flash-off",
+    "messstellenbetrieb": "mdi:counter",
+    "handler funktion": "mdi:function",
+    "flaechenleistung": "mdi:grid-large",
+    "schadstoff": "mdi:chemical-weapon",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

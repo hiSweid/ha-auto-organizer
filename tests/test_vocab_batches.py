@@ -79710,3 +79710,75 @@ def test_icon_backfill_flurlichtsensor():
 
 def test_icon_backfill_zwischenzeit_trigger():
     assert suggest_entity_icon(_FakeEntry("sensor.zwischenzeit_trigger"), OrganizerOptions()) == "mdi:timer-sand"
+
+
+def test_icon_backfill_water_seepage():
+    assert suggest_entity_icon(_FakeEntry("sensor.water_seepage"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_icon_backfill_range_doppler():
+    assert suggest_entity_icon(_FakeEntry("sensor.range_doppler"), OrganizerOptions()) == "mdi:radar"
+
+
+def test_icon_backfill_haarentferner():
+    assert suggest_entity_icon(_FakeEntry("sensor.haarentferner"), OrganizerOptions()) == "mdi:hair-dryer"
+
+
+def test_icon_backfill_evaporation():
+    assert suggest_entity_icon(_FakeEntry("sensor.evaporation"), OrganizerOptions()) == "mdi:water-off"
+
+
+def test_icon_backfill_helligkeitsmesser():
+    assert suggest_entity_icon(_FakeEntry("sensor.helligkeitsmesser"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_fan_child_lock():
+    assert suggest_entity_icon(_FakeEntry("sensor.fan_child_lock"), OrganizerOptions()) == "mdi:fan-alert"
+
+
+def test_icon_backfill_tiefentladung():
+    assert suggest_entity_icon(_FakeEntry("sensor.tiefentladung"), OrganizerOptions()) == "mdi:battery-charging-low"
+
+
+def test_icon_backfill_greenworks_optimow():
+    assert suggest_entity_icon(_FakeEntry("sensor.greenworks_optimow"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_thermocouple():
+    assert suggest_entity_icon(_FakeEntry("sensor.thermocouple"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_firmware_nicht_aktuell():
+    assert suggest_entity_icon(_FakeEntry("sensor.firmware_nicht_aktuell"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_hinderniserkennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.hinderniserkennung"), OrganizerOptions()) == "mdi:eye-outline"
+
+
+def test_icon_backfill_kerzenlampe():
+    assert suggest_entity_icon(_FakeEntry("sensor.kerzenlampe"), OrganizerOptions()) == "mdi:candle"
+
+
+def test_icon_backfill_hyundai_nexo():
+    assert suggest_entity_icon(_FakeEntry("sensor.hyundai_nexo"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_blindleistung():
+    assert suggest_entity_icon(_FakeEntry("sensor.blindleistung"), OrganizerOptions()) == "mdi:flash-off"
+
+
+def test_icon_backfill_messstellenbetrieb():
+    assert suggest_entity_icon(_FakeEntry("sensor.messstellenbetrieb"), OrganizerOptions()) == "mdi:counter"
+
+
+def test_icon_backfill_handler_funktion():
+    assert suggest_entity_icon(_FakeEntry("sensor.handler_funktion"), OrganizerOptions()) == "mdi:function"
+
+
+def test_icon_backfill_flaechenleistung():
+    assert suggest_entity_icon(_FakeEntry("sensor.flaechenleistung"), OrganizerOptions()) == "mdi:grid-large"
+
+
+def test_icon_backfill_schadstoff():
+    assert suggest_entity_icon(_FakeEntry("sensor.schadstoff"), OrganizerOptions()) == "mdi:chemical-weapon"
