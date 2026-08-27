@@ -67370,3 +67370,71 @@ def test_icon_backfill_abnehmende_mondphase():
 
 def test_icon_backfill_available_version():
     assert suggest_entity_icon(_FakeEntry("sensor.available_version"), OrganizerOptions()) == "mdi:package-up"
+
+
+def test_icon_backfill_pyrometer():
+    assert suggest_entity_icon(_FakeEntry("sensor.pyrometer"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_orange_pi():
+    assert suggest_entity_icon(_FakeEntry("sensor.orange_pi"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_selbstreinigung():
+    assert suggest_entity_icon(_FakeEntry("sensor.selbstreinigung"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_glass_break():
+    assert suggest_entity_icon(_FakeEntry("sensor.glass_break"), OrganizerOptions()) == "mdi:security"
+
+
+def test_icon_backfill_teichfolie():
+    assert suggest_entity_icon(_FakeEntry("sensor.teichfolie"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_installierte_version():
+    assert suggest_entity_icon(_FakeEntry("sensor.installierte_version"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_haltepunkt_setzen():
+    assert suggest_entity_icon(_FakeEntry("sensor.haltepunkt_setzen"), OrganizerOptions()) == "mdi:script"
+
+
+def test_icon_backfill_alfred_workflow():
+    assert suggest_entity_icon(_FakeEntry("sensor.alfred_workflow"), OrganizerOptions()) == "mdi:script"
+
+
+def test_icon_backfill_orp_wert():
+    assert suggest_entity_icon(_FakeEntry("sensor.orp_wert"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_fuel_price():
+    assert suggest_entity_icon(_FakeEntry("sensor.fuel_price"), OrganizerOptions()) == "mdi:gas-station"
+
+
+def test_icon_backfill_security_bars():
+    assert suggest_entity_icon(_FakeEntry("sensor.security_bars"), OrganizerOptions()) == "mdi:security"
+
+
+def test_icon_backfill_firmware_signatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.firmware_signatur"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_reflexa():
+    assert suggest_entity_icon(_FakeEntry("sensor.reflexa"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_dome_water_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.dome_water_sensor"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_teppichreiniger():
+    assert suggest_entity_icon(_FakeEntry("sensor.teppichreiniger"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_vibrationsmopp():
+    assert suggest_entity_icon(_FakeEntry("sensor.vibrationsmopp"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_wan_ip():
+    assert suggest_entity_icon(_FakeEntry("sensor.wan_ip"), OrganizerOptions()) == "mdi:network"

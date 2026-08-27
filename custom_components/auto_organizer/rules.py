@@ -29065,6 +29065,25 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "abnehmende mondphase": "mdi:moon-waxing-crescent",
     "available version": "mdi:package-up",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "pyrometer": "mdi:thermometer",
+    "orange pi": "mdi:network",
+    "selbstreinigung": "mdi:vacuum",
+    "glass break": "mdi:security",
+    "teichfolie": "mdi:water",
+    "installierte version": "mdi:update",
+    "haltepunkt setzen": "mdi:script",
+    "alfred workflow": "mdi:script",
+    "orp wert": "mdi:water",
+    "fuel price": "mdi:gas-station",
+    "security bars": "mdi:security",
+    "firmware signatur": "mdi:update",
+    "reflexa": "mdi:window-shutter",
+    "dome water sensor": "mdi:leak",
+    "teppichreiniger": "mdi:vacuum",
+    "vibrationsmopp": "mdi:vacuum",
+    "wan ip": "mdi:network",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
