@@ -81630,3 +81630,83 @@ def test_icon_backfill_wasserhahntropfen():
 
 def test_icon_backfill_chlortabletten():
     assert suggest_entity_icon(_FakeEntry("sensor.chlortabletten"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_syslog_server():
+    assert suggest_entity_icon(_FakeEntry("sensor.syslog_server"), OrganizerOptions()) == "mdi:server-network"
+
+
+def test_icon_backfill_humidistat_setting():
+    assert suggest_entity_icon(_FakeEntry("sensor.humidistat_setting"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_startup_trigger():
+    assert suggest_entity_icon(_FakeEntry("sensor.startup_trigger"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_feuchtegrenzwert():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchtegrenzwert"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_helfer():
+    assert suggest_entity_icon(_FakeEntry("sensor.helfer"), OrganizerOptions()) == "mdi:handshake-outline"
+
+
+def test_icon_backfill_luftschadstoffmessung():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftschadstoffmessung"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_kellerhelligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.kellerhelligkeit"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_ausfallzeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.ausfallzeit"), OrganizerOptions()) == "mdi:timer-off"
+
+
+def test_icon_backfill_wartezeit_aktion():
+    assert suggest_entity_icon(_FakeEntry("sensor.wartezeit_aktion"), OrganizerOptions()) == "mdi:clock-outline"
+
+
+def test_icon_backfill_water_conditioner():
+    assert suggest_entity_icon(_FakeEntry("sensor.water_conditioner"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_muellerlicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.muellerlicht"), OrganizerOptions()) == "mdi:lightbulb-on"
+
+
+def test_icon_backfill_marmeladenvorrat():
+    assert suggest_entity_icon(_FakeEntry("sensor.marmeladenvorrat"), OrganizerOptions()) == "mdi:fruit-cherries"
+
+
+def test_icon_backfill_rooftop_unit():
+    assert suggest_entity_icon(_FakeEntry("sensor.rooftop_unit"), OrganizerOptions()) == "mdi:air-conditioner"
+
+
+def test_icon_backfill_umtauschrecht():
+    assert suggest_entity_icon(_FakeEntry("sensor.umtauschrecht"), OrganizerOptions()) == "mdi:swap-horizontal"
+
+
+def test_icon_backfill_harfe():
+    assert suggest_entity_icon(_FakeEntry("sensor.harfe"), OrganizerOptions()) == "mdi:instrument-triangle"
+
+
+def test_icon_backfill_twingo():
+    assert suggest_entity_icon(_FakeEntry("sensor.twingo"), OrganizerOptions()) == "mdi:car"
+
+
+def test_icon_backfill_abwasserkosten():
+    assert suggest_entity_icon(_FakeEntry("sensor.abwasserkosten"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_wasserleck():
+    assert suggest_entity_icon(_FakeEntry("sensor.wasserleck"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_curbside_collection_point():
+    assert suggest_entity_icon(_FakeEntry("sensor.curbside_collection_point"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_icon_backfill_muellschacht():
+    assert suggest_entity_icon(_FakeEntry("sensor.muellschacht"), OrganizerOptions()) == "mdi:delete"

@@ -32990,6 +32990,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "wasserhahntropfen": "mdi:leak",
     "chlortabletten": "mdi:water",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "syslog server": "mdi:server-network",
+    "humidistat setting": "mdi:water-percent",
+    "startup trigger": "mdi:flash",
+    "feuchtegrenzwert": "mdi:water-percent",
+    "helfer": "mdi:handshake-outline",
+    "luftschadstoffmessung": "mdi:air-filter",
+    "kellerhelligkeit": "mdi:brightness-6",
+    "ausfallzeit": "mdi:timer-off",
+    "wartezeit aktion": "mdi:clock-outline",
+    "water conditioner": "mdi:water-pump",
+    "muellerlicht": "mdi:lightbulb-on",
+    "marmeladenvorrat": "mdi:fruit-cherries",
+    "rooftop unit": "mdi:air-conditioner",
+    "umtauschrecht": "mdi:swap-horizontal",
+    "harfe": "mdi:instrument-triangle",
+    "twingo": "mdi:car",
+    "abwasserkosten": "mdi:water",
+    "wasserleck": "mdi:leak",
+    "curbside collection point": "mdi:trash-can-outline",
+    "muellschacht": "mdi:delete",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
