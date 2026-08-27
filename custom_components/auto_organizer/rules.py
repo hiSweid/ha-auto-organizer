@@ -28085,6 +28085,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "geraeuschpegel sauger": "mdi:speaker",
     "range gate": "mdi:radiobox-blank",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "scriptzuweisung": "mdi:script-text",
+    "wohnzimmerkamera": "mdi:camera",
+    "kuechengeraet": "mdi:fridge",
+    "playlist": "mdi:playlist-music",
+    "wolkenhoehenmesser": "mdi:weather-cloudy",
+    "ungepatcht": "mdi:package-up",
+    "busch jaeger freeathome": "mdi:home-automation",
+    "ersatzbuerste": "mdi:broom",
+    "saugleistung pa": "mdi:vacuum",
+    "konfliktloesung": "mdi:account-question",
+    "tuerscharnier": "mdi:door",
+    "fotodiode": "mdi:lightbulb",
+    "fan eco mode": "mdi:fan",
+    "extremwetter": "mdi:weather-windy",
+    "schrottankauf": "mdi:trash-can",
+    "trockengranulat": "mdi:water-off",
+    "ladeprofil": "mdi:power-plug",
+    "lichteinfall": "mdi:white-balance-sunny",
+    "autoit": "mdi:script-text",
+    "netto strompreis": "mdi:currency-eur",
+    "privileg": "mdi:star-circle",
+    "offnung": "mdi:lock-open-variant",
+    "shieldtv": "mdi:television-classic",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
