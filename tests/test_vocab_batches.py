@@ -79782,3 +79782,71 @@ def test_icon_backfill_flaechenleistung():
 
 def test_icon_backfill_schadstoff():
     assert suggest_entity_icon(_FakeEntry("sensor.schadstoff"), OrganizerOptions()) == "mdi:chemical-weapon"
+
+
+def test_icon_backfill_naehrstoff():
+    assert suggest_entity_icon(_FakeEntry("sensor.naehrstoff"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_kostal_plenticore():
+    assert suggest_entity_icon(_FakeEntry("sensor.kostal_plenticore"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_verlassensszene():
+    assert suggest_entity_icon(_FakeEntry("sensor.verlassensszene"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_mqttbridge():
+    assert suggest_entity_icon(_FakeEntry("sensor.mqttbridge"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_price():
+    assert suggest_entity_icon(_FakeEntry("sensor.price"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_lagesensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.lagesensor"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_stromkosten():
+    assert suggest_entity_icon(_FakeEntry("sensor.stromkosten"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_variable_rate():
+    assert suggest_entity_icon(_FakeEntry("sensor.variable_rate"), OrganizerOptions()) == "mdi:cash-multiple"
+
+
+def test_icon_backfill_food_warmer():
+    assert suggest_entity_icon(_FakeEntry("sensor.food_warmer"), OrganizerOptions()) == "mdi:microwave"
+
+
+def test_icon_backfill_mopwalzen_trocknung():
+    assert suggest_entity_icon(_FakeEntry("sensor.mopwalzen_trocknung"), OrganizerOptions()) == "mdi:tumble-dryer"
+
+
+def test_icon_backfill_la_crosse_technology():
+    assert suggest_entity_icon(_FakeEntry("sensor.la_crosse_technology"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_wyze_rule():
+    assert suggest_entity_icon(_FakeEntry("sensor.wyze_rule"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_verbindungsstabilitaet():
+    assert suggest_entity_icon(_FakeEntry("sensor.verbindungsstabilitaet"), OrganizerOptions()) == "mdi:wifi-strength-2"
+
+
+def test_icon_backfill_zyklonabscheider():
+    assert suggest_entity_icon(_FakeEntry("sensor.zyklonabscheider"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_tineco():
+    assert suggest_entity_icon(_FakeEntry("sensor.tineco"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_chipolo():
+    assert suggest_entity_icon(_FakeEntry("sensor.chipolo"), OrganizerOptions()) == "mdi:map-marker-radius"
+
+
+def test_icon_backfill_l2_strom():
+    assert suggest_entity_icon(_FakeEntry("sensor.l2_strom"), OrganizerOptions()) == "mdi:power-plug"

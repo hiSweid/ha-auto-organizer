@@ -32470,6 +32470,25 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "flaechenleistung": "mdi:grid-large",
     "schadstoff": "mdi:chemical-weapon",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "naehrstoff": "mdi:leaf",
+    "kostal plenticore": "mdi:solar-power",
+    "verlassensszene": "mdi:movie-open",
+    "mqttbridge": "mdi:network",
+    "price": "mdi:currency-eur",
+    "lagesensor": "mdi:motion-sensor",
+    "stromkosten": "mdi:flash",
+    "variable rate": "mdi:cash-multiple",
+    "food warmer": "mdi:microwave",
+    "mopwalzen trocknung": "mdi:tumble-dryer",
+    "la crosse technology": "mdi:thermometer-lines",
+    "wyze rule": "mdi:script-text-outline",
+    "verbindungsstabilitaet": "mdi:wifi-strength-2",
+    "zyklonabscheider": "mdi:air-filter",
+    "tineco": "mdi:vacuum",
+    "chipolo": "mdi:map-marker-radius",
+    "l2 strom": "mdi:power-plug",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
