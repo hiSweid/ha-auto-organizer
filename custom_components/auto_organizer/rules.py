@@ -30854,6 +30854,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "kuechenabfall": "mdi:trash-can",
     "meacofan": "mdi:fan",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "ozonbelastung": "mdi:air-filter",
+    "betreten": "mdi:account-check",
+    "paketkonflikt": "mdi:package-variant-closed",
+    "event data": "mdi:calendar-clock",
+    "spionkamera": "mdi:cctv",
+    "pollenwert": "mdi:flower-pollen",
+    "externe ip": "mdi:ip-network",
+    "fruehstuecksstimmung": "mdi:coffee",
+    "ueberschusseinspeisung": "mdi:solar-power",
+    "damp": "mdi:water-percent",
+    "temperaturrekord": "mdi:thermometer-alert",
+    "sichtweite": "mdi:eye-outline",
+    "modelllauf": "mdi:run-fast",
+    "streaminggeraet": "mdi:television-classic",
+    "kamera kalibrierung": "mdi:camera-enhance",
+    "self care": "mdi:spa",
+    "temperaturskala": "mdi:thermometer-lines",
+    "romantik": "mdi:heart-multiple",
+    "nachtabsenkung lueftung": "mdi:fan-off",
+    "aquariumleck": "mdi:leak",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

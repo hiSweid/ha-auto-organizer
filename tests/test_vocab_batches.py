@@ -73910,3 +73910,83 @@ def test_icon_backfill_kuechenabfall():
 
 def test_icon_backfill_meacofan():
     assert suggest_entity_icon(_FakeEntry("sensor.meacofan"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_ozonbelastung():
+    assert suggest_entity_icon(_FakeEntry("sensor.ozonbelastung"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_betreten():
+    assert suggest_entity_icon(_FakeEntry("sensor.betreten"), OrganizerOptions()) == "mdi:account-check"
+
+
+def test_icon_backfill_paketkonflikt():
+    assert suggest_entity_icon(_FakeEntry("sensor.paketkonflikt"), OrganizerOptions()) == "mdi:package-variant-closed"
+
+
+def test_icon_backfill_event_data():
+    assert suggest_entity_icon(_FakeEntry("sensor.event_data"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_spionkamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.spionkamera"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_pollenwert():
+    assert suggest_entity_icon(_FakeEntry("sensor.pollenwert"), OrganizerOptions()) == "mdi:flower-pollen"
+
+
+def test_icon_backfill_externe_ip():
+    assert suggest_entity_icon(_FakeEntry("sensor.externe_ip"), OrganizerOptions()) == "mdi:ip-network"
+
+
+def test_icon_backfill_fruehstuecksstimmung():
+    assert suggest_entity_icon(_FakeEntry("sensor.fruehstuecksstimmung"), OrganizerOptions()) == "mdi:coffee"
+
+
+def test_icon_backfill_ueberschusseinspeisung():
+    assert suggest_entity_icon(_FakeEntry("sensor.ueberschusseinspeisung"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_damp():
+    assert suggest_entity_icon(_FakeEntry("sensor.damp"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_temperaturrekord():
+    assert suggest_entity_icon(_FakeEntry("sensor.temperaturrekord"), OrganizerOptions()) == "mdi:thermometer-alert"
+
+
+def test_icon_backfill_sichtweite():
+    assert suggest_entity_icon(_FakeEntry("sensor.sichtweite"), OrganizerOptions()) == "mdi:eye-outline"
+
+
+def test_icon_backfill_modelllauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.modelllauf"), OrganizerOptions()) == "mdi:run-fast"
+
+
+def test_icon_backfill_streaminggeraet():
+    assert suggest_entity_icon(_FakeEntry("sensor.streaminggeraet"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_kamera_kalibrierung():
+    assert suggest_entity_icon(_FakeEntry("sensor.kamera_kalibrierung"), OrganizerOptions()) == "mdi:camera-enhance"
+
+
+def test_icon_backfill_self_care():
+    assert suggest_entity_icon(_FakeEntry("sensor.self_care"), OrganizerOptions()) == "mdi:spa"
+
+
+def test_icon_backfill_temperaturskala():
+    assert suggest_entity_icon(_FakeEntry("sensor.temperaturskala"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_romantik():
+    assert suggest_entity_icon(_FakeEntry("sensor.romantik"), OrganizerOptions()) == "mdi:heart-multiple"
+
+
+def test_icon_backfill_nachtabsenkung_lueftung():
+    assert suggest_entity_icon(_FakeEntry("sensor.nachtabsenkung_lueftung"), OrganizerOptions()) == "mdi:fan-off"
+
+
+def test_icon_backfill_aquariumleck():
+    assert suggest_entity_icon(_FakeEntry("sensor.aquariumleck"), OrganizerOptions()) == "mdi:leak"
