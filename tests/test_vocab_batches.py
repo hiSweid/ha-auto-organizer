@@ -81018,3 +81018,79 @@ def test_icon_backfill_differenztemperatur():
 
 def test_icon_backfill_descaler():
     assert suggest_entity_icon(_FakeEntry("sensor.descaler"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_zutrittsprotokoll():
+    assert suggest_entity_icon(_FakeEntry("sensor.zutrittsprotokoll"), OrganizerOptions()) == "mdi:lock-clock"
+
+
+def test_icon_backfill_workflow():
+    assert suggest_entity_icon(_FakeEntry("sensor.workflow"), OrganizerOptions()) == "mdi:pipe-wrench"
+
+
+def test_icon_backfill_warmwasserleck():
+    assert suggest_entity_icon(_FakeEntry("sensor.warmwasserleck"), OrganizerOptions()) == "mdi:leak-off"
+
+
+def test_icon_backfill_pv_modul():
+    assert suggest_entity_icon(_FakeEntry("sensor.pv_modul"), OrganizerOptions()) == "mdi:solar-panel"
+
+
+def test_icon_backfill_moultrie():
+    assert suggest_entity_icon(_FakeEntry("sensor.moultrie"), OrganizerOptions()) == "mdi:camera-off"
+
+
+def test_icon_backfill_bluetooth_batteriestand():
+    assert suggest_entity_icon(_FakeEntry("sensor.bluetooth_batteriestand"), OrganizerOptions()) == "mdi:battery-charging-wireless"
+
+
+def test_icon_backfill_automationslogik():
+    assert suggest_entity_icon(_FakeEntry("sensor.automationslogik"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_wechselseitige_rekursion():
+    assert suggest_entity_icon(_FakeEntry("sensor.wechselseitige_rekursion"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_sensibo_air():
+    assert suggest_entity_icon(_FakeEntry("sensor.sensibo_air"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_bewegungsreichweite():
+    assert suggest_entity_icon(_FakeEntry("sensor.bewegungsreichweite"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_gartenfest():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenfest"), OrganizerOptions()) == "mdi:flower-tulip"
+
+
+def test_icon_backfill_backofenrost():
+    assert suggest_entity_icon(_FakeEntry("sensor.backofenrost"), OrganizerOptions()) == "mdi:toaster-oven"
+
+
+def test_icon_backfill_illuminanzwert():
+    assert suggest_entity_icon(_FakeEntry("sensor.illuminanzwert"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_infrared_beam():
+    assert suggest_entity_icon(_FakeEntry("sensor.infrared_beam"), OrganizerOptions()) == "mdi:ray-vertex"
+
+
+def test_icon_backfill_zoomobjektiv():
+    assert suggest_entity_icon(_FakeEntry("sensor.zoomobjektiv"), OrganizerOptions()) == "mdi:camera-metering-center"
+
+
+def test_icon_backfill_aufputzdose():
+    assert suggest_entity_icon(_FakeEntry("sensor.aufputzdose"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_formaldehyd():
+    assert suggest_entity_icon(_FakeEntry("sensor.formaldehyd"), OrganizerOptions()) == "mdi:chemical-weapon"
+
+
+def test_icon_backfill_find_my_phone():
+    assert suggest_entity_icon(_FakeEntry("sensor.find_my_phone"), OrganizerOptions()) == "mdi:cellphone-marker"
+
+
+def test_icon_backfill_ecobee_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.ecobee_firmware"), OrganizerOptions()) == "mdi:update"

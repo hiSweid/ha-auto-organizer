@@ -32815,6 +32815,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "differenztemperatur": "mdi:thermometer-lines",
     "descaler": "mdi:water-pump",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "zutrittsprotokoll": "mdi:lock-clock",
+    "workflow": "mdi:pipe-wrench",
+    "warmwasserleck": "mdi:leak-off",
+    "pv modul": "mdi:solar-panel",
+    "moultrie": "mdi:camera-off",
+    "bluetooth batteriestand": "mdi:battery-charging-wireless",
+    "automationslogik": "mdi:script-text-outline",
+    "wechselseitige rekursion": "mdi:recycle",
+    "sensibo air": "mdi:air-filter",
+    "bewegungsreichweite": "mdi:motion-sensor",
+    "gartenfest": "mdi:flower-tulip",
+    "backofenrost": "mdi:toaster-oven",
+    "illuminanzwert": "mdi:brightness-5",
+    "infrared beam": "mdi:ray-vertex",
+    "zoomobjektiv": "mdi:camera-metering-center",
+    "aufputzdose": "mdi:power-plug",
+    "formaldehyd": "mdi:chemical-weapon",
+    "find my phone": "mdi:cellphone-marker",
+    "ecobee firmware": "mdi:update",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
