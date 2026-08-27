@@ -82086,3 +82086,27 @@ def test_icon_backfill_d_link_firmware():
 
 def test_icon_backfill_kamera_notaufnahme():
     assert suggest_entity_icon(_FakeEntry("sensor.kamera_notaufnahme"), OrganizerOptions()) == "mdi:camera-account"
+
+
+def test_icon_backfill_kellereingang():
+    assert suggest_entity_icon(_FakeEntry("sensor.kellereingang"), OrganizerOptions()) == "mdi:doorbell-video"
+
+
+def test_icon_backfill_fackelschein():
+    assert suggest_entity_icon(_FakeEntry("sensor.fackelschein"), OrganizerOptions()) == "mdi:flashlight"
+
+
+def test_icon_backfill_standklima():
+    assert suggest_entity_icon(_FakeEntry("sensor.standklima"), OrganizerOptions()) == "mdi:air-conditioner"
+
+
+def test_icon_backfill_abfallkonto():
+    assert suggest_entity_icon(_FakeEntry("sensor.abfallkonto"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_max31865():
+    assert suggest_entity_icon(_FakeEntry("sensor.max31865"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_balkonabend():
+    assert suggest_entity_icon(_FakeEntry("sensor.balkonabend"), OrganizerOptions()) == "mdi:balcony"

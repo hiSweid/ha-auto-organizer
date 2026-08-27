@@ -33120,6 +33120,14 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "d link firmware": "mdi:download",
     "kamera notaufnahme": "mdi:camera-account",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "kellereingang": "mdi:doorbell-video",
+    "fackelschein": "mdi:flashlight",
+    "standklima": "mdi:air-conditioner",
+    "abfallkonto": "mdi:trash-can",
+    "max31865": "mdi:thermometer",
+    "balkonabend": "mdi:balcony",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
