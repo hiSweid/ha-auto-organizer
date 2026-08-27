@@ -65254,3 +65254,75 @@ def test_icon_backfill_kameraeinstellungen():
 
 def test_icon_backfill_staubsaugerfilter():
     assert suggest_entity_icon(_FakeEntry("sensor.staubsaugerfilter"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_berker_bewegungsmelder():
+    assert suggest_entity_icon(_FakeEntry("sensor.berker_bewegungsmelder"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_mindestbestand():
+    assert suggest_entity_icon(_FakeEntry("sensor.mindestbestand"), OrganizerOptions()) == "mdi:shopping-outline"
+
+
+def test_icon_backfill_keyfob():
+    assert suggest_entity_icon(_FakeEntry("sensor.keyfob"), OrganizerOptions()) == "mdi:key"
+
+
+def test_icon_backfill_tuertransponder():
+    assert suggest_entity_icon(_FakeEntry("sensor.tuertransponder"), OrganizerOptions()) == "mdi:card-account-details"
+
+
+def test_icon_backfill_rfid_muelltonne():
+    assert suggest_entity_icon(_FakeEntry("sensor.rfid_muelltonne"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_intelligentes_messsystem():
+    assert suggest_entity_icon(_FakeEntry("sensor.intelligentes_messsystem"), OrganizerOptions()) == "mdi:gauge"
+
+
+def test_icon_backfill_uptime_kuma():
+    assert suggest_entity_icon(_FakeEntry("sensor.uptime_kuma"), OrganizerOptions()) == "mdi:server"
+
+
+def test_icon_backfill_zu_trocken():
+    assert suggest_entity_icon(_FakeEntry("sensor.zu_trocken"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_kaltlufteinbruch():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaltlufteinbruch"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_birthday_party():
+    assert suggest_entity_icon(_FakeEntry("sensor.birthday_party"), OrganizerOptions()) == "mdi:cake-variant"
+
+
+def test_icon_backfill_district_heating_temperature():
+    assert suggest_entity_icon(_FakeEntry("sensor.district_heating_temperature"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_current_version():
+    assert suggest_entity_icon(_FakeEntry("sensor.current_version"), OrganizerOptions()) == "mdi:tag"
+
+
+def test_icon_backfill_release_notes():
+    assert suggest_entity_icon(_FakeEntry("sensor.release_notes"), OrganizerOptions()) == "mdi:text-box-multiple"
+
+
+def test_icon_backfill_homey_pro():
+    assert suggest_entity_icon(_FakeEntry("sensor.homey_pro"), OrganizerOptions()) == "mdi:home-assistant"
+
+
+def test_icon_backfill_versionsstand():
+    assert suggest_entity_icon(_FakeEntry("sensor.versionsstand"), OrganizerOptions()) == "mdi:tag"
+
+
+def test_icon_backfill_ozonvorhersage():
+    assert suggest_entity_icon(_FakeEntry("sensor.ozonvorhersage"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_hawaii_party():
+    assert suggest_entity_icon(_FakeEntry("sensor.hawaii_party"), OrganizerOptions()) == "mdi:palm-tree"
+
+
+def test_icon_backfill_efekta():
+    assert suggest_entity_icon(_FakeEntry("sensor.efekta"), OrganizerOptions()) == "mdi:air-filter"

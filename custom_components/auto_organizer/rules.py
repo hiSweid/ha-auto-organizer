@@ -28488,6 +28488,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "kameraeinstellungen": "mdi:cctv",
     "staubsaugerfilter": "mdi:air-filter",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "berker bewegungsmelder": "mdi:motion-sensor",
+    "mindestbestand": "mdi:shopping-outline",
+    "keyfob": "mdi:key",
+    "tuertransponder": "mdi:card-account-details",
+    "rfid muelltonne": "mdi:trash-can",
+    "intelligentes messsystem": "mdi:gauge",
+    "uptime kuma": "mdi:server",
+    "zu trocken": "mdi:water-percent",
+    "kaltlufteinbruch": "mdi:weather-windy",
+    "birthday party": "mdi:cake-variant",
+    "district heating temperature": "mdi:thermometer-lines",
+    "current version": "mdi:tag",
+    "release notes": "mdi:text-box-multiple",
+    "homey pro": "mdi:home-assistant",
+    "versionsstand": "mdi:tag",
+    "ozonvorhersage": "mdi:air-filter",
+    "hawaii party": "mdi:palm-tree",
+    "efekta": "mdi:air-filter",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
