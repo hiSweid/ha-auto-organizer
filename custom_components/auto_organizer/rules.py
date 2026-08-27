@@ -31867,6 +31867,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "stromer": "mdi:car-electric",
     "klaeranlage": "mdi:water-pump",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "stapelauftrag": "mdi:playlist-plus",
+    "zeitmuster": "mdi:calendar-clock",
+    "qubino flood sensor": "mdi:water-alert",
+    "ferienstimmung": "mdi:airport",
+    "hbo max": "mdi:movie-open",
+    "eisheilige": "mdi:snowflake",
+    "entfeuchtungsleistung": "mdi:air-humidifier",
+    "laborfuehler": "mdi:thermometer-lines",
+    "katzenschreck": "mdi:cat",
+    "fruehstuecksszene": "mdi:coffee",
+    "wii u": "mdi:nintendo-wiiu",
+    "espagnolette": "mdi:lock-reset",
+    "not home": "mdi:home-outline",
+    "reklamationsware": "mdi:package-variant-closed",
+    "tonabnehmer": "mdi:record-rec",
+    "eprimo": "mdi:currency-eur",
+    "kerzenstaerke": "mdi:brightness-6",
+    "oktoberfeststimmung": "mdi:beer",
+    "openzwave": "mdi:zigbee",
+    "queued mode": "mdi:queue-first-in-last-out",
+    "herkunftsnachweis": "mdi:source-commit",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
