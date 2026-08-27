@@ -31822,6 +31822,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "gigawatt": "mdi:flash",
     "spiralreinigung": "mdi:vacuum",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "xmeye": "mdi:camera",
+    "libratone": "mdi:speaker",
+    "energy density": "mdi:battery-charging",
+    "abfallapp erinnerung": "mdi:trash-can-outline",
+    "trash": "mdi:trash-can",
+    "balkonhelligkeit": "mdi:brightness-6",
+    "kellerraum belegt": "mdi:home-heart",
+    "ansmann": "mdi:battery",
+    "budgetplaner": "mdi:currency-eur",
+    "resideo": "mdi:thermostat",
+    "schimmelpraevention": "mdi:water-percent",
+    "dust": "mdi:air-filter",
+    "stromanbieter": "mdi:power-plug",
+    "wasserschaden": "mdi:water-alert",
+    "pouchzelle": "mdi:battery-heart",
+    "aquatrip": "mdi:leak",
+    "helligkeitsalarm": "mdi:lightbulb-alert",
+    "leckalarmierung": "mdi:leak-off",
+    "abfuhrrhythmus": "mdi:calendar-clock",
+    "dreame l10s": "mdi:vacuum",
+    "aussenleuchte bewegungsmelder": "mdi:motion-sensor",
+    "lesestunde": "mdi:book-open-page-variant",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
