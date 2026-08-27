@@ -27555,6 +27555,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "gesamtertrag": "mdi:solar-power",
     "silicagel": "mdi:package-variant-closed",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "lochfrass rohr": "mdi:leak",
+    "legrand bewegungsmelder": "mdi:motion-sensor",
+    "zuluftqualitaet": "mdi:air-filter",
+    "rule set": "mdi:script-text-outline",
+    "brightness curve": "mdi:brightness-6",
+    "vendor update": "mdi:update",
+    "dht11": "mdi:water-percent",
+    "schanktemperatur": "mdi:thermometer",
+    "leckstelle": "mdi:leak-off",
+    "babysitter da": "mdi:account-check",
+    "xiaomi automatisierung": "mdi:robot",
+    "tahoma": "mdi:wifi-star",
+    "osmosewasserfilter": "mdi:water-pump",
+    "siri": "mdi:speaker-wireless",
+    "mi motion sensor 2": "mdi:motion-sensor",
+    "wandkamera": "mdi:camera-off",
+    "nickel cadmium": "mdi:battery-charging-50",
+    "abschiedsszene": "mdi:movie-open-outline",
+    "wilder muell": "mdi:trash-can",
+    "bulky waste": "mdi:delete",
+    "rechargeable": "mdi:battery-charging",
+    "eeg umlage": "mdi:currency-eur",
+    "dlink motion": "mdi:motion-sensor",
+    "feierabendmodus": "mdi:weather-night",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
