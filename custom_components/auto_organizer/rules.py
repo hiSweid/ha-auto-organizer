@@ -26565,6 +26565,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "entsorgungsnachweis": "mdi:recycle",
     "haltbarkeit": "mdi:package",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "mopwalze": "mdi:vacuum",
+    "hausanschluss wasserleck": "mdi:leak",
+    "zoom meeting": "mdi:video",
+    "direktvermarktung": "mdi:solar-power",
+    "abgasgeruch": "mdi:air-purifier",
+    "amcrest": "mdi:cctv",
+    "hygrofeuchte": "mdi:water-percent",
+    "saugstunden": "mdi:timer-sand",
+    "samsung sdi": "mdi:battery-charging",
+    "lichtfarbe": "mdi:lightbulb",
+    "verweilzeit": "mdi:timer-outline",
+    "feuchtemeldung": "mdi:water-percent-alert",
+    "namensaufloesung": "mdi:network",
+    "wischfeuchtigkeit": "mdi:water",
+    "wasserenthaertersalz": "mdi:water-off",
+    "gismeteo": "mdi:weather-cloudy",
+    "esports abend": "mdi:gamepad-variant",
+    "makrobibliothek": "mdi:script-text",
+    "household items": "mdi:cart",
+    "rekordkaelte": "mdi:snowflake",
+    "itho daalderop": "mdi:fan",
+    "ventilatorladestation": "mdi:fan-chevron-up",
+    "dmz host": "mdi:server-network",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
