@@ -29105,6 +29105,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "find my device": "mdi:cellphone-marker",
     "danby dehumidifier": "mdi:water-off",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "maximalmodus": "mdi:turbine",
+    "gangbeleuchtung": "mdi:led-strip-variant",
+    "nachfilter": "mdi:air-filter",
+    "kaltwasserdurchfluss": "mdi:water-pump",
+    "load shedding": "mdi:power-plug-off",
+    "relative moisture": "mdi:water-percent",
+    "camhi": "mdi:cctv",
+    "rubbish removal": "mdi:trash-can",
+    "steckerleuchte": "mdi:wall-sconce-round",
+    "supervisorupdate": "mdi:update",
+    "couchabend": "mdi:sofa",
+    "dual stack": "mdi:stack-overflow",
+    "smarttag": "mdi:tag-multiple",
+    "aperio": "mdi:lock-smart",
+    "study session": "mdi:book-open-blank-variant",
+    "teppichsensor": "mdi:floor-plan",
+    "shampoo": "mdi:bottle-tonic",
+    "luefter": "mdi:fan",
+    "gemeinschaftsgarten": "mdi:flower-outline",
+    "stufenschalter": "mdi:toggle-switch",
+    "trockenheit": "mdi:air-humidifier-off",
+    "innenhelligkeit": "mdi:brightness-6",
+    "flurpraesenzmelder": "mdi:motion-sensor",
+    "zirkulationspumpe leck": "mdi:leak",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

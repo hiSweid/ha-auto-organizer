@@ -67514,3 +67514,99 @@ def test_icon_backfill_find_my_device():
 
 def test_icon_backfill_danby_dehumidifier():
     assert suggest_entity_icon(_FakeEntry("sensor.danby_dehumidifier"), OrganizerOptions()) == "mdi:water-off"
+
+
+def test_icon_backfill_maximalmodus():
+    assert suggest_entity_icon(_FakeEntry("sensor.maximalmodus"), OrganizerOptions()) == "mdi:turbine"
+
+
+def test_icon_backfill_gangbeleuchtung():
+    assert suggest_entity_icon(_FakeEntry("sensor.gangbeleuchtung"), OrganizerOptions()) == "mdi:led-strip-variant"
+
+
+def test_icon_backfill_nachfilter():
+    assert suggest_entity_icon(_FakeEntry("sensor.nachfilter"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_kaltwasserdurchfluss():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaltwasserdurchfluss"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_load_shedding():
+    assert suggest_entity_icon(_FakeEntry("sensor.load_shedding"), OrganizerOptions()) == "mdi:power-plug-off"
+
+
+def test_icon_backfill_relative_moisture():
+    assert suggest_entity_icon(_FakeEntry("sensor.relative_moisture"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_camhi():
+    assert suggest_entity_icon(_FakeEntry("sensor.camhi"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_rubbish_removal():
+    assert suggest_entity_icon(_FakeEntry("sensor.rubbish_removal"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_steckerleuchte():
+    assert suggest_entity_icon(_FakeEntry("sensor.steckerleuchte"), OrganizerOptions()) == "mdi:wall-sconce-round"
+
+
+def test_icon_backfill_supervisorupdate():
+    assert suggest_entity_icon(_FakeEntry("sensor.supervisorupdate"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_couchabend():
+    assert suggest_entity_icon(_FakeEntry("sensor.couchabend"), OrganizerOptions()) == "mdi:sofa"
+
+
+def test_icon_backfill_dual_stack():
+    assert suggest_entity_icon(_FakeEntry("sensor.dual_stack"), OrganizerOptions()) == "mdi:stack-overflow"
+
+
+def test_icon_backfill_smarttag():
+    assert suggest_entity_icon(_FakeEntry("sensor.smarttag"), OrganizerOptions()) == "mdi:tag-multiple"
+
+
+def test_icon_backfill_aperio():
+    assert suggest_entity_icon(_FakeEntry("sensor.aperio"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_icon_backfill_study_session():
+    assert suggest_entity_icon(_FakeEntry("sensor.study_session"), OrganizerOptions()) == "mdi:book-open-blank-variant"
+
+
+def test_icon_backfill_teppichsensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.teppichsensor"), OrganizerOptions()) == "mdi:floor-plan"
+
+
+def test_icon_backfill_shampoo():
+    assert suggest_entity_icon(_FakeEntry("sensor.shampoo"), OrganizerOptions()) == "mdi:bottle-tonic"
+
+
+def test_icon_backfill_luefter():
+    assert suggest_entity_icon(_FakeEntry("sensor.luefter"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_gemeinschaftsgarten():
+    assert suggest_entity_icon(_FakeEntry("sensor.gemeinschaftsgarten"), OrganizerOptions()) == "mdi:flower-outline"
+
+
+def test_icon_backfill_stufenschalter():
+    assert suggest_entity_icon(_FakeEntry("sensor.stufenschalter"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_icon_backfill_trockenheit():
+    assert suggest_entity_icon(_FakeEntry("sensor.trockenheit"), OrganizerOptions()) == "mdi:air-humidifier-off"
+
+
+def test_icon_backfill_innenhelligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.innenhelligkeit"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_flurpraesenzmelder():
+    assert suggest_entity_icon(_FakeEntry("sensor.flurpraesenzmelder"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_zirkulationspumpe_leck():
+    assert suggest_entity_icon(_FakeEntry("sensor.zirkulationspumpe_leck"), OrganizerOptions()) == "mdi:leak"
