@@ -31264,6 +31264,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "bongo": "mdi:music-box",
     "subnetzmaske": "mdi:network",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "kabelmodem": "mdi:network",
+    "teppichturbo": "mdi:vacuum",
+    "alleinlebend": "mdi:account",
+    "panic room": "mdi:shield-lock",
+    "firmware repository": "mdi:update",
+    "unterspannungsschutz": "mdi:battery-alert",
+    "numerischer schwellwert": "mdi:numeric",
+    "niederschlagssumme": "mdi:weather-rainy",
+    "akku haelt nicht": "mdi:battery-low",
+    "edge tpu": "mdi:camera",
+    "chlorine": "mdi:water",
+    "prozessteuerung": "mdi:script-text",
+    "zooz zen": "mdi:power-plug",
+    "phasenabschnitt": "mdi:lightbulb",
+    "mehrfachstecker": "mdi:power-socket",
+    "netzwerkausfall": "mdi:network-off",
+    "tageslichtautonomie": "mdi:white-balance-sunny",
+    "kuehlkette": "mdi:fridge",
+    "inovelli firmware": "mdi:update",
+    "gemuesebeet": "mdi:leaf",
+    "lachsfilet": "mdi:fish",
+    "fiat 500e": "mdi:car-electric",
+    "cos phi": "mdi:flash",
+    "muenzschloss": "mdi:lock",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
