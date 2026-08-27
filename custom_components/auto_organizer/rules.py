@@ -30706,6 +30706,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ecolink motion": "mdi:motion-sensor",
     "entfeuchtung": "mdi:air-humidifier",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "kehrichtverwertungsanlage": "mdi:recycle",
+    "ebook reader": "mdi:tablet",
+    "preiszone": "mdi:currency-usd",
+    "petrol": "mdi:gas-station",
+    "brew temperature": "mdi:thermometer",
+    "deep fryer": "mdi:pot",
+    "meross firmware": "mdi:update",
+    "kehrt zurueck": "mdi:home-map-marker",
+    "zaunschranke": "mdi:fence",
+    "lueftungssystem": "mdi:fan",
+    "wemo firmware": "mdi:update",
+    "photopic vision": "mdi:brightness-5",
+    "scheinleistung": "mdi:flashlight",
+    "wait until node": "mdi:timer",
+    "luftaustauschrate": "mdi:air-filter",
+    "reisemodus": "mdi:airplane",
+    "festkoerperakku": "mdi:battery-charging",
+    "wandverfolgung": "mdi:map-marker-radius",
+    "ambiente": "mdi:palette",
+    "prismazelle": "mdi:battery",
+    "automation kategorie": "mdi:playlist-edit",
+    "abschaltsequenz": "mdi:script-text",
+    "stock firmware": "mdi:update",
+    "zutrittscode": "mdi:lock-outline",
+    "texecom": "mdi:security",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
