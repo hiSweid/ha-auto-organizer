@@ -26788,6 +26788,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "fernbedienung akku": "mdi:battery",
     "wint water": "mdi:leak",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "strahldichte": "mdi:brightness-5",
+    "dauerueberwachungsaufnahme": "mdi:cctv",
+    "trash chute": "mdi:delete",
+    "schallwischen": "mdi:vacuum",
+    "gartenfraese": "mdi:grass",
+    "kunak": "mdi:air-filter",
+    "muellpresse": "mdi:trash-can-outline",
+    "geze schloss": "mdi:lock-open-variant",
+    "ap3216": "mdi:lightbulb",
+    "miaomiaoce": "mdi:water-percent",
+    "produktversion": "mdi:package-variant-closed",
+    "photoakustik": "mdi:speaker-wireless",
+    "gerichtskosten": "mdi:cash-multiple",
+    "kreuztaster": "mdi:toggle-switch",
+    "starkregenalarm": "mdi:weather-pouring",
+    "sun2000": "mdi:solar-power",
+    "downburst": "mdi:weather-hail",
+    "hauseingang bewegungsmelder": "mdi:motion-sensor",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
