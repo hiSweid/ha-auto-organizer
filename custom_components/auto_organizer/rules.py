@@ -33012,6 +33012,21 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "curbside collection point": "mdi:trash-can-outline",
     "muellschacht": "mdi:delete",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "lichtsensor innen": "mdi:lightbulb",
+    "abwesenheitsnotiz": "mdi:account-off",
+    "fan direction switch": "mdi:fan-chevron-up",
+    "ip65": "mdi:cctv",
+    "wetterfeuchte": "mdi:water-percent",
+    "undicht": "mdi:leak",
+    "gruenabfallentsorgung": "mdi:leaf",
+    "korridorsensor": "mdi:motion-sensor",
+    "kaeltemittel": "mdi:coolant-temperature",
+    "naschzeug": "mdi:food-apple",
+    "occupancy simulation": "mdi:account-search",
+    "lywsd02": "mdi:thermometer-lines",
+    "waschpulver": "mdi:washing-machine",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

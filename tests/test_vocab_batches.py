@@ -81710,3 +81710,55 @@ def test_icon_backfill_curbside_collection_point():
 
 def test_icon_backfill_muellschacht():
     assert suggest_entity_icon(_FakeEntry("sensor.muellschacht"), OrganizerOptions()) == "mdi:delete"
+
+
+def test_icon_backfill_lichtsensor_innen():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtsensor_innen"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_abwesenheitsnotiz():
+    assert suggest_entity_icon(_FakeEntry("sensor.abwesenheitsnotiz"), OrganizerOptions()) == "mdi:account-off"
+
+
+def test_icon_backfill_fan_direction_switch():
+    assert suggest_entity_icon(_FakeEntry("sensor.fan_direction_switch"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_ip65():
+    assert suggest_entity_icon(_FakeEntry("sensor.ip65"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_wetterfeuchte():
+    assert suggest_entity_icon(_FakeEntry("sensor.wetterfeuchte"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_undicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.undicht"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_gruenabfallentsorgung():
+    assert suggest_entity_icon(_FakeEntry("sensor.gruenabfallentsorgung"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_korridorsensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.korridorsensor"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_kaeltemittel():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaeltemittel"), OrganizerOptions()) == "mdi:coolant-temperature"
+
+
+def test_icon_backfill_naschzeug():
+    assert suggest_entity_icon(_FakeEntry("sensor.naschzeug"), OrganizerOptions()) == "mdi:food-apple"
+
+
+def test_icon_backfill_occupancy_simulation():
+    assert suggest_entity_icon(_FakeEntry("sensor.occupancy_simulation"), OrganizerOptions()) == "mdi:account-search"
+
+
+def test_icon_backfill_lywsd02():
+    assert suggest_entity_icon(_FakeEntry("sensor.lywsd02"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_waschpulver():
+    assert suggest_entity_icon(_FakeEntry("sensor.waschpulver"), OrganizerOptions()) == "mdi:washing-machine"
