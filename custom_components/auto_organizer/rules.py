@@ -32004,6 +32004,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "thirdreality": "mdi:light-switch",
     "igel": "mdi:leaf",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "ground temperature": "mdi:thermometer",
+    "luftqualitaet": "mdi:air-filter",
+    "wildlife cam": "mdi:camera",
+    "pfandautomat": "mdi:recycle",
+    "blueiris": "mdi:camera",
+    "cooker hood": "mdi:fan",
+    "flow trigger": "mdi:flash",
+    "videostream": "mdi:video",
+    "motion frequency": "mdi:motion-sensor",
+    "byd seal": "mdi:car",
+    "phone tracker": "mdi:cellphone",
+    "futterstation": "mdi:bowl",
+    "price freeze": "mdi:currency-usd",
+    "fallrohrverstopfung": "mdi:pipe-leak",
+    "mr24hpc2": "mdi:motion-sensor",
+    "mixing ratio": "mdi:percent",
+    "ausgaben": "mdi:cash-multiple",
+    "weihnachtsstimmung": "mdi:pine-tree",
+    "wintergartenlichtsensor": "mdi:lightbulb",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
