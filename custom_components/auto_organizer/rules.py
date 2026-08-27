@@ -31890,6 +31890,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "queued mode": "mdi:queue-first-in-last-out",
     "herkunftsnachweis": "mdi:source-commit",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "21700": "mdi:battery",
+    "etagenschalter": "mdi:power-socket",
+    "wireguard peer": "mdi:network",
+    "srf meteo": "mdi:weather-cloudy",
+    "tagespreis": "mdi:currency-eur",
+    "citiesapps": "mdi:trash-can",
+    "tfa hygrometer": "mdi:water-percent",
+    "interferenz": "mdi:wifi-off",
+    "osmosewasser": "mdi:water",
+    "leseabend": "mdi:book-open-page-variant",
+    "sliding bolt": "mdi:lock",
+    "qos regel": "mdi:network",
+    "unverpacktladen": "mdi:recycle",
+    "bautrockner": "mdi:hair-dryer",
+    "helligkeitseinheit": "mdi:brightness-6",
+    "temperaturgradient": "mdi:thermometer-lines",
+    "update kompatibilitaet": "mdi:update",
+    "wischrolle": "mdi:window-shutter",
+    "biotonnengeruch": "mdi:smoking-off",
+    "swamp cooler": "mdi:air-humidifier",
+    "bewaesserungscontroller": "mdi:sprinkler",
+    "ladeschwelle": "mdi:battery-charging-wireless",
+    "firmwarewechsel": "mdi:download",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
