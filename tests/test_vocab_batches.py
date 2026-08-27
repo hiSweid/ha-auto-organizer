@@ -65421,7 +65421,7 @@ def test_icon_backfill_versionsnummer():
 
 
 def test_icon_backfill_digitalstrom():
-    assert suggest_entity_icon(_FakeEntry("sensor.digitalstrom"), OrganizerOptions()) == "mdi:sine-wave"
+    assert suggest_entity_icon(_FakeEntry("sensor.digitalstrom"), OrganizerOptions()) == "mdi:toggle-switch"
 
 
 def test_icon_backfill_parallelverarbeitung():
@@ -65493,7 +65493,7 @@ def test_icon_backfill_raised_bed():
 
 
 def test_icon_backfill_passivierung():
-    assert suggest_entity_icon(_FakeEntry("sensor.passivierung"), OrganizerOptions()) == "mdi:chemical-weapon"
+    assert suggest_entity_icon(_FakeEntry("sensor.passivierung"), OrganizerOptions()) == "mdi:battery-sync"
 
 
 def test_icon_backfill_hobbyraumlicht():
@@ -65697,7 +65697,7 @@ def test_icon_backfill_telegram_bot_befehl():
 
 
 def test_icon_backfill_sauna_stimmung():
-    assert suggest_entity_icon(_FakeEntry("sensor.sauna_stimmung"), OrganizerOptions()) == "mdi:sun-snowflake"
+    assert suggest_entity_icon(_FakeEntry("sensor.sauna_stimmung"), OrganizerOptions()) == "mdi:radiator"
 
 
 def test_icon_backfill_sperrriegel():
@@ -65749,7 +65749,7 @@ def test_icon_backfill_regenmengensensor():
 
 
 def test_icon_backfill_unold():
-    assert suggest_entity_icon(_FakeEntry("sensor.unold"), OrganizerOptions()) == "mdi:fridge"
+    assert suggest_entity_icon(_FakeEntry("sensor.unold"), OrganizerOptions()) == "mdi:toaster-oven"
 
 
 def test_icon_backfill_box_fan():
@@ -67125,7 +67125,7 @@ def test_icon_backfill_patchpanel():
 
 
 def test_icon_backfill_current_state_node():
-    assert suggest_entity_icon(_FakeEntry("sensor.current_state_node"), OrganizerOptions()) == "mdi:nodejs"
+    assert suggest_entity_icon(_FakeEntry("sensor.current_state_node"), OrganizerOptions()) == "mdi:state-machine"
 
 
 def test_icon_backfill_google_meet():
@@ -67165,7 +67165,7 @@ def test_icon_backfill_luftfeuchteoptimum():
 
 
 def test_icon_backfill_magnat():
-    assert suggest_entity_icon(_FakeEntry("sensor.magnat"), OrganizerOptions()) == "mdi:magnet"
+    assert suggest_entity_icon(_FakeEntry("sensor.magnat"), OrganizerOptions()) == "mdi:speaker"
 
 
 def test_icon_backfill_wetterfront():
@@ -67173,7 +67173,7 @@ def test_icon_backfill_wetterfront():
 
 
 def test_icon_backfill_mold_risk():
-    assert suggest_entity_icon(_FakeEntry("sensor.mold_risk"), OrganizerOptions()) == "mdi:spider-web"
+    assert suggest_entity_icon(_FakeEntry("sensor.mold_risk"), OrganizerOptions()) == "mdi:water-alert"
 
 
 def test_icon_backfill_bag_tag():

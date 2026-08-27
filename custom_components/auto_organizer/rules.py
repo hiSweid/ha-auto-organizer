@@ -28534,7 +28534,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "versionsnummer": "mdi:information",
 
     # --- icon backfill batch (local-LLM generated + validated) ---
-    "digitalstrom": "mdi:sine-wave",
+    "digitalstrom": "mdi:toggle-switch",
     "parallelverarbeitung": "mdi:code-braces",
     "einparkvorgang erkannt": "mdi:car-shift-pattern",
     "produktionszaehler": "mdi:gauge",
@@ -28552,7 +28552,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "budget billing": "mdi:currency-usd",
     "schrittweise ausfuehrung": "mdi:script-text",
     "raised bed": "mdi:flower-tulip",
-    "passivierung": "mdi:chemical-weapon",
+    "passivierung": "mdi:battery-sync",
     "hobbyraumlicht": "mdi:lightbulb",
     "sichtweitensensor": "mdi:eye",
     "letztes mal gesehen": "mdi:clock-outline",
@@ -28609,7 +28609,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "sump basin": "mdi:water-well",
     "haarglaetter": "mdi:hair-dryer",
     "telegram bot befehl": "mdi:message-text-outline",
-    "sauna stimmung": "mdi:sun-snowflake",
+    "sauna stimmung": "mdi:radiator",
     "sperrriegel": "mdi:lock-outline",
     "v380 pro": "mdi:camera-outline",
     "dyndns": "mdi:domain",
@@ -28622,7 +28622,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ladezeit": "mdi:battery-charging",
     "regallicht": "mdi:lightbulb-outline",
     "regenmengensensor": "mdi:weather-rainy",
-    "unold": "mdi:fridge",
+    "unold": "mdi:toaster-oven",
 
     # --- icon backfill batch (local-LLM generated + validated) ---
     "box fan": "mdi:fan",
@@ -28998,7 +28998,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "verschleissteile": "mdi:wrench",
     "neustart ausstehend": "mdi:restart-alert",
     "patchpanel": "mdi:server-network",
-    "current state node": "mdi:nodejs",
+    "current state node": "mdi:state-machine",
     "google meet": "mdi:video-plus",
     "yum update": "mdi:update",
     "price per kwh": "mdi:currency-eur",
@@ -29008,9 +29008,9 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ruko": "mdi:lock",
     "solarkamera": "mdi:camera",
     "luftfeuchteoptimum": "mdi:water-percent",
-    "magnat": "mdi:magnet",
+    "magnat": "mdi:speaker",
     "wetterfront": "mdi:weather-windy",
-    "mold risk": "mdi:spider-web",
+    "mold risk": "mdi:water-alert",
     "bag tag": "mdi:tag",
     "restricted keyway": "mdi:lock-alert",
 
