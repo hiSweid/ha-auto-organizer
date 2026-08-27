@@ -29787,6 +29787,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "devolo firmware": "mdi:update",
     "muellauto": "mdi:trash-can",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "wurmkiste": "mdi:bee-flower",
+    "ajax systems": "mdi:shield-lock",
+    "cecotec conga 3690": "mdi:robot-vacuum",
+    "versionskonflikt": "mdi:alert-circle",
+    "kitchenaid": "mdi:blender",
+    "rain bird": "mdi:sprinkler",
+    "loxone bewegungsmelder": "mdi:motion-sensor",
+    "essiggurken": "mdi:pickaxe",
+    "somfy automatisierung": "mdi:blinds",
+    "ruecklastschriftgebuehr": "mdi:currency-eur",
+    "konzentrationsszene": "mdi:movie-open",
+    "komfortmodus": "mdi:thermostat",
+    "smart access": "mdi:lock",
+    "abwesenheitswarnung aktiv": "mdi:account-alert",
+    "ev value": "mdi:brightness-5",
+    "immersion heater": "mdi:radiator",
+    "entsperrsequenz": "mdi:script-text",
+    "raumbegrenzung": "mdi:map-marker-radius",
+    "cost per kwh": "mdi:currency-eur",
+    "hitzeindex": "mdi:thermometer-high",
+    "elero centero": "mdi:window-shutter",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
