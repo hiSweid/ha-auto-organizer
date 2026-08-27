@@ -26464,6 +26464,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "verivox": "mdi:currency-eur",
     "vogelfutter": "mdi:bird",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "netzwerkschrank": "mdi:server",
+    "serverschranktemperatur": "mdi:thermometer",
+    "wischgeschwindigkeit": "mdi:vacuum",
+    "umtauschware": "mdi:shopping",
+    "urinal": "mdi:toilet",
+    "umweltbundesamt": "mdi:air-filter",
+    "staubkonzentration": "mdi:air-purifier",
+    "kilowatt peak": "mdi:solar-power",
+    "dry run": "mdi:script-text-outline",
+    "helmkamera": "mdi:camera",
+    "uebersichtskamera": "mdi:cctv",
+    "iterator protokoll": "mdi:protocol",
+    "abholtermin": "mdi:trash-can",
+    "biffa": "mdi:trash-can-outline",
+    "anionen": "mdi:air-purifier",
+    "anlagenleistung": "mdi:solar-power",
+    "kaltweiss": "mdi:lightbulb",
+    "gaming headset": "mdi:headphones",
+    "leistungsaufnahme": "mdi:flash",
+    "plantower": "mdi:air-filter",
+    "duesenverstopfung": "mdi:vacuum",
+    "homebridge update": "mdi:update",
+    "pfsense update": "mdi:update",
+    "carbon intensity": "mdi:leaf",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
