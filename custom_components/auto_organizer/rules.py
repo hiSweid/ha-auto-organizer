@@ -32489,6 +32489,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "chipolo": "mdi:map-marker-radius",
     "l2 strom": "mdi:power-plug",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "trellis": "mdi:tree",
+    "heizstufe": "mdi:fire",
+    "saunaabend": "mdi:spa",
+    "vorlagentrigger": "mdi:script-text-outline",
+    "snapshot version": "mdi:content-save-all",
+    "mikrofasertuch": "mdi:tshirt-crew",
+    "video intercom": "mdi:video-box",
+    "umgekippt": "mdi:dump-truck",
+    "xethru radar": "mdi:radiobox-blank",
+    "basalthermometer": "mdi:thermometer-lines",
+    "peak demand": "mdi:flash-alert",
+    "kleiderkammer": "mdi:wardrobe",
+    "kuechenhaube": "mdi:fan-chevron-up",
+    "luftschadstoffe": "mdi:air-filter",
+    "drought": "mdi:water-off",
+    "eisfreihalter": "mdi:snowflake-variant",
+    "ausloeser id": "mdi:identifier",
+    "kanalauslastung": "mdi:pipe-leak",
+    "scheibenwaschwasser": "mdi:wiper-wash",
+    "rivian r1s": "mdi:car-electric",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

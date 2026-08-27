@@ -79850,3 +79850,83 @@ def test_icon_backfill_chipolo():
 
 def test_icon_backfill_l2_strom():
     assert suggest_entity_icon(_FakeEntry("sensor.l2_strom"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_trellis():
+    assert suggest_entity_icon(_FakeEntry("sensor.trellis"), OrganizerOptions()) == "mdi:tree"
+
+
+def test_icon_backfill_heizstufe():
+    assert suggest_entity_icon(_FakeEntry("sensor.heizstufe"), OrganizerOptions()) == "mdi:fire"
+
+
+def test_icon_backfill_saunaabend():
+    assert suggest_entity_icon(_FakeEntry("sensor.saunaabend"), OrganizerOptions()) == "mdi:spa"
+
+
+def test_icon_backfill_vorlagentrigger():
+    assert suggest_entity_icon(_FakeEntry("sensor.vorlagentrigger"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_snapshot_version():
+    assert suggest_entity_icon(_FakeEntry("sensor.snapshot_version"), OrganizerOptions()) == "mdi:content-save-all"
+
+
+def test_icon_backfill_mikrofasertuch():
+    assert suggest_entity_icon(_FakeEntry("sensor.mikrofasertuch"), OrganizerOptions()) == "mdi:tshirt-crew"
+
+
+def test_icon_backfill_video_intercom():
+    assert suggest_entity_icon(_FakeEntry("sensor.video_intercom"), OrganizerOptions()) == "mdi:video-box"
+
+
+def test_icon_backfill_umgekippt():
+    assert suggest_entity_icon(_FakeEntry("sensor.umgekippt"), OrganizerOptions()) == "mdi:dump-truck"
+
+
+def test_icon_backfill_xethru_radar():
+    assert suggest_entity_icon(_FakeEntry("sensor.xethru_radar"), OrganizerOptions()) == "mdi:radiobox-blank"
+
+
+def test_icon_backfill_basalthermometer():
+    assert suggest_entity_icon(_FakeEntry("sensor.basalthermometer"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_peak_demand():
+    assert suggest_entity_icon(_FakeEntry("sensor.peak_demand"), OrganizerOptions()) == "mdi:flash-alert"
+
+
+def test_icon_backfill_kleiderkammer():
+    assert suggest_entity_icon(_FakeEntry("sensor.kleiderkammer"), OrganizerOptions()) == "mdi:wardrobe"
+
+
+def test_icon_backfill_kuechenhaube():
+    assert suggest_entity_icon(_FakeEntry("sensor.kuechenhaube"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_luftschadstoffe():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftschadstoffe"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_drought():
+    assert suggest_entity_icon(_FakeEntry("sensor.drought"), OrganizerOptions()) == "mdi:water-off"
+
+
+def test_icon_backfill_eisfreihalter():
+    assert suggest_entity_icon(_FakeEntry("sensor.eisfreihalter"), OrganizerOptions()) == "mdi:snowflake-variant"
+
+
+def test_icon_backfill_ausloeser_id():
+    assert suggest_entity_icon(_FakeEntry("sensor.ausloeser_id"), OrganizerOptions()) == "mdi:identifier"
+
+
+def test_icon_backfill_kanalauslastung():
+    assert suggest_entity_icon(_FakeEntry("sensor.kanalauslastung"), OrganizerOptions()) == "mdi:pipe-leak"
+
+
+def test_icon_backfill_scheibenwaschwasser():
+    assert suggest_entity_icon(_FakeEntry("sensor.scheibenwaschwasser"), OrganizerOptions()) == "mdi:wiper-wash"
+
+
+def test_icon_backfill_rivian_r1s():
+    assert suggest_entity_icon(_FakeEntry("sensor.rivian_r1s"), OrganizerOptions()) == "mdi:car-electric"
