@@ -27630,6 +27630,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "chamberlain liftmaster": "mdi:window-shutter",
     "water aerator": "mdi:faucet",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "schlummermodus": "mdi:sleep",
+    "romantikmodus": "mdi:heart",
+    "sonnenscheindauer": "mdi:white-balance-sunny",
+    "niedertarif": "mdi:currency-eur",
+    "main brush": "mdi:broom",
+    "feuchtesensorik": "mdi:water-percent",
+    "abfallberatungsstelle": "mdi:trash-can",
+    "guard condition": "mdi:shield-check",
+    "infrarotthermometer": "mdi:thermometer-lines",
+    "griddle temperature": "mdi:temperature-celsius",
+    "brita filter": "mdi:filter",
+    "renson": "mdi:blinds",
+    "regenereignis": "mdi:weather-rainy",
+    "papierabholung": "mdi:package-variant",
+    "contactsensor": "mdi:door-open",
+    "zuhause": "mdi:home-heart",
+    "occupant": "mdi:account-multiple",
+    "grocy": "mdi:cart-outline",
+    "bewegungsfrequenz": "mdi:motion-sensor",
+    "waste management": "mdi:recycle",
+    "portainer": "mdi:docker",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
