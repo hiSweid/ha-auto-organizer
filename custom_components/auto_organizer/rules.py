@@ -27993,6 +27993,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "wiegesystem": "mdi:scale-bathroom",
     "folgeaktion": "mdi:script-text",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "mundwasser": "mdi:tooth",
+    "pir linse": "mdi:motion-sensor",
+    "warmwassertemperatur": "mdi:thermometer",
+    "sega genesis": "mdi:gamepad-variant",
+    "firmwareaktualisierung": "mdi:update",
+    "stabthermometer": "mdi:thermometer",
+    "mixed air temperature": "mdi:thermometer",
+    "feuchtwarm": "mdi:water-percent",
+    "abifeier": "mdi:movie-open",
+    "kunstlichterkennung": "mdi:brightness-5",
+    "dynamischer stromtarif": "mdi:flash",
+    "gereinigte flaeche": "mdi:floor-plan",
+    "skriptbaustein": "mdi:script-text",
+    "smoke detector battery": "mdi:battery",
+    "trigger block": "mdi:cube-outline",
+    "venenscanner": "mdi:lock",
+    "gartensteuergeraet": "mdi:sprinkler",
+    "wiederholungszaehler": "mdi:counter",
+    "luftguetemessung": "mdi:air-filter",
+    "lorex": "mdi:cctv",
+    "edge trigger": "mdi:lightbulb-on",
+    "smhi": "mdi:weather-cloudy",
+    "sicherheitsbeleuchtung": "mdi:security",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
