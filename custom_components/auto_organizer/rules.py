@@ -28843,6 +28843,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "farbnachtsicht": "mdi:camera-off",
     "daemmerungsautomatik": "mdi:brightness-5",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "fernwaermepreis": "mdi:cash",
+    "reward points": "mdi:star",
+    "energydrink": "mdi:cup-water",
+    "automationsablauf": "mdi:play-circle",
+    "zugangsprotokoll": "mdi:lock-clock",
+    "badezeit stimmung": "mdi:movie-open",
+    "temperaturminimalwert": "mdi:thermometer-low",
+    "zooz firmware": "mdi:update",
+    "abbruchsignal": "mdi:stop-circle",
+    "water overflow": "mdi:water-alert",
+    "aktualisierungsstand": "mdi:progress-download",
+    "berker jalousie": "mdi:blinds",
+    "beach cleanup": "mdi:trash-can",
+    "feuchteausgleich": "mdi:water-percent",
+    "mvv energie": "mdi:flash",
+    "paninimaker": "mdi:toaster-oven",
+    "oekostrom": "mdi:solar-power",
+    "vetobedingung": "mdi:alert-octagon",
+    "rainbow vacuum": "mdi:vacuum",
+    "arrival routine": "mdi:run-fast",
+    "zonenerfassung": "mdi:motion-sensor",
+    "limit switch": "mdi:toggle-switch",
+    "mikrofilter": "mdi:air-filter",
+    "doppelwischmopp": "mdi:broom",
+    "movement pattern": "mdi:map-marker-radius",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

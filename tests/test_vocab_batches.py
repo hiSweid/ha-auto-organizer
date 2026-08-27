@@ -66554,3 +66554,103 @@ def test_icon_backfill_farbnachtsicht():
 
 def test_icon_backfill_daemmerungsautomatik():
     assert suggest_entity_icon(_FakeEntry("sensor.daemmerungsautomatik"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_fernwaermepreis():
+    assert suggest_entity_icon(_FakeEntry("sensor.fernwaermepreis"), OrganizerOptions()) == "mdi:cash"
+
+
+def test_icon_backfill_reward_points():
+    assert suggest_entity_icon(_FakeEntry("sensor.reward_points"), OrganizerOptions()) == "mdi:star"
+
+
+def test_icon_backfill_energydrink():
+    assert suggest_entity_icon(_FakeEntry("sensor.energydrink"), OrganizerOptions()) == "mdi:cup-water"
+
+
+def test_icon_backfill_automationsablauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.automationsablauf"), OrganizerOptions()) == "mdi:play-circle"
+
+
+def test_icon_backfill_zugangsprotokoll():
+    assert suggest_entity_icon(_FakeEntry("sensor.zugangsprotokoll"), OrganizerOptions()) == "mdi:lock-clock"
+
+
+def test_icon_backfill_badezeit_stimmung():
+    assert suggest_entity_icon(_FakeEntry("sensor.badezeit_stimmung"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_temperaturminimalwert():
+    assert suggest_entity_icon(_FakeEntry("sensor.temperaturminimalwert"), OrganizerOptions()) == "mdi:thermometer-low"
+
+
+def test_icon_backfill_zooz_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.zooz_firmware"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_abbruchsignal():
+    assert suggest_entity_icon(_FakeEntry("sensor.abbruchsignal"), OrganizerOptions()) == "mdi:stop-circle"
+
+
+def test_icon_backfill_water_overflow():
+    assert suggest_entity_icon(_FakeEntry("sensor.water_overflow"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_icon_backfill_aktualisierungsstand():
+    assert suggest_entity_icon(_FakeEntry("sensor.aktualisierungsstand"), OrganizerOptions()) == "mdi:progress-download"
+
+
+def test_icon_backfill_berker_jalousie():
+    assert suggest_entity_icon(_FakeEntry("sensor.berker_jalousie"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_icon_backfill_beach_cleanup():
+    assert suggest_entity_icon(_FakeEntry("sensor.beach_cleanup"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_feuchteausgleich():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchteausgleich"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_mvv_energie():
+    assert suggest_entity_icon(_FakeEntry("sensor.mvv_energie"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_paninimaker():
+    assert suggest_entity_icon(_FakeEntry("sensor.paninimaker"), OrganizerOptions()) == "mdi:toaster-oven"
+
+
+def test_icon_backfill_oekostrom():
+    assert suggest_entity_icon(_FakeEntry("sensor.oekostrom"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_vetobedingung():
+    assert suggest_entity_icon(_FakeEntry("sensor.vetobedingung"), OrganizerOptions()) == "mdi:alert-octagon"
+
+
+def test_icon_backfill_rainbow_vacuum():
+    assert suggest_entity_icon(_FakeEntry("sensor.rainbow_vacuum"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_arrival_routine():
+    assert suggest_entity_icon(_FakeEntry("sensor.arrival_routine"), OrganizerOptions()) == "mdi:run-fast"
+
+
+def test_icon_backfill_zonenerfassung():
+    assert suggest_entity_icon(_FakeEntry("sensor.zonenerfassung"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_limit_switch():
+    assert suggest_entity_icon(_FakeEntry("sensor.limit_switch"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_icon_backfill_mikrofilter():
+    assert suggest_entity_icon(_FakeEntry("sensor.mikrofilter"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_doppelwischmopp():
+    assert suggest_entity_icon(_FakeEntry("sensor.doppelwischmopp"), OrganizerOptions()) == "mdi:broom"
+
+
+def test_icon_backfill_movement_pattern():
+    assert suggest_entity_icon(_FakeEntry("sensor.movement_pattern"), OrganizerOptions()) == "mdi:map-marker-radius"
