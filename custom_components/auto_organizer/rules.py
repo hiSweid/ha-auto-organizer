@@ -27773,6 +27773,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "nachheizregister": "mdi:radiator",
     "jung jalousie": "mdi:blinds",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "panini press": "mdi:toaster",
+    "tripwire erkennung": "mdi:motion-sensor",
+    "battery passport": "mdi:battery",
+    "beleuchtungsklasse": "mdi:brightness-5",
+    "installationsrelais": "mdi:power-plug",
+    "staubsaugerschlauch": "mdi:vacuum",
+    "versionshinweise": "mdi:information-outline",
+    "pfandsystem": "mdi:recycle",
+    "dht22": "mdi:thermometer",
+    "gastnetzwerk": "mdi:wifi",
+    "teilladung": "mdi:battery-charging-low",
+    "mould": "mdi:water-alert",
+    "lock mechanism": "mdi:lock",
+    "update abbrechen": "mdi:cancel",
+    "aufstehen": "mdi:bed",
+    "wetterthermometer": "mdi:thermometer",
+    "ventilatordrehzahlstufe": "mdi:fan",
+    "curling iron": "mdi:hair-dryer",
+    "memoryeffekt": "mdi:memory",
+    "wasserrechnung": "mdi:water",
+    "portfreigabe": "mdi:network",
+    "zeltfeuchte": "mdi:water-percent",
+    "klimaanlage undicht": "mdi:leak-off",
+    "voliere feuchte": "mdi:water-percent",
+    "strom": "mdi:flash",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
