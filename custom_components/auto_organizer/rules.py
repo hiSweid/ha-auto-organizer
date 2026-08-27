@@ -27529,6 +27529,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "spitzentemperatur": "mdi:thermometer-high",
     "kamera bewegungserkennung": "mdi:motion-sensor",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "anti bump": "mdi:lock-outline",
+    "besucher": "mdi:account-arrow-right",
+    "temperature reading": "mdi:thermometer",
+    "gesamtpreis": "mdi:currency-eur",
+    "lawinenstufe": "mdi:snowflake-alert",
+    "kurzschluss": "mdi:flash",
+    "fgfs 101": "mdi:leak-off",
+    "pumpensumpf ueberlauf": "mdi:water-pump",
+    "raumzusammenfuehren": "mdi:folder-move",
+    "inhabitant": "mdi:account-multiple",
+    "cololight": "mdi:lightbulb",
+    "schlafsequenz": "mdi:power-sleep",
+    "daemmerungsgrenzwert": "mdi:brightness-6",
+    "grenzfeuchte": "mdi:water-percent",
+    "danalock firmware": "mdi:update",
+    "motion blind spot": "mdi:motion-sensor",
+    "schimmelsensor": "mdi:air-filter",
+    "vorlesestimmung": "mdi:book-open-page-variant",
+    "trendnet": "mdi:camera",
+    "privatsphaerenmodus kamera": "mdi:camera-off",
+    "ladekurve": "mdi:battery-charging-wireless",
+    "aequivalentzyklen": "mdi:battery-sync",
+    "gesamtertrag": "mdi:solar-power",
+    "silicagel": "mdi:package-variant-closed",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
