@@ -28624,6 +28624,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "regenmengensensor": "mdi:weather-rainy",
     "unold": "mdi:fridge",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "box fan": "mdi:fan",
+    "hobot legee": "mdi:robot-vacuum",
+    "gelbsacktermin": "mdi:trash-can",
+    "versionssprung": "mdi:update",
+    "abendroutine": "mdi:script",
+    "kamera stromausfall": "mdi:camera-off",
+    "waermerueckgewinnung": "mdi:heat-pump",
+    "hintergrundscript": "mdi:script-text",
+    "bresser hygrometer": "mdi:water-percent",
+    "gateway adresse": "mdi:router-wireless",
+    "reboot pending": "mdi:restart-alert",
+    "containerstellplatz": "mdi:recycle",
+    "dyson am07": "mdi:fan-speed-1",
+    "sprinkler leak": "mdi:leak",
+    "siemens home connect": "mdi:coffee-maker",
+    "waschkuechenlicht": "mdi:lightbulb",
+    "milre": "mdi:lock",
+    "vollspektrumlampe": "mdi:lightbulb-group",
+    "backpapier": "mdi:package-variant-closed",
+    "geothermal": "mdi:fire",
+    "wohnzimmerhelligkeit": "mdi:brightness-5",
+    "sichttruebung": "mdi:weather-fog",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
