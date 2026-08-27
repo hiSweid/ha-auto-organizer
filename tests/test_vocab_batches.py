@@ -80150,3 +80150,79 @@ def test_icon_backfill_ecovacs_app():
 
 def test_icon_backfill_meraki():
     assert suggest_entity_icon(_FakeEntry("sensor.meraki"), OrganizerOptions()) == "mdi:wifi"
+
+
+def test_icon_backfill_brennstoffsteuer():
+    assert suggest_entity_icon(_FakeEntry("sensor.brennstoffsteuer"), OrganizerOptions()) == "mdi:fuel"
+
+
+def test_icon_backfill_belichtungssensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.belichtungssensor"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_huawei_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.huawei_firmware"), OrganizerOptions()) == "mdi:cellphone-arrow-down"
+
+
+def test_icon_backfill_wartungsmodus():
+    assert suggest_entity_icon(_FakeEntry("sensor.wartungsmodus"), OrganizerOptions()) == "mdi:wrench"
+
+
+def test_icon_backfill_digitaler_zoom_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.digitaler_zoom_kamera"), OrganizerOptions()) == "mdi:camera-enhance"
+
+
+def test_icon_backfill_victron_multiplus():
+    assert suggest_entity_icon(_FakeEntry("sensor.victron_multiplus"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_auf_reisen():
+    assert suggest_entity_icon(_FakeEntry("sensor.auf_reisen"), OrganizerOptions()) == "mdi:airplane-takeoff"
+
+
+def test_icon_backfill_vorgarten():
+    assert suggest_entity_icon(_FakeEntry("sensor.vorgarten"), OrganizerOptions()) == "mdi:flower"
+
+
+def test_icon_backfill_agent_dvr_motion():
+    assert suggest_entity_icon(_FakeEntry("sensor.agent_dvr_motion"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_schnaepper():
+    assert suggest_entity_icon(_FakeEntry("sensor.schnaepper"), OrganizerOptions()) == "mdi:lock-alert"
+
+
+def test_icon_backfill_moes_curtain():
+    assert suggest_entity_icon(_FakeEntry("sensor.moes_curtain"), OrganizerOptions()) == "mdi:curtains"
+
+
+def test_icon_backfill_insteon():
+    assert suggest_entity_icon(_FakeEntry("sensor.insteon"), OrganizerOptions()) == "mdi:flash-auto"
+
+
+def test_icon_backfill_limitierte_auflage():
+    assert suggest_entity_icon(_FakeEntry("sensor.limitierte_auflage"), OrganizerOptions()) == "mdi:sale"
+
+
+def test_icon_backfill_taste_geklickt():
+    assert suggest_entity_icon(_FakeEntry("sensor.taste_geklickt"), OrganizerOptions()) == "mdi:gesture-tap-button"
+
+
+def test_icon_backfill_milchschaeumer():
+    assert suggest_entity_icon(_FakeEntry("sensor.milchschaeumer"), OrganizerOptions()) == "mdi:blender"
+
+
+def test_icon_backfill_lichtwiderstand():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtwiderstand"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_wasserschlauch_geplatzt():
+    assert suggest_entity_icon(_FakeEntry("sensor.wasserschlauch_geplatzt"), OrganizerOptions()) == "mdi:pipe-leak"
+
+
+def test_icon_backfill_wetterfuehligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.wetterfuehligkeit"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_seife():
+    assert suggest_entity_icon(_FakeEntry("sensor.seife"), OrganizerOptions()) == "mdi:scent"

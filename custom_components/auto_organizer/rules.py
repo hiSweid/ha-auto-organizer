@@ -32572,6 +32572,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ecovacs app": "mdi:robot-vacuum",
     "meraki": "mdi:wifi",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "brennstoffsteuer": "mdi:fuel",
+    "belichtungssensor": "mdi:lightbulb",
+    "huawei firmware": "mdi:cellphone-arrow-down",
+    "wartungsmodus": "mdi:wrench",
+    "digitaler zoom kamera": "mdi:camera-enhance",
+    "victron multiplus": "mdi:power-plug",
+    "auf reisen": "mdi:airplane-takeoff",
+    "vorgarten": "mdi:flower",
+    "agent dvr motion": "mdi:motion-sensor",
+    "schnaepper": "mdi:lock-alert",
+    "moes curtain": "mdi:curtains",
+    "insteon": "mdi:flash-auto",
+    "limitierte auflage": "mdi:sale",
+    "taste geklickt": "mdi:gesture-tap-button",
+    "milchschaeumer": "mdi:blender",
+    "lichtwiderstand": "mdi:brightness-5",
+    "wasserschlauch geplatzt": "mdi:pipe-leak",
+    "wetterfuehligkeit": "mdi:weather-cloudy",
+    "seife": "mdi:scent",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
