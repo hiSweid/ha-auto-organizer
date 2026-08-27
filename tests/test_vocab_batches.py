@@ -81094,3 +81094,55 @@ def test_icon_backfill_find_my_phone():
 
 def test_icon_backfill_ecobee_firmware():
     assert suggest_entity_icon(_FakeEntry("sensor.ecobee_firmware"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_terrarienbefeuchter():
+    assert suggest_entity_icon(_FakeEntry("sensor.terrarienbefeuchter"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_violette_tonne():
+    assert suggest_entity_icon(_FakeEntry("sensor.violette_tonne"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_sonnen_gmbh():
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnen_gmbh"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_awekas():
+    assert suggest_entity_icon(_FakeEntry("sensor.awekas"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_sonntagsmodus():
+    assert suggest_entity_icon(_FakeEntry("sensor.sonntagsmodus"), OrganizerOptions()) == "mdi:calendar-star"
+
+
+def test_icon_backfill_restwert():
+    assert suggest_entity_icon(_FakeEntry("sensor.restwert"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_motion_alert():
+    assert suggest_entity_icon(_FakeEntry("sensor.motion_alert"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_ruecklaufsensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.ruecklaufsensor"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_kompressortemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.kompressortemperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_seitenbuerste():
+    assert suggest_entity_icon(_FakeEntry("sensor.seitenbuerste"), OrganizerOptions()) == "mdi:brush"
+
+
+def test_icon_backfill_katzenbrunnen():
+    assert suggest_entity_icon(_FakeEntry("sensor.katzenbrunnen"), OrganizerOptions()) == "mdi:cat"
+
+
+def test_icon_backfill_kasa_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.kasa_firmware"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_notaus():
+    assert suggest_entity_icon(_FakeEntry("sensor.notaus"), OrganizerOptions()) == "mdi:power-plug"

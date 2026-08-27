@@ -32836,6 +32836,21 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "find my phone": "mdi:cellphone-marker",
     "ecobee firmware": "mdi:update",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "terrarienbefeuchter": "mdi:water-percent",
+    "violette tonne": "mdi:trash-can",
+    "sonnen gmbh": "mdi:battery-charging",
+    "awekas": "mdi:weather-cloudy",
+    "sonntagsmodus": "mdi:calendar-star",
+    "restwert": "mdi:currency-eur",
+    "motion alert": "mdi:motion-sensor",
+    "ruecklaufsensor": "mdi:thermometer",
+    "kompressortemperatur": "mdi:thermometer",
+    "seitenbuerste": "mdi:brush",
+    "katzenbrunnen": "mdi:cat",
+    "kasa firmware": "mdi:update",
+    "notaus": "mdi:power-plug",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
