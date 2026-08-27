@@ -30947,6 +30947,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "workerprozess": "mdi:account-cog",
     "fan night mode": "mdi:fan-off",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "awattar": "mdi:currency-eur",
+    "ladefenster": "mdi:battery-charging-wireless",
+    "luftkanal": "mdi:hvac",
+    "biotonnendeckel": "mdi:trash-can",
+    "einbruchschutzglas": "mdi:window-shutter",
+    "gazebo": "mdi:umbrella-beach",
+    "spaetabend": "mdi:weather-night",
+    "olpreis": "mdi:gas-station",
+    "arlo firmware": "mdi:update",
+    "ueberspannungsschutz": "mdi:flash-alert",
+    "return temperature": "mdi:thermometer-lines",
+    "elektronikschrott": "mdi:recycle",
+    "hebeanlage stoerung": "mdi:alert-circle",
+    "apple music": "mdi:apple",
+    "vachette": "mdi:lock",
+    "curietemperatur": "mdi:thermometer-alert",
+    "waffle iron": "mdi:toaster-oven",
+    "gy2561": "mdi:brightness-5",
+    "state change trigger": "mdi:toggle-switch",
+    "anwaltskosten": "mdi:account-cash",
+    "taupunktdifferenz": "mdi:water-percent",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
