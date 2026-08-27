@@ -81974,3 +81974,51 @@ def test_icon_backfill_ozongehalt():
 
 def test_icon_backfill_verdunkelung():
     assert suggest_entity_icon(_FakeEntry("sensor.verdunkelung"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_icon_backfill_zieltemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.zieltemperatur"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_icon_backfill_ambientebeleuchtung():
+    assert suggest_entity_icon(_FakeEntry("sensor.ambientebeleuchtung"), OrganizerOptions()) == "mdi:lightbulb-multiple"
+
+
+def test_icon_backfill_toilet_paper():
+    assert suggest_entity_icon(_FakeEntry("sensor.toilet_paper"), OrganizerOptions()) == "mdi:paper-roll"
+
+
+def test_icon_backfill_schwellenueberwindung():
+    assert suggest_entity_icon(_FakeEntry("sensor.schwellenueberwindung"), OrganizerOptions()) == "mdi:target-account"
+
+
+def test_icon_backfill_ecoflow():
+    assert suggest_entity_icon(_FakeEntry("sensor.ecoflow"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_sommertag():
+    assert suggest_entity_icon(_FakeEntry("sensor.sommertag"), OrganizerOptions()) == "mdi:white-balance-sunny"
+
+
+def test_icon_backfill_flume_water_monitor():
+    assert suggest_entity_icon(_FakeEntry("sensor.flume_water_monitor"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_frequenzband():
+    assert suggest_entity_icon(_FakeEntry("sensor.frequenzband"), OrganizerOptions()) == "mdi:wifi"
+
+
+def test_icon_backfill_utility_meter():
+    assert suggest_entity_icon(_FakeEntry("sensor.utility_meter"), OrganizerOptions()) == "mdi:gauge"
+
+
+def test_icon_backfill_virtual_wall():
+    assert suggest_entity_icon(_FakeEntry("sensor.virtual_wall"), OrganizerOptions()) == "mdi:wall"
+
+
+def test_icon_backfill_morning_routine():
+    assert suggest_entity_icon(_FakeEntry("sensor.morning_routine"), OrganizerOptions()) == "mdi:alarm"
+
+
+def test_icon_backfill_goal_zero_yeti():
+    assert suggest_entity_icon(_FakeEntry("sensor.goal_zero_yeti"), OrganizerOptions()) == "mdi:battery-charging"

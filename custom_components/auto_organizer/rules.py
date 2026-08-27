@@ -33088,6 +33088,20 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ozongehalt": "mdi:air-filter",
     "verdunkelung": "mdi:blinds",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "zieltemperatur": "mdi:thermostat",
+    "ambientebeleuchtung": "mdi:lightbulb-multiple",
+    "toilet paper": "mdi:paper-roll",
+    "schwellenueberwindung": "mdi:target-account",
+    "ecoflow": "mdi:battery-charging",
+    "sommertag": "mdi:white-balance-sunny",
+    "flume water monitor": "mdi:water-pump",
+    "frequenzband": "mdi:wifi",
+    "utility meter": "mdi:gauge",
+    "virtual wall": "mdi:wall",
+    "morning routine": "mdi:alarm",
+    "goal zero yeti": "mdi:battery-charging",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
