@@ -31434,6 +31434,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "standardaktion": "mdi:flash",
     "dachrinnenverstopfung": "mdi:leak",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "lipo": "mdi:battery-charging",
+    "displayport": "mdi:monitor-multiple",
+    "familienmitglied": "mdi:account-group",
+    "luftbelastung": "mdi:air-filter",
+    "imou": "mdi:cctv",
+    "altoelsammelstelle": "mdi:trash-can",
+    "mesopic": "mdi:lightbulb",
+    "beschattung": "mdi:blinds",
+    "proteco antrieb": "mdi:window-shutter",
+    "sommerfeststimmung": "mdi:palette",
+    "cgg1": "mdi:water-percent",
+    "verteilnetzbetreiber": "mdi:transmission-tower",
+    "aktualisierungsrichtlinie": "mdi:update",
+    "atari": "mdi:gamepad-variant",
+    "integration trigger": "mdi:flash",
+    "patio light": "mdi:outdoor-lamp",
+    "cpu luefter": "mdi:fan",
+    "water filter": "mdi:water-pump",
+    "wasserstoffpreis": "mdi:currency-eur",
+    "backup trigger": "mdi:backup-restore",
+    "ping zeit": "mdi:lan",
+    "infrarotpaneel": "mdi:radiator",
+    "philips": "mdi:lightbulb-multiple",
+    "pir walktest": "mdi:motion-sensor",
+    "estrichtrocknung": "mdi:heat-wave",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
