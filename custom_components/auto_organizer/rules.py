@@ -30192,6 +30192,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "aussenluftdurchlass": "mdi:fan",
     "dreifachklick": "mdi:gesture-tap-button",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "exquisit": "mdi:chef-hat",
+    "heizungsanlage druckverlust": "mdi:pipe-leak",
+    "nagios": "mdi:server-network",
+    "kachelmannwetter": "mdi:weather-sunny",
+    "folientunnel": "mdi:sprinkler",
+    "carpet cleaner": "mdi:robot-vacuum",
+    "multicast": "mdi:lan-disconnect",
+    "innenwiderstand": "mdi:battery-charging-low",
+    "ip konflikt": "mdi:network-off",
+    "hikvision firmware": "mdi:update",
+    "smartthings motion": "mdi:motion-sensor",
+    "vorabscheider": "mdi:air-filter",
+    "insteon firmware": "mdi:update",
+    "heating circuit": "mdi:radiator",
+    "windelabo": "mdi:baby-bottle-outline",
+    "kamera firmware": "mdi:update",
+    "schwaiger": "mdi:power-socket-eu",
+    "wiederkehrender ablauf": "mdi:timer-cog",
+    "virga": "mdi:weather-pouring",
+    "free cooling": "mdi:snowflake",
+    "lieferando": "mdi:truck-delivery",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
