@@ -30900,6 +30900,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "jahresarbeitszahl": "mdi:chart-line",
     "trigger": "mdi:flash",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "sauna steuerung": "mdi:heat-wave",
+    "luefterlager": "mdi:fan-chevron-up",
+    "led beleuchtung kamera": "mdi:camera-off",
+    "build kanal": "mdi:package-down",
+    "template sensor script": "mdi:script-text-outline",
+    "app version": "mdi:application-braces",
+    "elektrolytdichte": "mdi:battery-sync",
+    "commax": "mdi:lock-open-alert-outline",
+    "hauptzeit": "mdi:cash-multiple",
+    "sds011": "mdi:air-filter",
+    "automatische teppicherkennung": "mdi:robot-vacuum-variant",
+    "tierhaarallergie": "mdi:allergy",
+    "dachluke": "mdi:window-shutter",
+    "peak load": "mdi:flash-alert",
+    "mikrofonstaender": "mdi:microphone-settings",
+    "sperrbereich": "mdi:shield-off",
+    "bma400": "mdi:run-fast",
+    "batterie polaritaet": "mdi:battery-alert-variant",
+    "shield tv": "mdi:television-classic",
+    "lueftungssteuerung": "mdi:fan-auto",
+    "duschablauf": "mdi:water-pump-off",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

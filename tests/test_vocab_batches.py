@@ -74078,3 +74078,87 @@ def test_icon_backfill_jahresarbeitszahl():
 
 def test_icon_backfill_trigger():
     assert suggest_entity_icon(_FakeEntry("sensor.trigger"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_sauna_steuerung():
+    assert suggest_entity_icon(_FakeEntry("sensor.sauna_steuerung"), OrganizerOptions()) == "mdi:heat-wave"
+
+
+def test_icon_backfill_luefterlager():
+    assert suggest_entity_icon(_FakeEntry("sensor.luefterlager"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_led_beleuchtung_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.led_beleuchtung_kamera"), OrganizerOptions()) == "mdi:camera-off"
+
+
+def test_icon_backfill_build_kanal():
+    assert suggest_entity_icon(_FakeEntry("sensor.build_kanal"), OrganizerOptions()) == "mdi:package-down"
+
+
+def test_icon_backfill_template_sensor_script():
+    assert suggest_entity_icon(_FakeEntry("sensor.template_sensor_script"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_app_version():
+    assert suggest_entity_icon(_FakeEntry("sensor.app_version"), OrganizerOptions()) == "mdi:application-braces"
+
+
+def test_icon_backfill_elektrolytdichte():
+    assert suggest_entity_icon(_FakeEntry("sensor.elektrolytdichte"), OrganizerOptions()) == "mdi:battery-sync"
+
+
+def test_icon_backfill_commax():
+    assert suggest_entity_icon(_FakeEntry("sensor.commax"), OrganizerOptions()) == "mdi:lock-open-alert-outline"
+
+
+def test_icon_backfill_hauptzeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.hauptzeit"), OrganizerOptions()) == "mdi:cash-multiple"
+
+
+def test_icon_backfill_sds011():
+    assert suggest_entity_icon(_FakeEntry("sensor.sds011"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_automatische_teppicherkennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.automatische_teppicherkennung"), OrganizerOptions()) == "mdi:robot-vacuum-variant"
+
+
+def test_icon_backfill_tierhaarallergie():
+    assert suggest_entity_icon(_FakeEntry("sensor.tierhaarallergie"), OrganizerOptions()) == "mdi:allergy"
+
+
+def test_icon_backfill_dachluke():
+    assert suggest_entity_icon(_FakeEntry("sensor.dachluke"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_peak_load():
+    assert suggest_entity_icon(_FakeEntry("sensor.peak_load"), OrganizerOptions()) == "mdi:flash-alert"
+
+
+def test_icon_backfill_mikrofonstaender():
+    assert suggest_entity_icon(_FakeEntry("sensor.mikrofonstaender"), OrganizerOptions()) == "mdi:microphone-settings"
+
+
+def test_icon_backfill_sperrbereich():
+    assert suggest_entity_icon(_FakeEntry("sensor.sperrbereich"), OrganizerOptions()) == "mdi:shield-off"
+
+
+def test_icon_backfill_bma400():
+    assert suggest_entity_icon(_FakeEntry("sensor.bma400"), OrganizerOptions()) == "mdi:run-fast"
+
+
+def test_icon_backfill_batterie_polaritaet():
+    assert suggest_entity_icon(_FakeEntry("sensor.batterie_polaritaet"), OrganizerOptions()) == "mdi:battery-alert-variant"
+
+
+def test_icon_backfill_shield_tv():
+    assert suggest_entity_icon(_FakeEntry("sensor.shield_tv"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_lueftungssteuerung():
+    assert suggest_entity_icon(_FakeEntry("sensor.lueftungssteuerung"), OrganizerOptions()) == "mdi:fan-auto"
+
+
+def test_icon_backfill_duschablauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.duschablauf"), OrganizerOptions()) == "mdi:water-pump-off"
