@@ -77294,3 +77294,83 @@ def test_icon_backfill_zwangslueftung():
 
 def test_icon_backfill_temperaturmaximalwert():
     assert suggest_entity_icon(_FakeEntry("sensor.temperaturmaximalwert"), OrganizerOptions()) == "mdi:thermometer-alert"
+
+
+def test_icon_backfill_einspeisebegrenzung():
+    assert suggest_entity_icon(_FakeEntry("sensor.einspeisebegrenzung"), OrganizerOptions()) == "mdi:transmission-tower"
+
+
+def test_icon_backfill_growbox_temperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.growbox_temperatur"), OrganizerOptions()) == "mdi:thermostat-box"
+
+
+def test_icon_backfill_teichbachlauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.teichbachlauf"), OrganizerOptions()) == "mdi:water-well"
+
+
+def test_icon_backfill_g4_lampe():
+    assert suggest_entity_icon(_FakeEntry("sensor.g4_lampe"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_script_abbrechen():
+    assert suggest_entity_icon(_FakeEntry("sensor.script_abbrechen"), OrganizerOptions()) == "mdi:stop-circle"
+
+
+def test_icon_backfill_hauswasserzaehler_leck():
+    assert suggest_entity_icon(_FakeEntry("sensor.hauswasserzaehler_leck"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_putzmittel():
+    assert suggest_entity_icon(_FakeEntry("sensor.putzmittel"), OrganizerOptions()) == "mdi:broom"
+
+
+def test_icon_backfill_reinigungspad():
+    assert suggest_entity_icon(_FakeEntry("sensor.reinigungspad"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_wasserverbrauchstrend():
+    assert suggest_entity_icon(_FakeEntry("sensor.wasserverbrauchstrend"), OrganizerOptions()) == "mdi:trending-up"
+
+
+def test_icon_backfill_pollenflugvorhersage():
+    assert suggest_entity_icon(_FakeEntry("sensor.pollenflugvorhersage"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_betriebskosten():
+    assert suggest_entity_icon(_FakeEntry("sensor.betriebskosten"), OrganizerOptions()) == "mdi:cash-multiple"
+
+
+def test_icon_backfill_opentherm():
+    assert suggest_entity_icon(_FakeEntry("sensor.opentherm"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_icon_backfill_tilt_alarm():
+    assert suggest_entity_icon(_FakeEntry("sensor.tilt_alarm"), OrganizerOptions()) == "mdi:alarm"
+
+
+def test_icon_backfill_energy_management():
+    assert suggest_entity_icon(_FakeEntry("sensor.energy_management"), OrganizerOptions()) == "mdi:power-settings"
+
+
+def test_icon_backfill_sickerwasser():
+    assert suggest_entity_icon(_FakeEntry("sensor.sickerwasser"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_installed_version():
+    assert suggest_entity_icon(_FakeEntry("sensor.installed_version"), OrganizerOptions()) == "mdi:package-variant"
+
+
+def test_icon_backfill_parallelmodus():
+    assert suggest_entity_icon(_FakeEntry("sensor.parallelmodus"), OrganizerOptions()) == "mdi:vector-line"
+
+
+def test_icon_backfill_messstellenpauschale():
+    assert suggest_entity_icon(_FakeEntry("sensor.messstellenpauschale"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_mq6_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.mq6_sensor"), OrganizerOptions()) == "mdi:smoke-detector"
+
+
+def test_icon_backfill_petcam():
+    assert suggest_entity_icon(_FakeEntry("sensor.petcam"), OrganizerOptions()) == "mdi:camera"

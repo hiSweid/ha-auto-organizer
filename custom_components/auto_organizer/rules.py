@@ -31782,6 +31782,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "zwangslueftung": "mdi:fan-alert",
     "temperaturmaximalwert": "mdi:thermometer-alert",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "einspeisebegrenzung": "mdi:transmission-tower",
+    "growbox temperatur": "mdi:thermostat-box",
+    "teichbachlauf": "mdi:water-well",
+    "g4 lampe": "mdi:lightbulb",
+    "script abbrechen": "mdi:stop-circle",
+    "hauswasserzaehler leck": "mdi:leak",
+    "putzmittel": "mdi:broom",
+    "reinigungspad": "mdi:robot-vacuum",
+    "wasserverbrauchstrend": "mdi:trending-up",
+    "pollenflugvorhersage": "mdi:weather-windy",
+    "betriebskosten": "mdi:cash-multiple",
+    "opentherm": "mdi:thermostat",
+    "tilt alarm": "mdi:alarm",
+    "energy management": "mdi:power-settings",
+    "sickerwasser": "mdi:water-pump",
+    "installed version": "mdi:package-variant",
+    "parallelmodus": "mdi:vector-line",
+    "messstellenpauschale": "mdi:currency-eur",
+    "mq6 sensor": "mdi:smoke-detector",
+    "petcam": "mdi:camera",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
