@@ -30655,6 +30655,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "automationswatchdog": "mdi:alert-circle",
     "dhcp lease": "mdi:ip-network",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "ozonvorlaeufer": "mdi:air-filter",
+    "wartungsankuendigung": "mdi:alert-circle-outline",
+    "strickabend": "mdi:movie-open",
+    "pv strom": "mdi:solar-power",
+    "zendure": "mdi:battery-charging-wireless",
+    "gruppenaktion": "mdi:flash-auto",
+    "asbestfaser": "mdi:air-filter",
+    "innenraumhelligkeit": "mdi:brightness-5",
+    "abstand": "mdi:ruler",
+    "wasserzaehlerstand": "mdi:gauge",
+    "kondenswasser": "mdi:water",
+    "screen mirroring": "mdi:cast",
+    "zaehlerbatterie": "mdi:battery",
+    "rooftop bar stimmung": "mdi:movie-open",
+    "windeltonne": "mdi:trash-can",
+    "abstellraumhelligkeit": "mdi:brightness-5",
+    "gfs modell": "mdi:weather-cloudy",
+    "waeschefeuchte": "mdi:water-percent",
+    "blink doorbell": "mdi:doorbell-video",
+    "muffiger geruch": "mdi:scent",
+    "jinja template": "mdi:code-tags",
+    "windkuehlung": "mdi:fan",
+    "y muster reinigung": "mdi:vacuum",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
