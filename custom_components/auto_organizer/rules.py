@@ -30004,6 +30004,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "styroporsammlung": "mdi:recycle",
     "ultraschallsensor": "mdi:radar",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "raumaktivitaet": "mdi:motion-sensor",
+    "endlosaufnahme": "mdi:camera-off",
+    "zaunbewegungsmelder": "mdi:security",
+    "microdrip": "mdi:sprinkler",
+    "stimmungswechsel": "mdi:palette-outline",
+    "feierabend": "mdi:timer-cog",
+    "strombezug": "mdi:power-plug",
+    "kosmetiktuecher": "mdi:package-variant-closed",
+    "automation delay": "mdi:clock-fast",
+    "klammheit": "mdi:water-percent",
+    "staubsaugerbeutel": "mdi:trash-can",
+    "wasserversorgung": "mdi:water-boiler",
+    "brutschrank": "mdi:thermometer-lines",
+    "pv ueberschussautomatik": "mdi:solar-power",
+    "sichtfeld sensor": "mdi:cctv",
+    "haltespannung": "mdi:battery-charging-wireless",
+    "batchjob": "mdi:file-tree",
+    "buerohelligkeit": "mdi:brightness-6",
+    "humidity threshold": "mdi:water-percent-alert",
+    "kindergeburtstagsfeier": "mdi:cake-variant",
+    "lux level": "mdi:brightness-5",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
