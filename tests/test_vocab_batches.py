@@ -67874,3 +67874,99 @@ def test_icon_backfill_fensterlueftung():
 
 def test_icon_backfill_letzte_sichtung():
     assert suggest_entity_icon(_FakeEntry("sensor.letzte_sichtung"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_weatherapi():
+    assert suggest_entity_icon(_FakeEntry("sensor.weatherapi"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_temporaercode():
+    assert suggest_entity_icon(_FakeEntry("sensor.temporaercode"), OrganizerOptions()) == "mdi:lock-outline"
+
+
+def test_icon_backfill_htu31():
+    assert suggest_entity_icon(_FakeEntry("sensor.htu31"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_dreo_fan():
+    assert suggest_entity_icon(_FakeEntry("sensor.dreo_fan"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_inselbatterie():
+    assert suggest_entity_icon(_FakeEntry("sensor.inselbatterie"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_auto_dry_mode():
+    assert suggest_entity_icon(_FakeEntry("sensor.auto_dry_mode"), OrganizerOptions()) == "mdi:water-off"
+
+
+def test_icon_backfill_riegelstange():
+    assert suggest_entity_icon(_FakeEntry("sensor.riegelstange"), OrganizerOptions()) == "mdi:lock-outline"
+
+
+def test_icon_backfill_telekom_stoerung():
+    assert suggest_entity_icon(_FakeEntry("sensor.telekom_stoerung"), OrganizerOptions()) == "mdi:wifi-strength-alert-outline"
+
+
+def test_icon_backfill_lobbe():
+    assert suggest_entity_icon(_FakeEntry("sensor.lobbe"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_beleuchtungswert():
+    assert suggest_entity_icon(_FakeEntry("sensor.beleuchtungswert"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_hitzschlag():
+    assert suggest_entity_icon(_FakeEntry("sensor.hitzschlag"), OrganizerOptions()) == "mdi:thermometer-high"
+
+
+def test_icon_backfill_dev_channel():
+    assert suggest_entity_icon(_FakeEntry("sensor.dev_channel"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_claber():
+    assert suggest_entity_icon(_FakeEntry("sensor.claber"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_skriptstopp():
+    assert suggest_entity_icon(_FakeEntry("sensor.skriptstopp"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_tageslichtlampe():
+    assert suggest_entity_icon(_FakeEntry("sensor.tageslichtlampe"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_mtu_groesse():
+    assert suggest_entity_icon(_FakeEntry("sensor.mtu_groesse"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_nightcap():
+    assert suggest_entity_icon(_FakeEntry("sensor.nightcap"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_kontrolltaster():
+    assert suggest_entity_icon(_FakeEntry("sensor.kontrolltaster"), OrganizerOptions()) == "mdi:tune"
+
+
+def test_icon_backfill_beleuchtungsstaerke():
+    assert suggest_entity_icon(_FakeEntry("sensor.beleuchtungsstaerke"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_abwasserrueckstau():
+    assert suggest_entity_icon(_FakeEntry("sensor.abwasserrueckstau"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_icon_backfill_aruba_instant_on():
+    assert suggest_entity_icon(_FakeEntry("sensor.aruba_instant_on"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_port_mirroring():
+    assert suggest_entity_icon(_FakeEntry("sensor.port_mirroring"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_vayyar_care():
+    assert suggest_entity_icon(_FakeEntry("sensor.vayyar_care"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_kraftmax():
+    assert suggest_entity_icon(_FakeEntry("sensor.kraftmax"), OrganizerOptions()) == "mdi:battery-high"

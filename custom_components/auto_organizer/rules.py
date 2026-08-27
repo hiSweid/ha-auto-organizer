@@ -29203,6 +29203,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "fensterlueftung": "mdi:window-open",
     "letzte sichtung": "mdi:cctv",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "weatherapi": "mdi:weather-cloudy",
+    "temporaercode": "mdi:lock-outline",
+    "htu31": "mdi:water-percent",
+    "dreo fan": "mdi:fan",
+    "inselbatterie": "mdi:battery",
+    "auto dry mode": "mdi:water-off",
+    "riegelstange": "mdi:lock-outline",
+    "telekom stoerung": "mdi:wifi-strength-alert-outline",
+    "lobbe": "mdi:trash-can",
+    "beleuchtungswert": "mdi:brightness-5",
+    "hitzschlag": "mdi:thermometer-high",
+    "dev channel": "mdi:update",
+    "claber": "mdi:leaf",
+    "skriptstopp": "mdi:script-text-outline",
+    "tageslichtlampe": "mdi:lightbulb",
+    "mtu groesse": "mdi:network",
+    "nightcap": "mdi:movie-open",
+    "kontrolltaster": "mdi:tune",
+    "beleuchtungsstaerke": "mdi:brightness-6",
+    "abwasserrueckstau": "mdi:water-alert",
+    "aruba instant on": "mdi:network",
+    "port mirroring": "mdi:network",
+    "vayyar care": "mdi:motion-sensor",
+    "kraftmax": "mdi:battery-high",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
