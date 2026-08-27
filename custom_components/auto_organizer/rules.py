@@ -30970,6 +30970,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "anwaltskosten": "mdi:account-cash",
     "taupunktdifferenz": "mdi:water-percent",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "toilettenleck": "mdi:leak",
+    "versionscheck": "mdi:update",
+    "bridge update": "mdi:update",
+    "video streaming": "mdi:play-circle",
+    "feuchtenormwert": "mdi:water-percent",
+    "case fan": "mdi:fan",
+    "fan turbo mode": "mdi:fan-speed-3",
+    "rtmp stream": "mdi:camera",
+    "curl befehl": "mdi:script-text",
+    "pet door": "mdi:door-closed",
+    "am2315": "mdi:water-percent",
+    "regelbasis": "mdi:robot",
+    "hintergrundaufgabe": "mdi:script-text",
+    "lohas": "mdi:lightbulb",
+    "dyson pure cool": "mdi:fan",
+    "abfallchip": "mdi:trash-can",
+    "ladekontakt": "mdi:battery-charging",
+    "praesenzhaltezeit": "mdi:motion-sensor",
+    "altmetall": "mdi:recycle",
+    "routinensammlung": "mdi:script-text",
+    "jiobit": "mdi:account",
+    "verbrenner": "mdi:fire",
+    "software update": "mdi:update",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
