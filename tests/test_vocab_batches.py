@@ -75150,3 +75150,95 @@ def test_icon_backfill_google_play_update():
 
 def test_icon_backfill_fanfreq():
     assert suggest_entity_icon(_FakeEntry("sensor.fanfreq"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_bushnell():
+    assert suggest_entity_icon(_FakeEntry("sensor.bushnell"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_verkehrszeichenerkennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.verkehrszeichenerkennung"), OrganizerOptions()) == "mdi:traffic-light"
+
+
+def test_icon_backfill_mehretagenkarte():
+    assert suggest_entity_icon(_FakeEntry("sensor.mehretagenkarte"), OrganizerOptions()) == "mdi:calendar-multiple"
+
+
+def test_icon_backfill_motivationsschub():
+    assert suggest_entity_icon(_FakeEntry("sensor.motivationsschub"), OrganizerOptions()) == "mdi:rocket-launch"
+
+
+def test_icon_backfill_handlungssequenz():
+    assert suggest_entity_icon(_FakeEntry("sensor.handlungssequenz"), OrganizerOptions()) == "mdi:run-fast"
+
+
+def test_icon_backfill_visueller_editor_automation():
+    assert suggest_entity_icon(_FakeEntry("sensor.visueller_editor_automation"), OrganizerOptions()) == "mdi:code-braces"
+
+
+def test_icon_backfill_bali_blind():
+    assert suggest_entity_icon(_FakeEntry("sensor.bali_blind"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_icon_backfill_feierabendablauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.feierabendablauf"), OrganizerOptions()) == "mdi:clock-end"
+
+
+def test_icon_backfill_thermoelement_typ_k():
+    assert suggest_entity_icon(_FakeEntry("sensor.thermoelement_typ_k"), OrganizerOptions()) == "mdi:thermometer-chevron-up"
+
+
+def test_icon_backfill_farewell_scene():
+    assert suggest_entity_icon(_FakeEntry("sensor.farewell_scene"), OrganizerOptions()) == "mdi:door-open"
+
+
+def test_icon_backfill_poolpartyszene():
+    assert suggest_entity_icon(_FakeEntry("sensor.poolpartyszene"), OrganizerOptions()) == "mdi:pool"
+
+
+def test_icon_backfill_tierkoerperbeseitigung():
+    assert suggest_entity_icon(_FakeEntry("sensor.tierkoerperbeseitigung"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_app_store_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.app_store_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_lichtstaerkeeinstufung():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtstaerkeeinstufung"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_muffgeruch():
+    assert suggest_entity_icon(_FakeEntry("sensor.muffgeruch"), OrganizerOptions()) == "mdi:scent"
+
+
+def test_icon_backfill_tageslichtmenge():
+    assert suggest_entity_icon(_FakeEntry("sensor.tageslichtmenge"), OrganizerOptions()) == "mdi:white-balance-sunny"
+
+
+def test_icon_backfill_device_tracker_trigger():
+    assert suggest_entity_icon(_FakeEntry("sensor.device_tracker_trigger"), OrganizerOptions()) == "mdi:map-marker-alert"
+
+
+def test_icon_backfill_automation_verzoegerung():
+    assert suggest_entity_icon(_FakeEntry("sensor.automation_verzoegerung"), OrganizerOptions()) == "mdi:timer-sand"
+
+
+def test_icon_backfill_instacart():
+    assert suggest_entity_icon(_FakeEntry("sensor.instacart"), OrganizerOptions()) == "mdi:cart-arrow-right"
+
+
+def test_icon_backfill_kellermuff():
+    assert suggest_entity_icon(_FakeEntry("sensor.kellermuff"), OrganizerOptions()) == "mdi:fan-alert"
+
+
+def test_icon_backfill_arbeitsende():
+    assert suggest_entity_icon(_FakeEntry("sensor.arbeitsende"), OrganizerOptions()) == "mdi:briefcase-clock"
+
+
+def test_icon_backfill_bewegungsmelder_batterie():
+    assert suggest_entity_icon(_FakeEntry("sensor.bewegungsmelder_batterie"), OrganizerOptions()) == "mdi:battery-charging-wireless"
+
+
+def test_icon_backfill_zwischenhoch():
+    assert suggest_entity_icon(_FakeEntry("sensor.zwischenhoch"), OrganizerOptions()) == "mdi:weather-partly-cloudy"

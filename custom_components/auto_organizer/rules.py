@@ -31194,6 +31194,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "google play update": "mdi:update",
     "fanfreq": "mdi:fan",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "bushnell": "mdi:cctv",
+    "verkehrszeichenerkennung": "mdi:traffic-light",
+    "mehretagenkarte": "mdi:calendar-multiple",
+    "motivationsschub": "mdi:rocket-launch",
+    "handlungssequenz": "mdi:run-fast",
+    "visueller editor automation": "mdi:code-braces",
+    "bali blind": "mdi:blinds",
+    "feierabendablauf": "mdi:clock-end",
+    "thermoelement typ k": "mdi:thermometer-chevron-up",
+    "farewell scene": "mdi:door-open",
+    "poolpartyszene": "mdi:pool",
+    "tierkoerperbeseitigung": "mdi:trash-can",
+    "app store update": "mdi:update",
+    "lichtstaerkeeinstufung": "mdi:brightness-6",
+    "muffgeruch": "mdi:scent",
+    "tageslichtmenge": "mdi:white-balance-sunny",
+    "device tracker trigger": "mdi:map-marker-alert",
+    "automation verzoegerung": "mdi:timer-sand",
+    "instacart": "mdi:cart-arrow-right",
+    "kellermuff": "mdi:fan-alert",
+    "arbeitsende": "mdi:briefcase-clock",
+    "bewegungsmelder batterie": "mdi:battery-charging-wireless",
+    "zwischenhoch": "mdi:weather-partly-cloudy",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
