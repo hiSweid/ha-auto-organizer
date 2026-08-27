@@ -29424,6 +29424,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "marktpraemie": "mdi:cash-multiple",
     "temperature log": "mdi:chart-line",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "crawlspace flooding": "mdi:water",
+    "fahrzeugerkennung": "mdi:car-search",
+    "abfahrtsroutine": "mdi:run-fast",
+    "carpet avoidance": "mdi:robot-vacuum",
+    "sabotagealarm bewegungsmelder": "mdi:motion-sensor",
+    "luftverschmutzung": "mdi:air-filter",
+    "polklemme": "mdi:battery-charging",
+    "heizungsleck": "mdi:leak",
+    "kommt zurueck": "mdi:home-import-outline",
+    "temperaturklasse": "mdi:thermometer-lines",
+    "ecowitt": "mdi:weather-cloudy",
+    "millimeterwellensensor": "mdi:motion-sensor",
+    "messkosten": "mdi:cash-multiple",
+    "ventilatorkabel": "mdi:fan",
+    "kaeltefuehler": "mdi:thermometer-low",
+    "wasserschlauch": "mdi:water-pump",
+    "gestaffelte ausfuehrung": "mdi:script-text-outline",
+    "wallbox pufferakku": "mdi:battery-charging-wireless",
+    "ereignisaufnahme kamera": "mdi:camera-account",
+    "knopfbatterie": "mdi:battery-50",
+    "flitterwochen stimmung": "mdi:palette",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

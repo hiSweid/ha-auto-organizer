@@ -68686,3 +68686,87 @@ def test_icon_backfill_marktpraemie():
 
 def test_icon_backfill_temperature_log():
     assert suggest_entity_icon(_FakeEntry("sensor.temperature_log"), OrganizerOptions()) == "mdi:chart-line"
+
+
+def test_icon_backfill_crawlspace_flooding():
+    assert suggest_entity_icon(_FakeEntry("sensor.crawlspace_flooding"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_fahrzeugerkennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.fahrzeugerkennung"), OrganizerOptions()) == "mdi:car-search"
+
+
+def test_icon_backfill_abfahrtsroutine():
+    assert suggest_entity_icon(_FakeEntry("sensor.abfahrtsroutine"), OrganizerOptions()) == "mdi:run-fast"
+
+
+def test_icon_backfill_carpet_avoidance():
+    assert suggest_entity_icon(_FakeEntry("sensor.carpet_avoidance"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_sabotagealarm_bewegungsmelder():
+    assert suggest_entity_icon(_FakeEntry("sensor.sabotagealarm_bewegungsmelder"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_luftverschmutzung():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftverschmutzung"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_polklemme():
+    assert suggest_entity_icon(_FakeEntry("sensor.polklemme"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_heizungsleck():
+    assert suggest_entity_icon(_FakeEntry("sensor.heizungsleck"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_kommt_zurueck():
+    assert suggest_entity_icon(_FakeEntry("sensor.kommt_zurueck"), OrganizerOptions()) == "mdi:home-import-outline"
+
+
+def test_icon_backfill_temperaturklasse():
+    assert suggest_entity_icon(_FakeEntry("sensor.temperaturklasse"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_ecowitt():
+    assert suggest_entity_icon(_FakeEntry("sensor.ecowitt"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_millimeterwellensensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.millimeterwellensensor"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_messkosten():
+    assert suggest_entity_icon(_FakeEntry("sensor.messkosten"), OrganizerOptions()) == "mdi:cash-multiple"
+
+
+def test_icon_backfill_ventilatorkabel():
+    assert suggest_entity_icon(_FakeEntry("sensor.ventilatorkabel"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_kaeltefuehler():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaeltefuehler"), OrganizerOptions()) == "mdi:thermometer-low"
+
+
+def test_icon_backfill_wasserschlauch():
+    assert suggest_entity_icon(_FakeEntry("sensor.wasserschlauch"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_gestaffelte_ausfuehrung():
+    assert suggest_entity_icon(_FakeEntry("sensor.gestaffelte_ausfuehrung"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_wallbox_pufferakku():
+    assert suggest_entity_icon(_FakeEntry("sensor.wallbox_pufferakku"), OrganizerOptions()) == "mdi:battery-charging-wireless"
+
+
+def test_icon_backfill_ereignisaufnahme_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.ereignisaufnahme_kamera"), OrganizerOptions()) == "mdi:camera-account"
+
+
+def test_icon_backfill_knopfbatterie():
+    assert suggest_entity_icon(_FakeEntry("sensor.knopfbatterie"), OrganizerOptions()) == "mdi:battery-50"
+
+
+def test_icon_backfill_flitterwochen_stimmung():
+    assert suggest_entity_icon(_FakeEntry("sensor.flitterwochen_stimmung"), OrganizerOptions()) == "mdi:palette"
