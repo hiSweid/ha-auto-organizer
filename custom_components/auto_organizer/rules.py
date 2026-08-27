@@ -32325,6 +32325,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "fixkosten": "mdi:currency-eur",
     "nutzgarten": "mdi:tree",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "gastszene": "mdi:movie-open",
+    "zanussi": "mdi:washing-machine",
+    "tankdeckelverriegelung": "mdi:lock",
+    "ora cat": "mdi:car",
+    "aktionsvorlage": "mdi:script-text-outline",
+    "milesight lichtsensor": "mdi:brightness-6",
+    "dieselrussfilter": "mdi:air-filter",
+    "aussenstrahler bewegungsmelder": "mdi:motion-sensor",
+    "moldy": "mdi:water-percent",
+    "feuchteprotokoll": "mdi:water-percent",
+    "verkettete regel": "mdi:pipe",
+    "ladeschlussstrom": "mdi:battery-charging-wireless",
+    "tv abend": "mdi:television-classic",
+    "food thermometer": "mdi:thermometer",
+    "wasserenthaerter skript": "mdi:script-text-outline",
+    "mould growth": "mdi:water-percent",
+    "boerse strompreis": "mdi:currency-eur",
+    "keimbelastung": "mdi:air-filter",
+    "deebot t20 omni": "mdi:robot-vacuum",
+    "schrottplatz": "mdi:trash-can",
+    "humidistat": "mdi:water-percent",
+    "verpackungsgesetz": "mdi:recycle",
+    "room brightness": "mdi:brightness-6",
+    "mqtt": "mdi:network",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
