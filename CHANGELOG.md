@@ -6,6 +6,26 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.145] - 2026-08-27
+
+### Added
+- ~178 `SPECIFIC_ICONS` entries backfilled by a local-LLM-driven batch job
+  (runs on the maintainer's own hardware, no cloud calls) targeting the
+  ~6.9k `KEYWORD_LABELS` entries that had no icon at all. Each batch is
+  validated (word must be a real current gap, icon must be a real
+  non-deprecated `mdi:` name) and verified against the full test suite
+  before being committed; the job is still running and will land in
+  further releases.
+
+### Fixed
+- 6 icons from the backfill that a manual review caught: the model had
+  matched by superficial string similarity to an icon *name* rather than
+  by meaning (e.g. "last fm" got `mdi:lastpass` — a password manager —
+  just because both start with "last"; "garlic"/"gruenkohl" got
+  `mdi:carrot`, the wrong vegetable; "link node" got `mdi:nodejs`, the
+  JS runtime, not a network node). The generation prompt now carries
+  this exact failure pattern as a worked example to avoid.
+
 ## [0.9.144] - 2026-08-27
 
 ### Fixed
