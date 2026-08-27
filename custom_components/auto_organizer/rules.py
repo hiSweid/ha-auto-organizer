@@ -32370,6 +32370,24 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "consumption": "mdi:power-plug",
     "feuchteklasse": "mdi:water-percent",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "atemschutzmaske": "mdi:air-filter",
+    "kaeltewarnung": "mdi:snowflake-alert",
+    "bewegungsintervall": "mdi:motion-sensor",
+    "bestandskundenrabatt": "mdi:account-star",
+    "querlueftung": "mdi:fan-chevron-up",
+    "webhook payload": "mdi:webhook",
+    "akkuverschleiss": "mdi:battery-50",
+    "kaco": "mdi:solar-power",
+    "event handler": "mdi:script-text-outline",
+    "energy cost": "mdi:currency-eur",
+    "wetterstation batterie": "mdi:weather-cloudy-alert",
+    "nachtmodus sauger": "mdi:moon-full",
+    "ruecklauf temperatur": "mdi:thermometer-low",
+    "ladewippschalter": "mdi:car-electric",
+    "spuelkastenleck": "mdi:leak-off",
+    "wetterkanal": "mdi:weather-windy",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

@@ -79422,3 +79422,67 @@ def test_icon_backfill_consumption():
 
 def test_icon_backfill_feuchteklasse():
     assert suggest_entity_icon(_FakeEntry("sensor.feuchteklasse"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_atemschutzmaske():
+    assert suggest_entity_icon(_FakeEntry("sensor.atemschutzmaske"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_kaeltewarnung():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaeltewarnung"), OrganizerOptions()) == "mdi:snowflake-alert"
+
+
+def test_icon_backfill_bewegungsintervall():
+    assert suggest_entity_icon(_FakeEntry("sensor.bewegungsintervall"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_bestandskundenrabatt():
+    assert suggest_entity_icon(_FakeEntry("sensor.bestandskundenrabatt"), OrganizerOptions()) == "mdi:account-star"
+
+
+def test_icon_backfill_querlueftung():
+    assert suggest_entity_icon(_FakeEntry("sensor.querlueftung"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_webhook_payload():
+    assert suggest_entity_icon(_FakeEntry("sensor.webhook_payload"), OrganizerOptions()) == "mdi:webhook"
+
+
+def test_icon_backfill_akkuverschleiss():
+    assert suggest_entity_icon(_FakeEntry("sensor.akkuverschleiss"), OrganizerOptions()) == "mdi:battery-50"
+
+
+def test_icon_backfill_kaco():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaco"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_event_handler():
+    assert suggest_entity_icon(_FakeEntry("sensor.event_handler"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_energy_cost():
+    assert suggest_entity_icon(_FakeEntry("sensor.energy_cost"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_wetterstation_batterie():
+    assert suggest_entity_icon(_FakeEntry("sensor.wetterstation_batterie"), OrganizerOptions()) == "mdi:weather-cloudy-alert"
+
+
+def test_icon_backfill_nachtmodus_sauger():
+    assert suggest_entity_icon(_FakeEntry("sensor.nachtmodus_sauger"), OrganizerOptions()) == "mdi:moon-full"
+
+
+def test_icon_backfill_ruecklauf_temperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.ruecklauf_temperatur"), OrganizerOptions()) == "mdi:thermometer-low"
+
+
+def test_icon_backfill_ladewippschalter():
+    assert suggest_entity_icon(_FakeEntry("sensor.ladewippschalter"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_spuelkastenleck():
+    assert suggest_entity_icon(_FakeEntry("sensor.spuelkastenleck"), OrganizerOptions()) == "mdi:leak-off"
+
+
+def test_icon_backfill_wetterkanal():
+    assert suggest_entity_icon(_FakeEntry("sensor.wetterkanal"), OrganizerOptions()) == "mdi:weather-windy"
