@@ -31114,6 +31114,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "windflaute": "mdi:wind-turbine",
     "spoolman update": "mdi:update",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "dachterrasse undicht": "mdi:leak",
+    "erfassungswinkel": "mdi:motion-sensor",
+    "zonenreinigung": "mdi:vacuum",
+    "l1 spannung": "mdi:power-plug",
+    "siemens bewegungsmelder": "mdi:motion-sensor",
+    "apds9960": "mdi:brightness-5",
+    "wiedergabemodus": "mdi:play-circle",
+    "launchd agent": "mdi:script-text",
+    "duschgel": "mdi:shopping",
+    "schliesskloben": "mdi:lock",
+    "chimney": "mdi:fireplace",
+    "otto doerner": "mdi:trash-can",
+    "beschlagen": "mdi:water-percent",
+    "frostalarm": "mdi:snowflake-alert",
+    "regensensor markise": "mdi:window-shutter",
+    "calb": "mdi:battery-charging",
+    "entleerstation": "mdi:vacuum",
+    "luftqualitaetsdaten": "mdi:air-filter",
+    "evening routine": "mdi:script-text",
+    "haushaltsrolle": "mdi:shopping",
+    "hell dunkel sensor": "mdi:brightness-5",
+    "aequinoktium": "mdi:weather-sunny",
+    "sht45": "mdi:water-percent",
+    "moppfeuchtigkeit": "mdi:waves",
+    "schluesseluebergabe": "mdi:lock",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
