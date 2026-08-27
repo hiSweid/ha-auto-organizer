@@ -30995,6 +30995,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "verbrenner": "mdi:fire",
     "software update": "mdi:update",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "energiemenge": "mdi:lightbulb",
+    "knoblauch": "mdi:shopping-outline",
+    "luminous efficacy": "mdi:brightness-6",
+    "brokkoli": "mdi:shopping-outline",
+    "trockensaugen": "mdi:vacuum",
+    "zonenregelung": "mdi:thermostat",
+    "sht40": "mdi:temperature-celsius",
+    "gewaechshausentfeuchter": "mdi:water-percent",
+    "wbgt index": "mdi:temperature-celsius",
+    "verzoegerungsskript": "mdi:script-text-outline",
+    "ampere stunde": "mdi:battery-charging-20",
+    "merten bewegungsmelder": "mdi:motion-sensor",
+    "regenwahrscheinlichkeit": "mdi:weather-rainy",
+    "hoerspiel": "mdi:headphones",
+    "abzugshaube": "mdi:fan",
+    "wartezimmer belegt": "mdi:account-clock",
+    "biotonnenchip": "mdi:recycle",
+    "parallel action": "mdi:shape-square-plus",
+    "bypassklappe": "mdi:valve",
+    "getraenkeabo": "mdi:shopping-outline",
+    "beta channel": "mdi:update",
+    "saflok": "mdi:lock",
+    "bmw connected": "mdi:car",
+    "fast charging": "mdi:battery-charging-wireless",
+    "fruehbeet": "mdi:sprout",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

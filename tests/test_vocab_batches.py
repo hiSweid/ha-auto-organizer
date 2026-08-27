@@ -74426,3 +74426,103 @@ def test_icon_backfill_verbrenner():
 
 def test_icon_backfill_software_update():
     assert suggest_entity_icon(_FakeEntry("sensor.software_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_energiemenge():
+    assert suggest_entity_icon(_FakeEntry("sensor.energiemenge"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_knoblauch():
+    assert suggest_entity_icon(_FakeEntry("sensor.knoblauch"), OrganizerOptions()) == "mdi:shopping-outline"
+
+
+def test_icon_backfill_luminous_efficacy():
+    assert suggest_entity_icon(_FakeEntry("sensor.luminous_efficacy"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_brokkoli():
+    assert suggest_entity_icon(_FakeEntry("sensor.brokkoli"), OrganizerOptions()) == "mdi:shopping-outline"
+
+
+def test_icon_backfill_trockensaugen():
+    assert suggest_entity_icon(_FakeEntry("sensor.trockensaugen"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_zonenregelung():
+    assert suggest_entity_icon(_FakeEntry("sensor.zonenregelung"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_icon_backfill_sht40():
+    assert suggest_entity_icon(_FakeEntry("sensor.sht40"), OrganizerOptions()) == "mdi:temperature-celsius"
+
+
+def test_icon_backfill_gewaechshausentfeuchter():
+    assert suggest_entity_icon(_FakeEntry("sensor.gewaechshausentfeuchter"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_wbgt_index():
+    assert suggest_entity_icon(_FakeEntry("sensor.wbgt_index"), OrganizerOptions()) == "mdi:temperature-celsius"
+
+
+def test_icon_backfill_verzoegerungsskript():
+    assert suggest_entity_icon(_FakeEntry("sensor.verzoegerungsskript"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_ampere_stunde():
+    assert suggest_entity_icon(_FakeEntry("sensor.ampere_stunde"), OrganizerOptions()) == "mdi:battery-charging-20"
+
+
+def test_icon_backfill_merten_bewegungsmelder():
+    assert suggest_entity_icon(_FakeEntry("sensor.merten_bewegungsmelder"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_regenwahrscheinlichkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.regenwahrscheinlichkeit"), OrganizerOptions()) == "mdi:weather-rainy"
+
+
+def test_icon_backfill_hoerspiel():
+    assert suggest_entity_icon(_FakeEntry("sensor.hoerspiel"), OrganizerOptions()) == "mdi:headphones"
+
+
+def test_icon_backfill_abzugshaube():
+    assert suggest_entity_icon(_FakeEntry("sensor.abzugshaube"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_wartezimmer_belegt():
+    assert suggest_entity_icon(_FakeEntry("sensor.wartezimmer_belegt"), OrganizerOptions()) == "mdi:account-clock"
+
+
+def test_icon_backfill_biotonnenchip():
+    assert suggest_entity_icon(_FakeEntry("sensor.biotonnenchip"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_parallel_action():
+    assert suggest_entity_icon(_FakeEntry("sensor.parallel_action"), OrganizerOptions()) == "mdi:shape-square-plus"
+
+
+def test_icon_backfill_bypassklappe():
+    assert suggest_entity_icon(_FakeEntry("sensor.bypassklappe"), OrganizerOptions()) == "mdi:valve"
+
+
+def test_icon_backfill_getraenkeabo():
+    assert suggest_entity_icon(_FakeEntry("sensor.getraenkeabo"), OrganizerOptions()) == "mdi:shopping-outline"
+
+
+def test_icon_backfill_beta_channel():
+    assert suggest_entity_icon(_FakeEntry("sensor.beta_channel"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_saflok():
+    assert suggest_entity_icon(_FakeEntry("sensor.saflok"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_bmw_connected():
+    assert suggest_entity_icon(_FakeEntry("sensor.bmw_connected"), OrganizerOptions()) == "mdi:car"
+
+
+def test_icon_backfill_fast_charging():
+    assert suggest_entity_icon(_FakeEntry("sensor.fast_charging"), OrganizerOptions()) == "mdi:battery-charging-wireless"
+
+
+def test_icon_backfill_fruehbeet():
+    assert suggest_entity_icon(_FakeEntry("sensor.fruehbeet"), OrganizerOptions()) == "mdi:sprout"
