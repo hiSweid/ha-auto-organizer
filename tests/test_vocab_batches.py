@@ -59086,3 +59086,99 @@ def test_icon_backfill_downburst():
 
 def test_icon_backfill_hauseingang_bewegungsmelder():
     assert suggest_entity_icon(_FakeEntry("sensor.hauseingang_bewegungsmelder"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_querlueftung_fenster():
+    assert suggest_entity_icon(_FakeEntry("sensor.querlueftung_fenster"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_public_charging():
+    assert suggest_entity_icon(_FakeEntry("sensor.public_charging"), OrganizerOptions()) == "mdi:ev-station"
+
+
+def test_icon_backfill_bringsystem():
+    assert suggest_entity_icon(_FakeEntry("sensor.bringsystem"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_ueberschuss():
+    assert suggest_entity_icon(_FakeEntry("sensor.ueberschuss"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_ecmwf():
+    assert suggest_entity_icon(_FakeEntry("sensor.ecmwf"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_pressure_vessel():
+    assert suggest_entity_icon(_FakeEntry("sensor.pressure_vessel"), OrganizerOptions()) == "mdi:gauge"
+
+
+def test_icon_backfill_ssid():
+    assert suggest_entity_icon(_FakeEntry("sensor.ssid"), OrganizerOptions()) == "mdi:wifi"
+
+
+def test_icon_backfill_kaskadierte_automation():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaskadierte_automation"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_skot():
+    assert suggest_entity_icon(_FakeEntry("sensor.skot"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_mainova():
+    assert suggest_entity_icon(_FakeEntry("sensor.mainova"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_asus_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.asus_firmware"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_backofensolltemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.backofensolltemperatur"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_icon_backfill_klinkenstecker():
+    assert suggest_entity_icon(_FakeEntry("sensor.klinkenstecker"), OrganizerOptions()) == "mdi:audio-video"
+
+
+def test_icon_backfill_lichtausbeutewert():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtausbeutewert"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_ausgecheckt():
+    assert suggest_entity_icon(_FakeEntry("sensor.ausgecheckt"), OrganizerOptions()) == "mdi:account-off"
+
+
+def test_icon_backfill_couchpotato_modus():
+    assert suggest_entity_icon(_FakeEntry("sensor.couchpotato_modus"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_wasserbehaelter_sauger():
+    assert suggest_entity_icon(_FakeEntry("sensor.wasserbehaelter_sauger"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_deep_discharge():
+    assert suggest_entity_icon(_FakeEntry("sensor.deep_discharge"), OrganizerOptions()) == "mdi:battery-alert"
+
+
+def test_icon_backfill_fluence():
+    assert suggest_entity_icon(_FakeEntry("sensor.fluence"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_akkukapazitaet_sauger():
+    assert suggest_entity_icon(_FakeEntry("sensor.akkukapazitaet_sauger"), OrganizerOptions()) == "mdi:battery-high"
+
+
+def test_icon_backfill_canary_build():
+    assert suggest_entity_icon(_FakeEntry("sensor.canary_build"), OrganizerOptions()) == "mdi:package-variant-closed"
+
+
+def test_icon_backfill_housemate():
+    assert suggest_entity_icon(_FakeEntry("sensor.housemate"), OrganizerOptions()) == "mdi:account-multiple"
+
+
+def test_icon_backfill_rest_command_trigger():
+    assert suggest_entity_icon(_FakeEntry("sensor.rest_command_trigger"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_hifi_anlage():
+    assert suggest_entity_icon(_FakeEntry("sensor.hifi_anlage"), OrganizerOptions()) == "mdi:speaker"

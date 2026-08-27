@@ -26808,6 +26808,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "downburst": "mdi:weather-hail",
     "hauseingang bewegungsmelder": "mdi:motion-sensor",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "querlueftung fenster": "mdi:fan",
+    "public charging": "mdi:ev-station",
+    "bringsystem": "mdi:trash-can",
+    "ueberschuss": "mdi:solar-power",
+    "ecmwf": "mdi:weather-cloudy",
+    "pressure vessel": "mdi:gauge",
+    "ssid": "mdi:wifi",
+    "kaskadierte automation": "mdi:script-text",
+    "skot": "mdi:brightness-5",
+    "mainova": "mdi:currency-eur",
+    "asus firmware": "mdi:update",
+    "backofensolltemperatur": "mdi:thermostat",
+    "klinkenstecker": "mdi:audio-video",
+    "lichtausbeutewert": "mdi:brightness-6",
+    "ausgecheckt": "mdi:account-off",
+    "couchpotato modus": "mdi:movie-open",
+    "wasserbehaelter sauger": "mdi:water",
+    "deep discharge": "mdi:battery-alert",
+    "fluence": "mdi:car-electric",
+    "akkukapazitaet sauger": "mdi:battery-high",
+    "canary build": "mdi:package-variant-closed",
+    "housemate": "mdi:account-multiple",
+    "rest command trigger": "mdi:flash",
+    "hifi anlage": "mdi:speaker",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
