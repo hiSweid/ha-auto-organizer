@@ -31958,6 +31958,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "hilfsschalter": "mdi:toggle-switch",
     "partikelmessung": "mdi:air-filter",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "windelgroesse": "mdi:baby-carriage",
+    "raumluft": "mdi:air-filter",
+    "heimkehrroutine": "mdi:home-import-outline",
+    "collection week": "mdi:calendar-week",
+    "installationsaktor": "mdi:power-plug",
+    "ventilatorwandhalterung": "mdi:fan-chevron-up",
+    "interzero": "mdi:trash-can",
+    "gartenwasserhahn": "mdi:water-pump",
+    "check24": "mdi:cart-arrow-right",
+    "taskkette": "mdi:format-list-bulleted-square",
+    "degustationsabend": "mdi:food-apple",
+    "sky go": "mdi:television-classic",
+    "messlokation": "mdi:gauge",
+    "funk cam": "mdi:cctv",
+    "batteriekapazitaet": "mdi:battery-charging",
+    "gigaset kamera": "mdi:camera",
+    "helligkeitsstufe": "mdi:brightness-6",
+    "high security lock": "mdi:lock-alert",
+    "schwimmbadabdeckung": "mdi:pool",
+    "deponieverordnung": "mdi:trash-can-outline",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

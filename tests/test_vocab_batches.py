@@ -77934,3 +77934,83 @@ def test_icon_backfill_hilfsschalter():
 
 def test_icon_backfill_partikelmessung():
     assert suggest_entity_icon(_FakeEntry("sensor.partikelmessung"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_windelgroesse():
+    assert suggest_entity_icon(_FakeEntry("sensor.windelgroesse"), OrganizerOptions()) == "mdi:baby-carriage"
+
+
+def test_icon_backfill_raumluft():
+    assert suggest_entity_icon(_FakeEntry("sensor.raumluft"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_heimkehrroutine():
+    assert suggest_entity_icon(_FakeEntry("sensor.heimkehrroutine"), OrganizerOptions()) == "mdi:home-import-outline"
+
+
+def test_icon_backfill_collection_week():
+    assert suggest_entity_icon(_FakeEntry("sensor.collection_week"), OrganizerOptions()) == "mdi:calendar-week"
+
+
+def test_icon_backfill_installationsaktor():
+    assert suggest_entity_icon(_FakeEntry("sensor.installationsaktor"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_ventilatorwandhalterung():
+    assert suggest_entity_icon(_FakeEntry("sensor.ventilatorwandhalterung"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_interzero():
+    assert suggest_entity_icon(_FakeEntry("sensor.interzero"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_gartenwasserhahn():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenwasserhahn"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_check24():
+    assert suggest_entity_icon(_FakeEntry("sensor.check24"), OrganizerOptions()) == "mdi:cart-arrow-right"
+
+
+def test_icon_backfill_taskkette():
+    assert suggest_entity_icon(_FakeEntry("sensor.taskkette"), OrganizerOptions()) == "mdi:format-list-bulleted-square"
+
+
+def test_icon_backfill_degustationsabend():
+    assert suggest_entity_icon(_FakeEntry("sensor.degustationsabend"), OrganizerOptions()) == "mdi:food-apple"
+
+
+def test_icon_backfill_sky_go():
+    assert suggest_entity_icon(_FakeEntry("sensor.sky_go"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_messlokation():
+    assert suggest_entity_icon(_FakeEntry("sensor.messlokation"), OrganizerOptions()) == "mdi:gauge"
+
+
+def test_icon_backfill_funk_cam():
+    assert suggest_entity_icon(_FakeEntry("sensor.funk_cam"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_batteriekapazitaet():
+    assert suggest_entity_icon(_FakeEntry("sensor.batteriekapazitaet"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_gigaset_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.gigaset_kamera"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_helligkeitsstufe():
+    assert suggest_entity_icon(_FakeEntry("sensor.helligkeitsstufe"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_high_security_lock():
+    assert suggest_entity_icon(_FakeEntry("sensor.high_security_lock"), OrganizerOptions()) == "mdi:lock-alert"
+
+
+def test_icon_backfill_schwimmbadabdeckung():
+    assert suggest_entity_icon(_FakeEntry("sensor.schwimmbadabdeckung"), OrganizerOptions()) == "mdi:pool"
+
+
+def test_icon_backfill_deponieverordnung():
+    assert suggest_entity_icon(_FakeEntry("sensor.deponieverordnung"), OrganizerOptions()) == "mdi:trash-can-outline"
