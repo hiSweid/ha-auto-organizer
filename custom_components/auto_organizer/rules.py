@@ -29548,6 +29548,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "milight": "mdi:lightbulb",
     "hygrostatschaltung": "mdi:water-percent",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "invertierte bedingung": "mdi:checkbox-marked-outline",
+    "icon modell": "mdi:weather-sunny",
+    "witterung": "mdi:weather-cloudy",
+    "kilowattstundenpreis": "mdi:currency-eur",
+    "anlegethermometer": "mdi:thermometer-lines",
+    "gigaset firmware": "mdi:update",
+    "gemischtwarenladen": "mdi:store",
+    "air circulator": "mdi:fan",
+    "fallback aktion": "mdi:backup-restore",
+    "nachtsicht": "mdi:eye-outline",
+    "temperature controlled cabinet": "mdi:fridge-industrial",
+    "gelber deckel": "mdi:trash-can",
+    "geschirrspueler skript": "mdi:script-text",
+    "charging session": "mdi:battery-charging",
+    "bluetti": "mdi:battery-high",
+    "audio sync": "mdi:speaker-wireless",
+    "inline switch": "mdi:power-plug",
+    "custom skript": "mdi:script-text-outline",
+    "vorrat": "mdi:package-variant-closed",
+    "update erzwingen": "mdi:update",
+    "kabelgewirr": "mdi:network",
+    "rueckfallwert": "mdi:arrow-u-left-top",
+    "kondensatpumpe stoerung": "mdi:alert-circle",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
