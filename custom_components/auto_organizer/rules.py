@@ -27183,6 +27183,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "motion interval": "mdi:motion-sensor",
     "hoverboard akku": "mdi:battery",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "endrekursion": "mdi:code-braces",
+    "traefik update": "mdi:update",
+    "sommerbypass": "mdi:fan",
+    "aemet": "mdi:weather-cloudy",
+    "kangoo": "mdi:car",
+    "tvoc sensor": "mdi:air-filter",
+    "monsoon": "mdi:weather-pouring",
+    "yamaha musiccast": "mdi:music-note",
+    "trockensauger": "mdi:vacuum",
+    "molicel": "mdi:battery-charging",
+    "costume party": "mdi:party-popper",
+    "cruise modus": "mdi:camera-enhance",
+    "trueplay": "mdi:equalizer",
+    "battery management": "mdi:battery-sync",
+    "nordlux": "mdi:lightbulb",
+    "funkfrequenz": "mdi:wifi",
+    "wiegand": "mdi:lock",
+    "wetterfrosch": "mdi:weather-sunny",
+    "panoramamodus": "mdi:camera-iris",
+    "wohnzimmer belegt": "mdi:home-heart",
+    "charge controller": "mdi:power-plug",
+    "gast wlan": "mdi:wifi-star",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

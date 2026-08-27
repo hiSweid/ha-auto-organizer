@@ -60466,3 +60466,91 @@ def test_icon_backfill_motion_interval():
 
 def test_icon_backfill_hoverboard_akku():
     assert suggest_entity_icon(_FakeEntry("sensor.hoverboard_akku"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_endrekursion():
+    assert suggest_entity_icon(_FakeEntry("sensor.endrekursion"), OrganizerOptions()) == "mdi:code-braces"
+
+
+def test_icon_backfill_traefik_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.traefik_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_sommerbypass():
+    assert suggest_entity_icon(_FakeEntry("sensor.sommerbypass"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_aemet():
+    assert suggest_entity_icon(_FakeEntry("sensor.aemet"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_kangoo():
+    assert suggest_entity_icon(_FakeEntry("sensor.kangoo"), OrganizerOptions()) == "mdi:car"
+
+
+def test_icon_backfill_tvoc_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.tvoc_sensor"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_monsoon():
+    assert suggest_entity_icon(_FakeEntry("sensor.monsoon"), OrganizerOptions()) == "mdi:weather-pouring"
+
+
+def test_icon_backfill_yamaha_musiccast():
+    assert suggest_entity_icon(_FakeEntry("sensor.yamaha_musiccast"), OrganizerOptions()) == "mdi:music-note"
+
+
+def test_icon_backfill_trockensauger():
+    assert suggest_entity_icon(_FakeEntry("sensor.trockensauger"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_molicel():
+    assert suggest_entity_icon(_FakeEntry("sensor.molicel"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_costume_party():
+    assert suggest_entity_icon(_FakeEntry("sensor.costume_party"), OrganizerOptions()) == "mdi:party-popper"
+
+
+def test_icon_backfill_cruise_modus():
+    assert suggest_entity_icon(_FakeEntry("sensor.cruise_modus"), OrganizerOptions()) == "mdi:camera-enhance"
+
+
+def test_icon_backfill_trueplay():
+    assert suggest_entity_icon(_FakeEntry("sensor.trueplay"), OrganizerOptions()) == "mdi:equalizer"
+
+
+def test_icon_backfill_battery_management():
+    assert suggest_entity_icon(_FakeEntry("sensor.battery_management"), OrganizerOptions()) == "mdi:battery-sync"
+
+
+def test_icon_backfill_nordlux():
+    assert suggest_entity_icon(_FakeEntry("sensor.nordlux"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_funkfrequenz():
+    assert suggest_entity_icon(_FakeEntry("sensor.funkfrequenz"), OrganizerOptions()) == "mdi:wifi"
+
+
+def test_icon_backfill_wiegand():
+    assert suggest_entity_icon(_FakeEntry("sensor.wiegand"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_wetterfrosch():
+    assert suggest_entity_icon(_FakeEntry("sensor.wetterfrosch"), OrganizerOptions()) == "mdi:weather-sunny"
+
+
+def test_icon_backfill_panoramamodus():
+    assert suggest_entity_icon(_FakeEntry("sensor.panoramamodus"), OrganizerOptions()) == "mdi:camera-iris"
+
+
+def test_icon_backfill_wohnzimmer_belegt():
+    assert suggest_entity_icon(_FakeEntry("sensor.wohnzimmer_belegt"), OrganizerOptions()) == "mdi:home-heart"
+
+
+def test_icon_backfill_charge_controller():
+    assert suggest_entity_icon(_FakeEntry("sensor.charge_controller"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_gast_wlan():
+    assert suggest_entity_icon(_FakeEntry("sensor.gast_wlan"), OrganizerOptions()) == "mdi:wifi-star"
