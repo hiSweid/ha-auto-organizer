@@ -29304,6 +29304,25 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "flexibilitaetspraemie": "mdi:cash-multiple",
     "genetec": "mdi:cctv",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "kombitarif": "mdi:currency-eur",
+    "einheitspreis": "mdi:counter",
+    "php skript": "mdi:script-text",
+    "warded lock": "mdi:lock-check",
+    "uv desinfektion pool": "mdi:pool",
+    "zuhause abwesend": "mdi:home-outline",
+    "rohrverstopfung wasser": "mdi:pipe-leak",
+    "zustandsbedingung": "mdi:state-machine",
+    "taeglich": "mdi:calendar-today",
+    "kludi": "mdi:water-pump",
+    "zickzack muster": "mdi:format-line-spacing",
+    "iteration": "mdi:repeat",
+    "dachterrassenhelligkeit": "mdi:brightness-6",
+    "logikoperator": "mdi:function",
+    "balkenmaeher": "mdi:scissors-cutting",
+    "dauerentfeuchtung": "mdi:air-humidifier",
+    "buildversion": "mdi:package-variant",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

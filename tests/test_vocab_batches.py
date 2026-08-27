@@ -68246,3 +68246,71 @@ def test_icon_backfill_flexibilitaetspraemie():
 
 def test_icon_backfill_genetec():
     assert suggest_entity_icon(_FakeEntry("sensor.genetec"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_kombitarif():
+    assert suggest_entity_icon(_FakeEntry("sensor.kombitarif"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_einheitspreis():
+    assert suggest_entity_icon(_FakeEntry("sensor.einheitspreis"), OrganizerOptions()) == "mdi:counter"
+
+
+def test_icon_backfill_php_skript():
+    assert suggest_entity_icon(_FakeEntry("sensor.php_skript"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_warded_lock():
+    assert suggest_entity_icon(_FakeEntry("sensor.warded_lock"), OrganizerOptions()) == "mdi:lock-check"
+
+
+def test_icon_backfill_uv_desinfektion_pool():
+    assert suggest_entity_icon(_FakeEntry("sensor.uv_desinfektion_pool"), OrganizerOptions()) == "mdi:pool"
+
+
+def test_icon_backfill_zuhause_abwesend():
+    assert suggest_entity_icon(_FakeEntry("sensor.zuhause_abwesend"), OrganizerOptions()) == "mdi:home-outline"
+
+
+def test_icon_backfill_rohrverstopfung_wasser():
+    assert suggest_entity_icon(_FakeEntry("sensor.rohrverstopfung_wasser"), OrganizerOptions()) == "mdi:pipe-leak"
+
+
+def test_icon_backfill_zustandsbedingung():
+    assert suggest_entity_icon(_FakeEntry("sensor.zustandsbedingung"), OrganizerOptions()) == "mdi:state-machine"
+
+
+def test_icon_backfill_taeglich():
+    assert suggest_entity_icon(_FakeEntry("sensor.taeglich"), OrganizerOptions()) == "mdi:calendar-today"
+
+
+def test_icon_backfill_kludi():
+    assert suggest_entity_icon(_FakeEntry("sensor.kludi"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_zickzack_muster():
+    assert suggest_entity_icon(_FakeEntry("sensor.zickzack_muster"), OrganizerOptions()) == "mdi:format-line-spacing"
+
+
+def test_icon_backfill_iteration():
+    assert suggest_entity_icon(_FakeEntry("sensor.iteration"), OrganizerOptions()) == "mdi:repeat"
+
+
+def test_icon_backfill_dachterrassenhelligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.dachterrassenhelligkeit"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_logikoperator():
+    assert suggest_entity_icon(_FakeEntry("sensor.logikoperator"), OrganizerOptions()) == "mdi:function"
+
+
+def test_icon_backfill_balkenmaeher():
+    assert suggest_entity_icon(_FakeEntry("sensor.balkenmaeher"), OrganizerOptions()) == "mdi:scissors-cutting"
+
+
+def test_icon_backfill_dauerentfeuchtung():
+    assert suggest_entity_icon(_FakeEntry("sensor.dauerentfeuchtung"), OrganizerOptions()) == "mdi:air-humidifier"
+
+
+def test_icon_backfill_buildversion():
+    assert suggest_entity_icon(_FakeEntry("sensor.buildversion"), OrganizerOptions()) == "mdi:package-variant"
