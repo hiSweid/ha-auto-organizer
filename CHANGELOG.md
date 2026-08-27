@@ -6,6 +6,32 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.148] - 2026-08-27
+
+### Added
+- Further `SPECIFIC_ICONS` entries from the ongoing local-LLM icon backfill
+  batch job (~1899 total merged so far this run, ~4.5k of the original
+  6.9k gap remaining).
+
+### Fixed
+- 7 more icon mismatches from the same surface-similarity failure pattern:
+  `nginx proxy manager` had `mdi:nas` (a storage icon, not a proxy/network
+  server), `eichhoernchen` (squirrel) had `mdi:duck`, `dac wandler` (an
+  audio DAC) had `mdi:digital-ocean` (the cloud hosting company's logo —
+  pure name collision on "digital"), `seismometer` had `mdi:home-heart`,
+  `memoryeffekt` (a battery's memory effect) had `mdi:memory` (the
+  computer-RAM icon), `soletemperatur` (a heat pump's brine temperature)
+  had `mdi:sun-thermometer`, `clubmodus` (a party scene) had
+  `mdi:movie-open`.
+
+### Fixed (process)
+- Discovered mid-review that manually editing `rules.py`/the test file
+  while the backfill loop is running can race with its own read-merge-
+  write cycle and silently lose the manual edit (the loop's next batch
+  commit overwrites it with its own in-memory copy of the file). The loop
+  process is now paused (`SIGSTOP`) for the ~10s a manual fix+commit takes
+  and resumed right after, eliminating the race for future review rounds.
+
 ## [0.9.147] - 2026-08-27
 
 ### Added
