@@ -71578,3 +71578,87 @@ def test_icon_backfill_free_cooling():
 
 def test_icon_backfill_lieferando():
     assert suggest_entity_icon(_FakeEntry("sensor.lieferando"), OrganizerOptions()) == "mdi:truck-delivery"
+
+
+def test_icon_backfill_schlauchwagen():
+    assert suggest_entity_icon(_FakeEntry("sensor.schlauchwagen"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_luftkeimzahl():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftkeimzahl"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_zustandsbasierte_regel():
+    assert suggest_entity_icon(_FakeEntry("sensor.zustandsbasierte_regel"), OrganizerOptions()) == "mdi:state-machine"
+
+
+def test_icon_backfill_zutritt():
+    assert suggest_entity_icon(_FakeEntry("sensor.zutritt"), OrganizerOptions()) == "mdi:door-open"
+
+
+def test_icon_backfill_natural_wind_fan():
+    assert suggest_entity_icon(_FakeEntry("sensor.natural_wind_fan"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_deceuninck_fenster():
+    assert suggest_entity_icon(_FakeEntry("sensor.deceuninck_fenster"), OrganizerOptions()) == "mdi:window-closed"
+
+
+def test_icon_backfill_tuerschliessung():
+    assert suggest_entity_icon(_FakeEntry("sensor.tuerschliessung"), OrganizerOptions()) == "mdi:lock-outline"
+
+
+def test_icon_backfill_orf_mediathek():
+    assert suggest_entity_icon(_FakeEntry("sensor.orf_mediathek"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_mounted_dimmable_load_control():
+    assert suggest_entity_icon(_FakeEntry("sensor.mounted_dimmable_load_control"), OrganizerOptions()) == "mdi:lightbulb-on"
+
+
+def test_icon_backfill_hausbeleuchtung():
+    assert suggest_entity_icon(_FakeEntry("sensor.hausbeleuchtung"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_cleaning_run():
+    assert suggest_entity_icon(_FakeEntry("sensor.cleaning_run"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_feed_in():
+    assert suggest_entity_icon(_FakeEntry("sensor.feed_in"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_erzeugungsleistung():
+    assert suggest_entity_icon(_FakeEntry("sensor.erzeugungsleistung"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_firmware_hash():
+    assert suggest_entity_icon(_FakeEntry("sensor.firmware_hash"), OrganizerOptions()) == "mdi:file-check"
+
+
+def test_icon_backfill_check_meter():
+    assert suggest_entity_icon(_FakeEntry("sensor.check_meter"), OrganizerOptions()) == "mdi:meter-electric"
+
+
+def test_icon_backfill_bluesound_node():
+    assert suggest_entity_icon(_FakeEntry("sensor.bluesound_node"), OrganizerOptions()) == "mdi:speaker-wireless"
+
+
+def test_icon_backfill_morgenablauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.morgenablauf"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_eufy_alarm():
+    assert suggest_entity_icon(_FakeEntry("sensor.eufy_alarm"), OrganizerOptions()) == "mdi:alarm-bell"
+
+
+def test_icon_backfill_alba_entsorgung():
+    assert suggest_entity_icon(_FakeEntry("sensor.alba_entsorgung"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_veka_fenster():
+    assert suggest_entity_icon(_FakeEntry("sensor.veka_fenster"), OrganizerOptions()) == "mdi:window-open"
+
+
+def test_icon_backfill_grillfeststimmung():
+    assert suggest_entity_icon(_FakeEntry("sensor.grillfeststimmung"), OrganizerOptions()) == "mdi:chef-hat"

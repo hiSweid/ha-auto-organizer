@@ -30215,6 +30215,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "free cooling": "mdi:snowflake",
     "lieferando": "mdi:truck-delivery",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "schlauchwagen": "mdi:water-pump",
+    "luftkeimzahl": "mdi:air-filter",
+    "zustandsbasierte regel": "mdi:state-machine",
+    "zutritt": "mdi:door-open",
+    "natural wind fan": "mdi:fan-chevron-up",
+    "deceuninck fenster": "mdi:window-closed",
+    "tuerschliessung": "mdi:lock-outline",
+    "orf mediathek": "mdi:television-classic",
+    "mounted dimmable load control": "mdi:lightbulb-on",
+    "hausbeleuchtung": "mdi:lightbulb",
+    "cleaning run": "mdi:vacuum",
+    "feed in": "mdi:solar-power",
+    "erzeugungsleistung": "mdi:power-plug",
+    "firmware hash": "mdi:file-check",
+    "check meter": "mdi:meter-electric",
+    "bluesound node": "mdi:speaker-wireless",
+    "morgenablauf": "mdi:calendar-clock",
+    "eufy alarm": "mdi:alarm-bell",
+    "alba entsorgung": "mdi:trash-can",
+    "veka fenster": "mdi:window-open",
+    "grillfeststimmung": "mdi:chef-hat",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
