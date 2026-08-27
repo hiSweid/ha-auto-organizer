@@ -26218,6 +26218,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "weathercloud": "mdi:weather-cloudy",
     "gruenkohl": "mdi:carrot",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "mehretagen kartierung": "mdi:calendar-multiple",
+    "betaversion": "mdi:alpha-b-box",
+    "helligkeitsdelta": "mdi:brightness-percent",
+    "stapelverarbeitung": "mdi:playlist-edit",
+    "graue tonne": "mdi:trash-can",
+    "iobroker": "mdi:network",
+    "action block": "mdi:script-text-outline",
+    "tageslichtwecker": "mdi:weather-sunny",
+    "innenraumluftqualitaet": "mdi:air-filter",
+    "1080p kamera": "mdi:cctv",
+    "duct fan": "mdi:fan-chevron-down",
+    "reichweite pir": "mdi:motion-sensor",
+    "misting fan": "mdi:fan-speed-1",
+    "peukert": "mdi:battery-charging-20",
+    "humidity trend": "mdi:trending-up",
+    "strip guard": "mdi:shield-lock",
+    "soundleiste": "mdi:speaker-wireless",
+    "magnetschnaepper": "mdi:lock-open-alert-outline",
+    "pufferbatterie": "mdi:battery-sync",
+    "trinkwassersprudler": "mdi:water-boiler",
+    "notfallbatterie": "mdi:battery-alert-variant",
+    "troland": "mdi:lightbulb-group",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
