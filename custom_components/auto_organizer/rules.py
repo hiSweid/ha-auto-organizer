@@ -31219,6 +31219,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "bewegungsmelder batterie": "mdi:battery-charging-wireless",
     "zwischenhoch": "mdi:weather-partly-cloudy",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "shallow well": "mdi:water-well",
+    "liquid": "mdi:cup-water",
+    "bmw ix3": "mdi:car-electric",
+    "kellerfenster": "mdi:window-closed",
+    "aufzeichnungsplan": "mdi:camera-document",
+    "energieverbrauch": "mdi:flash",
+    "samsung bespoke jet": "mdi:robot-vacuum",
+    "suction line temperature": "mdi:thermometer-lines",
+    "pollenbelastung": "mdi:flower-pollen",
+    "scenario": "mdi:movie-open",
+    "cfar detection": "mdi:motion-sensor",
+    "batteriezustand": "mdi:battery-charging",
+    "nova pm sensor": "mdi:air-filter",
+    "dyson v11": "mdi:robot-vacuum",
+    "hausenergiemanagement": "mdi:solar-power",
+    "eufy firmware": "mdi:update",
+    "tof10120": "mdi:motion-sensor",
+    "hagelgefahr": "mdi:weather-hail",
+    "podcastabend": "mdi:television-classic",
+    "lueftungsregler": "mdi:fan-chevron-up",
+    "parkassistent": "mdi:car-parking-lights",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

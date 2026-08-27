@@ -75242,3 +75242,87 @@ def test_icon_backfill_bewegungsmelder_batterie():
 
 def test_icon_backfill_zwischenhoch():
     assert suggest_entity_icon(_FakeEntry("sensor.zwischenhoch"), OrganizerOptions()) == "mdi:weather-partly-cloudy"
+
+
+def test_icon_backfill_shallow_well():
+    assert suggest_entity_icon(_FakeEntry("sensor.shallow_well"), OrganizerOptions()) == "mdi:water-well"
+
+
+def test_icon_backfill_liquid():
+    assert suggest_entity_icon(_FakeEntry("sensor.liquid"), OrganizerOptions()) == "mdi:cup-water"
+
+
+def test_icon_backfill_bmw_ix3():
+    assert suggest_entity_icon(_FakeEntry("sensor.bmw_ix3"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_kellerfenster():
+    assert suggest_entity_icon(_FakeEntry("sensor.kellerfenster"), OrganizerOptions()) == "mdi:window-closed"
+
+
+def test_icon_backfill_aufzeichnungsplan():
+    assert suggest_entity_icon(_FakeEntry("sensor.aufzeichnungsplan"), OrganizerOptions()) == "mdi:camera-document"
+
+
+def test_icon_backfill_energieverbrauch():
+    assert suggest_entity_icon(_FakeEntry("sensor.energieverbrauch"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_samsung_bespoke_jet():
+    assert suggest_entity_icon(_FakeEntry("sensor.samsung_bespoke_jet"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_suction_line_temperature():
+    assert suggest_entity_icon(_FakeEntry("sensor.suction_line_temperature"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_pollenbelastung():
+    assert suggest_entity_icon(_FakeEntry("sensor.pollenbelastung"), OrganizerOptions()) == "mdi:flower-pollen"
+
+
+def test_icon_backfill_scenario():
+    assert suggest_entity_icon(_FakeEntry("sensor.scenario"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_cfar_detection():
+    assert suggest_entity_icon(_FakeEntry("sensor.cfar_detection"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_batteriezustand():
+    assert suggest_entity_icon(_FakeEntry("sensor.batteriezustand"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_nova_pm_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.nova_pm_sensor"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_dyson_v11():
+    assert suggest_entity_icon(_FakeEntry("sensor.dyson_v11"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_hausenergiemanagement():
+    assert suggest_entity_icon(_FakeEntry("sensor.hausenergiemanagement"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_eufy_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.eufy_firmware"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_tof10120():
+    assert suggest_entity_icon(_FakeEntry("sensor.tof10120"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_hagelgefahr():
+    assert suggest_entity_icon(_FakeEntry("sensor.hagelgefahr"), OrganizerOptions()) == "mdi:weather-hail"
+
+
+def test_icon_backfill_podcastabend():
+    assert suggest_entity_icon(_FakeEntry("sensor.podcastabend"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_lueftungsregler():
+    assert suggest_entity_icon(_FakeEntry("sensor.lueftungsregler"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_parkassistent():
+    assert suggest_entity_icon(_FakeEntry("sensor.parkassistent"), OrganizerOptions()) == "mdi:car-parking-lights"
