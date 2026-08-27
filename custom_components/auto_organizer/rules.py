@@ -31091,6 +31091,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "gateway firmware": "mdi:update",
     "dyson": "mdi:fan",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "zellspannung": "mdi:battery-charging",
+    "abstellraumlicht": "mdi:lightbulb",
+    "abfallwirtschaftsbetrieb": "mdi:trash-can",
+    "meditationsstimmung": "mdi:movie-open",
+    "trittsensor": "mdi:motion-sensor",
+    "algae scrubber": "mdi:water-pump",
+    "noteoeffner": "mdi:lock",
+    "hubitat regel": "mdi:script-text",
+    "hazmat disposal": "mdi:biohazard",
+    "temperature limit": "mdi:thermometer-alert",
+    "leaving routine": "mdi:run-fast",
+    "lux messeinheit": "mdi:brightness-5",
+    "footcandle": "mdi:brightness-4",
+    "brennwertgeraet": "mdi:heating-coil",
+    "clearoutside": "mdi:weather-sunny",
+    "sperrbedingung": "mdi:alert-circle",
+    "build script": "mdi:script-text-outline",
+    "akkutraeger": "mdi:battery-charging-wireless",
+    "bme688": "mdi:air-filter",
+    "windflaute": "mdi:wind-turbine",
+    "spoolman update": "mdi:update",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
