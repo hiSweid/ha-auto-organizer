@@ -28062,6 +28062,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "kinderzimmerlichtsensor": "mdi:lightbulb-auto",
     "verriegelt": "mdi:lock",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "feinstaubmessgeraet": "mdi:air-filter",
+    "wasserfilterwechsel": "mdi:water-pump",
+    "annahmestelle": "mdi:trash-can",
+    "one pedal driving": "mdi:car-shift-pattern",
+    "suez": "mdi:trash-can",
+    "temperature offset": "mdi:thermometer-minus",
+    "27a batterie": "mdi:battery-charging-20",
+    "lastflexibilitaet": "mdi:power-plug",
+    "barrel bolt": "mdi:lock-alert",
+    "juicer": "mdi:blender",
+    "heizkosten": "mdi:cash-multiple",
+    "tamper": "mdi:motion-sensor-off",
+    "nachbarschaftsfest": "mdi:home-account",
+    "mazda mx30": "mdi:car-electric",
+    "einspeisepreis": "mdi:currency-eur",
+    "solar irradiance": "mdi:white-balance-sunny",
+    "alpha firmware": "mdi:update",
+    "variabler preis": "mdi:cash-multiple",
+    "serverschrank": "mdi:server",
+    "geraeuschpegel sauger": "mdi:speaker",
+    "range gate": "mdi:radiobox-blank",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
