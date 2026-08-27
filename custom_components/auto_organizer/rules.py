@@ -31529,7 +31529,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "eero firmware": "mdi:cellphone-arrow-down",
     "outdated": "mdi:package-up",
     "onboard reinigungsmittel": "mdi:cup-water",
-    "gummidichtung": "mdi:seal",
+    "gummidichtung": "mdi:tools",
     "verlobungsfeier": "mdi:heart-outline",
     "zwave shutter": "mdi:window-shutter",
     "podimo": "mdi:cast-audio",
@@ -32121,8 +32121,8 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "hot tub temperature": "mdi:thermometer",
     "schlauchbruch": "mdi:pipe-leak",
     "peak shaving automatik": "mdi:power-sleep",
-    "sewing machine": "mdi:printer-3d-nozzle",
-    "backofenreiniger": "mdi:toilet",
+    "sewing machine": "mdi:needle",
+    "backofenreiniger": "mdi:spray-bottle",
     "erdwaerme": "mdi:fire",
     "stream url kamera": "mdi:camera-off",
     "vacuum sealer": "mdi:package-variant-closed",
@@ -32133,6 +32133,22 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "restmuell": "mdi:trash-can",
     "trockenluft": "mdi:air-humidifier",
     "fruehabend": "mdi:weather-sunny",
+
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "filmklassiker abend": "mdi:movie-open",
+    "heating curve": "mdi:chart-line",
+    "sandwich press": "mdi:toaster",
+    "lueftungskanal": "mdi:air-filter",
+    "feinstaubvorhersage": "mdi:air-purifier",
+    "co2 ersparnis": "mdi:leaf",
+    "a121 radar": "mdi:radiobox-marked",
+    "phase switching": "mdi:power-plug",
+    "peha": "mdi:toggle-switch",
+    "a23 batterie": "mdi:battery-unknown",
+    "abholbereit": "mdi:truck-delivery",
+    "debounce": "mdi:timer-sand",
+    "tangle free": "mdi:robot-vacuum",
+    "medienzentrum": "mdi:television-classic",
 
 }
 
