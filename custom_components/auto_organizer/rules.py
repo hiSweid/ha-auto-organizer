@@ -27902,6 +27902,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "battery temperature": "mdi:thermometer",
     "clubmodus": "mdi:movie-open",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "movement alert": "mdi:motion-sensor",
+    "luefterreinigung": "mdi:fan-chevron-up",
+    "opnsense": "mdi:router-network",
+    "schrott": "mdi:trash-can",
+    "matratzenduese": "mdi:vacuum",
+    "treuepunkte": "mdi:card-account-details-star",
+    "uponor": "mdi:thermostat",
+    "serienabend": "mdi:movie-open",
+    "rotationsteller": "mdi:rotate-right",
+    "abus bravus": "mdi:lock",
+    "indesit": "mdi:microwave",
+    "positionsschalter": "mdi:toggle-switch",
+    "update pipeline": "mdi:update",
+    "abluft": "mdi:fan",
+    "crawling detection": "mdi:spider",
+    "firmware flashen": "mdi:flash",
+    "kuechengeraete": "mdi:stove",
+    "rolllad": "mdi:blinds",
+    "taupunktueberwachung": "mdi:water-percent-alert",
+    "luftfeuchtenorm": "mdi:water-percent",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
