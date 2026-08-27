@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.153] - 2026-08-27
+
+### Added
+- Further `SPECIFIC_ICONS` entries from the ongoing local-LLM icon backfill
+  batch job (~4684 total merged so far this run, ~1.7k of the original
+  6.9k gap remaining — about three-quarters done).
+
+### Fixed
+- 4 more icon mismatches: `willkommensszene` (a welcome scene) had
+  `mdi:movie-open` — another instance of the movie-open lazy scenes
+  fallback, `servietten` (napkins) had `mdi:tshirt-crew` (a clothing
+  icon, same textile-word-collision class as the earlier `wischlappen`
+  fix), `koerperschallsensor` (a structure-borne vibration sensor) had
+  `mdi:human-greeting`, `gemuesereibe` (a vegetable grater tool) had
+  `mdi:food-apple` (a food item, not a tool).
+
 ## [0.9.152] - 2026-08-27
 
 ### Added
