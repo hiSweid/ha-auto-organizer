@@ -72801,7 +72801,7 @@ def test_icon_backfill_memory_effekt():
 
 
 def test_icon_backfill_konserven():
-    assert suggest_entity_icon(_FakeEntry("sensor.konserven"), OrganizerOptions()) == "mdi:food-drumstick"
+    assert suggest_entity_icon(_FakeEntry("sensor.konserven"), OrganizerOptions()) == "mdi:food-variant"
 
 
 def test_icon_backfill_waste_pickup():
@@ -73353,7 +73353,7 @@ def test_icon_backfill_busch_jaeger_jalousie():
 
 
 def test_icon_backfill_bierabend():
-    assert suggest_entity_icon(_FakeEntry("sensor.bierabend"), OrganizerOptions()) == "mdi:movie-open"
+    assert suggest_entity_icon(_FakeEntry("sensor.bierabend"), OrganizerOptions()) == "mdi:beer"
 
 
 def test_icon_backfill_intervallroutine():
@@ -73565,7 +73565,7 @@ def test_icon_backfill_feuchtedifferenz():
 
 
 def test_icon_backfill_kettenreaktion():
-    assert suggest_entity_icon(_FakeEntry("sensor.kettenreaktion"), OrganizerOptions()) == "mdi:react"
+    assert suggest_entity_icon(_FakeEntry("sensor.kettenreaktion"), OrganizerOptions()) == "mdi:link-variant"
 
 
 def test_icon_backfill_energy():
@@ -73709,7 +73709,7 @@ def test_icon_backfill_liege_belegt():
 
 
 def test_icon_backfill_deckelkontakt():
-    assert suggest_entity_icon(_FakeEntry("sensor.deckelkontakt"), OrganizerOptions()) == "mdi:contactless-payment"
+    assert suggest_entity_icon(_FakeEntry("sensor.deckelkontakt"), OrganizerOptions()) == "mdi:electric-switch"
 
 
 def test_icon_backfill_tonnenwaschanlage():
@@ -73754,3 +73754,15 @@ def test_icon_backfill_nachlaufzeit_bewegungsmelder():
 
 def test_icon_backfill_selve():
     assert suggest_entity_icon(_FakeEntry("sensor.selve"), OrganizerOptions()) == "mdi:window-open"
+
+
+def test_icon_backfill_heizung_undicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.heizung_undicht"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_fehlende_artikel():
+    assert suggest_entity_icon(_FakeEntry("sensor.fehlende_artikel"), OrganizerOptions()) == "mdi:shopping"
+
+
+def test_icon_backfill_dch_s160():
+    assert suggest_entity_icon(_FakeEntry("sensor.dch_s160"), OrganizerOptions()) == "mdi:leak"

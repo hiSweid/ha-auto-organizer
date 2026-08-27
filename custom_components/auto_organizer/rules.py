@@ -30549,7 +30549,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "assist pipeline": "mdi:pipe",
     "webrtc stream": "mdi:video",
     "memory effekt": "mdi:memory",
-    "konserven": "mdi:food-drumstick",
+    "konserven": "mdi:food-variant",
     "waste pickup": "mdi:trash-can-outline",
     "staubbeutellos": "mdi:air-filter",
     "lasernavigation": "mdi:map-marker-radius",
@@ -30699,7 +30699,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "saugaufsatz": "mdi:vacuum",
     "schrottpreise": "mdi:trash-can",
     "busch jaeger jalousie": "mdi:blinds",
-    "bierabend": "mdi:movie-open",
+    "bierabend": "mdi:beer",
     "intervallroutine": "mdi:timer-cog",
     "austrittstemperatur": "mdi:thermometer-lines",
     "senfglas": "mdi:bottle-tonic-outline",
@@ -30756,7 +30756,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "kohlenwasserstoff": "mdi:molecule",
     "brightness": "mdi:brightness-6",
     "feuchtedifferenz": "mdi:water-percent",
-    "kettenreaktion": "mdi:react",
+    "kettenreaktion": "mdi:link-variant",
     "energy": "mdi:lightbulb",
     "motion": "mdi:motion-sensor",
     "humidity": "mdi:water",
@@ -30796,7 +30796,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ovalzylinder": "mdi:lock-outline",
     "desiccant dehumidifier": "mdi:water-off",
     "liege belegt": "mdi:bed-outline",
-    "deckelkontakt": "mdi:contactless-payment",
+    "deckelkontakt": "mdi:electric-switch",
     "tonnenwaschanlage": "mdi:washing-machine",
     "eiswuerfelspender": "mdi:ice-pop",
     "house mapping": "mdi:map-marker-radius",
@@ -30808,6 +30808,11 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ventilatorkette": "mdi:fan-chevron-up",
     "nachlaufzeit bewegungsmelder": "mdi:timer-outline",
     "selve": "mdi:window-open",
+
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "heizung undicht": "mdi:leak",
+    "fehlende artikel": "mdi:shopping",
+    "dch s160": "mdi:leak",
 
 }
 
