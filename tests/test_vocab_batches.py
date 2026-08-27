@@ -68962,3 +68962,91 @@ def test_icon_backfill_uv_index():
 
 def test_icon_backfill_heat_recovery():
     assert suggest_entity_icon(_FakeEntry("sensor.heat_recovery"), OrganizerOptions()) == "mdi:heat-pump"
+
+
+def test_icon_backfill_gartenzaun():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenzaun"), OrganizerOptions()) == "mdi:fence"
+
+
+def test_icon_backfill_milesight():
+    assert suggest_entity_icon(_FakeEntry("sensor.milesight"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_healthcheck():
+    assert suggest_entity_icon(_FakeEntry("sensor.healthcheck"), OrganizerOptions()) == "mdi:checkbox-marked-circle-outline"
+
+
+def test_icon_backfill_fahrmodus():
+    assert suggest_entity_icon(_FakeEntry("sensor.fahrmodus"), OrganizerOptions()) == "mdi:car-cruise-control"
+
+
+def test_icon_backfill_brightsky():
+    assert suggest_entity_icon(_FakeEntry("sensor.brightsky"), OrganizerOptions()) == "mdi:weather-sunny"
+
+
+def test_icon_backfill_listenpreis():
+    assert suggest_entity_icon(_FakeEntry("sensor.listenpreis"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_garagentor_auto_erkannt():
+    assert suggest_entity_icon(_FakeEntry("sensor.garagentor_auto_erkannt"), OrganizerOptions()) == "mdi:garage-open"
+
+
+def test_icon_backfill_waste_audit():
+    assert suggest_entity_icon(_FakeEntry("sensor.waste_audit"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_scheibenbruch():
+    assert suggest_entity_icon(_FakeEntry("sensor.scheibenbruch"), OrganizerOptions()) == "mdi:window-shutter-alert"
+
+
+def test_icon_backfill_marantz():
+    assert suggest_entity_icon(_FakeEntry("sensor.marantz"), OrganizerOptions()) == "mdi:audio-video"
+
+
+def test_icon_backfill_windsensor_markise():
+    assert suggest_entity_icon(_FakeEntry("sensor.windsensor_markise"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_stereoanlage():
+    assert suggest_entity_icon(_FakeEntry("sensor.stereoanlage"), OrganizerOptions()) == "mdi:speaker-wireless"
+
+
+def test_icon_backfill_saunaofen():
+    assert suggest_entity_icon(_FakeEntry("sensor.saunaofen"), OrganizerOptions()) == "mdi:heating-coil"
+
+
+def test_icon_backfill_ankunft():
+    assert suggest_entity_icon(_FakeEntry("sensor.ankunft"), OrganizerOptions()) == "mdi:truck-delivery"
+
+
+def test_icon_backfill_akkulaufzeit_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.akkulaufzeit_kamera"), OrganizerOptions()) == "mdi:battery-charging-10"
+
+
+def test_icon_backfill_wait_template():
+    assert suggest_entity_icon(_FakeEntry("sensor.wait_template"), OrganizerOptions()) == "mdi:timer-outline"
+
+
+def test_icon_backfill_spannungsabfall():
+    assert suggest_entity_icon(_FakeEntry("sensor.spannungsabfall"), OrganizerOptions()) == "mdi:power-plug-off"
+
+
+def test_icon_backfill_fleischabo():
+    assert suggest_entity_icon(_FakeEntry("sensor.fleischabo"), OrganizerOptions()) == "mdi:food-drumstick"
+
+
+def test_icon_backfill_fahrradanhaenger():
+    assert suggest_entity_icon(_FakeEntry("sensor.fahrradanhaenger"), OrganizerOptions()) == "mdi:bike"
+
+
+def test_icon_backfill_arrow_function():
+    assert suggest_entity_icon(_FakeEntry("sensor.arrow_function"), OrganizerOptions()) == "mdi:function"
+
+
+def test_icon_backfill_netzparallelbetrieb():
+    assert suggest_entity_icon(_FakeEntry("sensor.netzparallelbetrieb"), OrganizerOptions()) == "mdi:transmission-tower"
+
+
+def test_icon_backfill_wischteller():
+    assert suggest_entity_icon(_FakeEntry("sensor.wischteller"), OrganizerOptions()) == "mdi:blender"

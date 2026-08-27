@@ -29499,6 +29499,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "uv index": "mdi:weather-sunny-alert",
     "heat recovery": "mdi:heat-pump",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "gartenzaun": "mdi:fence",
+    "milesight": "mdi:air-filter",
+    "healthcheck": "mdi:checkbox-marked-circle-outline",
+    "fahrmodus": "mdi:car-cruise-control",
+    "brightsky": "mdi:weather-sunny",
+    "listenpreis": "mdi:currency-eur",
+    "garagentor auto erkannt": "mdi:garage-open",
+    "waste audit": "mdi:recycle",
+    "scheibenbruch": "mdi:window-shutter-alert",
+    "marantz": "mdi:audio-video",
+    "windsensor markise": "mdi:window-shutter",
+    "stereoanlage": "mdi:speaker-wireless",
+    "saunaofen": "mdi:heating-coil",
+    "ankunft": "mdi:truck-delivery",
+    "akkulaufzeit kamera": "mdi:battery-charging-10",
+    "wait template": "mdi:timer-outline",
+    "spannungsabfall": "mdi:power-plug-off",
+    "fleischabo": "mdi:food-drumstick",
+    "fahrradanhaenger": "mdi:bike",
+    "arrow function": "mdi:function",
+    "netzparallelbetrieb": "mdi:transmission-tower",
+    "wischteller": "mdi:blender",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
