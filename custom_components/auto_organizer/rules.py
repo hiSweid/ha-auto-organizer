@@ -29349,6 +29349,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "grauwasserleck": "mdi:water-alert",
     "icm20948": "mdi:motion-sensor",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "obstacle avoidance": "mdi:eye",
+    "memoisierung": "mdi:memory",
+    "curbside organics": "mdi:trash-can",
+    "firmware zeitstempel": "mdi:update",
+    "intrusion": "mdi:security",
+    "kunststoffabfall": "mdi:recycle",
+    "sammelcontainer": "mdi:trash-can-outline",
+    "restmuellsack": "mdi:trash-can",
+    "openair stimmung": "mdi:weather-sunny",
+    "wastebin id": "mdi:trash-can",
+    "entsoe": "mdi:power-plug",
+    "stromertrag": "mdi:flash",
+    "vorzimmerlicht": "mdi:lightbulb",
+    "bandseitensicherung": "mdi:lock",
+    "flur belegt": "mdi:account",
+    "template ablauf": "mdi:script-text",
+    "mildew smell": "mdi:smoke-detector",
+    "gruenschnitt": "mdi:leaf",
+    "gardinenstange": "mdi:window-shutter",
+    "frischluftklappe": "mdi:fan",
+    "wartungsversion": "mdi:update",
+    "sonnenaufgangswecker": "mdi:weather-sunny",
+    "vatertagsstimmung": "mdi:cake-variant",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
