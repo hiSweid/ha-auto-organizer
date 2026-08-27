@@ -32851,6 +32851,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "kasa firmware": "mdi:update",
     "notaus": "mdi:power-plug",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "kurzbefehl automation": "mdi:remote",
+    "out of range": "mdi:ruler",
+    "sht35": "mdi:thermometer-lines",
+    "wandtresor": "mdi:safe",
+    "adxl343": "mdi:motion-sensor",
+    "knoblauchpresse": "mdi:food-fork-drink",
+    "dustbuster": "mdi:robot-vacuum",
+    "knx bus": "mdi:network",
+    "vorhersage": "mdi:weather-partly-cloudy",
+    "schluesselloch": "mdi:key-variant",
+    "gartenschuppen alarm": "mdi:alarm-bell",
+    "retro party": "mdi:party-popper",
+    "panini maker": "mdi:toaster",
+    "vorbedingung": "mdi:check-circle-outline",
+    "putzmittelvorrat": "mdi:bottle-tonic-plus",
+    "water flosser": "mdi:toothbrush-electric",
+    "zuluftklappe": "mdi:air-filter",
+    "ld2450": "mdi:motion-sensor",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

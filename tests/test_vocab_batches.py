@@ -81146,3 +81146,75 @@ def test_icon_backfill_kasa_firmware():
 
 def test_icon_backfill_notaus():
     assert suggest_entity_icon(_FakeEntry("sensor.notaus"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_kurzbefehl_automation():
+    assert suggest_entity_icon(_FakeEntry("sensor.kurzbefehl_automation"), OrganizerOptions()) == "mdi:remote"
+
+
+def test_icon_backfill_out_of_range():
+    assert suggest_entity_icon(_FakeEntry("sensor.out_of_range"), OrganizerOptions()) == "mdi:ruler"
+
+
+def test_icon_backfill_sht35():
+    assert suggest_entity_icon(_FakeEntry("sensor.sht35"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_wandtresor():
+    assert suggest_entity_icon(_FakeEntry("sensor.wandtresor"), OrganizerOptions()) == "mdi:safe"
+
+
+def test_icon_backfill_adxl343():
+    assert suggest_entity_icon(_FakeEntry("sensor.adxl343"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_knoblauchpresse():
+    assert suggest_entity_icon(_FakeEntry("sensor.knoblauchpresse"), OrganizerOptions()) == "mdi:food-fork-drink"
+
+
+def test_icon_backfill_dustbuster():
+    assert suggest_entity_icon(_FakeEntry("sensor.dustbuster"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_knx_bus():
+    assert suggest_entity_icon(_FakeEntry("sensor.knx_bus"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_vorhersage():
+    assert suggest_entity_icon(_FakeEntry("sensor.vorhersage"), OrganizerOptions()) == "mdi:weather-partly-cloudy"
+
+
+def test_icon_backfill_schluesselloch():
+    assert suggest_entity_icon(_FakeEntry("sensor.schluesselloch"), OrganizerOptions()) == "mdi:key-variant"
+
+
+def test_icon_backfill_gartenschuppen_alarm():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenschuppen_alarm"), OrganizerOptions()) == "mdi:alarm-bell"
+
+
+def test_icon_backfill_retro_party():
+    assert suggest_entity_icon(_FakeEntry("sensor.retro_party"), OrganizerOptions()) == "mdi:party-popper"
+
+
+def test_icon_backfill_panini_maker():
+    assert suggest_entity_icon(_FakeEntry("sensor.panini_maker"), OrganizerOptions()) == "mdi:toaster"
+
+
+def test_icon_backfill_vorbedingung():
+    assert suggest_entity_icon(_FakeEntry("sensor.vorbedingung"), OrganizerOptions()) == "mdi:check-circle-outline"
+
+
+def test_icon_backfill_putzmittelvorrat():
+    assert suggest_entity_icon(_FakeEntry("sensor.putzmittelvorrat"), OrganizerOptions()) == "mdi:bottle-tonic-plus"
+
+
+def test_icon_backfill_water_flosser():
+    assert suggest_entity_icon(_FakeEntry("sensor.water_flosser"), OrganizerOptions()) == "mdi:toothbrush-electric"
+
+
+def test_icon_backfill_zuluftklappe():
+    assert suggest_entity_icon(_FakeEntry("sensor.zuluftklappe"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_ld2450():
+    assert suggest_entity_icon(_FakeEntry("sensor.ld2450"), OrganizerOptions()) == "mdi:motion-sensor"
