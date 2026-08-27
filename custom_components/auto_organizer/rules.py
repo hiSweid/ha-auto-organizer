@@ -27233,6 +27233,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "george foreman": "mdi:pan",
     "funkkopfhoerer": "mdi:headphones",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "signaturfehler": "mdi:signature",
+    "tds meter": "mdi:water-pump",
+    "farbnachtmodus": "mdi:palette-outline",
+    "rueckruffunktion": "mdi:reply",
+    "plug in hybrid": "mdi:car-electric",
+    "ueberdrucklueftung": "mdi:fan-chevron-up",
+    "garden hose leak": "mdi:leak",
+    "mehrfachtrigger": "mdi:toggle-switch",
+    "redundanz": "mdi:backup-restore",
+    "acurite": "mdi:thermometer",
+    "teilrueckzahlung": "mdi:currency-eur",
+    "opnsense update": "mdi:update",
+    "schwimmbadstimmung": "mdi:pool",
+    "saunatemperatur": "mdi:temperature-celsius",
+    "gotion": "mdi:battery-charging-wireless",
+    "mignonzelle": "mdi:battery-medium",
+    "luftfeuchtesensor": "mdi:water-percent",
+    "moneual": "mdi:vacuum",
+    "arlo secure": "mdi:cctv",
+    "grossgeraet": "mdi:fridge",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
