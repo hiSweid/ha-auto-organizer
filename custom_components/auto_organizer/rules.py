@@ -27207,6 +27207,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "charge controller": "mdi:power-plug",
     "gast wlan": "mdi:wifi-star",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "differenzkosten": "mdi:currency-eur",
+    "bionaire ventilator": "mdi:fan",
+    "too good to go": "mdi:shopping-outline",
+    "garagentor batterie": "mdi:battery",
+    "wettermodell": "mdi:weather-cloudy",
+    "gefrierschranktuer": "mdi:fridge-industrial-outline",
+    "tieftoener": "mdi:audio-video",
+    "airzone": "mdi:air-conditioner",
+    "bin collection": "mdi:trash-can",
+    "wind shear": "mdi:weather-windy",
+    "gelbsackkalender": "mdi:calendar-plus",
+    "gemuesegarten": "mdi:fruit-cherries",
+    "instanzbegrenzung": "mdi:counter",
+    "ladeplanung": "mdi:battery-charging",
+    "salzstangen": "mdi:cart-outline",
+    "gps tracker akku": "mdi:battery",
+    "lastspitze": "mdi:flash",
+    "luftionisation": "mdi:air-purifier",
+    "inversionswetterlage": "mdi:weather-fog",
+    "dezentrallueftung": "mdi:fan-chevron-up",
+    "moppdosierung": "mdi:robot-vacuum",
+    "resident": "mdi:account",
+    "george foreman": "mdi:pan",
+    "funkkopfhoerer": "mdi:headphones",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
