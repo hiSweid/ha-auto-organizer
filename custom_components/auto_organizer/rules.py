@@ -32611,6 +32611,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "panasonic grid eye": "mdi:motion-sensor",
     "boolesche logik": "mdi:function",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "poliermaschine": "mdi:car-wash",
+    "energy plan": "mdi:chart-line",
+    "brightness ratio": "mdi:brightness-6",
+    "operettenabend": "mdi:movie-open",
+    "zeigerthermometer": "mdi:thermometer-lines",
+    "service aufruf": "mdi:run-fast",
+    "wassermengensensor": "mdi:water-pump",
+    "refoss": "mdi:power-plug",
+    "octopus energy": "mdi:solar-power",
+    "entwirrkamm": "mdi:brush",
+    "heizsystem": "mdi:radiator",
+    "jobscheduler": "mdi:calendar-clock",
+    "ablauflogik": "mdi:pipe",
+    "bleibatterie": "mdi:battery-charging-100",
+    "raumeinmessung": "mdi:map-marker-radius",
+    "sternenhimmelabend": "mdi:weather-night",
+    "object detected": "mdi:security",
+    "abus facilo": "mdi:lock-alert",
+    "innenluft": "mdi:air-filter",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

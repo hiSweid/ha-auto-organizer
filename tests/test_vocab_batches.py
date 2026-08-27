@@ -80290,3 +80290,79 @@ def test_icon_backfill_panasonic_grid_eye():
 
 def test_icon_backfill_boolesche_logik():
     assert suggest_entity_icon(_FakeEntry("sensor.boolesche_logik"), OrganizerOptions()) == "mdi:function"
+
+
+def test_icon_backfill_poliermaschine():
+    assert suggest_entity_icon(_FakeEntry("sensor.poliermaschine"), OrganizerOptions()) == "mdi:car-wash"
+
+
+def test_icon_backfill_energy_plan():
+    assert suggest_entity_icon(_FakeEntry("sensor.energy_plan"), OrganizerOptions()) == "mdi:chart-line"
+
+
+def test_icon_backfill_brightness_ratio():
+    assert suggest_entity_icon(_FakeEntry("sensor.brightness_ratio"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_operettenabend():
+    assert suggest_entity_icon(_FakeEntry("sensor.operettenabend"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_zeigerthermometer():
+    assert suggest_entity_icon(_FakeEntry("sensor.zeigerthermometer"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_service_aufruf():
+    assert suggest_entity_icon(_FakeEntry("sensor.service_aufruf"), OrganizerOptions()) == "mdi:run-fast"
+
+
+def test_icon_backfill_wassermengensensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.wassermengensensor"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_refoss():
+    assert suggest_entity_icon(_FakeEntry("sensor.refoss"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_octopus_energy():
+    assert suggest_entity_icon(_FakeEntry("sensor.octopus_energy"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_entwirrkamm():
+    assert suggest_entity_icon(_FakeEntry("sensor.entwirrkamm"), OrganizerOptions()) == "mdi:brush"
+
+
+def test_icon_backfill_heizsystem():
+    assert suggest_entity_icon(_FakeEntry("sensor.heizsystem"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_icon_backfill_jobscheduler():
+    assert suggest_entity_icon(_FakeEntry("sensor.jobscheduler"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_ablauflogik():
+    assert suggest_entity_icon(_FakeEntry("sensor.ablauflogik"), OrganizerOptions()) == "mdi:pipe"
+
+
+def test_icon_backfill_bleibatterie():
+    assert suggest_entity_icon(_FakeEntry("sensor.bleibatterie"), OrganizerOptions()) == "mdi:battery-charging-100"
+
+
+def test_icon_backfill_raumeinmessung():
+    assert suggest_entity_icon(_FakeEntry("sensor.raumeinmessung"), OrganizerOptions()) == "mdi:map-marker-radius"
+
+
+def test_icon_backfill_sternenhimmelabend():
+    assert suggest_entity_icon(_FakeEntry("sensor.sternenhimmelabend"), OrganizerOptions()) == "mdi:weather-night"
+
+
+def test_icon_backfill_object_detected():
+    assert suggest_entity_icon(_FakeEntry("sensor.object_detected"), OrganizerOptions()) == "mdi:security"
+
+
+def test_icon_backfill_abus_facilo():
+    assert suggest_entity_icon(_FakeEntry("sensor.abus_facilo"), OrganizerOptions()) == "mdi:lock-alert"
+
+
+def test_icon_backfill_innenluft():
+    assert suggest_entity_icon(_FakeEntry("sensor.innenluft"), OrganizerOptions()) == "mdi:air-filter"
