@@ -80226,3 +80226,67 @@ def test_icon_backfill_wetterfuehligkeit():
 
 def test_icon_backfill_seife():
     assert suggest_entity_icon(_FakeEntry("sensor.seife"), OrganizerOptions()) == "mdi:scent"
+
+
+def test_icon_backfill_recollect():
+    assert suggest_entity_icon(_FakeEntry("sensor.recollect"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_gesamtkosten():
+    assert suggest_entity_icon(_FakeEntry("sensor.gesamtkosten"), OrganizerOptions()) == "mdi:currency-usd"
+
+
+def test_icon_backfill_byd_han():
+    assert suggest_entity_icon(_FakeEntry("sensor.byd_han"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_shinobi_nvr():
+    assert suggest_entity_icon(_FakeEntry("sensor.shinobi_nvr"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_blade_akku():
+    assert suggest_entity_icon(_FakeEntry("sensor.blade_akku"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_gartenkonzert():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenkonzert"), OrganizerOptions()) == "mdi:music-note"
+
+
+def test_icon_backfill_videostreaming():
+    assert suggest_entity_icon(_FakeEntry("sensor.videostreaming"), OrganizerOptions()) == "mdi:video"
+
+
+def test_icon_backfill_trailing_edge():
+    assert suggest_entity_icon(_FakeEntry("sensor.trailing_edge"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_windrichtungspfeil():
+    assert suggest_entity_icon(_FakeEntry("sensor.windrichtungspfeil"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_messeinrichtung():
+    assert suggest_entity_icon(_FakeEntry("sensor.messeinrichtung"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_unterwegs():
+    assert suggest_entity_icon(_FakeEntry("sensor.unterwegs"), OrganizerOptions()) == "mdi:map-marker-radius"
+
+
+def test_icon_backfill_sichtschutzelement():
+    assert suggest_entity_icon(_FakeEntry("sensor.sichtschutzelement"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_umkehrosmose():
+    assert suggest_entity_icon(_FakeEntry("sensor.umkehrosmose"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_gleitlager_luefter():
+    assert suggest_entity_icon(_FakeEntry("sensor.gleitlager_luefter"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_panasonic_grid_eye():
+    assert suggest_entity_icon(_FakeEntry("sensor.panasonic_grid_eye"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_boolesche_logik():
+    assert suggest_entity_icon(_FakeEntry("sensor.boolesche_logik"), OrganizerOptions()) == "mdi:function"

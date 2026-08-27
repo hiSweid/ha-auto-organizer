@@ -32593,6 +32593,24 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "wetterfuehligkeit": "mdi:weather-cloudy",
     "seife": "mdi:scent",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "recollect": "mdi:recycle",
+    "gesamtkosten": "mdi:currency-usd",
+    "byd han": "mdi:car-electric",
+    "shinobi nvr": "mdi:cctv",
+    "blade akku": "mdi:battery-charging",
+    "gartenkonzert": "mdi:music-note",
+    "videostreaming": "mdi:video",
+    "trailing edge": "mdi:lightbulb",
+    "windrichtungspfeil": "mdi:weather-windy",
+    "messeinrichtung": "mdi:power-plug",
+    "unterwegs": "mdi:map-marker-radius",
+    "sichtschutzelement": "mdi:window-shutter",
+    "umkehrosmose": "mdi:water-pump",
+    "gleitlager luefter": "mdi:fan",
+    "panasonic grid eye": "mdi:motion-sensor",
+    "boolesche logik": "mdi:function",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
