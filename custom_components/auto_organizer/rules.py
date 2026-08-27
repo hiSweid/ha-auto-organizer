@@ -29906,6 +29906,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "bildrate": "mdi:video",
     "dumpster": "mdi:trash-can",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "balkonlichtsensor": "mdi:lightbulb",
+    "energy tariff": "mdi:currency-eur",
+    "verfluessiger": "mdi:snowflake",
+    "luefterrahmen": "mdi:fan",
+    "aktivmonitor": "mdi:monitor",
+    "clip on fan": "mdi:fan-chevron-up",
+    "li ion": "mdi:battery-charging",
+    "yard debris": "mdi:trash-can",
+    "wasserdruckminderer": "mdi:water-pump",
+    "maico eco lueftung": "mdi:fan-speed-1",
+    "schwellwertausloeser": "mdi:alert",
+    "migrationsskript": "mdi:script-text",
+    "tonne morgen": "mdi:trash-can",
+    "uber eats": "mdi:food",
+    "leerstandserkennung": "mdi:motion-sensor",
+    "energiedichte": "mdi:battery-high",
+    "abfuhrbezirk": "mdi:trash-can",
+    "ecliq": "mdi:lock",
+    "stromkostenanteil": "mdi:currency-eur",
+    "schwuele": "mdi:water-percent",
+    "ruecklauftemperatur": "mdi:thermometer",
+    "kinoerlebnis": "mdi:movie",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
