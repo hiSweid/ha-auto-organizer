@@ -28036,6 +28036,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ilife v8s": "mdi:robot-vacuum",
     "frischluft": "mdi:air-purifier",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "geschwindigkeitsdrosselung": "mdi:speedometer",
+    "taupunktabstand": "mdi:thermometer",
+    "chlorgehalt": "mdi:water-check",
+    "lamellenneigung": "mdi:window-shutter",
+    "feuchtigkeitseintritt": "mdi:water-percent",
+    "panasonic whisperfan": "mdi:fan",
+    "watch party": "mdi:movie-open",
+    "luftdruckgradient": "mdi:gauge",
+    "wenn diese dann das": "mdi:script-text",
+    "blink firmware": "mdi:update",
+    "dampfdruck": "mdi:water-thermometer",
+    "gira firmware": "mdi:update",
+    "feinstaubmesswert": "mdi:air-filter",
+    "netzueberlastung": "mdi:flash-alert",
+    "battery drop off": "mdi:battery-alert",
+    "kesselwassertemperatur": "mdi:water-thermometer",
+    "qingping": "mdi:air-filter",
+    "jamo": "mdi:speaker",
+    "zaehlernummer": "mdi:meter-electric",
+    "hausstaubmilben": "mdi:air-filter",
+    "bodenfeuchtetrigger": "mdi:water-percent",
+    "waermebruecke": "mdi:heat-wave",
+    "kinderzimmerlichtsensor": "mdi:lightbulb-auto",
+    "verriegelt": "mdi:lock",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

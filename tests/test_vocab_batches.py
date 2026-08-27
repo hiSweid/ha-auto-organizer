@@ -63590,3 +63590,99 @@ def test_icon_backfill_ilife_v8s():
 
 def test_icon_backfill_frischluft():
     assert suggest_entity_icon(_FakeEntry("sensor.frischluft"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_icon_backfill_geschwindigkeitsdrosselung():
+    assert suggest_entity_icon(_FakeEntry("sensor.geschwindigkeitsdrosselung"), OrganizerOptions()) == "mdi:speedometer"
+
+
+def test_icon_backfill_taupunktabstand():
+    assert suggest_entity_icon(_FakeEntry("sensor.taupunktabstand"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_chlorgehalt():
+    assert suggest_entity_icon(_FakeEntry("sensor.chlorgehalt"), OrganizerOptions()) == "mdi:water-check"
+
+
+def test_icon_backfill_lamellenneigung():
+    assert suggest_entity_icon(_FakeEntry("sensor.lamellenneigung"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_feuchtigkeitseintritt():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchtigkeitseintritt"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_panasonic_whisperfan():
+    assert suggest_entity_icon(_FakeEntry("sensor.panasonic_whisperfan"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_watch_party():
+    assert suggest_entity_icon(_FakeEntry("sensor.watch_party"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_luftdruckgradient():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftdruckgradient"), OrganizerOptions()) == "mdi:gauge"
+
+
+def test_icon_backfill_wenn_diese_dann_das():
+    assert suggest_entity_icon(_FakeEntry("sensor.wenn_diese_dann_das"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_blink_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.blink_firmware"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_dampfdruck():
+    assert suggest_entity_icon(_FakeEntry("sensor.dampfdruck"), OrganizerOptions()) == "mdi:water-thermometer"
+
+
+def test_icon_backfill_gira_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.gira_firmware"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_feinstaubmesswert():
+    assert suggest_entity_icon(_FakeEntry("sensor.feinstaubmesswert"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_netzueberlastung():
+    assert suggest_entity_icon(_FakeEntry("sensor.netzueberlastung"), OrganizerOptions()) == "mdi:flash-alert"
+
+
+def test_icon_backfill_battery_drop_off():
+    assert suggest_entity_icon(_FakeEntry("sensor.battery_drop_off"), OrganizerOptions()) == "mdi:battery-alert"
+
+
+def test_icon_backfill_kesselwassertemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.kesselwassertemperatur"), OrganizerOptions()) == "mdi:water-thermometer"
+
+
+def test_icon_backfill_qingping():
+    assert suggest_entity_icon(_FakeEntry("sensor.qingping"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_jamo():
+    assert suggest_entity_icon(_FakeEntry("sensor.jamo"), OrganizerOptions()) == "mdi:speaker"
+
+
+def test_icon_backfill_zaehlernummer():
+    assert suggest_entity_icon(_FakeEntry("sensor.zaehlernummer"), OrganizerOptions()) == "mdi:meter-electric"
+
+
+def test_icon_backfill_hausstaubmilben():
+    assert suggest_entity_icon(_FakeEntry("sensor.hausstaubmilben"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_bodenfeuchtetrigger():
+    assert suggest_entity_icon(_FakeEntry("sensor.bodenfeuchtetrigger"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_waermebruecke():
+    assert suggest_entity_icon(_FakeEntry("sensor.waermebruecke"), OrganizerOptions()) == "mdi:heat-wave"
+
+
+def test_icon_backfill_kinderzimmerlichtsensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.kinderzimmerlichtsensor"), OrganizerOptions()) == "mdi:lightbulb-auto"
+
+
+def test_icon_backfill_verriegelt():
+    assert suggest_entity_icon(_FakeEntry("sensor.verriegelt"), OrganizerOptions()) == "mdi:lock"
