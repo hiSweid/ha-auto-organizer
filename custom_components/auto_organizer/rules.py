@@ -27481,6 +27481,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "deepstack": "mdi:brain",
     "vitoconnect": "mdi:thermostat",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "styroporsack": "mdi:trash-can",
+    "bewaesserungsschlauch": "mdi:sprinkler",
+    "zosi kamera": "mdi:camera",
+    "windgeschw": "mdi:weather-windy",
+    "ring firmware": "mdi:chip",
+    "einstiegspunkt": "mdi:script-text",
+    "kleingeraete": "mdi:microwave",
+    "line crossing": "mdi:motion-sensor",
+    "zaehlpunkt": "mdi:counter",
+    "objektivkappe": "mdi:camera-off",
+    "airgradient one": "mdi:air-filter",
+    "duracell": "mdi:battery",
+    "prometheus": "mdi:server",
+    "git tag": "mdi:tag",
+    "programmierbare schaltuhr": "mdi:clock-outline",
+    "servicecall": "mdi:script-text",
+    "vectoring": "mdi:network",
+    "pflegeserie": "mdi:cart",
+    "nordlicht": "mdi:weather-night",
+    "rfid tag": "mdi:card-account-details",
+    "wps taste": "mdi:wifi",
+    "schokoladentemperatur": "mdi:thermometer",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
