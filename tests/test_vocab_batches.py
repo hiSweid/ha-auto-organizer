@@ -81806,3 +81806,67 @@ def test_icon_backfill_inertabfall():
 
 def test_icon_backfill_dampfreiniger():
     assert suggest_entity_icon(_FakeEntry("sensor.dampfreiniger"), OrganizerOptions()) == "mdi:steam"
+
+
+def test_icon_backfill_tamburin():
+    assert suggest_entity_icon(_FakeEntry("sensor.tamburin"), OrganizerOptions()) == "mdi:cast"
+
+
+def test_icon_backfill_coldroom():
+    assert suggest_entity_icon(_FakeEntry("sensor.coldroom"), OrganizerOptions()) == "mdi:fridge-industrial-outline"
+
+
+def test_icon_backfill_code_aendern():
+    assert suggest_entity_icon(_FakeEntry("sensor.code_aendern"), OrganizerOptions()) == "mdi:pencil-lock"
+
+
+def test_icon_backfill_while_schleife():
+    assert suggest_entity_icon(_FakeEntry("sensor.while_schleife"), OrganizerOptions()) == "mdi:repeat"
+
+
+def test_icon_backfill_lichtpegelwert():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtpegelwert"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_moskitonetz():
+    assert suggest_entity_icon(_FakeEntry("sensor.moskitonetz"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_battery_recycling():
+    assert suggest_entity_icon(_FakeEntry("sensor.battery_recycling"), OrganizerOptions()) == "mdi:battery-charging-high"
+
+
+def test_icon_backfill_himmel():
+    assert suggest_entity_icon(_FakeEntry("sensor.himmel"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_scrypted_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.scrypted_firmware"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_icon_backfill_verschachtelte_schleife():
+    assert suggest_entity_icon(_FakeEntry("sensor.verschachtelte_schleife"), OrganizerOptions()) == "mdi:layers-triple"
+
+
+def test_icon_backfill_tuerbeschlag():
+    assert suggest_entity_icon(_FakeEntry("sensor.tuerbeschlag"), OrganizerOptions()) == "mdi:door-closed"
+
+
+def test_icon_backfill_beladungserkennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.beladungserkennung"), OrganizerOptions()) == "mdi:weight"
+
+
+def test_icon_backfill_erloes():
+    assert suggest_entity_icon(_FakeEntry("sensor.erloes"), OrganizerOptions()) == "mdi:cash-multiple"
+
+
+def test_icon_backfill_schmelztemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.schmelztemperatur"), OrganizerOptions()) == "mdi:thermometer-alert"
+
+
+def test_icon_backfill_lesezirkel():
+    assert suggest_entity_icon(_FakeEntry("sensor.lesezirkel"), OrganizerOptions()) == "mdi:book-open-page-variant"
+
+
+def test_icon_backfill_puddle():
+    assert suggest_entity_icon(_FakeEntry("sensor.puddle"), OrganizerOptions()) == "mdi:water"

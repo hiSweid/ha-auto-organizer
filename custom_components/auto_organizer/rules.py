@@ -33040,6 +33040,24 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "inertabfall": "mdi:delete",
     "dampfreiniger": "mdi:steam",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "tamburin": "mdi:cast",
+    "coldroom": "mdi:fridge-industrial-outline",
+    "code aendern": "mdi:pencil-lock",
+    "while schleife": "mdi:repeat",
+    "lichtpegelwert": "mdi:brightness-5",
+    "moskitonetz": "mdi:window-shutter",
+    "battery recycling": "mdi:battery-charging-high",
+    "himmel": "mdi:weather-cloudy",
+    "scrypted firmware": "mdi:chip",
+    "verschachtelte schleife": "mdi:layers-triple",
+    "tuerbeschlag": "mdi:door-closed",
+    "beladungserkennung": "mdi:weight",
+    "erloes": "mdi:cash-multiple",
+    "schmelztemperatur": "mdi:thermometer-alert",
+    "lesezirkel": "mdi:book-open-page-variant",
+    "puddle": "mdi:water",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
