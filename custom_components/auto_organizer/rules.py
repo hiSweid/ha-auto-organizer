@@ -30119,6 +30119,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "elgato stream deck": "mdi:monitor-dashboard",
     "wischlappen": "mdi:tshirt-crew",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "kellerwassereinbruch": "mdi:water-alert",
+    "gl inet router": "mdi:router-wireless",
+    "spycam": "mdi:cctv",
+    "verbotszone": "mdi:shield-off",
+    "feuchtelast": "mdi:water-percent",
+    "netto angebot": "mdi:tag-outline",
+    "senic": "mdi:light-switch",
+    "arbeitsstrom tueroeffner": "mdi:lock-open",
+    "emtek": "mdi:lock",
+    "ladeverlauf": "mdi:car-electric",
+    "undergravel filter": "mdi:filter-variant",
+    "aktives warten": "mdi:timer-star",
+    "tageskilometer": "mdi:map-marker-distance",
+    "batteriewechsel": "mdi:battery-charging",
+    "leise reinigung": "mdi:robot-vacuum-variant",
+    "trainingsroutine": "mdi:dumbbell",
+    "black globe temperature": "mdi:thermometer-low",
+    "scd41": "mdi:air-filter",
+    "ausnahmeregel": "mdi:alert-octagon",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
