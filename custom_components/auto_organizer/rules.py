@@ -33075,6 +33075,19 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "nachttemperatur": "mdi:thermometer-low",
     "video puffer": "mdi:video-input-component",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "moderne messeinrichtung": "mdi:power-plug",
+    "gerstenfeld": "mdi:sprout",
+    "relax": "mdi:sofa",
+    "bme280": "mdi:thermometer-lines",
+    "feuchtepuffer": "mdi:water-percent-alert",
+    "energiebilanz": "mdi:scale-balance",
+    "modem": "mdi:router-wireless",
+    "ductwork": "mdi:hvac",
+    "semantic versioning": "mdi:tag-text-outline",
+    "ozongehalt": "mdi:air-filter",
+    "verdunkelung": "mdi:blinds",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

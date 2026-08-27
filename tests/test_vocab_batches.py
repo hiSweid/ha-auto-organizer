@@ -81930,3 +81930,47 @@ def test_icon_backfill_nachttemperatur():
 
 def test_icon_backfill_video_puffer():
     assert suggest_entity_icon(_FakeEntry("sensor.video_puffer"), OrganizerOptions()) == "mdi:video-input-component"
+
+
+def test_icon_backfill_moderne_messeinrichtung():
+    assert suggest_entity_icon(_FakeEntry("sensor.moderne_messeinrichtung"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_gerstenfeld():
+    assert suggest_entity_icon(_FakeEntry("sensor.gerstenfeld"), OrganizerOptions()) == "mdi:sprout"
+
+
+def test_icon_backfill_relax():
+    assert suggest_entity_icon(_FakeEntry("sensor.relax"), OrganizerOptions()) == "mdi:sofa"
+
+
+def test_icon_backfill_bme280():
+    assert suggest_entity_icon(_FakeEntry("sensor.bme280"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_feuchtepuffer():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchtepuffer"), OrganizerOptions()) == "mdi:water-percent-alert"
+
+
+def test_icon_backfill_energiebilanz():
+    assert suggest_entity_icon(_FakeEntry("sensor.energiebilanz"), OrganizerOptions()) == "mdi:scale-balance"
+
+
+def test_icon_backfill_modem():
+    assert suggest_entity_icon(_FakeEntry("sensor.modem"), OrganizerOptions()) == "mdi:router-wireless"
+
+
+def test_icon_backfill_ductwork():
+    assert suggest_entity_icon(_FakeEntry("sensor.ductwork"), OrganizerOptions()) == "mdi:hvac"
+
+
+def test_icon_backfill_semantic_versioning():
+    assert suggest_entity_icon(_FakeEntry("sensor.semantic_versioning"), OrganizerOptions()) == "mdi:tag-text-outline"
+
+
+def test_icon_backfill_ozongehalt():
+    assert suggest_entity_icon(_FakeEntry("sensor.ozongehalt"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_verdunkelung():
+    assert suggest_entity_icon(_FakeEntry("sensor.verdunkelung"), OrganizerOptions()) == "mdi:blinds"
