@@ -32351,6 +32351,25 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "room brightness": "mdi:brightness-6",
     "mqtt": "mdi:network",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "wind vane": "mdi:weather-windy",
+    "brennenstuhl bewegungsmelder": "mdi:motion-sensor",
+    "cr2450": "mdi:battery",
+    "feuchtequelle": "mdi:water-percent",
+    "personenabstand": "mdi:human-greeting-proximity",
+    "lichtschranke bewegung": "mdi:motion-sensor",
+    "moisture barrier": "mdi:water-off",
+    "battery preconditioning": "mdi:car-battery",
+    "rehau fenster": "mdi:window-closed",
+    "brennerstarts": "mdi:fire",
+    "switchbot meter plus": "mdi:thermometer",
+    "installerskript": "mdi:script-text-outline",
+    "ble beacon trigger": "mdi:bluetooth-connect",
+    "regenwassersensor": "mdi:water-alert",
+    "l3 leistung": "mdi:flash",
+    "consumption": "mdi:power-plug",
+    "feuchteklasse": "mdi:water-percent",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

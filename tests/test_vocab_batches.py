@@ -79354,3 +79354,71 @@ def test_icon_backfill_room_brightness():
 
 def test_icon_backfill_mqtt():
     assert suggest_entity_icon(_FakeEntry("sensor.mqtt"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_wind_vane():
+    assert suggest_entity_icon(_FakeEntry("sensor.wind_vane"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_brennenstuhl_bewegungsmelder():
+    assert suggest_entity_icon(_FakeEntry("sensor.brennenstuhl_bewegungsmelder"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_cr2450():
+    assert suggest_entity_icon(_FakeEntry("sensor.cr2450"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_feuchtequelle():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchtequelle"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_personenabstand():
+    assert suggest_entity_icon(_FakeEntry("sensor.personenabstand"), OrganizerOptions()) == "mdi:human-greeting-proximity"
+
+
+def test_icon_backfill_lichtschranke_bewegung():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtschranke_bewegung"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_moisture_barrier():
+    assert suggest_entity_icon(_FakeEntry("sensor.moisture_barrier"), OrganizerOptions()) == "mdi:water-off"
+
+
+def test_icon_backfill_battery_preconditioning():
+    assert suggest_entity_icon(_FakeEntry("sensor.battery_preconditioning"), OrganizerOptions()) == "mdi:car-battery"
+
+
+def test_icon_backfill_rehau_fenster():
+    assert suggest_entity_icon(_FakeEntry("sensor.rehau_fenster"), OrganizerOptions()) == "mdi:window-closed"
+
+
+def test_icon_backfill_brennerstarts():
+    assert suggest_entity_icon(_FakeEntry("sensor.brennerstarts"), OrganizerOptions()) == "mdi:fire"
+
+
+def test_icon_backfill_switchbot_meter_plus():
+    assert suggest_entity_icon(_FakeEntry("sensor.switchbot_meter_plus"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_installerskript():
+    assert suggest_entity_icon(_FakeEntry("sensor.installerskript"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_ble_beacon_trigger():
+    assert suggest_entity_icon(_FakeEntry("sensor.ble_beacon_trigger"), OrganizerOptions()) == "mdi:bluetooth-connect"
+
+
+def test_icon_backfill_regenwassersensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.regenwassersensor"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_icon_backfill_l3_leistung():
+    assert suggest_entity_icon(_FakeEntry("sensor.l3_leistung"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_consumption():
+    assert suggest_entity_icon(_FakeEntry("sensor.consumption"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_feuchteklasse():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchteklasse"), OrganizerOptions()) == "mdi:water-percent"
