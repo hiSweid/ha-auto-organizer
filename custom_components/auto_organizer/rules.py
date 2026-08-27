@@ -31309,6 +31309,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "sunday morning": "mdi:sun-clock",
     "fahrbahntemperatur": "mdi:road-variant",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "trivia night": "mdi:cards",
+    "toncam": "mdi:camera",
+    "feuchtestation": "mdi:water-percent",
+    "vorschau version": "mdi:update",
+    "desk fan": "mdi:fan",
+    "ladeplanung automatik": "mdi:power-plug",
+    "extended producer responsibility": "mdi:recycle",
+    "packaged unit": "mdi:air-conditioner",
+    "samsung jet bot": "mdi:robot-vacuum",
+    "tresor": "mdi:lock",
+    "meetingraum frei": "mdi:calendar-check",
+    "helligkeit": "mdi:brightness-6",
+    "abfallapp": "mdi:trash-can",
+    "bilanzierungsumlage": "mdi:currency-eur",
+    "laubblaeser": "mdi:leaf",
+    "hausnetz": "mdi:network",
+    "tageslichtabhaengig": "mdi:white-balance-sunny",
+    "bremsbelag": "mdi:car-brake-abs",
+    "besetzt": "mdi:motion-sensor",
+    "feuchtezone": "mdi:water-percent",
+    "gemuesereibe": "mdi:food-apple",
+    "laststeuerung": "mdi:power-settings",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
