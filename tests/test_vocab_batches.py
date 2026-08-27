@@ -69678,3 +69678,75 @@ def test_icon_backfill_dew_point_spread():
 
 def test_icon_backfill_akkuschonung():
     assert suggest_entity_icon(_FakeEntry("sensor.akkuschonung"), OrganizerOptions()) == "mdi:battery-charging-10"
+
+
+def test_icon_backfill_hintergrundskript():
+    assert suggest_entity_icon(_FakeEntry("sensor.hintergrundskript"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_toothpaste():
+    assert suggest_entity_icon(_FakeEntry("sensor.toothpaste"), OrganizerOptions()) == "mdi:toothbrush"
+
+
+def test_icon_backfill_weitwinkelkamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.weitwinkelkamera"), OrganizerOptions()) == "mdi:camera-flip"
+
+
+def test_icon_backfill_shazam():
+    assert suggest_entity_icon(_FakeEntry("sensor.shazam"), OrganizerOptions()) == "mdi:music-note-bluetooth"
+
+
+def test_icon_backfill_isobar():
+    assert suggest_entity_icon(_FakeEntry("sensor.isobar"), OrganizerOptions()) == "mdi:gauge-empty"
+
+
+def test_icon_backfill_app_unlock():
+    assert suggest_entity_icon(_FakeEntry("sensor.app_unlock"), OrganizerOptions()) == "mdi:lock-open-variant"
+
+
+def test_icon_backfill_performance_ratio():
+    assert suggest_entity_icon(_FakeEntry("sensor.performance_ratio"), OrganizerOptions()) == "mdi:speedometer"
+
+
+def test_icon_backfill_schutzgitter_ventilator():
+    assert suggest_entity_icon(_FakeEntry("sensor.schutzgitter_ventilator"), OrganizerOptions()) == "mdi:fan-chevron-down"
+
+
+def test_icon_backfill_ajax_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.ajax_firmware"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_icon_backfill_aenderungsprotokoll():
+    assert suggest_entity_icon(_FakeEntry("sensor.aenderungsprotokoll"), OrganizerOptions()) == "mdi:file-document-multiple"
+
+
+def test_icon_backfill_movement_corridor():
+    assert suggest_entity_icon(_FakeEntry("sensor.movement_corridor"), OrganizerOptions()) == "mdi:run-fast"
+
+
+def test_icon_backfill_privacy_screen():
+    assert suggest_entity_icon(_FakeEntry("sensor.privacy_screen"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_viertelstundenwert():
+    assert suggest_entity_icon(_FakeEntry("sensor.viertelstundenwert"), OrganizerOptions()) == "mdi:chart-line-variant"
+
+
+def test_icon_backfill_heckklappe():
+    assert suggest_entity_icon(_FakeEntry("sensor.heckklappe"), OrganizerOptions()) == "mdi:car-back"
+
+
+def test_icon_backfill_trigger_variable():
+    assert suggest_entity_icon(_FakeEntry("sensor.trigger_variable"), OrganizerOptions()) == "mdi:variable-box"
+
+
+def test_icon_backfill_gasrechnung():
+    assert suggest_entity_icon(_FakeEntry("sensor.gasrechnung"), OrganizerOptions()) == "mdi:gas-cylinder"
+
+
+def test_icon_backfill_gartenarbeitslicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenarbeitslicht"), OrganizerOptions()) == "mdi:lightbulb-group-outline"
+
+
+def test_icon_backfill_heating_schedule():
+    assert suggest_entity_icon(_FakeEntry("sensor.heating_schedule"), OrganizerOptions()) == "mdi:calendar-clock"

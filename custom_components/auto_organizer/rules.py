@@ -29694,6 +29694,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "dew point spread": "mdi:thermometer-lines",
     "akkuschonung": "mdi:battery-charging-10",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "hintergrundskript": "mdi:script-text-outline",
+    "toothpaste": "mdi:toothbrush",
+    "weitwinkelkamera": "mdi:camera-flip",
+    "shazam": "mdi:music-note-bluetooth",
+    "isobar": "mdi:gauge-empty",
+    "app unlock": "mdi:lock-open-variant",
+    "performance ratio": "mdi:speedometer",
+    "schutzgitter ventilator": "mdi:fan-chevron-down",
+    "ajax firmware": "mdi:chip",
+    "aenderungsprotokoll": "mdi:file-document-multiple",
+    "movement corridor": "mdi:run-fast",
+    "privacy screen": "mdi:window-shutter",
+    "viertelstundenwert": "mdi:chart-line-variant",
+    "heckklappe": "mdi:car-back",
+    "trigger variable": "mdi:variable-box",
+    "gasrechnung": "mdi:gas-cylinder",
+    "gartenarbeitslicht": "mdi:lightbulb-group-outline",
+    "heating schedule": "mdi:calendar-clock",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
