@@ -80794,3 +80794,67 @@ def test_icon_backfill_heizfuehler():
 
 def test_icon_backfill_gewaechshausbeleuchtung():
     assert suggest_entity_icon(_FakeEntry("sensor.gewaechshausbeleuchtung"), OrganizerOptions()) == "mdi:greenhouse"
+
+
+def test_icon_backfill_schrottsammlung():
+    assert suggest_entity_icon(_FakeEntry("sensor.schrottsammlung"), OrganizerOptions()) == "mdi:delete"
+
+
+def test_icon_backfill_szenenskript():
+    assert suggest_entity_icon(_FakeEntry("sensor.szenenskript"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_brightness_trend():
+    assert suggest_entity_icon(_FakeEntry("sensor.brightness_trend"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_lambdasonde():
+    assert suggest_entity_icon(_FakeEntry("sensor.lambdasonde"), OrganizerOptions()) == "mdi:car-cog"
+
+
+def test_icon_backfill_extractor():
+    assert suggest_entity_icon(_FakeEntry("sensor.extractor"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_brandschutz():
+    assert suggest_entity_icon(_FakeEntry("sensor.brandschutz"), OrganizerOptions()) == "mdi:fire"
+
+
+def test_icon_backfill_reaktionszeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.reaktionszeit"), OrganizerOptions()) == "mdi:clock-fast"
+
+
+def test_icon_backfill_ventilatorstandrohr():
+    assert suggest_entity_icon(_FakeEntry("sensor.ventilatorstandrohr"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_pv_produktion():
+    assert suggest_entity_icon(_FakeEntry("sensor.pv_produktion"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_frischluftzufuhr():
+    assert suggest_entity_icon(_FakeEntry("sensor.frischluftzufuhr"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_icon_backfill_grid_consumption():
+    assert suggest_entity_icon(_FakeEntry("sensor.grid_consumption"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_awattar_preis():
+    assert suggest_entity_icon(_FakeEntry("sensor.awattar_preis"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_dsl_anschluss():
+    assert suggest_entity_icon(_FakeEntry("sensor.dsl_anschluss"), OrganizerOptions()) == "mdi:ethernet-cable"
+
+
+def test_icon_backfill_battery_heater():
+    assert suggest_entity_icon(_FakeEntry("sensor.battery_heater"), OrganizerOptions()) == "mdi:battery-unknown"
+
+
+def test_icon_backfill_schluesseldienst():
+    assert suggest_entity_icon(_FakeEntry("sensor.schluesseldienst"), OrganizerOptions()) == "mdi:key-chain"
+
+
+def test_icon_backfill_guenstigster_preis():
+    assert suggest_entity_icon(_FakeEntry("sensor.guenstigster_preis"), OrganizerOptions()) == "mdi:tag-check"

@@ -32751,6 +32751,24 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "heizfuehler": "mdi:thermometer-lines",
     "gewaechshausbeleuchtung": "mdi:greenhouse",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "schrottsammlung": "mdi:delete",
+    "szenenskript": "mdi:script-text-outline",
+    "brightness trend": "mdi:brightness-6",
+    "lambdasonde": "mdi:car-cog",
+    "extractor": "mdi:air-filter",
+    "brandschutz": "mdi:fire",
+    "reaktionszeit": "mdi:clock-fast",
+    "ventilatorstandrohr": "mdi:fan-chevron-up",
+    "pv produktion": "mdi:solar-power",
+    "frischluftzufuhr": "mdi:air-purifier",
+    "grid consumption": "mdi:power-plug",
+    "awattar preis": "mdi:currency-eur",
+    "dsl anschluss": "mdi:ethernet-cable",
+    "battery heater": "mdi:battery-unknown",
+    "schluesseldienst": "mdi:key-chain",
+    "guenstigster preis": "mdi:tag-check",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
