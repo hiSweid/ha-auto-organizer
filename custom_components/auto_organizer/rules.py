@@ -26490,6 +26490,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "pfsense update": "mdi:update",
     "carbon intensity": "mdi:leaf",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "sht41": "mdi:water-percent",
+    "sg ready": "mdi:lightning-bolt",
+    "netzwerkprotokoll": "mdi:network",
+    "dali bus": "mdi:led-strip",
+    "lofi abend": "mdi:movie-open",
+    "tageslichtwert": "mdi:white-balance-sunny",
+    "dyson v15": "mdi:robot-vacuum",
+    "entsperrmuster": "mdi:lock-pattern",
+    "verbrennungsgeruch": "mdi:smoke-detector",
+    "sun sail": "mdi:sun-compass",
+    "avocado": "mdi:food-variant",
+    "body detection": "mdi:motion-sensor",
+    "feit": "mdi:lightbulb",
+    "lichterspiel": "mdi:palette-outline",
+    "wunderground": "mdi:weather-cloudy",
+    "fuel range": "mdi:gas-station",
+    "vogelabwehr": "mdi:bird",
+    "zmod4410": "mdi:air-filter",
+    "polytunnel": "mdi:greenhouse",
+    "linkind presence": "mdi:account-check",
+    "flockmittel": "mdi:water",
+    "retractable awning": "mdi:blinds",
+    "setpoint": "mdi:thermostat",
+    "capture card": "mdi:video-input-hdmi",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
