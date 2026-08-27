@@ -32408,6 +32408,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "beacon battery": "mdi:battery-charging-90",
     "tageslichtfaktor": "mdi:white-balance-sunny",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "metz": "mdi:cast",
+    "indoor co2": "mdi:molecule-co2",
+    "lichtsensorwert": "mdi:brightness-6",
+    "solocam": "mdi:cctv",
+    "klaergrube": "mdi:water-pump",
+    "motion linkage": "mdi:motion-sensor",
+    "sattelschloss": "mdi:lock",
+    "schnellladung": "mdi:battery-charging-wireless",
+    "ecowitt wh32": "mdi:water-percent",
+    "bluetooth trigger": "mdi:bluetooth",
+    "coffee grinder": "mdi:coffee-maker",
+    "notify skript": "mdi:message-text-outline",
+    "imbalance settlement": "mdi:currency-usd",
+    "altkleiderspende": "mdi:recycle",
+    "fan reset filter": "mdi:air-filter",
+    "anti drill": "mdi:lock-alert",
+    "sabotage": "mdi:alert-circle",
+    "staub": "mdi:air-purifier",
+    "one click": "mdi:cursor-pointer",
+    "revenue meter": "mdi:meter-electric",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
