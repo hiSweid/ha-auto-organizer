@@ -75326,3 +75326,83 @@ def test_icon_backfill_lueftungsregler():
 
 def test_icon_backfill_parkassistent():
     assert suggest_entity_icon(_FakeEntry("sensor.parkassistent"), OrganizerOptions()) == "mdi:car-parking-lights"
+
+
+def test_icon_backfill_sammelbefehl():
+    assert suggest_entity_icon(_FakeEntry("sensor.sammelbefehl"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_erdfeuchte():
+    assert suggest_entity_icon(_FakeEntry("sensor.erdfeuchte"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_greenwood_airvac():
+    assert suggest_entity_icon(_FakeEntry("sensor.greenwood_airvac"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_busch_jaeger_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.busch_jaeger_firmware"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_icon_backfill_wandtasterrahmen():
+    assert suggest_entity_icon(_FakeEntry("sensor.wandtasterrahmen"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_icon_backfill_wetterumbruch():
+    assert suggest_entity_icon(_FakeEntry("sensor.wetterumbruch"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_kindersitz_belegt():
+    assert suggest_entity_icon(_FakeEntry("sensor.kindersitz_belegt"), OrganizerOptions()) == "mdi:car-seat"
+
+
+def test_icon_backfill_musikbox():
+    assert suggest_entity_icon(_FakeEntry("sensor.musikbox"), OrganizerOptions()) == "mdi:speaker"
+
+
+def test_icon_backfill_abfallwirtschaftsamt():
+    assert suggest_entity_icon(_FakeEntry("sensor.abfallwirtschaftsamt"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_tmp006():
+    assert suggest_entity_icon(_FakeEntry("sensor.tmp006"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_discord():
+    assert suggest_entity_icon(_FakeEntry("sensor.discord"), OrganizerOptions()) == "mdi:message-text-outline"
+
+
+def test_icon_backfill_akai():
+    assert suggest_entity_icon(_FakeEntry("sensor.akai"), OrganizerOptions()) == "mdi:music-note"
+
+
+def test_icon_backfill_carporthelligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.carporthelligkeit"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_weinkuehlung():
+    assert suggest_entity_icon(_FakeEntry("sensor.weinkuehlung"), OrganizerOptions()) == "mdi:fridge-industrial"
+
+
+def test_icon_backfill_suction_power():
+    assert suggest_entity_icon(_FakeEntry("sensor.suction_power"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_icon_backfill_scd40():
+    assert suggest_entity_icon(_FakeEntry("sensor.scd40"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_garagenrolltormotor():
+    assert suggest_entity_icon(_FakeEntry("sensor.garagenrolltormotor"), OrganizerOptions()) == "mdi:garage-open"
+
+
+def test_icon_backfill_aktualisierung_fehlgeschlagen():
+    assert suggest_entity_icon(_FakeEntry("sensor.aktualisierung_fehlgeschlagen"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_bongo():
+    assert suggest_entity_icon(_FakeEntry("sensor.bongo"), OrganizerOptions()) == "mdi:music-box"
+
+
+def test_icon_backfill_subnetzmaske():
+    assert suggest_entity_icon(_FakeEntry("sensor.subnetzmaske"), OrganizerOptions()) == "mdi:network"

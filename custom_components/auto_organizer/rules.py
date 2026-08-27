@@ -31242,6 +31242,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "lueftungsregler": "mdi:fan-chevron-up",
     "parkassistent": "mdi:car-parking-lights",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "sammelbefehl": "mdi:script-text-outline",
+    "erdfeuchte": "mdi:water-percent",
+    "greenwood airvac": "mdi:fan-chevron-up",
+    "busch jaeger firmware": "mdi:chip",
+    "wandtasterrahmen": "mdi:toggle-switch",
+    "wetterumbruch": "mdi:weather-windy",
+    "kindersitz belegt": "mdi:car-seat",
+    "musikbox": "mdi:speaker",
+    "abfallwirtschaftsamt": "mdi:trash-can",
+    "tmp006": "mdi:thermometer",
+    "discord": "mdi:message-text-outline",
+    "akai": "mdi:music-note",
+    "carporthelligkeit": "mdi:brightness-5",
+    "weinkuehlung": "mdi:fridge-industrial",
+    "suction power": "mdi:air-purifier",
+    "scd40": "mdi:air-filter",
+    "garagenrolltormotor": "mdi:garage-open",
+    "aktualisierung fehlgeschlagen": "mdi:update",
+    "bongo": "mdi:music-box",
+    "subnetzmaske": "mdi:network",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
