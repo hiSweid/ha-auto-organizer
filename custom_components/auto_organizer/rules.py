@@ -29810,6 +29810,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "hitzeindex": "mdi:thermometer-high",
     "elero centero": "mdi:window-shutter",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "babyzimmerventilator": "mdi:fan",
+    "randtief": "mdi:weather-night",
+    "rundsteuerempfaenger": "mdi:transmission-tower",
+    "sicherheitsglas": "mdi:shield-lock",
+    "graphenakku": "mdi:battery-heart-variant",
+    "hygge stimmung": "mdi:sun-compass",
+    "device presence": "mdi:cellphone-wireless",
+    "automatisierung": "mdi:robot",
+    "luftauslass": "mdi:air-filter",
+    "gartensteckdosenleiste": "mdi:power-plug-outline",
+    "aiwa": "mdi:audio-video",
+    "kreislaufwirtschaftsgesetz": "mdi:recycle",
+    "kiloluxwert": "mdi:brightness-5",
+    "kommandofolge": "mdi:playlist-edit",
+    "occupancysensor": "mdi:motion-sensor",
+    "modulair": "mdi:air-humidifier",
+    "wattestaebchen": "mdi:currency-eur",
+    "nachmittagsstimmung": "mdi:sun-clock",
+    "regensummenzaehler": "mdi:weather-rainy",
+    "marley spoon": "mdi:food-apple",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
