@@ -29131,6 +29131,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "flurpraesenzmelder": "mdi:motion-sensor",
     "zirkulationspumpe leck": "mdi:leak",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "motioneye": "mdi:cctv",
+    "notfallrelease": "mdi:alert-circle-outline",
+    "zellseparator": "mdi:battery-charging-low",
+    "streaming abo": "mdi:play-network",
+    "waste disposal": "mdi:trash-can",
+    "interneteinwahl": "mdi:wifi-arrow-left-right",
+    "taupunktalarm": "mdi:thermometer-alert",
+    "fortlufttemperatur": "mdi:thermometer-chevron-up",
+    "nodered": "mdi:code-braces",
+    "narwal": "mdi:robot-vacuum-variant",
+    "grid outage": "mdi:power-plug-off",
+    "gewaechshausheizung": "mdi:radiator",
+    "brightness threshold": "mdi:brightness-percent",
+    "tile tracker": "mdi:map-marker-radius-outline",
+    "entega": "mdi:currency-eur",
+    "wassersparmodus": "mdi:water-pump-off",
+    "gefrierschranktemperatur": "mdi:fridge-industrial-alert",
+    "digitale sperrzone": "mdi:lock-alert",
+    "raumreihenfolge": "mdi:room-service",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

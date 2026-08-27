@@ -67610,3 +67610,79 @@ def test_icon_backfill_flurpraesenzmelder():
 
 def test_icon_backfill_zirkulationspumpe_leck():
     assert suggest_entity_icon(_FakeEntry("sensor.zirkulationspumpe_leck"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_motioneye():
+    assert suggest_entity_icon(_FakeEntry("sensor.motioneye"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_notfallrelease():
+    assert suggest_entity_icon(_FakeEntry("sensor.notfallrelease"), OrganizerOptions()) == "mdi:alert-circle-outline"
+
+
+def test_icon_backfill_zellseparator():
+    assert suggest_entity_icon(_FakeEntry("sensor.zellseparator"), OrganizerOptions()) == "mdi:battery-charging-low"
+
+
+def test_icon_backfill_streaming_abo():
+    assert suggest_entity_icon(_FakeEntry("sensor.streaming_abo"), OrganizerOptions()) == "mdi:play-network"
+
+
+def test_icon_backfill_waste_disposal():
+    assert suggest_entity_icon(_FakeEntry("sensor.waste_disposal"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_interneteinwahl():
+    assert suggest_entity_icon(_FakeEntry("sensor.interneteinwahl"), OrganizerOptions()) == "mdi:wifi-arrow-left-right"
+
+
+def test_icon_backfill_taupunktalarm():
+    assert suggest_entity_icon(_FakeEntry("sensor.taupunktalarm"), OrganizerOptions()) == "mdi:thermometer-alert"
+
+
+def test_icon_backfill_fortlufttemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.fortlufttemperatur"), OrganizerOptions()) == "mdi:thermometer-chevron-up"
+
+
+def test_icon_backfill_nodered():
+    assert suggest_entity_icon(_FakeEntry("sensor.nodered"), OrganizerOptions()) == "mdi:code-braces"
+
+
+def test_icon_backfill_narwal():
+    assert suggest_entity_icon(_FakeEntry("sensor.narwal"), OrganizerOptions()) == "mdi:robot-vacuum-variant"
+
+
+def test_icon_backfill_grid_outage():
+    assert suggest_entity_icon(_FakeEntry("sensor.grid_outage"), OrganizerOptions()) == "mdi:power-plug-off"
+
+
+def test_icon_backfill_gewaechshausheizung():
+    assert suggest_entity_icon(_FakeEntry("sensor.gewaechshausheizung"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_icon_backfill_brightness_threshold():
+    assert suggest_entity_icon(_FakeEntry("sensor.brightness_threshold"), OrganizerOptions()) == "mdi:brightness-percent"
+
+
+def test_icon_backfill_tile_tracker():
+    assert suggest_entity_icon(_FakeEntry("sensor.tile_tracker"), OrganizerOptions()) == "mdi:map-marker-radius-outline"
+
+
+def test_icon_backfill_entega():
+    assert suggest_entity_icon(_FakeEntry("sensor.entega"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_wassersparmodus():
+    assert suggest_entity_icon(_FakeEntry("sensor.wassersparmodus"), OrganizerOptions()) == "mdi:water-pump-off"
+
+
+def test_icon_backfill_gefrierschranktemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.gefrierschranktemperatur"), OrganizerOptions()) == "mdi:fridge-industrial-alert"
+
+
+def test_icon_backfill_digitale_sperrzone():
+    assert suggest_entity_icon(_FakeEntry("sensor.digitale_sperrzone"), OrganizerOptions()) == "mdi:lock-alert"
+
+
+def test_icon_backfill_raumreihenfolge():
+    assert suggest_entity_icon(_FakeEntry("sensor.raumreihenfolge"), OrganizerOptions()) == "mdi:room-service"
