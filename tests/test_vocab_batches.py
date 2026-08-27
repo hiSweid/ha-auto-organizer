@@ -80018,3 +80018,71 @@ def test_icon_backfill_zapier_automation():
 
 def test_icon_backfill_zengge():
     assert suggest_entity_icon(_FakeEntry("sensor.zengge"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_selbstentladung():
+    assert suggest_entity_icon(_FakeEntry("sensor.selbstentladung"), OrganizerOptions()) == "mdi:battery-charging-low"
+
+
+def test_icon_backfill_oster_stimmung():
+    assert suggest_entity_icon(_FakeEntry("sensor.oster_stimmung"), OrganizerOptions()) == "mdi:palette"
+
+
+def test_icon_backfill_vergriffen():
+    assert suggest_entity_icon(_FakeEntry("sensor.vergriffen"), OrganizerOptions()) == "mdi:store-off"
+
+
+def test_icon_backfill_zapftemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.zapftemperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_fernwaerme():
+    assert suggest_entity_icon(_FakeEntry("sensor.fernwaerme"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_icon_backfill_luftmessnetz():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftmessnetz"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_knopfzellenwechsel():
+    assert suggest_entity_icon(_FakeEntry("sensor.knopfzellenwechsel"), OrganizerOptions()) == "mdi:battery-sync"
+
+
+def test_icon_backfill_inline_fan():
+    assert suggest_entity_icon(_FakeEntry("sensor.inline_fan"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_tastenmakro():
+    assert suggest_entity_icon(_FakeEntry("sensor.tastenmakro"), OrganizerOptions()) == "mdi:gesture-tap-button"
+
+
+def test_icon_backfill_victron_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.victron_firmware"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_icon_backfill_continuous_drain():
+    assert suggest_entity_icon(_FakeEntry("sensor.continuous_drain"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_loungebereich():
+    assert suggest_entity_icon(_FakeEntry("sensor.loungebereich"), OrganizerOptions()) == "mdi:sofa"
+
+
+def test_icon_backfill_dehydrator():
+    assert suggest_entity_icon(_FakeEntry("sensor.dehydrator"), OrganizerOptions()) == "mdi:fridge-industrial-outline"
+
+
+def test_icon_backfill_muelltrennhilfe():
+    assert suggest_entity_icon(_FakeEntry("sensor.muelltrennhilfe"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_vacancy():
+    assert suggest_entity_icon(_FakeEntry("sensor.vacancy"), OrganizerOptions()) == "mdi:home-outline"
+
+
+def test_icon_backfill_batterieklammer():
+    assert suggest_entity_icon(_FakeEntry("sensor.batterieklammer"), OrganizerOptions()) == "mdi:battery-unknown"
+
+
+def test_icon_backfill_olivenglas():
+    assert suggest_entity_icon(_FakeEntry("sensor.olivenglas"), OrganizerOptions()) == "mdi:glass-mug"

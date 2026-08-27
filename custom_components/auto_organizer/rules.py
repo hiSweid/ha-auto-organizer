@@ -32535,6 +32535,25 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "zapier automation": "mdi:robot",
     "zengge": "mdi:lightbulb",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "selbstentladung": "mdi:battery-charging-low",
+    "oster stimmung": "mdi:palette",
+    "vergriffen": "mdi:store-off",
+    "zapftemperatur": "mdi:thermometer",
+    "fernwaerme": "mdi:radiator",
+    "luftmessnetz": "mdi:air-filter",
+    "knopfzellenwechsel": "mdi:battery-sync",
+    "inline fan": "mdi:fan",
+    "tastenmakro": "mdi:gesture-tap-button",
+    "victron firmware": "mdi:chip",
+    "continuous drain": "mdi:water-pump",
+    "loungebereich": "mdi:sofa",
+    "dehydrator": "mdi:fridge-industrial-outline",
+    "muelltrennhilfe": "mdi:trash-can",
+    "vacancy": "mdi:home-outline",
+    "batterieklammer": "mdi:battery-unknown",
+    "olivenglas": "mdi:glass-mug",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
