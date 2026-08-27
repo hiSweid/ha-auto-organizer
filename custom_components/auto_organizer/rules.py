@@ -27408,6 +27408,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "lr06": "mdi:battery",
     "anti pick": "mdi:lock-alert",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "build nummer": "mdi:counter",
+    "schliessvorgang": "mdi:lock-clock",
+    "footcandle messung": "mdi:brightness-5",
+    "outdoor ambient light": "mdi:weather-sunny",
+    "froggit wetterstation": "mdi:thermometer-lines",
+    "comfee": "mdi:power-plug",
+    "blaue tonne": "mdi:trash-can",
+    "core temperature": "mdi:thermometer-alert",
+    "flashlight battery": "mdi:battery-charging",
+    "tachostand": "mdi:speedometer",
+    "residual motion": "mdi:motion-sensor",
+    "sommermodus": "mdi:sun-thermometer",
+    "sicherheitskarte": "mdi:card-account-details",
+    "hidden cam": "mdi:cctv",
+    "phev": "mdi:car-electric",
+    "erntedankfest": "mdi:calendar-star",
+    "economizer": "mdi:air-conditioner",
+    "kosmetikprodukte": "mdi:package-variant-closed",
+    "globus markt": "mdi:storefront",
+    "sickerschacht ueberlauf": "mdi:water-alert",
+    "moppheben": "mdi:vacuum",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
