@@ -30326,6 +30326,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "gaestezimmerlichtsensor": "mdi:brightness-5",
     "rechnungsbetrag": "mdi:currency-eur",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "zugesperrt": "mdi:lock",
+    "line voltage": "mdi:flash",
+    "veraltete software": "mdi:cellphone-arrow-down",
+    "atmotube pro": "mdi:air-filter",
+    "hebeltaster": "mdi:toggle-switch",
+    "ladeschluss": "mdi:ev-plug-type2",
+    "wandspeicher": "mdi:wall-sconce",
+    "curbside collection": "mdi:trash-can",
+    "handy zuhause": "mdi:cellphone-wireless",
+    "versickerung": "mdi:water-check",
+    "side waste": "mdi:trash-can-outline",
+    "kaminhaube": "mdi:fireplace",
+    "battery health": "mdi:battery-charging-low",
+    "temperaturminimum": "mdi:thermometer-low",
+    "toniebox": "mdi:book-open-variant",
+    "ventilundichtigkeit": "mdi:leak-off",
+    "buegelbrettstaender": "mdi:hanger",
+    "tactile switch": "mdi:toggle-switch-outline",
+    "zero waste": "mdi:recycle",
+    "dampferzeuger": "mdi:steam",
+    "dynament": "mdi:air-purifier",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
