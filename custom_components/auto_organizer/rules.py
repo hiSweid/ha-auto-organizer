@@ -28692,6 +28692,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "wake up light": "mdi:weather-sunny",
     "klimaschranktemperatur": "mdi:thermometer",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "bodenluke": "mdi:door-open",
+    "pickup day": "mdi:trash-can-outline",
+    "wolkenschicht": "mdi:weather-cloudy",
+    "fronius": "mdi:solar-power",
+    "keypad battery": "mdi:battery",
+    "muelltonnenchip": "mdi:trash-can-outline",
+    "ausgelaufen": "mdi:leak",
+    "quick command": "mdi:flash",
+    "damp room": "mdi:water-percent",
+    "gartenfackel": "mdi:lightbulb",
+    "auslastung": "mdi:account-group",
+    "sensirion": "mdi:air-filter",
+    "zulaufschlauch": "mdi:pipe",
+    "sonnengruss szene": "mdi:palette",
+    "fruehbeetkasten": "mdi:flower-tulip",
+    "kollisionssensor": "mdi:radar",
+    "gullideckel": "mdi:water-pump",
+    "and condition": "mdi:checkbox-marked-circle",
+    "alpha ess": "mdi:battery-medium",
+    "obis code": "mdi:power-plug",
+    "wassergehalt": "mdi:water-percent",
+    "abflussverstopfung": "mdi:pipe-leak",
+    "restafval": "mdi:trash-can-outline",
+    "virenkonzentration": "mdi:air-filter",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
