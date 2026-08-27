@@ -30488,6 +30488,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "engpassmanagement": "mdi:power-plug",
     "zelltemperatur": "mdi:thermometer",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "hot water dispenser": "mdi:water-boiler",
+    "naeherung": "mdi:motion-sensor",
+    "salus": "mdi:thermostat",
+    "sulo": "mdi:trash-can",
+    "bildschirmdiagonale": "mdi:monitor",
+    "hydronic": "mdi:radiator",
+    "temperaturmessstelle": "mdi:thermometer",
+    "partikelkonzentration": "mdi:air-filter",
+    "medical waste": "mdi:biohazard",
+    "vpn server": "mdi:server-network",
+    "grillsaison": "mdi:fireplace",
+    "irrigation timer": "mdi:water-pump",
+    "einschaltsequenz": "mdi:script-text",
+    "waermezaehler": "mdi:heat-pump",
+    "vornado": "mdi:fan-chevron-up",
+    "sungrow firmware": "mdi:chip",
+    "quiznacht": "mdi:calendar-clock",
+    "devolo": "mdi:wifi",
+    "gefrierbeutel": "mdi:snowflake",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

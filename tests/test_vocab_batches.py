@@ -72574,3 +72574,79 @@ def test_icon_backfill_engpassmanagement():
 
 def test_icon_backfill_zelltemperatur():
     assert suggest_entity_icon(_FakeEntry("sensor.zelltemperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_hot_water_dispenser():
+    assert suggest_entity_icon(_FakeEntry("sensor.hot_water_dispenser"), OrganizerOptions()) == "mdi:water-boiler"
+
+
+def test_icon_backfill_naeherung():
+    assert suggest_entity_icon(_FakeEntry("sensor.naeherung"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_salus():
+    assert suggest_entity_icon(_FakeEntry("sensor.salus"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_icon_backfill_sulo():
+    assert suggest_entity_icon(_FakeEntry("sensor.sulo"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_bildschirmdiagonale():
+    assert suggest_entity_icon(_FakeEntry("sensor.bildschirmdiagonale"), OrganizerOptions()) == "mdi:monitor"
+
+
+def test_icon_backfill_hydronic():
+    assert suggest_entity_icon(_FakeEntry("sensor.hydronic"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_icon_backfill_temperaturmessstelle():
+    assert suggest_entity_icon(_FakeEntry("sensor.temperaturmessstelle"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_partikelkonzentration():
+    assert suggest_entity_icon(_FakeEntry("sensor.partikelkonzentration"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_medical_waste():
+    assert suggest_entity_icon(_FakeEntry("sensor.medical_waste"), OrganizerOptions()) == "mdi:biohazard"
+
+
+def test_icon_backfill_vpn_server():
+    assert suggest_entity_icon(_FakeEntry("sensor.vpn_server"), OrganizerOptions()) == "mdi:server-network"
+
+
+def test_icon_backfill_grillsaison():
+    assert suggest_entity_icon(_FakeEntry("sensor.grillsaison"), OrganizerOptions()) == "mdi:fireplace"
+
+
+def test_icon_backfill_irrigation_timer():
+    assert suggest_entity_icon(_FakeEntry("sensor.irrigation_timer"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_einschaltsequenz():
+    assert suggest_entity_icon(_FakeEntry("sensor.einschaltsequenz"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_waermezaehler():
+    assert suggest_entity_icon(_FakeEntry("sensor.waermezaehler"), OrganizerOptions()) == "mdi:heat-pump"
+
+
+def test_icon_backfill_vornado():
+    assert suggest_entity_icon(_FakeEntry("sensor.vornado"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_sungrow_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.sungrow_firmware"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_icon_backfill_quiznacht():
+    assert suggest_entity_icon(_FakeEntry("sensor.quiznacht"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_devolo():
+    assert suggest_entity_icon(_FakeEntry("sensor.devolo"), OrganizerOptions()) == "mdi:wifi"
+
+
+def test_icon_backfill_gefrierbeutel():
+    assert suggest_entity_icon(_FakeEntry("sensor.gefrierbeutel"), OrganizerOptions()) == "mdi:snowflake"
