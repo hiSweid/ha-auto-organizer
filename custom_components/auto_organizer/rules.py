@@ -30305,6 +30305,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "aktionsradius": "mdi:radio-tower",
     "veml6040": "mdi:brightness-5",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "deebot x2": "mdi:robot-vacuum",
+    "schlauchleck": "mdi:leak",
+    "blower": "mdi:fan",
+    "funkloch": "mdi:wifi",
+    "ladezeitpunkt": "mdi:battery-charging",
+    "deponie": "mdi:trash-can",
+    "orientierungssensor": "mdi:motion-sensor",
+    "trigger event": "mdi:flash",
+    "langfristvorhersage": "mdi:weather-cloudy",
+    "nennspannung": "mdi:power-plug",
+    "openvpn": "mdi:lock",
+    "schwarze tonne": "mdi:trash-can-outline",
+    "knx torantrieb": "mdi:garage-open",
+    "benzolkonzentration": "mdi:air-filter",
+    "partylicht": "mdi:lightbulb-group",
+    "hausgeraete": "mdi:home-assistant",
+    "mindestbestellmenge": "mdi:cart-minus",
+    "gaestezimmerlichtsensor": "mdi:brightness-5",
+    "rechnungsbetrag": "mdi:currency-eur",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

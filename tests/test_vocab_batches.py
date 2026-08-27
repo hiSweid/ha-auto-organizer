@@ -71906,3 +71906,79 @@ def test_icon_backfill_aktionsradius():
 
 def test_icon_backfill_veml6040():
     assert suggest_entity_icon(_FakeEntry("sensor.veml6040"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_deebot_x2():
+    assert suggest_entity_icon(_FakeEntry("sensor.deebot_x2"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_schlauchleck():
+    assert suggest_entity_icon(_FakeEntry("sensor.schlauchleck"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_blower():
+    assert suggest_entity_icon(_FakeEntry("sensor.blower"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_funkloch():
+    assert suggest_entity_icon(_FakeEntry("sensor.funkloch"), OrganizerOptions()) == "mdi:wifi"
+
+
+def test_icon_backfill_ladezeitpunkt():
+    assert suggest_entity_icon(_FakeEntry("sensor.ladezeitpunkt"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_deponie():
+    assert suggest_entity_icon(_FakeEntry("sensor.deponie"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_orientierungssensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.orientierungssensor"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_trigger_event():
+    assert suggest_entity_icon(_FakeEntry("sensor.trigger_event"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_langfristvorhersage():
+    assert suggest_entity_icon(_FakeEntry("sensor.langfristvorhersage"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_nennspannung():
+    assert suggest_entity_icon(_FakeEntry("sensor.nennspannung"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_openvpn():
+    assert suggest_entity_icon(_FakeEntry("sensor.openvpn"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_schwarze_tonne():
+    assert suggest_entity_icon(_FakeEntry("sensor.schwarze_tonne"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_icon_backfill_knx_torantrieb():
+    assert suggest_entity_icon(_FakeEntry("sensor.knx_torantrieb"), OrganizerOptions()) == "mdi:garage-open"
+
+
+def test_icon_backfill_benzolkonzentration():
+    assert suggest_entity_icon(_FakeEntry("sensor.benzolkonzentration"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_partylicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.partylicht"), OrganizerOptions()) == "mdi:lightbulb-group"
+
+
+def test_icon_backfill_hausgeraete():
+    assert suggest_entity_icon(_FakeEntry("sensor.hausgeraete"), OrganizerOptions()) == "mdi:home-assistant"
+
+
+def test_icon_backfill_mindestbestellmenge():
+    assert suggest_entity_icon(_FakeEntry("sensor.mindestbestellmenge"), OrganizerOptions()) == "mdi:cart-minus"
+
+
+def test_icon_backfill_gaestezimmerlichtsensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.gaestezimmerlichtsensor"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_rechnungsbetrag():
+    assert suggest_entity_icon(_FakeEntry("sensor.rechnungsbetrag"), OrganizerOptions()) == "mdi:currency-eur"
