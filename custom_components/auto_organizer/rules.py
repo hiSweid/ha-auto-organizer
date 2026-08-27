@@ -28990,6 +28990,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "gaskostenanteil": "mdi:gas-cylinder",
     "eisregen sensor": "mdi:weather-hail",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "fortigate": "mdi:router-wireless",
+    "aufwaertskompatibilitaet": "mdi:arrow-up-bold",
+    "water": "mdi:water",
+    "vegetationsstart": "mdi:sprout",
+    "verschleissteile": "mdi:wrench",
+    "neustart ausstehend": "mdi:restart-alert",
+    "patchpanel": "mdi:server-network",
+    "current state node": "mdi:nodejs",
+    "google meet": "mdi:video-plus",
+    "yum update": "mdi:update",
+    "price per kwh": "mdi:currency-eur",
+    "line crossing detection": "mdi:vector-line",
+    "template condition": "mdi:file-document-edit",
+    "elektrogeraeteabgabe": "mdi:recycle",
+    "ruko": "mdi:lock",
+    "solarkamera": "mdi:camera",
+    "luftfeuchteoptimum": "mdi:water-percent",
+    "magnat": "mdi:magnet",
+    "wetterfront": "mdi:weather-windy",
+    "mold risk": "mdi:spider-web",
+    "bag tag": "mdi:tag",
+    "restricted keyway": "mdi:lock-alert",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
