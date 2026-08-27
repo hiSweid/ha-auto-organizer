@@ -32656,6 +32656,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "bezugsleistung": "mdi:power-plug",
     "drip emitter": "mdi:water-pump",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "th sensor": "mdi:water-percent",
+    "fritteusenkorb": "mdi:pot",
+    "solarhelligkeit": "mdi:white-balance-sunny",
+    "feuchtegesteuert": "mdi:water-percent",
+    "spuele": "mdi:faucet",
+    "muellgebuehrensatzung": "mdi:trash-can",
+    "meross automatisierung": "mdi:robot",
+    "aktivierungsbedingung": "mdi:check-circle-outline",
+    "volvo ex90": "mdi:car",
+    "true wireless": "mdi:headphones-bluetooth",
+    "leckwasser": "mdi:leak",
+    "schliessfachcode": "mdi:lock",
+    "bandbreitendrosselung": "mdi:speedometer",
+    "zeitschema": "mdi:calendar-clock",
+    "netzbetreiber": "mdi:power-plug",
+    "homey flow": "mdi:pipe",
+    "point cloud radar": "mdi:radiobox-marked",
+    "batch verarbeitung": "mdi:package",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
