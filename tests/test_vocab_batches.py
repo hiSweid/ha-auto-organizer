@@ -64786,3 +64786,103 @@ def test_icon_backfill_brilliant_leuchte():
 
 def test_icon_backfill_systemabbild():
     assert suggest_entity_icon(_FakeEntry("sensor.systemabbild"), OrganizerOptions()) == "mdi:chart-line"
+
+
+def test_icon_backfill_bodeninversion():
+    assert suggest_entity_icon(_FakeEntry("sensor.bodeninversion"), OrganizerOptions()) == "mdi:weather-snowy"
+
+
+def test_icon_backfill_reservepreis():
+    assert suggest_entity_icon(_FakeEntry("sensor.reservepreis"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_dachboden_betreten():
+    assert suggest_entity_icon(_FakeEntry("sensor.dachboden_betreten"), OrganizerOptions()) == "mdi:home-floor-1"
+
+
+def test_icon_backfill_power_to_heat():
+    assert suggest_entity_icon(_FakeEntry("sensor.power_to_heat"), OrganizerOptions()) == "mdi:heat-wave"
+
+
+def test_icon_backfill_steckertyp():
+    assert suggest_entity_icon(_FakeEntry("sensor.steckertyp"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_el_nino():
+    assert suggest_entity_icon(_FakeEntry("sensor.el_nino"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_particle():
+    assert suggest_entity_icon(_FakeEntry("sensor.particle"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_farbtemperatur_regler():
+    assert suggest_entity_icon(_FakeEntry("sensor.farbtemperatur_regler"), OrganizerOptions()) == "mdi:temperature-kelvin"
+
+
+def test_icon_backfill_poolchemie():
+    assert suggest_entity_icon(_FakeEntry("sensor.poolchemie"), OrganizerOptions()) == "mdi:pool"
+
+
+def test_icon_backfill_reptilienfeuchtigkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.reptilienfeuchtigkeit"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_kuschelstimmung():
+    assert suggest_entity_icon(_FakeEntry("sensor.kuschelstimmung"), OrganizerOptions()) == "mdi:sofa"
+
+
+def test_icon_backfill_skriptfooter():
+    assert suggest_entity_icon(_FakeEntry("sensor.skriptfooter"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_after_work_drink():
+    assert suggest_entity_icon(_FakeEntry("sensor.after_work_drink"), OrganizerOptions()) == "mdi:glass-mug"
+
+
+def test_icon_backfill_lichtblick():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtblick"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_paulmann_bewegungsmelder():
+    assert suggest_entity_icon(_FakeEntry("sensor.paulmann_bewegungsmelder"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_wlan_lautsprecher():
+    assert suggest_entity_icon(_FakeEntry("sensor.wlan_lautsprecher"), OrganizerOptions()) == "mdi:speaker-wireless"
+
+
+def test_icon_backfill_rohrleitungsbruch():
+    assert suggest_entity_icon(_FakeEntry("sensor.rohrleitungsbruch"), OrganizerOptions()) == "mdi:pipe-leak"
+
+
+def test_icon_backfill_charging_speed():
+    assert suggest_entity_icon(_FakeEntry("sensor.charging_speed"), OrganizerOptions()) == "mdi:speedometer"
+
+
+def test_icon_backfill_systemluefter():
+    assert suggest_entity_icon(_FakeEntry("sensor.systemluefter"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_naechstes_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.naechstes_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_geofence_enter():
+    assert suggest_entity_icon(_FakeEntry("sensor.geofence_enter"), OrganizerOptions()) == "mdi:map-marker-radius"
+
+
+def test_icon_backfill_brightness_data():
+    assert suggest_entity_icon(_FakeEntry("sensor.brightness_data"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_still_target():
+    assert suggest_entity_icon(_FakeEntry("sensor.still_target"), OrganizerOptions()) == "mdi:target-account"
+
+
+def test_icon_backfill_kosmetikspiegel_licht():
+    assert suggest_entity_icon(_FakeEntry("sensor.kosmetikspiegel_licht"), OrganizerOptions()) == "mdi:mirror"
+
+
+def test_icon_backfill_superkondensator():
+    assert suggest_entity_icon(_FakeEntry("sensor.superkondensator"), OrganizerOptions()) == "mdi:flash"

@@ -28361,6 +28361,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "brilliant leuchte": "mdi:lightbulb",
     "systemabbild": "mdi:chart-line",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "bodeninversion": "mdi:weather-snowy",
+    "reservepreis": "mdi:currency-eur",
+    "dachboden betreten": "mdi:home-floor-1",
+    "power to heat": "mdi:heat-wave",
+    "steckertyp": "mdi:power-plug",
+    "el nino": "mdi:weather-windy",
+    "particle": "mdi:air-filter",
+    "farbtemperatur regler": "mdi:temperature-kelvin",
+    "poolchemie": "mdi:pool",
+    "reptilienfeuchtigkeit": "mdi:water-percent",
+    "kuschelstimmung": "mdi:sofa",
+    "skriptfooter": "mdi:script-text-outline",
+    "after work drink": "mdi:glass-mug",
+    "lichtblick": "mdi:lightbulb",
+    "paulmann bewegungsmelder": "mdi:motion-sensor",
+    "wlan lautsprecher": "mdi:speaker-wireless",
+    "rohrleitungsbruch": "mdi:pipe-leak",
+    "charging speed": "mdi:speedometer",
+    "systemluefter": "mdi:fan",
+    "naechstes update": "mdi:update",
+    "geofence enter": "mdi:map-marker-radius",
+    "brightness data": "mdi:brightness-6",
+    "still target": "mdi:target-account",
+    "kosmetikspiegel licht": "mdi:mirror",
+    "superkondensator": "mdi:flash",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
