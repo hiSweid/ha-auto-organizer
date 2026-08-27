@@ -31504,6 +31504,18 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "oral irrigator": "mdi:toothbrush",
     "pendelverkehr": "mdi:train",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "vape akku": "mdi:battery",
+    "geberit": "mdi:water",
+    "souterrainfenster": "mdi:security",
+    "condensation leak": "mdi:leak",
+    "verweildauer bewegung": "mdi:motion",
+    "klopfen": "mdi:motion",
+    "dachrinne": "mdi:water",
+    "discount": "mdi:shopping",
+    "intel nuc": "mdi:network",
+    "flurlichtautomatik": "mdi:motion",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

@@ -76286,3 +76286,43 @@ def test_icon_backfill_oral_irrigator():
 
 def test_icon_backfill_pendelverkehr():
     assert suggest_entity_icon(_FakeEntry("sensor.pendelverkehr"), OrganizerOptions()) == "mdi:train"
+
+
+def test_icon_backfill_vape_akku():
+    assert suggest_entity_icon(_FakeEntry("sensor.vape_akku"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_geberit():
+    assert suggest_entity_icon(_FakeEntry("sensor.geberit"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_souterrainfenster():
+    assert suggest_entity_icon(_FakeEntry("sensor.souterrainfenster"), OrganizerOptions()) == "mdi:security"
+
+
+def test_icon_backfill_condensation_leak():
+    assert suggest_entity_icon(_FakeEntry("sensor.condensation_leak"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_verweildauer_bewegung():
+    assert suggest_entity_icon(_FakeEntry("sensor.verweildauer_bewegung"), OrganizerOptions()) == "mdi:motion"
+
+
+def test_icon_backfill_klopfen():
+    assert suggest_entity_icon(_FakeEntry("sensor.klopfen"), OrganizerOptions()) == "mdi:motion"
+
+
+def test_icon_backfill_dachrinne():
+    assert suggest_entity_icon(_FakeEntry("sensor.dachrinne"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_discount():
+    assert suggest_entity_icon(_FakeEntry("sensor.discount"), OrganizerOptions()) == "mdi:shopping"
+
+
+def test_icon_backfill_intel_nuc():
+    assert suggest_entity_icon(_FakeEntry("sensor.intel_nuc"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_flurlichtautomatik():
+    assert suggest_entity_icon(_FakeEntry("sensor.flurlichtautomatik"), OrganizerOptions()) == "mdi:motion"
