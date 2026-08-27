@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.150] - 2026-08-27
+
+### Added
+- Further `SPECIFIC_ICONS` entries from the ongoing local-LLM icon backfill
+  batch job (~3232 total merged so far this run, ~3.2k of the original
+  6.9k gap remaining — just past halfway).
+
+### Fixed
+- 5 more icon mismatches from the same surface-similarity failure pattern:
+  `raumreihenfolge` (a vacuum's room cleaning sequence) had
+  `mdi:room-service`, `teigschaber` (a dough scraper tool) had
+  `mdi:food-croissant`, `kamerarauschen` (camera visual noise) had
+  `mdi:microphone-message` (an audio icon), `eva dry` (a dehumidifier
+  brand) had `mdi:hair-dryer`, `nightcap` (a bedtime scene) had
+  `mdi:movie-open`.
+
 ## [0.9.149] - 2026-08-27
 
 ### Added
