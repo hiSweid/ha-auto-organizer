@@ -28648,6 +28648,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "wohnzimmerhelligkeit": "mdi:brightness-5",
     "sichttruebung": "mdi:weather-fog",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "panasonic rulo": "mdi:vacuum",
+    "vintage stimmung": "mdi:movie-open",
+    "provisionierung": "mdi:script-text-outline",
+    "leckortungssystem": "mdi:leak-off",
+    "ventilatorakkulaufzeit": "mdi:fan-clock",
+    "zone cleaning": "mdi:vacuum",
+    "sicherheitsgitter": "mdi:security-network",
+    "waschbeckenleck": "mdi:faucet",
+    "auslaufartikel": "mdi:cart-arrow-down",
+    "reinigungsdauer": "mdi:timer-cog",
+    "r7s lampe": "mdi:lightbulb",
+    "maeanderfahrt": "mdi:map-marker-path",
+    "wecksequenz": "mdi:alarm-multiple",
+    "airnow": "mdi:air-filter",
+    "vorschaumodus": "mdi:eye-settings-outline",
+    "simulationslauf": "mdi:play-circle-outline",
+    "koerperkerntemperatur": "mdi:thermometer-lines",
+    "rundzelle": "mdi:battery-charging-10",
+    "wertstoff": "mdi:recycle",
+    "fensterfeuchtigkeit": "mdi:window-open",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
