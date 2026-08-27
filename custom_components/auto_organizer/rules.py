@@ -29736,6 +29736,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "traumreise szene": "mdi:palette",
     "rehau fussbodenheizung": "mdi:radiator",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "pay as you throw": "mdi:trash-can",
+    "muelltonnenreinigung": "mdi:delete-circle",
+    "brightness delta": "mdi:brightness-6",
+    "bluray player": "mdi:play-circle",
+    "byd atto 3": "mdi:car-electric",
+    "net metering": "mdi:transmission-tower",
+    "trinkwassertemperatur": "mdi:water-thermometer",
+    "pollenflug trigger": "mdi:flower-pollen",
+    "bosch": "mdi:fridge-industrial-outline",
+    "airius fan": "mdi:fan-chevron-up",
+    "restreichweite": "mdi:gas-station",
+    "feuchtemanagement": "mdi:water-percent",
+    "amazon echo studio": "mdi:speaker-wireless",
+    "eva dry": "mdi:hair-dryer",
+    "patchen": "mdi:update",
+    "funkzeitschaltuhr": "mdi:clock-outline",
+    "zugangsbadge": "mdi:card-account-details-star",
+    "temperaturextrem": "mdi:thermometer-alert",
+    "open meteo": "mdi:weather-cloudy",
+    "nachtstrom": "mdi:lightbulb-night",
+    "funkzelle": "mdi:cellphone-nfc",
+    "fleischwolf": "mdi:fridge-industrial",
+    "innosent radar": "mdi:motion-sensor",
+    "picknickstimmung": "mdi:palette-outline",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

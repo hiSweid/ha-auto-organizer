@@ -69830,3 +69830,99 @@ def test_icon_backfill_traumreise_szene():
 
 def test_icon_backfill_rehau_fussbodenheizung():
     assert suggest_entity_icon(_FakeEntry("sensor.rehau_fussbodenheizung"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_icon_backfill_pay_as_you_throw():
+    assert suggest_entity_icon(_FakeEntry("sensor.pay_as_you_throw"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_muelltonnenreinigung():
+    assert suggest_entity_icon(_FakeEntry("sensor.muelltonnenreinigung"), OrganizerOptions()) == "mdi:delete-circle"
+
+
+def test_icon_backfill_brightness_delta():
+    assert suggest_entity_icon(_FakeEntry("sensor.brightness_delta"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_bluray_player():
+    assert suggest_entity_icon(_FakeEntry("sensor.bluray_player"), OrganizerOptions()) == "mdi:play-circle"
+
+
+def test_icon_backfill_byd_atto_3():
+    assert suggest_entity_icon(_FakeEntry("sensor.byd_atto_3"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_net_metering():
+    assert suggest_entity_icon(_FakeEntry("sensor.net_metering"), OrganizerOptions()) == "mdi:transmission-tower"
+
+
+def test_icon_backfill_trinkwassertemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.trinkwassertemperatur"), OrganizerOptions()) == "mdi:water-thermometer"
+
+
+def test_icon_backfill_pollenflug_trigger():
+    assert suggest_entity_icon(_FakeEntry("sensor.pollenflug_trigger"), OrganizerOptions()) == "mdi:flower-pollen"
+
+
+def test_icon_backfill_bosch():
+    assert suggest_entity_icon(_FakeEntry("sensor.bosch"), OrganizerOptions()) == "mdi:fridge-industrial-outline"
+
+
+def test_icon_backfill_airius_fan():
+    assert suggest_entity_icon(_FakeEntry("sensor.airius_fan"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_restreichweite():
+    assert suggest_entity_icon(_FakeEntry("sensor.restreichweite"), OrganizerOptions()) == "mdi:gas-station"
+
+
+def test_icon_backfill_feuchtemanagement():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchtemanagement"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_amazon_echo_studio():
+    assert suggest_entity_icon(_FakeEntry("sensor.amazon_echo_studio"), OrganizerOptions()) == "mdi:speaker-wireless"
+
+
+def test_icon_backfill_eva_dry():
+    assert suggest_entity_icon(_FakeEntry("sensor.eva_dry"), OrganizerOptions()) == "mdi:hair-dryer"
+
+
+def test_icon_backfill_patchen():
+    assert suggest_entity_icon(_FakeEntry("sensor.patchen"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_funkzeitschaltuhr():
+    assert suggest_entity_icon(_FakeEntry("sensor.funkzeitschaltuhr"), OrganizerOptions()) == "mdi:clock-outline"
+
+
+def test_icon_backfill_zugangsbadge():
+    assert suggest_entity_icon(_FakeEntry("sensor.zugangsbadge"), OrganizerOptions()) == "mdi:card-account-details-star"
+
+
+def test_icon_backfill_temperaturextrem():
+    assert suggest_entity_icon(_FakeEntry("sensor.temperaturextrem"), OrganizerOptions()) == "mdi:thermometer-alert"
+
+
+def test_icon_backfill_open_meteo():
+    assert suggest_entity_icon(_FakeEntry("sensor.open_meteo"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_nachtstrom():
+    assert suggest_entity_icon(_FakeEntry("sensor.nachtstrom"), OrganizerOptions()) == "mdi:lightbulb-night"
+
+
+def test_icon_backfill_funkzelle():
+    assert suggest_entity_icon(_FakeEntry("sensor.funkzelle"), OrganizerOptions()) == "mdi:cellphone-nfc"
+
+
+def test_icon_backfill_fleischwolf():
+    assert suggest_entity_icon(_FakeEntry("sensor.fleischwolf"), OrganizerOptions()) == "mdi:fridge-industrial"
+
+
+def test_icon_backfill_innosent_radar():
+    assert suggest_entity_icon(_FakeEntry("sensor.innosent_radar"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_picknickstimmung():
+    assert suggest_entity_icon(_FakeEntry("sensor.picknickstimmung"), OrganizerOptions()) == "mdi:palette-outline"
