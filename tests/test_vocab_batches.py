@@ -64242,3 +64242,99 @@ def test_icon_backfill_grid_frequency():
 
 def test_icon_backfill_herb_garden():
     assert suggest_entity_icon(_FakeEntry("sensor.herb_garden"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_modulationsgrad():
+    assert suggest_entity_icon(_FakeEntry("sensor.modulationsgrad"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_fronius_symo():
+    assert suggest_entity_icon(_FakeEntry("sensor.fronius_symo"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_cpu_temp():
+    assert suggest_entity_icon(_FakeEntry("sensor.cpu_temp"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_momox_verkauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.momox_verkauf"), OrganizerOptions()) == "mdi:cart"
+
+
+def test_icon_backfill_isobaren():
+    assert suggest_entity_icon(_FakeEntry("sensor.isobaren"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_tariff_rate():
+    assert suggest_entity_icon(_FakeEntry("sensor.tariff_rate"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_zero_day_patch():
+    assert suggest_entity_icon(_FakeEntry("sensor.zero_day_patch"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_excess_moisture():
+    assert suggest_entity_icon(_FakeEntry("sensor.excess_moisture"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_prefix_delegation():
+    assert suggest_entity_icon(_FakeEntry("sensor.prefix_delegation"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_jetstream():
+    assert suggest_entity_icon(_FakeEntry("sensor.jetstream"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_trigger_drosselung():
+    assert suggest_entity_icon(_FakeEntry("sensor.trigger_drosselung"), OrganizerOptions()) == "mdi:traffic-light"
+
+
+def test_icon_backfill_starkfrost():
+    assert suggest_entity_icon(_FakeEntry("sensor.starkfrost"), OrganizerOptions()) == "mdi:snowflake"
+
+
+def test_icon_backfill_wetterhahn():
+    assert suggest_entity_icon(_FakeEntry("sensor.wetterhahn"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_wetterchaos():
+    assert suggest_entity_icon(_FakeEntry("sensor.wetterchaos"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_crepe_maker():
+    assert suggest_entity_icon(_FakeEntry("sensor.crepe_maker"), OrganizerOptions()) == "mdi:pot"
+
+
+def test_icon_backfill_phasenanschnitt():
+    assert suggest_entity_icon(_FakeEntry("sensor.phasenanschnitt"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_night_vision():
+    assert suggest_entity_icon(_FakeEntry("sensor.night_vision"), OrganizerOptions()) == "mdi:eye"
+
+
+def test_icon_backfill_chillzone():
+    assert suggest_entity_icon(_FakeEntry("sensor.chillzone"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_frequenz():
+    assert suggest_entity_icon(_FakeEntry("sensor.frequenz"), OrganizerOptions()) == "mdi:waveform"
+
+
+def test_icon_backfill_stufensensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.stufensensor"), OrganizerOptions()) == "mdi:floor-plan"
+
+
+def test_icon_backfill_sturmnacht():
+    assert suggest_entity_icon(_FakeEntry("sensor.sturmnacht"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_abgasklappe():
+    assert suggest_entity_icon(_FakeEntry("sensor.abgasklappe"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_serienmarathon():
+    assert suggest_entity_icon(_FakeEntry("sensor.serienmarathon"), OrganizerOptions()) == "mdi:movie-roll"
+
+
+def test_icon_backfill_bonfire_night():
+    assert suggest_entity_icon(_FakeEntry("sensor.bonfire_night"), OrganizerOptions()) == "mdi:fire"

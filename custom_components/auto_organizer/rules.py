@@ -28213,6 +28213,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "grid frequency": "mdi:sine-wave",
     "herb garden": "mdi:leaf",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "modulationsgrad": "mdi:fan",
+    "fronius symo": "mdi:solar-power",
+    "cpu temp": "mdi:thermometer",
+    "momox verkauf": "mdi:cart",
+    "isobaren": "mdi:weather-windy",
+    "tariff rate": "mdi:currency-eur",
+    "zero day patch": "mdi:update",
+    "excess moisture": "mdi:water-percent",
+    "prefix delegation": "mdi:network",
+    "jetstream": "mdi:weather-windy",
+    "trigger drosselung": "mdi:traffic-light",
+    "starkfrost": "mdi:snowflake",
+    "wetterhahn": "mdi:water-pump",
+    "wetterchaos": "mdi:weather-cloudy",
+    "crepe maker": "mdi:pot",
+    "phasenanschnitt": "mdi:lightbulb",
+    "night vision": "mdi:eye",
+    "chillzone": "mdi:movie-open",
+    "frequenz": "mdi:waveform",
+    "stufensensor": "mdi:floor-plan",
+    "sturmnacht": "mdi:weather-windy",
+    "abgasklappe": "mdi:fan",
+    "serienmarathon": "mdi:movie-roll",
+    "bonfire night": "mdi:fire",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
