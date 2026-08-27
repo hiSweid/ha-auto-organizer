@@ -28334,6 +28334,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "boersenpreis": "mdi:cash-multiple",
     "geraeteupdate": "mdi:update",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "recycling week": "mdi:recycle",
+    "wohnzimmer bewegungsmelder": "mdi:motion-sensor",
+    "trackerbatterie": "mdi:battery",
+    "stromrechnung": "mdi:currency-usd",
+    "pflanzen": "mdi:flower-tulip",
+    "desinfektionsanlage": "mdi:water-pump",
+    "wiederhole solange": "mdi:repeat",
+    "utility bill": "mdi:currency-usd",
+    "lux kalibrierung": "mdi:sun-wireless",
+    "phase l3": "mdi:flash",
+    "klimapreis": "mdi:currency-eur",
+    "fieber": "mdi:thermometer",
+    "pantry": "mdi:fridge",
+    "smartthings firmware": "mdi:cellphone-arrow-down",
+    "auflad": "mdi:battery-charging",
+    "zickzack reinigung": "mdi:vacuum",
+    "anlaufrelais": "mdi:power-plug",
+    "relaxstimmung": "mdi:movie-open",
+    "perlschlauch": "mdi:water",
+    "deezer": "mdi:music-note",
+    "balkonbeschattung": "mdi:blinds",
+    "stirnthermometer": "mdi:thermometer",
+    "leuchtkasten": "mdi:lightbulb",
+    "brilliant leuchte": "mdi:lightbulb",
+    "systemabbild": "mdi:chart-line",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
