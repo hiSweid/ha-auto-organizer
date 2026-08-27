@@ -76514,3 +76514,95 @@ def test_icon_backfill_opt3001():
 
 def test_icon_backfill_windkuehleeffekt():
     assert suggest_entity_icon(_FakeEntry("sensor.windkuehleeffekt"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_alpha_release():
+    assert suggest_entity_icon(_FakeEntry("sensor.alpha_release"), OrganizerOptions()) == "mdi:package"
+
+
+def test_icon_backfill_nmap_tracker():
+    assert suggest_entity_icon(_FakeEntry("sensor.nmap_tracker"), OrganizerOptions()) == "mdi:account-check"
+
+
+def test_icon_backfill_bodensensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.bodensensor"), OrganizerOptions()) == "mdi:grass"
+
+
+def test_icon_backfill_melkstandlueftung():
+    assert suggest_entity_icon(_FakeEntry("sensor.melkstandlueftung"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_beleuchtungsniveau():
+    assert suggest_entity_icon(_FakeEntry("sensor.beleuchtungsniveau"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_elektrorasierer_akku():
+    assert suggest_entity_icon(_FakeEntry("sensor.elektrorasierer_akku"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_geomagnetic_storm():
+    assert suggest_entity_icon(_FakeEntry("sensor.geomagnetic_storm"), OrganizerOptions()) == "mdi:weather-lightning"
+
+
+def test_icon_backfill_l2_spannung():
+    assert suggest_entity_icon(_FakeEntry("sensor.l2_spannung"), OrganizerOptions()) == "mdi:sine-wave"
+
+
+def test_icon_backfill_candela_pro_quadratmeter():
+    assert suggest_entity_icon(_FakeEntry("sensor.candela_pro_quadratmeter"), OrganizerOptions()) == "mdi:brightness-7"
+
+
+def test_icon_backfill_dwell_time_motion():
+    assert suggest_entity_icon(_FakeEntry("sensor.dwell_time_motion"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_bodenwischer():
+    assert suggest_entity_icon(_FakeEntry("sensor.bodenwischer"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_gartenlounge_stimmung():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenlounge_stimmung"), OrganizerOptions()) == "mdi:sofa"
+
+
+def test_icon_backfill_datenrate():
+    assert suggest_entity_icon(_FakeEntry("sensor.datenrate"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_digitaleingang():
+    assert suggest_entity_icon(_FakeEntry("sensor.digitaleingang"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_icon_backfill_abschaltstrom():
+    assert suggest_entity_icon(_FakeEntry("sensor.abschaltstrom"), OrganizerOptions()) == "mdi:power-plug-off"
+
+
+def test_icon_backfill_partikelgroesse():
+    assert suggest_entity_icon(_FakeEntry("sensor.partikelgroesse"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_helligkeitsgrad():
+    assert suggest_entity_icon(_FakeEntry("sensor.helligkeitsgrad"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_towel_warmer():
+    assert suggest_entity_icon(_FakeEntry("sensor.towel_warmer"), OrganizerOptions()) == "mdi:heating-coil"
+
+
+def test_icon_backfill_vorgartenkamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.vorgartenkamera"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_phase_l2():
+    assert suggest_entity_icon(_FakeEntry("sensor.phase_l2"), OrganizerOptions()) == "mdi:sine-wave"
+
+
+def test_icon_backfill_tilt_sensor_motion():
+    assert suggest_entity_icon(_FakeEntry("sensor.tilt_sensor_motion"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_sender_suchlauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.sender_suchlauf"), OrganizerOptions()) == "mdi:radio-tower"
+
+
+def test_icon_backfill_ambientelichtsensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.ambientelichtsensor"), OrganizerOptions()) == "mdi:lightbulb"

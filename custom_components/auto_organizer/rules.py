@@ -31567,6 +31567,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "opt3001": "mdi:lightbulb",
     "windkuehleeffekt": "mdi:weather-windy",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "alpha release": "mdi:package",
+    "nmap tracker": "mdi:account-check",
+    "bodensensor": "mdi:grass",
+    "melkstandlueftung": "mdi:fan",
+    "beleuchtungsniveau": "mdi:brightness-6",
+    "elektrorasierer akku": "mdi:battery-charging",
+    "geomagnetic storm": "mdi:weather-lightning",
+    "l2 spannung": "mdi:sine-wave",
+    "candela pro quadratmeter": "mdi:brightness-7",
+    "dwell time motion": "mdi:motion-sensor",
+    "bodenwischer": "mdi:vacuum",
+    "gartenlounge stimmung": "mdi:sofa",
+    "datenrate": "mdi:network",
+    "digitaleingang": "mdi:toggle-switch",
+    "abschaltstrom": "mdi:power-plug-off",
+    "partikelgroesse": "mdi:air-filter",
+    "helligkeitsgrad": "mdi:brightness-5",
+    "towel warmer": "mdi:heating-coil",
+    "vorgartenkamera": "mdi:cctv",
+    "phase l2": "mdi:sine-wave",
+    "tilt sensor motion": "mdi:motion-sensor",
+    "sender suchlauf": "mdi:radio-tower",
+    "ambientelichtsensor": "mdi:lightbulb",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
