@@ -29832,6 +29832,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "regensummenzaehler": "mdi:weather-rainy",
     "marley spoon": "mdi:food-apple",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "tag verloren gemeldet": "mdi:account-alert",
+    "ds lite": "mdi:network",
+    "firmware neu aufspielen": "mdi:update",
+    "portspiegelung": "mdi:router-wireless",
+    "kwh kosten": "mdi:currency-eur",
+    "photoacoustic": "mdi:air-filter",
+    "tanzflaeche an": "mdi:movie-open",
+    "helligkeitswert": "mdi:brightness-6",
+    "undichtes dach": "mdi:leak",
+    "parkzeit": "mdi:car-clock",
+    "naesseschutz": "mdi:water-off",
+    "pilzzuchtbox": "mdi:flower-outline",
+    "darksky": "mdi:weather-night",
+    "tapo care": "mdi:cctv",
+    "hubitat app": "mdi:application-cog",
+    "script stoppen": "mdi:stop-circle",
+    "cr1620": "mdi:battery",
+    "gorenje": "mdi:fridge",
+    "moisture content": "mdi:water-percent",
+    "orkanwarnung": "mdi:weather-windy",
+    "luftqualitaetsvorhersage": "mdi:air-filter",
+    "shark stratos": "mdi:robot-vacuum",
+    "enercity": "mdi:currency-eur",
+    "lekker": "mdi:currency-eur",
+    "teichuvklaerer": "mdi:water-pump",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
