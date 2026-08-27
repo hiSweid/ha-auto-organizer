@@ -29040,6 +29040,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "stielstaubsauger": "mdi:vacuum",
     "atemluft": "mdi:air-filter",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "massage chair": "mdi:chair-rolling",
+    "magnetkarte": "mdi:card-account-details",
+    "cubic meter": "mdi:gauge",
+    "pms5003": "mdi:air-filter",
+    "dosenpfand": "mdi:bottle-wine",
+    "winsen": "mdi:air-filter",
+    "pmsa003": "mdi:air-filter",
+    "insider build": "mdi:package-up",
+    "smartcode": "mdi:lock-smart",
+    "codelocks": "mdi:lock-clock",
+    "pauschaltarif": "mdi:currency-eur",
+    "babyshower": "mdi:cake-variant",
+    "green waste": "mdi:leaf",
+    "nachzahlung": "mdi:currency-eur",
+    "phase l1": "mdi:sine-wave",
+    "outdoor unit": "mdi:fan-chevron-down",
+    "feuchteperzentil": "mdi:water-percent",
+    "muelltonnenwaage": "mdi:scale-bathroom",
+    "presence hold time": "mdi:timer-cog",
+    "brunchstimmung": "mdi:coffee-maker",
+    "waeschekorb": "mdi:washing-machine",
+    "abnehmende mondphase": "mdi:moon-waxing-crescent",
+    "available version": "mdi:package-up",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
