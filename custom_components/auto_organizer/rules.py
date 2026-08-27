@@ -28601,6 +28601,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "spielenacht": "mdi:movie-open",
     "sammleredition": "mdi:cart-plus",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "kondensatstau": "mdi:water-alert",
+    "case anweisung": "mdi:script-text-outline",
+    "badezimmerlicht": "mdi:lightbulb-outline",
+    "reusable cup": "mdi:cup-water",
+    "sump basin": "mdi:water-well",
+    "haarglaetter": "mdi:hair-dryer",
+    "telegram bot befehl": "mdi:message-text-outline",
+    "sauna stimmung": "mdi:sun-snowflake",
+    "sperrriegel": "mdi:lock-outline",
+    "v380 pro": "mdi:camera-outline",
+    "dyndns": "mdi:domain",
+    "rolloutversion": "mdi:update",
+    "zweitarifzaehler": "mdi:counter",
+    "lichtkuppelantrieb": "mdi:blinds",
+    "massagegeraet": "mdi:spa",
+    "thermorelais": "mdi:radiator",
+    "sturzerkennung": "mdi:run-fast",
+    "ladezeit": "mdi:battery-charging",
+    "regallicht": "mdi:lightbulb-outline",
+    "regenmengensensor": "mdi:weather-rainy",
+    "unold": "mdi:fridge",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
