@@ -31846,6 +31846,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "aussenleuchte bewegungsmelder": "mdi:motion-sensor",
     "lesestunde": "mdi:book-open-page-variant",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "doordash": "mdi:shopping",
+    "ketchupflasche": "mdi:bottle-tonic",
+    "indexierung": "mdi:tag-text-outline",
+    "aktivitaetsverlauf": "mdi:history",
+    "empfindlichkeit bewegung": "mdi:motion-sensor",
+    "kranakku": "mdi:battery-charging-low",
+    "teestunde": "mdi:tea",
+    "ventilatorneigungsverstellung": "mdi:fan-chevron-up",
+    "abfallmenge": "mdi:trash-can",
+    "schwachlast": "mdi:power-plug-off",
+    "monatsverbrauch": "mdi:chart-line",
+    "schwarzlicht": "mdi:lightbulb-night",
+    "choreografie": "mdi:run-fast",
+    "heizprofil": "mdi:thermostat",
+    "skriptausloeser": "mdi:script-text-play",
+    "stabiler kanal": "mdi:update",
+    "gelbsackabholung": "mdi:package-variant-closed",
+    "stromer": "mdi:car-electric",
+    "klaeranlage": "mdi:water-pump",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

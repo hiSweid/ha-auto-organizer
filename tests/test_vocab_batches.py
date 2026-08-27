@@ -77526,3 +77526,79 @@ def test_icon_backfill_aussenleuchte_bewegungsmelder():
 
 def test_icon_backfill_lesestunde():
     assert suggest_entity_icon(_FakeEntry("sensor.lesestunde"), OrganizerOptions()) == "mdi:book-open-page-variant"
+
+
+def test_icon_backfill_doordash():
+    assert suggest_entity_icon(_FakeEntry("sensor.doordash"), OrganizerOptions()) == "mdi:shopping"
+
+
+def test_icon_backfill_ketchupflasche():
+    assert suggest_entity_icon(_FakeEntry("sensor.ketchupflasche"), OrganizerOptions()) == "mdi:bottle-tonic"
+
+
+def test_icon_backfill_indexierung():
+    assert suggest_entity_icon(_FakeEntry("sensor.indexierung"), OrganizerOptions()) == "mdi:tag-text-outline"
+
+
+def test_icon_backfill_aktivitaetsverlauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.aktivitaetsverlauf"), OrganizerOptions()) == "mdi:history"
+
+
+def test_icon_backfill_empfindlichkeit_bewegung():
+    assert suggest_entity_icon(_FakeEntry("sensor.empfindlichkeit_bewegung"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_kranakku():
+    assert suggest_entity_icon(_FakeEntry("sensor.kranakku"), OrganizerOptions()) == "mdi:battery-charging-low"
+
+
+def test_icon_backfill_teestunde():
+    assert suggest_entity_icon(_FakeEntry("sensor.teestunde"), OrganizerOptions()) == "mdi:tea"
+
+
+def test_icon_backfill_ventilatorneigungsverstellung():
+    assert suggest_entity_icon(_FakeEntry("sensor.ventilatorneigungsverstellung"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_abfallmenge():
+    assert suggest_entity_icon(_FakeEntry("sensor.abfallmenge"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_schwachlast():
+    assert suggest_entity_icon(_FakeEntry("sensor.schwachlast"), OrganizerOptions()) == "mdi:power-plug-off"
+
+
+def test_icon_backfill_monatsverbrauch():
+    assert suggest_entity_icon(_FakeEntry("sensor.monatsverbrauch"), OrganizerOptions()) == "mdi:chart-line"
+
+
+def test_icon_backfill_schwarzlicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.schwarzlicht"), OrganizerOptions()) == "mdi:lightbulb-night"
+
+
+def test_icon_backfill_choreografie():
+    assert suggest_entity_icon(_FakeEntry("sensor.choreografie"), OrganizerOptions()) == "mdi:run-fast"
+
+
+def test_icon_backfill_heizprofil():
+    assert suggest_entity_icon(_FakeEntry("sensor.heizprofil"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_icon_backfill_skriptausloeser():
+    assert suggest_entity_icon(_FakeEntry("sensor.skriptausloeser"), OrganizerOptions()) == "mdi:script-text-play"
+
+
+def test_icon_backfill_stabiler_kanal():
+    assert suggest_entity_icon(_FakeEntry("sensor.stabiler_kanal"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_gelbsackabholung():
+    assert suggest_entity_icon(_FakeEntry("sensor.gelbsackabholung"), OrganizerOptions()) == "mdi:package-variant-closed"
+
+
+def test_icon_backfill_stromer():
+    assert suggest_entity_icon(_FakeEntry("sensor.stromer"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_klaeranlage():
+    assert suggest_entity_icon(_FakeEntry("sensor.klaeranlage"), OrganizerOptions()) == "mdi:water-pump"
