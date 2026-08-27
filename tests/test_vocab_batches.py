@@ -62186,3 +62186,67 @@ def test_icon_backfill_waste_management():
 
 def test_icon_backfill_portainer():
     assert suggest_entity_icon(_FakeEntry("sensor.portainer"), OrganizerOptions()) == "mdi:docker"
+
+
+def test_icon_backfill_heizoelleck():
+    assert suggest_entity_icon(_FakeEntry("sensor.heizoelleck"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_hakenriegel():
+    assert suggest_entity_icon(_FakeEntry("sensor.hakenriegel"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_bodennaesse():
+    assert suggest_entity_icon(_FakeEntry("sensor.bodennaesse"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_lux_meter():
+    assert suggest_entity_icon(_FakeEntry("sensor.lux_meter"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_hygrometrie():
+    assert suggest_entity_icon(_FakeEntry("sensor.hygrometrie"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_update_payload():
+    assert suggest_entity_icon(_FakeEntry("sensor.update_payload"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_bidet():
+    assert suggest_entity_icon(_FakeEntry("sensor.bidet"), OrganizerOptions()) == "mdi:toilet"
+
+
+def test_icon_backfill_ammoniakleck():
+    assert suggest_entity_icon(_FakeEntry("sensor.ammoniakleck"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_feuchtemessgeraet():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchtemessgeraet"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_arbeitsfolge():
+    assert suggest_entity_icon(_FakeEntry("sensor.arbeitsfolge"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_letzte_version():
+    assert suggest_entity_icon(_FakeEntry("sensor.letzte_version"), OrganizerOptions()) == "mdi:package-up"
+
+
+def test_icon_backfill_wetterentwicklung():
+    assert suggest_entity_icon(_FakeEntry("sensor.wetterentwicklung"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_pamper_session():
+    assert suggest_entity_icon(_FakeEntry("sensor.pamper_session"), OrganizerOptions()) == "mdi:spa"
+
+
+def test_icon_backfill_eigenverbrauch():
+    assert suggest_entity_icon(_FakeEntry("sensor.eigenverbrauch"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_preisstufe():
+    assert suggest_entity_icon(_FakeEntry("sensor.preisstufe"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_kamerabatterie():
+    assert suggest_entity_icon(_FakeEntry("sensor.kamerabatterie"), OrganizerOptions()) == "mdi:battery"

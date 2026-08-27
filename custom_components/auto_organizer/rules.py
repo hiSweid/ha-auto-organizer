@@ -27653,6 +27653,24 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "waste management": "mdi:recycle",
     "portainer": "mdi:docker",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "heizoelleck": "mdi:leak",
+    "hakenriegel": "mdi:lock",
+    "bodennaesse": "mdi:leak",
+    "lux meter": "mdi:brightness-5",
+    "hygrometrie": "mdi:water-percent",
+    "update payload": "mdi:update",
+    "bidet": "mdi:toilet",
+    "ammoniakleck": "mdi:leak",
+    "feuchtemessgeraet": "mdi:water-percent",
+    "arbeitsfolge": "mdi:script-text",
+    "letzte version": "mdi:package-up",
+    "wetterentwicklung": "mdi:weather-cloudy",
+    "pamper session": "mdi:spa",
+    "eigenverbrauch": "mdi:solar-power",
+    "preisstufe": "mdi:currency-eur",
+    "kamerabatterie": "mdi:battery",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
