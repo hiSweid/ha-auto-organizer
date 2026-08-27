@@ -32220,6 +32220,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "wiederherstellungspunkt": "mdi:restore",
     "hot water cylinder": "mdi:water-boiler",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "candela messung": "mdi:brightness-6",
+    "geschirrspueltab": "mdi:dishwasher",
+    "batterieklemme": "mdi:battery-charging",
+    "batterieschacht": "mdi:battery-charging",
+    "pelletlagertemperatur": "mdi:thermometer",
+    "kesseltemperatur": "mdi:thermometer",
+    "airly": "mdi:air-filter",
+    "tuerschwelle ueberwinden": "mdi:robot-vacuum",
+    "frosch": "mdi:duck",
+    "estrichtemperatur": "mdi:thermostat",
+    "lesestimmung": "mdi:book-open-page-variant",
+    "reboot erforderlich": "mdi:restart",
+    "raumluftregler": "mdi:fan-chevron-up",
+    "biowetter": "mdi:weather-windy",
+    "update manifest": "mdi:update",
+    "absorbertemperatur": "mdi:thermometer",
+    "polarstern": "mdi:star-circle",
+    "ladekapazitaet": "mdi:battery-plus",
+    "ldr sensor": "mdi:brightness-auto",
+    "temperaturkompensation": "mdi:thermometer-minus",
+    "d0 lesekopf": "mdi:meter-electric",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

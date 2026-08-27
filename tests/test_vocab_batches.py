@@ -78878,3 +78878,87 @@ def test_icon_backfill_wiederherstellungspunkt():
 
 def test_icon_backfill_hot_water_cylinder():
     assert suggest_entity_icon(_FakeEntry("sensor.hot_water_cylinder"), OrganizerOptions()) == "mdi:water-boiler"
+
+
+def test_icon_backfill_candela_messung():
+    assert suggest_entity_icon(_FakeEntry("sensor.candela_messung"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_geschirrspueltab():
+    assert suggest_entity_icon(_FakeEntry("sensor.geschirrspueltab"), OrganizerOptions()) == "mdi:dishwasher"
+
+
+def test_icon_backfill_batterieklemme():
+    assert suggest_entity_icon(_FakeEntry("sensor.batterieklemme"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_batterieschacht():
+    assert suggest_entity_icon(_FakeEntry("sensor.batterieschacht"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_pelletlagertemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.pelletlagertemperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_kesseltemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.kesseltemperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_airly():
+    assert suggest_entity_icon(_FakeEntry("sensor.airly"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_tuerschwelle_ueberwinden():
+    assert suggest_entity_icon(_FakeEntry("sensor.tuerschwelle_ueberwinden"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_frosch():
+    assert suggest_entity_icon(_FakeEntry("sensor.frosch"), OrganizerOptions()) == "mdi:duck"
+
+
+def test_icon_backfill_estrichtemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.estrichtemperatur"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_icon_backfill_lesestimmung():
+    assert suggest_entity_icon(_FakeEntry("sensor.lesestimmung"), OrganizerOptions()) == "mdi:book-open-page-variant"
+
+
+def test_icon_backfill_reboot_erforderlich():
+    assert suggest_entity_icon(_FakeEntry("sensor.reboot_erforderlich"), OrganizerOptions()) == "mdi:restart"
+
+
+def test_icon_backfill_raumluftregler():
+    assert suggest_entity_icon(_FakeEntry("sensor.raumluftregler"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_biowetter():
+    assert suggest_entity_icon(_FakeEntry("sensor.biowetter"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_update_manifest():
+    assert suggest_entity_icon(_FakeEntry("sensor.update_manifest"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_absorbertemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.absorbertemperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_polarstern():
+    assert suggest_entity_icon(_FakeEntry("sensor.polarstern"), OrganizerOptions()) == "mdi:star-circle"
+
+
+def test_icon_backfill_ladekapazitaet():
+    assert suggest_entity_icon(_FakeEntry("sensor.ladekapazitaet"), OrganizerOptions()) == "mdi:battery-plus"
+
+
+def test_icon_backfill_ldr_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.ldr_sensor"), OrganizerOptions()) == "mdi:brightness-auto"
+
+
+def test_icon_backfill_temperaturkompensation():
+    assert suggest_entity_icon(_FakeEntry("sensor.temperaturkompensation"), OrganizerOptions()) == "mdi:thermometer-minus"
+
+
+def test_icon_backfill_d0_lesekopf():
+    assert suggest_entity_icon(_FakeEntry("sensor.d0_lesekopf"), OrganizerOptions()) == "mdi:meter-electric"
