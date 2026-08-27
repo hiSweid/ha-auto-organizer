@@ -30166,6 +30166,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "pirateweather": "mdi:weather-cloudy",
     "eiscrusher": "mdi:snowflake",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "kondensatablauf verstopft": "mdi:water-pump",
+    "befehlsfolge": "mdi:script-text-outline",
+    "aufloesung kamera": "mdi:camera-off",
+    "quiz night": "mdi:dice-multiple",
+    "power flow": "mdi:solar-power",
+    "jahreskilometer": "mdi:car-cruise-control",
+    "crankcase heater": "mdi:radiator",
+    "humidity ratio": "mdi:water-percent",
+    "pyrolyse": "mdi:fire",
+    "freifallerkennung": "mdi:motion-sensor",
+    "honda e": "mdi:car-electric",
+    "kein staub": "mdi:air-filter",
+    "ladestand": "mdi:battery-50",
+    "macrodroid": "mdi:script-text-outline",
+    "new version": "mdi:update",
+    "gruene tonne": "mdi:recycle",
+    "devolo home control": "mdi:home-automation",
+    "rooftop stimmung": "mdi:lightbulb-multiple",
+    "vegetable garden": "mdi:flower-tulip",
+    "vorbedingungspruefung": "mdi:check-circle-outline",
+    "indoor lux": "mdi:brightness-6",
+    "subscribe and save": "mdi:cart-arrow-down",
+    "aussenluftdurchlass": "mdi:fan",
+    "dreifachklick": "mdi:gesture-tap-button",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

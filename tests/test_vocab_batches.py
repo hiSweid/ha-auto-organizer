@@ -71398,3 +71398,99 @@ def test_icon_backfill_pirateweather():
 
 def test_icon_backfill_eiscrusher():
     assert suggest_entity_icon(_FakeEntry("sensor.eiscrusher"), OrganizerOptions()) == "mdi:snowflake"
+
+
+def test_icon_backfill_kondensatablauf_verstopft():
+    assert suggest_entity_icon(_FakeEntry("sensor.kondensatablauf_verstopft"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_befehlsfolge():
+    assert suggest_entity_icon(_FakeEntry("sensor.befehlsfolge"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_aufloesung_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.aufloesung_kamera"), OrganizerOptions()) == "mdi:camera-off"
+
+
+def test_icon_backfill_quiz_night():
+    assert suggest_entity_icon(_FakeEntry("sensor.quiz_night"), OrganizerOptions()) == "mdi:dice-multiple"
+
+
+def test_icon_backfill_power_flow():
+    assert suggest_entity_icon(_FakeEntry("sensor.power_flow"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_jahreskilometer():
+    assert suggest_entity_icon(_FakeEntry("sensor.jahreskilometer"), OrganizerOptions()) == "mdi:car-cruise-control"
+
+
+def test_icon_backfill_crankcase_heater():
+    assert suggest_entity_icon(_FakeEntry("sensor.crankcase_heater"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_icon_backfill_humidity_ratio():
+    assert suggest_entity_icon(_FakeEntry("sensor.humidity_ratio"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_pyrolyse():
+    assert suggest_entity_icon(_FakeEntry("sensor.pyrolyse"), OrganizerOptions()) == "mdi:fire"
+
+
+def test_icon_backfill_freifallerkennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.freifallerkennung"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_honda_e():
+    assert suggest_entity_icon(_FakeEntry("sensor.honda_e"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_kein_staub():
+    assert suggest_entity_icon(_FakeEntry("sensor.kein_staub"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_ladestand():
+    assert suggest_entity_icon(_FakeEntry("sensor.ladestand"), OrganizerOptions()) == "mdi:battery-50"
+
+
+def test_icon_backfill_macrodroid():
+    assert suggest_entity_icon(_FakeEntry("sensor.macrodroid"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_new_version():
+    assert suggest_entity_icon(_FakeEntry("sensor.new_version"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_gruene_tonne():
+    assert suggest_entity_icon(_FakeEntry("sensor.gruene_tonne"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_devolo_home_control():
+    assert suggest_entity_icon(_FakeEntry("sensor.devolo_home_control"), OrganizerOptions()) == "mdi:home-automation"
+
+
+def test_icon_backfill_rooftop_stimmung():
+    assert suggest_entity_icon(_FakeEntry("sensor.rooftop_stimmung"), OrganizerOptions()) == "mdi:lightbulb-multiple"
+
+
+def test_icon_backfill_vegetable_garden():
+    assert suggest_entity_icon(_FakeEntry("sensor.vegetable_garden"), OrganizerOptions()) == "mdi:flower-tulip"
+
+
+def test_icon_backfill_vorbedingungspruefung():
+    assert suggest_entity_icon(_FakeEntry("sensor.vorbedingungspruefung"), OrganizerOptions()) == "mdi:check-circle-outline"
+
+
+def test_icon_backfill_indoor_lux():
+    assert suggest_entity_icon(_FakeEntry("sensor.indoor_lux"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_subscribe_and_save():
+    assert suggest_entity_icon(_FakeEntry("sensor.subscribe_and_save"), OrganizerOptions()) == "mdi:cart-arrow-down"
+
+
+def test_icon_backfill_aussenluftdurchlass():
+    assert suggest_entity_icon(_FakeEntry("sensor.aussenluftdurchlass"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_dreifachklick():
+    assert suggest_entity_icon(_FakeEntry("sensor.dreifachklick"), OrganizerOptions()) == "mdi:gesture-tap-button"
