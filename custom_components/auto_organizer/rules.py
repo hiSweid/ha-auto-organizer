@@ -28135,6 +28135,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "gebuehr": "mdi:cash-multiple",
     "frient": "mdi:air-purifier",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "mortise lock": "mdi:lock",
+    "bsec": "mdi:air-filter",
+    "panasonic": "mdi:power-plug",
+    "temperature threshold": "mdi:thermometer-alert",
+    "smart intercom": "mdi:doorbell-video",
+    "protokollversion": "mdi:package-up",
+    "memory effect": "mdi:battery-charging-low",
+    "hager coviva": "mdi:script-text-outline",
+    "kellerentlueftung": "mdi:fan",
+    "afvalkalender": "mdi:calendar-plus",
+    "computherm": "mdi:heating-coil",
+    "edge mode": "mdi:vacuum",
+    "arte mediathek": "mdi:television-classic",
+    "wiederkehrend": "mdi:repeat",
+    "refusol": "mdi:solar-power",
+    "dpd paket": "mdi:package-variant-closed",
+    "nachtroutine": "mdi:script-text-outline",
+    "kokosmilch": "mdi:cart",
+    "redoxflow akku": "mdi:battery-high",
+    "landwind": "mdi:weather-windy",
+    "elektroaltgeraete": "mdi:trash-can",
+    "tanktemperatur": "mdi:thermometer",
+    "final bill": "mdi:currency-eur",
+    "solar eclipse": "mdi:weather-sunny-alert",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
