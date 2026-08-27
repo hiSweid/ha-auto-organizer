@@ -69926,3 +69926,95 @@ def test_icon_backfill_innosent_radar():
 
 def test_icon_backfill_picknickstimmung():
     assert suggest_entity_icon(_FakeEntry("sensor.picknickstimmung"), OrganizerOptions()) == "mdi:palette-outline"
+
+
+def test_icon_backfill_current_price():
+    assert suggest_entity_icon(_FakeEntry("sensor.current_price"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_minderkosten():
+    assert suggest_entity_icon(_FakeEntry("sensor.minderkosten"), OrganizerOptions()) == "mdi:tag-remove"
+
+
+def test_icon_backfill_meteorologie():
+    assert suggest_entity_icon(_FakeEntry("sensor.meteorologie"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_zuluftgitter():
+    assert suggest_entity_icon(_FakeEntry("sensor.zuluftgitter"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_versickerungsanlage():
+    assert suggest_entity_icon(_FakeEntry("sensor.versickerungsanlage"), OrganizerOptions()) == "mdi:water-off"
+
+
+def test_icon_backfill_yard_waste():
+    assert suggest_entity_icon(_FakeEntry("sensor.yard_waste"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_borehole():
+    assert suggest_entity_icon(_FakeEntry("sensor.borehole"), OrganizerOptions()) == "mdi:water-well"
+
+
+def test_icon_backfill_side_brush():
+    assert suggest_entity_icon(_FakeEntry("sensor.side_brush"), OrganizerOptions()) == "mdi:brush"
+
+
+def test_icon_backfill_ereignisfilter():
+    assert suggest_entity_icon(_FakeEntry("sensor.ereignisfilter"), OrganizerOptions()) == "mdi:filter-variant"
+
+
+def test_icon_backfill_honeywell_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.honeywell_firmware"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_drallauslass():
+    assert suggest_entity_icon(_FakeEntry("sensor.drallauslass"), OrganizerOptions()) == "mdi:fan-speed-1"
+
+
+def test_icon_backfill_photozelle():
+    assert suggest_entity_icon(_FakeEntry("sensor.photozelle"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_naturstrom():
+    assert suggest_entity_icon(_FakeEntry("sensor.naturstrom"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_offshorenetzumlage():
+    assert suggest_entity_icon(_FakeEntry("sensor.offshorenetzumlage"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_icon_backfill_klarna():
+    assert suggest_entity_icon(_FakeEntry("sensor.klarna"), OrganizerOptions()) == "mdi:cart-outline"
+
+
+def test_icon_backfill_befehl():
+    assert suggest_entity_icon(_FakeEntry("sensor.befehl"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_brombeere():
+    assert suggest_entity_icon(_FakeEntry("sensor.brombeere"), OrganizerOptions()) == "mdi:fruit-grapes"
+
+
+def test_icon_backfill_geraeteaktualisierung():
+    assert suggest_entity_icon(_FakeEntry("sensor.geraeteaktualisierung"), OrganizerOptions()) == "mdi:cellphone-arrow-down"
+
+
+def test_icon_backfill_ausloeserquelle():
+    assert suggest_entity_icon(_FakeEntry("sensor.ausloeserquelle"), OrganizerOptions()) == "mdi:source-branch"
+
+
+def test_icon_backfill_aktivsauerstoff():
+    assert suggest_entity_icon(_FakeEntry("sensor.aktivsauerstoff"), OrganizerOptions()) == "mdi:water-plus"
+
+
+def test_icon_backfill_angelsense():
+    assert suggest_entity_icon(_FakeEntry("sensor.angelsense"), OrganizerOptions()) == "mdi:home-heart"
+
+
+def test_icon_backfill_devolo_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.devolo_firmware"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_muellauto():
+    assert suggest_entity_icon(_FakeEntry("sensor.muellauto"), OrganizerOptions()) == "mdi:trash-can"

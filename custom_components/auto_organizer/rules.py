@@ -29762,6 +29762,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "innosent radar": "mdi:motion-sensor",
     "picknickstimmung": "mdi:palette-outline",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "current price": "mdi:currency-eur",
+    "minderkosten": "mdi:tag-remove",
+    "meteorologie": "mdi:weather-cloudy",
+    "zuluftgitter": "mdi:fan-chevron-up",
+    "versickerungsanlage": "mdi:water-off",
+    "yard waste": "mdi:leaf",
+    "borehole": "mdi:water-well",
+    "side brush": "mdi:brush",
+    "ereignisfilter": "mdi:filter-variant",
+    "honeywell firmware": "mdi:update",
+    "drallauslass": "mdi:fan-speed-1",
+    "photozelle": "mdi:brightness-5",
+    "naturstrom": "mdi:solar-power",
+    "offshorenetzumlage": "mdi:electric-switch",
+    "klarna": "mdi:cart-outline",
+    "befehl": "mdi:script-text",
+    "brombeere": "mdi:fruit-grapes",
+    "geraeteaktualisierung": "mdi:cellphone-arrow-down",
+    "ausloeserquelle": "mdi:source-branch",
+    "aktivsauerstoff": "mdi:water-plus",
+    "angelsense": "mdi:home-heart",
+    "devolo firmware": "mdi:update",
+    "muellauto": "mdi:trash-can",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
