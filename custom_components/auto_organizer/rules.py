@@ -29152,6 +29152,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "digitale sperrzone": "mdi:lock-alert",
     "raumreihenfolge": "mdi:room-service",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "kurzzeitpraesenz": "mdi:account-check",
+    "stufenbeleuchtung": "mdi:lightbulb-group",
+    "petrichor": "mdi:weather-rainy",
+    "penny angebot": "mdi:sale",
+    "konfliktregel": "mdi:alert-circle-outline",
+    "pollenkalender": "mdi:flower-pollen",
+    "abschlussgebuehr": "mdi:currency-eur",
+    "einhell akku": "mdi:battery-charging",
+    "orcon lueftung": "mdi:fan",
+    "eurosport": "mdi:soccer",
+    "sparkling water maker": "mdi:cup-water",
+    "tagesvorhersage": "mdi:weather-sunny",
+    "video stream": "mdi:video",
+    "ccs811": "mdi:air-filter",
+    "thermocouple type j": "mdi:temperature-celsius",
+    "batteriedeckel": "mdi:battery-alert",
+    "zwei wege audio kamera": "mdi:camera-outline",
+    "vergleichsbedingung": "mdi:compare",
+    "constructa": "mdi:hammer",
+    "fleischerei": "mdi:store",
+    "kellerabdichtung feucht": "mdi:water-off",
+    "luftionenmesser": "mdi:air-purifier",
+    "o3 sensor": "mdi:air-filter",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
