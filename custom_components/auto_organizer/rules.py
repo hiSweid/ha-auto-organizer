@@ -26713,6 +26713,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "regalbeleuchtung": "mdi:lightbulb",
     "allergenkonzentration": "mdi:air-purifier",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "tsl2591": "mdi:brightness-6",
+    "schlummerszene": "mdi:sleep",
+    "singles day": "mdi:sale",
+    "wasserstoffperoxid": "mdi:water-off",
+    "messstellenbetreiber": "mdi:transmission-tower",
+    "nestcam": "mdi:cctv",
+    "spot cleaning": "mdi:robot-vacuum-variant",
+    "ford lightning": "mdi:car-electric",
+    "lautstaerke sauger": "mdi:volume-high",
+    "reifbildung": "mdi:weather-cloudy",
+    "input select trigger": "mdi:toggle-switch",
+    "strawberry": "mdi:fruit-cherries",
+    "transfer station": "mdi:trash-can",
+    "kabelanschluss": "mdi:ethernet-cable",
+    "teeautomat": "mdi:kettle",
+    "nanoleaf firmware": "mdi:update",
+    "fronius firmware": "mdi:update",
+    "regenrinne": "mdi:water-well",
+    "beleuchtung": "mdi:lightbulb",
+    "uebertragungsnetzbetreiber": "mdi:transmission-tower",
+    "tonnenstellplatz": "mdi:trash-can",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
