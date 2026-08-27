@@ -27457,6 +27457,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "update endpoint": "mdi:update",
     "motion history": "mdi:history",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "lichtsensor aussen": "mdi:lightbulb",
+    "expansion tank": "mdi:water-pump",
+    "haustierimmun": "mdi:cat",
+    "homepod": "mdi:speaker-wireless",
+    "nasssauger": "mdi:vacuum",
+    "detektionsbereich": "mdi:radiobox-marked",
+    "reifenabriebpartikel": "mdi:air-filter",
+    "pyscript automation": "mdi:script-text-outline",
+    "si1132": "mdi:brightness-5",
+    "glykoltemperatur": "mdi:thermometer",
+    "fisheye": "mdi:cctv",
+    "aufenthaltserkennung": "mdi:account-check",
+    "firmwarequelle": "mdi:source-repository",
+    "changelog": "mdi:file-document-edit",
+    "reinigungstuch": "mdi:tshirt-crew",
+    "cold alarm": "mdi:snowflake-alert",
+    "second life battery": "mdi:battery-charging-90",
+    "wandpraesenzmelder": "mdi:motion-sensor",
+    "kondensation": "mdi:water-percent",
+    "bauernregel": "mdi:weather-windy",
+    "deepstack": "mdi:brain",
+    "vitoconnect": "mdi:thermostat",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
