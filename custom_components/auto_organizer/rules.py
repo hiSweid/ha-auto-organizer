@@ -27800,6 +27800,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "voliere feuchte": "mdi:water-percent",
     "strom": "mdi:flash",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "pflegeprodukte": "mdi:shopping",
+    "staubsaugerdock": "mdi:home-assistant",
+    "gemuetlicher abend": "mdi:weather-night",
+    "hausstaubmilbe": "mdi:air-filter",
+    "toro": "mdi:sprinkler-variant",
+    "trocken": "mdi:water-off",
+    "treppenerkennung": "mdi:stairs",
+    "naeherungsalarm": "mdi:motion-sensor",
+    "ladeverlust": "mdi:battery-alert",
+    "hdc1080": "mdi:water-percent",
+    "disco stimmung": "mdi:palette-outline",
+    "whirlpoolschlauch leck": "mdi:leak-off",
+    "einwegplastik": "mdi:trash-can",
+    "aa akku": "mdi:battery-charging-20",
+    "cajon": "mdi:play-circle",
+    "black decker dustbuster": "mdi:robot-vacuum",
+    "hygrosense": "mdi:water-percent",
+    "leckage": "mdi:leak",
+    "awista": "mdi:trash-can",
+    "ki hinderniserkennung": "mdi:eye",
+    "smart pss": "mdi:cctv",
+    "opportunitaetskosten": "mdi:cash-multiple",
+    "muellgebuehrenbescheid": "mdi:receipt",
+    "proteus aquo": "mdi:leak",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
