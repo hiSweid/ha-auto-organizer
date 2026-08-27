@@ -31804,6 +31804,24 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "mq6 sensor": "mdi:smoke-detector",
     "petcam": "mdi:camera",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "raclette": "mdi:toaster",
+    "custom repository": "mdi:github",
+    "hdmi kabel": "mdi:hdmi-port",
+    "miboxer": "mdi:lightbulb",
+    "lanbon": "mdi:lightbulb",
+    "luftionisierung": "mdi:air-purifier",
+    "energizer": "mdi:battery-charging",
+    "umgebungsbeleuchtung": "mdi:lightbulb-group",
+    "hygge abend": "mdi:weather-night",
+    "sedimentabscheider": "mdi:filter",
+    "zu trockene luft": "mdi:water-off",
+    "login script": "mdi:script-text",
+    "humid climate": "mdi:water-percent",
+    "stk3311": "mdi:lightbulb",
+    "gigawatt": "mdi:flash",
+    "spiralreinigung": "mdi:vacuum",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

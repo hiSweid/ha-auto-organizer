@@ -77374,3 +77374,67 @@ def test_icon_backfill_mq6_sensor():
 
 def test_icon_backfill_petcam():
     assert suggest_entity_icon(_FakeEntry("sensor.petcam"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_raclette():
+    assert suggest_entity_icon(_FakeEntry("sensor.raclette"), OrganizerOptions()) == "mdi:toaster"
+
+
+def test_icon_backfill_custom_repository():
+    assert suggest_entity_icon(_FakeEntry("sensor.custom_repository"), OrganizerOptions()) == "mdi:github"
+
+
+def test_icon_backfill_hdmi_kabel():
+    assert suggest_entity_icon(_FakeEntry("sensor.hdmi_kabel"), OrganizerOptions()) == "mdi:hdmi-port"
+
+
+def test_icon_backfill_miboxer():
+    assert suggest_entity_icon(_FakeEntry("sensor.miboxer"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_lanbon():
+    assert suggest_entity_icon(_FakeEntry("sensor.lanbon"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_luftionisierung():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftionisierung"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_icon_backfill_energizer():
+    assert suggest_entity_icon(_FakeEntry("sensor.energizer"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_umgebungsbeleuchtung():
+    assert suggest_entity_icon(_FakeEntry("sensor.umgebungsbeleuchtung"), OrganizerOptions()) == "mdi:lightbulb-group"
+
+
+def test_icon_backfill_hygge_abend():
+    assert suggest_entity_icon(_FakeEntry("sensor.hygge_abend"), OrganizerOptions()) == "mdi:weather-night"
+
+
+def test_icon_backfill_sedimentabscheider():
+    assert suggest_entity_icon(_FakeEntry("sensor.sedimentabscheider"), OrganizerOptions()) == "mdi:filter"
+
+
+def test_icon_backfill_zu_trockene_luft():
+    assert suggest_entity_icon(_FakeEntry("sensor.zu_trockene_luft"), OrganizerOptions()) == "mdi:water-off"
+
+
+def test_icon_backfill_login_script():
+    assert suggest_entity_icon(_FakeEntry("sensor.login_script"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_humid_climate():
+    assert suggest_entity_icon(_FakeEntry("sensor.humid_climate"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_stk3311():
+    assert suggest_entity_icon(_FakeEntry("sensor.stk3311"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_gigawatt():
+    assert suggest_entity_icon(_FakeEntry("sensor.gigawatt"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_spiralreinigung():
+    assert suggest_entity_icon(_FakeEntry("sensor.spiralreinigung"), OrganizerOptions()) == "mdi:vacuum"
