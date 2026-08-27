@@ -32696,6 +32696,25 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "infrarot nachtsicht": "mdi:camera-off",
     "garagentor bewegungsmelder": "mdi:motion-sensor",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "aurora szene": "mdi:weather-sunset-up",
+    "datenspeicher": "mdi:database",
+    "nintendo": "mdi:nintendo-switch",
+    "greenhouse temperature": "mdi:thermometer-lines",
+    "pergoladach": "mdi:awning",
+    "regenfallrohr verstopft": "mdi:pipe-leak",
+    "weisse ware": "mdi:washing-machine",
+    "wireguard": "mdi:network-outline",
+    "dynamic tariff": "mdi:currency-eur",
+    "dunstabzug smart": "mdi:fan-chevron-down",
+    "luftfeuchtigkeitsanzeige": "mdi:water-percent",
+    "standfluter": "mdi:floor-lamp",
+    "warming drawer": "mdi:microwave",
+    "ryobi akku": "mdi:battery-charging-wireless",
+    "terrassenlichtsensor": "mdi:lightbulb-group",
+    "brettspielecke": "mdi:gamepad",
+    "terminplan": "mdi:calendar-clock",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
