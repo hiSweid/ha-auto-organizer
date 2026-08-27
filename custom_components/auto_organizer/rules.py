@@ -30442,6 +30442,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "hoftorsteuerung": "mdi:gate-open",
     "kenwood cooking chef": "mdi:chef-hat",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "communal bin": "mdi:trash-can",
+    "putzablauf": "mdi:calendar-clock",
+    "ueberladung": "mdi:battery-charging",
+    "ereignisbasiert": "mdi:flash",
+    "wohlfuehlszene": "mdi:sun-wireless",
+    "screensaver": "mdi:monitor-screenshot",
+    "einspeisemenge": "mdi:solar-power",
+    "kamera sd karte voll": "mdi:sd",
+    "homeconnect trigger": "mdi:home-automation",
+    "selector switch": "mdi:power-socket-eu",
+    "abfuhr": "mdi:delete",
+    "wetterfuehler": "mdi:weather-cloudy",
+    "truebungspunkt": "mdi:thermometer-alert",
+    "spaltventil": "mdi:valve",
+    "infrarotlicht": "mdi:led-off",
+    "neujahrsstimmung": "mdi:party-popper",
+    "time trigger": "mdi:clock-outline",
+    "honeywell lyric": "mdi:thermostat",
+    "tuersensorbatterie": "mdi:battery-50",
+    "fehlversuch pin": "mdi:lock-clock",
+    "nachbar da": "mdi:account-group",
+    "hygrostatregelung": "mdi:water-percent",
+    "wasserfilterkapazitaet": "mdi:water-pump",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

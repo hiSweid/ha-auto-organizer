@@ -72406,3 +72406,95 @@ def test_icon_backfill_hoftorsteuerung():
 
 def test_icon_backfill_kenwood_cooking_chef():
     assert suggest_entity_icon(_FakeEntry("sensor.kenwood_cooking_chef"), OrganizerOptions()) == "mdi:chef-hat"
+
+
+def test_icon_backfill_communal_bin():
+    assert suggest_entity_icon(_FakeEntry("sensor.communal_bin"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_putzablauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.putzablauf"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_ueberladung():
+    assert suggest_entity_icon(_FakeEntry("sensor.ueberladung"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_ereignisbasiert():
+    assert suggest_entity_icon(_FakeEntry("sensor.ereignisbasiert"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_wohlfuehlszene():
+    assert suggest_entity_icon(_FakeEntry("sensor.wohlfuehlszene"), OrganizerOptions()) == "mdi:sun-wireless"
+
+
+def test_icon_backfill_screensaver():
+    assert suggest_entity_icon(_FakeEntry("sensor.screensaver"), OrganizerOptions()) == "mdi:monitor-screenshot"
+
+
+def test_icon_backfill_einspeisemenge():
+    assert suggest_entity_icon(_FakeEntry("sensor.einspeisemenge"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_kamera_sd_karte_voll():
+    assert suggest_entity_icon(_FakeEntry("sensor.kamera_sd_karte_voll"), OrganizerOptions()) == "mdi:sd"
+
+
+def test_icon_backfill_homeconnect_trigger():
+    assert suggest_entity_icon(_FakeEntry("sensor.homeconnect_trigger"), OrganizerOptions()) == "mdi:home-automation"
+
+
+def test_icon_backfill_selector_switch():
+    assert suggest_entity_icon(_FakeEntry("sensor.selector_switch"), OrganizerOptions()) == "mdi:power-socket-eu"
+
+
+def test_icon_backfill_abfuhr():
+    assert suggest_entity_icon(_FakeEntry("sensor.abfuhr"), OrganizerOptions()) == "mdi:delete"
+
+
+def test_icon_backfill_wetterfuehler():
+    assert suggest_entity_icon(_FakeEntry("sensor.wetterfuehler"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_truebungspunkt():
+    assert suggest_entity_icon(_FakeEntry("sensor.truebungspunkt"), OrganizerOptions()) == "mdi:thermometer-alert"
+
+
+def test_icon_backfill_spaltventil():
+    assert suggest_entity_icon(_FakeEntry("sensor.spaltventil"), OrganizerOptions()) == "mdi:valve"
+
+
+def test_icon_backfill_infrarotlicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.infrarotlicht"), OrganizerOptions()) == "mdi:led-off"
+
+
+def test_icon_backfill_neujahrsstimmung():
+    assert suggest_entity_icon(_FakeEntry("sensor.neujahrsstimmung"), OrganizerOptions()) == "mdi:party-popper"
+
+
+def test_icon_backfill_time_trigger():
+    assert suggest_entity_icon(_FakeEntry("sensor.time_trigger"), OrganizerOptions()) == "mdi:clock-outline"
+
+
+def test_icon_backfill_honeywell_lyric():
+    assert suggest_entity_icon(_FakeEntry("sensor.honeywell_lyric"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_icon_backfill_tuersensorbatterie():
+    assert suggest_entity_icon(_FakeEntry("sensor.tuersensorbatterie"), OrganizerOptions()) == "mdi:battery-50"
+
+
+def test_icon_backfill_fehlversuch_pin():
+    assert suggest_entity_icon(_FakeEntry("sensor.fehlversuch_pin"), OrganizerOptions()) == "mdi:lock-clock"
+
+
+def test_icon_backfill_nachbar_da():
+    assert suggest_entity_icon(_FakeEntry("sensor.nachbar_da"), OrganizerOptions()) == "mdi:account-group"
+
+
+def test_icon_backfill_hygrostatregelung():
+    assert suggest_entity_icon(_FakeEntry("sensor.hygrostatregelung"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_wasserfilterkapazitaet():
+    assert suggest_entity_icon(_FakeEntry("sensor.wasserfilterkapazitaet"), OrganizerOptions()) == "mdi:water-pump"
