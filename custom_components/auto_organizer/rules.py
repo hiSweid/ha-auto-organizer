@@ -28577,6 +28577,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "juice press": "mdi:glass-cocktail",
     "staubbeutel": "mdi:filter",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "over ear": "mdi:headphones",
+    "outlander": "mdi:car",
+    "power export": "mdi:solar-power",
+    "360 grad kamera": "mdi:cctv",
+    "orangene tonne": "mdi:trash-can",
+    "schalteingang": "mdi:toggle-switch",
+    "vorlauftemperatur": "mdi:thermometer",
+    "order confirmation": "mdi:check-circle",
+    "gateway offline": "mdi:lan-disconnect",
+    "candlepower": "mdi:brightness-5",
+    "schwellenwert": "mdi:alert",
+    "meteoblue": "mdi:weather-cloudy",
+    "glatteisbildung": "mdi:weather-snowy",
+    "engineering mode radar": "mdi:radiobox-blank",
+    "spurhalteassistent": "mdi:car-brake-hold",
+    "commute trigger": "mdi:map-marker-radius",
+    "behanghoehe": "mdi:window-open",
+    "pauschale": "mdi:currency-eur",
+    "arcade automat": "mdi:gamepad",
+    "pause taste sauger": "mdi:play-pause",
+    "spielenacht": "mdi:movie-open",
+    "sammleredition": "mdi:cart-plus",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
