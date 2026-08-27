@@ -27698,6 +27698,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "damprid": "mdi:water-percent",
     "monodeponie": "mdi:trash-can",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "gamingabend": "mdi:gamepad",
+    "gft bak": "mdi:trash-can",
+    "prozedurablauf": "mdi:run",
+    "innogy bewegungsmelder": "mdi:motion-sensor",
+    "kodi": "mdi:plex",
+    "aussenluftqualitaet": "mdi:air-filter",
+    "systemair": "mdi:fan",
+    "lueftungsgitter": "mdi:fan-chevron-up",
+    "winix": "mdi:air-purifier",
+    "tuersteuerung": "mdi:door",
+    "wholesale price": "mdi:cash-multiple",
+    "deployskript": "mdi:script-text",
+    "numerische bedingung": "mdi:counter",
+    "running low": "mdi:alert-circle-outline",
+    "mikrotik firmware": "mdi:router-wireless",
+    "off grid inverter": "mdi:solar-power",
+    "frigate update": "mdi:update",
+    "emulator": "mdi:emoticon",
+    "kill switch": "mdi:power-plug-off",
+    "temperaturbandbreite": "mdi:thermometer-lines",
+    "junggesellinnenabschied": "mdi:party-popper",
+    "runbook ablauf": "mdi:file-document-edit",
+    "bei fehler fortsetzen": "mdi:play-circle",
+    "backhaul": "mdi:network",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
