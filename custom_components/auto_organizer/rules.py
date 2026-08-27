@@ -32172,6 +32172,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "hauseingang": "mdi:doorbell-video",
     "hdr10": "mdi:hdmi-port",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "tagesverbrauch": "mdi:flash",
+    "spa raumfeuchte": "mdi:water-percent",
+    "anwesenheitsbedingung": "mdi:account-check",
+    "imilab": "mdi:camera",
+    "thermal store": "mdi:radiator",
+    "restfeuchte": "mdi:water-percent",
+    "honeywell dehumidifier": "mdi:air-humidifier",
+    "netzwerkstatus": "mdi:network",
+    "foot spa": "mdi:spa",
+    "laufwegerkennung": "mdi:motion-sensor",
+    "schlage firmware": "mdi:cellphone-arrow-down",
+    "kamera": "mdi:camera",
+    "windfahne": "mdi:weather-windy",
+    "lichtsensor kalibrieren": "mdi:brightness-6",
+    "mikrofaserpad": "mdi:tshirt-crew",
+    "luftdrucktrigger": "mdi:gauge",
+    "muellbeutel": "mdi:trash-can",
+    "photodiode sensor": "mdi:lightbulb",
+    "wandeinbaustrahler": "mdi:wall-sconce",
+    "mehrstufige automation": "mdi:script-text-outline",
+    "occupancy timeout": "mdi:timer-sand-full",
+    "blueprint selektor": "mdi:select-color",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
