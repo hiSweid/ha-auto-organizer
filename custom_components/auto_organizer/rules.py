@@ -29930,6 +29930,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ruecklauftemperatur": "mdi:thermometer",
     "kinoerlebnis": "mdi:movie",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "gpslogger": "mdi:map-marker-radius",
+    "vitesy": "mdi:air-filter",
+    "optex redwall": "mdi:motion-sensor",
+    "uvb strahlung": "mdi:weather-sunny",
+    "feuchteschutz": "mdi:water-percent",
+    "ankunftsroutine": "mdi:run-fast",
+    "kuechenlicht": "mdi:lightbulb-on-outline",
+    "wettlaufsituation": "mdi:racing-helmet",
+    "wasserenthaertungsanlage": "mdi:water-pump",
+    "unit rate": "mdi:currency-usd",
+    "delta update": "mdi:update",
+    "eskalation": "mdi:alert-decagram",
+    "monatsrechnung": "mdi:receipt-text",
+    "schrebergarten": "mdi:flower-tulip",
+    "schadstoffmobiltermin": "mdi:trash-can",
+    "blacklight": "mdi:lightbulb-variant-outline",
+    "senderwechsel": "mdi:radio-am",
+    "fensterfalzluefter": "mdi:fan-chevron-up",
+    "temperature deviation": "mdi:thermometer-alert",
+    "seeed mr24": "mdi:motion-sensor",
+    "makrosteuerung": "mdi:script-text-outline",
+    "bezugspreis": "mdi:cash-multiple",
+    "kueche leer": "mdi:door-open",
+    "altmetallentsorgung": "mdi:recycle",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
