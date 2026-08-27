@@ -30509,6 +30509,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "devolo": "mdi:wifi",
     "gefrierbeutel": "mdi:snowflake",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "bodenph": "mdi:ph",
+    "feuchtetrend": "mdi:water-percent",
+    "aussenleiter": "mdi:lightbulb",
+    "meteofrance": "mdi:weather-cloudy",
+    "geraet hinzugefuegt trigger": "mdi:robot",
+    "batteriekonditionierung": "mdi:battery-charging",
+    "diffusstrahlung": "mdi:sun-wireless",
+    "bibliotheksupdate": "mdi:update",
+    "rankgeruest": "mdi:tree-outline",
+    "baumarkt": "mdi:store",
+    "abflussrueckstau": "mdi:alert-circle",
+    "hypervisor": "mdi:server",
+    "go2rtc": "mdi:cctv",
+    "meldelinie": "mdi:shield-alert",
+    "dust cup": "mdi:cup-off",
+    "foscam": "mdi:cctv",
+    "kondensstreifen": "mdi:weather-fog",
+    "home consumption": "mdi:home-lightbulb",
+    "gaestemodus aktiv": "mdi:account-star",
+    "wybot": "mdi:water-pump",
+    "compology": "mdi:trash-can",
+    "propanleck": "mdi:gas-cylinder",
+    "sturzalarm": "mdi:bell-alert",
+    "wechselstromzaehler": "mdi:counter",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
