@@ -74614,3 +74614,79 @@ def test_icon_backfill_aicolor():
 
 def test_icon_backfill_cylinder_temperature():
     assert suggest_entity_icon(_FakeEntry("sensor.cylinder_temperature"), OrganizerOptions()) == "mdi:temperature-celsius"
+
+
+def test_icon_backfill_tsl2561():
+    assert suggest_entity_icon(_FakeEntry("sensor.tsl2561"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_unikey():
+    assert suggest_entity_icon(_FakeEntry("sensor.unikey"), OrganizerOptions()) == "mdi:key-chain"
+
+
+def test_icon_backfill_egolf():
+    assert suggest_entity_icon(_FakeEntry("sensor.egolf"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_openhab():
+    assert suggest_entity_icon(_FakeEntry("sensor.openhab"), OrganizerOptions()) == "mdi:home-assistant"
+
+
+def test_icon_backfill_mediathek():
+    assert suggest_entity_icon(_FakeEntry("sensor.mediathek"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_kanalisationsleck():
+    assert suggest_entity_icon(_FakeEntry("sensor.kanalisationsleck"), OrganizerOptions()) == "mdi:pipe-leak"
+
+
+def test_icon_backfill_overcharge():
+    assert suggest_entity_icon(_FakeEntry("sensor.overcharge"), OrganizerOptions()) == "mdi:battery-charging-high"
+
+
+def test_icon_backfill_monatsertrag():
+    assert suggest_entity_icon(_FakeEntry("sensor.monatsertrag"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_flow_rate():
+    assert suggest_entity_icon(_FakeEntry("sensor.flow_rate"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_abendsequenz():
+    assert suggest_entity_icon(_FakeEntry("sensor.abendsequenz"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_heizzentrale():
+    assert suggest_entity_icon(_FakeEntry("sensor.heizzentrale"), OrganizerOptions()) == "mdi:heating-coil"
+
+
+def test_icon_backfill_snzb_05():
+    assert suggest_entity_icon(_FakeEntry("sensor.snzb_05"), OrganizerOptions()) == "mdi:leak-off"
+
+
+def test_icon_backfill_patchfeld():
+    assert suggest_entity_icon(_FakeEntry("sensor.patchfeld"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_teppichkante():
+    assert suggest_entity_icon(_FakeEntry("sensor.teppichkante"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_luftpartikelmesser():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftpartikelmesser"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_virtuelle_sperrlinie():
+    assert suggest_entity_icon(_FakeEntry("sensor.virtuelle_sperrlinie"), OrganizerOptions()) == "mdi:wall"
+
+
+def test_icon_backfill_fortrezz():
+    assert suggest_entity_icon(_FakeEntry("sensor.fortrezz"), OrganizerOptions()) == "mdi:leak-off"
+
+
+def test_icon_backfill_ventilatorachse():
+    assert suggest_entity_icon(_FakeEntry("sensor.ventilatorachse"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_toilettenspuelung():
+    assert suggest_entity_icon(_FakeEntry("sensor.toilettenspuelung"), OrganizerOptions()) == "mdi:toilet"

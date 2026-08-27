@@ -31046,6 +31046,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "aicolor": "mdi:palette",
     "cylinder temperature": "mdi:temperature-celsius",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "tsl2561": "mdi:brightness-5",
+    "unikey": "mdi:key-chain",
+    "egolf": "mdi:car-electric",
+    "openhab": "mdi:home-assistant",
+    "mediathek": "mdi:movie-open",
+    "kanalisationsleck": "mdi:pipe-leak",
+    "overcharge": "mdi:battery-charging-high",
+    "monatsertrag": "mdi:currency-eur",
+    "flow rate": "mdi:water-pump",
+    "abendsequenz": "mdi:script-text-outline",
+    "heizzentrale": "mdi:heating-coil",
+    "snzb 05": "mdi:leak-off",
+    "patchfeld": "mdi:network",
+    "teppichkante": "mdi:vacuum",
+    "luftpartikelmesser": "mdi:air-filter",
+    "virtuelle sperrlinie": "mdi:wall",
+    "fortrezz": "mdi:leak-off",
+    "ventilatorachse": "mdi:fan-chevron-up",
+    "toilettenspuelung": "mdi:toilet",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
