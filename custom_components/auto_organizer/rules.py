@@ -31675,6 +31675,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "openwakeword update": "mdi:update",
     "levoit": "mdi:air-purifier",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "sturmflutwarnung": "mdi:weather-windy",
+    "zylinderabdeckung": "mdi:lock-outline",
+    "mulchmaeher": "mdi:grass",
+    "handybatterie": "mdi:battery",
+    "thunfischdose": "mdi:fish",
+    "pflanzenueberwachung": "mdi:leaf",
+    "skriptergebnis": "mdi:script-text",
+    "volleinspeisung": "mdi:solar-power",
+    "at home": "mdi:home-account",
+    "steuerregel": "mdi:toggle-switch",
+    "teppichklopfer": "mdi:rug",
+    "ltr390": "mdi:lightbulb",
+    "warmwasserreinigung": "mdi:shower-head",
+    "multiroom control": "mdi:air-conditioner",
+    "if else logik": "mdi:function",
+    "vorheizregister": "mdi:radiator",
+    "musikanlage": "mdi:music-note",
+    "pihole": "mdi:network",
+    "furbo": "mdi:camera",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
