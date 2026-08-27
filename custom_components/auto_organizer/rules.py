@@ -30140,6 +30140,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "scd41": "mdi:air-filter",
     "ausnahmeregel": "mdi:alert-octagon",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "fire and forget": "mdi:script-text",
+    "tariff": "mdi:cash-multiple",
+    "betriebssystem aktualisierung": "mdi:update",
+    "wirkleistung": "mdi:flash",
+    "sauna belegt": "mdi:sofa",
+    "getraenke": "mdi:bottle-wine",
+    "aiper": "mdi:water",
+    "rohraustritt": "mdi:pipe-leak",
+    "fortluftklappe": "mdi:fan",
+    "muellheizkraftwerk": "mdi:trash-can",
+    "agentenabend": "mdi:movie-open",
+    "popcornmaschine": "mdi:popcorn",
+    "hochzeitsstimmung": "mdi:heart",
+    "still energy": "mdi:power-sleep",
+    "automatische aktualisierung": "mdi:auto-fix",
+    "totwinkelwarner": "mdi:car-back",
+    "raumluftfeuchte": "mdi:water-percent",
+    "nvidia shield": "mdi:nintendo-switch",
+    "broadlink automatisierung": "mdi:remote",
+    "e reader": "mdi:book-variant",
+    "bgt60tr13c": "mdi:motion-sensor",
+    "kinderkopfhoerer": "mdi:headphones",
+    "pirateweather": "mdi:weather-cloudy",
+    "eiscrusher": "mdi:snowflake",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
