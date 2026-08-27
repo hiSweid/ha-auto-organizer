@@ -73842,3 +73842,71 @@ def test_icon_backfill_thermopile_sensor():
 
 def test_icon_backfill_kraeutergarten():
     assert suggest_entity_icon(_FakeEntry("sensor.kraeutergarten"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_autozoom_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.autozoom_kamera"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_gemueseabo():
+    assert suggest_entity_icon(_FakeEntry("sensor.gemueseabo"), OrganizerOptions()) == "mdi:carrot"
+
+
+def test_icon_backfill_lawinengefahr():
+    assert suggest_entity_icon(_FakeEntry("sensor.lawinengefahr"), OrganizerOptions()) == "mdi:snowflake-alert"
+
+
+def test_icon_backfill_pickup_schedule():
+    assert suggest_entity_icon(_FakeEntry("sensor.pickup_schedule"), OrganizerOptions()) == "mdi:calendar-plus"
+
+
+def test_icon_backfill_verlaesst_haus():
+    assert suggest_entity_icon(_FakeEntry("sensor.verlaesst_haus"), OrganizerOptions()) == "mdi:account-arrow-right"
+
+
+def test_icon_backfill_kuchenform():
+    assert suggest_entity_icon(_FakeEntry("sensor.kuchenform"), OrganizerOptions()) == "mdi:cake-variant"
+
+
+def test_icon_backfill_saugkanal():
+    assert suggest_entity_icon(_FakeEntry("sensor.saugkanal"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_bautrocknung():
+    assert suggest_entity_icon(_FakeEntry("sensor.bautrocknung"), OrganizerOptions()) == "mdi:hair-dryer"
+
+
+def test_icon_backfill_discomodus():
+    assert suggest_entity_icon(_FakeEntry("sensor.discomodus"), OrganizerOptions()) == "mdi:party-popper"
+
+
+def test_icon_backfill_innenfilter():
+    assert suggest_entity_icon(_FakeEntry("sensor.innenfilter"), OrganizerOptions()) == "mdi:filter-cog"
+
+
+def test_icon_backfill_diapers():
+    assert suggest_entity_icon(_FakeEntry("sensor.diapers"), OrganizerOptions()) == "mdi:baby-bottle-outline"
+
+
+def test_icon_backfill_streulicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.streulicht"), OrganizerOptions()) == "mdi:spotlight-beam"
+
+
+def test_icon_backfill_luxaflex():
+    assert suggest_entity_icon(_FakeEntry("sensor.luxaflex"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_icon_backfill_milestone_xprotect():
+    assert suggest_entity_icon(_FakeEntry("sensor.milestone_xprotect"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_durchfluss():
+    assert suggest_entity_icon(_FakeEntry("sensor.durchfluss"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_kuechenabfall():
+    assert suggest_entity_icon(_FakeEntry("sensor.kuechenabfall"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_meacofan():
+    assert suggest_entity_icon(_FakeEntry("sensor.meacofan"), OrganizerOptions()) == "mdi:fan"

@@ -30835,6 +30835,25 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "thermopile sensor": "mdi:thermometer-lines",
     "kraeutergarten": "mdi:leaf",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "autozoom kamera": "mdi:camera",
+    "gemueseabo": "mdi:carrot",
+    "lawinengefahr": "mdi:snowflake-alert",
+    "pickup schedule": "mdi:calendar-plus",
+    "verlaesst haus": "mdi:account-arrow-right",
+    "kuchenform": "mdi:cake-variant",
+    "saugkanal": "mdi:vacuum",
+    "bautrocknung": "mdi:hair-dryer",
+    "discomodus": "mdi:party-popper",
+    "innenfilter": "mdi:filter-cog",
+    "diapers": "mdi:baby-bottle-outline",
+    "streulicht": "mdi:spotlight-beam",
+    "luxaflex": "mdi:blinds",
+    "milestone xprotect": "mdi:cctv",
+    "durchfluss": "mdi:water-pump",
+    "kuechenabfall": "mdi:trash-can",
+    "meacofan": "mdi:fan",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
