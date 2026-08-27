@@ -29374,6 +29374,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "sonnenaufgangswecker": "mdi:weather-sunny",
     "vatertagsstimmung": "mdi:cake-variant",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "rekursionstiefe": "mdi:code-braces",
+    "tuermodul": "mdi:door",
+    "food bin": "mdi:trash-can",
+    "waermetauschertemperatur": "mdi:thermometer",
+    "einspeis": "mdi:solar-power",
+    "eiswuerfelmaschine": "mdi:ice-pop",
+    "update backlog": "mdi:update",
+    "wartungsende": "mdi:calendar-check",
+    "enbw": "mdi:currency-eur",
+    "zinkkohle": "mdi:battery-charging",
+    "frischhaltefolie": "mdi:package-variant-closed",
+    "tasmota regel": "mdi:script-text",
+    "lupus bewegungsmelder": "mdi:motion-sensor",
+    "gala dinner": "mdi:card-account-details",
+    "ladestrom": "mdi:power-plug",
+    "luftfeuchtigkeitsregler": "mdi:water-percent",
+    "spielzeugbatterie": "mdi:battery-unknown",
+    "kartenspielabend": "mdi:cards-outline",
+    "luftmengensteuerung": "mdi:fan",
+    "emissionswert": "mdi:chart-line",
+    "yello": "mdi:currency-usd",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
