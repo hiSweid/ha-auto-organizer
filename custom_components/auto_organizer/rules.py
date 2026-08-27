@@ -32259,6 +32259,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "peephole camera": "mdi:cctv",
     "wearable": "mdi:watch",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "brandson": "mdi:fan",
+    "daily cost": "mdi:currency-eur",
+    "update repository": "mdi:package-up",
+    "subroutine": "mdi:function",
+    "vertragslaufzeit": "mdi:calendar-clock",
+    "regelwerk automation": "mdi:robot",
+    "tiererkennung": "mdi:camera",
+    "seismischer sensor": "mdi:motion-sensor",
+    "tfa dostmann": "mdi:weather-windy",
+    "ladezyklus": "mdi:battery-charging",
+    "entrauchungsklappe": "mdi:window-closed",
+    "multiplug": "mdi:power-socket",
+    "sperrmuell app": "mdi:trash-can",
+    "beatbot": "mdi:water-pump",
+    "chemiegeruch": "mdi:air-filter",
+    "phasenspannung": "mdi:sine-wave",
+    "tier im blickfeld": "mdi:camera",
+    "probe temperature": "mdi:thermometer",
+    "bezugsstrom": "mdi:flash",
+    "querriegel": "mdi:lock",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

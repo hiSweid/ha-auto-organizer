@@ -79018,3 +79018,83 @@ def test_icon_backfill_peephole_camera():
 
 def test_icon_backfill_wearable():
     assert suggest_entity_icon(_FakeEntry("sensor.wearable"), OrganizerOptions()) == "mdi:watch"
+
+
+def test_icon_backfill_brandson():
+    assert suggest_entity_icon(_FakeEntry("sensor.brandson"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_daily_cost():
+    assert suggest_entity_icon(_FakeEntry("sensor.daily_cost"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_update_repository():
+    assert suggest_entity_icon(_FakeEntry("sensor.update_repository"), OrganizerOptions()) == "mdi:package-up"
+
+
+def test_icon_backfill_subroutine():
+    assert suggest_entity_icon(_FakeEntry("sensor.subroutine"), OrganizerOptions()) == "mdi:function"
+
+
+def test_icon_backfill_vertragslaufzeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.vertragslaufzeit"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_regelwerk_automation():
+    assert suggest_entity_icon(_FakeEntry("sensor.regelwerk_automation"), OrganizerOptions()) == "mdi:robot"
+
+
+def test_icon_backfill_tiererkennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.tiererkennung"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_seismischer_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.seismischer_sensor"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_tfa_dostmann():
+    assert suggest_entity_icon(_FakeEntry("sensor.tfa_dostmann"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_ladezyklus():
+    assert suggest_entity_icon(_FakeEntry("sensor.ladezyklus"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_entrauchungsklappe():
+    assert suggest_entity_icon(_FakeEntry("sensor.entrauchungsklappe"), OrganizerOptions()) == "mdi:window-closed"
+
+
+def test_icon_backfill_multiplug():
+    assert suggest_entity_icon(_FakeEntry("sensor.multiplug"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_icon_backfill_sperrmuell_app():
+    assert suggest_entity_icon(_FakeEntry("sensor.sperrmuell_app"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_beatbot():
+    assert suggest_entity_icon(_FakeEntry("sensor.beatbot"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_chemiegeruch():
+    assert suggest_entity_icon(_FakeEntry("sensor.chemiegeruch"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_phasenspannung():
+    assert suggest_entity_icon(_FakeEntry("sensor.phasenspannung"), OrganizerOptions()) == "mdi:sine-wave"
+
+
+def test_icon_backfill_tier_im_blickfeld():
+    assert suggest_entity_icon(_FakeEntry("sensor.tier_im_blickfeld"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_probe_temperature():
+    assert suggest_entity_icon(_FakeEntry("sensor.probe_temperature"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_bezugsstrom():
+    assert suggest_entity_icon(_FakeEntry("sensor.bezugsstrom"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_querriegel():
+    assert suggest_entity_icon(_FakeEntry("sensor.querriegel"), OrganizerOptions()) == "mdi:lock"
