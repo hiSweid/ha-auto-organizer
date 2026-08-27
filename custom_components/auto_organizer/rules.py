@@ -30559,6 +30559,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ifttt": "mdi:cloud-sync",
     "desinfektionsmittelgeruch": "mdi:air-purifier",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "sht31": "mdi:water-percent",
+    "wettertendenz": "mdi:weather-cloudy",
+    "onvif": "mdi:cctv",
+    "luxwert": "mdi:brightness-5",
+    "mist": "mdi:weather-fog",
+    "sgp40": "mdi:air-filter",
+    "epilator": "mdi:electric-switch",
+    "solarpanelreiniger": "mdi:solar-panel",
+    "elektroschrott": "mdi:recycle",
+    "thermomix": "mdi:blender",
+    "lm75": "mdi:thermometer",
+    "discofieber": "mdi:movie-open",
+    "gastwlan": "mdi:wifi",
+    "leuchtstoffroehrenentsorgung": "mdi:lightbulb-off",
+    "kopp": "mdi:toggle-switch",
+    "lr44": "mdi:battery-medium",
+    "kueche belegt": "mdi:account-clock",
+    "door intercom": "mdi:doorbell-video",
+    "schwarzweissnachtsicht": "mdi:cctv",
+    "nassmuell": "mdi:trash-can-outline",
+    "unless bedingung": "mdi:alert-octagon",
+    "dock error": "mdi:robot-vacuum-variant",
+    "flexumlage": "mdi:currency-eur",
+    "e wie einfach": "mdi:currency-eur",
+    "regenwurm": "mdi:seed",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
