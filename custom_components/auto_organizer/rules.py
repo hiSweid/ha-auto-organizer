@@ -32302,6 +32302,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "hochtarif": "mdi:currency-eur",
     "power import": "mdi:flash",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "over the air": "mdi:cloud-upload",
+    "haushaltsgeraete": "mdi:coffee-maker",
+    "vesync": "mdi:air-filter",
+    "good evening": "mdi:script-text-outline",
+    "fidas": "mdi:air-filter",
+    "pauke": "mdi:speaker-wireless",
+    "grundlast": "mdi:power-plug",
+    "digital beamforming": "mdi:motion-sensor",
+    "gegensprechstelle": "mdi:cctv",
+    "ladesaeulenpreis": "mdi:currency-eur",
+    "bodenfeuchtemesser": "mdi:water-percent",
+    "roku ultra": "mdi:play-circle",
+    "wartungszeitplan": "mdi:calendar-clock",
+    "wg feier": "mdi:palette",
+    "infrarot led kamera": "mdi:camera-off",
+    "kilowatt": "mdi:flash",
+    "fresnellinse": "mdi:sun-wireless",
+    "putzsequenz": "mdi:script-text-outline",
+    "wirkungsgrad": "mdi:percent",
+    "fixkosten": "mdi:currency-eur",
+    "nutzgarten": "mdi:tree",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
