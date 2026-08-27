@@ -28018,6 +28018,24 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "smhi": "mdi:weather-cloudy",
     "sicherheitsbeleuchtung": "mdi:security",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "gartengrillen": "mdi:grill",
+    "chargery": "mdi:battery-charging",
+    "bewegungsdauer": "mdi:motion-sensor",
+    "hitzeperiode": "mdi:thermometer-high",
+    "geflasht": "mdi:flash",
+    "abfallbeutel": "mdi:trash-can",
+    "sps30": "mdi:air-filter",
+    "jung praesenzmelder": "mdi:motion-sensor",
+    "noise cancelling": "mdi:volume-mute",
+    "altreifen": "mdi:tire",
+    "sperrhaken": "mdi:lock-alert",
+    "sonnenstunden": "mdi:weather-sunny",
+    "torfluegelmotor": "mdi:garage",
+    "psychrometer": "mdi:thermometer-lines",
+    "ilife v8s": "mdi:robot-vacuum",
+    "frischluft": "mdi:air-purifier",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

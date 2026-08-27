@@ -63526,3 +63526,67 @@ def test_icon_backfill_smhi():
 
 def test_icon_backfill_sicherheitsbeleuchtung():
     assert suggest_entity_icon(_FakeEntry("sensor.sicherheitsbeleuchtung"), OrganizerOptions()) == "mdi:security"
+
+
+def test_icon_backfill_gartengrillen():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartengrillen"), OrganizerOptions()) == "mdi:grill"
+
+
+def test_icon_backfill_chargery():
+    assert suggest_entity_icon(_FakeEntry("sensor.chargery"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_bewegungsdauer():
+    assert suggest_entity_icon(_FakeEntry("sensor.bewegungsdauer"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_hitzeperiode():
+    assert suggest_entity_icon(_FakeEntry("sensor.hitzeperiode"), OrganizerOptions()) == "mdi:thermometer-high"
+
+
+def test_icon_backfill_geflasht():
+    assert suggest_entity_icon(_FakeEntry("sensor.geflasht"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_abfallbeutel():
+    assert suggest_entity_icon(_FakeEntry("sensor.abfallbeutel"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_sps30():
+    assert suggest_entity_icon(_FakeEntry("sensor.sps30"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_jung_praesenzmelder():
+    assert suggest_entity_icon(_FakeEntry("sensor.jung_praesenzmelder"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_noise_cancelling():
+    assert suggest_entity_icon(_FakeEntry("sensor.noise_cancelling"), OrganizerOptions()) == "mdi:volume-mute"
+
+
+def test_icon_backfill_altreifen():
+    assert suggest_entity_icon(_FakeEntry("sensor.altreifen"), OrganizerOptions()) == "mdi:tire"
+
+
+def test_icon_backfill_sperrhaken():
+    assert suggest_entity_icon(_FakeEntry("sensor.sperrhaken"), OrganizerOptions()) == "mdi:lock-alert"
+
+
+def test_icon_backfill_sonnenstunden():
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenstunden"), OrganizerOptions()) == "mdi:weather-sunny"
+
+
+def test_icon_backfill_torfluegelmotor():
+    assert suggest_entity_icon(_FakeEntry("sensor.torfluegelmotor"), OrganizerOptions()) == "mdi:garage"
+
+
+def test_icon_backfill_psychrometer():
+    assert suggest_entity_icon(_FakeEntry("sensor.psychrometer"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_ilife_v8s():
+    assert suggest_entity_icon(_FakeEntry("sensor.ilife_v8s"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_frischluft():
+    assert suggest_entity_icon(_FakeEntry("sensor.frischluft"), OrganizerOptions()) == "mdi:air-purifier"
