@@ -30051,6 +30051,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "diivoo": "mdi:flower-tulip",
     "photopic sensor": "mdi:brightness-5",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "sicherheitslichtschranke": "mdi:security",
+    "heating element": "mdi:radiator",
+    "netvue": "mdi:cctv",
+    "zellverbinder": "mdi:battery-charging-wireless",
+    "lichtdaemmerung": "mdi:weather-night",
+    "muellchipnummer": "mdi:trash-can-outline",
+    "maco": "mdi:lock",
+    "stromanbieter wechsel": "mdi:currency-eur",
+    "laternenfest": "mdi:lightbulb-multiple",
+    "luftdruckaenderung": "mdi:weather-windy",
+    "brennweite": "mdi:camera-metering-spot",
+    "regentonne ueberlauf": "mdi:water-alert",
+    "gpu treiber update": "mdi:update",
+    "tierhaarmodus": "mdi:paw",
+    "raumbelegung": "mdi:home-map-marker",
+    "pir modul": "mdi:motion-sensor",
+    "object tracking": "mdi:trackpad",
+    "distance sensor": "mdi:ruler",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

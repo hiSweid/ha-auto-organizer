@@ -70978,3 +70978,75 @@ def test_icon_backfill_diivoo():
 
 def test_icon_backfill_photopic_sensor():
     assert suggest_entity_icon(_FakeEntry("sensor.photopic_sensor"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_sicherheitslichtschranke():
+    assert suggest_entity_icon(_FakeEntry("sensor.sicherheitslichtschranke"), OrganizerOptions()) == "mdi:security"
+
+
+def test_icon_backfill_heating_element():
+    assert suggest_entity_icon(_FakeEntry("sensor.heating_element"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_icon_backfill_netvue():
+    assert suggest_entity_icon(_FakeEntry("sensor.netvue"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_zellverbinder():
+    assert suggest_entity_icon(_FakeEntry("sensor.zellverbinder"), OrganizerOptions()) == "mdi:battery-charging-wireless"
+
+
+def test_icon_backfill_lichtdaemmerung():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtdaemmerung"), OrganizerOptions()) == "mdi:weather-night"
+
+
+def test_icon_backfill_muellchipnummer():
+    assert suggest_entity_icon(_FakeEntry("sensor.muellchipnummer"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_icon_backfill_maco():
+    assert suggest_entity_icon(_FakeEntry("sensor.maco"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_stromanbieter_wechsel():
+    assert suggest_entity_icon(_FakeEntry("sensor.stromanbieter_wechsel"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_laternenfest():
+    assert suggest_entity_icon(_FakeEntry("sensor.laternenfest"), OrganizerOptions()) == "mdi:lightbulb-multiple"
+
+
+def test_icon_backfill_luftdruckaenderung():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftdruckaenderung"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_brennweite():
+    assert suggest_entity_icon(_FakeEntry("sensor.brennweite"), OrganizerOptions()) == "mdi:camera-metering-spot"
+
+
+def test_icon_backfill_regentonne_ueberlauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.regentonne_ueberlauf"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_icon_backfill_gpu_treiber_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.gpu_treiber_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_tierhaarmodus():
+    assert suggest_entity_icon(_FakeEntry("sensor.tierhaarmodus"), OrganizerOptions()) == "mdi:paw"
+
+
+def test_icon_backfill_raumbelegung():
+    assert suggest_entity_icon(_FakeEntry("sensor.raumbelegung"), OrganizerOptions()) == "mdi:home-map-marker"
+
+
+def test_icon_backfill_pir_modul():
+    assert suggest_entity_icon(_FakeEntry("sensor.pir_modul"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_object_tracking():
+    assert suggest_entity_icon(_FakeEntry("sensor.object_tracking"), OrganizerOptions()) == "mdi:trackpad"
+
+
+def test_icon_backfill_distance_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.distance_sensor"), OrganizerOptions()) == "mdi:ruler"
