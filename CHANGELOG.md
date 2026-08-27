@@ -6,6 +6,43 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.143] - 2026-08-27
+
+### Fixed
+- **Periodic re-scan now applies the full scope, not just labels.** The
+  scheduled scan and the optional startup run used to call the label engine
+  directly, silently skipping area assignment and icons regardless of
+  configuration. Both now go through the same scope-aware execute path as
+  the "Jetzt ausführen" button (respects the "Umfang" select and "Testlauf"
+  switch). Combined with a new default `scan_interval` of 360 minutes (was
+  0/disabled), a previously-unrecognized entity now gets picked up
+  automatically as the vocabulary grows, instead of only ever getting
+  labeled once at creation and never revisited.
+- `set_entity_icons` now defaults to on, so newly-created entities get an
+  icon within the auto-label debounce window instead of waiting for the
+  next full icon-assignment run.
+- Fixed a keyword/device_class namespace collision: the unpadded 2-letter
+  keyword `"pv"` matched as a bare substring inside unrelated tokens like
+  `"pve"` (a Proxmox host's own hostname abbreviation), silently
+  mislabeling/re-iconing Proxmox GPU/NVMe/RAM/load sensors as solar/energy.
+  Padded to a whole-word match.
+- Fixed `SensorDeviceClass.VOLUME` (a measured litre/gallon quantity, e.g.
+  oil or water consumption) being shadowed by the unrelated `"volume"`
+  keyword (audio loudness), which put a speaker icon on litres sensors.
+  Oil-consumption keywords also get a dedicated icon now instead of falling
+  through to the device_class default.
+- Fixed the `"grid"` icon pointing at the UI-layout icon (`mdi:grid`)
+  instead of an electricity-grid one.
+- Matter/ESPHome/Tasmota/ZHA/Z-Wave JS/MQTT/Shelly are generic bridge
+  platforms hosting arbitrary device types; a blanket per-platform icon
+  (e.g. `mdi:home-automation` for every single Matter entity — ~600+ on a
+  typical install) no longer shadows a perfectly good device_class icon.
+- This user's own "Thread Presence" RF-occupancy integration is now
+  curated to the Presence label directly, instead of relying on the
+  (removed) generic `"thread"` keyword, which mislabeled its own status
+  sensors as "Netzwerk & Server" because the word is ambiguous between the
+  Thread radio protocol and this integration's name.
+
 ## [0.9.142] - 2026-08-25
 
 ### Added

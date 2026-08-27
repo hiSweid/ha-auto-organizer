@@ -34,7 +34,12 @@ CONF_LABEL_PREFIX: Final = "label_prefix"
 DEFAULT_DRY_RUN: Final = False
 DEFAULT_OVERWRITE: Final = False
 DEFAULT_RUN_ON_STARTUP: Final = False
-DEFAULT_SCAN_INTERVAL: Final = 0  # minutes, 0 = disabled
+# A disabled periodic scan (0) means only brand-new entities ever get
+# labeled (via auto_label_new) — anything the vocabulary grows into
+# recognizing later never gets applied to already-existing entities until
+# someone presses "Jetzt ausführen" by hand. Default to a daily re-scan so
+# growing keyword coverage actually reaches the live registry on its own.
+DEFAULT_SCAN_INTERVAL: Final = 360  # minutes (6h), 0 = disabled
 DEFAULT_ENABLE_DOMAIN: Final = True
 DEFAULT_ENABLE_DEVICE_CLASS: Final = True
 DEFAULT_ENABLE_INTEGRATION: Final = False
@@ -50,7 +55,9 @@ DEFAULT_EXCLUDE_ENTITIES: Final = []
 DEFAULT_EXCLUDE: Final = ""
 # Empty = no restriction, every label theme is allowed.
 DEFAULT_ENABLED_LABELS: Final = []
-DEFAULT_SET_ENTITY_ICONS: Final = False
+# On by default: without it, new entities only ever get an icon on the next
+# full "assign_icons" scope run, never from the fast auto_label_new path.
+DEFAULT_SET_ENTITY_ICONS: Final = True
 DEFAULT_CUSTOM_RULES: Final = ""
 DEFAULT_LABEL_PREFIX: Final = ""
 

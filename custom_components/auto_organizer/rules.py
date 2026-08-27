@@ -7337,7 +7337,9 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "harmony hub": "mdi:remote-tv",
     "endschalter": "mdi:electric-switch",
     "power": "mdi:power",
-    "grid": "mdi:grid",
+    # Not the UI-layout icon (mdi:grid) — "grid" here means the electricity
+    # grid (Stromnetz), so it needs a power-grid icon instead.
+    "grid": "mdi:transmission-tower",
     "hvac": "mdi:hvac",
     "heating coil": "mdi:heating-coil",
     "akkuverbrauch": "mdi:battery-minus-variant",
@@ -19622,7 +19624,13 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "hintertuerkamera": "mdi:cctv",
     "door": "mdi:door",
     "parking brake": "mdi:car-brake-parking",
+    # Audio loudness only (media player "Volume" controls etc). The HA
+    # device_class "volume" means a measured liquid/gas quantity (litres)
+    # and must never resolve here — see DEVICE_CLASS_SPECIFIC_ICONS.
     "volume": "mdi:volume-high",
+    "olverbrauch": "mdi:oil",
+    "oelverbrauch": "mdi:oil",
+    "thread_presence": "mdi:radar",
     "robot": "mdi:robot",
     "roboter": "mdi:robot",
     "teppich": "mdi:rug",
@@ -24889,8 +24897,6 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ladeplaner": "mdi:battery-clock",
     "postkasten": "mdi:mailbox",
     "sonnenwaechter": "mdi:weather-sunny",
-    "thread": "mdi:lan-connect",
-    "matter": "mdi:home-automation",
     "parkplatzsensor": "mdi:car-parking-lights",
     "gongschalter": "mdi:doorbell",
     "haustuersensor": "mdi:door",
@@ -26085,7 +26091,12 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "software update": "updates",
     "new version": "updates",
     # energy (PV / grid / storage / electrical quantities)
-    "pv": "energy",
+    # "pv" is padded to a whole-word match: unpadded, it silently matched
+    # inside unrelated tokens like "pve" (the Proxmox host's own hostname
+    # abbreviation), mislabeling/re-iconing dozens of Proxmox sensors as
+    # solar/energy. See the matching SPECIFIC_ICONS entry below (kept
+    # unpadded there — the icon lookup strips the keyword before matching).
+    " pv ": "energy",
     "grid": "energy",
     "einspeisung": "energy",
     "eigenverbrauch": "energy",
@@ -56528,8 +56539,12 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "ladeplaner": "car",
     "postkasten": "security",
     "sonnenwaechter": "weather",
-    " thread ": "network",
-    " matter ": "network",
+    # "thread"/"matter" deliberately not mapped as network keywords: both
+    # words are ambiguous in this household (the RF/Matter protocols vs.
+    # this user's own "Thread Presence" integration, whose entities carry
+    # "thread_presence" in their name/entity_id) and mislabeled that
+    # integration's own presence sensors as Netzwerk & Server. See
+    # INTEGRATION_LABELS["thread_presence"] for the correct, unambiguous fix.
     "parkplatzsensor": "car",
     "gongschalter": "switches",
     "haustuersensor": "security",
@@ -58112,6 +58127,10 @@ INTEGRATION_LABELS: Final[dict[str, str]] = {
     "gpslogger": "presence",
     "icloud": "presence",
     "fully_kiosk": "presence",
+    # This user's own RF-sensing custom integration (per-room occupancy,
+    # not a network/Thread-protocol device). Curated so the ambiguous bare
+    # word "thread" in its entity_ids never needs to be a network keyword.
+    "thread_presence": "presence",
     # lights
     "wled": "lights",
     "govee_light_local": "lights",
@@ -58410,6 +58429,29 @@ STATEFUL_ICON_DOMAINS_IF_DEVICE_CLASS: Final[frozenset[str]] = frozenset(
     {"binary_sensor"}
 )
 
+#: Generic protocol/bridge platforms that host arbitrary, heterogeneous
+#: device types (a Matter or ESPHome entity can be a plug, a sensor, a
+#: climate unit — anything). Unlike a product-specific platform such as
+#: "spotify" or "nuki", the platform name itself carries no useful icon
+#: information here, so it must not shadow the entity's own device_class/
+#: domain icon. Concretely this fixed hundreds of Matter (~614 live
+#: entities) and Matter/ESPHome/Tasmota sensors showing a blanket generic
+#: icon (mdi:home-automation / mdi:chip) instead of their proper
+#: temperature/power/energy icon.
+GENERIC_BRIDGE_PLATFORMS: Final[frozenset[str]] = frozenset(
+    {"matter", "esphome", "tasmota", "zha", "zwave_js", "mqtt", "shelly"}
+)
+
+#: Overrides for device_class values whose plain-English name collides with
+#: an unrelated keyword meaning elsewhere in SPECIFIC_ICONS. Checked before
+#: the generic ``SPECIFIC_ICONS.get(device_class)`` fallback so the keyword
+#: meaning (e.g. "volume" = audio loudness) never leaks into the
+#: device_class meaning (SensorDeviceClass.VOLUME = a measured litre/gallon
+#: quantity, e.g. oil or water consumption).
+DEVICE_CLASS_SPECIFIC_ICONS: Final[dict[str, str]] = {
+    "volume": "mdi:gauge",
+}
+
 
 def suggest_entity_icon(
     entry: EntityLike, options: OrganizerOptions
@@ -58462,16 +58504,21 @@ def suggest_entity_icon(
 
     # The source integration (e.g. "spotify", "nuki", "ring") names the
     # actual product/service, which is more specific than the bare HA
-    # domain/device_class it happens to expose — check it first.
+    # domain/device_class it happens to expose — check it first. Skipped
+    # for generic bridge platforms (Matter, ESPHome, ...) that host all
+    # sorts of unrelated device types under one platform name — see
+    # GENERIC_BRIDGE_PLATFORMS.
     platform = getattr(entry, "platform", None)
-    if platform:
+    if platform and platform not in GENERIC_BRIDGE_PLATFORMS:
         icon = SPECIFIC_ICONS.get(platform)
         if icon:
             return icon
 
     device_class = entry.device_class or entry.original_device_class
     if device_class:
-        icon = SPECIFIC_ICONS.get(device_class)
+        icon = DEVICE_CLASS_SPECIFIC_ICONS.get(device_class) or SPECIFIC_ICONS.get(
+            device_class
+        )
         if icon:
             return icon
 

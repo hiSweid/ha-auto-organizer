@@ -939,3 +939,66 @@ def test_specific_icons_word_coverage_per_icon():
     counts = Counter(rules.SPECIFIC_ICONS.values())
     multi_word_icons = sum(1 for n in counts.values() if n >= 2)
     assert multi_word_icons >= 20
+
+
+def test_pv_keyword_is_whole_word_not_pve_substring():
+    from rules import suggest_entity_icon
+    # Live bug: unpadded "pv" silently matched inside "pve" (the Proxmox
+    # host's own hostname abbreviation), mislabeling/re-iconing dozens of
+    # unrelated Proxmox sensors (GPU/NVMe/RAM/load) as solar/energy.
+    entry = FakeEntry("sensor.proxmox_host_pve_gpu_temperatur", original_device_class="temperature")
+    assert names(entry) == ["Temperatur"]
+    assert suggest_entity_icon(entry, OrganizerOptions()) == "mdi:thermometer"
+    # The legitimate whole-word case (a real PV/solar entity) must still match.
+    assert "Energie" in names(FakeEntry("sensor.solcast_pv_forecast"))
+
+
+def test_volume_device_class_not_shadowed_by_audio_keyword():
+    from rules import suggest_entity_icon
+    # Live bug: SensorDeviceClass.VOLUME (a measured litre/gallon quantity,
+    # e.g. oil/water consumption) collided with the unrelated "volume"
+    # keyword (audio loudness), producing an mdi:volume-high speaker icon
+    # on a plain litres sensor.
+    entry = FakeEntry("sensor.heizoeltank_fuellstand", original_device_class="volume")
+    icon = suggest_entity_icon(entry, OrganizerOptions())
+    assert icon not in (None, "mdi:volume-high")
+    # A media player's actual volume control keeps its audio icon.
+    assert suggest_entity_icon(FakeEntry("number.wohnzimmer_tv_volume"), OrganizerOptions()) == "mdi:volume-high"
+
+
+def test_oelverbrauch_gets_oil_icon_not_device_class_fallback():
+    from rules import suggest_entity_icon
+    entry = FakeEntry("sensor.taglicher_olverbrauch", original_device_class="volume")
+    assert suggest_entity_icon(entry, OrganizerOptions()) == "mdi:oil"
+
+
+def test_grid_icon_is_power_grid_not_ui_layout():
+    from rules import suggest_entity_icon
+    assert suggest_entity_icon(FakeEntry("sensor.evcc_grid_currents_0"), OrganizerOptions()) == "mdi:transmission-tower"
+
+
+def test_thread_presence_platform_labeled_presence_not_network():
+    from rules import suggest_entity_icon
+    # This user's own RF-sensing integration; must never fall through to
+    # the (deliberately removed) generic "thread" network keyword.
+    entry = FakeEntry(
+        "sensor.thread_presence_bad_status", platform="thread_presence", original_device_class="enum"
+    )
+    assert names(entry) == ["Anwesenheit"]
+    assert suggest_entity_icon(entry, OrganizerOptions()) == "mdi:radar"
+
+
+def test_generic_bridge_platform_does_not_shadow_device_class_icon():
+    from rules import suggest_entity_icon
+    # Matter/ESPHome/Tasmota host arbitrary heterogeneous device types, so a
+    # blanket per-platform icon must not override a perfectly good
+    # device_class icon (this affected ~600+ live Matter entities alone).
+    # No override exists for device_class "energy" — falling through to
+    # None (HA's own device_class-aware default icon) is correct and far
+    # better than the old blanket mdi:home-automation.
+    entry = FakeEntry("sensor.essbereich_energie", platform="matter", original_device_class="energy")
+    assert suggest_entity_icon(entry, OrganizerOptions()) != "mdi:home-automation"
+    entry2 = FakeEntry("sensor.garage_oben_links_leistung", platform="matter", original_device_class="power")
+    assert suggest_entity_icon(entry2, OrganizerOptions()) == "mdi:power"
+    # A genuine product-specific platform (not a generic bridge) still wins.
+    assert suggest_entity_icon(FakeEntry("sensor.x", platform="spotify"), OrganizerOptions()) == rules.SPECIFIC_ICONS.get("spotify")

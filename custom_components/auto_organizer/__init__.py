@@ -181,7 +181,12 @@ async def async_setup_entry(
     if entry.options.get(CONF_RUN_ON_STARTUP, DEFAULT_RUN_ON_STARTUP):
 
         async def _run_on_start(_now) -> None:
-            await organizer.run(_options_from_entry(hass, entry))
+            # Go through the same scope-aware execute path as the "Jetzt
+            # ausführen" button (labels + areas + icons per the "Umfang"
+            # select, honoring the "Testlauf" switch) instead of a bare
+            # organizer.run() — a startup run used to silently skip area
+            # assignment and icons no matter what the user configured.
+            await runtime.async_execute()
 
         async_at_started(hass, _run_on_start)
 
@@ -189,7 +194,11 @@ async def async_setup_entry(
     if interval and interval > 0:
 
         async def _scheduled(_now) -> None:
-            await organizer.run(_options_from_entry(hass, entry))
+            # Same reasoning as _run_on_start above: a periodic scan must
+            # re-apply the full selected scope, not just labels, otherwise
+            # newly-recognized entities (from ongoing vocabulary growth)
+            # never get an area or icon without a manual button press.
+            await runtime.async_execute()
 
         entry.async_on_unload(
             async_track_time_interval(

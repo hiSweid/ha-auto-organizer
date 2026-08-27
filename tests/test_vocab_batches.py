@@ -48970,13 +48970,23 @@ def test_batch_sonnenwaechter():
 
 
 def test_batch_thread():
-    assert _has_label("sensor.thread", "network")
-    assert suggest_entity_icon(_FakeEntry("sensor.thread"), OrganizerOptions()) == "mdi:lan-connect"
+    # Deliberately NOT a network keyword (fixed live bug): the bare word
+    # "thread" is ambiguous in practice — it also appears in this user's
+    # own "Thread Presence" occupancy integration's entity_ids
+    # (thread_presence_<room>_status), which were getting mislabeled
+    # "Netzwerk & Server" instead of "Anwesenheit". See
+    # INTEGRATION_LABELS["thread_presence"] for the correct, unambiguous fix.
+    assert not _has_label("sensor.thread", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.thread"), OrganizerOptions()) is None
 
 
 def test_batch_matter():
-    assert _has_label("sensor.matter", "network")
-    assert suggest_entity_icon(_FakeEntry("sensor.matter"), OrganizerOptions()) == "mdi:home-automation"
+    # Same reasoning as test_batch_thread: "matter" alone is too ambiguous
+    # a word to safely mean the Matter protocol (unlike distinguishing
+    # compounds like "matterbridge"/"matter_thread_border_router", which
+    # keep their own dedicated keyword entries below).
+    assert not _has_label("sensor.matter", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.matter"), OrganizerOptions()) is None
 
 
 def test_batch_parkplatzsensor():

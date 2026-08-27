@@ -209,13 +209,17 @@ async def test_set_entity_icons_option_wired(hass: HomeAssistant) -> None:
     assert options.set_entity_icons is True
 
 
-async def test_set_entity_icons_defaults_off(hass: HomeAssistant) -> None:
+async def test_set_entity_icons_defaults_on(hass: HomeAssistant) -> None:
+    # Flipped default (was off): without it, a brand-new entity only ever
+    # gets an icon from the next full "assign_icons" scope run, never from
+    # the fast auto_label_new path — the delay used to read as "icons just
+    # don't get set" for entities created between full runs.
     from custom_components.auto_organizer import _options_from_entry
 
     entry = MockConfigEntry(domain=DOMAIN, options={})
     entry.add_to_hass(hass)
     options = _options_from_entry(hass, entry)
-    assert options.set_entity_icons is False
+    assert options.set_entity_icons is True
 
 
 async def test_entities_with_specific_icon_stat(hass: HomeAssistant) -> None:
