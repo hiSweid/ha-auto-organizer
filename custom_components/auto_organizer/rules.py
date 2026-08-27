@@ -27877,6 +27877,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "delta package": "mdi:package-variant-closed",
     "merkzettel": "mdi:note-text",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "teppichboost": "mdi:air-purifier",
+    "kubikmeter": "mdi:gauge",
+    "tidal": "mdi:music-note",
+    "beg praesenzmelder": "mdi:motion-sensor",
+    "wg mitbewohner status": "mdi:account-group",
+    "arp tabelle": "mdi:network",
+    "kamerahalterung": "mdi:cctv",
+    "wasserkostenanteil": "mdi:water",
+    "accuweather": "mdi:weather-partly-cloudy",
+    "wyoming update": "mdi:update",
+    "gaposa": "mdi:window-closed",
+    "mijia kamera": "mdi:camera",
+    "visualcrossing": "mdi:weather-sunny",
+    "rasiergel": "mdi:package-variant",
+    "microzelle": "mdi:battery-charging",
+    "wasserfilterstand": "mdi:water-pump",
+    "geruchsintensitaet": "mdi:smoke-detector",
+    "soletemperatur": "mdi:sun-thermometer",
+    "ohrstoepsel": "mdi:headphones",
+    "build number": "mdi:information",
+    "teichlicht": "mdi:lightbulb",
+    "battery temperature": "mdi:thermometer",
+    "clubmodus": "mdi:movie-open",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
