@@ -29177,6 +29177,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "luftionenmesser": "mdi:air-purifier",
     "o3 sensor": "mdi:air-filter",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "ablaufschlauch": "mdi:pipe",
+    "saugleistung": "mdi:air-purifier",
+    "omron d6t": "mdi:motion-sensor",
+    "sensedge": "mdi:air-filter",
+    "ziehschutz": "mdi:lock",
+    "aktualisierungshinweise pruefen": "mdi:update",
+    "flow temperature": "mdi:thermometer",
+    "illuminance": "mdi:brightness-5",
+    "spice grinder": "mdi:blender",
+    "standby battery": "mdi:battery-charging",
+    "sandfilteranlage": "mdi:water-pump",
+    "vpn client": "mdi:network",
+    "wasserstandsmessung": "mdi:waves",
+    "lagom stimmung": "mdi:palette",
+    "weinschranktemperatur": "mdi:fridge",
+    "bike shed": "mdi:lightbulb",
+    "google routine": "mdi:script-text-outline",
+    "erhaltungsladung": "mdi:battery-alert",
+    "werkstattkamera": "mdi:camera",
+    "feuchttuecher": "mdi:tshirt-crew",
+    "atembewegung": "mdi:account-heart",
+    "white goods": "mdi:fridge",
+    "fensterlueftung": "mdi:window-open",
+    "letzte sichtung": "mdi:cctv",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
