@@ -26516,6 +26516,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "setpoint": "mdi:thermostat",
     "capture card": "mdi:video-input-hdmi",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "zeitraffer kamera": "mdi:camera-timer",
+    "schlossblende": "mdi:door-closed",
+    "cadr": "mdi:air-filter",
+    "lieblingssender": "mdi:heart-outline",
+    "update assistent": "mdi:update",
+    "wassermelderbatterie": "mdi:battery-50",
+    "schliesscode": "mdi:lock-plus",
+    "leuchtdichtemessung": "mdi:brightness-6",
+    "mqtt automation": "mdi:message-text-outline",
+    "pa saugkraft": "mdi:fan",
+    "shinobi motion": "mdi:motion-sensor",
+    "batteriegesetz": "mdi:recycle",
+    "hefe": "mdi:yeast",
+    "wetteraussichten": "mdi:weather-partly-cloudy",
+    "matrix metering": "mdi:sine-wave",
+    "snow depth": "mdi:snowflake",
+    "rahmenschloss": "mdi:door-open",
+    "wet bulb": "mdi:thermometer-lines",
+    "zellenausgleich": "mdi:battery-sync",
+    "instantnudeln": "mdi:noodles",
+    "load balancer": "mdi:scale-balance",
+    "outdoor lux": "mdi:brightness-7",
+    "late fee": "mdi:currency-usd",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
