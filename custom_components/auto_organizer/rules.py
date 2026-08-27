@@ -28533,6 +28533,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "uv entkeimung": "mdi:sun-wireless",
     "versionsnummer": "mdi:information",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "digitalstrom": "mdi:sine-wave",
+    "parallelverarbeitung": "mdi:code-braces",
+    "einparkvorgang erkannt": "mdi:car-shift-pattern",
+    "produktionszaehler": "mdi:gauge",
+    "teppichaussparung": "mdi:vacuum",
+    "mikrobewegung": "mdi:motion-sensor",
+    "poe switch firmware": "mdi:chip",
+    "smart grid ready": "mdi:transmission-tower",
+    "tonnenleerung": "mdi:trash-can",
+    "hellofresh": "mdi:cart",
+    "sophos": "mdi:shield-check",
+    "paddle switch": "mdi:toggle-switch",
+    "basement dehumidifier": "mdi:water-percent",
+    "massagestrahl": "mdi:spray-bottle",
+    "european aqi": "mdi:air-filter",
+    "budget billing": "mdi:currency-usd",
+    "schrittweise ausfuehrung": "mdi:script-text",
+    "raised bed": "mdi:flower-tulip",
+    "passivierung": "mdi:chemical-weapon",
+    "hobbyraumlicht": "mdi:lightbulb",
+    "sichtweitensensor": "mdi:eye",
+    "letztes mal gesehen": "mdi:clock-outline",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
