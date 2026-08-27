@@ -78622,3 +78622,83 @@ def test_icon_backfill_tangle_free():
 
 def test_icon_backfill_medienzentrum():
     assert suggest_entity_icon(_FakeEntry("sensor.medienzentrum"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_pro_breeze():
+    assert suggest_entity_icon(_FakeEntry("sensor.pro_breeze"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_jubilaeumsszene():
+    assert suggest_entity_icon(_FakeEntry("sensor.jubilaeumsszene"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_sequenzabbruch():
+    assert suggest_entity_icon(_FakeEntry("sensor.sequenzabbruch"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_cloer():
+    assert suggest_entity_icon(_FakeEntry("sensor.cloer"), OrganizerOptions()) == "mdi:washing-machine"
+
+
+def test_icon_backfill_nach_hause():
+    assert suggest_entity_icon(_FakeEntry("sensor.nach_hause"), OrganizerOptions()) == "mdi:home-account"
+
+
+def test_icon_backfill_price_plan():
+    assert suggest_entity_icon(_FakeEntry("sensor.price_plan"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_yolink_automation():
+    assert suggest_entity_icon(_FakeEntry("sensor.yolink_automation"), OrganizerOptions()) == "mdi:robot"
+
+
+def test_icon_backfill_ilife_a11():
+    assert suggest_entity_icon(_FakeEntry("sensor.ilife_a11"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_switch_block():
+    assert suggest_entity_icon(_FakeEntry("sensor.switch_block"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_icon_backfill_schadstoffsammelstelle():
+    assert suggest_entity_icon(_FakeEntry("sensor.schadstoffsammelstelle"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_green_bin():
+    assert suggest_entity_icon(_FakeEntry("sensor.green_bin"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_kontextbedingung():
+    assert suggest_entity_icon(_FakeEntry("sensor.kontextbedingung"), OrganizerOptions()) == "mdi:filter-variant"
+
+
+def test_icon_backfill_sewage():
+    assert suggest_entity_icon(_FakeEntry("sensor.sewage"), OrganizerOptions()) == "mdi:water-well"
+
+
+def test_icon_backfill_thermoelement_typ_j():
+    assert suggest_entity_icon(_FakeEntry("sensor.thermoelement_typ_j"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_schuppen():
+    assert suggest_entity_icon(_FakeEntry("sensor.schuppen"), OrganizerOptions()) == "mdi:warehouse"
+
+
+def test_icon_backfill_verzweigungsbaum():
+    assert suggest_entity_icon(_FakeEntry("sensor.verzweigungsbaum"), OrganizerOptions()) == "mdi:tree-outline"
+
+
+def test_icon_backfill_barra_de_sonido():
+    assert suggest_entity_icon(_FakeEntry("sensor.barra_de_sonido"), OrganizerOptions()) == "mdi:speaker"
+
+
+def test_icon_backfill_jellyfin():
+    assert suggest_entity_icon(_FakeEntry("sensor.jellyfin"), OrganizerOptions()) == "mdi:play-circle"
+
+
+def test_icon_backfill_hauseingang():
+    assert suggest_entity_icon(_FakeEntry("sensor.hauseingang"), OrganizerOptions()) == "mdi:doorbell-video"
+
+
+def test_icon_backfill_hdr10():
+    assert suggest_entity_icon(_FakeEntry("sensor.hdr10"), OrganizerOptions()) == "mdi:hdmi-port"

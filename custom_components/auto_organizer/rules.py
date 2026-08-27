@@ -32150,6 +32150,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "tangle free": "mdi:robot-vacuum",
     "medienzentrum": "mdi:television-classic",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "pro breeze": "mdi:water-percent",
+    "jubilaeumsszene": "mdi:movie-open",
+    "sequenzabbruch": "mdi:script-text-outline",
+    "cloer": "mdi:washing-machine",
+    "nach hause": "mdi:home-account",
+    "price plan": "mdi:currency-eur",
+    "yolink automation": "mdi:robot",
+    "ilife a11": "mdi:robot-vacuum",
+    "switch block": "mdi:toggle-switch",
+    "schadstoffsammelstelle": "mdi:trash-can",
+    "green bin": "mdi:recycle",
+    "kontextbedingung": "mdi:filter-variant",
+    "sewage": "mdi:water-well",
+    "thermoelement typ j": "mdi:thermometer",
+    "schuppen": "mdi:warehouse",
+    "verzweigungsbaum": "mdi:tree-outline",
+    "barra de sonido": "mdi:speaker",
+    "jellyfin": "mdi:play-circle",
+    "hauseingang": "mdi:doorbell-video",
+    "hdr10": "mdi:hdmi-port",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
