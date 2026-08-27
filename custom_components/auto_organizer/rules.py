@@ -30885,7 +30885,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "proximity sensor": "mdi:ruler",
     "kellerklima": "mdi:thermometer",
     "solarspannung": "mdi:solar-power",
-    "willkommensszene": "mdi:movie-open",
+    "willkommensszene": "mdi:palette",
     "inversionslage": "mdi:weather-night",
     "gledopto lux": "mdi:brightness-5",
     "geschirrspuelertab": "mdi:dishwasher",
@@ -31068,7 +31068,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "toilettenspuelung": "mdi:toilet",
 
     # --- icon backfill batch (local-LLM generated + validated) ---
-    "servietten": "mdi:tshirt-crew",
+    "servietten": "mdi:shopping-outline",
     "dachrinnenroboter": "mdi:robot-vacuum",
     "bresser wetterstation": "mdi:weather-cloudy",
     "vorlaufaufnahme": "mdi:camera",
@@ -31184,7 +31184,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "gefrierfach": "mdi:fridge-industrial-outline",
     "brennerstunden": "mdi:fireplace",
     "staged rollout": "mdi:progress-download",
-    "koerperschallsensor": "mdi:human-greeting",
+    "koerperschallsensor": "mdi:vibrate",
 
     # --- icon backfill batch (local-LLM generated + validated) ---
     "waschgang skript": "mdi:script",
@@ -31330,7 +31330,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "bremsbelag": "mdi:car-brake-abs",
     "besetzt": "mdi:motion-sensor",
     "feuchtezone": "mdi:water-percent",
-    "gemuesereibe": "mdi:food-apple",
+    "gemuesereibe": "mdi:knife",
     "laststeuerung": "mdi:power-settings",
 
     # --- icon backfill batch (local-LLM generated + validated) ---

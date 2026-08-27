@@ -74025,7 +74025,7 @@ def test_icon_backfill_solarspannung():
 
 
 def test_icon_backfill_willkommensszene():
-    assert suggest_entity_icon(_FakeEntry("sensor.willkommensszene"), OrganizerOptions()) == "mdi:movie-open"
+    assert suggest_entity_icon(_FakeEntry("sensor.willkommensszene"), OrganizerOptions()) == "mdi:palette"
 
 
 def test_icon_backfill_inversionslage():
@@ -74693,7 +74693,7 @@ def test_icon_backfill_toilettenspuelung():
 
 
 def test_icon_backfill_servietten():
-    assert suggest_entity_icon(_FakeEntry("sensor.servietten"), OrganizerOptions()) == "mdi:tshirt-crew"
+    assert suggest_entity_icon(_FakeEntry("sensor.servietten"), OrganizerOptions()) == "mdi:shopping-outline"
 
 
 def test_icon_backfill_dachrinnenroboter():
@@ -75125,7 +75125,7 @@ def test_icon_backfill_staged_rollout():
 
 
 def test_icon_backfill_koerperschallsensor():
-    assert suggest_entity_icon(_FakeEntry("sensor.koerperschallsensor"), OrganizerOptions()) == "mdi:human-greeting"
+    assert suggest_entity_icon(_FakeEntry("sensor.koerperschallsensor"), OrganizerOptions()) == "mdi:vibrate"
 
 
 def test_icon_backfill_waschgang_skript():
@@ -75653,7 +75653,7 @@ def test_icon_backfill_feuchtezone():
 
 
 def test_icon_backfill_gemuesereibe():
-    assert suggest_entity_icon(_FakeEntry("sensor.gemuesereibe"), OrganizerOptions()) == "mdi:food-apple"
+    assert suggest_entity_icon(_FakeEntry("sensor.gemuesereibe"), OrganizerOptions()) == "mdi:knife"
 
 
 def test_icon_backfill_laststeuerung():
