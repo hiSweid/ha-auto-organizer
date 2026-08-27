@@ -79638,3 +79638,75 @@ def test_icon_backfill_one_click():
 
 def test_icon_backfill_revenue_meter():
     assert suggest_entity_icon(_FakeEntry("sensor.revenue_meter"), OrganizerOptions()) == "mdi:meter-electric"
+
+
+def test_icon_backfill_meteomatics():
+    assert suggest_entity_icon(_FakeEntry("sensor.meteomatics"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_feuchtedatenlogger():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchtedatenlogger"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_walabot():
+    assert suggest_entity_icon(_FakeEntry("sensor.walabot"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_shinyei():
+    assert suggest_entity_icon(_FakeEntry("sensor.shinyei"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_restabfallbehaelter():
+    assert suggest_entity_icon(_FakeEntry("sensor.restabfallbehaelter"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_hotfix_release():
+    assert suggest_entity_icon(_FakeEntry("sensor.hotfix_release"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_district_heating():
+    assert suggest_entity_icon(_FakeEntry("sensor.district_heating"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_icon_backfill_roidmi_eve():
+    assert suggest_entity_icon(_FakeEntry("sensor.roidmi_eve"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_kartonage():
+    assert suggest_entity_icon(_FakeEntry("sensor.kartonage"), OrganizerOptions()) == "mdi:package-variant-closed"
+
+
+def test_icon_backfill_kuehlschrankentsorgung():
+    assert suggest_entity_icon(_FakeEntry("sensor.kuehlschrankentsorgung"), OrganizerOptions()) == "mdi:fridge-outline"
+
+
+def test_icon_backfill_frostperiode():
+    assert suggest_entity_icon(_FakeEntry("sensor.frostperiode"), OrganizerOptions()) == "mdi:snowflake"
+
+
+def test_icon_backfill_klimaanlage_kondensatstau():
+    assert suggest_entity_icon(_FakeEntry("sensor.klimaanlage_kondensatstau"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_icon_backfill_muellmax():
+    assert suggest_entity_icon(_FakeEntry("sensor.muellmax"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_sprinkleranlage_leck():
+    assert suggest_entity_icon(_FakeEntry("sensor.sprinkleranlage_leck"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_hose_bib_leak():
+    assert suggest_entity_icon(_FakeEntry("sensor.hose_bib_leak"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_redox_flow():
+    assert suggest_entity_icon(_FakeEntry("sensor.redox_flow"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_flurlichtsensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.flurlichtsensor"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_zwischenzeit_trigger():
+    assert suggest_entity_icon(_FakeEntry("sensor.zwischenzeit_trigger"), OrganizerOptions()) == "mdi:timer-sand"

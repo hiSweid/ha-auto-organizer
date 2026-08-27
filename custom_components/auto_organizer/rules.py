@@ -32430,6 +32430,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "one click": "mdi:cursor-pointer",
     "revenue meter": "mdi:meter-electric",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "meteomatics": "mdi:weather-cloudy",
+    "feuchtedatenlogger": "mdi:water-percent",
+    "walabot": "mdi:motion-sensor",
+    "shinyei": "mdi:air-filter",
+    "restabfallbehaelter": "mdi:trash-can",
+    "hotfix release": "mdi:update",
+    "district heating": "mdi:radiator",
+    "roidmi eve": "mdi:robot-vacuum",
+    "kartonage": "mdi:package-variant-closed",
+    "kuehlschrankentsorgung": "mdi:fridge-outline",
+    "frostperiode": "mdi:snowflake",
+    "klimaanlage kondensatstau": "mdi:water-alert",
+    "muellmax": "mdi:trash-can",
+    "sprinkleranlage leck": "mdi:leak",
+    "hose bib leak": "mdi:leak",
+    "redox flow": "mdi:power-plug",
+    "flurlichtsensor": "mdi:brightness-5",
+    "zwischenzeit trigger": "mdi:timer-sand",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
