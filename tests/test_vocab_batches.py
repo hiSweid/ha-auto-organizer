@@ -63182,3 +63182,71 @@ def test_icon_backfill_taupunktueberwachung():
 
 def test_icon_backfill_luftfeuchtenorm():
     assert suggest_entity_icon(_FakeEntry("sensor.luftfeuchtenorm"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_scrobbling():
+    assert suggest_entity_icon(_FakeEntry("sensor.scrobbling"), OrganizerOptions()) == "mdi:music-note"
+
+
+def test_icon_backfill_rasenkante():
+    assert suggest_entity_icon(_FakeEntry("sensor.rasenkante"), OrganizerOptions()) == "mdi:grass"
+
+
+def test_icon_backfill_helligkeitskategorie():
+    assert suggest_entity_icon(_FakeEntry("sensor.helligkeitskategorie"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_keyless():
+    assert suggest_entity_icon(_FakeEntry("sensor.keyless"), OrganizerOptions()) == "mdi:key-wireless"
+
+
+def test_icon_backfill_warmup():
+    assert suggest_entity_icon(_FakeEntry("sensor.warmup"), OrganizerOptions()) == "mdi:heat-wave"
+
+
+def test_icon_backfill_co_working():
+    assert suggest_entity_icon(_FakeEntry("sensor.co_working"), OrganizerOptions()) == "mdi:office-building"
+
+
+def test_icon_backfill_kaba_mas():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaba_mas"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_daemon_prozess():
+    assert suggest_entity_icon(_FakeEntry("sensor.daemon_prozess"), OrganizerOptions()) == "mdi:server-network"
+
+
+def test_icon_backfill_bestandsmeldung():
+    assert suggest_entity_icon(_FakeEntry("sensor.bestandsmeldung"), OrganizerOptions()) == "mdi:package-variant-closed"
+
+
+def test_icon_backfill_keycard():
+    assert suggest_entity_icon(_FakeEntry("sensor.keycard"), OrganizerOptions()) == "mdi:card-account-details"
+
+
+def test_icon_backfill_aktualisierung_installieren():
+    assert suggest_entity_icon(_FakeEntry("sensor.aktualisierung_installieren"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_feuchtemesspunkt():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchtemesspunkt"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_temtop_m2000():
+    assert suggest_entity_icon(_FakeEntry("sensor.temtop_m2000"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_trockene_luft():
+    assert suggest_entity_icon(_FakeEntry("sensor.trockene_luft"), OrganizerOptions()) == "mdi:water-off"
+
+
+def test_icon_backfill_abgaswerte():
+    assert suggest_entity_icon(_FakeEntry("sensor.abgaswerte"), OrganizerOptions()) == "mdi:chart-line-variant"
+
+
+def test_icon_backfill_zulufttemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.zulufttemperatur"), OrganizerOptions()) == "mdi:temperature-celsius"
+
+
+def test_icon_backfill_wattstunde():
+    assert suggest_entity_icon(_FakeEntry("sensor.wattstunde"), OrganizerOptions()) == "mdi:flash"

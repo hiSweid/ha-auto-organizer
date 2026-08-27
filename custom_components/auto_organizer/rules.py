@@ -27924,6 +27924,25 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "taupunktueberwachung": "mdi:water-percent-alert",
     "luftfeuchtenorm": "mdi:water-percent",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "scrobbling": "mdi:music-note",
+    "rasenkante": "mdi:grass",
+    "helligkeitskategorie": "mdi:brightness-6",
+    "keyless": "mdi:key-wireless",
+    "warmup": "mdi:heat-wave",
+    "co working": "mdi:office-building",
+    "kaba mas": "mdi:lock",
+    "daemon prozess": "mdi:server-network",
+    "bestandsmeldung": "mdi:package-variant-closed",
+    "keycard": "mdi:card-account-details",
+    "aktualisierung installieren": "mdi:update",
+    "feuchtemesspunkt": "mdi:thermometer-lines",
+    "temtop m2000": "mdi:air-filter",
+    "trockene luft": "mdi:water-off",
+    "abgaswerte": "mdi:chart-line-variant",
+    "zulufttemperatur": "mdi:temperature-celsius",
+    "wattstunde": "mdi:flash",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
