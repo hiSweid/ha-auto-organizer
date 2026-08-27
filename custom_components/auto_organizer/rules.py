@@ -30611,6 +30611,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "last seen": "mdi:clock-check",
     "schnarcherkennung": "mdi:sleep",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "fehlerspeicher": "mdi:car-clock",
+    "osd einblendung": "mdi:camera-enhance",
+    "lichtsensormodul": "mdi:brightness-5",
+    "hifianlage": "mdi:audio-video",
+    "dyson pure": "mdi:air-purifier",
+    "aeotec nano shutter": "mdi:blinds",
+    "sega": "mdi:gamepad-variant",
+    "staubsensor": "mdi:air-filter",
+    "terrassentuerantrieb": "mdi:gate-open",
+    "payment plan": "mdi:credit-card-wireless",
+    "si7021": "mdi:water-percent",
+    "luftfeuchteschwelle": "mdi:water-percent-alert",
+    "free fall detection": "mdi:alert-octagon",
+    "meroni": "mdi:lock",
+    "eingecheckt": "mdi:account-check",
+    "not condition": "mdi:alert-circle",
+    "lifesmart": "mdi:lightbulb",
+    "grid meter": "mdi:power-plug",
+    "biotonnenkalender": "mdi:calendar-plus",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
