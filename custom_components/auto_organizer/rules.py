@@ -29599,6 +29599,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "autoalarm": "mdi:car-connected",
     "nahwaerme": "mdi:radiator",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "spuelmaschinenleck": "mdi:washing-machine",
+    "schwenkspot": "mdi:floor-lamp",
+    "duckdns": "mdi:network",
+    "addon update": "mdi:update",
+    "obs studio": "mdi:monitor",
+    "kosten": "mdi:currency-eur",
+    "abluftbetrieb": "mdi:fan",
+    "strompreis aktuell": "mdi:currency-eur",
+    "moppmodul": "mdi:robot-vacuum",
+    "befehlsmakro": "mdi:script-text",
+    "script trigger": "mdi:script-text",
+    "luftfeucht": "mdi:water-percent",
+    "absturzsensor": "mdi:robot-vacuum",
+    "einzelraumlueftung": "mdi:fan",
+    "ueber nacht weg": "mdi:home-outline",
+    "erythem": "mdi:brightness-6",
+    "pantographladen": "mdi:ev-station",
+    "blueprint": "mdi:file-document-edit",
+    "luftfeuchte badezimmer": "mdi:water-percent",
+    "windeleimer": "mdi:trash-can",
+    "sanftes erwachen": "mdi:sun-wireless",
+    "cold chain": "mdi:thermometer-low",
+    "semver": "mdi:numeric",
+    "verbindungsqualitaet": "mdi:signal",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
