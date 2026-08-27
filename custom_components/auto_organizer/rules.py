@@ -31480,6 +31480,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "proficook": "mdi:microwave",
     "kaufliste": "mdi:cart",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "zalando paket": "mdi:package",
+    "solar flare": "mdi:flare",
+    "proxmox": "mdi:server-network",
+    "bedingungsauswertung": "mdi:function",
+    "deployment skript": "mdi:script-text",
+    "schluesselnotdienst": "mdi:key-alert",
+    "sonnenstrom": "mdi:solar-power",
+    "aufraeumroutine": "mdi:robot-vacuum",
+    "bin gleich da": "mdi:account-check",
+    "sabbath modus": "mdi:power-sleep",
+    "patchlevel": "mdi:numeric",
+    "eiszapfen": "mdi:snowflake",
+    "game controller": "mdi:controller",
+    "kurzdistanzbeamer": "mdi:projector-screen",
+    "byd akku": "mdi:battery-charging",
+    "bloomsky": "mdi:weather-cloudy",
+    "gartenfeier": "mdi:flower-tulip",
+    "loewenzahn": "mdi:flower",
+    "redoxwert": "mdi:water-opacity",
+    "leasingfahrzeug": "mdi:car",
+    "oral irrigator": "mdi:toothbrush",
+    "pendelverkehr": "mdi:train",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
