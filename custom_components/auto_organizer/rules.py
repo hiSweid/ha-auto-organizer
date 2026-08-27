@@ -30349,6 +30349,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "dampferzeuger": "mdi:steam",
     "dynament": "mdi:air-purifier",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "roommate": "mdi:account",
+    "gartenhaus": "mdi:home-group",
+    "lint filter": "mdi:filter-outline",
+    "forced air": "mdi:fan",
+    "wetterschutzgehaeuse": "mdi:camera-off",
+    "neuste version": "mdi:update",
+    "elektroaltgeraeteverordnung": "mdi:recycle",
+    "selbsthaltung automatik": "mdi:autorenew",
+    "midea dehumidifier": "mdi:water-percent",
+    "vodafone stoerung": "mdi:wifi-strength-1",
+    "dampfmop": "mdi:steam",
+    "senseair": "mdi:air-filter",
+    "greenworks": "mdi:leaf",
+    "digital meter": "mdi:meter-electric",
+    "scheibenbeschlag": "mdi:window-shutter",
+    "zustandsbasierte automation": "mdi:state-machine",
+    "geruch": "mdi:scent",
+    "einweihungsfeier": "mdi:party-popper",
+    "tuerschnaepper": "mdi:door-closed",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
