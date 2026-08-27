@@ -32025,6 +32025,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "weihnachtsstimmung": "mdi:pine-tree",
     "wintergartenlichtsensor": "mdi:lightbulb",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "raumlichtstaerke": "mdi:brightness-5",
+    "8k fernseher": "mdi:television-classic",
+    "schuhcontainer": "mdi:shoe-heel",
+    "daikin firmware": "mdi:chip",
+    "rasen": "mdi:grass",
+    "luxwert trigger": "mdi:lightbulb-on-outline",
+    "harman kardon": "mdi:speaker-wireless",
+    "leckortung": "mdi:leak",
+    "elektroschrottabgabe": "mdi:recycle",
+    "keyed alike": "mdi:key-variant",
+    "wasser": "mdi:water",
+    "hindernisumfahrung": "mdi:robot-vacuum-variant",
+    "netzstabilitaet": "mdi:power-plug",
+    "dechlorinator": "mdi:water-check",
+    "kraftstoffverbrauch": "mdi:gas-station",
+    "candela wert": "mdi:brightness-6",
+    "ablauf": "mdi:script-text-outline",
+    "aquarium luftfeuchte": "mdi:water-percent",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

@@ -78170,3 +78170,75 @@ def test_icon_backfill_weihnachtsstimmung():
 
 def test_icon_backfill_wintergartenlichtsensor():
     assert suggest_entity_icon(_FakeEntry("sensor.wintergartenlichtsensor"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_raumlichtstaerke():
+    assert suggest_entity_icon(_FakeEntry("sensor.raumlichtstaerke"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_8k_fernseher():
+    assert suggest_entity_icon(_FakeEntry("sensor.8k_fernseher"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_schuhcontainer():
+    assert suggest_entity_icon(_FakeEntry("sensor.schuhcontainer"), OrganizerOptions()) == "mdi:shoe-heel"
+
+
+def test_icon_backfill_daikin_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.daikin_firmware"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_icon_backfill_rasen():
+    assert suggest_entity_icon(_FakeEntry("sensor.rasen"), OrganizerOptions()) == "mdi:grass"
+
+
+def test_icon_backfill_luxwert_trigger():
+    assert suggest_entity_icon(_FakeEntry("sensor.luxwert_trigger"), OrganizerOptions()) == "mdi:lightbulb-on-outline"
+
+
+def test_icon_backfill_harman_kardon():
+    assert suggest_entity_icon(_FakeEntry("sensor.harman_kardon"), OrganizerOptions()) == "mdi:speaker-wireless"
+
+
+def test_icon_backfill_leckortung():
+    assert suggest_entity_icon(_FakeEntry("sensor.leckortung"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_elektroschrottabgabe():
+    assert suggest_entity_icon(_FakeEntry("sensor.elektroschrottabgabe"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_keyed_alike():
+    assert suggest_entity_icon(_FakeEntry("sensor.keyed_alike"), OrganizerOptions()) == "mdi:key-variant"
+
+
+def test_icon_backfill_wasser():
+    assert suggest_entity_icon(_FakeEntry("sensor.wasser"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_hindernisumfahrung():
+    assert suggest_entity_icon(_FakeEntry("sensor.hindernisumfahrung"), OrganizerOptions()) == "mdi:robot-vacuum-variant"
+
+
+def test_icon_backfill_netzstabilitaet():
+    assert suggest_entity_icon(_FakeEntry("sensor.netzstabilitaet"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_dechlorinator():
+    assert suggest_entity_icon(_FakeEntry("sensor.dechlorinator"), OrganizerOptions()) == "mdi:water-check"
+
+
+def test_icon_backfill_kraftstoffverbrauch():
+    assert suggest_entity_icon(_FakeEntry("sensor.kraftstoffverbrauch"), OrganizerOptions()) == "mdi:gas-station"
+
+
+def test_icon_backfill_candela_wert():
+    assert suggest_entity_icon(_FakeEntry("sensor.candela_wert"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_ablauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.ablauf"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_aquarium_luftfeuchte():
+    assert suggest_entity_icon(_FakeEntry("sensor.aquarium_luftfeuchte"), OrganizerOptions()) == "mdi:water-percent"
