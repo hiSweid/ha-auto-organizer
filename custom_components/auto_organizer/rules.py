@@ -28819,6 +28819,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "raumauswahl saugroboter": "mdi:vacuum",
     "nebenzeit": "mdi:currency-eur",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "community cleanup": "mdi:trash-can",
+    "wine night": "mdi:glass-wine",
+    "sudtemperatur": "mdi:thermometer",
+    "downspout blockage": "mdi:pipe-valve",
+    "fensterthermometer": "mdi:thermometer",
+    "wettlaufbedingung": "mdi:flag-variant",
+    "pilot light": "mdi:lightbulb-on",
+    "tracetek": "mdi:water-alert",
+    "miele dunstabzugshaube": "mdi:fan",
+    "verzoegerungsrelais": "mdi:power-plug",
+    "h2s sensor": "mdi:air-filter",
+    "transponderkarte": "mdi:key-chain",
+    "entsafter": "mdi:toaster",
+    "no motion timeout": "mdi:motion-sensor-off",
+    "ebusd": "mdi:thermostat",
+    "terrassenalarm": "mdi:bell-alert",
+    "nubert": "mdi:cast",
+    "cleaning routine": "mdi:broom",
+    "speicherlichtsensor": "mdi:brightness-6",
+    "klarstein": "mdi:pot-steam",
+    "farbnachtsicht": "mdi:camera-off",
+    "daemmerungsautomatik": "mdi:brightness-5",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
