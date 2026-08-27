@@ -27748,6 +27748,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "zustellfahrzeug": "mdi:truck-delivery",
     "isolator switch": "mdi:power-plug",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "tvoc": "mdi:air-filter",
+    "auto lift mop": "mdi:robot-vacuum",
+    "aktualisierungsserver": "mdi:update",
+    "hintergrundprozess": "mdi:script-text-outline",
+    "inkbird humidity": "mdi:water-percent",
+    "wsdcgq12lm": "mdi:water-percent",
+    "ev wert": "mdi:brightness-6",
+    "duette": "mdi:blinds",
+    "hager knx": "mdi:power-plug",
+    "kaltluftsee": "mdi:weather-snowy",
+    "offener betrag": "mdi:currency-eur",
+    "tenergy": "mdi:battery-high",
+    "co2 einsparung": "mdi:leaf",
+    "zapfhahn": "mdi:faucet",
+    "mindestlaufzeit": "mdi:timer-cog",
+    "saubermacher": "mdi:recycle",
+    "kehrichtmarke": "mdi:trash-can",
+    "luftfeuchte schlafzimmer": "mdi:water-percent",
+    "docker": "mdi:docker",
+    "wettersatellit": "mdi:weather-partly-cloudy",
+    "keramikentsorgung": "mdi:trash-can",
+    "nachheizregister": "mdi:radiator",
+    "jung jalousie": "mdi:blinds",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
