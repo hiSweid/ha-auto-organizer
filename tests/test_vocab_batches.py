@@ -62701,7 +62701,7 @@ def test_icon_backfill_curling_iron():
 
 
 def test_icon_backfill_memoryeffekt():
-    assert suggest_entity_icon(_FakeEntry("sensor.memoryeffekt"), OrganizerOptions()) == "mdi:memory"
+    assert suggest_entity_icon(_FakeEntry("sensor.memoryeffekt"), OrganizerOptions()) == "mdi:battery-charging-low"
 
 
 def test_icon_backfill_wasserrechnung():
@@ -63081,7 +63081,7 @@ def test_icon_backfill_geruchsintensitaet():
 
 
 def test_icon_backfill_soletemperatur():
-    assert suggest_entity_icon(_FakeEntry("sensor.soletemperatur"), OrganizerOptions()) == "mdi:sun-thermometer"
+    assert suggest_entity_icon(_FakeEntry("sensor.soletemperatur"), OrganizerOptions()) == "mdi:thermometer-water"
 
 
 def test_icon_backfill_ohrstoepsel():
@@ -63101,7 +63101,7 @@ def test_icon_backfill_battery_temperature():
 
 
 def test_icon_backfill_clubmodus():
-    assert suggest_entity_icon(_FakeEntry("sensor.clubmodus"), OrganizerOptions()) == "mdi:movie-open"
+    assert suggest_entity_icon(_FakeEntry("sensor.clubmodus"), OrganizerOptions()) == "mdi:party-popper"
 
 
 def test_icon_backfill_movement_alert():
@@ -63269,7 +63269,7 @@ def test_icon_backfill_ladefortschritt():
 
 
 def test_icon_backfill_seismometer():
-    assert suggest_entity_icon(_FakeEntry("sensor.seismometer"), OrganizerOptions()) == "mdi:home-heart"
+    assert suggest_entity_icon(_FakeEntry("sensor.seismometer"), OrganizerOptions()) == "mdi:vibrate"
 
 
 def test_icon_backfill_irradianzsensor():
@@ -64201,7 +64201,7 @@ def test_icon_backfill_wassernapf():
 
 
 def test_icon_backfill_dac_wandler():
-    assert suggest_entity_icon(_FakeEntry("sensor.dac_wandler"), OrganizerOptions()) == "mdi:digital-ocean"
+    assert suggest_entity_icon(_FakeEntry("sensor.dac_wandler"), OrganizerOptions()) == "mdi:waveform"
 
 
 def test_icon_backfill_trigger_aktion():
@@ -64213,7 +64213,7 @@ def test_icon_backfill_teppichlifting():
 
 
 def test_icon_backfill_eichhoernchen():
-    assert suggest_entity_icon(_FakeEntry("sensor.eichhoernchen"), OrganizerOptions()) == "mdi:duck"
+    assert suggest_entity_icon(_FakeEntry("sensor.eichhoernchen"), OrganizerOptions()) == "mdi:paw"
 
 
 def test_icon_backfill_wechseltaster():
@@ -64509,7 +64509,7 @@ def test_icon_backfill_backorder():
 
 
 def test_icon_backfill_nginx_proxy_manager():
-    assert suggest_entity_icon(_FakeEntry("sensor.nginx_proxy_manager"), OrganizerOptions()) == "mdi:nas"
+    assert suggest_entity_icon(_FakeEntry("sensor.nginx_proxy_manager"), OrganizerOptions()) == "mdi:server-network"
 
 
 def test_icon_backfill_waterbug():
@@ -64526,3 +64526,75 @@ def test_icon_backfill_ladedauer():
 
 def test_icon_backfill_lichtdauer():
     assert suggest_entity_icon(_FakeEntry("sensor.lichtdauer"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_enthalpie():
+    assert suggest_entity_icon(_FakeEntry("sensor.enthalpie"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_update_kanal():
+    assert suggest_entity_icon(_FakeEntry("sensor.update_kanal"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_efflorescence():
+    assert suggest_entity_icon(_FakeEntry("sensor.efflorescence"), OrganizerOptions()) == "mdi:water-off"
+
+
+def test_icon_backfill_gartenschlauchtimer():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenschlauchtimer"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_waqi():
+    assert suggest_entity_icon(_FakeEntry("sensor.waqi"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_heisswasserreinigung():
+    assert suggest_entity_icon(_FakeEntry("sensor.heisswasserreinigung"), OrganizerOptions()) == "mdi:shower-head"
+
+
+def test_icon_backfill_camelion():
+    assert suggest_entity_icon(_FakeEntry("sensor.camelion"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_webcore_piston():
+    assert suggest_entity_icon(_FakeEntry("sensor.webcore_piston"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_traccar():
+    assert suggest_entity_icon(_FakeEntry("sensor.traccar"), OrganizerOptions()) == "mdi:map-marker-account"
+
+
+def test_icon_backfill_ewelink_automation():
+    assert suggest_entity_icon(_FakeEntry("sensor.ewelink_automation"), OrganizerOptions()) == "mdi:lightbulb-auto"
+
+
+def test_icon_backfill_babyzelle():
+    assert suggest_entity_icon(_FakeEntry("sensor.babyzelle"), OrganizerOptions()) == "mdi:battery-50"
+
+
+def test_icon_backfill_waermemenge():
+    assert suggest_entity_icon(_FakeEntry("sensor.waermemenge"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_internorm_fenster():
+    assert suggest_entity_icon(_FakeEntry("sensor.internorm_fenster"), OrganizerOptions()) == "mdi:window-closed"
+
+
+def test_icon_backfill_regenrate():
+    assert suggest_entity_icon(_FakeEntry("sensor.regenrate"), OrganizerOptions()) == "mdi:weather-rainy"
+
+
+def test_icon_backfill_froggit():
+    assert suggest_entity_icon(_FakeEntry("sensor.froggit"), OrganizerOptions()) == "mdi:weather-partly-cloudy"
+
+
+def test_icon_backfill_homebase():
+    assert suggest_entity_icon(_FakeEntry("sensor.homebase"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_plume_labs():
+    assert suggest_entity_icon(_FakeEntry("sensor.plume_labs"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_icon_backfill_luftmassengrenze():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftmassengrenze"), OrganizerOptions()) == "mdi:weather-windy"
