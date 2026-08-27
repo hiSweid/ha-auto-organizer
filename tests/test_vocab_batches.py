@@ -63250,3 +63250,103 @@ def test_icon_backfill_zulufttemperatur():
 
 def test_icon_backfill_wattstunde():
     assert suggest_entity_icon(_FakeEntry("sensor.wattstunde"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_do_while_schleife():
+    assert suggest_entity_icon(_FakeEntry("sensor.do_while_schleife"), OrganizerOptions()) == "mdi:code-braces"
+
+
+def test_icon_backfill_konferenzraum_belegt():
+    assert suggest_entity_icon(_FakeEntry("sensor.konferenzraum_belegt"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_dringendes_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.dringendes_update"), OrganizerOptions()) == "mdi:alert-circle"
+
+
+def test_icon_backfill_ladefortschritt():
+    assert suggest_entity_icon(_FakeEntry("sensor.ladefortschritt"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_seismometer():
+    assert suggest_entity_icon(_FakeEntry("sensor.seismometer"), OrganizerOptions()) == "mdi:home-heart"
+
+
+def test_icon_backfill_irradianzsensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.irradianzsensor"), OrganizerOptions()) == "mdi:white-balance-sunny"
+
+
+def test_icon_backfill_chlordosierung():
+    assert suggest_entity_icon(_FakeEntry("sensor.chlordosierung"), OrganizerOptions()) == "mdi:water-off"
+
+
+def test_icon_backfill_script_call():
+    assert suggest_entity_icon(_FakeEntry("sensor.script_call"), OrganizerOptions()) == "mdi:file-code"
+
+
+def test_icon_backfill_schluesselkarte():
+    assert suggest_entity_icon(_FakeEntry("sensor.schluesselkarte"), OrganizerOptions()) == "mdi:key"
+
+
+def test_icon_backfill_weather_underground():
+    assert suggest_entity_icon(_FakeEntry("sensor.weather_underground"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_rueckgabewert():
+    assert suggest_entity_icon(_FakeEntry("sensor.rueckgabewert"), OrganizerOptions()) == "mdi:arrow-left-thick"
+
+
+def test_icon_backfill_onkyo_receiver():
+    assert suggest_entity_icon(_FakeEntry("sensor.onkyo_receiver"), OrganizerOptions()) == "mdi:audio-video"
+
+
+def test_icon_backfill_selbstreinigende_mopwalze():
+    assert suggest_entity_icon(_FakeEntry("sensor.selbstreinigende_mopwalze"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_leckueberwachung():
+    assert suggest_entity_icon(_FakeEntry("sensor.leckueberwachung"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_lernmodus():
+    assert suggest_entity_icon(_FakeEntry("sensor.lernmodus"), OrganizerOptions()) == "mdi:book-education"
+
+
+def test_icon_backfill_pet_immune_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.pet_immune_sensor"), OrganizerOptions()) == "mdi:cat"
+
+
+def test_icon_backfill_awair_omni():
+    assert suggest_entity_icon(_FakeEntry("sensor.awair_omni"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_partikelbelastung():
+    assert suggest_entity_icon(_FakeEntry("sensor.partikelbelastung"), OrganizerOptions()) == "mdi:blur"
+
+
+def test_icon_backfill_turboduese():
+    assert suggest_entity_icon(_FakeEntry("sensor.turboduese"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_patch_einspielen():
+    assert suggest_entity_icon(_FakeEntry("sensor.patch_einspielen"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_denon_receiver():
+    assert suggest_entity_icon(_FakeEntry("sensor.denon_receiver"), OrganizerOptions()) == "mdi:speaker-wireless"
+
+
+def test_icon_backfill_low_battery():
+    assert suggest_entity_icon(_FakeEntry("sensor.low_battery"), OrganizerOptions()) == "mdi:battery-low"
+
+
+def test_icon_backfill_vertikutieren():
+    assert suggest_entity_icon(_FakeEntry("sensor.vertikutieren"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_frischekick_szene():
+    assert suggest_entity_icon(_FakeEntry("sensor.frischekick_szene"), OrganizerOptions()) == "mdi:palette"
+
+
+def test_icon_backfill_mini_pv():
+    assert suggest_entity_icon(_FakeEntry("sensor.mini_pv"), OrganizerOptions()) == "mdi:solar-power"

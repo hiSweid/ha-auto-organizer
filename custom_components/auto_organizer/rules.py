@@ -27943,6 +27943,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "zulufttemperatur": "mdi:temperature-celsius",
     "wattstunde": "mdi:flash",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "do while schleife": "mdi:code-braces",
+    "konferenzraum belegt": "mdi:calendar-clock",
+    "dringendes update": "mdi:alert-circle",
+    "ladefortschritt": "mdi:battery-charging",
+    "seismometer": "mdi:home-heart",
+    "irradianzsensor": "mdi:white-balance-sunny",
+    "chlordosierung": "mdi:water-off",
+    "script call": "mdi:file-code",
+    "schluesselkarte": "mdi:key",
+    "weather underground": "mdi:weather-cloudy",
+    "rueckgabewert": "mdi:arrow-left-thick",
+    "onkyo receiver": "mdi:audio-video",
+    "selbstreinigende mopwalze": "mdi:robot-vacuum",
+    "leckueberwachung": "mdi:leak",
+    "lernmodus": "mdi:book-education",
+    "pet immune sensor": "mdi:cat",
+    "awair omni": "mdi:air-filter",
+    "partikelbelastung": "mdi:blur",
+    "turboduese": "mdi:vacuum",
+    "patch einspielen": "mdi:update",
+    "denon receiver": "mdi:speaker-wireless",
+    "low battery": "mdi:battery-low",
+    "vertikutieren": "mdi:leaf",
+    "frischekick szene": "mdi:palette",
+    "mini pv": "mdi:solar-power",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
