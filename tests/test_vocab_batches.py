@@ -78790,3 +78790,91 @@ def test_icon_backfill_occupancy_timeout():
 
 def test_icon_backfill_blueprint_selektor():
     assert suggest_entity_icon(_FakeEntry("sensor.blueprint_selektor"), OrganizerOptions()) == "mdi:select-color"
+
+
+def test_icon_backfill_carsharing():
+    assert suggest_entity_icon(_FakeEntry("sensor.carsharing"), OrganizerOptions()) == "mdi:car-multiple"
+
+
+def test_icon_backfill_konservendose():
+    assert suggest_entity_icon(_FakeEntry("sensor.konservendose"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_airfryer_temperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.airfryer_temperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_shein_bestellung():
+    assert suggest_entity_icon(_FakeEntry("sensor.shein_bestellung"), OrganizerOptions()) == "mdi:cart"
+
+
+def test_icon_backfill_grundversorger():
+    assert suggest_entity_icon(_FakeEntry("sensor.grundversorger"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_kuehlturm():
+    assert suggest_entity_icon(_FakeEntry("sensor.kuehlturm"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_heat_index():
+    assert suggest_entity_icon(_FakeEntry("sensor.heat_index"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_scriptordner():
+    assert suggest_entity_icon(_FakeEntry("sensor.scriptordner"), OrganizerOptions()) == "mdi:folder"
+
+
+def test_icon_backfill_aktionsblock():
+    assert suggest_entity_icon(_FakeEntry("sensor.aktionsblock"), OrganizerOptions()) == "mdi:playlist-edit"
+
+
+def test_icon_backfill_verbrauchsmaterial():
+    assert suggest_entity_icon(_FakeEntry("sensor.verbrauchsmaterial"), OrganizerOptions()) == "mdi:package-variant-closed"
+
+
+def test_icon_backfill_fahrgestellnummer():
+    assert suggest_entity_icon(_FakeEntry("sensor.fahrgestellnummer"), OrganizerOptions()) == "mdi:card-text-outline"
+
+
+def test_icon_backfill_ladewirkungsgrad():
+    assert suggest_entity_icon(_FakeEntry("sensor.ladewirkungsgrad"), OrganizerOptions()) == "mdi:battery-charging-wireless"
+
+
+def test_icon_backfill_liquid_line_temperature():
+    assert suggest_entity_icon(_FakeEntry("sensor.liquid_line_temperature"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_efeu():
+    assert suggest_entity_icon(_FakeEntry("sensor.efeu"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_supply_air_temperature():
+    assert suggest_entity_icon(_FakeEntry("sensor.supply_air_temperature"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_islandtief():
+    assert suggest_entity_icon(_FakeEntry("sensor.islandtief"), OrganizerOptions()) == "mdi:weather-night"
+
+
+def test_icon_backfill_pressure_tendency():
+    assert suggest_entity_icon(_FakeEntry("sensor.pressure_tendency"), OrganizerOptions()) == "mdi:arrow-up-bold"
+
+
+def test_icon_backfill_nginx():
+    assert suggest_entity_icon(_FakeEntry("sensor.nginx"), OrganizerOptions()) == "mdi:nuxt"
+
+
+def test_icon_backfill_anwesenheitswahrscheinlichkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.anwesenheitswahrscheinlichkeit"), OrganizerOptions()) == "mdi:account-question"
+
+
+def test_icon_backfill_drogerie():
+    assert suggest_entity_icon(_FakeEntry("sensor.drogerie"), OrganizerOptions()) == "mdi:cart"
+
+
+def test_icon_backfill_wiederherstellungspunkt():
+    assert suggest_entity_icon(_FakeEntry("sensor.wiederherstellungspunkt"), OrganizerOptions()) == "mdi:restore"
+
+
+def test_icon_backfill_hot_water_cylinder():
+    assert suggest_entity_icon(_FakeEntry("sensor.hot_water_cylinder"), OrganizerOptions()) == "mdi:water-boiler"

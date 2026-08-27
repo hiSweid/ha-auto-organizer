@@ -32196,6 +32196,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "occupancy timeout": "mdi:timer-sand-full",
     "blueprint selektor": "mdi:select-color",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "carsharing": "mdi:car-multiple",
+    "konservendose": "mdi:trash-can",
+    "airfryer temperatur": "mdi:thermometer",
+    "shein bestellung": "mdi:cart",
+    "grundversorger": "mdi:currency-eur",
+    "kuehlturm": "mdi:fan",
+    "heat index": "mdi:thermometer",
+    "scriptordner": "mdi:folder",
+    "aktionsblock": "mdi:playlist-edit",
+    "verbrauchsmaterial": "mdi:package-variant-closed",
+    "fahrgestellnummer": "mdi:card-text-outline",
+    "ladewirkungsgrad": "mdi:battery-charging-wireless",
+    "liquid line temperature": "mdi:thermometer",
+    "efeu": "mdi:leaf",
+    "supply air temperature": "mdi:thermometer",
+    "islandtief": "mdi:weather-night",
+    "pressure tendency": "mdi:arrow-up-bold",
+    "nginx": "mdi:nuxt",
+    "anwesenheitswahrscheinlichkeit": "mdi:account-question",
+    "drogerie": "mdi:cart",
+    "wiederherstellungspunkt": "mdi:restore",
+    "hot water cylinder": "mdi:water-boiler",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
