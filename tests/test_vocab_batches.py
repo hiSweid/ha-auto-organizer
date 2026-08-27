@@ -78962,3 +78962,59 @@ def test_icon_backfill_temperaturkompensation():
 
 def test_icon_backfill_d0_lesekopf():
     assert suggest_entity_icon(_FakeEntry("sensor.d0_lesekopf"), OrganizerOptions()) == "mdi:meter-electric"
+
+
+def test_icon_backfill_codeproject_ai():
+    assert suggest_entity_icon(_FakeEntry("sensor.codeproject_ai"), OrganizerOptions()) == "mdi:camera-off"
+
+
+def test_icon_backfill_haier():
+    assert suggest_entity_icon(_FakeEntry("sensor.haier"), OrganizerOptions()) == "mdi:fridge-outline"
+
+
+def test_icon_backfill_wetterkapriolen():
+    assert suggest_entity_icon(_FakeEntry("sensor.wetterkapriolen"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_downgrade_schutz():
+    assert suggest_entity_icon(_FakeEntry("sensor.downgrade_schutz"), OrganizerOptions()) == "mdi:shield-lock"
+
+
+def test_icon_backfill_roost_smart_water():
+    assert suggest_entity_icon(_FakeEntry("sensor.roost_smart_water"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_feiertagsabend():
+    assert suggest_entity_icon(_FakeEntry("sensor.feiertagsabend"), OrganizerOptions()) == "mdi:calendar-star"
+
+
+def test_icon_backfill_luefterwartung():
+    assert suggest_entity_icon(_FakeEntry("sensor.luefterwartung"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_equinox():
+    assert suggest_entity_icon(_FakeEntry("sensor.equinox"), OrganizerOptions()) == "mdi:weather-sunset"
+
+
+def test_icon_backfill_neueste_version():
+    assert suggest_entity_icon(_FakeEntry("sensor.neueste_version"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_appversion():
+    assert suggest_entity_icon(_FakeEntry("sensor.appversion"), OrganizerOptions()) == "mdi:application"
+
+
+def test_icon_backfill_klimadiagramm():
+    assert suggest_entity_icon(_FakeEntry("sensor.klimadiagramm"), OrganizerOptions()) == "mdi:chart-line"
+
+
+def test_icon_backfill_evapotranspiration():
+    assert suggest_entity_icon(_FakeEntry("sensor.evapotranspiration"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_peephole_camera():
+    assert suggest_entity_icon(_FakeEntry("sensor.peephole_camera"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_wearable():
+    assert suggest_entity_icon(_FakeEntry("sensor.wearable"), OrganizerOptions()) == "mdi:watch"

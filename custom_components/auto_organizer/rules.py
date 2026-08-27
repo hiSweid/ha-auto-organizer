@@ -32243,6 +32243,22 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "temperaturkompensation": "mdi:thermometer-minus",
     "d0 lesekopf": "mdi:meter-electric",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "codeproject ai": "mdi:camera-off",
+    "haier": "mdi:fridge-outline",
+    "wetterkapriolen": "mdi:weather-windy",
+    "downgrade schutz": "mdi:shield-lock",
+    "roost smart water": "mdi:water-pump",
+    "feiertagsabend": "mdi:calendar-star",
+    "luefterwartung": "mdi:fan",
+    "equinox": "mdi:weather-sunset",
+    "neueste version": "mdi:update",
+    "appversion": "mdi:application",
+    "klimadiagramm": "mdi:chart-line",
+    "evapotranspiration": "mdi:water-percent",
+    "peephole camera": "mdi:cctv",
+    "wearable": "mdi:watch",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
