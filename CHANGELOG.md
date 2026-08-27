@@ -6,6 +6,23 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.149] - 2026-08-27
+
+### Added
+- Further `SPECIFIC_ICONS` entries from the ongoing local-LLM icon backfill
+  batch job (~2523 total merged so far this run, ~3.9k of the original
+  6.9k gap remaining — just past the halfway point).
+
+### Fixed
+- 7 more icon mismatches from the same surface-similarity failure pattern:
+  `current state node` had `mdi:nodejs`, `magnat` (a speaker brand) had
+  `mdi:magnet`, `passivierung` (a battery term) had `mdi:chemical-weapon`
+  — a genuinely concerning icon for a completely benign term, `sauna
+  stimmung` had `mdi:sun-snowflake` (contradicts the heat concept),
+  `unold` (a small-appliance brand) had `mdi:fridge`, `mold risk` had
+  `mdi:spider-web`, `digitalstrom` (a home-automation bus system) had
+  `mdi:sine-wave`.
+
 ## [0.9.148] - 2026-08-27
 
 ### Added
