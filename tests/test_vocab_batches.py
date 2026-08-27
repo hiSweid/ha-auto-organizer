@@ -57642,3 +57642,95 @@ def test_icon_backfill_talwind():
 
 def test_icon_backfill_netbird():
     assert suggest_entity_icon(_FakeEntry("sensor.netbird"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_gartenkamin():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenkamin"), OrganizerOptions()) == "mdi:fireplace"
+
+
+def test_icon_backfill_ip67():
+    assert suggest_entity_icon(_FakeEntry("sensor.ip67"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_kuechenhelligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.kuechenhelligkeit"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_originalfirmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.originalfirmware"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_nach_updates_suchen():
+    assert suggest_entity_icon(_FakeEntry("sensor.nach_updates_suchen"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_revenue():
+    assert suggest_entity_icon(_FakeEntry("sensor.revenue"), OrganizerOptions()) == "mdi:cash-multiple"
+
+
+def test_icon_backfill_enocean_rollladen():
+    assert suggest_entity_icon(_FakeEntry("sensor.enocean_rollladen"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_dominoeffekt():
+    assert suggest_entity_icon(_FakeEntry("sensor.dominoeffekt"), OrganizerOptions()) == "mdi:numeric-1-box-multiple-outline"
+
+
+def test_icon_backfill_versionshinweis_anzeigen():
+    assert suggest_entity_icon(_FakeEntry("sensor.versionshinweis_anzeigen"), OrganizerOptions()) == "mdi:information-outline"
+
+
+def test_icon_backfill_bobsweep():
+    assert suggest_entity_icon(_FakeEntry("sensor.bobsweep"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_klimadatenlogger():
+    assert suggest_entity_icon(_FakeEntry("sensor.klimadatenlogger"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_bewegungsmuster():
+    assert suggest_entity_icon(_FakeEntry("sensor.bewegungsmuster"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_schweissrauchabzug():
+    assert suggest_entity_icon(_FakeEntry("sensor.schweissrauchabzug"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_differenzupdate():
+    assert suggest_entity_icon(_FakeEntry("sensor.differenzupdate"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_regenspeicher():
+    assert suggest_entity_icon(_FakeEntry("sensor.regenspeicher"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_gravelbike():
+    assert suggest_entity_icon(_FakeEntry("sensor.gravelbike"), OrganizerOptions()) == "mdi:bike"
+
+
+def test_icon_backfill_galcon():
+    assert suggest_entity_icon(_FakeEntry("sensor.galcon"), OrganizerOptions()) == "mdi:flower-tulip"
+
+
+def test_icon_backfill_dacia_spring():
+    assert suggest_entity_icon(_FakeEntry("sensor.dacia_spring"), OrganizerOptions()) == "mdi:car"
+
+
+def test_icon_backfill_spinlock():
+    assert suggest_entity_icon(_FakeEntry("sensor.spinlock"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_next_pickup():
+    assert suggest_entity_icon(_FakeEntry("sensor.next_pickup"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_kabelfernsehen():
+    assert suggest_entity_icon(_FakeEntry("sensor.kabelfernsehen"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_glasbruch_erkennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.glasbruch_erkennung"), OrganizerOptions()) == "mdi:camera-off"
+
+
+def test_icon_backfill_wandpaneel():
+    assert suggest_entity_icon(_FakeEntry("sensor.wandpaneel"), OrganizerOptions()) == "mdi:palette"

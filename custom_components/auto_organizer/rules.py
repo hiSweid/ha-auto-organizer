@@ -26415,6 +26415,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "talwind": "mdi:weather-windy",
     "netbird": "mdi:network",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "gartenkamin": "mdi:fireplace",
+    "ip67": "mdi:camera",
+    "kuechenhelligkeit": "mdi:brightness-5",
+    "originalfirmware": "mdi:update",
+    "nach updates suchen": "mdi:update",
+    "revenue": "mdi:cash-multiple",
+    "enocean rollladen": "mdi:window-shutter",
+    "dominoeffekt": "mdi:numeric-1-box-multiple-outline",
+    "versionshinweis anzeigen": "mdi:information-outline",
+    "bobsweep": "mdi:robot-vacuum",
+    "klimadatenlogger": "mdi:thermometer-lines",
+    "bewegungsmuster": "mdi:motion-sensor",
+    "schweissrauchabzug": "mdi:fan",
+    "differenzupdate": "mdi:update",
+    "regenspeicher": "mdi:water",
+    "gravelbike": "mdi:bike",
+    "galcon": "mdi:flower-tulip",
+    "dacia spring": "mdi:car",
+    "spinlock": "mdi:lock",
+    "next pickup": "mdi:trash-can",
+    "kabelfernsehen": "mdi:television-classic",
+    "glasbruch erkennung": "mdi:camera-off",
+    "wandpaneel": "mdi:palette",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
