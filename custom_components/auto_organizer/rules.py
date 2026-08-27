@@ -27348,6 +27348,20 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "befeuchtungsautomatik": "mdi:water-percent",
     "rate limit": "mdi:timer-sand",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "betriebssystem": "mdi:chip",
+    "pv ueberschuss": "mdi:solar-power",
+    "brutto strompreis": "mdi:currency-eur",
+    "firmware suchen": "mdi:search-web",
+    "condition check": "mdi:check-circle",
+    "garguttemperatur": "mdi:thermometer-low",
+    "homebridge automation": "mdi:home-automation",
+    "fokusszene": "mdi:focus-field",
+    "strommix": "mdi:power-plug",
+    "watchguard": "mdi:shield-check",
+    "zerkleinerer": "mdi:blender",
+    "abfallvermeidung": "mdi:recycle",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

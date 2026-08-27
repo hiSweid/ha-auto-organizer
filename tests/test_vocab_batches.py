@@ -61070,3 +61070,51 @@ def test_icon_backfill_befeuchtungsautomatik():
 
 def test_icon_backfill_rate_limit():
     assert suggest_entity_icon(_FakeEntry("sensor.rate_limit"), OrganizerOptions()) == "mdi:timer-sand"
+
+
+def test_icon_backfill_betriebssystem():
+    assert suggest_entity_icon(_FakeEntry("sensor.betriebssystem"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_icon_backfill_pv_ueberschuss():
+    assert suggest_entity_icon(_FakeEntry("sensor.pv_ueberschuss"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_brutto_strompreis():
+    assert suggest_entity_icon(_FakeEntry("sensor.brutto_strompreis"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_firmware_suchen():
+    assert suggest_entity_icon(_FakeEntry("sensor.firmware_suchen"), OrganizerOptions()) == "mdi:search-web"
+
+
+def test_icon_backfill_condition_check():
+    assert suggest_entity_icon(_FakeEntry("sensor.condition_check"), OrganizerOptions()) == "mdi:check-circle"
+
+
+def test_icon_backfill_garguttemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.garguttemperatur"), OrganizerOptions()) == "mdi:thermometer-low"
+
+
+def test_icon_backfill_homebridge_automation():
+    assert suggest_entity_icon(_FakeEntry("sensor.homebridge_automation"), OrganizerOptions()) == "mdi:home-automation"
+
+
+def test_icon_backfill_fokusszene():
+    assert suggest_entity_icon(_FakeEntry("sensor.fokusszene"), OrganizerOptions()) == "mdi:focus-field"
+
+
+def test_icon_backfill_strommix():
+    assert suggest_entity_icon(_FakeEntry("sensor.strommix"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_watchguard():
+    assert suggest_entity_icon(_FakeEntry("sensor.watchguard"), OrganizerOptions()) == "mdi:shield-check"
+
+
+def test_icon_backfill_zerkleinerer():
+    assert suggest_entity_icon(_FakeEntry("sensor.zerkleinerer"), OrganizerOptions()) == "mdi:blender"
+
+
+def test_icon_backfill_abfallvermeidung():
+    assert suggest_entity_icon(_FakeEntry("sensor.abfallvermeidung"), OrganizerOptions()) == "mdi:recycle"
