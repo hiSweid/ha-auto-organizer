@@ -27431,6 +27431,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "sickerschacht ueberlauf": "mdi:water-alert",
     "moppheben": "mdi:vacuum",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "zwave long range": "mdi:network",
+    "photokatalyse": "mdi:air-filter",
+    "beleuchtungsintensitaet": "mdi:brightness-6",
+    "teamspeak": "mdi:account-music",
+    "fahrzeugleergewicht": "mdi:car-info",
+    "dylos": "mdi:air-purifier",
+    "bewegung": "mdi:motion-sensor",
+    "unifi client": "mdi:account-check",
+    "entladeschwelle": "mdi:battery-alert",
+    "flexvertrag": "mdi:calendar-text",
+    "datendurchsatz": "mdi:speedometer",
+    "sperrzone": "mdi:map-marker-radius",
+    "gruenstrom": "mdi:leaf",
+    "rechenzentrumstemperatur": "mdi:thermometer-lines",
+    "bewegungsverlauf": "mdi:timeline",
+    "downloadgeschwindigkeit": "mdi:download-network",
+    "choose block": "mdi:function",
+    "fixed rate": "mdi:currency-usd-off",
+    "musikstreaming": "mdi:play-network",
+    "belichtungsmesser": "mdi:lightbulb-auto",
+    "hozelock": "mdi:flower-tulip",
+    "boot skript": "mdi:script-text",
+    "update endpoint": "mdi:update",
+    "motion history": "mdi:history",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

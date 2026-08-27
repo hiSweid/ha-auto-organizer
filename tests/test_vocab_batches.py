@@ -61370,3 +61370,99 @@ def test_icon_backfill_sickerschacht_ueberlauf():
 
 def test_icon_backfill_moppheben():
     assert suggest_entity_icon(_FakeEntry("sensor.moppheben"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_zwave_long_range():
+    assert suggest_entity_icon(_FakeEntry("sensor.zwave_long_range"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_photokatalyse():
+    assert suggest_entity_icon(_FakeEntry("sensor.photokatalyse"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_beleuchtungsintensitaet():
+    assert suggest_entity_icon(_FakeEntry("sensor.beleuchtungsintensitaet"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_teamspeak():
+    assert suggest_entity_icon(_FakeEntry("sensor.teamspeak"), OrganizerOptions()) == "mdi:account-music"
+
+
+def test_icon_backfill_fahrzeugleergewicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.fahrzeugleergewicht"), OrganizerOptions()) == "mdi:car-info"
+
+
+def test_icon_backfill_dylos():
+    assert suggest_entity_icon(_FakeEntry("sensor.dylos"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_icon_backfill_bewegung():
+    assert suggest_entity_icon(_FakeEntry("sensor.bewegung"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_unifi_client():
+    assert suggest_entity_icon(_FakeEntry("sensor.unifi_client"), OrganizerOptions()) == "mdi:account-check"
+
+
+def test_icon_backfill_entladeschwelle():
+    assert suggest_entity_icon(_FakeEntry("sensor.entladeschwelle"), OrganizerOptions()) == "mdi:battery-alert"
+
+
+def test_icon_backfill_flexvertrag():
+    assert suggest_entity_icon(_FakeEntry("sensor.flexvertrag"), OrganizerOptions()) == "mdi:calendar-text"
+
+
+def test_icon_backfill_datendurchsatz():
+    assert suggest_entity_icon(_FakeEntry("sensor.datendurchsatz"), OrganizerOptions()) == "mdi:speedometer"
+
+
+def test_icon_backfill_sperrzone():
+    assert suggest_entity_icon(_FakeEntry("sensor.sperrzone"), OrganizerOptions()) == "mdi:map-marker-radius"
+
+
+def test_icon_backfill_gruenstrom():
+    assert suggest_entity_icon(_FakeEntry("sensor.gruenstrom"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_rechenzentrumstemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.rechenzentrumstemperatur"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_bewegungsverlauf():
+    assert suggest_entity_icon(_FakeEntry("sensor.bewegungsverlauf"), OrganizerOptions()) == "mdi:timeline"
+
+
+def test_icon_backfill_downloadgeschwindigkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.downloadgeschwindigkeit"), OrganizerOptions()) == "mdi:download-network"
+
+
+def test_icon_backfill_choose_block():
+    assert suggest_entity_icon(_FakeEntry("sensor.choose_block"), OrganizerOptions()) == "mdi:function"
+
+
+def test_icon_backfill_fixed_rate():
+    assert suggest_entity_icon(_FakeEntry("sensor.fixed_rate"), OrganizerOptions()) == "mdi:currency-usd-off"
+
+
+def test_icon_backfill_musikstreaming():
+    assert suggest_entity_icon(_FakeEntry("sensor.musikstreaming"), OrganizerOptions()) == "mdi:play-network"
+
+
+def test_icon_backfill_belichtungsmesser():
+    assert suggest_entity_icon(_FakeEntry("sensor.belichtungsmesser"), OrganizerOptions()) == "mdi:lightbulb-auto"
+
+
+def test_icon_backfill_hozelock():
+    assert suggest_entity_icon(_FakeEntry("sensor.hozelock"), OrganizerOptions()) == "mdi:flower-tulip"
+
+
+def test_icon_backfill_boot_skript():
+    assert suggest_entity_icon(_FakeEntry("sensor.boot_skript"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_update_endpoint():
+    assert suggest_entity_icon(_FakeEntry("sensor.update_endpoint"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_motion_history():
+    assert suggest_entity_icon(_FakeEntry("sensor.motion_history"), OrganizerOptions()) == "mdi:history"
