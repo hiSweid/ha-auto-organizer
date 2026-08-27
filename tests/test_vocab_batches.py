@@ -71830,3 +71830,79 @@ def test_icon_backfill_pflanzenlichtsensor():
 
 def test_icon_backfill_sr44():
     assert suggest_entity_icon(_FakeEntry("sensor.sr44"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_update_warteschlange():
+    assert suggest_entity_icon(_FakeEntry("sensor.update_warteschlange"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_garten_anwesend():
+    assert suggest_entity_icon(_FakeEntry("sensor.garten_anwesend"), OrganizerOptions()) == "mdi:home-outline"
+
+
+def test_icon_backfill_smartthings_routine():
+    assert suggest_entity_icon(_FakeEntry("sensor.smartthings_routine"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_updatestatus():
+    assert suggest_entity_icon(_FakeEntry("sensor.updatestatus"), OrganizerOptions()) == "mdi:information-outline"
+
+
+def test_icon_backfill_renson_lueftung():
+    assert suggest_entity_icon(_FakeEntry("sensor.renson_lueftung"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_video_feed():
+    assert suggest_entity_icon(_FakeEntry("sensor.video_feed"), OrganizerOptions()) == "mdi:video"
+
+
+def test_icon_backfill_schlupftor():
+    assert suggest_entity_icon(_FakeEntry("sensor.schlupftor"), OrganizerOptions()) == "mdi:gate"
+
+
+def test_icon_backfill_pergola_antrieb():
+    assert suggest_entity_icon(_FakeEntry("sensor.pergola_antrieb"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_icon_backfill_saugturbine():
+    assert suggest_entity_icon(_FakeEntry("sensor.saugturbine"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_schafskaelte():
+    assert suggest_entity_icon(_FakeEntry("sensor.schafskaelte"), OrganizerOptions()) == "mdi:snowflake"
+
+
+def test_icon_backfill_vorwarnzeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.vorwarnzeit"), OrganizerOptions()) == "mdi:alert-circle-outline"
+
+
+def test_icon_backfill_leistungsmonitor():
+    assert suggest_entity_icon(_FakeEntry("sensor.leistungsmonitor"), OrganizerOptions()) == "mdi:meter-electric"
+
+
+def test_icon_backfill_junggesellenabschied():
+    assert suggest_entity_icon(_FakeEntry("sensor.junggesellenabschied"), OrganizerOptions()) == "mdi:party-popper"
+
+
+def test_icon_backfill_composting_toilet():
+    assert suggest_entity_icon(_FakeEntry("sensor.composting_toilet"), OrganizerOptions()) == "mdi:toilet"
+
+
+def test_icon_backfill_erneuerbare_energie():
+    assert suggest_entity_icon(_FakeEntry("sensor.erneuerbare_energie"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_fire_stick():
+    assert suggest_entity_icon(_FakeEntry("sensor.fire_stick"), OrganizerOptions()) == "mdi:remote"
+
+
+def test_icon_backfill_einladungscode():
+    assert suggest_entity_icon(_FakeEntry("sensor.einladungscode"), OrganizerOptions()) == "mdi:key-variant"
+
+
+def test_icon_backfill_aktionsradius():
+    assert suggest_entity_icon(_FakeEntry("sensor.aktionsradius"), OrganizerOptions()) == "mdi:radio-tower"
+
+
+def test_icon_backfill_veml6040():
+    assert suggest_entity_icon(_FakeEntry("sensor.veml6040"), OrganizerOptions()) == "mdi:brightness-5"

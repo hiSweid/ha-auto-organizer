@@ -30284,6 +30284,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "pflanzenlichtsensor": "mdi:leaf",
     "sr44": "mdi:battery",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "update warteschlange": "mdi:update",
+    "garten anwesend": "mdi:home-outline",
+    "smartthings routine": "mdi:script-text-outline",
+    "updatestatus": "mdi:information-outline",
+    "renson lueftung": "mdi:fan",
+    "video feed": "mdi:video",
+    "schlupftor": "mdi:gate",
+    "pergola antrieb": "mdi:blinds",
+    "saugturbine": "mdi:vacuum",
+    "schafskaelte": "mdi:snowflake",
+    "vorwarnzeit": "mdi:alert-circle-outline",
+    "leistungsmonitor": "mdi:meter-electric",
+    "junggesellenabschied": "mdi:party-popper",
+    "composting toilet": "mdi:toilet",
+    "erneuerbare energie": "mdi:solar-power",
+    "fire stick": "mdi:remote",
+    "einladungscode": "mdi:key-variant",
+    "aktionsradius": "mdi:radio-tower",
+    "veml6040": "mdi:brightness-5",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
