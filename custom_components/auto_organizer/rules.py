@@ -31141,6 +31141,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "moppfeuchtigkeit": "mdi:waves",
     "schluesseluebergabe": "mdi:lock",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "windfinder": "mdi:weather-windy",
+    "ubisys lichtsensor": "mdi:brightness-5",
+    "primevideo": "mdi:movie-open",
+    "electrolux": "mdi:washing-machine",
+    "wellnesswochenende": "mdi:spa",
+    "chipkarte": "mdi:card-account-details",
+    "schlossfalle": "mdi:lock-alert",
+    "bruttopreis": "mdi:currency-eur",
+    "backofentuer": "mdi:microwave",
+    "slumber party": "mdi:sleep",
+    "tds wert": "mdi:water-off",
+    "jet stream": "mdi:weather-hurricane",
+    "schokobrunnen": "mdi:coffee-maker",
+    "fresnel linse": "mdi:motion-sensor",
+    "konfiguration laden": "mdi:script-text-outline",
+    "upgrade": "mdi:update",
+    "neher antrieb": "mdi:blinds",
+    "water bill": "mdi:water-pump",
+    "raumhelligkeitssensor": "mdi:brightness-6",
+    "sky q": "mdi:television-classic",
+    "skriptkommentar": "mdi:message-text",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
