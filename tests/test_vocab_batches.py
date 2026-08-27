@@ -77214,3 +77214,83 @@ def test_icon_backfill_schlossfeder():
 
 def test_icon_backfill_installment():
     assert suggest_entity_icon(_FakeEntry("sensor.installment"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_woechentlich():
+    assert suggest_entity_icon(_FakeEntry("sensor.woechentlich"), OrganizerOptions()) == "mdi:calendar-sync"
+
+
+def test_icon_backfill_evbox_elvi():
+    assert suggest_entity_icon(_FakeEntry("sensor.evbox_elvi"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_epex():
+    assert suggest_entity_icon(_FakeEntry("sensor.epex"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_befehlssequenz():
+    assert suggest_entity_icon(_FakeEntry("sensor.befehlssequenz"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_hunter_node():
+    assert suggest_entity_icon(_FakeEntry("sensor.hunter_node"), OrganizerOptions()) == "mdi:sprinkler"
+
+
+def test_icon_backfill_vorlaufsolltemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.vorlaufsolltemperatur"), OrganizerOptions()) == "mdi:thermometer-chevron-up"
+
+
+def test_icon_backfill_3d_hinderniserkennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.3d_hinderniserkennung"), OrganizerOptions()) == "mdi:eye-outline"
+
+
+def test_icon_backfill_lifx_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.lifx_firmware"), OrganizerOptions()) == "mdi:cellphone-arrow-down"
+
+
+def test_icon_backfill_x4m300():
+    assert suggest_entity_icon(_FakeEntry("sensor.x4m300"), OrganizerOptions()) == "mdi:radar"
+
+
+def test_icon_backfill_selective_room_cleaning():
+    assert suggest_entity_icon(_FakeEntry("sensor.selective_room_cleaning"), OrganizerOptions()) == "mdi:room-service"
+
+
+def test_icon_backfill_aktuelle_version():
+    assert suggest_entity_icon(_FakeEntry("sensor.aktuelle_version"), OrganizerOptions()) == "mdi:tag-multiple"
+
+
+def test_icon_backfill_totzone_radar():
+    assert suggest_entity_icon(_FakeEntry("sensor.totzone_radar"), OrganizerOptions()) == "mdi:radar"
+
+
+def test_icon_backfill_hochtoener():
+    assert suggest_entity_icon(_FakeEntry("sensor.hochtoener"), OrganizerOptions()) == "mdi:volume-high"
+
+
+def test_icon_backfill_gartenhelligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenhelligkeit"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_letzte_aktivitaet():
+    assert suggest_entity_icon(_FakeEntry("sensor.letzte_aktivitaet"), OrganizerOptions()) == "mdi:clock-time-eight"
+
+
+def test_icon_backfill_popcorn_maker():
+    assert suggest_entity_icon(_FakeEntry("sensor.popcorn_maker"), OrganizerOptions()) == "mdi:microwave"
+
+
+def test_icon_backfill_yard_force():
+    assert suggest_entity_icon(_FakeEntry("sensor.yard_force"), OrganizerOptions()) == "mdi:sprinkler-variant"
+
+
+def test_icon_backfill_awair_score():
+    assert suggest_entity_icon(_FakeEntry("sensor.awair_score"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_zwangslueftung():
+    assert suggest_entity_icon(_FakeEntry("sensor.zwangslueftung"), OrganizerOptions()) == "mdi:fan-alert"
+
+
+def test_icon_backfill_temperaturmaximalwert():
+    assert suggest_entity_icon(_FakeEntry("sensor.temperaturmaximalwert"), OrganizerOptions()) == "mdi:thermometer-alert"

@@ -31760,6 +31760,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "schlossfeder": "mdi:lock",
     "installment": "mdi:currency-eur",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "woechentlich": "mdi:calendar-sync",
+    "evbox elvi": "mdi:car-electric",
+    "epex": "mdi:currency-eur",
+    "befehlssequenz": "mdi:script-text",
+    "hunter node": "mdi:sprinkler",
+    "vorlaufsolltemperatur": "mdi:thermometer-chevron-up",
+    "3d hinderniserkennung": "mdi:eye-outline",
+    "lifx firmware": "mdi:cellphone-arrow-down",
+    "x4m300": "mdi:radar",
+    "selective room cleaning": "mdi:room-service",
+    "aktuelle version": "mdi:tag-multiple",
+    "totzone radar": "mdi:radar",
+    "hochtoener": "mdi:volume-high",
+    "gartenhelligkeit": "mdi:brightness-6",
+    "letzte aktivitaet": "mdi:clock-time-eight",
+    "popcorn maker": "mdi:microwave",
+    "yard force": "mdi:sprinkler-variant",
+    "awair score": "mdi:leaf",
+    "zwangslueftung": "mdi:fan-alert",
+    "temperaturmaximalwert": "mdi:thermometer-alert",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
