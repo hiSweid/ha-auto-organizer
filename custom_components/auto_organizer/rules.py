@@ -31186,6 +31186,14 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "staged rollout": "mdi:progress-download",
     "koerperschallsensor": "mdi:human-greeting",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "waschgang skript": "mdi:script",
+    "pfsense": "mdi:network",
+    "squire warrior": "mdi:lock",
+    "polarlicht": "mdi:aurora",
+    "google play update": "mdi:update",
+    "fanfreq": "mdi:fan",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

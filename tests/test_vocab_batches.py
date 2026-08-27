@@ -75126,3 +75126,27 @@ def test_icon_backfill_staged_rollout():
 
 def test_icon_backfill_koerperschallsensor():
     assert suggest_entity_icon(_FakeEntry("sensor.koerperschallsensor"), OrganizerOptions()) == "mdi:human-greeting"
+
+
+def test_icon_backfill_waschgang_skript():
+    assert suggest_entity_icon(_FakeEntry("sensor.waschgang_skript"), OrganizerOptions()) == "mdi:script"
+
+
+def test_icon_backfill_pfsense():
+    assert suggest_entity_icon(_FakeEntry("sensor.pfsense"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_squire_warrior():
+    assert suggest_entity_icon(_FakeEntry("sensor.squire_warrior"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_polarlicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.polarlicht"), OrganizerOptions()) == "mdi:aurora"
+
+
+def test_icon_backfill_google_play_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.google_play_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_fanfreq():
+    assert suggest_entity_icon(_FakeEntry("sensor.fanfreq"), OrganizerOptions()) == "mdi:fan"
