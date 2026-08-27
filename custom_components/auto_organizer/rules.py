@@ -28438,6 +28438,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "schwimmbadueberlauf": "mdi:pool",
     "home connect": "mdi:home-automation",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "sektorkopplung": "mdi:power-plug",
+    "russell hobbs": "mdi:hair-dryer",
+    "automation snapshot": "mdi:camera-account",
+    "drehorgel": "mdi:music-box",
+    "aeropac": "mdi:fan",
+    "catch basin": "mdi:water-well",
+    "volt": "mdi:flash",
+    "jellyfin server": "mdi:server",
+    "kaeltekreislauf": "mdi:coolant-temperature",
+    "audible": "mdi:book-open-page-variant",
+    "kinosaal": "mdi:movie-open",
+    "zaehlerschrank": "mdi:meter-electric",
+    "sommerbrise szene": "mdi:sun-compass",
+    "heizoelgeruch": "mdi:gas-cylinder",
+    "selbstentleerung": "mdi:vacuum",
+    "spdif": "mdi:audio-video",
+    "wahlschalter": "mdi:toggle-switch",
+    "fgms 001": "mdi:motion-sensor",
+    "erdaushub": "mdi:trash-can-outline",
+    "wochenvorhersage": "mdi:weather-partly-cloudy",
+    "aerosolkonzentration": "mdi:air-filter",
+    "ioniser": "mdi:air-purifier",
+    "salzdosierung": "mdi:water-pump",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
