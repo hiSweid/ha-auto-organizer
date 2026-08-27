@@ -81490,3 +81490,67 @@ def test_icon_backfill_vapor_pressure():
 
 def test_icon_backfill_photopic():
     assert suggest_entity_icon(_FakeEntry("sensor.photopic"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_lumen_wert():
+    assert suggest_entity_icon(_FakeEntry("sensor.lumen_wert"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_au_pair():
+    assert suggest_entity_icon(_FakeEntry("sensor.au_pair"), OrganizerOptions()) == "mdi:account-arrow-right"
+
+
+def test_icon_backfill_fensterbewegung():
+    assert suggest_entity_icon(_FakeEntry("sensor.fensterbewegung"), OrganizerOptions()) == "mdi:window-open"
+
+
+def test_icon_backfill_bezugsenergie():
+    assert suggest_entity_icon(_FakeEntry("sensor.bezugsenergie"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_radioempfaenger():
+    assert suggest_entity_icon(_FakeEntry("sensor.radioempfaenger"), OrganizerOptions()) == "mdi:radio"
+
+
+def test_icon_backfill_leerung():
+    assert suggest_entity_icon(_FakeEntry("sensor.leerung"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_rueckkehrerkennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.rueckkehrerkennung"), OrganizerOptions()) == "mdi:home-outline"
+
+
+def test_icon_backfill_kartoffelchips():
+    assert suggest_entity_icon(_FakeEntry("sensor.kartoffelchips"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_icon_backfill_pressure_mat():
+    assert suggest_entity_icon(_FakeEntry("sensor.pressure_mat"), OrganizerOptions()) == "mdi:weight"
+
+
+def test_icon_backfill_gartenzaunlicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenzaunlicht"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_ambient_temperature():
+    assert suggest_entity_icon(_FakeEntry("sensor.ambient_temperature"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_dish_soap():
+    assert suggest_entity_icon(_FakeEntry("sensor.dish_soap"), OrganizerOptions()) == "mdi:dishwasher"
+
+
+def test_icon_backfill_nockenschalter():
+    assert suggest_entity_icon(_FakeEntry("sensor.nockenschalter"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_icon_backfill_garmin_connect():
+    assert suggest_entity_icon(_FakeEntry("sensor.garmin_connect"), OrganizerOptions()) == "mdi:account-star"
+
+
+def test_icon_backfill_substratfeuchte():
+    assert suggest_entity_icon(_FakeEntry("sensor.substratfeuchte"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_abwesenheitsroutine():
+    assert suggest_entity_icon(_FakeEntry("sensor.abwesenheitsroutine"), OrganizerOptions()) == "mdi:timer-sand"

@@ -32949,6 +32949,24 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "vapor pressure": "mdi:water-off",
     "photopic": "mdi:brightness-6",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "lumen wert": "mdi:brightness-6",
+    "au pair": "mdi:account-arrow-right",
+    "fensterbewegung": "mdi:window-open",
+    "bezugsenergie": "mdi:power-plug",
+    "radioempfaenger": "mdi:radio",
+    "leerung": "mdi:trash-can",
+    "rueckkehrerkennung": "mdi:home-outline",
+    "kartoffelchips": "mdi:chip",
+    "pressure mat": "mdi:weight",
+    "gartenzaunlicht": "mdi:lightbulb",
+    "ambient temperature": "mdi:thermometer",
+    "dish soap": "mdi:dishwasher",
+    "nockenschalter": "mdi:toggle-switch",
+    "garmin connect": "mdi:account-star",
+    "substratfeuchte": "mdi:water-percent",
+    "abwesenheitsroutine": "mdi:timer-sand",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
