@@ -26242,6 +26242,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "notfallbatterie": "mdi:battery-alert-variant",
     "troland": "mdi:lightbulb-group",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "multi sensor": "mdi:motion-sensor",
+    "mode parallel": "mdi:vector-polyline",
+    "swann": "mdi:cctv",
+    "schwimmbadwasser": "mdi:pool",
+    "aktionsfolge": "mdi:run-fast",
+    "besuch": "mdi:account-heart",
+    "vorwahlschalter": "mdi:power-plug",
+    "arbeitszimmer belegt": "mdi:home-variant",
+    "pluggit": "mdi:fan",
+    "patch verfuegbar": "mdi:update",
+    "laser alarm": "mdi:laser-pointer",
+    "panikstange": "mdi:lock-alert",
+    "empty bin error": "mdi:delete-alert",
+    "sprachausloeser": "mdi:speaker-wireless",
+    "kastenriegel": "mdi:lock-smart",
+    "facial steamer": "mdi:steam",
+    "rote tonne": "mdi:trash-can-outline",
+    "flapping": "mdi:waves",
+    "wachpersonal": "mdi:shield-account",
+    "cirrus": "mdi:weather-cloudy",
+    "hallsensor": "mdi:motion-sensor",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

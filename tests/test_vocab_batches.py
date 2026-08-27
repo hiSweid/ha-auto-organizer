@@ -57006,3 +57006,87 @@ def test_icon_backfill_notfallbatterie():
 
 def test_icon_backfill_troland():
     assert suggest_entity_icon(_FakeEntry("sensor.troland"), OrganizerOptions()) == "mdi:lightbulb-group"
+
+
+def test_icon_backfill_multi_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.multi_sensor"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_mode_parallel():
+    assert suggest_entity_icon(_FakeEntry("sensor.mode_parallel"), OrganizerOptions()) == "mdi:vector-polyline"
+
+
+def test_icon_backfill_swann():
+    assert suggest_entity_icon(_FakeEntry("sensor.swann"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_schwimmbadwasser():
+    assert suggest_entity_icon(_FakeEntry("sensor.schwimmbadwasser"), OrganizerOptions()) == "mdi:pool"
+
+
+def test_icon_backfill_aktionsfolge():
+    assert suggest_entity_icon(_FakeEntry("sensor.aktionsfolge"), OrganizerOptions()) == "mdi:run-fast"
+
+
+def test_icon_backfill_besuch():
+    assert suggest_entity_icon(_FakeEntry("sensor.besuch"), OrganizerOptions()) == "mdi:account-heart"
+
+
+def test_icon_backfill_vorwahlschalter():
+    assert suggest_entity_icon(_FakeEntry("sensor.vorwahlschalter"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_arbeitszimmer_belegt():
+    assert suggest_entity_icon(_FakeEntry("sensor.arbeitszimmer_belegt"), OrganizerOptions()) == "mdi:home-variant"
+
+
+def test_icon_backfill_pluggit():
+    assert suggest_entity_icon(_FakeEntry("sensor.pluggit"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_patch_verfuegbar():
+    assert suggest_entity_icon(_FakeEntry("sensor.patch_verfuegbar"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_laser_alarm():
+    assert suggest_entity_icon(_FakeEntry("sensor.laser_alarm"), OrganizerOptions()) == "mdi:laser-pointer"
+
+
+def test_icon_backfill_panikstange():
+    assert suggest_entity_icon(_FakeEntry("sensor.panikstange"), OrganizerOptions()) == "mdi:lock-alert"
+
+
+def test_icon_backfill_empty_bin_error():
+    assert suggest_entity_icon(_FakeEntry("sensor.empty_bin_error"), OrganizerOptions()) == "mdi:delete-alert"
+
+
+def test_icon_backfill_sprachausloeser():
+    assert suggest_entity_icon(_FakeEntry("sensor.sprachausloeser"), OrganizerOptions()) == "mdi:speaker-wireless"
+
+
+def test_icon_backfill_kastenriegel():
+    assert suggest_entity_icon(_FakeEntry("sensor.kastenriegel"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_icon_backfill_facial_steamer():
+    assert suggest_entity_icon(_FakeEntry("sensor.facial_steamer"), OrganizerOptions()) == "mdi:steam"
+
+
+def test_icon_backfill_rote_tonne():
+    assert suggest_entity_icon(_FakeEntry("sensor.rote_tonne"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_icon_backfill_flapping():
+    assert suggest_entity_icon(_FakeEntry("sensor.flapping"), OrganizerOptions()) == "mdi:waves"
+
+
+def test_icon_backfill_wachpersonal():
+    assert suggest_entity_icon(_FakeEntry("sensor.wachpersonal"), OrganizerOptions()) == "mdi:shield-account"
+
+
+def test_icon_backfill_cirrus():
+    assert suggest_entity_icon(_FakeEntry("sensor.cirrus"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_hallsensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.hallsensor"), OrganizerOptions()) == "mdi:motion-sensor"
