@@ -70718,3 +70718,15 @@ def test_icon_backfill_intraday_price():
 
 def test_icon_backfill_attributtrigger():
     assert suggest_entity_icon(_FakeEntry("sensor.attributtrigger"), OrganizerOptions()) == "mdi:tag-text"
+
+
+def test_icon_backfill_immax():
+    assert suggest_entity_icon(_FakeEntry("sensor.immax"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_shimano_steps_akku():
+    assert suggest_entity_icon(_FakeEntry("sensor.shimano_steps_akku"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_netzstrom():
+    assert suggest_entity_icon(_FakeEntry("sensor.netzstrom"), OrganizerOptions()) == "mdi:power-plug"

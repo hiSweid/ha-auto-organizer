@@ -29978,6 +29978,11 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "intraday price": "mdi:currency-usd",
     "attributtrigger": "mdi:tag-text",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "immax": "mdi:lightbulb",
+    "shimano steps akku": "mdi:battery",
+    "netzstrom": "mdi:power-plug",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
