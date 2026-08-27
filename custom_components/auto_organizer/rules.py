@@ -31333,6 +31333,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "gemuesereibe": "mdi:food-apple",
     "laststeuerung": "mdi:power-settings",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "elektrogeraete": "mdi:microwave",
+    "water descaler": "mdi:water-off",
+    "reihenfolgeplan": "mdi:format-list-bulleted",
+    "uvindex": "mdi:weather-sunny",
+    "selbstreinigende station": "mdi:robot-vacuum",
+    "bezugstarif": "mdi:flash",
+    "cell voltage": "mdi:battery-charging",
+    "exponentielles backoff": "mdi:timer-sync",
+    "sturmglas": "mdi:weather-windy",
+    "megane": "mdi:car",
+    "kieselgel": "mdi:water-percent",
+    "kostal": "mdi:flash",
+    "altglascontainer": "mdi:recycle",
+    "keystone dehumidifier": "mdi:air-humidifier",
+    "altpapiercontainer": "mdi:package-variant-closed",
+    "batteriegurt": "mdi:battery-charging",
+    "ryobi": "mdi:leaf",
+    "sirenenakku": "mdi:battery-charging",
+    "torzeitschaltuhr": "mdi:calendar-clock",
+    "zuletzt aktualisiert": "mdi:update",
+    "druckminderer": "mdi:gauge",
+    "verlassen": "mdi:door-open",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
