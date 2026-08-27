@@ -31407,6 +31407,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "okklusionsfront": "mdi:weather-cloudy",
     "weitwinkelobjektiv": "mdi:camera",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "chipstuete": "mdi:shopping",
+    "esphome trigger": "mdi:flash",
+    "wasseraufbereitung": "mdi:water-pump",
+    "tea party": "mdi:palette",
+    "mq7 sensor": "mdi:air-filter",
+    "indoor temperature": "mdi:thermometer",
+    "kehricht": "mdi:trash-can",
+    "pro breeze fan": "mdi:fan",
+    "banane": "mdi:shopping",
+    "blindzylinder": "mdi:lock",
+    "steam mop": "mdi:robot-vacuum",
+    "gegenkasten": "mdi:lock",
+    "kuehltheke": "mdi:fridge",
+    "raumlichtsensor": "mdi:brightness-5",
+    "haustuer trigger": "mdi:door-open",
+    "sjws01lm": "mdi:leak",
+    "guthaben": "mdi:currency-eur",
+    "ajax motion protect": "mdi:motion-sensor",
+    "sicherheitsluecken": "mdi:shield-alert",
+    "systemupdate trigger": "mdi:update",
+    "life360": "mdi:account-circle",
+    "einmalaktion": "mdi:flash",
+    "gainsborough": "mdi:lock",
+    "standardaktion": "mdi:flash",
+    "dachrinnenverstopfung": "mdi:leak",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
