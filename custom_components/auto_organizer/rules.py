@@ -27724,6 +27724,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "bei fehler fortsetzen": "mdi:play-circle",
     "backhaul": "mdi:network",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "disc detainer": "mdi:lock",
+    "ultrasonic": "mdi:motion-sensor",
+    "schneider electric wiser": "mdi:thermostat",
+    "stuck error": "mdi:robot-vacuum",
+    "crepemaker": "mdi:toaster",
+    "insider kanal": "mdi:youtube-tv",
+    "lippensynchronisation": "mdi:play-circle",
+    "batteriefachdeckel": "mdi:battery-charging-outline",
+    "solarpufferakku": "mdi:battery-high",
+    "dht20": "mdi:water-percent",
+    "door latch": "mdi:lock",
+    "abschiedsfeierstimmung": "mdi:movie-open",
+    "mikrozyklus": "mdi:battery-50",
+    "klimaregelung": "mdi:thermostat",
+    "zustandsflanke": "mdi:flash",
+    "cost": "mdi:currency-eur",
+    "1phasig 3phasig laden": "mdi:ev-plug-type2",
+    "wemo light switch": "mdi:lightbulb-on",
+    "elektroschrottbox": "mdi:trash-can",
+    "inzahlungnahme": "mdi:currency-eur",
+    "zustellfahrzeug": "mdi:truck-delivery",
+    "isolator switch": "mdi:power-plug",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
