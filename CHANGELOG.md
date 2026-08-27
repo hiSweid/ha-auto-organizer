@@ -6,6 +6,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.146] - 2026-08-27
+
+### Added
+- Further `SPECIFIC_ICONS` entries from the ongoing local-LLM icon backfill
+  batch job (~792 total merged so far this run, ~5.7k of the original 6.9k
+  gap remaining).
+
+### Fixed
+- 6 more icon mismatches from the same failure pattern as 0.9.145 (icon
+  picked by surface similarity, not meaning), still slipping through
+  despite the hardened prompt: `einhell freelexo` (a robot lawnmower) had
+  `mdi:flower-tulip`, `strawberry` had the wrong fruit (`mdi:fruit-cherries`),
+  `panfloete` had `mdi:record-rec`, `festmahl` had `mdi:movie-open`,
+  `adblue` had `mdi:car-battery`, `odroid` had `mdi:router-wireless`.
+
 ## [0.9.145] - 2026-08-27
 
 ### Added
