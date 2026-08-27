@@ -32967,6 +32967,21 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "substratfeuchte": "mdi:water-percent",
     "abwesenheitsroutine": "mdi:timer-sand",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "strompreisbremse": "mdi:electric-switch",
+    "identsystem": "mdi:tag-multiple",
+    "geraetetrigger": "mdi:lightbulb-on-outline",
+    "frueh aufstehen": "mdi:alarm-check",
+    "mildew": "mdi:water-percent",
+    "tiki party": "mdi:palm-tree",
+    "action chain": "mdi:link-variant",
+    "geruempel": "mdi:trash-can",
+    "onity": "mdi:lock-smart",
+    "floor drain": "mdi:floor-lamp",
+    "unraid": "mdi:server-network",
+    "graustrom": "mdi:power-plug",
+    "oszillationsfunktion": "mdi:fan-alert",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

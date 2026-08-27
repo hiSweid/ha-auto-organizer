@@ -81554,3 +81554,55 @@ def test_icon_backfill_substratfeuchte():
 
 def test_icon_backfill_abwesenheitsroutine():
     assert suggest_entity_icon(_FakeEntry("sensor.abwesenheitsroutine"), OrganizerOptions()) == "mdi:timer-sand"
+
+
+def test_icon_backfill_strompreisbremse():
+    assert suggest_entity_icon(_FakeEntry("sensor.strompreisbremse"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_icon_backfill_identsystem():
+    assert suggest_entity_icon(_FakeEntry("sensor.identsystem"), OrganizerOptions()) == "mdi:tag-multiple"
+
+
+def test_icon_backfill_geraetetrigger():
+    assert suggest_entity_icon(_FakeEntry("sensor.geraetetrigger"), OrganizerOptions()) == "mdi:lightbulb-on-outline"
+
+
+def test_icon_backfill_frueh_aufstehen():
+    assert suggest_entity_icon(_FakeEntry("sensor.frueh_aufstehen"), OrganizerOptions()) == "mdi:alarm-check"
+
+
+def test_icon_backfill_mildew():
+    assert suggest_entity_icon(_FakeEntry("sensor.mildew"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_tiki_party():
+    assert suggest_entity_icon(_FakeEntry("sensor.tiki_party"), OrganizerOptions()) == "mdi:palm-tree"
+
+
+def test_icon_backfill_action_chain():
+    assert suggest_entity_icon(_FakeEntry("sensor.action_chain"), OrganizerOptions()) == "mdi:link-variant"
+
+
+def test_icon_backfill_geruempel():
+    assert suggest_entity_icon(_FakeEntry("sensor.geruempel"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_onity():
+    assert suggest_entity_icon(_FakeEntry("sensor.onity"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_icon_backfill_floor_drain():
+    assert suggest_entity_icon(_FakeEntry("sensor.floor_drain"), OrganizerOptions()) == "mdi:floor-lamp"
+
+
+def test_icon_backfill_unraid():
+    assert suggest_entity_icon(_FakeEntry("sensor.unraid"), OrganizerOptions()) == "mdi:server-network"
+
+
+def test_icon_backfill_graustrom():
+    assert suggest_entity_icon(_FakeEntry("sensor.graustrom"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_oszillationsfunktion():
+    assert suggest_entity_icon(_FakeEntry("sensor.oszillationsfunktion"), OrganizerOptions()) == "mdi:fan-alert"
