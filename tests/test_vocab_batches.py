@@ -60994,3 +60994,79 @@ def test_icon_backfill_notstromversorgung():
 
 def test_icon_backfill_hoerspielabend():
     assert suggest_entity_icon(_FakeEntry("sensor.hoerspielabend"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_glare_detector():
+    assert suggest_entity_icon(_FakeEntry("sensor.glare_detector"), OrganizerOptions()) == "mdi:brightness-auto"
+
+
+def test_icon_backfill_schlafmodus_klimaanlage():
+    assert suggest_entity_icon(_FakeEntry("sensor.schlafmodus_klimaanlage"), OrganizerOptions()) == "mdi:sleep"
+
+
+def test_icon_backfill_spy_cam():
+    assert suggest_entity_icon(_FakeEntry("sensor.spy_cam"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_ladepause():
+    assert suggest_entity_icon(_FakeEntry("sensor.ladepause"), OrganizerOptions()) == "mdi:ev-station"
+
+
+def test_icon_backfill_praesenztaster():
+    assert suggest_entity_icon(_FakeEntry("sensor.praesenztaster"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_icon_backfill_tesvolt():
+    assert suggest_entity_icon(_FakeEntry("sensor.tesvolt"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_charge_port():
+    assert suggest_entity_icon(_FakeEntry("sensor.charge_port"), OrganizerOptions()) == "mdi:ev-plug-type2"
+
+
+def test_icon_backfill_currently_home():
+    assert suggest_entity_icon(_FakeEntry("sensor.currently_home"), OrganizerOptions()) == "mdi:home-account"
+
+
+def test_icon_backfill_wakeup_routine():
+    assert suggest_entity_icon(_FakeEntry("sensor.wakeup_routine"), OrganizerOptions()) == "mdi:alarm"
+
+
+def test_icon_backfill_evening_briefing():
+    assert suggest_entity_icon(_FakeEntry("sensor.evening_briefing"), OrganizerOptions()) == "mdi:newspaper"
+
+
+def test_icon_backfill_energieausgaben():
+    assert suggest_entity_icon(_FakeEntry("sensor.energieausgaben"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_kilowattstunde_preis():
+    assert suggest_entity_icon(_FakeEntry("sensor.kilowattstunde_preis"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_wickelfalzrohr():
+    assert suggest_entity_icon(_FakeEntry("sensor.wickelfalzrohr"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_sportabend():
+    assert suggest_entity_icon(_FakeEntry("sensor.sportabend"), OrganizerOptions()) == "mdi:football"
+
+
+def test_icon_backfill_dachrinnenleck():
+    assert suggest_entity_icon(_FakeEntry("sensor.dachrinnenleck"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_luftdruck():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftdruck"), OrganizerOptions()) == "mdi:gauge"
+
+
+def test_icon_backfill_beleuchtungssensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.beleuchtungssensor"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_befeuchtungsautomatik():
+    assert suggest_entity_icon(_FakeEntry("sensor.befeuchtungsautomatik"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_rate_limit():
+    assert suggest_entity_icon(_FakeEntry("sensor.rate_limit"), OrganizerOptions()) == "mdi:timer-sand"

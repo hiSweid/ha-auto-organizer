@@ -27327,6 +27327,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "notstromversorgung": "mdi:power-plug",
     "hoerspielabend": "mdi:movie-open",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "glare detector": "mdi:brightness-auto",
+    "schlafmodus klimaanlage": "mdi:sleep",
+    "spy cam": "mdi:cctv",
+    "ladepause": "mdi:ev-station",
+    "praesenztaster": "mdi:toggle-switch",
+    "tesvolt": "mdi:battery-charging",
+    "charge port": "mdi:ev-plug-type2",
+    "currently home": "mdi:home-account",
+    "wakeup routine": "mdi:alarm",
+    "evening briefing": "mdi:newspaper",
+    "energieausgaben": "mdi:currency-eur",
+    "kilowattstunde preis": "mdi:currency-eur",
+    "wickelfalzrohr": "mdi:air-filter",
+    "sportabend": "mdi:football",
+    "dachrinnenleck": "mdi:leak",
+    "luftdruck": "mdi:gauge",
+    "beleuchtungssensor": "mdi:brightness-5",
+    "befeuchtungsautomatik": "mdi:water-percent",
+    "rate limit": "mdi:timer-sand",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
