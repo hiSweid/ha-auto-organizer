@@ -29882,6 +29882,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "cree": "mdi:lightbulb-multiple",
     "jutebeutel": "mdi:bag-personal",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "aeromat": "mdi:fan",
+    "aussenluftfeuchte": "mdi:water-percent",
+    "mode single": "mdi:play-circle",
+    "maximale ausfuehrungen": "mdi:script-text-outline",
+    "kameraobjektiv": "mdi:camera",
+    "notheizung": "mdi:radiator",
+    "profil aktivieren": "mdi:script-text-outline",
+    "grey bin": "mdi:trash-can",
+    "ringlicht": "mdi:spotlight",
+    "ozon sensor": "mdi:air-filter",
+    "dachablauf verstopft": "mdi:pipe-leak",
+    "notargebuehr": "mdi:currency-eur",
+    "livestream": "mdi:webcam",
+    "spotlight kamera": "mdi:camera",
+    "installierte leistung": "mdi:solar-power",
+    "vestamatic": "mdi:blinds",
+    "automation bedingungspruefung": "mdi:check-circle-outline",
+    "rollladensimulation": "mdi:window-shutter",
+    "relaiskarte": "mdi:power-plug",
+    "glasfaseranschluss": "mdi:network",
+    "bildrate": "mdi:video",
+    "dumpster": "mdi:trash-can",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
