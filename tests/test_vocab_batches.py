@@ -61118,3 +61118,83 @@ def test_icon_backfill_zerkleinerer():
 
 def test_icon_backfill_abfallvermeidung():
     assert suggest_entity_icon(_FakeEntry("sensor.abfallvermeidung"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_ukw_radio():
+    assert suggest_entity_icon(_FakeEntry("sensor.ukw_radio"), OrganizerOptions()) == "mdi:radio"
+
+
+def test_icon_backfill_micro_motion():
+    assert suggest_entity_icon(_FakeEntry("sensor.micro_motion"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_bedingungsbaum():
+    assert suggest_entity_icon(_FakeEntry("sensor.bedingungsbaum"), OrganizerOptions()) == "mdi:tree-outline"
+
+
+def test_icon_backfill_ice_maker_leak():
+    assert suggest_entity_icon(_FakeEntry("sensor.ice_maker_leak"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_verriegelungsstift():
+    assert suggest_entity_icon(_FakeEntry("sensor.verriegelungsstift"), OrganizerOptions()) == "mdi:lock-alert"
+
+
+def test_icon_backfill_kurzfristvorhersage():
+    assert suggest_entity_icon(_FakeEntry("sensor.kurzfristvorhersage"), OrganizerOptions()) == "mdi:weather-partly-cloudy"
+
+
+def test_icon_backfill_emby():
+    assert suggest_entity_icon(_FakeEntry("sensor.emby"), OrganizerOptions()) == "mdi:play-circle"
+
+
+def test_icon_backfill_mulch():
+    assert suggest_entity_icon(_FakeEntry("sensor.mulch"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_regelauswertung():
+    assert suggest_entity_icon(_FakeEntry("sensor.regelauswertung"), OrganizerOptions()) == "mdi:chart-line-variant"
+
+
+def test_icon_backfill_grafana_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.grafana_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_carrefour():
+    assert suggest_entity_icon(_FakeEntry("sensor.carrefour"), OrganizerOptions()) == "mdi:cart"
+
+
+def test_icon_backfill_nass():
+    assert suggest_entity_icon(_FakeEntry("sensor.nass"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_trotec():
+    assert suggest_entity_icon(_FakeEntry("sensor.trotec"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_icon_backfill_erreka():
+    assert suggest_entity_icon(_FakeEntry("sensor.erreka"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_releaseversion():
+    assert suggest_entity_icon(_FakeEntry("sensor.releaseversion"), OrganizerOptions()) == "mdi:tag-outline"
+
+
+def test_icon_backfill_zwangslaeufigkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.zwangslaeufigkeit"), OrganizerOptions()) == "mdi:security"
+
+
+def test_icon_backfill_tasker_aufgabe():
+    assert suggest_entity_icon(_FakeEntry("sensor.tasker_aufgabe"), OrganizerOptions()) == "mdi:checkbox-marked-circle"
+
+
+def test_icon_backfill_korrosionsleck():
+    assert suggest_entity_icon(_FakeEntry("sensor.korrosionsleck"), OrganizerOptions()) == "mdi:leak-off"
+
+
+def test_icon_backfill_reizhusten():
+    assert suggest_entity_icon(_FakeEntry("sensor.reizhusten"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_18650():
+    assert suggest_entity_icon(_FakeEntry("sensor.18650"), OrganizerOptions()) == "mdi:battery-charging"

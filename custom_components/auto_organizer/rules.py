@@ -27362,6 +27362,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "zerkleinerer": "mdi:blender",
     "abfallvermeidung": "mdi:recycle",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "ukw radio": "mdi:radio",
+    "micro motion": "mdi:motion-sensor",
+    "bedingungsbaum": "mdi:tree-outline",
+    "ice maker leak": "mdi:leak",
+    "verriegelungsstift": "mdi:lock-alert",
+    "kurzfristvorhersage": "mdi:weather-partly-cloudy",
+    "emby": "mdi:play-circle",
+    "mulch": "mdi:leaf",
+    "regelauswertung": "mdi:chart-line-variant",
+    "grafana update": "mdi:update",
+    "carrefour": "mdi:cart",
+    "nass": "mdi:water",
+    "trotec": "mdi:air-purifier",
+    "erreka": "mdi:lock",
+    "releaseversion": "mdi:tag-outline",
+    "zwangslaeufigkeit": "mdi:security",
+    "tasker aufgabe": "mdi:checkbox-marked-circle",
+    "korrosionsleck": "mdi:leak-off",
+    "reizhusten": "mdi:air-filter",
+    "18650": "mdi:battery-charging",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
