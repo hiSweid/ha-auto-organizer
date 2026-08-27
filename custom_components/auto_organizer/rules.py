@@ -30761,6 +30761,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "motion": "mdi:motion-sensor",
     "humidity": "mdi:water",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "airbeam": "mdi:air-filter",
+    "braune tonne": "mdi:trash-can-outline",
+    "startup script": "mdi:script-text-outline",
+    "update ignorieren": "mdi:update",
+    "kameraverriegelung": "mdi:cctv",
+    "einstechthermometer": "mdi:thermometer-chevron-up",
+    "makrobefehl": "mdi:gesture-tap-button",
+    "luefterfluegel": "mdi:fan-chevron-down",
+    "coral tpu": "mdi:camera-off",
+    "abwesenheitszeitraum": "mdi:calendar-clock",
+    "wasserspiel": "mdi:spray-bottle",
+    "temp hum": "mdi:temperature-celsius",
+    "ewaste": "mdi:recycle",
+    "diagnosemodus sauger": "mdi:robot-vacuum-variant",
+    "birdseye ansicht": "mdi:eye-circle-outline",
+    "polterabend": "mdi:party-popper",
+    "jazzclub stimmung": "mdi:music-note-eighth",
+    "ereigniszaehler": "mdi:counter",
+    "charge level": "mdi:battery-charging-wireless",
+    "vandalismusschutz": "mdi:security",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
