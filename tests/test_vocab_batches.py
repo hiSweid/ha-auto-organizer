@@ -66654,3 +66654,103 @@ def test_icon_backfill_doppelwischmopp():
 
 def test_icon_backfill_movement_pattern():
     assert suggest_entity_icon(_FakeEntry("sensor.movement_pattern"), OrganizerOptions()) == "mdi:map-marker-radius"
+
+
+def test_icon_backfill_problemmuellsammlung():
+    assert suggest_entity_icon(_FakeEntry("sensor.problemmuellsammlung"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_dvb_t2():
+    assert suggest_entity_icon(_FakeEntry("sensor.dvb_t2"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_tanzstimmung():
+    assert suggest_entity_icon(_FakeEntry("sensor.tanzstimmung"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_durchlauferhitzer_undicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.durchlauferhitzer_undicht"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_major_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.major_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_fernzugriff_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.fernzugriff_kamera"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_aussenwasserhahn_leck():
+    assert suggest_entity_icon(_FakeEntry("sensor.aussenwasserhahn_leck"), OrganizerOptions()) == "mdi:leak-off"
+
+
+def test_icon_backfill_kamera_cloud_speicher():
+    assert suggest_entity_icon(_FakeEntry("sensor.kamera_cloud_speicher"), OrganizerOptions()) == "mdi:cloud"
+
+
+def test_icon_backfill_piper_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.piper_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_tilt_detector():
+    assert suggest_entity_icon(_FakeEntry("sensor.tilt_detector"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_ionizer():
+    assert suggest_entity_icon(_FakeEntry("sensor.ionizer"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_icon_backfill_gast_eingecheckt():
+    assert suggest_entity_icon(_FakeEntry("sensor.gast_eingecheckt"), OrganizerOptions()) == "mdi:account-check"
+
+
+def test_icon_backfill_temperaturschock():
+    assert suggest_entity_icon(_FakeEntry("sensor.temperaturschock"), OrganizerOptions()) == "mdi:thermometer-alert"
+
+
+def test_icon_backfill_tierhaarpartikel():
+    assert suggest_entity_icon(_FakeEntry("sensor.tierhaarpartikel"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_tuerklingel_batteriestatus():
+    assert suggest_entity_icon(_FakeEntry("sensor.tuerklingel_batteriestatus"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_laedt():
+    assert suggest_entity_icon(_FakeEntry("sensor.laedt"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_orangener_sack():
+    assert suggest_entity_icon(_FakeEntry("sensor.orangener_sack"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_icon_backfill_dts_x():
+    assert suggest_entity_icon(_FakeEntry("sensor.dts_x"), OrganizerOptions()) == "mdi:speaker"
+
+
+def test_icon_backfill_congestion_fee():
+    assert suggest_entity_icon(_FakeEntry("sensor.congestion_fee"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_osmoseanlage():
+    assert suggest_entity_icon(_FakeEntry("sensor.osmoseanlage"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_leviton_dimmer():
+    assert suggest_entity_icon(_FakeEntry("sensor.leviton_dimmer"), OrganizerOptions()) == "mdi:lightbulb-on"
+
+
+def test_icon_backfill_heizraum():
+    assert suggest_entity_icon(_FakeEntry("sensor.heizraum"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_icon_backfill_dom_ix():
+    assert suggest_entity_icon(_FakeEntry("sensor.dom_ix"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_rasenpflege():
+    assert suggest_entity_icon(_FakeEntry("sensor.rasenpflege"), OrganizerOptions()) == "mdi:grass"
+
+
+def test_icon_backfill_knabbergebaeck():
+    assert suggest_entity_icon(_FakeEntry("sensor.knabbergebaeck"), OrganizerOptions()) == "mdi:cookie"

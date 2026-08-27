@@ -28870,6 +28870,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "doppelwischmopp": "mdi:broom",
     "movement pattern": "mdi:map-marker-radius",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "problemmuellsammlung": "mdi:trash-can",
+    "dvb t2": "mdi:television-classic",
+    "tanzstimmung": "mdi:movie-open",
+    "durchlauferhitzer undicht": "mdi:leak",
+    "major update": "mdi:update",
+    "fernzugriff kamera": "mdi:camera",
+    "aussenwasserhahn leck": "mdi:leak-off",
+    "kamera cloud speicher": "mdi:cloud",
+    "piper update": "mdi:update",
+    "tilt detector": "mdi:motion-sensor",
+    "ionizer": "mdi:air-purifier",
+    "gast eingecheckt": "mdi:account-check",
+    "temperaturschock": "mdi:thermometer-alert",
+    "tierhaarpartikel": "mdi:air-filter",
+    "tuerklingel batteriestatus": "mdi:battery-charging",
+    "laedt": "mdi:power-plug",
+    "orangener sack": "mdi:trash-can-outline",
+    "dts x": "mdi:speaker",
+    "congestion fee": "mdi:currency-eur",
+    "osmoseanlage": "mdi:water-pump",
+    "leviton dimmer": "mdi:lightbulb-on",
+    "heizraum": "mdi:radiator",
+    "dom ix": "mdi:lock",
+    "rasenpflege": "mdi:grass",
+    "knabbergebaeck": "mdi:cookie",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
