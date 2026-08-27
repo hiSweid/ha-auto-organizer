@@ -26961,6 +26961,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "einhell freelexo": "mdi:flower-tulip",
     "kartenausrichtung": "mdi:compass",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "night latch": "mdi:lock",
+    "schimmelmelder": "mdi:water-percent",
+    "hikvision kamera": "mdi:camera",
+    "exhaust air temperature": "mdi:thermometer",
+    "organic waste": "mdi:trash-can",
+    "aussenluft": "mdi:air-filter",
+    "kita abholung": "mdi:account-check",
+    "rate schedule": "mdi:calendar-clock",
+    "modellreihe abgekuendigt": "mdi:update",
+    "firmwareprotokoll": "mdi:update",
+    "scrap yard": "mdi:delete",
+    "photometric reading": "mdi:brightness-5",
+    "foreach schleife": "mdi:code-braces",
+    "retrigger interval": "mdi:timer",
+    "strassenfest": "mdi:palette",
+    "hygrometersonde": "mdi:water-percent",
+    "companion app": "mdi:cellphone",
+    "sgp30": "mdi:air-filter",
+    "glasfasermodem": "mdi:router-wireless",
+    "fernwaermegrundpreis": "mdi:currency-eur",
+    "batterieentladung": "mdi:battery-alert",
+    "wetterfeste kamera": "mdi:camera-off",
+    "explorir": "mdi:air-filter",
+    "kesselstein": "mdi:water",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
