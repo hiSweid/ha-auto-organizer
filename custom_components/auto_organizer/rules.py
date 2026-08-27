@@ -31382,6 +31382,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "preisgarantie": "mdi:currency-usd",
     "seismograph": "mdi:motion-sensor",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "wlan cam": "mdi:camera",
+    "silica gel": "mdi:water-percent",
+    "schimmelrisiko feucht": "mdi:leak",
+    "homey": "mdi:script-text-outline",
+    "ifttt recipe": "mdi:script-text-outline",
+    "sonnenstand": "mdi:white-balance-sunny",
+    "room illuminance": "mdi:brightness-5",
+    "suchkabel": "mdi:pipe",
+    "mixcloud": "mdi:music-note",
+    "vslam": "mdi:robot-vacuum",
+    "urlaubsroutine": "mdi:script-text-outline",
+    "culligan": "mdi:water-pump",
+    "taupunktunterschreitung": "mdi:water-percent",
+    "self consumption": "mdi:solar-power",
+    "schuhregal": "mdi:lightbulb",
+    "kaeltestau": "mdi:thermometer-low",
+    "beutelvolumen": "mdi:recycle",
+    "mausbatterie": "mdi:battery",
+    "bodennaehe": "mdi:weather-fog",
+    "schimmelrisiko": "mdi:water-percent",
+    "purpleair": "mdi:air-filter",
+    "okklusionsfront": "mdi:weather-cloudy",
+    "weitwinkelobjektiv": "mdi:camera",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
