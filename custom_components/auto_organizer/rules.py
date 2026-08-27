@@ -26937,6 +26937,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "notkurbel": "mdi:window-closed",
     "estimated range": "mdi:map-marker-distance",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "biogasaufschlag": "mdi:currency-eur",
+    "raumhelligkeit": "mdi:brightness-6",
+    "schwebstaub": "mdi:air-filter",
+    "recup": "mdi:trash-can-outline",
+    "mundharmonika": "mdi:music-note",
+    "abfallsack": "mdi:trash-can",
+    "redoxpotential": "mdi:water",
+    "automation aktivieren": "mdi:robot",
+    "keyboard maestro": "mdi:script-text",
+    "livebild": "mdi:video",
+    "videothek": "mdi:movie-open",
+    "frigate": "mdi:network",
+    "hygieneprodukte": "mdi:package-variant-closed",
+    "regenwasserverbrauch": "mdi:water-pump",
+    "bildschirmspiegelung": "mdi:cast",
+    "flaechendeckung": "mdi:map-marker-radius",
+    "feuchttuecherpackung": "mdi:package-variant-closed",
+    "ankunftssequenz": "mdi:run-fast",
+    "wasserdosierung": "mdi:water-plus",
+    "systemscript": "mdi:script-text-outline",
+    "einhell freelexo": "mdi:flower-tulip",
+    "kartenausrichtung": "mdi:compass",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

@@ -59562,3 +59562,91 @@ def test_icon_backfill_notkurbel():
 
 def test_icon_backfill_estimated_range():
     assert suggest_entity_icon(_FakeEntry("sensor.estimated_range"), OrganizerOptions()) == "mdi:map-marker-distance"
+
+
+def test_icon_backfill_biogasaufschlag():
+    assert suggest_entity_icon(_FakeEntry("sensor.biogasaufschlag"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_raumhelligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.raumhelligkeit"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_schwebstaub():
+    assert suggest_entity_icon(_FakeEntry("sensor.schwebstaub"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_recup():
+    assert suggest_entity_icon(_FakeEntry("sensor.recup"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_icon_backfill_mundharmonika():
+    assert suggest_entity_icon(_FakeEntry("sensor.mundharmonika"), OrganizerOptions()) == "mdi:music-note"
+
+
+def test_icon_backfill_abfallsack():
+    assert suggest_entity_icon(_FakeEntry("sensor.abfallsack"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_redoxpotential():
+    assert suggest_entity_icon(_FakeEntry("sensor.redoxpotential"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_automation_aktivieren():
+    assert suggest_entity_icon(_FakeEntry("sensor.automation_aktivieren"), OrganizerOptions()) == "mdi:robot"
+
+
+def test_icon_backfill_keyboard_maestro():
+    assert suggest_entity_icon(_FakeEntry("sensor.keyboard_maestro"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_livebild():
+    assert suggest_entity_icon(_FakeEntry("sensor.livebild"), OrganizerOptions()) == "mdi:video"
+
+
+def test_icon_backfill_videothek():
+    assert suggest_entity_icon(_FakeEntry("sensor.videothek"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_frigate():
+    assert suggest_entity_icon(_FakeEntry("sensor.frigate"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_hygieneprodukte():
+    assert suggest_entity_icon(_FakeEntry("sensor.hygieneprodukte"), OrganizerOptions()) == "mdi:package-variant-closed"
+
+
+def test_icon_backfill_regenwasserverbrauch():
+    assert suggest_entity_icon(_FakeEntry("sensor.regenwasserverbrauch"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_bildschirmspiegelung():
+    assert suggest_entity_icon(_FakeEntry("sensor.bildschirmspiegelung"), OrganizerOptions()) == "mdi:cast"
+
+
+def test_icon_backfill_flaechendeckung():
+    assert suggest_entity_icon(_FakeEntry("sensor.flaechendeckung"), OrganizerOptions()) == "mdi:map-marker-radius"
+
+
+def test_icon_backfill_feuchttuecherpackung():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchttuecherpackung"), OrganizerOptions()) == "mdi:package-variant-closed"
+
+
+def test_icon_backfill_ankunftssequenz():
+    assert suggest_entity_icon(_FakeEntry("sensor.ankunftssequenz"), OrganizerOptions()) == "mdi:run-fast"
+
+
+def test_icon_backfill_wasserdosierung():
+    assert suggest_entity_icon(_FakeEntry("sensor.wasserdosierung"), OrganizerOptions()) == "mdi:water-plus"
+
+
+def test_icon_backfill_systemscript():
+    assert suggest_entity_icon(_FakeEntry("sensor.systemscript"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_einhell_freelexo():
+    assert suggest_entity_icon(_FakeEntry("sensor.einhell_freelexo"), OrganizerOptions()) == "mdi:flower-tulip"
+
+
+def test_icon_backfill_kartenausrichtung():
+    assert suggest_entity_icon(_FakeEntry("sensor.kartenausrichtung"), OrganizerOptions()) == "mdi:compass"
