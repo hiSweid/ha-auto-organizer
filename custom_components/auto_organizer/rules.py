@@ -27279,6 +27279,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "erweichungstemperatur": "mdi:thermometer-water",
     "update rueckgaengig machen": "mdi:undo",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "charging time": "mdi:battery-charging",
+    "board game night": "mdi:gamepad",
+    "pmsa003i": "mdi:air-filter",
+    "hofeinfahrt erkannt": "mdi:car-door",
+    "wetness": "mdi:water-percent",
+    "levoit dehumidifier": "mdi:air-humidifier",
+    "glockenspiel": "mdi:music-note",
+    "end of life": "mdi:update",
+    "sun joe": "mdi:sprinkler",
+    "lecksuche": "mdi:leak",
+    "batteriegesundheit": "mdi:battery-heart",
+    "pv string": "mdi:solar-power",
+    "kaufabbruch": "mdi:cart-remove",
+    "ambient air quality": "mdi:air-filter",
+    "neigungswinkel ventilator": "mdi:fan-chevron-up",
+    "akku einlegen": "mdi:battery-plus",
+    "tv wandhalterung": "mdi:television-classic",
+    "szenensequenz": "mdi:script-text",
+    "bodenfeuchtigkeit": "mdi:watering-can",
+    "otto versand": "mdi:truck-delivery",
+    "umzugsstimmung": "mdi:home-export-outline",
+    "abluftrate": "mdi:fan-speed-1",
+    "kabinentemperatur": "mdi:thermometer-low",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
