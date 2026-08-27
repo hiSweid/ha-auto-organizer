@@ -78242,3 +78242,75 @@ def test_icon_backfill_ablauf():
 
 def test_icon_backfill_aquarium_luftfeuchte():
     assert suggest_entity_icon(_FakeEntry("sensor.aquarium_luftfeuchte"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_multisensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.multisensor"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_klimawert():
+    assert suggest_entity_icon(_FakeEntry("sensor.klimawert"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_vl53l1x():
+    assert suggest_entity_icon(_FakeEntry("sensor.vl53l1x"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_bwt_wasserfilter():
+    assert suggest_entity_icon(_FakeEntry("sensor.bwt_wasserfilter"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_patrouillenmodus():
+    assert suggest_entity_icon(_FakeEntry("sensor.patrouillenmodus"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_torbewegung():
+    assert suggest_entity_icon(_FakeEntry("sensor.torbewegung"), OrganizerOptions()) == "mdi:door-open"
+
+
+def test_icon_backfill_binary_input():
+    assert suggest_entity_icon(_FakeEntry("sensor.binary_input"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_icon_backfill_riegelbolzen():
+    assert suggest_entity_icon(_FakeEntry("sensor.riegelbolzen"), OrganizerOptions()) == "mdi:lock-outline"
+
+
+def test_icon_backfill_pylontech_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.pylontech_firmware"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_icon_backfill_utilitech_water():
+    assert suggest_entity_icon(_FakeEntry("sensor.utilitech_water"), OrganizerOptions()) == "mdi:leak-off"
+
+
+def test_icon_backfill_wetterereignis():
+    assert suggest_entity_icon(_FakeEntry("sensor.wetterereignis"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_meteo_france():
+    assert suggest_entity_icon(_FakeEntry("sensor.meteo_france"), OrganizerOptions()) == "mdi:weather-partly-cloudy"
+
+
+def test_icon_backfill_chillout_modus():
+    assert suggest_entity_icon(_FakeEntry("sensor.chillout_modus"), OrganizerOptions()) == "mdi:sofa"
+
+
+def test_icon_backfill_skriptsammlung():
+    assert suggest_entity_icon(_FakeEntry("sensor.skriptsammlung"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_spotpreis():
+    assert suggest_entity_icon(_FakeEntry("sensor.spotpreis"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_lidar_turm():
+    assert suggest_entity_icon(_FakeEntry("sensor.lidar_turm"), OrganizerOptions()) == "mdi:radar"
+
+
+def test_icon_backfill_waermepreisbremse():
+    assert suggest_entity_icon(_FakeEntry("sensor.waermepreisbremse"), OrganizerOptions()) == "mdi:cash-multiple"
+
+
+def test_icon_backfill_golden_meadow():
+    assert suggest_entity_icon(_FakeEntry("sensor.golden_meadow"), OrganizerOptions()) == "mdi:grass"

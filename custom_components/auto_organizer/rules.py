@@ -32045,6 +32045,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ablauf": "mdi:script-text-outline",
     "aquarium luftfeuchte": "mdi:water-percent",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "multisensor": "mdi:motion-sensor",
+    "klimawert": "mdi:water-percent",
+    "vl53l1x": "mdi:motion-sensor",
+    "bwt wasserfilter": "mdi:water-pump",
+    "patrouillenmodus": "mdi:cctv",
+    "torbewegung": "mdi:door-open",
+    "binary input": "mdi:toggle-switch",
+    "riegelbolzen": "mdi:lock-outline",
+    "pylontech firmware": "mdi:chip",
+    "utilitech water": "mdi:leak-off",
+    "wetterereignis": "mdi:weather-cloudy",
+    "meteo france": "mdi:weather-partly-cloudy",
+    "chillout modus": "mdi:sofa",
+    "skriptsammlung": "mdi:script-text",
+    "spotpreis": "mdi:currency-eur",
+    "lidar turm": "mdi:radar",
+    "waermepreisbremse": "mdi:cash-multiple",
+    "golden meadow": "mdi:grass",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
