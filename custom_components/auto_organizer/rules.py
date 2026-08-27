@@ -30783,6 +30783,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "charge level": "mdi:battery-charging-wireless",
     "vandalismusschutz": "mdi:security",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "elsys": "mdi:air-filter",
+    "ceramic heater": "mdi:radiator",
+    "pm1006": "mdi:air-filter",
+    "rasenkantenstein": "mdi:grass",
+    "regelsatz": "mdi:state-machine",
+    "sensoneo": "mdi:trash-can-outline",
+    "reinigungsmittel": "mdi:bottle-tonic",
+    "daylight autonomy": "mdi:white-balance-sunny",
+    "aussenluftgueteindex": "mdi:air-filter",
+    "ovalzylinder": "mdi:lock-outline",
+    "desiccant dehumidifier": "mdi:water-off",
+    "liege belegt": "mdi:bed-outline",
+    "deckelkontakt": "mdi:contactless-payment",
+    "tonnenwaschanlage": "mdi:washing-machine",
+    "eiswuerfelspender": "mdi:ice-pop",
+    "house mapping": "mdi:map-marker-radius",
+    "steckdosen firmware": "mdi:chip",
+    "remote battery": "mdi:battery-50",
+    "produktabkuendigung": "mdi:alert-circle-outline",
+    "wasserzaehlerschacht": "mdi:water-pump",
+    "bestrahlung": "mdi:white-balance-sunny",
+    "ventilatorkette": "mdi:fan-chevron-up",
+    "nachlaufzeit bewegungsmelder": "mdi:timer-outline",
+    "selve": "mdi:window-open",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
