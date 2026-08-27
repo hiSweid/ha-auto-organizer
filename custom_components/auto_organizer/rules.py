@@ -30876,6 +30876,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "nachtabsenkung lueftung": "mdi:fan-off",
     "aquariumleck": "mdi:leak",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "grocery app": "mdi:cart",
+    "storage tank": "mdi:tank",
+    "live stream": "mdi:camera",
+    "4k kamera": "mdi:camera",
+    "zeitungsbuendel": "mdi:package-variant-closed",
+    "proximity sensor": "mdi:ruler",
+    "kellerklima": "mdi:thermometer",
+    "solarspannung": "mdi:solar-power",
+    "willkommensszene": "mdi:movie-open",
+    "inversionslage": "mdi:weather-night",
+    "gledopto lux": "mdi:brightness-5",
+    "geschirrspuelertab": "mdi:dishwasher",
+    "anwesend": "mdi:account-check",
+    "notification action": "mdi:message-text",
+    "polk audio": "mdi:speaker",
+    "state trigger": "mdi:flash",
+    "teom": "mdi:air-filter",
+    "gewitterwahrscheinlichkeit": "mdi:weather-lightning",
+    "lichterkettenschmuck": "mdi:string-lights",
+    "pms7003": "mdi:air-filter",
+    "jahresarbeitszahl": "mdi:chart-line",
+    "trigger": "mdi:flash",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
