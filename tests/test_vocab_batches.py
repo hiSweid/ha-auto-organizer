@@ -80962,3 +80962,59 @@ def test_icon_backfill_laufrichtung():
 
 def test_icon_backfill_laserthermometer():
     assert suggest_entity_icon(_FakeEntry("sensor.laserthermometer"), OrganizerOptions()) == "mdi:temperature-celsius"
+
+
+def test_icon_backfill_bomann():
+    assert suggest_entity_icon(_FakeEntry("sensor.bomann"), OrganizerOptions()) == "mdi:microwave"
+
+
+def test_icon_backfill_kaelteperiode():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaelteperiode"), OrganizerOptions()) == "mdi:snowflake"
+
+
+def test_icon_backfill_ampera():
+    assert suggest_entity_icon(_FakeEntry("sensor.ampera"), OrganizerOptions()) == "mdi:car-electric"
+
+
+def test_icon_backfill_holzfeuchtigkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.holzfeuchtigkeit"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_spieleabend():
+    assert suggest_entity_icon(_FakeEntry("sensor.spieleabend"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_peak_tariff():
+    assert suggest_entity_icon(_FakeEntry("sensor.peak_tariff"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_bandbreitenbegrenzung():
+    assert suggest_entity_icon(_FakeEntry("sensor.bandbreitenbegrenzung"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_kommandokette():
+    assert suggest_entity_icon(_FakeEntry("sensor.kommandokette"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_schaltregel():
+    assert suggest_entity_icon(_FakeEntry("sensor.schaltregel"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_icon_backfill_leergutautomat():
+    assert suggest_entity_icon(_FakeEntry("sensor.leergutautomat"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_solarstrom():
+    assert suggest_entity_icon(_FakeEntry("sensor.solarstrom"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_abspielgeraet():
+    assert suggest_entity_icon(_FakeEntry("sensor.abspielgeraet"), OrganizerOptions()) == "mdi:play-circle"
+
+
+def test_icon_backfill_differenztemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.differenztemperatur"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_descaler():
+    assert suggest_entity_icon(_FakeEntry("sensor.descaler"), OrganizerOptions()) == "mdi:water-pump"

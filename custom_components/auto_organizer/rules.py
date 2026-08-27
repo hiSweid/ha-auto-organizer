@@ -32799,6 +32799,22 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "laufrichtung": "mdi:arrow-right-bold",
     "laserthermometer": "mdi:temperature-celsius",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "bomann": "mdi:microwave",
+    "kaelteperiode": "mdi:snowflake",
+    "ampera": "mdi:car-electric",
+    "holzfeuchtigkeit": "mdi:water-percent",
+    "spieleabend": "mdi:movie-open",
+    "peak tariff": "mdi:currency-eur",
+    "bandbreitenbegrenzung": "mdi:network",
+    "kommandokette": "mdi:script-text",
+    "schaltregel": "mdi:toggle-switch",
+    "leergutautomat": "mdi:recycle",
+    "solarstrom": "mdi:solar-power",
+    "abspielgeraet": "mdi:play-circle",
+    "differenztemperatur": "mdi:thermometer-lines",
+    "descaler": "mdi:water-pump",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
