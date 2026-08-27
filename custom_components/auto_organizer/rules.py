@@ -31717,6 +31717,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "hotfix patch": "mdi:update",
     "gummibuerste": "mdi:brush",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "autumn dream": "mdi:weather-sunset",
+    "ebay bestellung": "mdi:shopping",
+    "ladespannung": "mdi:battery-charging",
+    "mordparty": "mdi:party-popper",
+    "integromat": "mdi:script-text",
+    "lueftergitter": "mdi:fan-chevron-up",
+    "tag nacht modus": "mdi:weather-night",
+    "automation ordner": "mdi:folder-star",
+    "e scooter akku": "mdi:battery-50",
+    "kehrichtverbrennung": "mdi:trash-can-outline",
+    "beleuchtungsstufe": "mdi:brightness-6",
+    "mhz19": "mdi:air-filter",
+    "abregelung": "mdi:power-sleep",
+    "vorratsdose": "mdi:food-drumstick",
+    "nello one": "mdi:doorbell",
+    "spielrunde szene": "mdi:gamepad",
+    "jenkinsfile": "mdi:script-text-key",
+    "brandschutzklappe": "mdi:fire",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

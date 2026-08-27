@@ -77058,3 +77058,75 @@ def test_icon_backfill_hotfix_patch():
 
 def test_icon_backfill_gummibuerste():
     assert suggest_entity_icon(_FakeEntry("sensor.gummibuerste"), OrganizerOptions()) == "mdi:brush"
+
+
+def test_icon_backfill_autumn_dream():
+    assert suggest_entity_icon(_FakeEntry("sensor.autumn_dream"), OrganizerOptions()) == "mdi:weather-sunset"
+
+
+def test_icon_backfill_ebay_bestellung():
+    assert suggest_entity_icon(_FakeEntry("sensor.ebay_bestellung"), OrganizerOptions()) == "mdi:shopping"
+
+
+def test_icon_backfill_ladespannung():
+    assert suggest_entity_icon(_FakeEntry("sensor.ladespannung"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_mordparty():
+    assert suggest_entity_icon(_FakeEntry("sensor.mordparty"), OrganizerOptions()) == "mdi:party-popper"
+
+
+def test_icon_backfill_integromat():
+    assert suggest_entity_icon(_FakeEntry("sensor.integromat"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_lueftergitter():
+    assert suggest_entity_icon(_FakeEntry("sensor.lueftergitter"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_tag_nacht_modus():
+    assert suggest_entity_icon(_FakeEntry("sensor.tag_nacht_modus"), OrganizerOptions()) == "mdi:weather-night"
+
+
+def test_icon_backfill_automation_ordner():
+    assert suggest_entity_icon(_FakeEntry("sensor.automation_ordner"), OrganizerOptions()) == "mdi:folder-star"
+
+
+def test_icon_backfill_e_scooter_akku():
+    assert suggest_entity_icon(_FakeEntry("sensor.e_scooter_akku"), OrganizerOptions()) == "mdi:battery-50"
+
+
+def test_icon_backfill_kehrichtverbrennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.kehrichtverbrennung"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_icon_backfill_beleuchtungsstufe():
+    assert suggest_entity_icon(_FakeEntry("sensor.beleuchtungsstufe"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_mhz19():
+    assert suggest_entity_icon(_FakeEntry("sensor.mhz19"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_abregelung():
+    assert suggest_entity_icon(_FakeEntry("sensor.abregelung"), OrganizerOptions()) == "mdi:power-sleep"
+
+
+def test_icon_backfill_vorratsdose():
+    assert suggest_entity_icon(_FakeEntry("sensor.vorratsdose"), OrganizerOptions()) == "mdi:food-drumstick"
+
+
+def test_icon_backfill_nello_one():
+    assert suggest_entity_icon(_FakeEntry("sensor.nello_one"), OrganizerOptions()) == "mdi:doorbell"
+
+
+def test_icon_backfill_spielrunde_szene():
+    assert suggest_entity_icon(_FakeEntry("sensor.spielrunde_szene"), OrganizerOptions()) == "mdi:gamepad"
+
+
+def test_icon_backfill_jenkinsfile():
+    assert suggest_entity_icon(_FakeEntry("sensor.jenkinsfile"), OrganizerOptions()) == "mdi:script-text-key"
+
+
+def test_icon_backfill_brandschutzklappe():
+    assert suggest_entity_icon(_FakeEntry("sensor.brandschutzklappe"), OrganizerOptions()) == "mdi:fire"
