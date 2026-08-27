@@ -78314,3 +78314,79 @@ def test_icon_backfill_waermepreisbremse():
 
 def test_icon_backfill_golden_meadow():
     assert suggest_entity_icon(_FakeEntry("sensor.golden_meadow"), OrganizerOptions()) == "mdi:grass"
+
+
+def test_icon_backfill_indoor_light_level():
+    assert suggest_entity_icon(_FakeEntry("sensor.indoor_light_level"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_moppwaeschestation():
+    assert suggest_entity_icon(_FakeEntry("sensor.moppwaeschestation"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_belichtungswert():
+    assert suggest_entity_icon(_FakeEntry("sensor.belichtungswert"), OrganizerOptions()) == "mdi:camera-metering-center"
+
+
+def test_icon_backfill_deaktivierungsbedingung():
+    assert suggest_entity_icon(_FakeEntry("sensor.deaktivierungsbedingung"), OrganizerOptions()) == "mdi:toggle-switch-off"
+
+
+def test_icon_backfill_rekursion():
+    assert suggest_entity_icon(_FakeEntry("sensor.rekursion"), OrganizerOptions()) == "mdi:reload"
+
+
+def test_icon_backfill_einmalig_ausfuehren():
+    assert suggest_entity_icon(_FakeEntry("sensor.einmalig_ausfuehren"), OrganizerOptions()) == "mdi:play-circle-outline"
+
+
+def test_icon_backfill_download_speed():
+    assert suggest_entity_icon(_FakeEntry("sensor.download_speed"), OrganizerOptions()) == "mdi:download-network"
+
+
+def test_icon_backfill_keybox():
+    assert suggest_entity_icon(_FakeEntry("sensor.keybox"), OrganizerOptions()) == "mdi:key-wireless"
+
+
+def test_icon_backfill_wiederholsperre():
+    assert suggest_entity_icon(_FakeEntry("sensor.wiederholsperre"), OrganizerOptions()) == "mdi:lock-clock"
+
+
+def test_icon_backfill_drive_mode():
+    assert suggest_entity_icon(_FakeEntry("sensor.drive_mode"), OrganizerOptions()) == "mdi:car-cruise-control"
+
+
+def test_icon_backfill_dc_schnellladepreis():
+    assert suggest_entity_icon(_FakeEntry("sensor.dc_schnellladepreis"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_monitor_my_presence():
+    assert suggest_entity_icon(_FakeEntry("sensor.monitor_my_presence"), OrganizerOptions()) == "mdi:account-search"
+
+
+def test_icon_backfill_terrarium():
+    assert suggest_entity_icon(_FakeEntry("sensor.terrarium"), OrganizerOptions()) == "mdi:glass-fragile"
+
+
+def test_icon_backfill_spitzenlast():
+    assert suggest_entity_icon(_FakeEntry("sensor.spitzenlast"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_scriptvorlage():
+    assert suggest_entity_icon(_FakeEntry("sensor.scriptvorlage"), OrganizerOptions()) == "mdi:file-document-edit"
+
+
+def test_icon_backfill_feuermelder_akku():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuermelder_akku"), OrganizerOptions()) == "mdi:battery-alert"
+
+
+def test_icon_backfill_motorradschloss():
+    assert suggest_entity_icon(_FakeEntry("sensor.motorradschloss"), OrganizerOptions()) == "mdi:motorbike-electric"
+
+
+def test_icon_backfill_homeseer():
+    assert suggest_entity_icon(_FakeEntry("sensor.homeseer"), OrganizerOptions()) == "mdi:home-assistant"
+
+
+def test_icon_backfill_deliveroo():
+    assert suggest_entity_icon(_FakeEntry("sensor.deliveroo"), OrganizerOptions()) == "mdi:food-drumstick"

@@ -32065,6 +32065,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "waermepreisbremse": "mdi:cash-multiple",
     "golden meadow": "mdi:grass",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "indoor light level": "mdi:brightness-5",
+    "moppwaeschestation": "mdi:vacuum",
+    "belichtungswert": "mdi:camera-metering-center",
+    "deaktivierungsbedingung": "mdi:toggle-switch-off",
+    "rekursion": "mdi:reload",
+    "einmalig ausfuehren": "mdi:play-circle-outline",
+    "download speed": "mdi:download-network",
+    "keybox": "mdi:key-wireless",
+    "wiederholsperre": "mdi:lock-clock",
+    "drive mode": "mdi:car-cruise-control",
+    "dc schnellladepreis": "mdi:currency-eur",
+    "monitor my presence": "mdi:account-search",
+    "terrarium": "mdi:glass-fragile",
+    "spitzenlast": "mdi:power-plug",
+    "scriptvorlage": "mdi:file-document-edit",
+    "feuermelder akku": "mdi:battery-alert",
+    "motorradschloss": "mdi:motorbike-electric",
+    "homeseer": "mdi:home-assistant",
+    "deliveroo": "mdi:food-drumstick",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
