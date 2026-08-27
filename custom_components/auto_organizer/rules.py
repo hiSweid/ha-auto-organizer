@@ -30417,6 +30417,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "regieplan": "mdi:script-text-outline",
     "blendungssensor": "mdi:brightness-6",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "joghurtbecher": "mdi:bottle-tonic-outline",
+    "k ld7 radar": "mdi:radar",
+    "neigungsmelder": "mdi:angle-acute",
+    "paketfilter": "mdi:network",
+    "leisemodus": "mdi:sleep",
+    "gewiss bewegungsmelder": "mdi:motion-sensor",
+    "zapier": "mdi:pipe-valve",
+    "ruecklauf": "mdi:thermostat-cog",
+    "oberflaechenthermometer": "mdi:thermometer-chevron-up",
+    "mehrkostenanteil": "mdi:currency-eur-off",
+    "black mold": "mdi:spider-thread",
+    "panzerglas": "mdi:shield-lock",
+    "flutlicht alarm": "mdi:alarm-light-outline",
+    "heizkurve automatik": "mdi:auto-mode",
+    "time machine": "mdi:timer-cog",
+    "mains voltage": "mdi:flash-triangle",
+    "prepaid tariff": "mdi:account-multiple-check",
+    "dichtungsleck": "mdi:leak",
+    "solar lux sensor": "mdi:brightness-5",
+    "aufsteigende naesse": "mdi:water-percent-alert",
+    "knabberabend": "mdi:food-drumstick",
+    "hoftorsteuerung": "mdi:gate-open",
+    "kenwood cooking chef": "mdi:chef-hat",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
