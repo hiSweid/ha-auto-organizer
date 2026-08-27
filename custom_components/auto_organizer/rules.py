@@ -33102,6 +33102,24 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "morning routine": "mdi:alarm",
     "goal zero yeti": "mdi:battery-charging",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "schlitzauslass": "mdi:fan",
+    "skriptgruppe": "mdi:script-text",
+    "reinigungsflaeche": "mdi:robot-vacuum",
+    "andockvorgang": "mdi:home-map-marker",
+    "gyrosensor": "mdi:axis-arrow",
+    "ereignis": "mdi:bell",
+    "edge channel": "mdi:cloud-download",
+    "sprachroutine": "mdi:speaker-wireless",
+    "audioalarm kamera": "mdi:camera-burst",
+    "kinderzimmer belegt": "mdi:bed-clock",
+    "compressor dehumidifier": "mdi:air-filter",
+    "schluesselkasten": "mdi:key-chain",
+    "umluftbetrieb": "mdi:fan-chevron-up",
+    "lastvariabler tarif": "mdi:currency-eur",
+    "d link firmware": "mdi:download",
+    "kamera notaufnahme": "mdi:camera-account",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

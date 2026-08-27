@@ -82022,3 +82022,67 @@ def test_icon_backfill_morning_routine():
 
 def test_icon_backfill_goal_zero_yeti():
     assert suggest_entity_icon(_FakeEntry("sensor.goal_zero_yeti"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_schlitzauslass():
+    assert suggest_entity_icon(_FakeEntry("sensor.schlitzauslass"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_skriptgruppe():
+    assert suggest_entity_icon(_FakeEntry("sensor.skriptgruppe"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_reinigungsflaeche():
+    assert suggest_entity_icon(_FakeEntry("sensor.reinigungsflaeche"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_andockvorgang():
+    assert suggest_entity_icon(_FakeEntry("sensor.andockvorgang"), OrganizerOptions()) == "mdi:home-map-marker"
+
+
+def test_icon_backfill_gyrosensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.gyrosensor"), OrganizerOptions()) == "mdi:axis-arrow"
+
+
+def test_icon_backfill_ereignis():
+    assert suggest_entity_icon(_FakeEntry("sensor.ereignis"), OrganizerOptions()) == "mdi:bell"
+
+
+def test_icon_backfill_edge_channel():
+    assert suggest_entity_icon(_FakeEntry("sensor.edge_channel"), OrganizerOptions()) == "mdi:cloud-download"
+
+
+def test_icon_backfill_sprachroutine():
+    assert suggest_entity_icon(_FakeEntry("sensor.sprachroutine"), OrganizerOptions()) == "mdi:speaker-wireless"
+
+
+def test_icon_backfill_audioalarm_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.audioalarm_kamera"), OrganizerOptions()) == "mdi:camera-burst"
+
+
+def test_icon_backfill_kinderzimmer_belegt():
+    assert suggest_entity_icon(_FakeEntry("sensor.kinderzimmer_belegt"), OrganizerOptions()) == "mdi:bed-clock"
+
+
+def test_icon_backfill_compressor_dehumidifier():
+    assert suggest_entity_icon(_FakeEntry("sensor.compressor_dehumidifier"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_schluesselkasten():
+    assert suggest_entity_icon(_FakeEntry("sensor.schluesselkasten"), OrganizerOptions()) == "mdi:key-chain"
+
+
+def test_icon_backfill_umluftbetrieb():
+    assert suggest_entity_icon(_FakeEntry("sensor.umluftbetrieb"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_lastvariabler_tarif():
+    assert suggest_entity_icon(_FakeEntry("sensor.lastvariabler_tarif"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_d_link_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.d_link_firmware"), OrganizerOptions()) == "mdi:download"
+
+
+def test_icon_backfill_kamera_notaufnahme():
+    assert suggest_entity_icon(_FakeEntry("sensor.kamera_notaufnahme"), OrganizerOptions()) == "mdi:camera-account"
