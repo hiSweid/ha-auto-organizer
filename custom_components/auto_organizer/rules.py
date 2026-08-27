@@ -32871,6 +32871,19 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "zuluftklappe": "mdi:air-filter",
     "ld2450": "mdi:motion-sensor",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "moisture absorber": "mdi:air-humidifier",
+    "abfallio": "mdi:trash-can",
+    "innenluftfeuchte": "mdi:water-percent",
+    "aufnahmekarte": "mdi:memory",
+    "polarlichtschein": "mdi:weather-sunset-up",
+    "cctv motion": "mdi:motion-sensor",
+    "fortluft": "mdi:fan",
+    "staubbeutel wechsel": "mdi:filter-remove",
+    "mood light": "mdi:led-strip-variant",
+    "purkinje shift": "mdi:brightness-6",
+    "fallsensor": "mdi:alert-circle-outline",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

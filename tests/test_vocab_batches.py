@@ -81218,3 +81218,47 @@ def test_icon_backfill_zuluftklappe():
 
 def test_icon_backfill_ld2450():
     assert suggest_entity_icon(_FakeEntry("sensor.ld2450"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_moisture_absorber():
+    assert suggest_entity_icon(_FakeEntry("sensor.moisture_absorber"), OrganizerOptions()) == "mdi:air-humidifier"
+
+
+def test_icon_backfill_abfallio():
+    assert suggest_entity_icon(_FakeEntry("sensor.abfallio"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_innenluftfeuchte():
+    assert suggest_entity_icon(_FakeEntry("sensor.innenluftfeuchte"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_aufnahmekarte():
+    assert suggest_entity_icon(_FakeEntry("sensor.aufnahmekarte"), OrganizerOptions()) == "mdi:memory"
+
+
+def test_icon_backfill_polarlichtschein():
+    assert suggest_entity_icon(_FakeEntry("sensor.polarlichtschein"), OrganizerOptions()) == "mdi:weather-sunset-up"
+
+
+def test_icon_backfill_cctv_motion():
+    assert suggest_entity_icon(_FakeEntry("sensor.cctv_motion"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_fortluft():
+    assert suggest_entity_icon(_FakeEntry("sensor.fortluft"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_staubbeutel_wechsel():
+    assert suggest_entity_icon(_FakeEntry("sensor.staubbeutel_wechsel"), OrganizerOptions()) == "mdi:filter-remove"
+
+
+def test_icon_backfill_mood_light():
+    assert suggest_entity_icon(_FakeEntry("sensor.mood_light"), OrganizerOptions()) == "mdi:led-strip-variant"
+
+
+def test_icon_backfill_purkinje_shift():
+    assert suggest_entity_icon(_FakeEntry("sensor.purkinje_shift"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_fallsensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.fallsensor"), OrganizerOptions()) == "mdi:alert-circle-outline"
