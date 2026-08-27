@@ -26736,6 +26736,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "uebertragungsnetzbetreiber": "mdi:transmission-tower",
     "tonnenstellplatz": "mdi:trash-can",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "temp": "mdi:thermometer",
+    "verschmutzungssensor": "mdi:air-filter",
+    "endstufe": "mdi:remote",
+    "mauerdurchfeuchtung": "mdi:water-percent",
+    "mayoglas": "mdi:shopping-outline",
+    "paypal": "mdi:currency-usd",
+    "rekordhitze": "mdi:fire",
+    "schornstein": "mdi:fireplace",
+    "gelber sack": "mdi:trash-can-outline",
+    "abhaengigkeitskonflikt": "mdi:alert-circle",
+    "sauerstoff": "mdi:airbag",
+    "update quelle": "mdi:update",
+    "netzabdeckung": "mdi:network",
+    "jablotron": "mdi:security",
+    "blu door": "mdi:door",
+    "kamera abo": "mdi:cctv",
+    "zuerisack": "mdi:trash-can-outline",
+    "verdunstungskuehler": "mdi:fan",
+    "laborabzug": "mdi:fan-chevron-down",
+    "internal resistance": "mdi:battery-charging-low",
+    "day rate": "mdi:currency-usd",
+    "schadstoffgrenzwert": "mdi:chemical-weapon",
+    "energiemanagement": "mdi:power-settings",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
