@@ -32511,6 +32511,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "scheibenwaschwasser": "mdi:wiper-wash",
     "rivian r1s": "mdi:car-electric",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "margarine": "mdi:package-variant-closed",
+    "nebeneingang": "mdi:door-open",
+    "geblaesewiderstand": "mdi:fan",
+    "automation deaktiviert": "mdi:robot-off",
+    "boxenakku": "mdi:battery-charging",
+    "goal zero": "mdi:battery-charging",
+    "extractor hood": "mdi:air-filter",
+    "spieleabend szene": "mdi:movie-open",
+    "redispatch": "mdi:transit-transfer",
+    "preview build": "mdi:package-down",
+    "kamera lautstaerke": "mdi:volume-high",
+    "moebel erkennung": "mdi:sofa",
+    "api version": "mdi:information-outline",
+    "microswitch": "mdi:toggle-switch",
+    "lockwood": "mdi:lock",
+    "tailgating detection": "mdi:account-question",
+    "kettensaegenakku": "mdi:battery-charging",
+    "leckwaechter": "mdi:water-alert",
+    "dirt detect": "mdi:delete-forever",
+    "zuziehhilfe": "mdi:lock-reset",
+    "zapier automation": "mdi:robot",
+    "zengge": "mdi:lightbulb",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
