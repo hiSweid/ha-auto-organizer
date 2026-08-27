@@ -27132,6 +27132,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "kirschlorbeer": "mdi:tree",
     "dolby vision": "mdi:movie",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "roku stick": "mdi:remote",
+    "wynd": "mdi:air-filter",
+    "synology surveillance": "mdi:cctv",
+    "landfill": "mdi:trash-can",
+    "phasenstrom": "mdi:flash",
+    "bissell": "mdi:vacuum",
+    "umlufttemperatur": "mdi:thermometer",
+    "flush switch": "mdi:toggle-switch",
+    "zisternenueberlauf": "mdi:water-alert",
+    "nachfuellbedarf": "mdi:cart-arrow-down",
+    "lieferadresse": "mdi:truck-delivery",
+    "ampere": "mdi:current-ac",
+    "ring protect": "mdi:security",
+    "onkyo": "mdi:audio-video",
+    "wettercode": "mdi:weather-cloudy",
+    "balancing cost": "mdi:currency-usd",
+    "pv abregelung": "mdi:solar-power",
+    "electricity price": "mdi:lightbulb",
+    "dust box": "mdi:trash-can",
+    "moppwechsel": "mdi:broom",
+    "besucherprotokoll": "mdi:account-check",
+    "wisenet": "mdi:cctv",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
