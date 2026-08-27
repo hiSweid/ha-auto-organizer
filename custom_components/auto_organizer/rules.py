@@ -32388,6 +32388,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "spuelkastenleck": "mdi:leak-off",
     "wetterkanal": "mdi:weather-windy",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "ausnahmebehandlung": "mdi:script-text-outline",
+    "kontowechselpraemie": "mdi:currency-eur",
+    "gaerschranktemperatur": "mdi:fridge-industrial-alert",
+    "burr grinder": "mdi:coffee-maker",
+    "trockenperiode": "mdi:weather-sunny-alert",
+    "magnetstreifen sauger": "mdi:robot-vacuum",
+    "lidar": "mdi:ruler-square",
+    "doerrautomat": "mdi:washing-machine",
+    "indoor ambient light": "mdi:brightness-5",
+    "liveness detection": "mdi:motion-sensor",
+    "lagewechsel erkannt": "mdi:content-save-all",
+    "lichteinfallswinkel": "mdi:lightbulb-group",
+    "goodwe": "mdi:solar-power",
+    "charity bin": "mdi:trash-can-outline",
+    "kamera signalverlust": "mdi:cctv",
+    "restkilometer": "mdi:map-marker-distance",
+    "beacon battery": "mdi:battery-charging-90",
+    "tageslichtfaktor": "mdi:white-balance-sunny",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

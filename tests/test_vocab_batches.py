@@ -79486,3 +79486,75 @@ def test_icon_backfill_spuelkastenleck():
 
 def test_icon_backfill_wetterkanal():
     assert suggest_entity_icon(_FakeEntry("sensor.wetterkanal"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_ausnahmebehandlung():
+    assert suggest_entity_icon(_FakeEntry("sensor.ausnahmebehandlung"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_kontowechselpraemie():
+    assert suggest_entity_icon(_FakeEntry("sensor.kontowechselpraemie"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_gaerschranktemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.gaerschranktemperatur"), OrganizerOptions()) == "mdi:fridge-industrial-alert"
+
+
+def test_icon_backfill_burr_grinder():
+    assert suggest_entity_icon(_FakeEntry("sensor.burr_grinder"), OrganizerOptions()) == "mdi:coffee-maker"
+
+
+def test_icon_backfill_trockenperiode():
+    assert suggest_entity_icon(_FakeEntry("sensor.trockenperiode"), OrganizerOptions()) == "mdi:weather-sunny-alert"
+
+
+def test_icon_backfill_magnetstreifen_sauger():
+    assert suggest_entity_icon(_FakeEntry("sensor.magnetstreifen_sauger"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_lidar():
+    assert suggest_entity_icon(_FakeEntry("sensor.lidar"), OrganizerOptions()) == "mdi:ruler-square"
+
+
+def test_icon_backfill_doerrautomat():
+    assert suggest_entity_icon(_FakeEntry("sensor.doerrautomat"), OrganizerOptions()) == "mdi:washing-machine"
+
+
+def test_icon_backfill_indoor_ambient_light():
+    assert suggest_entity_icon(_FakeEntry("sensor.indoor_ambient_light"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_liveness_detection():
+    assert suggest_entity_icon(_FakeEntry("sensor.liveness_detection"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_lagewechsel_erkannt():
+    assert suggest_entity_icon(_FakeEntry("sensor.lagewechsel_erkannt"), OrganizerOptions()) == "mdi:content-save-all"
+
+
+def test_icon_backfill_lichteinfallswinkel():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichteinfallswinkel"), OrganizerOptions()) == "mdi:lightbulb-group"
+
+
+def test_icon_backfill_goodwe():
+    assert suggest_entity_icon(_FakeEntry("sensor.goodwe"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_icon_backfill_charity_bin():
+    assert suggest_entity_icon(_FakeEntry("sensor.charity_bin"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_icon_backfill_kamera_signalverlust():
+    assert suggest_entity_icon(_FakeEntry("sensor.kamera_signalverlust"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_restkilometer():
+    assert suggest_entity_icon(_FakeEntry("sensor.restkilometer"), OrganizerOptions()) == "mdi:map-marker-distance"
+
+
+def test_icon_backfill_beacon_battery():
+    assert suggest_entity_icon(_FakeEntry("sensor.beacon_battery"), OrganizerOptions()) == "mdi:battery-charging-90"
+
+
+def test_icon_backfill_tageslichtfaktor():
+    assert suggest_entity_icon(_FakeEntry("sensor.tageslichtfaktor"), OrganizerOptions()) == "mdi:white-balance-sunny"
