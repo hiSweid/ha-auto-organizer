@@ -29252,6 +29252,33 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "button sensor": "mdi:gesture-tap-button",
     "hauptbuerste austauschen": "mdi:vacuum",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "tauschregal": "mdi:archive",
+    "scheduled cleaning": "mdi:robot-vacuum",
+    "kleingeraet": "mdi:microwave",
+    "serviceintervall sauger": "mdi:calendar-clock",
+    "sonnenwinkel trigger": "mdi:white-balance-sunny",
+    "ultraloq": "mdi:lock",
+    "anker powercore": "mdi:battery-charging",
+    "streaminganbieter": "mdi:play-circle",
+    "waermepumpentarif": "mdi:currency-eur",
+    "entwaesserungsschacht": "mdi:water",
+    "gaskosten": "mdi:gas-cylinder",
+    "schlosskasten": "mdi:lock-outline",
+    "sensorbatterie": "mdi:battery",
+    "stundenpreis": "mdi:currency-eur",
+    "deco firmware": "mdi:cellphone-settings",
+    "schwuele luft": "mdi:air-filter",
+    "joystick": "mdi:gamepad",
+    "salzelektrolyse": "mdi:water-off",
+    "collection day": "mdi:calendar-today",
+    "current tariff": "mdi:currency-eur",
+    "badenova": "mdi:currency-eur",
+    "duct": "mdi:pipe",
+    "blue iris": "mdi:cctv",
+    "ladeleistungsbegrenzer": "mdi:ev-station",
+    "lastprofil": "mdi:chart-line",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

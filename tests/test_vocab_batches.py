@@ -68054,3 +68054,103 @@ def test_icon_backfill_button_sensor():
 
 def test_icon_backfill_hauptbuerste_austauschen():
     assert suggest_entity_icon(_FakeEntry("sensor.hauptbuerste_austauschen"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_tauschregal():
+    assert suggest_entity_icon(_FakeEntry("sensor.tauschregal"), OrganizerOptions()) == "mdi:archive"
+
+
+def test_icon_backfill_scheduled_cleaning():
+    assert suggest_entity_icon(_FakeEntry("sensor.scheduled_cleaning"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_kleingeraet():
+    assert suggest_entity_icon(_FakeEntry("sensor.kleingeraet"), OrganizerOptions()) == "mdi:microwave"
+
+
+def test_icon_backfill_serviceintervall_sauger():
+    assert suggest_entity_icon(_FakeEntry("sensor.serviceintervall_sauger"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_sonnenwinkel_trigger():
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenwinkel_trigger"), OrganizerOptions()) == "mdi:white-balance-sunny"
+
+
+def test_icon_backfill_ultraloq():
+    assert suggest_entity_icon(_FakeEntry("sensor.ultraloq"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_anker_powercore():
+    assert suggest_entity_icon(_FakeEntry("sensor.anker_powercore"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_streaminganbieter():
+    assert suggest_entity_icon(_FakeEntry("sensor.streaminganbieter"), OrganizerOptions()) == "mdi:play-circle"
+
+
+def test_icon_backfill_waermepumpentarif():
+    assert suggest_entity_icon(_FakeEntry("sensor.waermepumpentarif"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_entwaesserungsschacht():
+    assert suggest_entity_icon(_FakeEntry("sensor.entwaesserungsschacht"), OrganizerOptions()) == "mdi:water"
+
+
+def test_icon_backfill_gaskosten():
+    assert suggest_entity_icon(_FakeEntry("sensor.gaskosten"), OrganizerOptions()) == "mdi:gas-cylinder"
+
+
+def test_icon_backfill_schlosskasten():
+    assert suggest_entity_icon(_FakeEntry("sensor.schlosskasten"), OrganizerOptions()) == "mdi:lock-outline"
+
+
+def test_icon_backfill_sensorbatterie():
+    assert suggest_entity_icon(_FakeEntry("sensor.sensorbatterie"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_stundenpreis():
+    assert suggest_entity_icon(_FakeEntry("sensor.stundenpreis"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_deco_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.deco_firmware"), OrganizerOptions()) == "mdi:cellphone-settings"
+
+
+def test_icon_backfill_schwuele_luft():
+    assert suggest_entity_icon(_FakeEntry("sensor.schwuele_luft"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_joystick():
+    assert suggest_entity_icon(_FakeEntry("sensor.joystick"), OrganizerOptions()) == "mdi:gamepad"
+
+
+def test_icon_backfill_salzelektrolyse():
+    assert suggest_entity_icon(_FakeEntry("sensor.salzelektrolyse"), OrganizerOptions()) == "mdi:water-off"
+
+
+def test_icon_backfill_collection_day():
+    assert suggest_entity_icon(_FakeEntry("sensor.collection_day"), OrganizerOptions()) == "mdi:calendar-today"
+
+
+def test_icon_backfill_current_tariff():
+    assert suggest_entity_icon(_FakeEntry("sensor.current_tariff"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_badenova():
+    assert suggest_entity_icon(_FakeEntry("sensor.badenova"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_duct():
+    assert suggest_entity_icon(_FakeEntry("sensor.duct"), OrganizerOptions()) == "mdi:pipe"
+
+
+def test_icon_backfill_blue_iris():
+    assert suggest_entity_icon(_FakeEntry("sensor.blue_iris"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_ladeleistungsbegrenzer():
+    assert suggest_entity_icon(_FakeEntry("sensor.ladeleistungsbegrenzer"), OrganizerOptions()) == "mdi:ev-station"
+
+
+def test_icon_backfill_lastprofil():
+    assert suggest_entity_icon(_FakeEntry("sensor.lastprofil"), OrganizerOptions()) == "mdi:chart-line"
