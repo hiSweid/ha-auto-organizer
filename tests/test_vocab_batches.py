@@ -55278,3 +55278,63 @@ def test_batch_tado_geofencing():
 def test_batch_aurora_dimmer():
     assert _has_label("sensor.aurora_dimmer", "lights")
     assert suggest_entity_icon(_FakeEntry("sensor.aurora_dimmer"), OrganizerOptions()) == "mdi:knob"
+
+
+def test_icon_backfill_yaml_modus():
+    assert suggest_entity_icon(_FakeEntry("sensor.yaml_modus"), OrganizerOptions()) == "mdi:code-tags"
+
+
+def test_icon_backfill_luftfeuchtesollwert():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftfeuchtesollwert"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_duco_lueftung():
+    assert suggest_entity_icon(_FakeEntry("sensor.duco_lueftung"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_link_node():
+    assert suggest_entity_icon(_FakeEntry("sensor.link_node"), OrganizerOptions()) == "mdi:nodejs"
+
+
+def test_icon_backfill_homee():
+    assert suggest_entity_icon(_FakeEntry("sensor.homee"), OrganizerOptions()) == "mdi:home-circle"
+
+
+def test_icon_backfill_no_movement():
+    assert suggest_entity_icon(_FakeEntry("sensor.no_movement"), OrganizerOptions()) == "mdi:motion-sensor-off"
+
+
+def test_icon_backfill_ssh_server():
+    assert suggest_entity_icon(_FakeEntry("sensor.ssh_server"), OrganizerOptions()) == "mdi:server-network"
+
+
+def test_icon_backfill_sparabo():
+    assert suggest_entity_icon(_FakeEntry("sensor.sparabo"), OrganizerOptions()) == "mdi:cart-outline"
+
+
+def test_icon_backfill_foreca():
+    assert suggest_entity_icon(_FakeEntry("sensor.foreca"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_oekostrom_tarif():
+    assert suggest_entity_icon(_FakeEntry("sensor.oekostrom_tarif"), OrganizerOptions()) == "mdi:lightbulb-on"
+
+
+def test_icon_backfill_garten():
+    assert suggest_entity_icon(_FakeEntry("sensor.garten"), OrganizerOptions()) == "mdi:tree-outline"
+
+
+def test_icon_backfill_asphalttemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.asphalttemperatur"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_charge_rate():
+    assert suggest_entity_icon(_FakeEntry("sensor.charge_rate"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_muelltrennungsapp():
+    assert suggest_entity_icon(_FakeEntry("sensor.muelltrennungsapp"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_kordelzug():
+    assert suggest_entity_icon(_FakeEntry("sensor.kordelzug"), OrganizerOptions()) == "mdi:cable-data"

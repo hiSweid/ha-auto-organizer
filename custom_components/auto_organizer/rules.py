@@ -25778,6 +25778,23 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "tado geofencing": "mdi:map-marker-radius",
     "aurora dimmer": "mdi:knob",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "yaml modus": "mdi:code-tags",
+    "luftfeuchtesollwert": "mdi:water-percent",
+    "duco lueftung": "mdi:fan",
+    "link node": "mdi:nodejs",
+    "homee": "mdi:home-circle",
+    "no movement": "mdi:motion-sensor-off",
+    "ssh server": "mdi:server-network",
+    "sparabo": "mdi:cart-outline",
+    "foreca": "mdi:weather-cloudy",
+    "oekostrom tarif": "mdi:lightbulb-on",
+    "garten": "mdi:tree-outline",
+    "asphalttemperatur": "mdi:thermometer-lines",
+    "charge rate": "mdi:battery-charging",
+    "muelltrennungsapp": "mdi:recycle",
+    "kordelzug": "mdi:cable-data",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
