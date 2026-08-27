@@ -28463,6 +28463,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ioniser": "mdi:air-purifier",
     "salzdosierung": "mdi:water-pump",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "stossfaenger sauger": "mdi:vacuum",
+    "forecast": "mdi:weather-cloudy",
+    "ultrafeinpartikel": "mdi:air-filter",
+    "besuch da": "mdi:account-question",
+    "nightly build": "mdi:update",
+    "muelltonnenaufkleber": "mdi:trash-can-outline",
+    "akku kalibrierung": "mdi:battery-charging",
+    "gas bill": "mdi:currency-eur",
+    "hoymiles": "mdi:solar-power",
+    "deospray": "mdi:spray-bottle",
+    "ladebeginn": "mdi:ev-station",
+    "damp proof course": "mdi:water-percent",
+    "adaptationsleuchtdichte": "mdi:brightness-6",
+    "alpha version": "mdi:alpha-a-box",
+    "regioit abfall": "mdi:trash-can",
+    "warmfront": "mdi:weather-windy",
+    "yaml editor automation": "mdi:file-document-edit",
+    "bash script": "mdi:script-text",
+    "treppenhausautomatik": "mdi:motion-sensor",
+    "at581x": "mdi:motion-sensor",
+    "bgt24ltr11": "mdi:motion-sensor",
+    "kameraeinstellungen": "mdi:cctv",
+    "staubsaugerfilter": "mdi:air-filter",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
