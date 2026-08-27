@@ -31357,6 +31357,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "druckminderer": "mdi:gauge",
     "verlassen": "mdi:door-open",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "raumkamera": "mdi:camera",
+    "grossgeraete": "mdi:fridge",
+    "wetterglas": "mdi:weather-cloudy",
+    "kalkschutzanlage": "mdi:water-pump",
+    "nightly channel": "mdi:update",
+    "roku express": "mdi:play-circle",
+    "lichtstaerkeeinheit": "mdi:brightness-5",
+    "stimmenansage": "mdi:speaker",
+    "dachboden bewegungsmelder": "mdi:motion-sensor",
+    "wassertank auffuellen": "mdi:water-plus",
+    "smartapp": "mdi:script-text",
+    "version ignorieren": "mdi:update",
+    "supplier switch": "mdi:currency-usd",
+    "zoneminder": "mdi:camera",
+    "paket zugestellt": "mdi:package-variant-closed",
+    "ereignisablauf": "mdi:script-text",
+    "spuelmaschinenzulauf": "mdi:water",
+    "konvektion": "mdi:weather-windy",
+    "unterroutine": "mdi:script-text",
+    "panasonic kamera": "mdi:camera",
+    "night rate": "mdi:currency-usd",
+    "preisgarantie": "mdi:currency-usd",
+    "seismograph": "mdi:motion-sensor",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
