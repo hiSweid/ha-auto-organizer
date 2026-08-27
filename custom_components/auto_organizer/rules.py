@@ -28110,6 +28110,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "offnung": "mdi:lock-open-variant",
     "shieldtv": "mdi:television-classic",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "energiesparmodus automatik": "mdi:power-sleep",
+    "pelletschnecke": "mdi:screw-lag",
+    "e tron": "mdi:car-electric",
+    "hilfsrelais": "mdi:power-plug",
+    "wertsachen": "mdi:package-variant-closed",
+    "ersatzbrennstoff": "mdi:fire",
+    "pirate weather": "mdi:weather-cloudy",
+    "konzentrationsmodus": "mdi:target-account",
+    "playstation 5": "mdi:gamepad-variant",
+    "tuya blind": "mdi:blinds",
+    "benzingeruch": "mdi:smoke-detector",
+    "automation aktiviert": "mdi:robot",
+    "asynchroner aufruf": "mdi:run-fast",
+    "netzwerkueberwachung": "mdi:network",
+    "containerdienst": "mdi:trash-can",
+    "leckerkennung": "mdi:smoke-detector",
+    "heuschnupfenwarnung": "mdi:air-filter",
+    "visibility": "mdi:eye",
+    "fussbodenheizungsregler": "mdi:radiator",
+    "gewaechshauslichtsensor": "mdi:sun-wireless",
+    "regieanweisung": "mdi:movie-open",
+    "gebuehr": "mdi:cash-multiple",
+    "frient": "mdi:air-purifier",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
