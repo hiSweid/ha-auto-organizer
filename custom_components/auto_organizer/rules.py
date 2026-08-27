@@ -27039,6 +27039,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "poe kamera": "mdi:cctv",
     "personennotrufsensor": "mdi:motion-sensor",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "varta": "mdi:battery",
+    "merten jalousie": "mdi:blinds",
+    "sync modul": "mdi:camera",
+    "chain drive": "mdi:window-shutter",
+    "trocknungsgeraet": "mdi:hair-dryer",
+    "lux erfassungsgeraet": "mdi:sun-wireless",
+    "movement zone": "mdi:motion-sensor",
+    "massagesessel": "mdi:sofa",
+    "batch file": "mdi:file-document",
+    "veraltet": "mdi:update",
+    "homepod mini": "mdi:speaker",
+    "frostwarner": "mdi:snowflake-alert",
+    "klaerschacht": "mdi:water-pump",
+    "lagerkellertemperatur": "mdi:thermometer",
+    "blue bin": "mdi:trash-can",
+    "wiedergabeliste": "mdi:playlist-play",
+    "kuehlkettenueberwachung": "mdi:fridge-industrial-alert",
+    "willkommensroutine": "mdi:hand-wave",
+    "megawatt": "mdi:flash",
+    "winix dehumidifier": "mdi:air-humidifier",
+    "geofence exit": "mdi:map-marker-remove",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
