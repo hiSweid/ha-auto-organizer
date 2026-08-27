@@ -31290,6 +31290,25 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "cos phi": "mdi:flash",
     "muenzschloss": "mdi:lock",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "backup skript": "mdi:script-text-outline",
+    "einfahrtskontrolle": "mdi:gate-arrow-right",
+    "einweglichtschranke": "mdi:light-switch",
+    "blondel": "mdi:brightness-6",
+    "laderate": "mdi:power-plug-battery",
+    "awair element": "mdi:air-filter",
+    "kellerwand feucht": "mdi:water-percent",
+    "dooya": "mdi:window-shutter",
+    "gasvertrag": "mdi:gas-cylinder",
+    "windguru": "mdi:weather-windy",
+    "beta teilnahme": "mdi:alpha-b-box-outline",
+    "paketalarm kamera": "mdi:package-up",
+    "tagundnachtgleiche": "mdi:white-balance-sunny",
+    "bodentemperatur": "mdi:thermometer-lines",
+    "videoaufzeichnung": "mdi:video-outline",
+    "sunday morning": "mdi:sun-clock",
+    "fahrbahntemperatur": "mdi:road-variant",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

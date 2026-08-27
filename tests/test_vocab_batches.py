@@ -75502,3 +75502,71 @@ def test_icon_backfill_cos_phi():
 
 def test_icon_backfill_muenzschloss():
     assert suggest_entity_icon(_FakeEntry("sensor.muenzschloss"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_backup_skript():
+    assert suggest_entity_icon(_FakeEntry("sensor.backup_skript"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_einfahrtskontrolle():
+    assert suggest_entity_icon(_FakeEntry("sensor.einfahrtskontrolle"), OrganizerOptions()) == "mdi:gate-arrow-right"
+
+
+def test_icon_backfill_einweglichtschranke():
+    assert suggest_entity_icon(_FakeEntry("sensor.einweglichtschranke"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_icon_backfill_blondel():
+    assert suggest_entity_icon(_FakeEntry("sensor.blondel"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_laderate():
+    assert suggest_entity_icon(_FakeEntry("sensor.laderate"), OrganizerOptions()) == "mdi:power-plug-battery"
+
+
+def test_icon_backfill_awair_element():
+    assert suggest_entity_icon(_FakeEntry("sensor.awair_element"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_kellerwand_feucht():
+    assert suggest_entity_icon(_FakeEntry("sensor.kellerwand_feucht"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_dooya():
+    assert suggest_entity_icon(_FakeEntry("sensor.dooya"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_gasvertrag():
+    assert suggest_entity_icon(_FakeEntry("sensor.gasvertrag"), OrganizerOptions()) == "mdi:gas-cylinder"
+
+
+def test_icon_backfill_windguru():
+    assert suggest_entity_icon(_FakeEntry("sensor.windguru"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_beta_teilnahme():
+    assert suggest_entity_icon(_FakeEntry("sensor.beta_teilnahme"), OrganizerOptions()) == "mdi:alpha-b-box-outline"
+
+
+def test_icon_backfill_paketalarm_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.paketalarm_kamera"), OrganizerOptions()) == "mdi:package-up"
+
+
+def test_icon_backfill_tagundnachtgleiche():
+    assert suggest_entity_icon(_FakeEntry("sensor.tagundnachtgleiche"), OrganizerOptions()) == "mdi:white-balance-sunny"
+
+
+def test_icon_backfill_bodentemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.bodentemperatur"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_videoaufzeichnung():
+    assert suggest_entity_icon(_FakeEntry("sensor.videoaufzeichnung"), OrganizerOptions()) == "mdi:video-outline"
+
+
+def test_icon_backfill_sunday_morning():
+    assert suggest_entity_icon(_FakeEntry("sensor.sunday_morning"), OrganizerOptions()) == "mdi:sun-clock"
+
+
+def test_icon_backfill_fahrbahntemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.fahrbahntemperatur"), OrganizerOptions()) == "mdi:road-variant"
