@@ -61922,3 +61922,99 @@ def test_icon_backfill_dlink_motion():
 
 def test_icon_backfill_feierabendmodus():
     assert suggest_entity_icon(_FakeEntry("sensor.feierabendmodus"), OrganizerOptions()) == "mdi:weather-night"
+
+
+def test_icon_backfill_dockstation_reinigen():
+    assert suggest_entity_icon(_FakeEntry("sensor.dockstation_reinigen"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_knx_gruppentelegramm():
+    assert suggest_entity_icon(_FakeEntry("sensor.knx_gruppentelegramm"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_rs485():
+    assert suggest_entity_icon(_FakeEntry("sensor.rs485"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_konzentrationsschwaeche():
+    assert suggest_entity_icon(_FakeEntry("sensor.konzentrationsschwaeche"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_windrichtungsgrad():
+    assert suggest_entity_icon(_FakeEntry("sensor.windrichtungsgrad"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_dauerverbrauch():
+    assert suggest_entity_icon(_FakeEntry("sensor.dauerverbrauch"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_sperrzonen():
+    assert suggest_entity_icon(_FakeEntry("sensor.sperrzonen"), OrganizerOptions()) == "mdi:map-marker-radius"
+
+
+def test_icon_backfill_infrared():
+    assert suggest_entity_icon(_FakeEntry("sensor.infrared"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_changelog_url():
+    assert suggest_entity_icon(_FakeEntry("sensor.changelog_url"), OrganizerOptions()) == "mdi:text-box-outline"
+
+
+def test_icon_backfill_pre_condition():
+    assert suggest_entity_icon(_FakeEntry("sensor.pre_condition"), OrganizerOptions()) == "mdi:check-circle-outline"
+
+
+def test_icon_backfill_kontaktloses_thermometer():
+    assert suggest_entity_icon(_FakeEntry("sensor.kontaktloses_thermometer"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_verschlussriegel():
+    assert suggest_entity_icon(_FakeEntry("sensor.verschlussriegel"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_restock_reminder():
+    assert suggest_entity_icon(_FakeEntry("sensor.restock_reminder"), OrganizerOptions()) == "mdi:cart-plus"
+
+
+def test_icon_backfill_aufgusstemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.aufgusstemperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_kehrfunktion():
+    assert suggest_entity_icon(_FakeEntry("sensor.kehrfunktion"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_mcp9808():
+    assert suggest_entity_icon(_FakeEntry("sensor.mcp9808"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_lichtsteuerung():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtsteuerung"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_energiesparmodus_sauger():
+    assert suggest_entity_icon(_FakeEntry("sensor.energiesparmodus_sauger"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_spuelmaschinentab():
+    assert suggest_entity_icon(_FakeEntry("sensor.spuelmaschinentab"), OrganizerOptions()) == "mdi:washing-machine"
+
+
+def test_icon_backfill_taupunktregelung():
+    assert suggest_entity_icon(_FakeEntry("sensor.taupunktregelung"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_buildnummer():
+    assert suggest_entity_icon(_FakeEntry("sensor.buildnummer"), OrganizerOptions()) == "mdi:numeric"
+
+
+def test_icon_backfill_schweissgeraet():
+    assert suggest_entity_icon(_FakeEntry("sensor.schweissgeraet"), OrganizerOptions()) == "mdi:wrench"
+
+
+def test_icon_backfill_sperrgutanmeldung():
+    assert suggest_entity_icon(_FakeEntry("sensor.sperrgutanmeldung"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_flashvorgang():
+    assert suggest_entity_icon(_FakeEntry("sensor.flashvorgang"), OrganizerOptions()) == "mdi:update"

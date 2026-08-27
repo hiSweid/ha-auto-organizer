@@ -27581,6 +27581,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "dlink motion": "mdi:motion-sensor",
     "feierabendmodus": "mdi:weather-night",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "dockstation reinigen": "mdi:vacuum",
+    "knx gruppentelegramm": "mdi:network",
+    "rs485": "mdi:network",
+    "konzentrationsschwaeche": "mdi:air-filter",
+    "windrichtungsgrad": "mdi:weather-windy",
+    "dauerverbrauch": "mdi:power-plug",
+    "sperrzonen": "mdi:map-marker-radius",
+    "infrared": "mdi:motion-sensor",
+    "changelog url": "mdi:text-box-outline",
+    "pre condition": "mdi:check-circle-outline",
+    "kontaktloses thermometer": "mdi:thermometer",
+    "verschlussriegel": "mdi:lock",
+    "restock reminder": "mdi:cart-plus",
+    "aufgusstemperatur": "mdi:thermometer",
+    "kehrfunktion": "mdi:vacuum",
+    "mcp9808": "mdi:thermometer",
+    "lichtsteuerung": "mdi:lightbulb",
+    "energiesparmodus sauger": "mdi:vacuum",
+    "spuelmaschinentab": "mdi:washing-machine",
+    "taupunktregelung": "mdi:water-percent",
+    "buildnummer": "mdi:numeric",
+    "schweissgeraet": "mdi:wrench",
+    "sperrgutanmeldung": "mdi:trash-can",
+    "flashvorgang": "mdi:update",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
