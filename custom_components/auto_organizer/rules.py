@@ -32785,6 +32785,20 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ausfuehrungsplan": "mdi:script-text-outline",
     "obstgarten": "mdi:tree-outline",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "atmospheric river": "mdi:weather-windy",
+    "presscontainer": "mdi:trash-can-outline",
+    "hoehentief": "mdi:weather-partly-cloudy",
+    "curbside pickup": "mdi:package-variant-closed",
+    "krimidinner": "mdi:movie-open",
+    "beschlagene fenster": "mdi:window-shutter",
+    "cgnat": "mdi:network",
+    "gaming szene": "mdi:gamepad",
+    "waste bin": "mdi:trash-can",
+    "abbruchbedingung": "mdi:cancel",
+    "laufrichtung": "mdi:arrow-right-bold",
+    "laserthermometer": "mdi:temperature-celsius",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

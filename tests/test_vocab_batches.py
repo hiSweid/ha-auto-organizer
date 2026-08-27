@@ -80914,3 +80914,51 @@ def test_icon_backfill_ausfuehrungsplan():
 
 def test_icon_backfill_obstgarten():
     assert suggest_entity_icon(_FakeEntry("sensor.obstgarten"), OrganizerOptions()) == "mdi:tree-outline"
+
+
+def test_icon_backfill_atmospheric_river():
+    assert suggest_entity_icon(_FakeEntry("sensor.atmospheric_river"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_presscontainer():
+    assert suggest_entity_icon(_FakeEntry("sensor.presscontainer"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_icon_backfill_hoehentief():
+    assert suggest_entity_icon(_FakeEntry("sensor.hoehentief"), OrganizerOptions()) == "mdi:weather-partly-cloudy"
+
+
+def test_icon_backfill_curbside_pickup():
+    assert suggest_entity_icon(_FakeEntry("sensor.curbside_pickup"), OrganizerOptions()) == "mdi:package-variant-closed"
+
+
+def test_icon_backfill_krimidinner():
+    assert suggest_entity_icon(_FakeEntry("sensor.krimidinner"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_icon_backfill_beschlagene_fenster():
+    assert suggest_entity_icon(_FakeEntry("sensor.beschlagene_fenster"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_cgnat():
+    assert suggest_entity_icon(_FakeEntry("sensor.cgnat"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_gaming_szene():
+    assert suggest_entity_icon(_FakeEntry("sensor.gaming_szene"), OrganizerOptions()) == "mdi:gamepad"
+
+
+def test_icon_backfill_waste_bin():
+    assert suggest_entity_icon(_FakeEntry("sensor.waste_bin"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_abbruchbedingung():
+    assert suggest_entity_icon(_FakeEntry("sensor.abbruchbedingung"), OrganizerOptions()) == "mdi:cancel"
+
+
+def test_icon_backfill_laufrichtung():
+    assert suggest_entity_icon(_FakeEntry("sensor.laufrichtung"), OrganizerOptions()) == "mdi:arrow-right-bold"
+
+
+def test_icon_backfill_laserthermometer():
+    assert suggest_entity_icon(_FakeEntry("sensor.laserthermometer"), OrganizerOptions()) == "mdi:temperature-celsius"
