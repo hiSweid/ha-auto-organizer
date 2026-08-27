@@ -6,6 +6,23 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.147] - 2026-08-27
+
+### Added
+- Further `SPECIFIC_ICONS` entries from the ongoing local-LLM icon backfill
+  batch job (~1271 total merged so far this run, ~5.2k of the original
+  6.9k gap remaining). One batch was caught and auto-reverted by the
+  test-suite safety net during this window (a proposed icon happened to
+  collide with an existing `test_rules.py` expectation) — working as
+  designed, no bad content landed.
+
+### Fixed
+- 4 more icon mismatches from the same surface-similarity failure pattern:
+  `waterpik` (an oral irrigator) had `mdi:toilet`, `hozelock` (a garden
+  hose/watering brand) had `mdi:flower-tulip`, `sparschaeler` (a vegetable
+  peeler) had `mdi:shower-head`, `teamspeak` (voice chat) had
+  `mdi:account-music`.
+
 ## [0.9.146] - 2026-08-27
 
 ### Added
