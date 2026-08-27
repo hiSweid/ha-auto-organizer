@@ -31542,6 +31542,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "morgenroutine szene": "mdi:sun-clock",
     "stundenvorhersage": "mdi:weather-partly-cloudy",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "scene sequence": "mdi:playlist-play",
+    "wo ist mein handy": "mdi:cellphone-wireless",
+    "einkaufsbudget": "mdi:currency-usd",
+    "mqtt broker": "mdi:server-network",
+    "myenergi eddi": "mdi:solar-power",
+    "abendroutine szene": "mdi:weather-night",
+    "mealie": "mdi:cart-outline",
+    "trio leuchten": "mdi:ceiling-light",
+    "discokugel szene": "mdi:party-popper",
+    "lithiumknopfzelle": "mdi:battery-heart-variant",
+    "combustion chamber": "mdi:fire",
+    "kinderwagenventilator": "mdi:fan-chevron-up",
+    "eiswuerfelform": "mdi:ice-pop",
+    "abfolgeplan": "mdi:timeline-text",
+    "protein skimmer": "mdi:water-pump",
+    "akkuladestand10": "mdi:battery-10",
+    "kitchen appliance": "mdi:microwave",
+    "netro": "mdi:sprinkler",
+    "geze": "mdi:lock-smart",
+    "call service node": "mdi:application-cog",
+    "naim": "mdi:audio-video",
+    "opt3001": "mdi:lightbulb",
+    "windkuehleeffekt": "mdi:weather-windy",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
