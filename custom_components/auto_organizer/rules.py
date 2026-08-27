@@ -29084,6 +29084,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "vibrationsmopp": "mdi:vacuum",
     "wan ip": "mdi:network",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "einschlafsequenz": "mdi:sleep",
+    "iq300": "mdi:blender",
+    "adsorptionstrockner": "mdi:hair-dryer",
+    "device handler": "mdi:devices",
+    "lieferantenwechsel": "mdi:truck-delivery",
+    "pebblebee": "mdi:home-account",
+    "double take": "mdi:camera-burst",
+    "nannycam": "mdi:cctv",
+    "urlaubsschaltung": "mdi:airport",
+    "energiepreisbremse": "mdi:currency-eur",
+    "philips speedpro": "mdi:vacuum",
+    "backlight sensor": "mdi:brightness-6",
+    "push benachrichtigung kamera": "mdi:camera-plus",
+    "saugkraft": "mdi:air-purifier",
+    "luftmasse": "mdi:weather-windy",
+    "schwellwertueberwachung": "mdi:alert-decagram",
+    "aktualisierungskanal": "mdi:update",
+    "find my device": "mdi:cellphone-marker",
+    "danby dehumidifier": "mdi:water-off",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

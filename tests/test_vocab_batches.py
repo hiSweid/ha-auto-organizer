@@ -67438,3 +67438,79 @@ def test_icon_backfill_vibrationsmopp():
 
 def test_icon_backfill_wan_ip():
     assert suggest_entity_icon(_FakeEntry("sensor.wan_ip"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_einschlafsequenz():
+    assert suggest_entity_icon(_FakeEntry("sensor.einschlafsequenz"), OrganizerOptions()) == "mdi:sleep"
+
+
+def test_icon_backfill_iq300():
+    assert suggest_entity_icon(_FakeEntry("sensor.iq300"), OrganizerOptions()) == "mdi:blender"
+
+
+def test_icon_backfill_adsorptionstrockner():
+    assert suggest_entity_icon(_FakeEntry("sensor.adsorptionstrockner"), OrganizerOptions()) == "mdi:hair-dryer"
+
+
+def test_icon_backfill_device_handler():
+    assert suggest_entity_icon(_FakeEntry("sensor.device_handler"), OrganizerOptions()) == "mdi:devices"
+
+
+def test_icon_backfill_lieferantenwechsel():
+    assert suggest_entity_icon(_FakeEntry("sensor.lieferantenwechsel"), OrganizerOptions()) == "mdi:truck-delivery"
+
+
+def test_icon_backfill_pebblebee():
+    assert suggest_entity_icon(_FakeEntry("sensor.pebblebee"), OrganizerOptions()) == "mdi:home-account"
+
+
+def test_icon_backfill_double_take():
+    assert suggest_entity_icon(_FakeEntry("sensor.double_take"), OrganizerOptions()) == "mdi:camera-burst"
+
+
+def test_icon_backfill_nannycam():
+    assert suggest_entity_icon(_FakeEntry("sensor.nannycam"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_icon_backfill_urlaubsschaltung():
+    assert suggest_entity_icon(_FakeEntry("sensor.urlaubsschaltung"), OrganizerOptions()) == "mdi:airport"
+
+
+def test_icon_backfill_energiepreisbremse():
+    assert suggest_entity_icon(_FakeEntry("sensor.energiepreisbremse"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_philips_speedpro():
+    assert suggest_entity_icon(_FakeEntry("sensor.philips_speedpro"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_backlight_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.backlight_sensor"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_push_benachrichtigung_kamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.push_benachrichtigung_kamera"), OrganizerOptions()) == "mdi:camera-plus"
+
+
+def test_icon_backfill_saugkraft():
+    assert suggest_entity_icon(_FakeEntry("sensor.saugkraft"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_icon_backfill_luftmasse():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftmasse"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_schwellwertueberwachung():
+    assert suggest_entity_icon(_FakeEntry("sensor.schwellwertueberwachung"), OrganizerOptions()) == "mdi:alert-decagram"
+
+
+def test_icon_backfill_aktualisierungskanal():
+    assert suggest_entity_icon(_FakeEntry("sensor.aktualisierungskanal"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_find_my_device():
+    assert suggest_entity_icon(_FakeEntry("sensor.find_my_device"), OrganizerOptions()) == "mdi:cellphone-marker"
+
+
+def test_icon_backfill_danby_dehumidifier():
+    assert suggest_entity_icon(_FakeEntry("sensor.danby_dehumidifier"), OrganizerOptions()) == "mdi:water-off"
