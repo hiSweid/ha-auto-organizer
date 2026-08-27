@@ -60730,3 +60730,91 @@ def test_icon_backfill_arlo_secure():
 
 def test_icon_backfill_grossgeraet():
     assert suggest_entity_icon(_FakeEntry("sensor.grossgeraet"), OrganizerOptions()) == "mdi:fridge"
+
+
+def test_icon_backfill_weisseware():
+    assert suggest_entity_icon(_FakeEntry("sensor.weisseware"), OrganizerOptions()) == "mdi:washing-machine"
+
+
+def test_icon_backfill_nickel_metal_hydrid():
+    assert suggest_entity_icon(_FakeEntry("sensor.nickel_metal_hydrid"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_kofferradio():
+    assert suggest_entity_icon(_FakeEntry("sensor.kofferradio"), OrganizerOptions()) == "mdi:radio"
+
+
+def test_icon_backfill_temperaturmesspunkt():
+    assert suggest_entity_icon(_FakeEntry("sensor.temperaturmesspunkt"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_sparschaeler():
+    assert suggest_entity_icon(_FakeEntry("sensor.sparschaeler"), OrganizerOptions()) == "mdi:shower-head"
+
+
+def test_icon_backfill_bug_zapper():
+    assert suggest_entity_icon(_FakeEntry("sensor.bug_zapper"), OrganizerOptions()) == "mdi:bug"
+
+
+def test_icon_backfill_brennstoff():
+    assert suggest_entity_icon(_FakeEntry("sensor.brennstoff"), OrganizerOptions()) == "mdi:gas-station"
+
+
+def test_icon_backfill_luftguete_index():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftguete_index"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_batterieschwellenwert():
+    assert suggest_entity_icon(_FakeEntry("sensor.batterieschwellenwert"), OrganizerOptions()) == "mdi:battery-alert"
+
+
+def test_icon_backfill_anwesenheit():
+    assert suggest_entity_icon(_FakeEntry("sensor.anwesenheit"), OrganizerOptions()) == "mdi:home-account"
+
+
+def test_icon_backfill_teppichvermeidung():
+    assert suggest_entity_icon(_FakeEntry("sensor.teppichvermeidung"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_vordachhelligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.vordachhelligkeit"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_chiptonne():
+    assert suggest_entity_icon(_FakeEntry("sensor.chiptonne"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_error_handling():
+    assert suggest_entity_icon(_FakeEntry("sensor.error_handling"), OrganizerOptions()) == "mdi:alert-circle"
+
+
+def test_icon_backfill_seewind():
+    assert suggest_entity_icon(_FakeEntry("sensor.seewind"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_haushaltszaehler():
+    assert suggest_entity_icon(_FakeEntry("sensor.haushaltszaehler"), OrganizerOptions()) == "mdi:counter"
+
+
+def test_icon_backfill_esphome_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.esphome_firmware"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_duengung():
+    assert suggest_entity_icon(_FakeEntry("sensor.duengung"), OrganizerOptions()) == "mdi:seed"
+
+
+def test_icon_backfill_lan_ip():
+    assert suggest_entity_icon(_FakeEntry("sensor.lan_ip"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_tastaturbatterie():
+    assert suggest_entity_icon(_FakeEntry("sensor.tastaturbatterie"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_erweichungstemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.erweichungstemperatur"), OrganizerOptions()) == "mdi:thermometer-water"
+
+
+def test_icon_backfill_update_rueckgaengig_machen():
+    assert suggest_entity_icon(_FakeEntry("sensor.update_rueckgaengig_machen"), OrganizerOptions()) == "mdi:undo"

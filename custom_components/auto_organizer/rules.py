@@ -27255,6 +27255,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "arlo secure": "mdi:cctv",
     "grossgeraet": "mdi:fridge",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "weisseware": "mdi:washing-machine",
+    "nickel metal hydrid": "mdi:battery-charging",
+    "kofferradio": "mdi:radio",
+    "temperaturmesspunkt": "mdi:thermometer",
+    "sparschaeler": "mdi:shower-head",
+    "bug zapper": "mdi:bug",
+    "brennstoff": "mdi:gas-station",
+    "luftguete index": "mdi:air-filter",
+    "batterieschwellenwert": "mdi:battery-alert",
+    "anwesenheit": "mdi:home-account",
+    "teppichvermeidung": "mdi:robot-vacuum",
+    "vordachhelligkeit": "mdi:brightness-6",
+    "chiptonne": "mdi:trash-can",
+    "error handling": "mdi:alert-circle",
+    "seewind": "mdi:weather-windy",
+    "haushaltszaehler": "mdi:counter",
+    "esphome firmware": "mdi:update",
+    "duengung": "mdi:seed",
+    "lan ip": "mdi:network",
+    "tastaturbatterie": "mdi:battery",
+    "erweichungstemperatur": "mdi:thermometer-water",
+    "update rueckgaengig machen": "mdi:undo",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
