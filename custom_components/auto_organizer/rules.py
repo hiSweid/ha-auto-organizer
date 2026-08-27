@@ -31614,6 +31614,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "regelbaustein": "mdi:cube",
     "rotlicht": "mdi:lightbulb",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "unterputzdose": "mdi:power-socket-de",
+    "noip": "mdi:network",
+    "growing season": "mdi:calendar-range",
+    "festpreis": "mdi:currency-eur",
+    "radialgeblaeserad": "mdi:fan-chevron-up",
+    "photocell": "mdi:brightness-5",
+    "verpackungsverordnung": "mdi:recycle",
+    "suewag": "mdi:currency-eur",
+    "stratus": "mdi:weather-cloudy",
+    "tuerklingel akku": "mdi:battery-charging-wireless",
+    "inflation": "mdi:currency-usd",
+    "sprachassistent": "mdi:account-voice",
+    "heisswassertrocknung": "mdi:tumble-dryer",
+    "cistern": "mdi:water-well",
+    "laubsaugerbeutel": "mdi:trash-can-outline",
+    "distilled water": "mdi:water-off",
+    "flatmate": "mdi:account-group",
+    "energiefluss": "mdi:solar-power",
+    "wandtrocknung": "mdi:hair-dryer",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
