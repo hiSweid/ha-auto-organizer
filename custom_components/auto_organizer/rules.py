@@ -31592,6 +31592,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "sender suchlauf": "mdi:radio-tower",
     "ambientelichtsensor": "mdi:lightbulb",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "cumulus": "mdi:weather-cloudy",
+    "rollladensteuerzentrale": "mdi:blinds",
+    "lastgang": "mdi:power-plug",
+    "fan blade": "mdi:fan",
+    "bienenstock aktivitaet": "mdi:bee-flower",
+    "tamper switch": "mdi:alert",
+    "3sat mediathek": "mdi:television-classic",
+    "fallerkennung": "mdi:motion-sensor",
+    "vera scene": "mdi:script-text",
+    "salzstand": "mdi:water-opacity",
+    "wet spot": "mdi:water-alert",
+    "curved fernseher": "mdi:television-classic",
+    "skriptheader": "mdi:script-text",
+    "seamless update": "mdi:update",
+    "weichspueler": "mdi:shopping",
+    "update server": "mdi:server",
+    "inverter temperature": "mdi:thermometer",
+    "vent axia": "mdi:fan",
+    "regelbaustein": "mdi:cube",
+    "rotlicht": "mdi:lightbulb",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

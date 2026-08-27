@@ -76606,3 +76606,83 @@ def test_icon_backfill_sender_suchlauf():
 
 def test_icon_backfill_ambientelichtsensor():
     assert suggest_entity_icon(_FakeEntry("sensor.ambientelichtsensor"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_cumulus():
+    assert suggest_entity_icon(_FakeEntry("sensor.cumulus"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_rollladensteuerzentrale():
+    assert suggest_entity_icon(_FakeEntry("sensor.rollladensteuerzentrale"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_icon_backfill_lastgang():
+    assert suggest_entity_icon(_FakeEntry("sensor.lastgang"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_fan_blade():
+    assert suggest_entity_icon(_FakeEntry("sensor.fan_blade"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_bienenstock_aktivitaet():
+    assert suggest_entity_icon(_FakeEntry("sensor.bienenstock_aktivitaet"), OrganizerOptions()) == "mdi:bee-flower"
+
+
+def test_icon_backfill_tamper_switch():
+    assert suggest_entity_icon(_FakeEntry("sensor.tamper_switch"), OrganizerOptions()) == "mdi:alert"
+
+
+def test_icon_backfill_3sat_mediathek():
+    assert suggest_entity_icon(_FakeEntry("sensor.3sat_mediathek"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_fallerkennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.fallerkennung"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_vera_scene():
+    assert suggest_entity_icon(_FakeEntry("sensor.vera_scene"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_salzstand():
+    assert suggest_entity_icon(_FakeEntry("sensor.salzstand"), OrganizerOptions()) == "mdi:water-opacity"
+
+
+def test_icon_backfill_wet_spot():
+    assert suggest_entity_icon(_FakeEntry("sensor.wet_spot"), OrganizerOptions()) == "mdi:water-alert"
+
+
+def test_icon_backfill_curved_fernseher():
+    assert suggest_entity_icon(_FakeEntry("sensor.curved_fernseher"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_skriptheader():
+    assert suggest_entity_icon(_FakeEntry("sensor.skriptheader"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_seamless_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.seamless_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_weichspueler():
+    assert suggest_entity_icon(_FakeEntry("sensor.weichspueler"), OrganizerOptions()) == "mdi:shopping"
+
+
+def test_icon_backfill_update_server():
+    assert suggest_entity_icon(_FakeEntry("sensor.update_server"), OrganizerOptions()) == "mdi:server"
+
+
+def test_icon_backfill_inverter_temperature():
+    assert suggest_entity_icon(_FakeEntry("sensor.inverter_temperature"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_vent_axia():
+    assert suggest_entity_icon(_FakeEntry("sensor.vent_axia"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_regelbaustein():
+    assert suggest_entity_icon(_FakeEntry("sensor.regelbaustein"), OrganizerOptions()) == "mdi:cube"
+
+
+def test_icon_backfill_rotlicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.rotlicht"), OrganizerOptions()) == "mdi:lightbulb"
