@@ -78014,3 +78014,75 @@ def test_icon_backfill_schwimmbadabdeckung():
 
 def test_icon_backfill_deponieverordnung():
     assert suggest_entity_icon(_FakeEntry("sensor.deponieverordnung"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_icon_backfill_versionscode():
+    assert suggest_entity_icon(_FakeEntry("sensor.versionscode"), OrganizerOptions()) == "mdi:content-save"
+
+
+def test_icon_backfill_hoermann_supramatic():
+    assert suggest_entity_icon(_FakeEntry("sensor.hoermann_supramatic"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_second_life_batterie():
+    assert suggest_entity_icon(_FakeEntry("sensor.second_life_batterie"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_purkinje_effekt():
+    assert suggest_entity_icon(_FakeEntry("sensor.purkinje_effekt"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_iq700():
+    assert suggest_entity_icon(_FakeEntry("sensor.iq700"), OrganizerOptions()) == "mdi:microwave"
+
+
+def test_icon_backfill_verbraucher():
+    assert suggest_entity_icon(_FakeEntry("sensor.verbraucher"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_cron_syntax():
+    assert suggest_entity_icon(_FakeEntry("sensor.cron_syntax"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_atmocube():
+    assert suggest_entity_icon(_FakeEntry("sensor.atmocube"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_weatherflow():
+    assert suggest_entity_icon(_FakeEntry("sensor.weatherflow"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_hitzewellenszene():
+    assert suggest_entity_icon(_FakeEntry("sensor.hitzewellenszene"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_icon_backfill_haos_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.haos_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_meinawb():
+    assert suggest_entity_icon(_FakeEntry("sensor.meinawb"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_ens160():
+    assert suggest_entity_icon(_FakeEntry("sensor.ens160"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_viomi():
+    assert suggest_entity_icon(_FakeEntry("sensor.viomi"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_schaltbar():
+    assert suggest_entity_icon(_FakeEntry("sensor.schaltbar"), OrganizerOptions()) == "mdi:power-socket"
+
+
+def test_icon_backfill_keilhoch():
+    assert suggest_entity_icon(_FakeEntry("sensor.keilhoch"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_icon_backfill_keyless_entry():
+    assert suggest_entity_icon(_FakeEntry("sensor.keyless_entry"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_icon_backfill_glasfaserkabel():
+    assert suggest_entity_icon(_FakeEntry("sensor.glasfaserkabel"), OrganizerOptions()) == "mdi:ethernet-cable"

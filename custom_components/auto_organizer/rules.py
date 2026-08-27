@@ -31980,6 +31980,26 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "schwimmbadabdeckung": "mdi:pool",
     "deponieverordnung": "mdi:trash-can-outline",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "versionscode": "mdi:content-save",
+    "hoermann supramatic": "mdi:window-shutter",
+    "second life batterie": "mdi:battery-charging",
+    "purkinje effekt": "mdi:lightbulb",
+    "iq700": "mdi:microwave",
+    "verbraucher": "mdi:flash",
+    "cron syntax": "mdi:calendar-clock",
+    "atmocube": "mdi:air-filter",
+    "weatherflow": "mdi:weather-cloudy",
+    "hitzewellenszene": "mdi:thermostat",
+    "haos update": "mdi:update",
+    "meinawb": "mdi:trash-can",
+    "ens160": "mdi:air-filter",
+    "viomi": "mdi:robot-vacuum",
+    "schaltbar": "mdi:power-socket",
+    "keilhoch": "mdi:weather-windy",
+    "keyless entry": "mdi:lock",
+    "glasfaserkabel": "mdi:ethernet-cable",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
