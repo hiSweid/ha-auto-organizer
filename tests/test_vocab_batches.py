@@ -73766,3 +73766,79 @@ def test_icon_backfill_fehlende_artikel():
 
 def test_icon_backfill_dch_s160():
     assert suggest_entity_icon(_FakeEntry("sensor.dch_s160"), OrganizerOptions()) == "mdi:leak"
+
+
+def test_icon_backfill_l3_spannung():
+    assert suggest_entity_icon(_FakeEntry("sensor.l3_spannung"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_grid_import():
+    assert suggest_entity_icon(_FakeEntry("sensor.grid_import"), OrganizerOptions()) == "mdi:transmission-tower"
+
+
+def test_icon_backfill_uva_strahlung():
+    assert suggest_entity_icon(_FakeEntry("sensor.uva_strahlung"), OrganizerOptions()) == "mdi:sun-wireless"
+
+
+def test_icon_backfill_akkuturm():
+    assert suggest_entity_icon(_FakeEntry("sensor.akkuturm"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_objektivabdeckung():
+    assert suggest_entity_icon(_FakeEntry("sensor.objektivabdeckung"), OrganizerOptions()) == "mdi:camera-off"
+
+
+def test_icon_backfill_kugellager_luefter():
+    assert suggest_entity_icon(_FakeEntry("sensor.kugellager_luefter"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_oekihof():
+    assert suggest_entity_icon(_FakeEntry("sensor.oekihof"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_waste_collection():
+    assert suggest_entity_icon(_FakeEntry("sensor.waste_collection"), OrganizerOptions()) == "mdi:delete"
+
+
+def test_icon_backfill_getraenkekasten():
+    assert suggest_entity_icon(_FakeEntry("sensor.getraenkekasten"), OrganizerOptions()) == "mdi:cup-water"
+
+
+def test_icon_backfill_automagic():
+    assert suggest_entity_icon(_FakeEntry("sensor.automagic"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_battery_cover():
+    assert suggest_entity_icon(_FakeEntry("sensor.battery_cover"), OrganizerOptions()) == "mdi:battery-unknown"
+
+
+def test_icon_backfill_port_knocking():
+    assert suggest_entity_icon(_FakeEntry("sensor.port_knocking"), OrganizerOptions()) == "mdi:knob"
+
+
+def test_icon_backfill_auf_trigger_warten():
+    assert suggest_entity_icon(_FakeEntry("sensor.auf_trigger_warten"), OrganizerOptions()) == "mdi:timer-sand"
+
+
+def test_icon_backfill_anaerobic_digester():
+    assert suggest_entity_icon(_FakeEntry("sensor.anaerobic_digester"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_ereignisclip():
+    assert suggest_entity_icon(_FakeEntry("sensor.ereignisclip"), OrganizerOptions()) == "mdi:filmstrip-box"
+
+
+def test_icon_backfill_kaeltewellenszene():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaeltewellenszene"), OrganizerOptions()) == "mdi:palette-outline"
+
+
+def test_icon_backfill_knock_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.knock_sensor"), OrganizerOptions()) == "mdi:doorbell"
+
+
+def test_icon_backfill_thermopile_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.thermopile_sensor"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_kraeutergarten():
+    assert suggest_entity_icon(_FakeEntry("sensor.kraeutergarten"), OrganizerOptions()) == "mdi:leaf"

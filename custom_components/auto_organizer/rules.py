@@ -30814,6 +30814,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "fehlende artikel": "mdi:shopping",
     "dch s160": "mdi:leak",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "l3 spannung": "mdi:flash",
+    "grid import": "mdi:transmission-tower",
+    "uva strahlung": "mdi:sun-wireless",
+    "akkuturm": "mdi:battery-charging",
+    "objektivabdeckung": "mdi:camera-off",
+    "kugellager luefter": "mdi:fan",
+    "oekihof": "mdi:trash-can",
+    "waste collection": "mdi:delete",
+    "getraenkekasten": "mdi:cup-water",
+    "automagic": "mdi:script-text",
+    "battery cover": "mdi:battery-unknown",
+    "port knocking": "mdi:knob",
+    "auf trigger warten": "mdi:timer-sand",
+    "anaerobic digester": "mdi:recycle",
+    "ereignisclip": "mdi:filmstrip-box",
+    "kaeltewellenszene": "mdi:palette-outline",
+    "knock sensor": "mdi:doorbell",
+    "thermopile sensor": "mdi:thermometer-lines",
+    "kraeutergarten": "mdi:leaf",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
