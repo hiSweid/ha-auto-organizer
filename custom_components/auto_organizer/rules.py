@@ -29983,6 +29983,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "shimano steps akku": "mdi:battery",
     "netzstrom": "mdi:power-plug",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "erhardt jalousie": "mdi:blinds",
+    "abloy protec2": "mdi:lock",
+    "tagesroutine": "mdi:calendar-clock",
+    "supply temperature": "mdi:thermometer",
+    "waffeleisen": "mdi:pan",
+    "freie zimmer": "mdi:home-outline",
+    "dirty water tank": "mdi:water-pump",
+    "diebstahlschutz maehroboter": "mdi:mower",
+    "stosslueftung": "mdi:fan",
+    "dynamisches lastmanagement": "mdi:power-plug",
+    "automation blueprint import": "mdi:content-copy",
+    "surface switch": "mdi:light-switch",
+    "autarkie": "mdi:solar-power",
+    "futterspender": "mdi:bowl",
+    "climacell": "mdi:weather-partly-cloudy",
+    "abfahrtssequenz": "mdi:train",
+    "darrmethode": "mdi:water-percent",
+    "styroporsammlung": "mdi:recycle",
+    "ultraschallsensor": "mdi:radar",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
