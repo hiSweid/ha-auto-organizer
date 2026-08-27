@@ -28941,6 +28941,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "winkhaus": "mdi:door-open",
     "echo dot": "mdi:google-assistant",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "deionized water": "mdi:water-off",
+    "abluftrohr": "mdi:fan-alert",
+    "vbscript": "mdi:script-text",
+    "norman shutter": "mdi:window-shutter",
+    "musicalnacht": "mdi:music-note",
+    "enthaerteranlage": "mdi:water-pump",
+    "safebox": "mdi:lock",
+    "demand response": "mdi:solar-power",
+    "erdgasgeruch": "mdi:gas-cylinder",
+    "changeover switch": "mdi:toggle-switch",
+    "awido": "mdi:trash-can",
+    "leistungsspitze": "mdi:flash",
+    "l2 leistung": "mdi:flash",
+    "schaltzeiten": "mdi:timer-sand",
+    "helligkeitskalibrierung": "mdi:brightness-6",
+    "24v batterie": "mdi:battery-charging-20",
+    "gartenwerkzeug": "mdi:toolbox",
+    "feierabendstimmung": "mdi:weather-night",
+    "abfallwirtschaftsplan": "mdi:recycle",
+    "verteilerdose": "mdi:power-plug",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
