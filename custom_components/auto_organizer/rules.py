@@ -28508,6 +28508,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "hawaii party": "mdi:palm-tree",
     "efekta": "mdi:air-filter",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "blauberg luefter": "mdi:fan",
+    "hazel regel": "mdi:script-text-outline",
+    "vorhangraffhalter": "mdi:window-shutter",
+    "gaestezimmerlicht": "mdi:lightbulb",
+    "reflow temperatur": "mdi:thermometer",
+    "raumnutzung": "mdi:account-check",
+    "haaraufwicklung": "mdi:vacuum",
+    "zuletzt gesehen": "mdi:clock-alert",
+    "nominal voltage": "mdi:battery-charging",
+    "fill level sensor": "mdi:cup-water",
+    "rainpoint": "mdi:weather-rainy",
+    "shopping app": "mdi:cart",
+    "super nintendo": "mdi:gamepad-variant",
+    "idempotenz": "mdi:script-text-outline",
+    "betonkernaktivierung": "mdi:air-conditioner",
+    "terrassenstimmung": "mdi:palette",
+    "entruempelung": "mdi:trash-can",
+    "torbogensensor": "mdi:motion-sensor",
+    "dual fuel": "mdi:fire",
+    "wandhalterung kamera": "mdi:cctv",
+    "wemo motion": "mdi:motion-sensor",
+    "uv entkeimung": "mdi:sun-wireless",
+    "versionsnummer": "mdi:information",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
