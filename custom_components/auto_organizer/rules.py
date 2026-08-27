@@ -30680,6 +30680,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "windkuehlung": "mdi:fan",
     "y muster reinigung": "mdi:vacuum",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "systemskript": "mdi:script-text",
+    "motorhacke": "mdi:leaf",
+    "befehlsabfolge": "mdi:run-fast",
+    "alufolie": "mdi:package-variant-closed",
+    "gantner": "mdi:lock",
+    "si1145": "mdi:brightness-5",
+    "inselbetrieb": "mdi:solar-power",
+    "pressure trend": "mdi:trending-up",
+    "appdaemon": "mdi:application",
+    "grid eye sensor": "mdi:motion-sensor",
+    "ausfuehrungsmodus": "mdi:play-circle",
+    "infant optics": "mdi:camera",
+    "tailscale": "mdi:network",
+    "humidor befeuchter": "mdi:water-percent",
+    "artikel nicht verfuegbar": "mdi:alert-octagon",
+    "saugaufsatz": "mdi:vacuum",
+    "schrottpreise": "mdi:trash-can",
+    "busch jaeger jalousie": "mdi:blinds",
+    "bierabend": "mdi:movie-open",
+    "intervallroutine": "mdi:timer-cog",
+    "austrittstemperatur": "mdi:thermometer-lines",
+    "senfglas": "mdi:bottle-tonic-outline",
+    "ecolink motion": "mdi:motion-sensor",
+    "entfeuchtung": "mdi:air-humidifier",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
