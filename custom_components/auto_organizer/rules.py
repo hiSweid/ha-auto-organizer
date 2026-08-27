@@ -29447,6 +29447,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "knopfbatterie": "mdi:battery-50",
     "flitterwochen stimmung": "mdi:palette",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "kaltluftabfluss": "mdi:weather-windy",
+    "spot metering": "mdi:brightness-5",
+    "precipitation probability": "mdi:weather-rainy",
+    "russpartikelanzahl": "mdi:air-filter",
+    "dschungelparty": "mdi:party-popper",
+    "kaltplasma": "mdi:air-purifier",
+    "morning lux": "mdi:white-balance-sunny",
+    "abendbrise": "mdi:weather-windy",
+    "in range": "mdi:ruler",
+    "interne ip": "mdi:network",
+    "detection distance": "mdi:ruler",
+    "abluftanlage": "mdi:fan",
+    "zip screen": "mdi:window-shutter",
+    "integrationsupdate": "mdi:update",
+    "schlafenszeit": "mdi:bed-clock",
+    "numeric state trigger": "mdi:counter",
+    "zerotier": "mdi:network-off",
+    "biotonnenreinigung": "mdi:recycle",
+    "brightness gradient": "mdi:brightness-6",
+    "regenwasserzaehler": "mdi:water-pump",
+    "wochenmarkt": "mdi:cart",
+    "vormittagsstimmung": "mdi:weather-sunny",
+    "guten abend szene": "mdi:weather-night",
+    "traefik": "mdi:router-wireless",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
