@@ -28771,6 +28771,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "wischpad": "mdi:window-shutter",
     "radiogeraet": "mdi:radio",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "joghurttemperatur": "mdi:thermometer",
+    "smoker": "mdi:microwave",
+    "ld2412s": "mdi:motion-sensor",
+    "pet fountain": "mdi:water-pump",
+    "mophalterung": "mdi:vacuum",
+    "departure": "mdi:account-arrow-right",
+    "zwave plus": "mdi:wifi-star",
+    "lanuv": "mdi:air-filter",
+    "adguard update": "mdi:update",
+    "musikbibliothek": "mdi:music-note",
+    "mauerkasten": "mdi:fan",
+    "evaporative cooler": "mdi:air-humidifier",
+    "bodennahes ozon": "mdi:air-filter",
+    "dachbodenkamera": "mdi:camera",
+    "dreiphasig": "mdi:flash-triangle",
+    "optisches kabel": "mdi:ethernet-cable",
+    "delay block": "mdi:timer-sand",
+    "vollstreckungskosten": "mdi:currency-eur",
+    "niro": "mdi:car",
+    "automationsvariable": "mdi:variable",
+    "geplanter ablauf": "mdi:timeline-text-outline",
+    "nikolausstimmung": "mdi:snowflake",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
