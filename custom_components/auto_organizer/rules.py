@@ -31696,6 +31696,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "pihole": "mdi:network",
     "furbo": "mdi:camera",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "globo leuchte": "mdi:ceiling-light",
+    "bin day": "mdi:trash-can-outline",
+    "fokusmodus": "mdi:target",
+    "vorsteuer": "mdi:currency-eur",
+    "akkutausch": "mdi:battery-charging",
+    "scriptmodus": "mdi:script-text",
+    "schrittabfolge": "mdi:run-fast",
+    "buerolicht": "mdi:desk-lamp",
+    "kartonagenentsorgung": "mdi:package-variant-closed",
+    "schneelast": "mdi:snowflake",
+    "lutron firmware": "mdi:chip",
+    "rohrbruchsicherung": "mdi:pipe-leak",
+    "topflappen": "mdi:pot",
+    "kliko": "mdi:recycle",
+    "window bars": "mdi:window-shutter",
+    "airvisual": "mdi:air-filter",
+    "ecor pro": "mdi:water-percent",
+    "hotfix patch": "mdi:update",
+    "gummibuerste": "mdi:brush",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

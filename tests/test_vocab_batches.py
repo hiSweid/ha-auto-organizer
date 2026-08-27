@@ -76982,3 +76982,79 @@ def test_icon_backfill_pihole():
 
 def test_icon_backfill_furbo():
     assert suggest_entity_icon(_FakeEntry("sensor.furbo"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_globo_leuchte():
+    assert suggest_entity_icon(_FakeEntry("sensor.globo_leuchte"), OrganizerOptions()) == "mdi:ceiling-light"
+
+
+def test_icon_backfill_bin_day():
+    assert suggest_entity_icon(_FakeEntry("sensor.bin_day"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_icon_backfill_fokusmodus():
+    assert suggest_entity_icon(_FakeEntry("sensor.fokusmodus"), OrganizerOptions()) == "mdi:target"
+
+
+def test_icon_backfill_vorsteuer():
+    assert suggest_entity_icon(_FakeEntry("sensor.vorsteuer"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_akkutausch():
+    assert suggest_entity_icon(_FakeEntry("sensor.akkutausch"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_scriptmodus():
+    assert suggest_entity_icon(_FakeEntry("sensor.scriptmodus"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_schrittabfolge():
+    assert suggest_entity_icon(_FakeEntry("sensor.schrittabfolge"), OrganizerOptions()) == "mdi:run-fast"
+
+
+def test_icon_backfill_buerolicht():
+    assert suggest_entity_icon(_FakeEntry("sensor.buerolicht"), OrganizerOptions()) == "mdi:desk-lamp"
+
+
+def test_icon_backfill_kartonagenentsorgung():
+    assert suggest_entity_icon(_FakeEntry("sensor.kartonagenentsorgung"), OrganizerOptions()) == "mdi:package-variant-closed"
+
+
+def test_icon_backfill_schneelast():
+    assert suggest_entity_icon(_FakeEntry("sensor.schneelast"), OrganizerOptions()) == "mdi:snowflake"
+
+
+def test_icon_backfill_lutron_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.lutron_firmware"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_icon_backfill_rohrbruchsicherung():
+    assert suggest_entity_icon(_FakeEntry("sensor.rohrbruchsicherung"), OrganizerOptions()) == "mdi:pipe-leak"
+
+
+def test_icon_backfill_topflappen():
+    assert suggest_entity_icon(_FakeEntry("sensor.topflappen"), OrganizerOptions()) == "mdi:pot"
+
+
+def test_icon_backfill_kliko():
+    assert suggest_entity_icon(_FakeEntry("sensor.kliko"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_window_bars():
+    assert suggest_entity_icon(_FakeEntry("sensor.window_bars"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_airvisual():
+    assert suggest_entity_icon(_FakeEntry("sensor.airvisual"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_ecor_pro():
+    assert suggest_entity_icon(_FakeEntry("sensor.ecor_pro"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_hotfix_patch():
+    assert suggest_entity_icon(_FakeEntry("sensor.hotfix_patch"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_gummibuerste():
+    assert suggest_entity_icon(_FakeEntry("sensor.gummibuerste"), OrganizerOptions()) == "mdi:brush"
