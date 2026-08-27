@@ -80666,3 +80666,71 @@ def test_icon_backfill_brettspielecke():
 
 def test_icon_backfill_terminplan():
     assert suggest_entity_icon(_FakeEntry("sensor.terminplan"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_feuchteabgabe():
+    assert suggest_entity_icon(_FakeEntry("sensor.feuchteabgabe"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_makroaufzeichnung():
+    assert suggest_entity_icon(_FakeEntry("sensor.makroaufzeichnung"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_icon_backfill_openhab_regel():
+    assert suggest_entity_icon(_FakeEntry("sensor.openhab_regel"), OrganizerOptions()) == "mdi:robot-industrial"
+
+
+def test_icon_backfill_tranquility_scene():
+    assert suggest_entity_icon(_FakeEntry("sensor.tranquility_scene"), OrganizerOptions()) == "mdi:palette-outline"
+
+
+def test_icon_backfill_mains_switch():
+    assert suggest_entity_icon(_FakeEntry("sensor.mains_switch"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_kondensat_tropft():
+    assert suggest_entity_icon(_FakeEntry("sensor.kondensat_tropft"), OrganizerOptions()) == "mdi:leak-off"
+
+
+def test_icon_backfill_schlauchtrommel():
+    assert suggest_entity_icon(_FakeEntry("sensor.schlauchtrommel"), OrganizerOptions()) == "mdi:pipe"
+
+
+def test_icon_backfill_teilzyklus():
+    assert suggest_entity_icon(_FakeEntry("sensor.teilzyklus"), OrganizerOptions()) == "mdi:battery-charging-low"
+
+
+def test_icon_backfill_prime_video():
+    assert suggest_entity_icon(_FakeEntry("sensor.prime_video"), OrganizerOptions()) == "mdi:play-circle"
+
+
+def test_icon_backfill_cr1220():
+    assert suggest_entity_icon(_FakeEntry("sensor.cr1220"), OrganizerOptions()) == "mdi:battery-50"
+
+
+def test_icon_backfill_dmx512():
+    assert suggest_entity_icon(_FakeEntry("sensor.dmx512"), OrganizerOptions()) == "mdi:lightbulb-on"
+
+
+def test_icon_backfill_drain_hose():
+    assert suggest_entity_icon(_FakeEntry("sensor.drain_hose"), OrganizerOptions()) == "mdi:pipe-wrench"
+
+
+def test_icon_backfill_scrap_metal():
+    assert suggest_entity_icon(_FakeEntry("sensor.scrap_metal"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_uvc_teichklaerer():
+    assert suggest_entity_icon(_FakeEntry("sensor.uvc_teichklaerer"), OrganizerOptions()) == "mdi:sprinkler"
+
+
+def test_icon_backfill_brantner():
+    assert suggest_entity_icon(_FakeEntry("sensor.brantner"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_netgear_firmware():
+    assert suggest_entity_icon(_FakeEntry("sensor.netgear_firmware"), OrganizerOptions()) == "mdi:download-circle"
+
+
+def test_icon_backfill_bad_leer():
+    assert suggest_entity_icon(_FakeEntry("sensor.bad_leer"), OrganizerOptions()) == "mdi:door-open"

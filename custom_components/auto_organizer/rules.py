@@ -32715,6 +32715,25 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "brettspielecke": "mdi:gamepad",
     "terminplan": "mdi:calendar-clock",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "feuchteabgabe": "mdi:water-percent",
+    "makroaufzeichnung": "mdi:script-text-outline",
+    "openhab regel": "mdi:robot-industrial",
+    "tranquility scene": "mdi:palette-outline",
+    "mains switch": "mdi:power-plug",
+    "kondensat tropft": "mdi:leak-off",
+    "schlauchtrommel": "mdi:pipe",
+    "teilzyklus": "mdi:battery-charging-low",
+    "prime video": "mdi:play-circle",
+    "cr1220": "mdi:battery-50",
+    "dmx512": "mdi:lightbulb-on",
+    "drain hose": "mdi:pipe-wrench",
+    "scrap metal": "mdi:recycle",
+    "uvc teichklaerer": "mdi:sprinkler",
+    "brantner": "mdi:trash-can",
+    "netgear firmware": "mdi:download-circle",
+    "bad leer": "mdi:door-open",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
