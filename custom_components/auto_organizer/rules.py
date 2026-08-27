@@ -32000,6 +32000,10 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "keyless entry": "mdi:lock",
     "glasfaserkabel": "mdi:ethernet-cable",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "thirdreality": "mdi:light-switch",
+    "igel": "mdi:leaf",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

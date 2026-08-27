@@ -78086,3 +78086,11 @@ def test_icon_backfill_keyless_entry():
 
 def test_icon_backfill_glasfaserkabel():
     assert suggest_entity_icon(_FakeEntry("sensor.glasfaserkabel"), OrganizerOptions()) == "mdi:ethernet-cable"
+
+
+def test_icon_backfill_thirdreality():
+    assert suggest_entity_icon(_FakeEntry("sensor.thirdreality"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_icon_backfill_igel():
+    assert suggest_entity_icon(_FakeEntry("sensor.igel"), OrganizerOptions()) == "mdi:leaf"
