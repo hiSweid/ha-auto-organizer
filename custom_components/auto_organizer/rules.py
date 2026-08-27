@@ -26641,6 +26641,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "reisend": "mdi:map-marker-distance",
     "kitchen sink": "mdi:water-pump",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "motion activated": "mdi:motion-sensor",
+    "reinigungsmitteltank": "mdi:liquid-spot",
+    "lounge stimmung": "mdi:sofa",
+    "muttertagsstimmung": "mdi:cake-variant",
+    "bewegungsprotokoll": "mdi:history",
+    "klimaabgabe": "mdi:currency-eur",
+    "batteriemanagementsystem": "mdi:battery-charging",
+    "vorwerk": "mdi:vacuum",
+    "pausenbedingung": "mdi:pause",
+    "dryness": "mdi:water-percent",
+    "ablufttemperatur": "mdi:thermometer-low",
+    "ausdehnungsgefaess": "mdi:water-boiler",
+    "loungemodus": "mdi:sofa",
+    "byd dolphin": "mdi:car-electric",
+    "underfloor temperature": "mdi:radiator-disabled",
+    "failover": "mdi:backup-restore",
+    "verriegelungsbolzen": "mdi:lock-outline",
+    "grid feed in": "mdi:power-plug",
+    "call service action": "mdi:run-fast",
+    "aufgabenkette": "mdi:playlist-edit",
+    "heizkennlinie": "mdi:radiator",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
