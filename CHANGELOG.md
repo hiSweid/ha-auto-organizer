@@ -6,6 +6,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.154] - 2026-08-27
+
+### Added
+- Further `SPECIFIC_ICONS` entries from the ongoing local-LLM icon backfill
+  batch job (~5343 total merged so far this run, ~1.1k of the original
+  6.9k gap remaining — should finish within the next hour or two at the
+  current pace).
+
+### Fixed
+- 3 more icon mismatches: `backofenreiniger` (an oven cleaner) had
+  `mdi:toilet`, `sewing machine` had `mdi:printer-3d-nozzle` (a
+  completely different tool category), `gummidichtung` (a vacuum's
+  rubber gasket) had `mdi:seal` — that icon's actual meaning is an award
+  ribbon/seal-of-approval, not a rubber seal.
+
 ## [0.9.153] - 2026-08-27
 
 ### Added
