@@ -69426,3 +69426,83 @@ def test_icon_backfill_semver():
 
 def test_icon_backfill_verbindungsqualitaet():
     assert suggest_entity_icon(_FakeEntry("sensor.verbindungsqualitaet"), OrganizerOptions()) == "mdi:signal"
+
+
+def test_icon_backfill_erzwungenes_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.erzwungenes_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_batterieschutzschaltung():
+    assert suggest_entity_icon(_FakeEntry("sensor.batterieschutzschaltung"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_programmroutine():
+    assert suggest_entity_icon(_FakeEntry("sensor.programmroutine"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_skriptvariable():
+    assert suggest_entity_icon(_FakeEntry("sensor.skriptvariable"), OrganizerOptions()) == "mdi:variable"
+
+
+def test_icon_backfill_iq500():
+    assert suggest_entity_icon(_FakeEntry("sensor.iq500"), OrganizerOptions()) == "mdi:blender"
+
+
+def test_icon_backfill_koerperbewegung():
+    assert suggest_entity_icon(_FakeEntry("sensor.koerperbewegung"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_schaltbedingung():
+    assert suggest_entity_icon(_FakeEntry("sensor.schaltbedingung"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_icon_backfill_funkstandard():
+    assert suggest_entity_icon(_FakeEntry("sensor.funkstandard"), OrganizerOptions()) == "mdi:wifi"
+
+
+def test_icon_backfill_insider_preview():
+    assert suggest_entity_icon(_FakeEntry("sensor.insider_preview"), OrganizerOptions()) == "mdi:eye-check"
+
+
+def test_icon_backfill_pfandrueckgabe():
+    assert suggest_entity_icon(_FakeEntry("sensor.pfandrueckgabe"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_icon_backfill_schulweg():
+    assert suggest_entity_icon(_FakeEntry("sensor.schulweg"), OrganizerOptions()) == "mdi:walk"
+
+
+def test_icon_backfill_waermebild():
+    assert suggest_entity_icon(_FakeEntry("sensor.waermebild"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_sous_vide_garer():
+    assert suggest_entity_icon(_FakeEntry("sensor.sous_vide_garer"), OrganizerOptions()) == "mdi:pot-steam"
+
+
+def test_icon_backfill_drainagestau():
+    assert suggest_entity_icon(_FakeEntry("sensor.drainagestau"), OrganizerOptions()) == "mdi:pipe-leak"
+
+
+def test_icon_backfill_abschlussfeier():
+    assert suggest_entity_icon(_FakeEntry("sensor.abschlussfeier"), OrganizerOptions()) == "mdi:party-popper"
+
+
+def test_icon_backfill_schwitzwasser():
+    assert suggest_entity_icon(_FakeEntry("sensor.schwitzwasser"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_atembeschwerden():
+    assert suggest_entity_icon(_FakeEntry("sensor.atembeschwerden"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_abfallsatzung():
+    assert suggest_entity_icon(_FakeEntry("sensor.abfallsatzung"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_negationsbedingung():
+    assert suggest_entity_icon(_FakeEntry("sensor.negationsbedingung"), OrganizerOptions()) == "mdi:not-equal-variant"
+
+
+def test_icon_backfill_3d_dnr():
+    assert suggest_entity_icon(_FakeEntry("sensor.3d_dnr"), OrganizerOptions()) == "mdi:camera-iris"

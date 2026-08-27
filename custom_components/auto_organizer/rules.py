@@ -29625,6 +29625,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "semver": "mdi:numeric",
     "verbindungsqualitaet": "mdi:signal",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "erzwungenes update": "mdi:update",
+    "batterieschutzschaltung": "mdi:battery-charging",
+    "programmroutine": "mdi:script-text",
+    "skriptvariable": "mdi:variable",
+    "iq500": "mdi:blender",
+    "koerperbewegung": "mdi:motion-sensor",
+    "schaltbedingung": "mdi:toggle-switch",
+    "funkstandard": "mdi:wifi",
+    "insider preview": "mdi:eye-check",
+    "pfandrueckgabe": "mdi:recycle",
+    "schulweg": "mdi:walk",
+    "waermebild": "mdi:thermometer-lines",
+    "sous vide garer": "mdi:pot-steam",
+    "drainagestau": "mdi:pipe-leak",
+    "abschlussfeier": "mdi:party-popper",
+    "schwitzwasser": "mdi:water-percent",
+    "atembeschwerden": "mdi:air-filter",
+    "abfallsatzung": "mdi:trash-can",
+    "negationsbedingung": "mdi:not-equal-variant",
+    "3d dnr": "mdi:camera-iris",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
