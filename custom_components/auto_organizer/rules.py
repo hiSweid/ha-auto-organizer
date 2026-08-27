@@ -31164,6 +31164,28 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "sky q": "mdi:television-classic",
     "skriptkommentar": "mdi:message-text",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "belichtungszeit": "mdi:camera-timer",
+    "wach werden szene": "mdi:weather-sunny",
+    "portainer update": "mdi:update",
+    "onion": "mdi:shopping-outline",
+    "arrival": "mdi:account-check",
+    "hulu": "mdi:play-circle",
+    "kuehltruhentemperatur": "mdi:fridge-alert",
+    "entfeuchtungsstufe": "mdi:water-percent",
+    "app steuerung saugroboter": "mdi:robot-vacuum",
+    "runterkommen": "mdi:arrow-down-bold",
+    "braava": "mdi:robot-vacuum-variant",
+    "kuehlmodus": "mdi:snowflake",
+    "renewable energy": "mdi:solar-power",
+    "automatisierungsvorschlag": "mdi:lightbulb-auto",
+    "develco motion": "mdi:motion-sensor",
+    "return air temperature": "mdi:thermometer-lines",
+    "gefrierfach": "mdi:fridge-industrial-outline",
+    "brennerstunden": "mdi:fireplace",
+    "staged rollout": "mdi:progress-download",
+    "koerperschallsensor": "mdi:human-greeting",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
