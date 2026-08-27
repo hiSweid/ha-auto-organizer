@@ -72934,3 +72934,95 @@ def test_icon_backfill_e_wie_einfach():
 
 def test_icon_backfill_regenwurm():
     assert suggest_entity_icon(_FakeEntry("sensor.regenwurm"), OrganizerOptions()) == "mdi:seed"
+
+
+def test_icon_backfill_lueftungsschacht():
+    assert suggest_entity_icon(_FakeEntry("sensor.lueftungsschacht"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_icon_backfill_messstation():
+    assert suggest_entity_icon(_FakeEntry("sensor.messstation"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_arduino_sketch():
+    assert suggest_entity_icon(_FakeEntry("sensor.arduino_sketch"), OrganizerOptions()) == "mdi:code-braces"
+
+
+def test_icon_backfill_wartungspatch():
+    assert suggest_entity_icon(_FakeEntry("sensor.wartungspatch"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_verbundene_geraete():
+    assert suggest_entity_icon(_FakeEntry("sensor.verbundene_geraete"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_fotowiderstand():
+    assert suggest_entity_icon(_FakeEntry("sensor.fotowiderstand"), OrganizerOptions()) == "mdi:lightbulb"
+
+
+def test_icon_backfill_fall_detection():
+    assert suggest_entity_icon(_FakeEntry("sensor.fall_detection"), OrganizerOptions()) == "mdi:human-greeting-proximity"
+
+
+def test_icon_backfill_helladaptation():
+    assert suggest_entity_icon(_FakeEntry("sensor.helladaptation"), OrganizerOptions()) == "mdi:brightness-auto"
+
+
+def test_icon_backfill_lufttemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.lufttemperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_fluessiggasgeruch():
+    assert suggest_entity_icon(_FakeEntry("sensor.fluessiggasgeruch"), OrganizerOptions()) == "mdi:gas-cylinder"
+
+
+def test_icon_backfill_tint():
+    assert suggest_entity_icon(_FakeEntry("sensor.tint"), OrganizerOptions()) == "mdi:palette"
+
+
+def test_icon_backfill_tuer():
+    assert suggest_entity_icon(_FakeEntry("sensor.tuer"), OrganizerOptions()) == "mdi:door"
+
+
+def test_icon_backfill_day_length():
+    assert suggest_entity_icon(_FakeEntry("sensor.day_length"), OrganizerOptions()) == "mdi:white-balance-sunny"
+
+
+def test_icon_backfill_kaercher():
+    assert suggest_entity_icon(_FakeEntry("sensor.kaercher"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_durchschnittstemperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.durchschnittstemperatur"), OrganizerOptions()) == "mdi:thermometer-lines"
+
+
+def test_icon_backfill_kameraabdeckung():
+    assert suggest_entity_icon(_FakeEntry("sensor.kameraabdeckung"), OrganizerOptions()) == "mdi:camera-off"
+
+
+def test_icon_backfill_keimreduzierung():
+    assert suggest_entity_icon(_FakeEntry("sensor.keimreduzierung"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_icon_backfill_sicherheitsrelease():
+    assert suggest_entity_icon(_FakeEntry("sensor.sicherheitsrelease"), OrganizerOptions()) == "mdi:lock-open-variant"
+
+
+def test_icon_backfill_lichtklimasteuerung():
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtklimasteuerung"), OrganizerOptions()) == "mdi:lightbulb-group"
+
+
+def test_icon_backfill_steigfaehigkeit_saugroboter():
+    assert suggest_entity_icon(_FakeEntry("sensor.steigfaehigkeit_saugroboter"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_icon_backfill_urlaubsmodus():
+    assert suggest_entity_icon(_FakeEntry("sensor.urlaubsmodus"), OrganizerOptions()) == "mdi:airport"
+
+
+def test_icon_backfill_last_seen():
+    assert suggest_entity_icon(_FakeEntry("sensor.last_seen"), OrganizerOptions()) == "mdi:clock-check"
+
+
+def test_icon_backfill_schnarcherkennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.schnarcherkennung"), OrganizerOptions()) == "mdi:sleep"

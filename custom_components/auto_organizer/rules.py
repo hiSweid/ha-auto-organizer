@@ -30586,6 +30586,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "e wie einfach": "mdi:currency-eur",
     "regenwurm": "mdi:seed",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "lueftungsschacht": "mdi:fan",
+    "messstation": "mdi:air-filter",
+    "arduino sketch": "mdi:code-braces",
+    "wartungspatch": "mdi:update",
+    "verbundene geraete": "mdi:network",
+    "fotowiderstand": "mdi:lightbulb",
+    "fall detection": "mdi:human-greeting-proximity",
+    "helladaptation": "mdi:brightness-auto",
+    "lufttemperatur": "mdi:thermometer",
+    "fluessiggasgeruch": "mdi:gas-cylinder",
+    "tint": "mdi:palette",
+    "tuer": "mdi:door",
+    "day length": "mdi:white-balance-sunny",
+    "kaercher": "mdi:vacuum",
+    "durchschnittstemperatur": "mdi:thermometer-lines",
+    "kameraabdeckung": "mdi:camera-off",
+    "keimreduzierung": "mdi:air-purifier",
+    "sicherheitsrelease": "mdi:lock-open-variant",
+    "lichtklimasteuerung": "mdi:lightbulb-group",
+    "steigfaehigkeit saugroboter": "mdi:robot-vacuum",
+    "urlaubsmodus": "mdi:airport",
+    "last seen": "mdi:clock-check",
+    "schnarcherkennung": "mdi:sleep",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
