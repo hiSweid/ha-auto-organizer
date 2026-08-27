@@ -55338,3 +55338,51 @@ def test_icon_backfill_muelltrennungsapp():
 
 def test_icon_backfill_kordelzug():
     assert suggest_entity_icon(_FakeEntry("sensor.kordelzug"), OrganizerOptions()) == "mdi:cable-data"
+
+
+def test_icon_backfill_spuelmittelstand():
+    assert suggest_entity_icon(_FakeEntry("sensor.spuelmittelstand"), OrganizerOptions()) == "mdi:silverware-variant"
+
+
+def test_icon_backfill_grundversorgung():
+    assert suggest_entity_icon(_FakeEntry("sensor.grundversorgung"), OrganizerOptions()) == "mdi:water-circle"
+
+
+def test_icon_backfill_target_temperature():
+    assert suggest_entity_icon(_FakeEntry("sensor.target_temperature"), OrganizerOptions()) == "mdi:thermometer-high"
+
+
+def test_icon_backfill_altkleidercontainer():
+    assert suggest_entity_icon(_FakeEntry("sensor.altkleidercontainer"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_icon_backfill_mediaserver():
+    assert suggest_entity_icon(_FakeEntry("sensor.mediaserver"), OrganizerOptions()) == "mdi:server"
+
+
+def test_icon_backfill_webos():
+    assert suggest_entity_icon(_FakeEntry("sensor.webos"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_jahresabrechnung():
+    assert suggest_entity_icon(_FakeEntry("sensor.jahresabrechnung"), OrganizerOptions()) == "mdi:file-document-multiple"
+
+
+def test_icon_backfill_duux_fan():
+    assert suggest_entity_icon(_FakeEntry("sensor.duux_fan"), OrganizerOptions()) == "mdi:fan-chevron-up"
+
+
+def test_icon_backfill_vacant():
+    assert suggest_entity_icon(_FakeEntry("sensor.vacant"), OrganizerOptions()) == "mdi:sofa-single"
+
+
+def test_icon_backfill_haustiererkennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.haustiererkennung"), OrganizerOptions()) == "mdi:dog-side"
+
+
+def test_icon_backfill_unrat():
+    assert suggest_entity_icon(_FakeEntry("sensor.unrat"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_icon_backfill_pergola_motor():
+    assert suggest_entity_icon(_FakeEntry("sensor.pergola_motor"), OrganizerOptions()) == "mdi:blinds-open"

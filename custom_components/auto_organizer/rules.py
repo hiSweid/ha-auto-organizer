@@ -25795,6 +25795,20 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "muelltrennungsapp": "mdi:recycle",
     "kordelzug": "mdi:cable-data",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "spuelmittelstand": "mdi:silverware-variant",
+    "grundversorgung": "mdi:water-circle",
+    "target temperature": "mdi:thermometer-high",
+    "altkleidercontainer": "mdi:trash-can-outline",
+    "mediaserver": "mdi:server",
+    "webos": "mdi:television-classic",
+    "jahresabrechnung": "mdi:file-document-multiple",
+    "duux fan": "mdi:fan-chevron-up",
+    "vacant": "mdi:sofa-single",
+    "haustiererkennung": "mdi:dog-side",
+    "unrat": "mdi:trash-can",
+    "pergola motor": "mdi:blinds-open",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
