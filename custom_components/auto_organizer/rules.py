@@ -29671,6 +29671,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "daheim": "mdi:home-account",
     "proofing temperature": "mdi:temperature-celsius",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "metallabfall": "mdi:recycle",
+    "flankentrigger": "mdi:flash",
+    "harmonica": "mdi:music-box",
+    "feuchteklima": "mdi:water-percent",
+    "luefter ersatzteile": "mdi:fan",
+    "morgensequenz": "mdi:weather-sunny",
+    "photosensor": "mdi:brightness-5",
+    "bauschuttcontainer": "mdi:trash-can",
+    "ltr579": "mdi:brightness-5",
+    "wait for trigger": "mdi:timer-star",
+    "kamera neustart": "mdi:cctv",
+    "panik": "mdi:alert-octagon",
+    "fan calibration": "mdi:fan-chevron-up",
+    "plex server": "mdi:plex",
+    "voc": "mdi:air-filter",
+    "clubatmosphaere": "mdi:palette",
+    "hausstauballergie": "mdi:allergy",
+    "aschentonne": "mdi:trash-can-outline",
+    "vorlagensammlung": "mdi:folder-multiple",
+    "dew point spread": "mdi:thermometer-lines",
+    "akkuschonung": "mdi:battery-charging-10",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
