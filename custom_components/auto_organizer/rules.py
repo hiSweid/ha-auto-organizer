@@ -25824,6 +25824,22 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "druckausdehnungsgefaess": "mdi:water-pump",
     "discharge air temperature": "mdi:thermometer",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "shell script": "mdi:script-text",
+    "haltepunkt": "mdi:flag",
+    "kurtaxe": "mdi:currency-eur",
+    "heizgrenze": "mdi:thermostat",
+    "gpon": "mdi:network",
+    "wyze": "mdi:camera",
+    "fluessiggasleck": "mdi:gas-cylinder",
+    "libelle": "mdi:leaf",
+    "noaa": "mdi:weather-cloudy",
+    "srf play": "mdi:play-circle",
+    "schenker storen": "mdi:window-shutter",
+    "thermometerbatterie": "mdi:battery-50",
+    "photoresistor modul": "mdi:sun-wireless",
+    "kwikset": "mdi:lock",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

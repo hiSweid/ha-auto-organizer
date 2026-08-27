@@ -55438,3 +55438,59 @@ def test_icon_backfill_druckausdehnungsgefaess():
 
 def test_icon_backfill_discharge_air_temperature():
     assert suggest_entity_icon(_FakeEntry("sensor.discharge_air_temperature"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_shell_script():
+    assert suggest_entity_icon(_FakeEntry("sensor.shell_script"), OrganizerOptions()) == "mdi:script-text"
+
+
+def test_icon_backfill_haltepunkt():
+    assert suggest_entity_icon(_FakeEntry("sensor.haltepunkt"), OrganizerOptions()) == "mdi:flag"
+
+
+def test_icon_backfill_kurtaxe():
+    assert suggest_entity_icon(_FakeEntry("sensor.kurtaxe"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_icon_backfill_heizgrenze():
+    assert suggest_entity_icon(_FakeEntry("sensor.heizgrenze"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_icon_backfill_gpon():
+    assert suggest_entity_icon(_FakeEntry("sensor.gpon"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_wyze():
+    assert suggest_entity_icon(_FakeEntry("sensor.wyze"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_fluessiggasleck():
+    assert suggest_entity_icon(_FakeEntry("sensor.fluessiggasleck"), OrganizerOptions()) == "mdi:gas-cylinder"
+
+
+def test_icon_backfill_libelle():
+    assert suggest_entity_icon(_FakeEntry("sensor.libelle"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_noaa():
+    assert suggest_entity_icon(_FakeEntry("sensor.noaa"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_srf_play():
+    assert suggest_entity_icon(_FakeEntry("sensor.srf_play"), OrganizerOptions()) == "mdi:play-circle"
+
+
+def test_icon_backfill_schenker_storen():
+    assert suggest_entity_icon(_FakeEntry("sensor.schenker_storen"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_thermometerbatterie():
+    assert suggest_entity_icon(_FakeEntry("sensor.thermometerbatterie"), OrganizerOptions()) == "mdi:battery-50"
+
+
+def test_icon_backfill_photoresistor_modul():
+    assert suggest_entity_icon(_FakeEntry("sensor.photoresistor_modul"), OrganizerOptions()) == "mdi:sun-wireless"
+
+
+def test_icon_backfill_kwikset():
+    assert suggest_entity_icon(_FakeEntry("sensor.kwikset"), OrganizerOptions()) == "mdi:lock"
