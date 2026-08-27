@@ -29323,6 +29323,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "dauerentfeuchtung": "mdi:air-humidifier",
     "buildversion": "mdi:package-variant",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "muellverbrennungsofen": "mdi:fireplace",
+    "magnetron": "mdi:microwave",
+    "alexa routine": "mdi:script-text-outline",
+    "hauptbuerste": "mdi:vacuum",
+    "l1 strom": "mdi:power-plug",
+    "einwegpfand": "mdi:bottle-wine",
+    "object detection": "mdi:eye-outline",
+    "verstopfter abfluss": "mdi:pipe-leak",
+    "tropfschlauch": "mdi:sprinkler",
+    "wasserpreis": "mdi:currency-usd",
+    "windspeed": "mdi:weather-windy",
+    "fan speed high": "mdi:fan-chevron-up",
+    "petcube": "mdi:camera",
+    "hoerbuchkapitel": "mdi:book-open-page-variant",
+    "raumkorrektur": "mdi:room-service",
+    "photodiode": "mdi:lightbulb",
+    "wellness abend": "mdi:spa",
+    "donutmaker": "mdi:toaster",
+    "lastmanagement": "mdi:power-settings",
+    "spieletreff": "mdi:gamepad",
+    "milliluxwert": "mdi:brightness-6",
+    "panasonic akku": "mdi:battery-charging-90",
+    "grauwasserleck": "mdi:water-alert",
+    "icm20948": "mdi:motion-sensor",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
