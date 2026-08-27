@@ -32632,6 +32632,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "abus facilo": "mdi:lock-alert",
     "innenluft": "mdi:air-filter",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "schreibwaren": "mdi:pencil",
+    "smartmi": "mdi:air-filter",
+    "haustierueberwachung": "mdi:camera",
+    "nightvision": "mdi:camera-off",
+    "firmware zurueckrollen": "mdi:arrow-down-bold-circle",
+    "mlx90641": "mdi:motion-sensor",
+    "teppichmodus": "mdi:robot-vacuum",
+    "batterierecycling": "mdi:battery-charging",
+    "poe cam": "mdi:camera",
+    "zustandswechsel trigger": "mdi:flash",
+    "hochzeitstag szene": "mdi:movie-open",
+    "rivian r1t": "mdi:car",
+    "laundry detergent": "mdi:washing-machine",
+    "nachtschichtmodus": "mdi:account-multiple",
+    "aiways": "mdi:car",
+    "rollladenwaechter": "mdi:blinds",
+    "neu geflasht": "mdi:upload",
+    "tortelefon": "mdi:window-shutter",
+    "modbus meter": "mdi:gauge",
+    "movement intensity": "mdi:motion-sensor",
+    "bezugsleistung": "mdi:power-plug",
+    "drip emitter": "mdi:water-pump",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
