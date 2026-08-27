@@ -30632,6 +30632,29 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "grid meter": "mdi:power-plug",
     "biotonnenkalender": "mdi:calendar-plus",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "kuschelabend": "mdi:sleep",
+    "solarpanel kamera": "mdi:camera",
+    "gamecube": "mdi:gamepad-variant",
+    "schmutzsensor": "mdi:air-filter",
+    "funktionstaster": "mdi:tune",
+    "partikelzaehler": "mdi:air-purifier",
+    "zigate": "mdi:router-wireless",
+    "urlaubsstimmung": "mdi:umbrella-beach",
+    "depth of discharge": "mdi:battery-alert-variant",
+    "rainmachine": "mdi:water-pump",
+    "bootloader version": "mdi:chip",
+    "ausrollen": "mdi:arrow-down-bold-box-outline",
+    "makro": "mdi:script-text-play",
+    "eintreffen": "mdi:account-check",
+    "senderspeicher": "mdi:database",
+    "lautsprecher kamera": "mdi:camera-account",
+    "eingespeist": "mdi:solar-power",
+    "vorratsraumlicht": "mdi:lightbulb",
+    "trocknungsstation": "mdi:tumble-dryer",
+    "automationswatchdog": "mdi:alert-circle",
+    "dhcp lease": "mdi:ip-network",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
