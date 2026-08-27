@@ -32907,6 +32907,24 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "mopp fehlt": "mdi:broom",
     "callback funktion": "mdi:function",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "scheibenschloss": "mdi:lock",
+    "sorptionsfeuchte": "mdi:water-percent",
+    "flaschenoeffner": "mdi:bottle-tonic-outline",
+    "abschiedsroutine": "mdi:door-open",
+    "asthmawarnung": "mdi:alert-circle",
+    "levelsense": "mdi:leak-off",
+    "port forwarding": "mdi:forward",
+    "guthaben kwh": "mdi:lightning-bolt-circle",
+    "mondaufgang": "mdi:white-balance-sunny",
+    "northvolt": "mdi:battery-charging-100",
+    "parallele aktion": "mdi:vector-polyline-edit",
+    "digi cycle": "mdi:recycle",
+    "frischetheke": "mdi:fruit-cherries",
+    "gewaechshausfeuchte": "mdi:sprinkler",
+    "rtl plus": "mdi:television-classic",
+    "bebbi sagg": "mdi:trash-can",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
