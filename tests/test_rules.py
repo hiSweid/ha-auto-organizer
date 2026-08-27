@@ -547,7 +547,12 @@ def test_car_name_plus_device_class_within_cap():
 
 
 def test_frost_keyword_maps_to_weather():
-    assert "Wetter" in names(FakeEntry("binary_sensor.frostwarnung"))
+    # "frost" itself is now whole-word padded (was an unpadded 5-char root
+    # silently matching inside any glued compound containing it — the same
+    # bug class as "pv" matching inside "pve"). The specific compound
+    # "frostwarnung" already has its own dedicated, more precise entry.
+    assert "Temperatur" in names(FakeEntry("binary_sensor.frostwarnung"))
+    assert "Wetter" in names(FakeEntry("sensor.frost_heute_nacht"))
 
 
 def test_oil_consumption_maps_to_klima():

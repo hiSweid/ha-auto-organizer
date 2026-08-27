@@ -6,6 +6,26 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.144] - 2026-08-27
+
+### Fixed
+- Hardened `vocab_tools/validate.py` (used by the scheduled vocabulary-growth
+  batches) against the exact bug class fixed in 0.9.143: an unpadded short
+  keyword silently substring-matching inside an unrelated longer token
+  (e.g. "pv" inside "pve"). The auto-pad-to-whole-word threshold now covers
+  core lengths up to 5 (was <4), and a new small curated corpus of common
+  IT/homelab hostnames, protocols and abbreviations (`TECH_TOKENS`) is
+  checked alongside the existing DE/EN dictionary-frequency check, since
+  hostnames like "pve" never show up in a natural-language corpus.
+- Retroactively padded 393 pre-existing `KEYWORD_LABELS` entries (single
+  bare words, ≤5 characters, previously unpadded) to whole-word matches,
+  e.g. `"power"`, `"solar"`, `"grid"`, `"bosch"`, `"modem"`, `"nuki"` —
+  most of these predate the validator's short-word protections. Verified
+  against the full test suite (148 rule tests + 11,620 vocab-batch
+  regression tests + 41 integration tests); only one needed adjusting —
+  `frostwarnung`, which already has its own dedicated longer entry and no
+  longer also needs the bare `"frost"` root to match.
+
 ## [0.9.143] - 2026-08-27
 
 ### Fixed
