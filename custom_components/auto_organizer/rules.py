@@ -26857,6 +26857,32 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "feinstaubkonzentration": "mdi:air-filter",
     "warmhalteplatte": "mdi:microwave",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "foobot": "mdi:air-purifier",
+    "brooder temperature": "mdi:thermometer",
+    "lr03": "mdi:battery",
+    "katalysator": "mdi:car-cog",
+    "position2go": "mdi:motion-sensor",
+    "tonarm": "mdi:play-circle",
+    "bgt60atr24c": "mdi:motion-sensor",
+    "basement watchdog": "mdi:leak",
+    "speakeasy stimmung": "mdi:movie-open",
+    "bohnermaschine": "mdi:washing-machine",
+    "tripwire sensor": "mdi:motion-sensor",
+    "zipscreen": "mdi:window-shutter",
+    "firmware update trigger": "mdi:update",
+    "lichtstrom": "mdi:brightness-5",
+    "video komprimierung": "mdi:camera",
+    "wlan verstaerker": "mdi:wifi",
+    "festmahl": "mdi:movie-open",
+    "washer": "mdi:washing-machine",
+    "aufstehroutine": "mdi:alarm",
+    "bodenablauf": "mdi:water",
+    "adblue": "mdi:car-battery",
+    "tapo firmware": "mdi:update",
+    "housewarming party": "mdi:party-popper",
+    "movement duration": "mdi:motion-sensor",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
