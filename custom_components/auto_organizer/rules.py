@@ -33167,6 +33167,12 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "fertilizer": "mdi:leaf",
     "mosquitto update": "mdi:update",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "kritischer patch": "mdi:update",
+    "update benachrichtigung": "mdi:bell-alert",
+    "eco modus": "mdi:leaf",
+    "zierteich": "mdi:fountain",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

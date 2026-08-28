@@ -82234,3 +82234,19 @@ def test_icon_backfill_fertilizer():
 
 def test_icon_backfill_mosquitto_update():
     assert suggest_entity_icon(_FakeEntry("sensor.mosquitto_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_kritischer_patch():
+    assert suggest_entity_icon(_FakeEntry("sensor.kritischer_patch"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_update_benachrichtigung():
+    assert suggest_entity_icon(_FakeEntry("sensor.update_benachrichtigung"), OrganizerOptions()) == "mdi:bell-alert"
+
+
+def test_icon_backfill_eco_modus():
+    assert suggest_entity_icon(_FakeEntry("sensor.eco_modus"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_zierteich():
+    assert suggest_entity_icon(_FakeEntry("sensor.zierteich"), OrganizerOptions()) == "mdi:fountain"
