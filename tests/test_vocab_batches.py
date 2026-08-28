@@ -82270,3 +82270,23 @@ def test_icon_backfill_manifold():
 
 def test_icon_backfill_geschirrtuch():
     assert suggest_entity_icon(_FakeEntry("sensor.geschirrtuch"), OrganizerOptions()) == "mdi:dishwasher"
+
+
+def test_icon_backfill_funkrepeater():
+    assert suggest_entity_icon(_FakeEntry("sensor.funkrepeater"), OrganizerOptions()) == "mdi:repeat"
+
+
+def test_icon_backfill_sensative_lux():
+    assert suggest_entity_icon(_FakeEntry("sensor.sensative_lux"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_wireless_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.wireless_update"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_kompaktkamera():
+    assert suggest_entity_icon(_FakeEntry("sensor.kompaktkamera"), OrganizerOptions()) == "mdi:camera"
+
+
+def test_icon_backfill_temtop():
+    assert suggest_entity_icon(_FakeEntry("sensor.temtop"), OrganizerOptions()) == "mdi:air-filter"

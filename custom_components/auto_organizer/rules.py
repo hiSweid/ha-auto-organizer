@@ -33180,6 +33180,13 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "manifold": "mdi:pipe",
     "geschirrtuch": "mdi:dishwasher",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "funkrepeater": "mdi:repeat",
+    "sensative lux": "mdi:brightness-5",
+    "wireless update": "mdi:update",
+    "kompaktkamera": "mdi:camera",
+    "temtop": "mdi:air-filter",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
