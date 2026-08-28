@@ -33206,6 +33206,11 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "zigarrenbefeuchtungssystem": "mdi:air-humidifier",
     "reiserueckkehr": "mdi:home-import-outline",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "wandmontage sensor": "mdi:motion-sensor",
+    "sonnenbank": "mdi:umbrella-beach",
+    "pufferung": "mdi:pulse",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

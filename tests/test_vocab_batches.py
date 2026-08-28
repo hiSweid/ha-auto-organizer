@@ -82342,3 +82342,15 @@ def test_icon_backfill_zigarrenbefeuchtungssystem():
 
 def test_icon_backfill_reiserueckkehr():
     assert suggest_entity_icon(_FakeEntry("sensor.reiserueckkehr"), OrganizerOptions()) == "mdi:home-import-outline"
+
+
+def test_icon_backfill_wandmontage_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.wandmontage_sensor"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_sonnenbank():
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenbank"), OrganizerOptions()) == "mdi:umbrella-beach"
+
+
+def test_icon_backfill_pufferung():
+    assert suggest_entity_icon(_FakeEntry("sensor.pufferung"), OrganizerOptions()) == "mdi:pulse"
