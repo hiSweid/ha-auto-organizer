@@ -33211,6 +33211,13 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "sonnenbank": "mdi:umbrella-beach",
     "pufferung": "mdi:pulse",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "reverse proxy": "mdi:network",
+    "topfschwamm": "mdi:shopping",
+    "vanillezucker": "mdi:shopping",
+    "schimmelsporen": "mdi:air-filter",
+    "temperaturabweichung": "mdi:thermometer-alert",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

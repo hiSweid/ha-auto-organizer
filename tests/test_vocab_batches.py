@@ -82354,3 +82354,23 @@ def test_icon_backfill_sonnenbank():
 
 def test_icon_backfill_pufferung():
     assert suggest_entity_icon(_FakeEntry("sensor.pufferung"), OrganizerOptions()) == "mdi:pulse"
+
+
+def test_icon_backfill_reverse_proxy():
+    assert suggest_entity_icon(_FakeEntry("sensor.reverse_proxy"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_topfschwamm():
+    assert suggest_entity_icon(_FakeEntry("sensor.topfschwamm"), OrganizerOptions()) == "mdi:shopping"
+
+
+def test_icon_backfill_vanillezucker():
+    assert suggest_entity_icon(_FakeEntry("sensor.vanillezucker"), OrganizerOptions()) == "mdi:shopping"
+
+
+def test_icon_backfill_schimmelsporen():
+    assert suggest_entity_icon(_FakeEntry("sensor.schimmelsporen"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_temperaturabweichung():
+    assert suggest_entity_icon(_FakeEntry("sensor.temperaturabweichung"), OrganizerOptions()) == "mdi:thermometer-alert"
