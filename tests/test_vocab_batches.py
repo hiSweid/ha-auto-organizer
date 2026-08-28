@@ -82310,3 +82310,11 @@ def test_icon_backfill_neu_flashen():
 
 def test_icon_backfill_wasserzaehlerimpuls():
     assert suggest_entity_icon(_FakeEntry("sensor.wasserzaehlerimpuls"), OrganizerOptions()) == "mdi:counter"
+
+
+def test_icon_backfill_feels_like():
+    assert suggest_entity_icon(_FakeEntry("sensor.feels_like"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_echo_show():
+    assert suggest_entity_icon(_FakeEntry("sensor.echo_show"), OrganizerOptions()) == "mdi:google-assistant"

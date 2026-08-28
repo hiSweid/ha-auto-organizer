@@ -33194,6 +33194,10 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "neu flashen": "mdi:update",
     "wasserzaehlerimpuls": "mdi:counter",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "feels like": "mdi:thermometer",
+    "echo show": "mdi:google-assistant",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
