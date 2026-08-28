@@ -33173,6 +33173,13 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "eco modus": "mdi:leaf",
     "zierteich": "mdi:fountain",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "waschmittelfach": "mdi:washing-machine",
+    "temperatur": "mdi:thermometer",
+    "photoresistor sensor": "mdi:brightness-6",
+    "manifold": "mdi:pipe",
+    "geschirrtuch": "mdi:dishwasher",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

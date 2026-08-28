@@ -82250,3 +82250,23 @@ def test_icon_backfill_eco_modus():
 
 def test_icon_backfill_zierteich():
     assert suggest_entity_icon(_FakeEntry("sensor.zierteich"), OrganizerOptions()) == "mdi:fountain"
+
+
+def test_icon_backfill_waschmittelfach():
+    assert suggest_entity_icon(_FakeEntry("sensor.waschmittelfach"), OrganizerOptions()) == "mdi:washing-machine"
+
+
+def test_icon_backfill_temperatur():
+    assert suggest_entity_icon(_FakeEntry("sensor.temperatur"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_photoresistor_sensor():
+    assert suggest_entity_icon(_FakeEntry("sensor.photoresistor_sensor"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_icon_backfill_manifold():
+    assert suggest_entity_icon(_FakeEntry("sensor.manifold"), OrganizerOptions()) == "mdi:pipe"
+
+
+def test_icon_backfill_geschirrtuch():
+    assert suggest_entity_icon(_FakeEntry("sensor.geschirrtuch"), OrganizerOptions()) == "mdi:dishwasher"
