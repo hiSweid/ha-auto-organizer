@@ -82202,3 +82202,35 @@ def test_icon_backfill_variablenblock():
 
 def test_icon_backfill_zabbix():
     assert suggest_entity_icon(_FakeEntry("sensor.zabbix"), OrganizerOptions()) == "mdi:network"
+
+
+def test_icon_backfill_schneidebrett():
+    assert suggest_entity_icon(_FakeEntry("sensor.schneidebrett"), OrganizerOptions()) == "mdi:chef-hat"
+
+
+def test_icon_backfill_kilovoltampere():
+    assert suggest_entity_icon(_FakeEntry("sensor.kilovoltampere"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_icon_backfill_moppdesinfektion():
+    assert suggest_entity_icon(_FakeEntry("sensor.moppdesinfektion"), OrganizerOptions()) == "mdi:spray-bottle"
+
+
+def test_icon_backfill_media_server():
+    assert suggest_entity_icon(_FakeEntry("sensor.media_server"), OrganizerOptions()) == "mdi:server"
+
+
+def test_icon_backfill_taskscheduler():
+    assert suggest_entity_icon(_FakeEntry("sensor.taskscheduler"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_waagebatterie():
+    assert suggest_entity_icon(_FakeEntry("sensor.waagebatterie"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_icon_backfill_fertilizer():
+    assert suggest_entity_icon(_FakeEntry("sensor.fertilizer"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_icon_backfill_mosquitto_update():
+    assert suggest_entity_icon(_FakeEntry("sensor.mosquitto_update"), OrganizerOptions()) == "mdi:update"

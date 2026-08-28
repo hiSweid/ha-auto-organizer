@@ -33157,6 +33157,16 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "variablenblock": "mdi:variable",
     "zabbix": "mdi:network",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "schneidebrett": "mdi:chef-hat",
+    "kilovoltampere": "mdi:flash",
+    "moppdesinfektion": "mdi:spray-bottle",
+    "media server": "mdi:server",
+    "taskscheduler": "mdi:calendar-clock",
+    "waagebatterie": "mdi:battery-charging",
+    "fertilizer": "mdi:leaf",
+    "mosquitto update": "mdi:update",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
