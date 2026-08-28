@@ -82290,3 +82290,23 @@ def test_icon_backfill_kompaktkamera():
 
 def test_icon_backfill_temtop():
     assert suggest_entity_icon(_FakeEntry("sensor.temtop"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_notlichtbatterie():
+    assert suggest_entity_icon(_FakeEntry("sensor.notlichtbatterie"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_icon_backfill_abwassergebuehr():
+    assert suggest_entity_icon(_FakeEntry("sensor.abwassergebuehr"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_icon_backfill_beutelwechsel():
+    assert suggest_entity_icon(_FakeEntry("sensor.beutelwechsel"), OrganizerOptions()) == "mdi:bag-personal"
+
+
+def test_icon_backfill_neu_flashen():
+    assert suggest_entity_icon(_FakeEntry("sensor.neu_flashen"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_wasserzaehlerimpuls():
+    assert suggest_entity_icon(_FakeEntry("sensor.wasserzaehlerimpuls"), OrganizerOptions()) == "mdi:counter"

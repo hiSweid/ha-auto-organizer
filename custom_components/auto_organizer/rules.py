@@ -33187,6 +33187,13 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "kompaktkamera": "mdi:camera",
     "temtop": "mdi:air-filter",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "notlichtbatterie": "mdi:battery",
+    "abwassergebuehr": "mdi:water-pump",
+    "beutelwechsel": "mdi:bag-personal",
+    "neu flashen": "mdi:update",
+    "wasserzaehlerimpuls": "mdi:counter",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
