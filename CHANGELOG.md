@@ -6,6 +6,56 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.157] - 2026-08-28
+
+### Added
+- Final batches from the local-LLM icon backfill run: 6774 of the
+  original 6892-word icon gap filled (~98.3%). The run self-terminated
+  (`stopped_low_yield`) after 8 consecutive batches without usable
+  output — the 118 remaining words are a genuinely hard tail (mostly
+  generic terms already shadowed by other keywords, or ones the model
+  couldn't place well after repeated attempts) rather than something
+  worth forcing further.
+
+### Fixed
+- 2 more icon mismatches: `geschirrtuch` (a dish towel) had
+  `mdi:dishwasher` (fabric item mapped to an appliance, same collision
+  class as `wischlappen`/`taschentuecher`), `beutelwechsel` (a vacuum
+  bag change) had `mdi:bag-personal` (a handbag icon).
+
+## Icon backfill run summary (2026-08-27, ~13h wall clock)
+
+A local-LLM-driven batch job (llama-swap/qwen-big on the maintainer's
+own 3090, no cloud calls) filled in missing `SPECIFIC_ICONS` entries for
+the ~6892 `KEYWORD_LABELS` words that had none. Every batch was validated
+(word must be a real gap, icon must be a real non-deprecated `mdi:` name)
+and verified against the full test suite before being committed.
+
+- **6774 icons added** (~98.3% of the gap), across ~370 automated batches.
+- **63 icon mismatches found and manually corrected** across twelve
+  review passes, plus 3 additional cases caught by the test suite itself
+  before ever reaching a commit. Recurring failure patterns: an icon
+  picked by surface string-similarity to an unrelated concept rather than
+  meaning (e.g. `last fm` → the LastPass logo, `dac wandler` → the
+  Digital Ocean logo, `kettenreaktion` → the React.js logo); `mdi:movie-open`
+  used as a lazy default for the "scenes" label regardless of the actual
+  scene (11 instances); wrong-specific-item swaps within the same
+  category (wrong vegetable, wrong animal, tool mapped to a food icon);
+  and, once the gap thinned out, generic single words unmasking an
+  icon that then out-prioritized a more specific brand keyword via the
+  longest-match-first lookup (`battery` shadowing `nuki`, `naechste
+  abholung` shadowing `gelbersack`, `or condition` shadowing `condition`).
+- The batch loop crashed once (an uncaught `subprocess.TimeoutExpired`
+  once the growing test suite outran a fixed 180s timeout) — fixed
+  (timeout raised to 420s, the whole per-batch call wrapped in
+  try/except so no single unexpected error can kill the run again).
+- A real, reproducible race was found and worked around: editing
+  `rules.py`/the test file by hand while the loop is mid-batch can lose
+  the edit to the loop's own read-merge-write cycle. Fixed by pausing the
+  loop process (`SIGSTOP`) for the ~10s a manual fix+commit takes, then
+  resuming it (`SIGCONT`) — used throughout the review passes after the
+  first occurrence.
+
 ## [0.9.156] - 2026-08-28
 
 ### Added
