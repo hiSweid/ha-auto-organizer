@@ -33218,6 +33218,132 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "schimmelsporen": "mdi:air-filter",
     "temperaturabweichung": "mdi:thermometer-alert",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "flow node": "mdi:sitemap",
+    "task automator": "mdi:robot",
+    "ruecksprungwert": "mdi:function-variant",
+    "parameterwert": "mdi:function-variant",
+    "taskchain": "mdi:source-branch",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "traenende augen": "mdi:allergy",
+    "niesreiz": "mdi:allergy",
+    "hay fever": "mdi:allergy",
+    "secondhand smoke": "mdi:smoke",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "blockierschutz": "mdi:car-brake-abs",
+    "ausfahrtstor": "mdi:gate-arrow-right",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "opple taster": "mdi:gesture-tap-button",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "ionic breeze": "mdi:air-purifier",
+    "amaircare": "mdi:air-purifier",
+    "envion therapure": "mdi:air-purifier",
+
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "sodastream": "mdi:bottle-soda-classic",
+    "naehmaschine": "mdi:needle",
+    "tankinhalt": "mdi:gas-station",
+    "wifi extender": "mdi:access-point",
+    "rabatt": "mdi:sale",
+    "paper towels": "mdi:paper-roll",
+    "staubbehaelter": "mdi:trash-can",
+    "carpet mode": "mdi:rug",
+    "pegel": "mdi:waves",
+    "duerre": "mdi:weather-sunny-alert",
+    "template trigger": "mdi:script-text",
+    "task chain": "mdi:link-variant",
+    "tropfleck": "mdi:water-alert",
+    "rasierklinge": "mdi:razor-double-edge",
+    "einwegrasierer": "mdi:razor-single-edge",
+    "staging channel": "mdi:source-branch",
+    "lesenacht": "mdi:book-open-page-variant",
+    "roboter festgefahren": "mdi:robot-vacuum-alert",
+    "unterbrechungsfreie stromversorgung": "mdi:power-plug-battery",
+    "turbobuerste": "mdi:broom",
+    "ostrom": "mdi:currency-eur",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "cron auftrag": "mdi:timer-cog",
+    "steuerungsskript": "mdi:script-text",
+    "triggerskript": "mdi:script-text",
+    "kettenbefehl": "mdi:source-branch",
+    "blockly": "mdi:puzzle",
+    "geplantes skript": "mdi:script-text",
+    "zeitgesteuertes skript": "mdi:clock-check",
+    "szenenkette": "mdi:source-branch",
+    "skript debuggen": "mdi:bug",
+    "pipelinestufe": "mdi:step-forward",
+    "workflowschritt": "mdi:step-forward",
+    "homematic skript": "mdi:script-text",
+    "ccu skript": "mdi:script-text",
+    "sprachbefehl kette": "mdi:source-branch",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "haze index": "mdi:weather-hazy",
+    "wildfire haze": "mdi:weather-hazy",
+    "birch pollen": "mdi:flower-pollen",
+    "oak pollen": "mdi:flower-pollen",
+    "dust mite": "mdi:allergy",
+    "pelletofengeruch": "mdi:smoke",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "schleudersicherung": "mdi:car-esp",
+    "schnellladestecker": "mdi:ev-plug-ccs2",
+    "sitzlueftung": "mdi:car-seat-cooler",
+    "lueftungstimer": "mdi:fan-clock",
+    "wlanstaerke": "mdi:wifi-strength-4",
+    "netzwerkrouter": "mdi:router-network",
+    "auslandssteckdose": "mdi:power-socket-uk",
+    "wasserkraftwerk": "mdi:hydro-power",
+    "digitalschluessel": "mdi:cellphone-key",
+    "schliesszeitplan": "mdi:lock-clock",
+    "diebstahlschutz": "mdi:shield-car",
+    "nachtsicherung": "mdi:shield-moon",
+    "gasabsperrventil": "mdi:valve-closed",
+    "lichtsynchronisation": "mdi:television-ambient-light",
+    "sportkamera": "mdi:camera-gopro",
+    "dampfgarfunktion": "mdi:pot-steam",
+    "gartenmaeher": "mdi:mower-on",
+    "wolkenvorhersage": "mdi:weather-cloudy-clock",
+    "rechnungsbeleg": "mdi:invoice-text",
+    "kreditkartenzahlung": "mdi:credit-card",
+    "familienortung": "mdi:cellphone-marker",
+    "einkaufsgutschein": "mdi:wallet-giftcard",
+    "fussbodenheizungsregelung": "mdi:thermostat-box-auto",
+    "akkuwechselanzeige": "mdi:battery-clock",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "wuerfelsteuerung": "mdi:cube-outline",
+    "szenenwuerfel": "mdi:cube",
+    "wasserschlauchventil": "mdi:valve",
+    "maehroboterladestation": "mdi:robot-mower",
+    "kellerlichtschalter": "mdi:light-switch",
+    "abluftsteuerung": "mdi:fan",
+    "phasenwechselrichter": "mdi:current-ac",
+    "pv ueberschussladung": "mdi:solar-power-variant",
+    "sirenenblitzlicht": "mdi:alarm-light",
+    "spiegelschrankbeleuchtung": "mdi:mirror",
+    "poolabdeckmotor": "mdi:pool",
+    "fensteroeffnungsautomatik": "mdi:window-open-variant",
+    "treppenhauslicht": "mdi:stairs",
+    "notlichtsystem": "mdi:flashlight",
+    "fluchtwegbeleuchtung": "mdi:exit-run",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "shark air purifier": "mdi:air-purifier",
+    "instant air purifier": "mdi:air-purifier",
+    "hathaspace": "mdi:air-purifier",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -65440,6 +65566,175 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "tado smart ac": "climate",
     "tado geofencing": "presence",
     "aurora dimmer": "lights",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "flow node": "scripts",
+    "task automator": "scripts",
+    "ruecksprungwert": "scripts",
+    "parameterwert": "scripts",
+    "taskchain": "scripts",
+    "makro aufzeichnen": "scripts",
+    "ablauf starten": "scripts",
+    "skriptprotokoll": "scripts",
+    "ausfuehrungsprotokoll": "scripts",
+    "skriptlaufzeit": "scripts",
+    "eventgesteuertes skript": "scripts",
+    "jobplaner": "scripts",
+    "auftragsplaner": "scripts",
+    "wenn funktion": "scripts",
+    "applet aktivieren": "scripts",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "altstoffsammelzentrum": "waste",
+    "robidog": "waste",
+    "48er tandler": "waste",
+    "fost plus": "waste",
+    "recyclingcode": "waste",
+    "urbaser": "waste",
+    "landbell": "waste",
+    "reclay": "waste",
+    "republic services": "waste",
+    "waste connections": "waste",
+    "covanta": "waste",
+    "orange bag": "waste",
+    "commingled recycling": "waste",
+    "aluminium recycling": "waste",
+    "cardboard recycling": "waste",
+    "dry waste": "waste",
+    "fogo bin": "waste",
+    "abfallsammelzentrum": "waste",
+    "recycling drop off": "waste",
+    "hazardous waste collection": "waste",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "aussenluftsensor": "air_quality",
+    "luftqualitaetswert": "air_quality",
+    "sen0177": "air_quality",
+    "winsen zh06": "air_quality",
+    "pmsx003": "air_quality",
+    " sen44 ": "air_quality",
+    "air nanny": "air_quality",
+    "clarifion": "air_quality",
+    "faulgase": "air_quality",
+    "traenende augen": "air_quality",
+    "niesreiz": "air_quality",
+    "hay fever": "air_quality",
+    "secondhand smoke": "air_quality",
+    "reizgase": "air_quality",
+    "russpartikelemission": "air_quality",
+    "dsm501a": "air_quality",
+    "sds198": "air_quality",
+    "daqi index": "air_quality",
+    "mq131 sensor": "air_quality",
+    "mq3 sensor": "air_quality",
+    "mq5 sensor": "air_quality",
+    "mq8 sensor": "air_quality",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "blockierschutz": "car",
+    "ausfahrtstor": "covers",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "opple taster": "switches",
+    "abwassergrube": "water",
+    "fusswaermer": "climate",
+    "zugluftsensor": "air_quality",
+    "carportbeleuchtung": "lights",
+    "kellerabflusswaechter": "water",
+    "hebeanlagenwaechter": "water",
+    "salzelektrolyseanlage": "water",
+    "bienenstockwaage": "garden",
+    "wohnmobilladepunkt": "car",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "ionic breeze": "appliances",
+    "amaircare": "appliances",
+    "envion therapure": "appliances",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "cron auftrag": "scripts",
+    "steuerungsskript": "scripts",
+    "triggerskript": "scripts",
+    "kettenbefehl": "scripts",
+    "blockly": "scripts",
+    "geplantes skript": "scripts",
+    "zeitgesteuertes skript": "scripts",
+    "szenenkette": "scripts",
+    "skript debuggen": "scripts",
+    "pipelinestufe": "scripts",
+    "workflowschritt": "scripts",
+    "applettrigger": "scripts",
+    "homematic skript": "scripts",
+    "ccu skript": "scripts",
+    "sprachbefehl kette": "scripts",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "restmuellsackerl": "waste",
+    "biomuellsackerl": "waste",
+    "cleanaway": "waste",
+    "kehrichtsackgebuehr": "waste",
+    "maroon bin": "waste",
+    "wertstoffhof oeffnungszeiten": "waste",
+    "abfallwirtschaftsverband": "waste",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "haze index": "air_quality",
+    "wildfire haze": "air_quality",
+    "birch pollen": "air_quality",
+    "oak pollen": "air_quality",
+    "dust mite": "air_quality",
+    "pelletofengeruch": "air_quality",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "schleudersicherung": "car",
+    "schnellladestecker": "car",
+    "sitzlueftung": "car",
+    "lueftungstimer": "fans",
+    "wlanstaerke": "network",
+    "netzwerkrouter": "network",
+    "auslandssteckdose": "switches",
+    "wasserkraftwerk": "energy",
+    "digitalschluessel": "locks",
+    "schliesszeitplan": "locks",
+    "diebstahlschutz": "security",
+    "nachtsicherung": "security",
+    "gasabsperrventil": "security",
+    "lichtsynchronisation": "media",
+    "sportkamera": "cameras",
+    "dampfgarfunktion": "appliances",
+    "gartenmaeher": "garden",
+    "wolkenvorhersage": "weather",
+    "rechnungsbeleg": "cost",
+    "kreditkartenzahlung": "cost",
+    "familienortung": "presence",
+    "einkaufsgutschein": "shopping",
+    "fussbodenheizungsregelung": "climate",
+    "akkuwechselanzeige": "battery",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "wuerfelsteuerung": "scenes",
+    "szenenwuerfel": "scenes",
+    "wasserschlauchventil": "water",
+    "maehroboterladestation": "garden",
+    "kellerlichtschalter": "lights",
+    "abluftsteuerung": "fans",
+    "phasenwechselrichter": "energy",
+    "pv ueberschussladung": "car",
+    "sirenenblitzlicht": "security",
+    "spiegelschrankbeleuchtung": "lights",
+    "poolabdeckmotor": "covers",
+    "fensteroeffnungsautomatik": "covers",
+    "treppenhauslicht": "lights",
+    "notlichtsystem": "lights",
+    "fluchtwegbeleuchtung": "lights",
+    "torlichtschranke": "covers",
+    "vogelhausueberwachung": "cameras",
+    "pollenflugsensor": "air_quality",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "shark air purifier": "appliances",
+    "instant air purifier": "appliances",
+    "hathaspace": "appliances",
 
 }
 
