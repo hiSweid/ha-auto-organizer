@@ -32473,7 +32473,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     # --- icon backfill batch (local-LLM generated + validated) ---
     "naehrstoff": "mdi:leaf",
     "kostal plenticore": "mdi:solar-power",
-    "verlassensszene": "mdi:movie-open",
+    "verlassensszene": "mdi:palette",
     "mqttbridge": "mdi:network",
     "price": "mdi:currency-eur",
     "lagesensor": "mdi:motion-sensor",
@@ -32832,7 +32832,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "infrared beam": "mdi:ray-vertex",
     "zoomobjektiv": "mdi:camera-metering-center",
     "aufputzdose": "mdi:power-plug",
-    "formaldehyd": "mdi:chemical-weapon",
+    "formaldehyd": "mdi:air-filter",
     "find my phone": "mdi:cellphone-marker",
     "ecobee firmware": "mdi:update",
 
@@ -32930,7 +32930,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "jahresbetrag": "mdi:cash-multiple",
     "nutzungsgrad": "mdi:gauge",
     "erdbodenfeuchte": "mdi:water-percent",
-    "waschbecken": "mdi:washing-machine",
+    "waschbecken": "mdi:faucet",
     "vl53l5cx": "mdi:radar",
     "macbook": "mdi:laptop",
     "prozessfuehler": "mdi:thermometer-lines",
@@ -32977,7 +32977,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "action chain": "mdi:link-variant",
     "geruempel": "mdi:trash-can",
     "onity": "mdi:lock-smart",
-    "floor drain": "mdi:floor-lamp",
+    "floor drain": "mdi:water",
     "unraid": "mdi:server-network",
     "graustrom": "mdi:power-plug",
     "oszillationsfunktion": "mdi:fan-alert",
@@ -33134,6 +33134,18 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "glaetteisen": "mdi:iron",
     "verbindungsabbruch": "mdi:network-off",
     "staudenbeet": "mdi:flower-tulip",
+
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "microburst": "mdi:weather-lightning-rainy",
+    "sammelstelle": "mdi:trash-can",
+    "werkstatthelligkeit": "mdi:brightness-5",
+    "pubquiz abend": "mdi:card-account-details-star",
+    "wetteronline": "mdi:weather-sunny",
+    "gute nacht szene": "mdi:weather-night",
+    "fensterladenautomatik": "mdi:window-shutter",
+    "max30205": "mdi:temperature-celsius",
+    "tuerdrehknauf": "mdi:door-open",
+    "lg webos": "mdi:television-classic",
 
 }
 
