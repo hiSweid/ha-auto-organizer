@@ -33198,6 +33198,14 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "feels like": "mdi:thermometer",
     "echo show": "mdi:google-assistant",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "trockenraum": "mdi:air-humidifier",
+    "staubsaugerduese": "mdi:vacuum",
+    "schlossnuss": "mdi:lock-alert",
+    "kuechenrolle": "mdi:paper-roll",
+    "zigarrenbefeuchtungssystem": "mdi:air-humidifier",
+    "reiserueckkehr": "mdi:home-import-outline",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------

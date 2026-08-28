@@ -82318,3 +82318,27 @@ def test_icon_backfill_feels_like():
 
 def test_icon_backfill_echo_show():
     assert suggest_entity_icon(_FakeEntry("sensor.echo_show"), OrganizerOptions()) == "mdi:google-assistant"
+
+
+def test_icon_backfill_trockenraum():
+    assert suggest_entity_icon(_FakeEntry("sensor.trockenraum"), OrganizerOptions()) == "mdi:air-humidifier"
+
+
+def test_icon_backfill_staubsaugerduese():
+    assert suggest_entity_icon(_FakeEntry("sensor.staubsaugerduese"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_schlossnuss():
+    assert suggest_entity_icon(_FakeEntry("sensor.schlossnuss"), OrganizerOptions()) == "mdi:lock-alert"
+
+
+def test_icon_backfill_kuechenrolle():
+    assert suggest_entity_icon(_FakeEntry("sensor.kuechenrolle"), OrganizerOptions()) == "mdi:paper-roll"
+
+
+def test_icon_backfill_zigarrenbefeuchtungssystem():
+    assert suggest_entity_icon(_FakeEntry("sensor.zigarrenbefeuchtungssystem"), OrganizerOptions()) == "mdi:air-humidifier"
+
+
+def test_icon_backfill_reiserueckkehr():
+    assert suggest_entity_icon(_FakeEntry("sensor.reiserueckkehr"), OrganizerOptions()) == "mdi:home-import-outline"
