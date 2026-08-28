@@ -33178,7 +33178,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "temperatur": "mdi:thermometer",
     "photoresistor sensor": "mdi:brightness-6",
     "manifold": "mdi:pipe",
-    "geschirrtuch": "mdi:dishwasher",
+    "geschirrtuch": "mdi:shopping",
 
     # --- icon backfill batch (local-LLM generated + validated) ---
     "funkrepeater": "mdi:repeat",
@@ -33190,7 +33190,7 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     # --- icon backfill batch (local-LLM generated + validated) ---
     "notlichtbatterie": "mdi:battery",
     "abwassergebuehr": "mdi:water-pump",
-    "beutelwechsel": "mdi:bag-personal",
+    "beutelwechsel": "mdi:robot-vacuum-variant",
     "neu flashen": "mdi:update",
     "wasserzaehlerimpuls": "mdi:counter",
 

@@ -82269,7 +82269,7 @@ def test_icon_backfill_manifold():
 
 
 def test_icon_backfill_geschirrtuch():
-    assert suggest_entity_icon(_FakeEntry("sensor.geschirrtuch"), OrganizerOptions()) == "mdi:dishwasher"
+    assert suggest_entity_icon(_FakeEntry("sensor.geschirrtuch"), OrganizerOptions()) == "mdi:shopping"
 
 
 def test_icon_backfill_funkrepeater():
@@ -82301,7 +82301,7 @@ def test_icon_backfill_abwassergebuehr():
 
 
 def test_icon_backfill_beutelwechsel():
-    assert suggest_entity_icon(_FakeEntry("sensor.beutelwechsel"), OrganizerOptions()) == "mdi:bag-personal"
+    assert suggest_entity_icon(_FakeEntry("sensor.beutelwechsel"), OrganizerOptions()) == "mdi:robot-vacuum-variant"
 
 
 def test_icon_backfill_neu_flashen():
