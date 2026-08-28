@@ -82170,3 +82170,35 @@ def test_icon_backfill_tuerdrehknauf():
 
 def test_icon_backfill_lg_webos():
     assert suggest_entity_icon(_FakeEntry("sensor.lg_webos"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_icon_backfill_waschsauger():
+    assert suggest_entity_icon(_FakeEntry("sensor.waschsauger"), OrganizerOptions()) == "mdi:vacuum"
+
+
+def test_icon_backfill_magnetverriegelung():
+    assert suggest_entity_icon(_FakeEntry("sensor.magnetverriegelung"), OrganizerOptions()) == "mdi:magnet-on"
+
+
+def test_icon_backfill_urlaubsstartroutine():
+    assert suggest_entity_icon(_FakeEntry("sensor.urlaubsstartroutine"), OrganizerOptions()) == "mdi:play-circle"
+
+
+def test_icon_backfill_aussenluftfuehler():
+    assert suggest_entity_icon(_FakeEntry("sensor.aussenluftfuehler"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_icon_backfill_master_switch():
+    assert suggest_entity_icon(_FakeEntry("sensor.master_switch"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_icon_backfill_urlaubsendroutine():
+    assert suggest_entity_icon(_FakeEntry("sensor.urlaubsendroutine"), OrganizerOptions()) == "mdi:stop-circle"
+
+
+def test_icon_backfill_variablenblock():
+    assert suggest_entity_icon(_FakeEntry("sensor.variablenblock"), OrganizerOptions()) == "mdi:variable"
+
+
+def test_icon_backfill_zabbix():
+    assert suggest_entity_icon(_FakeEntry("sensor.zabbix"), OrganizerOptions()) == "mdi:network"

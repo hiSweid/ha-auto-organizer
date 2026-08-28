@@ -33147,6 +33147,16 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "tuerdrehknauf": "mdi:door-open",
     "lg webos": "mdi:television-classic",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "waschsauger": "mdi:vacuum",
+    "magnetverriegelung": "mdi:magnet-on",
+    "urlaubsstartroutine": "mdi:play-circle",
+    "aussenluftfuehler": "mdi:thermometer",
+    "master switch": "mdi:power-plug",
+    "urlaubsendroutine": "mdi:stop-circle",
+    "variablenblock": "mdi:variable",
+    "zabbix": "mdi:network",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
