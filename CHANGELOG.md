@@ -6,6 +6,32 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.156] - 2026-08-28
+
+### Added
+- Further `SPECIFIC_ICONS` entries from the ongoing local-LLM icon backfill
+  batch job (~6220 total merged so far this run, ~179 of the original
+  6.9k gap remaining — nearly complete).
+
+### Fixed
+- 4 more icon mismatches: `verlassensszene` (a departure scene, another
+  movie-open lazy-fallback instance), `formaldehyd` (a pollutant) had
+  `mdi:chemical-weapon` again, `waschbecken` (a wash basin) had
+  `mdi:washing-machine`, `floor drain` had `mdi:floor-lamp` (a pure
+  "floor"-word collision).
+
+### Fixed (process)
+- Found a new failure mode as the icon gap shrinks: `KEYWORD_LABELS_BY_LENGTH`
+  resolves icons longest-match-first, so a short, brand-specific keyword
+  (e.g. `nuki`) can lose its icon once a longer, more generic keyword
+  that happens to also match the same entity (e.g. bare `battery`) finally
+  gets one from the backfill. Three such cases surfaced and were caught
+  by the full test suite before commit — reverted the icon assignment for
+  the generic word rather than ship a regression (`battery` overriding
+  `nuki`'s lock icon on `nuki_battery_level`, `naechste abholung`
+  overriding the waste-specific `gelbersack`, `or condition` overriding
+  the plain `condition` keyword). All three remain in the icon gap.
+
 ## [0.9.155] - 2026-08-27
 
 ### Added
