@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.158] - 2026-08-29
+
+### Added
+- 145 more vocabulary words across scripts/automation chaining, waste,
+  air quality/allergy symptoms, appliances, and device synonyms, plus a
+  further icon-backfill sweep. Each batch was collision-checked against
+  existing `KEYWORD_LABELS` entries (space-padding applied where a new
+  word was a substring risk), matching the established convention.
+
 ## [0.9.157] - 2026-08-28
 
 ### Added
