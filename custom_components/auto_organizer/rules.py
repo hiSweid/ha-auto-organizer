@@ -65908,6 +65908,7 @@ INTEGRATION_LABELS: Final[dict[str, str]] = {
     "waste_collection_schedule": "waste",
     # food-saving / shopping
     "tgtg": "shopping",
+    "grocy": "shopping",
 }
 
 

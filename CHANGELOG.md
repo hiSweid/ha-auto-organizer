@@ -6,6 +6,16 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.159] - 2026-08-30
+
+### Fixed
+- Grocy entities (shopping list items, chores, stock) are now curated via
+  the `grocy` integration platform instead of falling through to keyword
+  matching. Fixes a Grocy product entity named after e.g. "Frittierfett"
+  (frying fat) being labeled "Abfall" (waste) — that keyword exists for
+  used-cooking-oil waste-collection entities and unintentionally collided
+  with the grocery product name. Reported in GH issue #2.
+
 ## [0.9.158] - 2026-08-29
 
 ### Added

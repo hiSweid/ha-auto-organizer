@@ -598,6 +598,19 @@ def test_tgtg_curated():
     assert names(entry) == ["Einkauf"]
 
 
+def test_grocy_curated_not_waste():
+    # A Grocy product entity can be named after anything in the pantry
+    # (e.g. "Frittierfett" - frying fat), which collides with the
+    # unrelated "waste" keyword vocabulary (used cooking-oil disposal).
+    # The curated integration label wins so every Grocy entity is
+    # "Einkauf" regardless of the product name. See GH issue #2.
+    entry = FakeEntry(
+        "sensor.shopping_list_with_grocy_product_frittierfett_202",
+        platform="grocy",
+    )
+    assert names(entry) == ["Einkauf"]
+
+
 def test_ac_verbrauch_keyword():
     assert names(FakeEntry("sensor.buero_ac_verbrauch")) == ["Energie"]
 
