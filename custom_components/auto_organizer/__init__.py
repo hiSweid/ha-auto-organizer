@@ -214,12 +214,30 @@ async def async_setup_entry(
             pending.clear()
             if not ids:
                 return
-            result = await runtime.organizer.run(
-                _options_from_entry(hass, entry), entity_filter=ids
+            options = _options_from_entry(hass, entry)
+            result = await runtime.organizer.run(options, entity_filter=ids)
+            # assign_areas() has no entity_filter (it scans the registry and
+            # skips anything that already has an area), but that's cheap and
+            # naturally covers exactly the newly-created, still area-less
+            # entities from this batch — without it, a brand new entity only
+            # gets its area up to scan_interval minutes later or via a
+            # manual run, even though its label/icon appeared within seconds.
+            areas_result = await runtime.organizer.assign_areas(
+                dry_run=options.dry_run, exclude=options.exclude
             )
+            timestamp = dt_util.utcnow().isoformat()
             if result.updated:
-                # Skip the full registry walk when the new entities didn't
-                # end up labeled (nothing changed for the stats to reflect).
+                runtime.record_history(runtime.last_labeled, result.changes, timestamp)
+                runtime.record_history(
+                    runtime.last_iconed, result.icon_changes, timestamp
+                )
+            if areas_result.assigned:
+                runtime.record_history(
+                    runtime.last_grouped, areas_result.changes, timestamp
+                )
+            if result.updated or areas_result.assigned:
+                # Skip the full registry walk when nothing changed (nothing
+                # for the stats to reflect).
                 runtime.refresh_stats()
 
         debouncer = Debouncer(

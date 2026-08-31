@@ -5,7 +5,11 @@ from __future__ import annotations
 import pytest
 from homeassistant.core import Context, HomeAssistant
 from homeassistant.exceptions import HomeAssistantError
-from pytest_homeassistant_custom_component.common import MockConfigEntry, MockUser
+from pytest_homeassistant_custom_component.common import (
+    MockConfigEntry,
+    MockUser,
+    async_fire_time_changed,
+)
 
 from custom_components.auto_organizer.const import DOMAIN
 
@@ -140,6 +144,57 @@ async def test_own_control_entities_not_auto_labeled(hass: HomeAssistant) -> Non
     # None of our own button/select/switch/sensor entities should carry
     # auto-assigned labels from their own creation event.
     assert all(not e.labels for e in own_entities)
+
+
+async def test_auto_label_new_also_assigns_area(hass: HomeAssistant) -> None:
+    """A brand new entity should get its area, not just label/icon.
+
+    Regression test: auto_label_new used to only call organizer.run()
+    (labels + icons) for newly-created entities, leaving the area unset
+    until the next scheduled scan (up to scan_interval minutes later) or
+    a manual run — even though the label/icon appeared within seconds.
+    """
+    from datetime import timedelta
+
+    from homeassistant.helpers import area_registry as ar
+    from homeassistant.helpers import entity_registry as er
+    from homeassistant.util import dt as dt_util
+
+    from custom_components.auto_organizer.const import CONF_AUTO_LABEL_NEW
+
+    area_reg = ar.async_get(hass)
+    area_reg.async_create("Wohnzimmer")
+
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        title="Entity Auto-Organizer",
+        options={CONF_AUTO_LABEL_NEW: True},
+    )
+    entry.add_to_hass(hass)
+    assert await hass.config_entries.async_setup(entry.entry_id)
+    await hass.async_block_till_done()
+
+    ent_reg = er.async_get(hass)
+    ent_reg.async_get_or_create(
+        "light",
+        "test",
+        "wohnzimmer_lampe_unique",
+        suggested_object_id="wohnzimmer_lampe",
+        original_name="Wohnzimmer Lampe",
+    )
+    await hass.async_block_till_done()
+
+    # The auto_label_new debouncer waits 15s before flushing; advance past
+    # that instead of sleeping for real in the test suite.
+    async_fire_time_changed(hass, dt_util.utcnow() + timedelta(seconds=16))
+    await hass.async_block_till_done()
+
+    entry_after = ent_reg.async_get("light.wohnzimmer_lampe")
+    assert entry_after is not None
+    # The label/icon side was already covered by existing tests; the
+    # regression this test guards is specifically the area.
+    assert entry_after.labels
+    assert entry_after.area_id == area_reg.async_get_area_by_name("Wohnzimmer").id
 
 
 async def test_diagnostics_strips_changes_from_every_section(

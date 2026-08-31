@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.9.160] - 2026-08-31
+
+### Fixed
+- `auto_label_new` now also assigns the area for newly-created entities,
+  not just the label and icon. Found via live testing on production HA:
+  creating a test helper got it labeled and iconed within ~15s (the
+  debouncer's cooldown), but its area only appeared after a manual run
+  or the next scheduled scan (up to `scan_interval` minutes later,
+  default 6h) — a real gap between "looks instant" and "is instant".
+  `assign_areas()` has no per-entity filter, but it's cheap (it already
+  skips anything with an area) and naturally covers just the newly
+  created, still area-less entities in the same debounced flush.
+
 ## [0.9.159] - 2026-08-30
 
 ### Fixed
