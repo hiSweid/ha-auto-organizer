@@ -6,6 +6,62 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.0] - 2026-09-01
+
+The keyword vocabulary reaches entities it never used to, and stops making
+things up when it does. Measured against a real 3228-entity installation:
+overall label coverage 54.7% -> 98.9%, with 0 regressions in the test suite.
+
+### Added
+- Two generic fallback labels, **Diagnose** and **Konfiguration**
+  (`mdi:wrench-outline` / `mdi:cog-outline`), for entities `skip_categories`
+  keeps out of the domain/keyword engine and that no curated integration
+  recognized. Previously such an entity got no label at all — on a real
+  installation that was ~1000 entities, invisible to every label-based
+  filter, dashboard, and view. Curated matches still take priority and are
+  unaffected (a diagnostic Proxmox sensor still gets "Netzwerk & Server",
+  not "Diagnose" on top).
+- `max_labels` default raised from 2 to 3, so the additional depth below
+  has somewhere to go instead of being immediately truncated back off.
+
+### Fixed
+- The keyword pass only ran when a domain or device_class match hadn't
+  already added a label — effectively `if not keys`. That blocked the
+  30,000-word vocabulary for 83% of otherwise-eligible entities: every
+  `switch.*` stopped at "Schalter" and never reached "Haushaltsgeräte", every
+  Modbus battery sensor stopped at "Energie" and never reached "Batterie".
+  Only a *curated* integration match still gates the keyword pass now — that
+  one case stays deliberate (GH issue #2: a Grocy product name must not leak
+  into "Abfall").
+- `KEYWORD_VETOES` (added in 0.10.0) only cancelled a shorter needle's label
+  when the vetoing needle happened to be processed first in
+  longest-needle-first order. Two same-purpose needles of equal or
+  coincidentally shorter length (an evcc pool pump's "poolpumpe", 9
+  characters, against "ladevorgang", 11) could add the vetoed label before
+  their own veto was even registered. Vetoes are now collected in a full
+  first pass over every matching needle before any label is added, so
+  ordering can no longer let one slip through.
+- `evcc_intg` is no longer curated to "Auto". It is a whole-house energy
+  controller — grid, PV, battery, and one loadpoint per connected device —
+  not a car-only integration; curating it blanket-labeled all of that
+  "Auto", pool pump and grid meter included. The generic `" evcc "` keyword
+  now handles it instead, with a new veto so the pool pump specifically
+  stops being tagged as a car (0 of 59 live pool-pump entities now say
+  "Auto", down from all of them; "Garten" applies instead).
+- `wled` is no longer curated to "Beleuchtung". A curated match bypasses
+  `skip_categories`, so it blanket-labeled the integration's own Wi-Fi/
+  uptime diagnostics as lighting too. The generic `" wled "` keyword now
+  handles it instead and correctly respects `skip_categories`; real
+  `light.*` entities are unaffected (still matched via the domain).
+- `"standort"` (site/location) no longer maps to "Anwesenheit" (presence).
+  On the reference installation it never once fired on an actual presence
+  entity — all matches were an evcc tariff sensor's `[Standort]` (site, not
+  a person's whereabouts) suffix, and being 8 characters it was long enough
+  to outrank and crowd out that entity's real theme under `max_labels`.
+  "Standort" is simply too generic to disambiguate from text alone; the more
+  specific presence words (zuhause, iphone, handy, gps, ...) are unaffected.
+
+
 ## [0.10.0] - 2026-09-01
 
 Two related themes: keyword matching stops inventing labels out of substrings,

@@ -8,8 +8,8 @@ Automatically assigns [Labels](https://www.home-assistant.io/docs/organizing/lab
 
 ## Features
 
-- 🏷️ 33 label themes, 30,971 keywords (DE+EN), 125 curated integrations
-- 🖼️ Optional icon suggestions — 30,827 mappings across 3,218 icons, full coverage of every label & domain, never overwrites an existing icon
+- 🏷️ 35 label themes, 30,970 keywords (DE+EN), 123 curated integrations
+- 🖼️ Optional icon suggestions — 30,826 mappings across 3,218 icons, full coverage of every label & domain, never overwrites an existing icon
 - 🏠 Optional area & floor labels, plus a standalone area-assignment service
 - 🎯 Restrict to chosen label themes; exclude by domain, entity, or glob pattern
 - 🧪 Dry-run mode + `preview` service — see changes before writing anything
@@ -57,9 +57,9 @@ Under the integration's *Configure* button:
 | Restrict to label themes | all | Multi-select to limit which labels can be used |
 | Auto-suggest entity icons | off | Fill in a specific icon where none is set |
 | Area / floor labels | off | Add area/floor as labels too |
-| Skip diagnostic/config | on | Ignore helper entities |
+| Skip diagnostic/config | on | Keep the domain/keyword engine off helper entities; they still get a generic Diagnose/Konfiguration label instead of none |
 | Label language | auto | `auto` / `de` / `en` |
-| Max labels per entity | 2 | 1–10 |
+| Max labels per entity | 3 | 1–10 |
 | Auto-label new entities | on | Debounced, on entity creation |
 | Run on startup / interval | off / 0 | Automatic runs |
 | Label prefix | — | Prepended to every label name |
@@ -77,8 +77,8 @@ Entities with icon · Label coverage.
 
 ## Labels
 
-33 themes — lighting, climate, security, media, appliances, garden,
-network, car, mower, waste, shopping and more — see
+35 themes — lighting, climate, security, media, appliances, garden,
+network, car, mower, diagnostic/config markers, waste, shopping and more — see
 [`rules.py`](custom_components/auto_organizer/rules.py) for the full
 catalog. *Restrict to label themes* limits assignment to a subset; *Custom
 rules* add your own `keyword=label_key` mappings.

@@ -65,7 +65,7 @@ class OrganizerOptions:
     skip_categories: bool = True
     language: str = DEFAULT_LANGUAGE
     label_prefix: str = ""
-    max_labels: int = 2
+    max_labels: int = 3
     exclude: tuple[str, ...] = field(default_factory=tuple)
     custom_rules: dict[str, str] = field(default_factory=dict)
     # Restrict which label *themes* may be assigned at all (by catalog key,
@@ -137,6 +137,11 @@ LABELS: Final[dict[str, LabelDef]] = {
     ),
     "waste": _ld("green", "mdi:trash-can", "Abfall", "Waste"),
     "shopping": _ld("deep-purple", "mdi:cart-heart", "Einkauf", "Shopping"),
+    # generic fallback for skip_categories — see _collect_label_keys. Keys
+    # match Home Assistant's own EntityCategory values verbatim so no
+    # separate lookup table is needed.
+    "diagnostic": _ld("grey", "mdi:wrench-outline", "Diagnose", "Diagnostic"),
+    "config": _ld("blue-grey", "mdi:cog-outline", "Konfiguration", "Configuration"),
 }
 
 
@@ -1340,7 +1345,6 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "multifunktionsdrucker": "mdi:printer",
     "airprint": "mdi:printer-wireless",
     "heimserver": "mdi:server",
-    "standort": "mdi:map-marker",
     "mobiltelefon": "mdi:cellphone",
     "armbanduhr": "mdi:watch",
     "fitnesstracker": "mdi:watch",
@@ -36206,7 +36210,14 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "eintreffen": "presence",
     "verlassen": "presence",
     "betreten": "presence",
-    "standort": "presence",
+    # "standort" deliberately absent: on a real installation it never once
+    # fired on a genuine presence entity — all 8 live matches were an evcc
+    # tariff sensor's "[Standort]" (site/location, not a person's
+    # whereabouts) suffix, and being 8 characters it outranked and crowded
+    # out that entity's real theme (car/cost/energy) under max_labels.
+    # "Standort" is simply too generic a word for "site" vs. "location of a
+    # person" to tell apart from text alone; the more specific presence
+    # words below (zuhause, handy/iphone/ipad, gps, ...) cover the real case.
     "belegt": "presence",
     "auslastung": "presence",
     "besucher": "presence",
@@ -65775,6 +65786,10 @@ KEYWORD_VETOES: Final[dict[str, frozenset[str]]] = {
     "aktuelle bedingungen": frozenset({"automations"}),
     "collection schedule": frozenset({"automations"}),
     "abfallkalender": frozenset({"automations"}),
+    # A charging controller's pool-pump loadpoint is not a car — see the
+    # comment above evcc_intg's removal from INTEGRATION_LABELS.
+    "poolpumpe": frozenset({"car"}),
+    "pool pumpe": frozenset({"car"}),
 }
 
 # KEYWORD_LABELS sorted longest-needle-first so callers that stop at the
@@ -65834,8 +65849,13 @@ INTEGRATION_LABELS: Final[dict[str, str]] = {
     "synology_dsm": "network",
     "smlight": "network",
     "nmap_tracker": "presence",
-    # car / charging
-    "evcc_intg": "car",
+    # car / charging — evcc_intg deliberately absent: it is a whole-house
+    # energy controller (grid, PV, battery, and one loadpoint per
+    # connected device), not a car-only integration. Curating it to "car"
+    # blanket-labeled all of it — including a pool pump loadpoint and the
+    # home battery/grid statistics — "Auto". Falling through to the " evcc "
+    # keyword lets the more specific keywords below (poolpumpe, ladevorgang,
+    # kwh, ...) add their own theme alongside or instead of "car".
     "wallbox": "car",
     "easee": "car",
     "zaptec": "car",
@@ -65909,8 +65929,11 @@ INTEGRATION_LABELS: Final[dict[str, str]] = {
     # not a network/Thread-protocol device). Curated so the ambiguous bare
     # word "thread" in its entity_ids never needs to be a network keyword.
     "thread_presence": "presence",
-    # lights
-    "wled": "lights",
+    # lights — wled deliberately absent: curating it blanket-labeled every
+    # entity "Beleuchtung", including its Wi-Fi/uptime diagnostics (which
+    # skip_categories is supposed to keep quiet, but a curated match bypasses
+    # that gate). The generic " wled " keyword below still covers the real
+    # light entities and correctly respects skip_categories.
     "govee_light_local": "lights",
     # media
     "spotify": "media",
@@ -66231,15 +66254,17 @@ def _collect_label_keys(
         options.skip_categories and getattr(entry, "entity_category", None)
     )
 
-    # Curated integration themes apply even to diagnostic/config entities.
-    #
-    # NOTE: these deliberately land in `keys` before the keyword pass, which
-    # therefore never runs for a curated integration. That costs depth — a
-    # charging controller's pool-pump loadpoint comes out as "Auto" like
-    # everything else it hosts — but it is also what keeps a curated theme
-    # authoritative (GH issue #2: a Grocy shopping-list item must not pick up
-    # "Abfall" from the product name). Untangling the two needs the
-    # vocabulary cleaned up first; see the roadmap.
+    # Curated integration themes apply even to diagnostic/config entities,
+    # and — captured in `curated_hit` right below — are the only thing that
+    # gates the keyword pass. A domain or device_class hit used to gate it
+    # too (the old check was bare `if not keys:`), which on a real
+    # installation blocked the 30k-word vocabulary for 83% of otherwise
+    # eligible entities: every switch.* stopped at "Schalter" and never
+    # reached "Waschmaschine" (appliances), every battery sensor behind a
+    # Modbus integration stopped at "Energie" and never reached "Batterie".
+    # A curated integration still gates, because it is the one case where
+    # silencing the vocabulary is deliberate (GH issue #2: a Grocy
+    # shopping-list item must not pick up "Abfall" from the product name).
     if options.enable_curated:
         if platform:
             add(INTEGRATION_LABELS.get(platform), reason=platform)
@@ -66252,6 +66277,7 @@ def _collect_label_keys(
             if f" {kw} " in hay:
                 add("car", reason=kw)
                 break
+    curated_hit = bool(keys)
 
     # Domain/device_class labels are skipped for config/diagnostic helpers.
     if not is_category:
@@ -66265,10 +66291,10 @@ def _collect_label_keys(
             if device_class:
                 add(DEVICE_CLASS_LABELS.get(device_class), reason=device_class)
 
-        # Keyword fallbacks only when nothing more specific matched. Matched
+        # Keyword fallbacks whenever nothing *curated* matched. Matched
         # against the normalized entity_id and friendly name. User-defined
         # custom rules take precedence over the built-in vocabulary.
-        if not keys:
+        if not curated_hit:
             ename = getattr(entry, "name", None) or getattr(
                 entry, "original_name", None
             )
@@ -66277,22 +66303,37 @@ def _collect_label_keys(
             # is seen before its parts. Matches are *not* mutually exclusive:
             # "ble temp" is both climate and temperature, "kitchen oven temp"
             # is both an appliance and a temperature. Only the handful of
-            # genuinely contradictory pairs are cancelled, via KEYWORD_VETOES.
+            # genuinely contradictory pairs are cancelled, via KEYWORD_VETOES —
+            # collected in a first pass over every matching needle so a
+            # shorter needle's veto still applies even when a longer,
+            # unrelated needle for the same key was seen first (e.g. a pool
+            # pump's "poolpumpe", 9 chars, cancelling "car" from the equally
+            # long "ladevorgang" needs to win regardless of which one
+            # KEYWORD_LABELS_BY_LENGTH happens to place first).
+            candidates: dict[str, str] = {}
             vetoed: set[str] = set()
             for needle, key in sorted(
                 options.custom_rules.items(), key=lambda item: len(item[0]), reverse=True
             ):
                 if _keyword_hit(needle, hay):
-                    add(key, reason=needle)
+                    candidates.setdefault(key, needle)
             for needle, key in KEYWORD_LABELS_BY_LENGTH:
                 if not _keyword_hit(needle, hay):
                     continue
-                # A veto is always carried by the longer needle, which this
-                # length-ordered walk reaches first — so skipping is enough,
-                # nothing has to be taken back.
+                candidates.setdefault(key, needle)
                 vetoed |= KEYWORD_VETOES.get(needle, frozenset())
+            for key, needle in candidates.items():
                 if key not in vetoed:
                     add(key, reason=needle)
+    elif not keys:
+        # A config/diagnostic helper no curated integration recognized is
+        # deliberately kept out of the domain/keyword engine — that's what
+        # skip_categories means — but leaving it with *no* label at all is a
+        # worse default than one generic marker: on a real installation it
+        # silently dropped ~1000 entities out of every label-based filter,
+        # dashboard, and view with no way to even find them again.
+        category = getattr(entry, "entity_category", None)
+        add(category, reason=category)
 
     return keys, reasons
 

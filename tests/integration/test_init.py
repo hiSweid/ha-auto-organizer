@@ -349,17 +349,37 @@ async def test_history_sensors_track_last_10_changes(hass: HomeAssistant) -> Non
     assert await hass.config_entries.async_setup(entry.entry_id)
     await hass.async_block_till_done()
 
+    # Settle the integration's own control entities first. Since v0.10 the
+    # keyword pass also runs on entities a domain/device_class already
+    # matched (see rules.py's curated_hit gate), so this fixture's ~17
+    # built-in entities pick up an extra label each on their very first
+    # run — more than HISTORY_LIMIT, which would otherwise push the entity
+    # this test actually cares about out of the tracked history before it's
+    # even created.
+    await hass.services.async_call(
+        DOMAIN, "run", {"dry_run": False}, blocking=True, return_response=True
+    )
+    await hass.async_block_till_done()
+
     ent_reg = er.async_get(hass)
     ent_reg.async_get_or_create(
         "sensor", "test", "coffee_3", suggested_object_id="kaffeemaschine3"
     )
 
-    # A dry run must not pollute the history.
+    # A dry run must not pollute the history: it must still be whatever the
+    # warm-up run above left it as, with the new entity absent.
+    before = hass.states.get("sensor.entity_auto_organizer_last_labeled_entities")
     await hass.services.async_call(
         DOMAIN, "run", {"dry_run": True}, blocking=True, return_response=True
     )
     await hass.async_block_till_done()
-    assert hass.states.get("sensor.entity_auto_organizer_last_labeled_entities").state == "unknown"
+    after_dry_run = hass.states.get("sensor.entity_auto_organizer_last_labeled_entities")
+    assert after_dry_run.state == before.state
+    assert after_dry_run.attributes.get("items") == before.attributes.get("items")
+    assert not any(
+        i["entity_id"] == "sensor.kaffeemaschine3"
+        for i in after_dry_run.attributes["items"]
+    )
 
     await hass.services.async_call(
         DOMAIN, "run", {"dry_run": False}, blocking=True, return_response=True

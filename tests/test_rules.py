@@ -67,9 +67,15 @@ def test_keyword_fallback_only_when_no_match():
     assert names(FakeEntry("foo.bar_battery")) == ["Batterie"]
 
 
-def test_no_keyword_fallback_when_domain_matched():
+def test_keyword_can_add_alongside_domain_match():
+    # Since v0.10 only a *curated* match gates the keyword pass — a plain
+    # domain match is not "more specific" the way a curated integration
+    # theme is, so a light in a room whose name mentions "battery" also
+    # gets that theme instead of being capped at "Beleuchtung".
     entry = FakeEntry("light.battery_room")
-    assert names(entry) == ["Beleuchtung"]
+    result = names(entry)
+    assert "Beleuchtung" in result
+    assert "Batterie" in result
 
 
 def test_disable_domain():
@@ -96,14 +102,20 @@ def test_no_duplicate_label_names():
     assert len(result) == len(set(result))
 
 
-def test_diagnostic_entity_skipped_by_default():
+def test_diagnostic_entities_get_generic_label():
+    # Since v0.10, skip_categories still keeps the domain/keyword engine off
+    # a diagnostic/config helper, but no longer leaves it with *no* label at
+    # all — that silently dropped ~1000 entities on a real installation out
+    # of every label-based filter. It gets a generic marker instead, unless
+    # a curated integration already gave it something more specific (see
+    # test_curated_applies_even_to_diagnostic).
     entry = FakeEntry("sensor.uptime", entity_category="diagnostic")
-    assert names(entry) == []
+    assert names(entry) == ["Diagnose"]
 
 
-def test_config_entity_skipped_by_default():
+def test_config_entities_get_generic_label():
     entry = FakeEntry("switch.led_config", entity_category="config")
-    assert names(entry) == []
+    assert names(entry) == ["Konfiguration"]
 
 
 def test_categories_labeled_when_skip_disabled():
@@ -169,8 +181,13 @@ def test_curated_can_be_disabled():
 
 
 def test_car_label_from_integration():
+    # evcc_intg is deliberately NOT curated (see rules.py) — it's a
+    # whole-house energy controller, not a car-only integration. "Auto"
+    # still applies here, just via the " evcc " keyword instead of a
+    # blanket platform label, which lets other evcc entities (a pool pump
+    # loadpoint, the home battery) get their own theme instead.
     entry = FakeEntry("sensor.evcc_ladestand", platform="evcc_intg")
-    assert names(entry) == ["Auto"]
+    assert "Auto" in names(entry)
 
 
 def test_car_label_from_keyword():
@@ -203,7 +220,6 @@ def test_reolink_integration_cameras():
 def test_integration_themes_extra():
     cases = {
         "frigate": "Kameras",
-        "wled": "Beleuchtung",
         "dwd_weather": "Wetter",
         "hassio": "Netzwerk & Server",
         "backup": "Netzwerk & Server",
@@ -264,10 +280,14 @@ def test_keyword_umlaut_in_name():
     assert names(entry) == ["Lüfter"]
 
 
-def test_keyword_only_as_fallback():
-    # has a device_class -> keyword fallback must NOT run
+def test_keyword_runs_alongside_device_class():
+    # Since v0.10 a device_class match no longer blocks the keyword pass —
+    # only a curated integration match does. A water-temperature sensor
+    # gets both themes instead of being capped at "Temperatur".
     entry = FakeEntry("sensor.wasser_temp", original_device_class="temperature")
-    assert names(entry) == ["Temperatur"]
+    result = names(entry)
+    assert "Temperatur" in result
+    assert "Wasser" in result
 
 
 def test_curated_appliance_label():
@@ -281,9 +301,13 @@ def test_monetary_maps_to_cost():
 
 
 def test_lawn_mower_domain_maps_to_mower():
-    # A robotic mower is its own theme, not "Garten" and certainly not
-    # "Auto" (issue #4).
-    assert names(FakeEntry("lawn_mower.vorgarten")) == ["Mähroboter"]
+    # A robotic mower is its own theme, not "Auto" (issue #4). "Garten"
+    # legitimately also applies here via the "vorgarten" keyword — the
+    # mower really is garden equipment, just not filed under the generic
+    # theme alone any more.
+    result = names(FakeEntry("lawn_mower.vorgarten"))
+    assert "Mähroboter" in result
+    assert "Auto" not in result
 
 
 def test_weather_device_classes_map_to_weather():
@@ -373,7 +397,7 @@ def test_energy_is_a_single_label_not_split():
 def test_heating_domains_go_into_klima():
     for domain in ("climate", "water_heater", "humidifier"):
         entry = FakeEntry(f"{domain}.thermostat")
-        assert names(entry) == ["Klima"], domain
+        assert "Klima" in names(entry), domain
 
 
 def test_energy_and_lights_have_distinct_colors():
@@ -423,10 +447,13 @@ def test_invalid_custom_rule_labels():
     assert invalid_custom_rule_labels("") == []
 
 
-def test_custom_rule_not_used_when_specific_match():
+def test_custom_rule_runs_alongside_domain_match():
+    # Since v0.10 a domain match no longer blocks custom rules either —
+    # only a curated integration match does.
     opts = OrganizerOptions(custom_rules={"kitchen": "water"})
-    # light domain matches -> custom keyword fallback must not run
-    assert names(FakeEntry("light.kitchen"), opts) == ["Beleuchtung"]
+    result = names(FakeEntry("light.kitchen"), opts)
+    assert "Beleuchtung" in result
+    assert "Wasser" in result
 
 
 def test_affected_count_none_and_empty():
@@ -485,9 +512,12 @@ def test_update_device_class_maps_to_updates():
 
 
 def test_raw_integration_label_skipped_for_diagnostic():
+    # The raw platform label (enable_integration) is still correctly kept
+    # off a diagnostic entity — it just no longer means the entity ends up
+    # with *no* label at all, see test_diagnostic_entities_get_generic_label.
     opts = OrganizerOptions(enable_integration=True, enable_curated=False)
     entry = FakeEntry("sensor.x", platform="foo", entity_category="diagnostic")
-    assert names(entry, opts) == []
+    assert names(entry, opts) == ["Diagnose"]
 
 
 # --- area matching -------------------------------------------------------
@@ -573,11 +603,21 @@ def test_max_labels_cap():
     assert names(entry, opts) == ["Mähroboter"]
 
 
-def test_default_max_two_labels():
+def test_max_labels_default_is_three():
+    # mower (curated) + car (CAR_NAME_KEYWORDS) + battery (device_class)
+    # all fit under the v0.10 default cap of 3.
     entry = FakeEntry("sensor.egolf_batterie", platform="navimow",
                       original_device_class="battery")
-    # car + curated + battery would be 3, default cap = 2
-    assert len(names(entry)) == 2
+    result = names(entry)
+    assert len(result) == 3
+    assert set(result) == {"Mähroboter", "Auto", "Batterie"}
+
+
+def test_max_labels_cap_still_truncates():
+    opts = OrganizerOptions(max_labels=2)
+    entry = FakeEntry("sensor.egolf_batterie", platform="navimow",
+                      original_device_class="battery")
+    assert len(names(entry, opts)) == 2
 
 
 def test_match_area_first_token_wins_over_later_one():
@@ -703,7 +743,9 @@ def test_ble_temp_keyword():
 
 
 def test_new_domains():
-    assert names(FakeEntry("valve.garden_hose")) == ["Rollläden"]
+    # "garden hose" also legitimately matches the garden keyword now that a
+    # domain match no longer blocks the keyword pass.
+    assert "Rollläden" in names(FakeEntry("valve.garden_hose"))
     assert names(FakeEntry("tts.piper")) == ["Medien"]
     assert names(FakeEntry("stt.whisper")) == ["Medien"]
 
@@ -1023,7 +1065,11 @@ def test_pv_keyword_is_whole_word_not_pve_substring():
     # host's own hostname abbreviation), mislabeling/re-iconing dozens of
     # unrelated Proxmox sensors (GPU/NVMe/RAM/load) as solar/energy.
     entry = FakeEntry("sensor.proxmox_host_pve_gpu_temperatur", original_device_class="temperature")
-    assert names(entry) == ["Temperatur"]
+    # "Netzwerk & Server" now legitimately also applies (the real, padded
+    # "proxmox" keyword) — what this test actually guards against is "pv"
+    # leaking out of "pve" into "Energie", which it must not.
+    assert "Temperatur" in names(entry)
+    assert "Energie" not in names(entry)
     assert suggest_entity_icon(entry, OrganizerOptions()) == "mdi:thermometer"
     # The legitimate whole-word case (a real PV/solar entity) must still match.
     assert "Energie" in names(FakeEntry("sensor.solcast_pv_forecast"))
@@ -1144,3 +1190,45 @@ def test_irrigation_stays_garden():
 def test_affected_count_includes_icons():
     assert affected_count({"icons": {"icons_set": 12}}) == 12
     assert affected_count({"labels": {"updated": 3}, "icons": {"icons_set": 4}}) == 7
+
+
+# --- wled: curated removed, generic keyword respects skip_categories ------
+
+
+def test_wled_light_entity_still_gets_beleuchtung():
+    # Real light entities keep "Beleuchtung" via the DOMAIN_LABELS "light"
+    # match regardless of platform.
+    entry = FakeEntry("light.wled_besta", platform="wled")
+    assert "Beleuchtung" in names(entry)
+
+
+def test_wled_diagnostic_wifi_entity_no_longer_mislabeled():
+    # Issue found in the 2026-09-01 audit: curating "wled" -> "lights"
+    # bypassed skip_categories and mislabeled the integration's own Wi-Fi/
+    # uptime diagnostics as "Beleuchtung". Removing the curated entry lets
+    # the generic " wled " keyword handle it instead, which correctly
+    # respects skip_categories like every other keyword match.
+    entry = FakeEntry(
+        "sensor.wled_besta_wlan_signal", platform="wled",
+        entity_category="diagnostic",
+    )
+    assert names(entry) == ["Diagnose"]
+
+
+# --- evcc: curated removed, only the pool pump is vetoed -------------------
+
+
+def test_evcc_pool_pump_is_not_a_car():
+    # Issue found in the 2026-09-01 audit: curating "evcc_intg" -> "car"
+    # blanket-labeled a whole-house energy controller's pool-pump loadpoint
+    # as "Auto". "Garten" applies via the "poolpumpe" keyword instead, and
+    # KEYWORD_VETOES cancels the generic " evcc " -> car reading for it.
+    entry = FakeEntry("select.evcc_poolpumpe_mode", platform="evcc_intg")
+    result = names(entry)
+    assert "Garten" in result
+    assert "Auto" not in result
+
+
+def test_evcc_garage_charger_stays_a_car():
+    entry = FakeEntry("sensor.evcc_garage_charge_power", platform="evcc_intg")
+    assert "Auto" in names(entry)
