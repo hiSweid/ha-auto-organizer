@@ -1,0 +1,348 @@
+# DIY: Vintage-Akku-Wandlampe für Home Assistant (Thread/WLAN, USB-C)
+
+Ziel: eine kleine, vintage aussehende Wandlampe mit Akku, dimmbar + Farbtemperatur
+einstellbar, gesteuert über Home Assistant, geladen ausschließlich per USB-C,
+mit minimalem Lötaufwand.
+
+> **Stand:** August 2026. Preise sind grobe Richtwerte.
+
+---
+
+## 1. Zuerst die ehrliche Physik: „1 Jahr Akku bei 4 h/Tag" geht nicht
+
+Licht kostet Energie, und daran ändert auch die beste Funktechnik nichts.
+Kurze Rechnung:
+
+- 4 h/Tag × 365 Tage = **1460 Leuchtstunden pro Jahr**
+- Gemütliches Wandlampen-Licht (~150 lm warmweiß) braucht mit sehr effizienten
+  LEDs ca. **1–1,5 W** → 1460 h × 1,2 W ≈ **1750 Wh pro Jahr**
+- Eine 18650-Zelle hat ~11 Wh, eine dicke 21700-Zelle ~18 Wh
+
+Für ein Jahr Laufzeit bei gemütlicher Helligkeit bräuchtest du also einen Akku
+in der Größenordnung einer **Autobatterie**. Selbst bei reinem
+Kerzenschein-Glimmen (~15 lm ≈ 0,15 W) wären es noch ~250 Wh — ein Ziegelstein
+aus ~14 Stück 21700-Zellen.
+
+**Was realistisch ist** (mit dem Aufbau aus diesem Guide, Standby via Thread):
+
+| Helligkeit (4 h/Tag) | 1× 18650 (11 Wh) | 1× 21700 (18 Wh) | 2× 21700 (37 Wh) |
+|---|---|---|---|
+| ~150 lm („gemütlich hell") | ~2 Tage | ~3–4 Tage | ~6–7 Tage |
+| ~50 lm (warm gedimmt) | ~5 Tage | ~8 Tage | ~2–2,5 Wochen |
+| ~15 lm (Kerzenschein) | ~2 Wochen | ~3 Wochen | **~6 Wochen** |
+
+Fazit: Mit 1–2 dicken Zellen und gedimmtem Betrieb lädst du **alle paar Wochen**
+per USB-C nach — das ist das Maximum, das die Physik hergibt. Plane die Lampe
+so, dass Laden bequem ist (USB-C-Buchse unten/seitlich erreichbar, Laden im
+eingebauten Zustand).
+
+### Warum Thread statt WLAN Pflicht ist
+
+Der zweite Akku-Killer ist nicht das Licht, sondern das Funkmodul im Standby:
+
+- **WLAN (ESP32, verbunden, Power-Save an):** ~15–25 mA im Leerlauf →
+  **0,4–0,6 Ah pro Tag nur fürs Nichtstun**. Eine 18650 ist damit in unter
+  einer Woche leer, ohne dass die Lampe je geleuchtet hat.
+- **Thread als Sleepy End Device:** typisch unter 1 mA im Mittel → Standby
+  spielt praktisch keine Rolle mehr.
+
+WLAN + Deep Sleep geht bei Sensoren, aber nicht bei einer Lampe — sie muss
+jederzeit auf „Einschalten" aus HA reagieren. **Darum: ESP32-C6 mit Thread.**
+Voraussetzung: ein Thread Border Router in deinem HA-Setup (Home Assistant
+Connect ZBT-1/SkyConnect, Apple TV 4K, HomePod o. ä.).
+
+Seit ESPHome 2025.6 gibt es native [OpenThread-Unterstützung](https://esphome.io/components/openthread/)
+für ESP32-C6/H2, seit 2025.11 auch Sleepy-End-Device-Support. Die Lampe taucht
+dann ganz normal über die ESPHome-Integration in HA auf — kein Matter-Gefrickel.
+Fallback: Der gleiche Aufbau läuft mit 3 Zeilen YAML-Änderung auch über WLAN,
+falls Thread bei dir zickt — nur eben mit den obigen Standby-Kosten.
+
+---
+
+## 2. Empfohlener Aufbau (Option A): XIAO ESP32-C6 + ESPHome
+
+Herzstück ist das **Seeed Studio XIAO ESP32-C6** (~9 €): briefmarkengroß
+(21×17 mm), USB-C-Buchse **und Li-Ion-Lademanagement schon an Bord** — Akku an
+zwei Pads löten, fertig. Damit bleibt der Lötaufwand bei **ca. 8–10 Lötstellen**.
+
+### Einkaufsliste (~25–35 € ohne Gehäuse)
+
+| Teil | Zweck | ca. Preis |
+|---|---|---|
+| Seeed XIAO ESP32-C6 | Controller, Thread-Funk, USB-C, Laderegler | 9 € |
+| 1–2× 21700 Li-Ion **mit Schutzschaltung** (z. B. geschützte Zelle) + Zellenhalter | Akku (kein Löten an der Zelle!) | 8–15 € |
+| TP4056-Ladeboard mit **USB-C** und Protection (optional, s. u.) | schnelleres Laden mit 1 A | 2 € |
+| Dual-MOSFET-PWM-Modul (2× N-Kanal Logic-Level, z. B. AO3400/D4184-Breakout) | dimmt die zwei LED-Kanäle | 3 € |
+| CW/WW-Bicolor-LED (1–3 W „CCT" auf Star-Platine, 2700 K + 6000 K) **oder** 4× 3-V-LED-Filamente (2× 2200 K, 2× 4000 K) | Licht mit Farbtemperatur | 3–6 € |
+| 2× Widerstand (je nach LED, ~1–4,7 Ω / 1 W) | Strombegrenzung | Cent |
+| Kleiner Kippschalter (vintage!) | harter Aus-Schalter = 0 µA Standby | 2 € |
+
+**Vintage-Tipp:** Die 3-V-LED-Filament-Stäbchen (bekannt aus „Edison"-Kerzenbirnen,
+gibt's einzeln bei AliExpress/eBay) sehen hinter Opal- oder Klarglas fantastisch
+nach Glühfaden aus und brauchen nur 10–40 mA pro Stück. Zwei warme + zwei kalte
+Filamente an je einem MOSFET-Kanal = dimmbar **und** Farbtemperatur mischbar,
+bei nur ~0,3–1 W Gesamtleistung — das ist die Kombination, die dir die
+~6 Wochen aus der Tabelle bringt.
+
+### Verdrahtung (alles an einer 3,7-V-Schiene, kein Netzteil, kein Boost)
+
+```
+USB-C (TP4056)          XIAO ESP32-C6
+  B+ ──► Akku + ──► BAT+ Pad
+  B- ──► Akku - ──► BAT-  Pad ──► GND-Schiene
+
+Akku + ──► Kippschalter ──► LED gemeinsame Anode (+)
+LED  WW-Kathode ──► [R] ──► MOSFET1 Drain     MOSFET1 Gate ◄── D0 (GPIO0)
+LED  CW-Kathode ──► [R] ──► MOSFET2 Drain     MOSFET2 Gate ◄── D1 (GPIO1)
+MOSFET Source(s) ──► GND
+```
+
+- Das XIAO kann den Akku auch über seine eigene USB-C-Buchse laden, aber nur
+  mit ~100 mA (eine 21700 bräuchte >2 Tage). Darum das TP4056-USB-C-Board als
+  eigentliche Ladebuchse ins Gehäuse setzen (1 A ⇒ über Nacht voll). **Nie an
+  beiden USB-C-Ports gleichzeitig laden**; die XIAO-Buchse nutzt du nur zum
+  Flashen — dabei Akku abklemmen (deshalb der Zellenhalter).
+- Geschützte Zellen oder TP4056-Board **mit** Protection-Chip verwenden —
+  Li-Ion ohne Tiefentladeschutz stirbt beim ersten „vergessen auszuschalten".
+
+### ESPHome-Konfiguration
+
+```yaml
+esphome:
+  name: vintage-wandlampe
+  friendly_name: Vintage Wandlampe
+
+esp32:
+  board: seeed_xiao_esp32c6
+  framework:
+    type: esp-idf
+
+network:
+  enable_ipv6: true
+
+# Thread-Dataset aus HA kopieren:
+# Einstellungen -> Geräte & Dienste -> Thread -> "..." -> Aktive Anmeldedaten
+openthread:
+  tlv: !secret thread_dataset_tlv
+
+api:
+ota:
+  platform: esphome
+logger:
+
+output:
+  - platform: ledc
+    pin: GPIO0          # D0 -> MOSFET warmweiß
+    id: pwm_ww
+    frequency: 1220Hz
+  - platform: ledc
+    pin: GPIO1          # D1 -> MOSFET kaltweiß
+    id: pwm_cw
+    frequency: 1220Hz
+
+light:
+  - platform: cwww
+    name: "Wandlampe"
+    warm_white: pwm_ww
+    cold_white: pwm_cw
+    warm_white_color_temperature: 2200 K   # bei Filamenten; 2700 K bei CCT-Star
+    cold_white_color_temperature: 5000 K
+    constant_brightness: true              # begrenzt Strom beim Mischen
+    gamma_correct: 2.8
+    restore_mode: RESTORE_DEFAULT_OFF
+    default_transition_length: 300ms
+```
+
+Danach in HA: dimmen, Farbtemperatur schieben, Szenen, Automationen — alles wie
+bei jeder anderen Lampe. Für WLAN statt Thread: `openthread:` und `network:`
+durch einen normalen `wifi:`-Block ersetzen, Rest bleibt identisch.
+
+Optional: Akkustand nach HA melden (ADC an A0/GPIO2 über Spannungsteiler
+2× 220 kΩ von BAT+ nach GND) — dann kann dich HA erinnern, wenn geladen werden
+muss.
+
+### Gehäuse (das „Vintage" kommt von hier)
+
+- **Flohmarkt/Kleinanzeigen:** alte Messing- oder Bakelit-Wandlampe für 5–15 €
+  ausschlachten. Fassung leer lassen oder die LED-Filamente in eine
+  ausgehöhlte alte Glühbirne/Klarglas-Tropfenbirne setzen — sieht aus wie eine
+  echte Kohlefadenlampe.
+- 21700-Halter + Elektronik verschwinden im Sockel/Baldachin; USB-C-Buchse und
+  Kippschalter unten herausführen.
+
+---
+
+## 3. Option B: IKEA-Mod (weniger Bastelei am Gehäuse)
+
+IKEA hat inzwischen eine ganze Familie [tragbarer Akku-Leuchten mit USB-C-Ladung](https://www.ikea.com/de/de/cat/tragbare-lampen-700512/) —
+fertiges Gehäuse, fertige Lichtführung, Akkufach, Ladebuchse. Man tauscht nur
+das Innenleben:
+
+- **[TVÅMASTAD](https://www.ikea.com/de/de/p/tvamastad-led-leuchte-tragbar-batteriebetrieben-messing-opalweiss-glas-60597780/)** (~25 €): **Messingfarben + Opalglas — der Vintage-Treffer.**
+  Akkubetrieben, ~20 h Leuchtdauer, klein. An einen schönen Messing-Wandhaken
+  gehängt ist sie deine Wandlampe.
+- **NÖDMAST / LÄNSPORT** (~15 €): zum Aufhängen gedacht (Öse), 23–32 h
+  Leuchtdauer, eher Laterne als Vintage.
+
+**Der Mod:** Original-Platine raus (die IKEA-Elektronik kann kein Funk),
+XIAO ESP32-C6 + MOSFET-Modul rein, verdrahtet wie in Option A. Zwei Wege:
+
+1. **Minimal (nur Dimmen):** die verbaute warmweiße IKEA-LED-Platine
+   weiterverwenden — 1 MOSFET-Kanal, ~6 Lötstellen, keine Farbtemperatur.
+2. **Voll (Dimmen + CCT):** LED-Platine gegen eine CW/WW-Star-Platine oder
+   Filamente tauschen — identisch zu Option A, nur im fertigen IKEA-Gehäuse.
+
+Achtung: Diese IKEA-Leuchten laufen intern meist mit 2× LADDA-AA (2,4 V NiMH) —
+das reicht dem ESP32 nicht. Deshalb fliegen die AAs raus und ein flacher
+1S-LiPo (z. B. 2000 mAh mit JST-Stecker, passt ins Batteriefach) + TP4056-USB-C
+kommt rein. Die vorhandene USB-C-Gehäuseöffnung kannst du für das TP4056-Board
+weiternutzen.
+
+---
+
+## 4. Option C: Kaufen statt bauen? (Spoiler: passt nicht)
+
+- **Philips Hue Go portable:** einzige nennenswerte Fertig-Akkulampe mit
+  HA-Anbindung (Zigbee) — aber weder vintage noch wandtauglich, und der Akku
+  hält Stunden, nicht Wochen.
+- Die üblichen „Akku-Wandleuchten vintage USB-C" von Amazon haben nur dumme
+  2,4-GHz-Fernbedienungen — keine HA-Integration möglich. Als **Gehäusespender**
+  für Option A sind sie allerdings ideal: Akku, USB-C-Ladeelektronik und
+  Wandhalterung sind schon drin, du ersetzt nur Controller/LED.
+
+---
+
+## 5. Die 6-Monats-Edition: die „Glut-Lampe"
+
+6 Monate bei 4 h/Tag sind machbar — wenn man die Lampe konsequent als
+**Kerzenschein-/Glut-Lampe** auslegt und den Akku eine Nummer größer wählt.
+Elektronik und YAML sind identisch zu Option A, nur zwei Dinge ändern sich:
+der Akku und die Default-Helligkeit.
+
+### Das Budget
+
+- 6 Monate × 4 h/Tag = **~730 Leuchtstunden**
+- Akkupack: **74 Wh** (nutzbar ~65 Wh) — dazu unten mehr
+- Thread-Standby über 6 Monate: ~10 Wh (deshalb ist der Sleepy-End-Device-Modus
+  hier nicht optional, sondern Pflicht)
+- Bleiben **~55 Wh fürs Licht** → 55 Wh ÷ 730 h ≈ **75 mW mittlere LED-Leistung**
+
+75 mW sind bei effizienten LED-Filamenten **10–15 Lumen: echtes
+Kerzenlicht.** Für eine Vintage-Lampe ist genau das der Look — glimmender
+Faden hinter Glas, Akzent- und Stimmungslicht, kein Leselicht. Volle
+Helligkeit bleibt jederzeit per HA abrufbar, sie kostet nur Budget:
+
+| Nutzung (74-Wh-Pack, 4 h/Tag) | Laufzeit |
+|---|---|
+| 10–15 lm Kerzenglut (Default) | **~6 Monate** |
+| ~30 lm | ~2 Monate |
+| ~50 lm | ~5–6 Wochen |
+| ~150 lm („gemütlich hell") | ~11 Tage |
+| 1 h Boost auf 150 lm | kostet ~4 Tage Kerzenbudget |
+
+Wer 6 Monate bei ~30 lm will, verdoppelt einfach den Pack (148 Wh, zwei
+Pouches) — die Elektronik bleibt gleich, nur der Sockel wird klobiger.
+
+### Der Akku (die einzige echte Änderung)
+
+Zwei gleichwertige Wege, beide ohne Löten an Zellen:
+
+1. **1S-LiPo-Pouch 3,7 V / 20 000 mAh mit Schutzplatine und JST-Stecker**
+   (~104/105-er Bauform, ca. 12×6×1 cm, ~20 €) — ein Stecker, fertig.
+   Der einfachste Weg.
+2. **4× 21700 (5000 mAh) parallel im 4er-Halter** + 1S-Schutzplatine —
+   etwas kompakter im Querschnitt, Markenzellen (Samsung 50E, Molicel)
+   altern besser als No-Name-Pouches.
+
+Wichtig bei der Größe: **nur Zellen/Packs mit Schutzschaltung**, Markenware,
+und beim ersten Laden dabeibleiben. 74 Wh an der Wand sind kein Spielzeug —
+das ist der Energieinhalt von fünf Smartphones.
+
+**Laden:** Der TP4056 schafft nur 1 A → ~20 h für den vollen Pack. Bei zwei
+Ladungen pro Jahr ist „übers Wochenende an die Strippe" ehrlich gesagt
+verschmerzbar. Wer es schneller will, nimmt statt des TP4056 ein
+USB-C-Ladeboard mit 2–3 A (z. B. auf IP2312-Basis, ~3 €) → über Nacht voll.
+
+### Noch einfacher: die Ein-Kanal-Variante (eine LED, nur Dimmen)
+
+Wer auf die Farbtemperatur verzichtet, halbiert den Bau nochmal. Ein einzelnes
+warmes 2200-K-Filament, ein PWM-Kanal, fertig — in HA erscheint die Lampe als
+dimmbares Licht. Zwei Ausbaustufen:
+
+**Ultra-minimal (4–6 Lötstellen, ~10 Minuten Lötarbeit):** Ein einzelnes
+3-V-Filament zieht nur 10–15 mA — das kann der GPIO des XIAO **direkt**
+treiben, ganz ohne MOSFET:
+
+```
+Akku +  ──► BAT+ Pad          (Lötstelle 1)
+Akku -  ──► BAT-  Pad          (Lötstelle 2)
+D0/GPIO0 ──► 27 Ω ──► Filament +   (Lötstellen 3+4)
+Filament - ──► GND-Pin             (Lötstelle 5)
+```
+
+Maximal sind so ~15 lm drin — für die Glut-Lampe ist das exakt der
+Betriebspunkt, ein „Boost" auf hell existiert dann schlicht nicht. Weniger
+kann kaputtgehen, nichts kann zu viel Strom ziehen.
+
+**Mit Helligkeitsreserve (~7 Lötstellen):** Ein MOSFET-Kanal (einzelnes
+D4184/AO3400-Breakout) zwischen GPIO und LED wie in Option A, dann geht auch
+eine 1-W-Star-LED oder zwei Filamente parallel — Kerzenglut als Default,
+~100 lm auf Abruf.
+
+Die YAML schrumpft entsprechend:
+
+```yaml
+output:
+  - platform: ledc
+    pin: GPIO0
+    id: pwm_licht
+    frequency: 1220Hz
+
+light:
+  - platform: monochromatic
+    name: "Wandlampe"
+    output: pwm_licht
+    gamma_correct: 2.8
+    restore_mode: RESTORE_DEFAULT_OFF
+    default_transition_length: 300ms
+```
+
+Wichtig: **Die Laufzeit bestimmt weiter der Akku, nicht die LED-Anzahl.**
+Auch die Ein-Kanal-Glut braucht für 6 Monate den 74-Wh-Pack; mit einer
+einzelnen 21700 sind es ~5–6 Wochen.
+
+### Feintuning für die Glut
+
+- **Default-Szene „Glut"** in HA: Helligkeit ~10 %, 2200 K — das ist der
+  Zustand, in dem die Lampe ihre 6 Monate schafft. Boost-Szenen bewusst
+  benutzen.
+- In ESPHome dem Licht einen sauberen unteren Dimmbereich geben, damit
+  10 lm flackerfrei gehen: `gamma_correct: 2.8` (schon gesetzt) und die
+  LEDC-Frequenz von 1220 Hz belassen — das gibt genug Auflösung im Keller.
+- **Ein einzelnes 2200-K-Filament** als Default-Kanal reicht für die Glut;
+  der Kaltweiß-Kanal ist dann nur für die (seltenen) hellen Momente da.
+- Akkusensor + HA-Automation „unter 20 % → Push-Nachricht" — bei 6 Monaten
+  Laufzeit vergisst man sonst schlicht, dass das Ding einen Akku hat.
+
+## 6. Praxis-Tipps für maximale Laufzeit
+
+1. **Default-Helligkeit niedrig** halten (HA-Szene „Abend" = 20–30 %); volle
+   Helligkeit nur auf Abruf.
+2. **Kippschalter benutzen**, wenn du länger weg bist — harter Aus = 0 Verbrauch.
+3. **Warmweiß bevorzugen:** ein Kanal statt zwei mischen spart ~10–20 %
+   (`constant_brightness` hilft hier schon).
+4. **2× 21700 parallel** verbauen, wenn das Gehäuse es hergibt — doppelte Zeit
+   zwischen den Ladungen, gleiche Elektronik.
+5. HA-Automation: bei Akkustand < 20 % eine Benachrichtigung „Wandlampe laden" —
+   dann fühlt sich Nachladen nie wie ein Ausfall an.
+
+## Bekannte Stolpersteine (Stand 08/2026)
+
+- ESPHome-OpenThread auf dem C6 ist noch jung; es gab Berichte über
+  Partition-Probleme beim Join ([esphome#10538](https://github.com/esphome/esphome/issues/10538)).
+  Immer aktuelles ESPHome nutzen; zur Not WLAN-Fallback flashen.
+- Sleepy-End-Device-Modus (ab ESPHome 2025.11) aktivieren, sonst hängt das
+  Thread-Radio dauerhaft auf Empfang und zieht ~20 mA — dann ist der
+  Standby-Vorteil gegenüber WLAN dahin.
+- Beim Flashen über die XIAO-USB-Buchse den Akku trennen, damit sich
+  XIAO-Laderegler und TP4056 nicht in die Quere kommen.
