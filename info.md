@@ -1,15 +1,15 @@
 # Entity Auto-Organizer for Home Assistant
 
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg)](https://github.com/hacs/integration)
 
 Automatically assigns [Labels](https://www.home-assistant.io/docs/organizing/labels/),
 **Areas** and **Icons** to your entities — by domain, device class, and
-3,500+ keyword/integration rules. Local only, no cloud, no API keys.
+30,000+ keyword/integration rules. Local only, no cloud, no API keys.
 
 ## Features
 
-- 🏷️ 32 label themes, 3,541 keywords (DE+EN), 116+ curated integrations
-- 🖼️ Optional icon suggestions — 1,332 mappings across 393 icons, full coverage of every label & domain, never overwrites an existing icon
+- 🏷️ 33 label themes, 30,971 keywords (DE+EN), 125 curated integrations
+- 🖼️ Optional icon suggestions — 30,827 mappings across 3,218 icons, full coverage of every label & domain, never overwrites an existing icon
 - 🏠 Optional area & floor labels, plus a standalone area-assignment service
 - 🎯 Restrict to chosen label themes; exclude by domain, entity, or glob pattern
 - 🧪 Dry-run mode + `preview` service — see changes before writing anything
@@ -20,9 +20,9 @@ Automatically assigns [Labels](https://www.home-assistant.io/docs/organizing/lab
 
 [![Open in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=hiSweid&repository=ha-auto-organizer&category=integration)
 
-HACS → ⋮ → *Custom repositories* → add this repo (category **Integration**) →
-install → restart → *Settings → Devices & Services → Add Integration →
-Entity Auto-Organizer*.
+In HACS since [hacs/default#8666](https://github.com/hacs/default/pull/8666):
+HACS → *Integrations* → search **Entity Auto-Organizer** → install → restart →
+*Settings → Devices & Services → Add Integration → Entity Auto-Organizer*.
 
 Manual: copy `custom_components/auto_organizer` into `config/custom_components/`.
 
@@ -77,8 +77,8 @@ Entities with icon · Label coverage.
 
 ## Labels
 
-32 themes — lighting, climate, security, media, appliances, garden,
-network, car, waste, shopping and more — see
+33 themes — lighting, climate, security, media, appliances, garden,
+network, car, mower, waste, shopping and more — see
 [`rules.py`](custom_components/auto_organizer/rules.py) for the full
 catalog. *Restrict to label themes* limits assignment to a subset; *Custom
 rules* add your own `keyword=label_key` mappings.

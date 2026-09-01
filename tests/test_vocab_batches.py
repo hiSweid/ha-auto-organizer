@@ -44,7 +44,7 @@ def _has_label(entity_id: str, label_key: str) -> bool:
 
 
 def test_batch_sunseeker():
-    assert _has_label("sensor.sunseeker", "garden")
+    assert _has_label("sensor.sunseeker", "mower")
     assert suggest_entity_icon(_FakeEntry("sensor.sunseeker"), OrganizerOptions()) == "mdi:robot-mower"
 
 
@@ -66,15 +66,15 @@ def test_batch_messerscheibe():
 
 
 def test_batch_spindelmaeher():
-    assert _has_label("sensor.spindelmaeher", "garden")
+    assert _has_label("sensor.spindelmaeher", "mower")
 
 
 def test_batch_balkenmaeher():
-    assert _has_label("sensor.balkenmaeher", "garden")
+    assert _has_label("sensor.balkenmaeher", "mower")
 
 
 def test_batch_mulchmaeher():
-    assert _has_label("sensor.mulchmaeher", "garden")
+    assert _has_label("sensor.mulchmaeher", "mower")
 
 
 def test_batch_hozelock():
@@ -165,7 +165,7 @@ def test_batch_rollrasen():
 
 
 def test_batch_mammotion_yuka():
-    assert _has_label("sensor.mammotion_yuka", "garden")
+    assert _has_label("sensor.mammotion_yuka", "mower")
     assert suggest_entity_icon(_FakeEntry("sensor.mammotion_yuka"), OrganizerOptions()) == "mdi:robot-mower"
 
 
@@ -1111,7 +1111,7 @@ def test_batch_napf_sensor():
 
 
 def test_batch_robonect():
-    assert _has_label("sensor.robonect", "garden")
+    assert _has_label("sensor.robonect", "mower")
     assert suggest_entity_icon(_FakeEntry("sensor.robonect"), OrganizerOptions()) == "mdi:robot-mower"
 
 
@@ -1862,7 +1862,7 @@ def test_batch_waeschetumbler():
 
 
 def test_batch_roboterrasenmaeher():
-    assert _has_label("sensor.roboterrasenmaeher", "garden")
+    assert _has_label("sensor.roboterrasenmaeher", "mower")
     assert suggest_entity_icon(_FakeEntry("sensor.roboterrasenmaeher"), OrganizerOptions()) == "mdi:robot-mower"
 
 
@@ -10855,7 +10855,7 @@ def test_batch_pollenschutzgitter():
 
 
 def test_batch_cub_cadet():
-    assert _has_label("sensor.cub_cadet", "garden")
+    assert _has_label("sensor.cub_cadet", "mower")
     assert suggest_entity_icon(_FakeEntry("sensor.cub_cadet"), OrganizerOptions()) == "mdi:mower"
 
 
@@ -10955,12 +10955,12 @@ def test_batch_vertikalgarten():
 
 
 def test_batch_maehdeck():
-    assert _has_label("sensor.maehdeck", "garden")
+    assert _has_label("sensor.maehdeck", "mower")
     assert suggest_entity_icon(_FakeEntry("sensor.maehdeck"), OrganizerOptions()) == "mdi:mower"
 
 
 def test_batch_stiga():
-    assert _has_label("sensor.stiga", "garden")
+    assert _has_label("sensor.stiga", "mower")
     assert suggest_entity_icon(_FakeEntry("sensor.stiga"), OrganizerOptions()) == "mdi:robot-mower"
 
 
@@ -19718,7 +19718,7 @@ def test_batch_equaliser():
 
 
 def test_batch_maehen():
-    assert _has_label("sensor.maehen", "garden")
+    assert _has_label("sensor.maehen", "mower")
     assert suggest_entity_icon(_FakeEntry("sensor.maehen"), OrganizerOptions()) == "mdi:robot-mower"
 
 

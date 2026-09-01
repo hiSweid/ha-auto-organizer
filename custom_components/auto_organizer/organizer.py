@@ -299,6 +299,7 @@ class Organizer:
                 continue
             if is_excluded(entry.entity_id, exclude):
                 continue
+            device = None
             if entry.device_id:
                 device = dev_reg.async_get(entry.device_id)
                 if device and device.area_id:
@@ -306,7 +307,16 @@ class Organizer:
 
             result.scanned += 1
             area_id = match_area(
-                entry.entity_id, entry.name or entry.original_name, areas
+                entry.entity_id,
+                entry.name or entry.original_name,
+                areas,
+                # Fallback only — plenty of entities are named after what
+                # they measure rather than where they sit, and their device
+                # ("Hue Bridge Wohnzimmer", "Thread Presence Büro") is then
+                # the only place a room name appears at all.
+                device_name=(device.name_by_user or device.name)
+                if device
+                else None,
             )
             if not area_id:
                 continue

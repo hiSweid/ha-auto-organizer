@@ -101,6 +101,7 @@ LABELS: Final[dict[str, LabelDef]] = {
     "covers": _ld("brown", "mdi:window-shutter", "Rollläden", "Covers"),
     "locks": _ld("blue-grey", "mdi:lock", "Schlösser", "Locks"),
     "vacuums": _ld("deep-purple", "mdi:robot-vacuum", "Staubsauger", "Vacuums"),
+    "mower": _ld("light-green", "mdi:robot-mower", "Mähroboter", "Mower"),
     "media": _ld("indigo", "mdi:multimedia", "Medien", "Media"),
     "cameras": _ld("grey", "mdi:cctv", "Kameras", "Cameras"),
     "scenes": _ld("purple", "mdi:palette", "Szenen", "Scenes"),
@@ -162,7 +163,7 @@ DOMAIN_LABELS: Final[dict[str, str]] = {
     "siren": "security",
     "humidifier": "climate",
     "water_heater": "climate",
-    "lawn_mower": "garden",
+    "lawn_mower": "mower",
     "remote": "media",
     "valve": "covers",
     "air_quality": "air_quality",
@@ -33540,18 +33541,18 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "kuechenwaage": "appliances",
     # garden
     "garten": "garden",
-    "maehroboter": "garden",
-    "rasenmaeher": "garden",
+    "maehroboter": "mower",
+    "rasenmaeher": "mower",
     "bewaesser": "garden",
     "irrigation": "garden",
     " rasen ": "garden",
     "giessen": "garden",
-    " mower ": "garden",
+    " mower ": "mower",
     "sprinkler": "garden",
     " blumen ": "garden",
     "pflanzen": "garden",
     "garden hose": "garden",
-    "rasenroboter": "garden",
+    "rasenroboter": "mower",
     "rasensprenger": "garden",
     "sprinkleranlage": "garden",
     "tropfbewaesserung": "garden",
@@ -37773,9 +37774,9 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "matter bridge": "network",
     "hormann": "covers",
     "rademacher": "covers",
-    "husqvarna": "garden",
+    "husqvarna": "mower",
     " worx ": "garden",
-    "robomow": "garden",
+    "robomow": "mower",
     " sauna ": "climate",
     "frischwasserstation": "water",
     "abluftwaermepumpe": "climate",
@@ -37965,7 +37966,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "fussbodenheizung": "climate",
     "heizkoerperthermostat": "climate",
     "staubsaugerroboter": "vacuums",
-    "rasenmaehroboter": "garden",
+    "rasenmaehroboter": "mower",
     "futterstation": "garden",
     "haustierortung": "presence",
     "photovoltaikanlage": "energy",
@@ -38125,7 +38126,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "rauchmelderalarm": "security",
     "saugroboterfehler": "vacuums",
     "faengerkorbvoll": "garden",
-    "maehroboteraktiv": "garden",
+    "maehroboteraktiv": "mower",
     "beregnungsduese": "garden",
     "solarpanelgross": "energy",
     "windradalarm": "energy",
@@ -38152,7 +38153,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "waning crescent": "weather",
     "phone charging": "presence",
     "sim card alert": "network",
-    "mower bag full": "garden",
+    "mower bag full": "mower",
     "garage alert": "security",
 
     # --- incremental vocabulary batch (auto-generated + collision-checked) ---
@@ -38264,7 +38265,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "nudeln": "appliances",
     "weinflasche": "appliances",
     "hamburger": "appliances",
-    "robotermaeher": "garden",
+    "robotermaeher": "mower",
     " foehn ": "appliances",
     "wasserboiler": "water",
     "wasserpumpe": "water",
@@ -38509,8 +38510,8 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "deebot ozmo": "vacuums",
     "roborock s8": "vacuums",
     "saugwischroboter": "vacuums",
-    "maehroboter garage": "garden",
-    "rasenmaeher automower": "garden",
+    "maehroboter garage": "mower",
+    "rasenmaeher automower": "mower",
     " lidar ": "vacuums",
     "lasernavigation": "vacuums",
     "sperrzonen": "vacuums",
@@ -38994,8 +38995,8 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "irrigation valve": "garden",
     "sprinklersystem": "garden",
     "poolrobot": "appliances",
-    "robotic mower": "garden",
-    "lawn mower": "garden",
+    "robotic mower": "mower",
+    "lawn mower": "mower",
     "co2 sensor": "air_quality",
     "kohlendioxidsensor": "air_quality",
     "vocsensor": "air_quality",
@@ -39325,7 +39326,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     # --- incremental vocabulary batch (auto-generated + collision-checked) ---
     "gewaechshausdach": "garden",
     "waldbrandwarnung": "garden",
-    "rasenmaeher automatik": "garden",
+    "rasenmaeher automatik": "mower",
     "bremsbelagverschleiss": "car",
     "festhaltebremse": "car",
     "esp fahrstabilitaet": "car",
@@ -39529,7 +39530,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "feuerloescher pflicht": "security",
     "runde wandleuchte variante": "lights",
     "lichterkettenstrahler": "lights",
-    "maehroboterbeutel voll": "garden",
+    "maehroboterbeutel voll": "mower",
     "waeschetrockner ablufttyp": "appliances",
     "toastofen": "appliances",
     "garderobenhaken": "appliances",
@@ -39734,7 +39735,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     " zappi ": "car",
     "juicebox": "car",
     " stihl ": "garden",
-    " imow ": "garden",
+    " imow ": "mower",
     "indego": "garden",
     "fyrtur": "covers",
     "kadrilj": "covers",
@@ -39920,7 +39921,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "vibrationsalarm": "security",
     "tuerschloss motor": "locks",
     "nfc schluessel": "locks",
-    "rasenmaeherroboter": "garden",
+    "rasenmaeherroboter": "mower",
     "hagelschutz": "weather",
     "blitzsensor": "weather",
     "verbrauchszaehler": "energy",
@@ -42287,7 +42288,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "weidezaun elektrisch": "garden",
     "folienzelt": "garden",
     "feuersprinkler": "security",
-    "maehroboter aktiv": "garden",
+    "maehroboter aktiv": "mower",
     "gasbrenner flamme": "appliances",
     "heizspiralenrohr": "climate",
     "poolwaerme": "climate",
@@ -42497,8 +42498,8 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "outdoor camera": "cameras",
     "vacuum robot": "vacuums",
     "mopping robot": "vacuums",
-    "robot mower": "garden",
-    "robotic lawn mower": "garden",
+    "robot mower": "mower",
+    "robotic lawn mower": "mower",
     "sprinkler controller": "garden",
     "multi socket": "switches",
     "energiemessteckdose": "energy",
@@ -43008,8 +43009,8 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
 
     # --- incremental vocabulary batch (auto-generated + collision-checked) ---
     "geschlossener sonnenschirm": "garden",
-    "maehsack": "garden",
-    "rasenrobo": "garden",
+    "maehsack": "mower",
+    "rasenrobo": "mower",
     "bienenkasten": "garden",
     "folienzelt garten": "garden",
     "hopfenpflanze": "garden",
@@ -43088,12 +43089,12 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "wallbox ladeleistung": "energy",
 
     # --- incremental vocabulary batch (auto-generated + collision-checked) ---
-    "gardena sileno": "garden",
-    "worx landroid": "garden",
-    "landroid": "garden",
-    "husqvarna automower": "garden",
+    "gardena sileno": "mower",
+    "worx landroid": "mower",
+    "landroid": "mower",
+    "husqvarna automower": "mower",
     "yard force": "garden",
-    "greenworks optimow": "garden",
+    "greenworks optimow": "mower",
     "ambrogio": "garden",
     "robolinho": "garden",
     "einhell freelexo": "garden",
@@ -43126,7 +43127,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "sauggeraeusch": "vacuums",
     "wischwalze": "vacuums",
     "reinigungshistorie sauger": "vacuums",
-    "diebstahlschutz maehroboter": "garden",
+    "diebstahlschutz maehroboter": "mower",
     "gartenroboter": "garden",
 
     # --- incremental vocabulary batch (auto-generated + collision-checked) ---
@@ -43772,7 +43773,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "kaufwagen": "shopping",
     "paketlieferung": "shopping",
     "hofeinfahrtstor": "covers",
-    "maehroboter garten": "garden",
+    "maehroboter garten": "mower",
     "solarertragsleistung": "energy",
     "tiefbrunnenpumpe": "water",
     "strommast": "energy",
@@ -44344,7 +44345,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "ekey fingerscanner": "locks",
     "burg waechter tresor": "locks",
     "hunter bewaesserungssteuerung": "garden",
-    "wolf garten maehroboter": "garden",
+    "wolf garten maehroboter": "mower",
     "orbit bewaesserungstimer": "garden",
     "huawei fusion solar": "energy",
     "e3dc hauskraftwerk": "energy",
@@ -45536,7 +45537,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "zwischenzaehler": "energy",
     "saughaustier": "vacuums",
     "dreame sauger": "vacuums",
-    "gardena maeher": "garden",
+    "gardena maeher": "mower",
     "garage opener": "covers",
     "tuerantrieb": "covers",
     "smartes schloss": "locks",
@@ -46327,7 +46328,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "induktives laden": "battery",
     "deckenstrahler": "lights",
     "estrichheizung": "climate",
-    "rasentraktor": "garden",
+    "rasentraktor": "mower",
     " stumm ": "media",
 
     # --- incremental vocabulary batch (auto-generated + collision-checked) ---
@@ -46639,7 +46640,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "doorbell video": "cameras",
     "flower tulip": "garden",
     " grass ": "garden",
-    "mower bag": "garden",
+    "mower bag": "mower",
     "heat wave": "weather",
     "umbrella": "weather",
     "meter electric": "energy",
@@ -47758,7 +47759,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "hue filament": "lights",
     "hue outdoor": "lights",
     "praktlampa": "lights",
-    "roboter maeher": "garden",
+    "roboter maeher": "mower",
 
     # --- incremental vocabulary batch (auto-generated + collision-checked) ---
     "batterie laden": "battery",
@@ -48693,7 +48694,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "gaszaehlwerk": "water",
     "gartensprenger": "garden",
     "folienhaus": "garden",
-    "aufsitzmaeher": "garden",
+    "aufsitzmaeher": "mower",
     "schiebkarre": "garden",
     "laubrechen": "garden",
     "bienenzuechter": "garden",
@@ -48711,8 +48712,8 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     # --- incremental vocabulary batch (auto-generated + collision-checked) ---
     "zigbee": "network",
     "homekit": "network",
-    "navimow": "garden",
-    "mammotion": "garden",
+    "navimow": "mower",
+    "mammotion": "mower",
     "grundfos": "water",
     "liebherr": "appliances",
     "makita": "appliances",
@@ -49466,8 +49467,8 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "marstek venus": "battery",
     "mova vacuum": "vacuums",
     "tuya vacuum": "vacuums",
-    "segway navimow": "garden",
-    "mammotion luba": "garden",
+    "segway navimow": "mower",
+    "mammotion luba": "mower",
     "giessomat": "garden",
     "aqara g5": "cameras",
     "google nest hub": "media",
@@ -50686,7 +50687,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "tierfutterautomat": "appliances",
     "koerperwaage smart": "appliances",
     "getrieberegner": "garden",
-    "maehroboter station": "garden",
+    "maehroboter station": "mower",
     "solarpaneel": "energy",
     "tragbare powerstation": "energy",
     "steckdosenleiste smart": "switches",
@@ -50819,7 +50820,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "flower care": "garden",
     "planty": "garden",
     "sileno": "garden",
-    "automower": "garden",
+    "automower": "mower",
     "ventilsteuerung": "water",
     "senseair s8": "air_quality",
     "mh z19": "air_quality",
@@ -51295,8 +51296,8 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "ereignisautomation": "automations",
     "zeitautomation": "automations",
     "handytracker": "presence",
-    "rasenmaeher roboter": "garden",
-    "gardena maehroboter": "garden",
+    "rasenmaeher roboter": "mower",
+    "gardena maehroboter": "mower",
     "gardena wasserzaehler": "water",
     "kuehlgefrierkombination": "appliances",
     "streaming box": "media",
@@ -53541,14 +53542,14 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "fingerprintscanner": "locks",
 
     # --- incremental vocabulary batch (auto-generated + collision-checked) ---
-    "sunseeker": "garden",
+    "sunseeker": "mower",
     " ryobi ": "garden",
     "suchkabel": "garden",
     "leitkabel": "garden",
     "messerscheibe": "garden",
-    "spindelmaeher": "garden",
-    "balkenmaeher": "garden",
-    "mulchmaeher": "garden",
+    "spindelmaeher": "mower",
+    "balkenmaeher": "mower",
+    "mulchmaeher": "mower",
     "hozelock": "garden",
     "claber": "garden",
     "galcon": "garden",
@@ -53568,7 +53569,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "tomatenhaus": "garden",
     "grasnarbe": "garden",
     "rollrasen": "garden",
-    "mammotion yuka": "garden",
+    "mammotion yuka": "mower",
     "greenworks": "garden",
     "ego power": "garden",
     "spruehregner": "garden",
@@ -53768,7 +53769,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "guckloch kamera": "cameras",
     "sureflap": "appliances",
     "napf sensor": "appliances",
-    "robonect": "garden",
+    "robonect": "mower",
     "easee wallbox": "car",
     "wandler zaehler": "energy",
     "rauchmelder funk": "security",
@@ -53927,7 +53928,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "wandlaterne": "lights",
     "feenlichter": "lights",
     "waeschetumbler": "appliances",
-    "roboterrasenmaeher": "garden",
+    "roboterrasenmaeher": "mower",
     "honigbiene": "garden",
     "feldsalat": "garden",
     "speisepilz": "garden",
@@ -55856,7 +55857,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "graeserpollenflug": "air_quality",
     "nussbaumpollen": "air_quality",
     "pollenschutzgitter": "air_quality",
-    "cub cadet": "garden",
+    "cub cadet": "mower",
     "hydrokultur": "garden",
     "hydroponik": "garden",
     "aquaponik": "garden",
@@ -55876,8 +55877,8 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "nistkasten": "garden",
     "spalierobst": "garden",
     "vertikalgarten": "garden",
-    "maehdeck": "garden",
-    " stiga ": "garden",
+    "maehdeck": "mower",
+    " stiga ": "mower",
     "oase teich": "garden",
     "gartensauna": "garden",
     "kartoffelpflanze": "garden",
@@ -57739,7 +57740,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
 
     # --- incremental vocabulary batch (auto-generated + collision-checked) ---
     "equaliser": "media",
-    "maehen": "garden",
+    "maehen": "mower",
 
     # --- incremental vocabulary batch (auto-generated + collision-checked) ---
     "lights out": "scripts",
@@ -65736,6 +65737,44 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "instant air purifier": "appliances",
     "hathaspace": "appliances",
 
+    # --- compounds that exist to out-rank a misleading shorter needle -----
+    # Each of these is longer than the word it has to beat and carries a
+    # KEYWORD_VETOES entry; see there for why.
+    "next alarm": "automations",
+    "naechster wecker": "automations",
+    "nachster wecker": "automations",
+    "current conditions": "weather",
+    "aktuelle bedingungen": "weather",
+}
+
+#: Labels a matching needle cancels for the rest of the keyword pass.
+#:
+#: The vocabulary is scanned longest-needle-first, so the specific compound
+#: is always seen before the generic word it contains. Usually both may
+#: apply — "ble temp" is climate *and* temperature. These few are the cases
+#: where the shorter reading is simply wrong, all reported from real
+#: installations:
+#:
+#: * a phone's "Next Alarm" is not a burglar " alarm " (issue #3)
+#: * a vacuum's "spot clean" is not a " spot " light (issue #5)
+#: * a weather station's "current conditions" is not an automation condition
+#:
+#: Only keyword-assigned labels can be cancelled — a veto never overrides a
+#: domain or device_class match, both of which are decided before the
+#: keyword pass runs.
+KEYWORD_VETOES: Final[dict[str, frozenset[str]]] = {
+    "next alarm": frozenset({"security"}),
+    "naechster wecker": frozenset({"security"}),
+    "nachster wecker": frozenset({"security"}),
+    "spot clean": frozenset({"lights"}),
+    "spot cleaning": frozenset({"lights"}),
+    "spotreinigung": frozenset({"lights"}),
+    "spot reinigung": frozenset({"lights"}),
+    "punktreinigung": frozenset({"lights"}),
+    "current conditions": frozenset({"automations"}),
+    "aktuelle bedingungen": frozenset({"automations"}),
+    "collection schedule": frozenset({"automations"}),
+    "abfallkalender": frozenset({"automations"}),
 }
 
 # KEYWORD_LABELS sorted longest-needle-first so callers that stop at the
@@ -65768,15 +65807,19 @@ INTEGRATION_LABELS: Final[dict[str, str]] = {
     "homeconnect_ws": "appliances",
     "ha_washdata": "appliances",
     "miele": "appliances",
-    # garden / outdoor
-    "navimow": "garden",
+    # garden / outdoor — irrigation stays "garden", robotic mowers get
+    # their own theme (issue #4: a mower is not a car and not a sprinkler)
     "gardena": "garden",
     "gardena_bluetooth": "garden",
     "rainbird": "garden",
     "opensprinkler": "garden",
     "rachio": "garden",
-    "husqvarna_automower": "garden",
     "hunter_hydrawise": "garden",
+    "navimow": "mower",
+    "husqvarna_automower": "mower",
+    "worx_landroid": "mower",
+    "mammotion": "mower",
+    "sunseeker": "mower",
     # network & servers
     "proxmoxve": "network",
     "fritz": "network",
@@ -65927,31 +65970,119 @@ def _normalize(text: str) -> str:
     return f" {re.sub(r'[^a-z0-9]+', ' ', text).strip()} "
 
 
+def _keyword_hit(needle: str, hay: str) -> bool:
+    """True when ``needle`` aligns with the start or the end of a word.
+
+    Plain ``needle in hay`` invents labels out of thin air: "wasserverbrauch"
+    contains "server" (a water meter came back as "Netzwerk & Server"),
+    "volumenstrom" contains "lumens". Requiring a full word instead would be
+    worse — German compounds are exactly what this vocabulary lives on, and
+    they glue the needle to either end: "wasserverbrauch" *starts* with
+    "wasser", "Garagensteckdose" *ends* with "steckdose", "Ölkosten" ends
+    with "kosten".
+
+    So a hit counts when the needle sits flush against a word boundary on at
+    least one side, and only a pure infix — flush on neither — is rejected.
+    Needles that carry explicit padding (" grid ", " evcc ") already encode
+    whole-word intent and keep plain-containment semantics. ``hay`` comes
+    from :func:`_normalize` and is always space-delimited on both ends, so
+    neither neighbour lookup can run off the string.
+    """
+    if needle.startswith(" ") or needle.endswith(" "):
+        return needle in hay
+    start = hay.find(needle)
+    while start != -1:
+        if hay[start - 1] == " " or hay[start + len(needle)] == " ":
+            return True
+        start = hay.find(needle, start + 1)
+    return False
+
+
+def _normalize_slug(text: str) -> str:
+    """Like :func:`_normalize`, but drops the diaeresis instead of expanding it.
+
+    Home Assistant's own ``slugify`` turns "Büro" into ``buro`` and "Küche"
+    into ``kuche`` — it strips the umlaut dots rather than expanding them to
+    ``ue``. An area named "Büro" therefore never matched its own entity ids
+    (``binary_sensor.thread_presence_buro``) as long as both sides went
+    through :func:`_normalize` only, and an alias spelled "Buero" doesn't
+    help because it normalizes to the very same ``buero``. Area matching has
+    to compare both spellings; the keyword vocabulary is written in the
+    expanded form throughout and keeps using :func:`_normalize` alone.
+    """
+    text = text.lower()
+    for src, dst in (("ä", "a"), ("ö", "o"), ("ü", "u"), ("ß", "ss")):
+        text = text.replace(src, dst)
+    return f" {re.sub(r'[^a-z0-9]+', ' ', text).strip()} "
+
+
+def _area_match_rank(text: str, areas: list[dict]) -> list[tuple[int, int, str]]:
+    """Return ``(start, -length, area_id)`` for every area matching ``text``.
+
+    Both the haystack and every candidate are compared in the expanded and
+    the slug spelling (see :func:`_normalize_slug`), and the best — i.e.
+    earliest, then longest — hit per area is kept.
+    """
+    hays = (_normalize(text), _normalize_slug(text))
+    ranked: list[tuple[int, int, str]] = []
+    for area in areas:
+        best: tuple[int, int] | None = None
+        for cand in [area.get("name", "")] + list(area.get("aliases") or []):
+            for norm in (_normalize, _normalize_slug):
+                nc = norm(cand).strip()
+                if not nc:
+                    continue
+                for hay in hays:
+                    start = hay.find(f" {nc} ")
+                    if start == -1:
+                        continue
+                    hit = (start, -len(nc))
+                    if best is None or hit < best:
+                        best = hit
+        if best is not None:
+            ranked.append((best[0], best[1], area["area_id"]))
+    return sorted(ranked)
+
+
 def match_area(
     entity_id: str,
     name: str | None,
     areas: list[dict],
+    device_name: str | None = None,
 ) -> str | None:
     """Guess an entity's area from its id/name by matching area names/aliases.
 
     ``areas`` is a list of ``{"area_id", "name", "aliases"}`` dicts. A candidate
     matches when its normalized name appears as a whole word in the entity's
-    id/name. The longest match wins; ties between different areas are treated as
-    ambiguous and return ``None`` (pure function, unit-testable).
+    id/name.
+
+    When several areas match, the one appearing **earliest** wins, and only a
+    tie on position is broken by length. Home Assistant naming puts an
+    entity's own room at the head of the name and any room it merely *refers
+    to* behind it — ``sensor.thread_presence_wohnzimmer_rssi_sittingpit``
+    lives in the living room and only measures towards the sitting pit, and
+    ``light.flur_eingang`` is a hallway lamp near the entrance. The old
+    "longest token wins" rule got exactly those backwards, and a tie in
+    length silently produced no area at all. Length still decides between
+    candidates starting at the same position, so "Bad Klo" keeps beating
+    "Bad".
+
+    ``device_name`` is only consulted when the entity's own id/name carries
+    no area token at all. It must not take precedence: where both sources
+    match and disagree, the entity is right and the device is wrong in every
+    single observed case (a Hue bridge named after one room hosts lamps in
+    several).
     """
-    hay = _normalize(f"{entity_id} {name or ''}")
-    matches: list[tuple[int, str]] = []
-    for area in areas:
-        for cand in [area.get("name", "")] + list(area.get("aliases") or []):
-            nc = _normalize(cand).strip()
-            if nc and f" {nc} " in hay:
-                matches.append((len(nc), area["area_id"]))
-                break
-    if not matches:
+    ranked = _area_match_rank(f"{entity_id} {name or ''}", areas)
+    if not ranked and device_name:
+        ranked = _area_match_rank(device_name, areas)
+    if not ranked:
         return None
-    longest = max(length for length, _ in matches)
-    top = {area_id for length, area_id in matches if length == longest}
-    return next(iter(top)) if len(top) == 1 else None
+    best = ranked[0]
+    runner_up = ranked[1] if len(ranked) > 1 else None
+    if runner_up and runner_up[:2] == best[:2]:
+        return None
+    return best[2]
 
 
 def area_floor_specs(
@@ -66037,13 +66168,19 @@ def invalid_custom_rule_labels(text: str | None) -> list[str]:
 
 
 def affected_count(last_run: dict | None) -> int:
-    """Total entities changed in a run summary (labels/areas/cleanup/remove_all)."""
+    """Total registry writes in a run summary (labels/areas/icons/cleanup).
+
+    ``icons`` counts too: an icon-only run writes to the registry like any
+    other, and leaving it out made the "Last run" sensor report 0 for a run
+    that had just set hundreds of icons.
+    """
     if not last_run:
         return 0
     total = 0
     for section, key in (
         ("labels", "updated"),
         ("areas", "assigned"),
+        ("icons", "icons_set"),
         ("cleanup", "updated"),
         ("remove_all", "updated"),
     ):
@@ -66095,6 +66232,14 @@ def _collect_label_keys(
     )
 
     # Curated integration themes apply even to diagnostic/config entities.
+    #
+    # NOTE: these deliberately land in `keys` before the keyword pass, which
+    # therefore never runs for a curated integration. That costs depth — a
+    # charging controller's pool-pump loadpoint comes out as "Auto" like
+    # everything else it hosts — but it is also what keeps a curated theme
+    # authoritative (GH issue #2: a Grocy shopping-list item must not pick up
+    # "Abfall" from the product name). Untangling the two needs the
+    # vocabulary cleaned up first; see the roadmap.
     if options.enable_curated:
         if platform:
             add(INTEGRATION_LABELS.get(platform), reason=platform)
@@ -66128,13 +66273,25 @@ def _collect_label_keys(
                 entry, "original_name", None
             )
             hay = _normalize(f"{entry.entity_id} {ename or ''}")
+            # Longest needle first (KEYWORD_LABELS_BY_LENGTH), so a compound
+            # is seen before its parts. Matches are *not* mutually exclusive:
+            # "ble temp" is both climate and temperature, "kitchen oven temp"
+            # is both an appliance and a temperature. Only the handful of
+            # genuinely contradictory pairs are cancelled, via KEYWORD_VETOES.
+            vetoed: set[str] = set()
             for needle, key in sorted(
                 options.custom_rules.items(), key=lambda item: len(item[0]), reverse=True
             ):
-                if needle in hay:
+                if _keyword_hit(needle, hay):
                     add(key, reason=needle)
             for needle, key in KEYWORD_LABELS_BY_LENGTH:
-                if needle in hay:
+                if not _keyword_hit(needle, hay):
+                    continue
+                # A veto is always carried by the longer needle, which this
+                # length-ordered walk reaches first — so skipping is enough,
+                # nothing has to be taken back.
+                vetoed |= KEYWORD_VETOES.get(needle, frozenset())
+                if key not in vetoed:
                     add(key, reason=needle)
 
     return keys, reasons
@@ -66223,12 +66380,12 @@ def suggest_entity_icon(
     hay = _normalize(f"{entry.entity_id} {ename or ''}")
 
     for needle in sorted(options.custom_rules, key=len, reverse=True):
-        if needle in hay:
+        if _keyword_hit(needle, hay):
             icon = SPECIFIC_ICONS.get(needle.strip())
             if icon:
                 return icon
     for needle, _key in KEYWORD_LABELS_BY_LENGTH:
-        if needle in hay:
+        if _keyword_hit(needle, hay):
             icon = SPECIFIC_ICONS.get(needle.strip())
             if icon:
                 return icon

@@ -6,6 +6,59 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-09-01
+
+Two related themes: keyword matching stops inventing labels out of substrings,
+and area matching stops missing rooms it should obviously find.
+
+### Added
+- New label theme **Mähroboter / Mower** (`mdi:robot-mower`). The
+  `lawn_mower` domain, 55 mower keywords and the Navimow / Husqvarna
+  Automower / Worx Landroid / Mammotion / Sunseeker integrations now map to
+  it instead of the generic "Garten". Irrigation hardware (Gardena valves,
+  Rainbird, OpenSprinkler, Rachio, Hunter Hydrawise, sprinklers, lawn care
+  in general) deliberately stays "Garten". Requested in GH issue #4.
+- `KEYWORD_VETOES`: a short list of compounds that cancel a wrong reading a
+  shorter word inside them would otherwise produce. Covers a phone's "next
+  alarm" (not a burglar alarm, GH issue #3), a vacuum's "spot clean" (not a
+  spotlight), a weather station's "current conditions" (not an automation
+  condition) and a waste "collection schedule" (not an automation). Both
+  reported in GH issue #5.
+- `match_area()` takes an optional `device_name`, used as a *fallback* when
+  the entity's own id and name carry no room at all.
+
+### Fixed
+- Keyword matching required only that a needle appear *somewhere* in the
+  text, so it matched across word interiors: `sensor.wasserverbrauch`
+  (water consumption) was labeled "Netzwerk & Server" because
+  "wa-sserver-brauch" contains "server", and a flow-rate sensor picked up
+  "lumens" out of "volumenstrom". A needle now has to sit flush against a
+  word boundary on at least one side, which keeps every German compound the
+  vocabulary depends on ("wasserverbrauch" → wasser, "Garagensteckdose" →
+  steckdose, "Ölkosten" → kosten) and drops the accidental infixes.
+- Area names with umlauts never matched their own entities. `_normalize()`
+  expands "Büro" to `buero`, but Home Assistant's `slugify` drops the
+  diaeresis and produces `buro` — so an area "Büro" could not match
+  `binary_sensor.thread_presence_buro`, and an alias spelled "Buero" didn't
+  help because it normalized identically. Area candidates are now compared
+  in both spellings.
+- `match_area()` picked the *longest* matching room name and gave up
+  entirely on a tie. Home Assistant naming puts an entity's own room first
+  and any room it merely refers to behind it, so the earliest match now
+  wins and length only breaks a positional tie:
+  `sensor.thread_presence_wohnzimmer_rssi_sittingpit` is in the living
+  room, not the sitting pit, and `light.flur_eingang` is a hallway lamp.
+  Measured against 2230 entities whose device carries the truth: 1150 → 1676
+  matches, 50 → 19 of them wrong (95.7 % → 98.9 % precision).
+- `assign_areas()` never passed the device name to `match_area()`, so
+  entities named after what they measure rather than where they sit stayed
+  room-less even when their device said "Thread Presence Büro". The device
+  is consulted only after the entity itself comes up empty — where both
+  sources match and disagree, the entity is right in every observed case.
+- `affected_count()` ignored `icons_set`, so a pure icon run reported
+  "Last run = 0" no matter how many icons it had just written.
+
+
 ## [0.9.160] - 2026-08-31
 
 ### Fixed

@@ -149,8 +149,8 @@ def test_language_region_code_normalized():
 
 def test_curated_integration_label():
     entry = FakeEntry("lawn_mower.vorgarten", platform="navimow")
-    # curated key comes first, then the domain label (both garden -> deduped)
-    assert names(entry) == ["Garten"]
+    # curated key comes first, then the domain label (both mower -> deduped)
+    assert names(entry) == ["Mähroboter"]
 
 
 def test_curated_applies_even_to_diagnostic():
@@ -280,8 +280,10 @@ def test_monetary_maps_to_cost():
     assert "Kosten" in names(entry)
 
 
-def test_lawn_mower_domain_maps_to_garden():
-    assert names(FakeEntry("lawn_mower.vorgarten")) == ["Garten"]
+def test_lawn_mower_domain_maps_to_mower():
+    # A robotic mower is its own theme, not "Garten" and certainly not
+    # "Auto" (issue #4).
+    assert names(FakeEntry("lawn_mower.vorgarten")) == ["Mähroboter"]
 
 
 def test_weather_device_classes_map_to_weather():
@@ -567,8 +569,8 @@ def test_max_labels_cap():
     opts = OrganizerOptions(max_labels=1)
     entry = FakeEntry("sensor.maeher", platform="navimow",
                       original_device_class="temperature")
-    # curated Garten + Temperatur would be 2, capped to 1
-    assert names(entry, opts) == ["Garten"]
+    # curated Mähroboter + Temperatur would be 2, capped to 1
+    assert names(entry, opts) == ["Mähroboter"]
 
 
 def test_default_max_two_labels():
@@ -578,13 +580,69 @@ def test_default_max_two_labels():
     assert len(names(entry)) == 2
 
 
-def test_match_area_ambiguous_returns_none():
+def test_match_area_first_token_wins_over_later_one():
     areas = [
         {"area_id": "a1", "name": "Nord", "aliases": []},
         {"area_id": "a2", "name": "Süd", "aliases": []},
     ]
-    # "nord" and "sued" both match with equal length -> ambiguous
-    assert match_area("sensor.nord_sued_klima", None, areas) is None
+    # Two equally long candidates: the one at the head of the name is the
+    # entity's own room, the later one is what it refers to.
+    assert match_area("sensor.nord_sued_klima", None, areas) == "a1"
+
+
+def test_match_area_ambiguous_returns_none():
+    areas = [
+        {"area_id": "a1", "name": "Nord", "aliases": []},
+        {"area_id": "a2", "name": "Nord", "aliases": []},
+    ]
+    # Same position, same length, different areas -> genuinely undecidable.
+    assert match_area("sensor.nord_klima", None, areas) is None
+
+
+def test_match_area_matches_ha_slug_of_umlaut_area():
+    # HA slugifies "Büro" to "buro", not "buero" — the area has to match its
+    # own entity ids.
+    areas = [{"area_id": "buro", "name": "Büro", "aliases": []}]
+    assert match_area("binary_sensor.thread_presence_buro", None, areas) == "buro"
+    assert match_area("sensor.kuche_fp300_temperatur", None, [
+        {"area_id": "kuche", "name": "Küche", "aliases": []}
+    ]) == "kuche"
+
+
+def test_match_area_own_room_beats_measurement_target():
+    areas = [
+        {"area_id": "wohnzimmer", "name": "Wohnzimmer", "aliases": []},
+        {"area_id": "sittingpit", "name": "Sittingpit", "aliases": []},
+    ]
+    entity = "sensor.thread_presence_wohnzimmer_rssi_sittingpit_rechts"
+    assert match_area(entity, None, areas) == "wohnzimmer"
+
+
+def test_match_area_longer_wins_at_same_position():
+    areas = [
+        {"area_id": "bad", "name": "Bad", "aliases": []},
+        {"area_id": "bad_klo", "name": "Bad Klo", "aliases": []},
+    ]
+    assert match_area("light.bad_klo_spiegel", None, areas) == "bad_klo"
+
+
+def test_match_area_device_name_is_fallback_only():
+    areas = [
+        {"area_id": "kueche", "name": "Küche", "aliases": []},
+        {"area_id": "wohnzimmer", "name": "Wohnzimmer", "aliases": []},
+    ]
+    # Entity carries no room -> device name decides.
+    assert (
+        match_area("light.hue_color_lamp_3", None, areas, device_name="Hue Küche")
+        == "kueche"
+    )
+    # Entity carries a room -> the device must not override it.
+    assert (
+        match_area(
+            "light.wohnzimmer_stehlampe", None, areas, device_name="Hue Bridge Küche"
+        )
+        == "wohnzimmer"
+    )
 
 
 def test_waste_collection_schedule_curated():
@@ -1020,3 +1078,69 @@ def test_generic_bridge_platform_does_not_shadow_device_class_icon():
     assert suggest_entity_icon(entry2, OrganizerOptions()) == "mdi:power"
     # A genuine product-specific platform (not a generic bridge) still wins.
     assert suggest_entity_icon(FakeEntry("sensor.x", platform="spotify"), OrganizerOptions()) == rules.SPECIFIC_ICONS.get("spotify")
+
+
+# --- keyword boundary rule (v0.10: no more accidental infix matches) ------
+
+
+def test_keyword_infix_does_not_match():
+    # "wasserverbrauch" contains "server" — a water meter is not a server.
+    assert "Netzwerk & Server" not in names(FakeEntry("sensor.wasserverbrauch"))
+    assert names(FakeEntry("sensor.wasserverbrauch")) == ["Wasser"]
+
+
+def test_keyword_matches_compound_prefix_and_suffix():
+    # German compounds glue the needle to either end and must still match.
+    assert "Wasser" in names(FakeEntry("sensor.wasserverbrauch"))
+    assert "Klima" in names(FakeEntry("sensor.heizungskeller_vorlauf"))
+    assert "Kosten" in names(FakeEntry("sensor.oelkosten_heute"))
+
+
+def test_keyword_veto_next_alarm_is_not_security():
+    # Issue #3: a phone's next alarm is not a burglar alarm.
+    entry = FakeEntry("sensor.iphone_von_henryk_next_alarm")
+    assert "Sicherheit" not in names(entry)
+
+
+def test_keyword_veto_spot_clean_is_not_a_light():
+    # Issue #5: "spot clean" on a vacuum is not a spotlight.
+    assert "Beleuchtung" not in names(FakeEntry("button.roborock_spot_clean"))
+
+
+def test_keyword_veto_waste_schedule_is_not_an_automation():
+    entry = FakeEntry("sensor.waste_collection_schedule_bioabfall")
+    assert names(entry) == ["Abfall"]
+
+
+# --- curated platform label stays authoritative ---------------------------
+
+
+def test_curated_platform_label_still_applies():
+    entry = FakeEntry("sensor.reolink_x", platform="reolink")
+    assert names(entry) == ["Kameras"]
+
+
+# --- mower theme (issue #4) ----------------------------------------------
+
+
+def test_mower_keyword_is_not_garden():
+    assert names(FakeEntry("sensor.navimow_i105_status")) == ["Mähroboter"]
+
+
+def test_mower_is_not_a_car():
+    assert "Auto" not in names(FakeEntry("lawn_mower.sunseeker"))
+
+
+def test_irrigation_stays_garden():
+    # Only the mower keywords moved; watering hardware keeps "Garten".
+    assert "Garten" in names(FakeEntry("sensor.gardena_bewaesserungsventil"))
+    assert "Mähroboter" not in names(FakeEntry("sensor.gardena_bewaesserungsventil"))
+    assert names(FakeEntry("sensor.rasensprenger_status")) == ["Garten"]
+
+
+# --- affected_count counts icon-only runs --------------------------------
+
+
+def test_affected_count_includes_icons():
+    assert affected_count({"icons": {"icons_set": 12}}) == 12
+    assert affected_count({"labels": {"updated": 3}, "icons": {"icons_set": 4}}) == 7
