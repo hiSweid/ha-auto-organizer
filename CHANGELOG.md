@@ -6,6 +6,27 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.1] - 2026-09-04
+
+### Added
+- 112 new keywords across **mower** (32; brand/model names for Automower,
+  Indego, Robomow, Ambrogio, Sileno, and functional terms like cutting
+  height, blade change, GPS tracking, no-go zones), **garden** (25;
+  irrigation timers/zones, greenhouse, raised-bed sensors, pool
+  circulation/dosing pumps, garden fountain/well pumps), **humidity** (34;
+  dehumidifier modes/variants, mold detection, humidity alerts, room-level
+  moisture terms), and **car/network/security/cameras/water/lights**
+  (~21; seat ventilation, brake pressure/pads, eCall, pet flap, network
+  signal strength, camera tamper, fluorescent tubes, water turbidity, and
+  device-ecosystem synonyms for Aqara/SIEGENIA window handles, Matter EV
+  chargers, Flair/Keen smart vents, Cielo/Ambi climate controllers).
+- 92 new icon assignments (80 alongside the new keywords above, plus 12
+  icon-only additions for existing keywords that previously fell back to
+  their generic label icon: `fahrzeugalarm`, `maehmesser`, `cdplayer`,
+  `rauchabzugsklappe`, `salzelektrolyseanlage`, `trafo`,
+  `wohnmobilladepunkt`, `vogelhausueberwachung`, `kinderueberwachung`,
+  `bienenstockwaage`, `attic fan`, `annaeherungswarnung`).
+
 ## [0.11.0] - 2026-09-01
 
 The keyword vocabulary reaches entities it never used to, and stops making
