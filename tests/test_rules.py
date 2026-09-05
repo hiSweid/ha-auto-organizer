@@ -1184,6 +1184,23 @@ def test_irrigation_stays_garden():
     assert names(FakeEntry("sensor.rasensprenger_status")) == ["Garten"]
 
 
+# --- car-name keyword exceptions (issue #4 follow-up) ---------------------
+
+
+def test_leaf_wetness_is_not_a_nissan_leaf():
+    # A weather station's leaf-wetness sensor is not a Nissan Leaf. Before
+    # the CAR_NAME_KEYWORD_EXCEPTIONS fix, "leaf" matching first also
+    # blocked the correct "humidity" keyword label (curated_hit gating).
+    entry = FakeEntry("sensor.ws_leaf_wetness")
+    result = names(entry)
+    assert "Auto" not in result
+    assert "Luftfeuchtigkeit" in result
+
+
+def test_nissan_leaf_is_still_a_car():
+    assert "Auto" in names(FakeEntry("sensor.nissan_leaf_battery"))
+
+
 # --- affected_count counts icon-only runs --------------------------------
 
 

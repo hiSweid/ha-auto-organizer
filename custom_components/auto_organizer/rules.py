@@ -66016,11 +66016,24 @@ KEYWORD_LABELS_BY_LENGTH: Final[tuple[tuple[str, str], ...]] = tuple(
 )
 
 # Known vehicle/model names; matched as whole words in entity_id/name and
-# always labeled "car" (even when a device_class also applies).
+# always labeled "car" (even when a device_class also applies). This check
+# runs ahead of the length-sorted KEYWORD_LABELS pass and, unlike it, gates
+# the rest of that pass on a hit (see curated_hit below) — so a false
+# positive here doesn't just mislabel the entity, it also suppresses the
+# correct keyword label the entity would otherwise have gotten.
 CAR_NAME_KEYWORDS: Final[tuple[str, ...]] = (
     "egolf", "golf", "tesla", "zoe", "leaf", "kona", "ioniq",
     "enyaq", "polestar", "cupra",
 )
+
+# A car-name keyword that also spells an unrelated whole phrase once padded
+# to word boundaries: a weather station's "leaf wetness" sensor is not a
+# Nissan Leaf (GH issue #4 follow-up) — and per the comment above, letting
+# it through here would have also cost it its correct "humidity" label from
+# KEYWORD_LABELS.
+CAR_NAME_KEYWORD_EXCEPTIONS: Final[dict[str, tuple[str, ...]]] = {
+    "leaf": ("leaf wetness",),
+}
 
 # --- integration (platform) -> curated theme label ----------------------
 # Thematic labels that cannot be derived from domain/device_class, mapped
@@ -66484,9 +66497,12 @@ def _collect_label_keys(
         )
         hay = _normalize(f"{entry.entity_id} {ename or ''}")
         for kw in CAR_NAME_KEYWORDS:
-            if f" {kw} " in hay:
-                add("car", reason=kw)
-                break
+            if f" {kw} " not in hay:
+                continue
+            if any(exc in hay for exc in CAR_NAME_KEYWORD_EXCEPTIONS.get(kw, ())):
+                continue
+            add("car", reason=kw)
+            break
     curated_hit = bool(keys)
 
     # Domain/device_class labels are skipped for config/diagnostic helpers.

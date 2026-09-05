@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.2] - 2026-09-05
+
+### Fixed
+- A weather station's "leaf wetness" sensor was mislabeled "Auto" (issue #4
+  follow-up): the `CAR_NAME_KEYWORDS` check for "leaf" (Nissan Leaf) matched
+  the padded substring in `..._leaf_wetness`. Since that check runs ahead of
+  and gates the regular keyword pass, the false "car" hit also silently
+  suppressed the entity's correct "humidity" label. Added a small
+  `CAR_NAME_KEYWORD_EXCEPTIONS` list so "leaf wetness" is no longer read as
+  a car name; other Nissan Leaf entities are unaffected.
+
 ## [0.11.1] - 2026-09-04
 
 ### Added
