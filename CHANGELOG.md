@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.3] - 2026-09-06
+
+### Added
+- 183 new keywords/icons across **switches** (43; dry-contact/momentary/push-button
+  relays, common German brands like Eltako, Gira, Wago, Siemens, Phoenix Contact,
+  Homematic IP/Devolo/innogy smart plugs, Zigbee/Bluetooth wall switches and
+  plugs), **mower** (40; Honda Miimo, McCulloch, Flymo Easilife, Alko Robolinho,
+  Ambrogio L400i and related calibration/mapping/obstacle-detection terms),
+  **garden** (34; irrigation and soil-sensor terms), and smaller batches for
+  network, automations, lights, cost, shopping, battery, locks, energy,
+  presence, media, covers, cameras, water, security and motion (~10 combined),
+  plus 95 icon-only backfills for existing keywords.
+
 ## [0.11.2] - 2026-09-05
 
 ### Fixed

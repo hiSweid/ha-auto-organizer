@@ -25714,8 +25714,6 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
 
     # --- incremental vocabulary batch: icon-only additions for existing keywords ---
     "arlo": "mdi:webcam",
-    "axis": "mdi:cctv",
-    "bose": "mdi:speaker",
     "beko": "mdi:fridge-outline",
     "amica": "mdi:stove",
     "anker": "mdi:battery-charging",
@@ -25724,8 +25722,6 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "bhkw": "mdi:engine",
     "birne": "mdi:lightbulb",
     "blitz": "mdi:weather-lightning",
-    "blumen": "mdi:flower",
-    "accesspoint": "mdi:access-point",
     "aruba": "mdi:access-point-network",
     "annke": "mdi:cctv",
     "apollo air": "mdi:air-filter",
