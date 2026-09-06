@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.4] - 2026-09-06
+
+### Added
+- 161 new keywords/icons across **mower** (automower 450x, Kress, Indego S500,
+  Epos, Yarbo, charging/basis station, blade/ersatzmesser, grass-height/growth
+  sensors, pet-safety, insurance, runtime terms), **weather** (frost
+  temperature, ash cloud, landslide warning), **cameras** (~25; zoom, pan,
+  fisheye, framerate, night-vision, sabotage/motion alarm, cloud recording,
+  firmware, battery, splitscreen, magnet mount), and smaller batches for
+  network (DNS server), garden (grill, spot lighting, planter, hunter
+  irrigation controller), lights (Gledopto, Livolo, Lidl Melinera, Matter
+  dimmable, globe lamp), presence (Aqara FP2, arrival automation), security
+  (Busch-Jaeger Free@Home, intrusion alarm), shopping (grocery list), battery
+  (warning level), and dehumidifier/hygrometer device synonyms, plus icon-only
+  backfills for existing keywords.
+
 ## [0.11.3] - 2026-09-06
 
 ### Added
