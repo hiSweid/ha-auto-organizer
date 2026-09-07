@@ -6,6 +6,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.5] - 2026-09-07
+
+### Added
+- 149 new keywords/icons across **mower** (cutting-disc/blade sharpening, search
+  loop, no-go zones, perimeter wire, mowing area/schedule/history, battery
+  charge time/temperature, overheat protection, theft protection, remote
+  control, shelter), **temperature** (boiler/heating-circuit/heat-pump/coolant
+  flow and return temperatures, chip temperature, frost/high/low-temperature
+  alarms, pool and spa temperature), **light level** (glare/UV/vitamin-D
+  index, light pollution/skyglow, dusk transition), and a device-synonym /
+  icon-only backfill scan (~40 MDI icons for existing keywords: EV plug
+  types, car maintenance indicators, roller shade/curtain states, garage
+  door watcher, gate sensor, basement window sensor, video peephole,
+  parking barrier, skimmer pump).
+
 ## [0.11.4] - 2026-09-06
 
 ### Added
