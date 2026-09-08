@@ -989,7 +989,7 @@ def test_new_specific_icon_words():
         "sensor.nuki_battery_level": "mdi:lock",
         "sensor.access_point_status": "mdi:access-point",
         "binary_sensor.feuermelder_flur": "mdi:smoke-detector",
-        "sensor.dunstabzugshaube_stufe": "mdi:air-filter",
+        "sensor.dunstabzugshaube_stufe": "mdi:fan",
         "sensor.iphone_von_johanna": "mdi:cellphone",
         "sensor.heizkoerper_wohnzimmer": "mdi:radiator",
         "sensor.rasenroboter_status": "mdi:robot-mower",
