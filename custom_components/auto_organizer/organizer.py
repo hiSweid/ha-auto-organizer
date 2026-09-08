@@ -234,9 +234,17 @@ class Organizer:
 
             # Only fill in an icon when the entity has none yet — never
             # overwrite one the user (or a past run) already set, since the
-            # registry can't tell those two apart.
+            # registry can't tell those two apart. Config/diagnostic
+            # entities keep HA's own default icon (a slider, a clock, a
+            # counter, ...) instead of inheriting the parent device's
+            # keyword-matched icon — same skip_categories guard already
+            # used above for area/floor labels and in assign_icons().
             icon = None
-            if options.set_entity_icons and not entry.icon:
+            if (
+                options.set_entity_icons
+                and not entry.icon
+                and not (options.skip_categories and entry.entity_category)
+            ):
                 icon = suggest_entity_icon(entry, options)
 
             if not labels_changed and not icon:
@@ -278,9 +286,20 @@ class Organizer:
     ) -> AreaAssignResult:
         """Auto-assign entities without an area to a matching area by name.
 
-        Only entities that have no effective area (neither their own nor via
-        their device) are touched, so existing assignments are never changed.
-        Entities matching ``exclude`` are skipped.
+        A device whose entities all agree on the same room gets that area on
+        the *device* itself — so it shows up as one device card in the room
+        instead of the same area being scattered across every one of its
+        entities as a per-entity override — while a device with disagreeing
+        or only partially matched entities keeps the previous per-entity
+        behaviour. This also reconciles devices that already carry that
+        scattered pattern (typically from an older run of this same method):
+        when every entity of an area-less device already has an explicit,
+        identical area override, that area is promoted to the device and the
+        now-redundant per-entity overrides are cleared back to inherited.
+        Only the *storage location* of an assignment ever moves this way —
+        an entity's effective area (its own override, or its device's) is
+        never changed by this method. Entities matching ``exclude`` are
+        skipped.
         """
         result = AreaAssignResult()
         ent_reg = er.async_get(self.hass)
@@ -294,37 +313,111 @@ class Organizer:
         if not areas:
             return result
 
-        for entry in list(ent_reg.entities.values()):
-            if entry.area_id:
-                continue
+        by_device: dict[str, list] = {}
+        standalone = []
+        for entry in ent_reg.entities.values():
             if is_excluded(entry.entity_id, exclude):
                 continue
-            device = None
-            if entry.device_id:
-                device = dev_reg.async_get(entry.device_id)
-                if device and device.area_id:
-                    continue
+            device = dev_reg.async_get(entry.device_id) if entry.device_id else None
+            if device is None:
+                if not entry.area_id:
+                    standalone.append(entry)
+                continue
+            by_device.setdefault(device.id, []).append(entry)
 
+        for device_id, dev_entries in by_device.items():
+            device = dev_reg.async_get(device_id)
+            if device.area_id:
+                # Device already has its own area — every entity inherits
+                # it, nothing to guess or reconcile here.
+                continue
+
+            result.scanned += len(dev_entries)
+            existing = {e.area_id for e in dev_entries if e.area_id}
+
+            if len(existing) == 1:
+                area_id = existing.pop()
+                to_clear = [e for e in dev_entries if e.area_id == area_id]
+                result.assigned += len(to_clear)
+                result.changes.extend(
+                    {
+                        "entity_id": e.entity_id,
+                        "area_id": area_id,
+                        "device_id": device_id,
+                    }
+                    for e in to_clear
+                )
+                if not dry_run:
+                    dev_reg.async_update_device(device_id, area_id=area_id)
+                    for e in to_clear:
+                        ent_reg.async_update_entity(e.entity_id, area_id=None)
+                continue
+            if existing:
+                # Conflicting explicit overrides already on this device —
+                # leave them exactly as they are rather than guessing which
+                # one should win.
+                continue
+
+            # No entity has an area yet: guess one per entity from its own
+            # id/name (falling back to the device name), same as before —
+            # but only commit the guesses to the device if literally every
+            # entity agrees on the same one; otherwise fall back to writing
+            # per-entity, same as this method always has.
+            device_name = device.name_by_user or device.name
+            guesses = {
+                entry.entity_id: area_id
+                for entry in dev_entries
+                if (
+                    area_id := match_area(
+                        entry.entity_id,
+                        entry.name or entry.original_name,
+                        areas,
+                        # Fallback only — plenty of entities are named after
+                        # what they measure rather than where they sit, and
+                        # their device ("Hue Bridge Wohnzimmer", "Thread
+                        # Presence Büro") is then the only place a room name
+                        # appears at all.
+                        device_name=device_name,
+                    )
+                )
+                is not None
+            }
+            matched_areas = set(guesses.values())
+            if len(matched_areas) == 1 and len(guesses) == len(dev_entries):
+                area_id = matched_areas.pop()
+                result.assigned += len(dev_entries)
+                result.changes.extend(
+                    {
+                        "entity_id": entry.entity_id,
+                        "area_id": area_id,
+                        "device_id": device_id,
+                    }
+                    for entry in dev_entries
+                )
+                if not dry_run:
+                    dev_reg.async_update_device(device_id, area_id=area_id)
+            else:
+                for entry in dev_entries:
+                    area_id = guesses.get(entry.entity_id)
+                    if not area_id:
+                        continue
+                    result.assigned += 1
+                    result.changes.append(
+                        {"entity_id": entry.entity_id, "area_id": area_id}
+                    )
+                    if not dry_run:
+                        ent_reg.async_update_entity(entry.entity_id, area_id=area_id)
+
+        for entry in standalone:
             result.scanned += 1
             area_id = match_area(
-                entry.entity_id,
-                entry.name or entry.original_name,
-                areas,
-                # Fallback only — plenty of entities are named after what
-                # they measure rather than where they sit, and their device
-                # ("Hue Bridge Wohnzimmer", "Thread Presence Büro") is then
-                # the only place a room name appears at all.
-                device_name=(device.name_by_user or device.name)
-                if device
-                else None,
+                entry.entity_id, entry.name or entry.original_name, areas
             )
             if not area_id:
                 continue
 
             result.assigned += 1
-            result.changes.append(
-                {"entity_id": entry.entity_id, "area_id": area_id}
-            )
+            result.changes.append({"entity_id": entry.entity_id, "area_id": area_id})
             if not dry_run:
                 ent_reg.async_update_entity(entry.entity_id, area_id=area_id)
 

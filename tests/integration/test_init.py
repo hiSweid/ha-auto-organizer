@@ -336,6 +336,59 @@ async def test_last_run_sensor_surfaces_icons_set(hass: HomeAssistant) -> None:
     assert state.attributes.get("icons_set", 0) >= 1
 
 
+async def test_run_does_not_set_icon_on_config_category_entity(
+    hass: HomeAssistant,
+) -> None:
+    """A config/diagnostic sub-entity keeps its own default icon.
+
+    Regression test: run()'s icon side-effect used to skip the same
+    skip_categories guard that area/floor labels and assign_icons() already
+    honor, so a device's config/diagnostic entities (transition time,
+    restart count, ...) inherited the parent device's keyword-matched icon
+    (e.g. every "Kronleuchter" sub-entity turning into mdi:candelabra)
+    instead of keeping HA's own default icon for that domain.
+    """
+    from custom_components.auto_organizer.const import CONF_SET_ENTITY_ICONS
+    from homeassistant.const import EntityCategory
+    from homeassistant.helpers import entity_registry as er
+
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        title="Entity Auto-Organizer",
+        options={CONF_SET_ENTITY_ICONS: True},
+    )
+    entry.add_to_hass(hass)
+    assert await hass.config_entries.async_setup(entry.entry_id)
+    await hass.async_block_till_done()
+
+    ent_reg = er.async_get(hass)
+    ent_reg.async_get_or_create(
+        "number",
+        "test",
+        "kaffeemaschine_config",
+        suggested_object_id="kaffeemaschine_ein_level",
+        original_name="Kaffeemaschine Ein-Level",
+        entity_category=EntityCategory.CONFIG,
+    )
+    ent_reg.async_get_or_create(
+        "sensor",
+        "test",
+        "kaffeemaschine_main",
+        suggested_object_id="kaffeemaschine",
+        original_name="Kaffeemaschine",
+    )
+
+    await hass.services.async_call(
+        DOMAIN, "run", {"dry_run": False}, blocking=True, return_response=True
+    )
+    await hass.async_block_till_done()
+
+    config_entry = ent_reg.async_get("number.kaffeemaschine_ein_level")
+    main_entry = ent_reg.async_get("sensor.kaffeemaschine")
+    assert config_entry.icon is None
+    assert main_entry.icon == "mdi:coffee-maker"
+
+
 async def test_history_sensors_track_last_10_changes(hass: HomeAssistant) -> None:
     from custom_components.auto_organizer.const import CONF_SET_ENTITY_ICONS
     from homeassistant.helpers import entity_registry as er
@@ -625,3 +678,155 @@ async def test_mutating_service_allows_system_call_without_user_id(
         return_response=True,
     )
     assert result is not None
+
+
+async def _add_device(hass: HomeAssistant, config_entry_id: str, name: str):
+    from homeassistant.helpers import device_registry as dr
+
+    dev_reg = dr.async_get(hass)
+    return dev_reg.async_get_or_create(
+        config_entry_id=config_entry_id,
+        identifiers={(DOMAIN, name)},
+        name=name,
+    )
+
+
+async def test_assign_areas_promotes_new_device_when_all_entities_agree(
+    hass: HomeAssistant,
+) -> None:
+    """A brand-new device whose entities all name the same room gets that
+    room on the device, not scattered across every one of its entities.
+    """
+    from homeassistant.helpers import area_registry as ar
+    from homeassistant.helpers import entity_registry as er
+
+    area_reg = ar.async_get(hass)
+    area = area_reg.async_get_or_create("Sittingpit")
+
+    entry = await _add_entry(hass)
+    device = await _add_device(hass, entry.entry_id, "Sittingpit Kronleuchter 1")
+
+    ent_reg = er.async_get(hass)
+    for object_id in (
+        "sittingpit_kronleuchter_1",
+        "sittingpit_kronleuchter_1_ein_level",
+    ):
+        ent_reg.async_get_or_create(
+            "light" if "ein_level" not in object_id else "number",
+            "test",
+            object_id,
+            suggested_object_id=object_id,
+            device_id=device.id,
+        )
+
+    result = await hass.services.async_call(
+        DOMAIN, "assign_areas", {"dry_run": False}, blocking=True, return_response=True
+    )
+    assert result["assigned"] >= 1
+
+    from homeassistant.helpers import device_registry as dr
+
+    dev_reg = dr.async_get(hass)
+    assert dev_reg.async_get(device.id).area_id == area.id
+    # The device carries the area now — individual entities stay unset and
+    # simply inherit it, instead of each getting its own override.
+    assert ent_reg.async_get("light.sittingpit_kronleuchter_1").area_id is None
+    assert (
+        ent_reg.async_get("number.sittingpit_kronleuchter_1_ein_level").area_id is None
+    )
+
+
+async def test_assign_areas_reconciles_existing_per_entity_overrides(
+    hass: HomeAssistant,
+) -> None:
+    """Regression test: a device whose entities were previously all given
+    the same area as individual overrides (the old scattering behaviour)
+    gets that area promoted to the device, with the redundant per-entity
+    overrides cleared back to inherited — exactly the
+    light.sittingpit_sittingpit_kronleuchter_1 case reported by the user,
+    where the device itself had no area even though every one of its
+    entities already pointed at "sittingpit" individually.
+    """
+    from homeassistant.helpers import area_registry as ar
+    from homeassistant.helpers import device_registry as dr
+    from homeassistant.helpers import entity_registry as er
+
+    area_reg = ar.async_get(hass)
+    area = area_reg.async_get_or_create("Sittingpit")
+
+    entry = await _add_entry(hass)
+    device = await _add_device(hass, entry.entry_id, "Sittingpit Kronleuchter 1")
+
+    ent_reg = er.async_get(hass)
+    ent_reg.async_get_or_create(
+        "light",
+        "test",
+        "sp1_light",
+        suggested_object_id="sp1_light",
+        device_id=device.id,
+    )
+    ent_reg.async_get_or_create(
+        "number",
+        "test",
+        "sp1_level",
+        suggested_object_id="sp1_level",
+        device_id=device.id,
+    )
+    ent_reg.async_update_entity("light.sp1_light", area_id=area.id)
+    ent_reg.async_update_entity("number.sp1_level", area_id=area.id)
+
+    await hass.services.async_call(
+        DOMAIN, "assign_areas", {"dry_run": False}, blocking=True, return_response=True
+    )
+
+    dev_reg = dr.async_get(hass)
+    assert dev_reg.async_get(device.id).area_id == area.id
+    assert ent_reg.async_get("light.sp1_light").area_id is None
+    assert ent_reg.async_get("number.sp1_level").area_id is None
+
+
+async def test_assign_areas_does_not_promote_conflicting_device(
+    hass: HomeAssistant,
+) -> None:
+    """A device whose entities disagree on the room keeps the old per-entity
+    behaviour instead of guessing which room the whole device belongs to.
+    """
+    from homeassistant.helpers import area_registry as ar
+    from homeassistant.helpers import device_registry as dr
+    from homeassistant.helpers import entity_registry as er
+
+    area_reg = ar.async_get(hass)
+    area_reg.async_get_or_create("Sittingpit")
+    area_reg.async_get_or_create("Wohnzimmer")
+
+    entry = await _add_entry(hass)
+    device = await _add_device(hass, entry.entry_id, "Multi Room Bridge")
+
+    ent_reg = er.async_get(hass)
+    ent_reg.async_get_or_create(
+        "sensor",
+        "test",
+        "conflict_a",
+        suggested_object_id="sittingpit_bridge_rssi",
+        device_id=device.id,
+    )
+    ent_reg.async_get_or_create(
+        "sensor",
+        "test",
+        "conflict_b",
+        suggested_object_id="wohnzimmer_bridge_rssi",
+        device_id=device.id,
+    )
+
+    await hass.services.async_call(
+        DOMAIN, "assign_areas", {"dry_run": False}, blocking=True, return_response=True
+    )
+
+    dev_reg = dr.async_get(hass)
+    assert dev_reg.async_get(device.id).area_id is None
+    assert ent_reg.async_get("sensor.sittingpit_bridge_rssi").area_id is not None
+    assert ent_reg.async_get("sensor.wohnzimmer_bridge_rssi").area_id is not None
+    assert (
+        ent_reg.async_get("sensor.sittingpit_bridge_rssi").area_id
+        != ent_reg.async_get("sensor.wohnzimmer_bridge_rssi").area_id
+    )
