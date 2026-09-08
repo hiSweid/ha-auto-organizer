@@ -8,7 +8,7 @@ Automatically assigns [Labels](https://www.home-assistant.io/docs/organizing/lab
 
 ## Features
 
-- 🏷️ 35 label themes, 30,970 keywords (DE+EN), 123 curated integrations
+- 🏷️ 36 label themes, 30,970 keywords (DE+EN), 123 curated integrations
 - 🖼️ Optional icon suggestions — 30,826 mappings across 3,218 icons, full coverage of every label & domain, never overwrites an existing icon
 - 🏠 Optional area & floor labels, plus a standalone area-assignment service
 - 🎯 Restrict to chosen label themes; exclude by domain, entity, or glob pattern

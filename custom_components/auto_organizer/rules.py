@@ -111,6 +111,7 @@ LABELS: Final[dict[str, LabelDef]] = {
     "weather": _ld(
         "light-blue", "mdi:weather-partly-cloudy", "Wetter", "Weather"
     ),
+    "sun": _ld("amber", "mdi:weather-sunny", "Sonne", "Sun"),
     "updates": _ld("deep-orange", "mdi:package-up", "Updates", "Updates"),
     "security": _ld("red", "mdi:shield-home", "Sicherheit", "Security"),
     # device classes
@@ -162,7 +163,7 @@ DOMAIN_LABELS: Final[dict[str, str]] = {
     "device_tracker": "presence",
     "person": "presence",
     "weather": "weather",
-    "sun": "weather",
+    "sun": "sun",
     "update": "updates",
     "alarm_control_panel": "security",
     "siren": "security",

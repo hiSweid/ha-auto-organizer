@@ -6,6 +6,27 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.6] - 2026-09-08
+
+### Added
+- 165 new keywords/icons across **mower**, **energy**, **locks**, plus an
+  icon-scan / device-synonym backfill.
+
+### Changed
+- New dedicated **Sun** label (`mdi:weather-sunny`) for the built-in `sun.*`
+  domain (sun position, elevation/azimuth, rising/setting), split out of
+  **weather** — the sun entity tracks celestial position, not weather
+  conditions. Requested in #5.
+
+### Fixed
+- `run()`'s icon side-effect was missing the `skip_categories` guard already
+  used for area/floor labels and `assign_icons()`, so a device's config/
+  diagnostic sub-entities inherited its keyword-matched icon instead of
+  keeping Home Assistant's own default icon for that domain.
+- `assign_areas()` now promotes a device's area to the device itself when
+  every one of its entities agrees on the same room, instead of scattering
+  the same area across each entity as an individual override.
+
 ## [0.11.5] - 2026-09-07
 
 ### Added
