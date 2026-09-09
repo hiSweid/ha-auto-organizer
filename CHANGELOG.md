@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.7] - 2026-09-09
+
+### Added
+- 293 new keywords/icons across **mower**, **appliances**, **fans**, **sun**,
+  **presence**, plus an icon-scan / device-synonym backfill.
+
+### Fixed
+- Dropped bare `shelly`/`mijia` brand keywords from this batch: `KEYWORD_LABELS`
+  lets every matching keyword contribute its own label to an entity rather
+  than only the longest match, so a generic brand token with no category
+  meaning of its own was polluting already-correctly-labeled entities (e.g.
+  `shelly_flood` picking up an extra "Schalter" label).
+
 ## [0.11.6] - 2026-09-08
 
 ### Added
