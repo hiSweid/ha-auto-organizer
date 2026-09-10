@@ -709,6 +709,18 @@ def test_grocy_curated_not_waste():
     assert names(entry) == ["Einkauf"]
 
 
+def test_grocy_derived_template_not_waste():
+    # Same collision as test_grocy_curated_not_waste, but for a
+    # shopping-list blueprint's template sensor (platform "template", not
+    # "grocy") - the entity_id itself still names Grocy, which is enough to
+    # curate it the same way. See GH ha-auto-organizer#5.
+    entry = FakeEntry(
+        "sensor.shopping_list_with_grocy_product_frittierfett_202",
+        platform="template",
+    )
+    assert names(entry) == ["Einkauf"]
+
+
 def test_ac_verbrauch_keyword():
     assert names(FakeEntry("sensor.buero_ac_verbrauch")) == ["Energie"]
 

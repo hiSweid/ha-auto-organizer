@@ -68567,6 +68567,16 @@ def _collect_label_keys(
             entry, "original_name", None
         )
         hay = _normalize(f"{entry.entity_id} {ename or ''}")
+        # A Grocy-derived helper/template carries the same false-positive
+        # risk as the native integration (GH issue #2/#5) but doesn't run on
+        # platform "grocy" itself — e.g. a shopping-list blueprint's
+        # sensor.shopping_list_with_grocy_product_<name> is platform
+        # "template". "grocy" in the entity_id is a strong enough signal on
+        # its own (real product names, not a generic word) to curate it the
+        # same way, so a product like "Frittierfett" doesn't pick up
+        # "Abfall" from the unrelated frying-oil keyword.
+        if not keys and "grocy" in hay:
+            add(INTEGRATION_LABELS.get("grocy"), reason="grocy")
         for kw in CAR_NAME_KEYWORDS:
             if f" {kw} " not in hay:
                 continue

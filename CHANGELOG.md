@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.8] - 2026-09-10
+
+### Fixed
+- Grocy-derived helper/template entities (e.g. a shopping-list blueprint's
+  `sensor.shopping_list_with_grocy_product_<name>`, platform `template` not
+  `grocy`) are now curated the same as the native integration: `"grocy"` in
+  the entity_id is enough to gate the keyword vocabulary, so a product name
+  like "Frittierfett" no longer picks up "Abfall" from the unrelated
+  frying-oil keyword. Same class of collision as the native-platform fix in
+  0.9.159 (issue #2), reported for the template case in issue #5.
+
 ## [0.11.7] - 2026-09-09
 
 ### Added
