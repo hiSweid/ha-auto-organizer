@@ -6,6 +6,12 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.10] - 2026-09-13
+
+### Added
+- 144 new keywords/icons across **sun**, **mower**, **shopping**, plus a
+  general icon-scan and device-synonym backfill.
+
 ## [0.11.9] - 2026-09-12
 
 ### Added
