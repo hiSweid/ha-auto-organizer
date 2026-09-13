@@ -34580,6 +34580,31 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "weatherlink": "mdi:weather-partly-cloudy",
     "metoffice": "mdi:weather-cloudy",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "formel 1 abend": "mdi:flag-checkered",
+    "boxenabend": "mdi:boxing-glove",
+    "beauty abend": "mdi:lipstick",
+    "einschulungsfeier": "mdi:school",
+    "kommunionsfeier": "mdi:church",
+    "konfirmationsfeier": "mdi:church",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "adax neo": "mdi:radiator",
+    "netro whisperer": "mdi:watering-can",
+    "siegenia comfo drive": "mdi:window-shutter-open",
+    "weinor": "mdi:awning",
+    "sommer torantriebe": "mdi:garage-open",
+
+    # --- incremental icon-only batch (word already existed) ---
+    "crock pot": "mdi:pot-mix",
+    "gartenzwerg": "mdi:gnome",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -68525,6 +68550,68 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "ruecklauftemperaturfuehler": "temperature",
     "carport": "car",
     "wuerfel": "automations",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "hour angle": "sun",
+    "stundenwinkel": "sun",
+    "zweiachsnachfuehrung": "sun",
+    "einachsnachfuehrung": "sun",
+    "horizontalkoordinatensystem": "sun",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "automower nera": "mower",
+    "kollisionsvermeidung maeher": "mower",
+    "passage zone maeher": "mower",
+    "gps guided mowing": "mower",
+    "raupenantrieb maeher": "mower",
+    "elektromaeher": "mower",
+    "gtech rlm50": "mower",
+    "auswinterung maehroboter": "mower",
+    "ferndiagnose maehroboter": "mower",
+    "schutzklasse maehroboter": "mower",
+    "wasserdicht maehroboter": "mower",
+    "alarmsirene maehroboter": "mower",
+    "maehroboter deaktiviert": "mower",
+    "reifendruck maeher": "mower",
+    "benzinmaeher": "mower",
+    "akkurasenmaeher": "mower",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "mittagessen szene": "scenes",
+    "herbstputz szene": "scenes",
+    "fussball wm abend": "scenes",
+    "formel 1 abend": "scenes",
+    "boxenabend": "scenes",
+    "scifi abend": "scenes",
+    "rockabend": "scenes",
+    "beauty abend": "scenes",
+    "digital detox szene": "scenes",
+    "diwali": "scenes",
+    "spargelessen szene": "scenes",
+    "gender reveal party": "scenes",
+    "vesperstunde": "scenes",
+    "liebesfilm abend": "scenes",
+    "dokumentarfilm abend": "scenes",
+    "flammkuchenabend": "scenes",
+    "babysitter modus": "scenes",
+    "einschulungsfeier": "scenes",
+    "kommunionsfeier": "scenes",
+    "konfirmationsfeier": "scenes",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    " vzug ": "appliances",
+    "vesternet": "network",
+    "abode iota": "security",
+    "adax neo": "climate",
+    "stelpro": "climate",
+    "orvibo": "switches",
+    "griesser": "covers",
+    "sensative strips": "security",
+    "netro whisperer": "garden",
+    "siegenia comfo drive": "covers",
+    "flair smart vent": "climate",
+    "weinor": "covers",
+    "sommer torantriebe": "covers",
 
 }
 

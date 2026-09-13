@@ -90342,3 +90342,238 @@ def test_icon_backfill_weatherlink():
 
 def test_icon_backfill_metoffice():
     assert suggest_entity_icon(_FakeEntry("sensor.metoffice"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_batch_hour_angle():
+    assert _has_label("sensor.hour_angle", "sun")
+
+
+def test_batch_stundenwinkel():
+    assert _has_label("sensor.stundenwinkel", "sun")
+
+
+def test_batch_zweiachsnachfuehrung():
+    assert _has_label("sensor.zweiachsnachfuehrung", "sun")
+
+
+def test_batch_einachsnachfuehrung():
+    assert _has_label("sensor.einachsnachfuehrung", "sun")
+
+
+def test_batch_horizontalkoordinatensystem():
+    assert _has_label("sensor.horizontalkoordinatensystem", "sun")
+
+
+def test_batch_automower_nera():
+    assert _has_label("sensor.automower_nera", "mower")
+
+
+def test_batch_kollisionsvermeidung_maeher():
+    assert _has_label("sensor.kollisionsvermeidung_maeher", "mower")
+
+
+def test_batch_passage_zone_maeher():
+    assert _has_label("sensor.passage_zone_maeher", "mower")
+
+
+def test_batch_gps_guided_mowing():
+    assert _has_label("sensor.gps_guided_mowing", "mower")
+
+
+def test_batch_raupenantrieb_maeher():
+    assert _has_label("sensor.raupenantrieb_maeher", "mower")
+
+
+def test_batch_elektromaeher():
+    assert _has_label("sensor.elektromaeher", "mower")
+
+
+def test_batch_gtech_rlm50():
+    assert _has_label("sensor.gtech_rlm50", "mower")
+
+
+def test_batch_auswinterung_maehroboter():
+    assert _has_label("sensor.auswinterung_maehroboter", "mower")
+
+
+def test_batch_ferndiagnose_maehroboter():
+    assert _has_label("sensor.ferndiagnose_maehroboter", "mower")
+
+
+def test_batch_schutzklasse_maehroboter():
+    assert _has_label("sensor.schutzklasse_maehroboter", "mower")
+
+
+def test_batch_wasserdicht_maehroboter():
+    assert _has_label("sensor.wasserdicht_maehroboter", "mower")
+
+
+def test_batch_alarmsirene_maehroboter():
+    assert _has_label("sensor.alarmsirene_maehroboter", "mower")
+
+
+def test_batch_maehroboter_deaktiviert():
+    assert _has_label("sensor.maehroboter_deaktiviert", "mower")
+
+
+def test_batch_reifendruck_maeher():
+    assert _has_label("sensor.reifendruck_maeher", "mower")
+
+
+def test_batch_benzinmaeher():
+    assert _has_label("sensor.benzinmaeher", "mower")
+
+
+def test_batch_akkurasenmaeher():
+    assert _has_label("sensor.akkurasenmaeher", "mower")
+
+
+def test_batch_mittagessen_szene():
+    assert _has_label("sensor.mittagessen_szene", "scenes")
+
+
+def test_batch_herbstputz_szene():
+    assert _has_label("sensor.herbstputz_szene", "scenes")
+
+
+def test_batch_fussball_wm_abend():
+    assert _has_label("sensor.fussball_wm_abend", "scenes")
+
+
+def test_batch_formel_1_abend():
+    assert _has_label("sensor.formel_1_abend", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.formel_1_abend"), OrganizerOptions()) == "mdi:flag-checkered"
+
+
+def test_batch_boxenabend():
+    assert _has_label("sensor.boxenabend", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.boxenabend"), OrganizerOptions()) == "mdi:boxing-glove"
+
+
+def test_batch_scifi_abend():
+    assert _has_label("sensor.scifi_abend", "scenes")
+
+
+def test_batch_rockabend():
+    assert _has_label("sensor.rockabend", "scenes")
+
+
+def test_batch_beauty_abend():
+    assert _has_label("sensor.beauty_abend", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.beauty_abend"), OrganizerOptions()) == "mdi:lipstick"
+
+
+def test_batch_digital_detox_szene():
+    assert _has_label("sensor.digital_detox_szene", "scenes")
+
+
+def test_batch_diwali():
+    assert _has_label("sensor.diwali", "scenes")
+
+
+def test_batch_spargelessen_szene():
+    assert _has_label("sensor.spargelessen_szene", "scenes")
+
+
+def test_batch_gender_reveal_party():
+    assert _has_label("sensor.gender_reveal_party", "scenes")
+
+
+def test_batch_vesperstunde():
+    assert _has_label("sensor.vesperstunde", "scenes")
+
+
+def test_batch_liebesfilm_abend():
+    assert _has_label("sensor.liebesfilm_abend", "scenes")
+
+
+def test_batch_dokumentarfilm_abend():
+    assert _has_label("sensor.dokumentarfilm_abend", "scenes")
+
+
+def test_batch_flammkuchenabend():
+    assert _has_label("sensor.flammkuchenabend", "scenes")
+
+
+def test_batch_babysitter_modus():
+    assert _has_label("sensor.babysitter_modus", "scenes")
+
+
+def test_batch_einschulungsfeier():
+    assert _has_label("sensor.einschulungsfeier", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.einschulungsfeier"), OrganizerOptions()) == "mdi:school"
+
+
+def test_batch_kommunionsfeier():
+    assert _has_label("sensor.kommunionsfeier", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.kommunionsfeier"), OrganizerOptions()) == "mdi:church"
+
+
+def test_batch_konfirmationsfeier():
+    assert _has_label("sensor.konfirmationsfeier", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.konfirmationsfeier"), OrganizerOptions()) == "mdi:church"
+
+
+def test_batch_vzug():
+    assert _has_label("sensor.vzug", "appliances")
+
+
+def test_batch_vesternet():
+    assert _has_label("sensor.vesternet", "network")
+
+
+def test_batch_abode_iota():
+    assert _has_label("sensor.abode_iota", "security")
+
+
+def test_batch_adax_neo():
+    assert _has_label("sensor.adax_neo", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.adax_neo"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_batch_stelpro():
+    assert _has_label("sensor.stelpro", "climate")
+
+
+def test_batch_orvibo():
+    assert _has_label("sensor.orvibo", "switches")
+
+
+def test_batch_griesser():
+    assert _has_label("sensor.griesser", "covers")
+
+
+def test_batch_sensative_strips():
+    assert _has_label("sensor.sensative_strips", "security")
+
+
+def test_batch_netro_whisperer():
+    assert _has_label("sensor.netro_whisperer", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.netro_whisperer"), OrganizerOptions()) == "mdi:watering-can"
+
+
+def test_batch_siegenia_comfo_drive():
+    assert _has_label("sensor.siegenia_comfo_drive", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.siegenia_comfo_drive"), OrganizerOptions()) == "mdi:window-shutter-open"
+
+
+def test_batch_flair_smart_vent():
+    assert _has_label("sensor.flair_smart_vent", "climate")
+
+
+def test_batch_weinor():
+    assert _has_label("sensor.weinor", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.weinor"), OrganizerOptions()) == "mdi:awning"
+
+
+def test_batch_sommer_torantriebe():
+    assert _has_label("sensor.sommer_torantriebe", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.sommer_torantriebe"), OrganizerOptions()) == "mdi:garage-open"
+
+
+def test_iconfill_crock_pot():
+    assert suggest_entity_icon(_FakeEntry("sensor.crock_pot"), OrganizerOptions()) == "mdi:pot-mix"
+
+
+def test_iconfill_gartenzwerg():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenzwerg"), OrganizerOptions()) == "mdi:gnome"
