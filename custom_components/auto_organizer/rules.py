@@ -34581,12 +34581,6 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "metoffice": "mdi:weather-cloudy",
 
     # --- incremental vocabulary batch (auto-generated + collision-checked) ---
-
-
-    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
-
-
-    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
     "formel 1 abend": "mdi:flag-checkered",
     "boxenabend": "mdi:boxing-glove",
     "beauty abend": "mdi:lipstick",

@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.11] - 2026-09-14
+
+### Added
+- 54 new keywords/icons across **sun**, **mower**, **scenes**, plus misc
+  device/brand synonyms (Adax Neo, Vesternet, Abode Iota, Stelpro, Orvibo,
+  Griesser, Sensative Strips, Netro Whisperer, Siegenia Comfo Drive, Flair
+  Smart Vent, Weinor, Sommer Torantriebe, VZug).
+
 ## [0.11.10] - 2026-09-13
 
 ### Added
