@@ -1015,7 +1015,7 @@ def test_new_specific_icon_words():
         "sensor.co2_buero": "mdi:molecule-co2",
         "binary_sensor.haustuer_kontakt": "mdi:door",
         "binary_sensor.terrassentuer_kontakt": "mdi:door-sliding",
-        "sensor.gelbersack_naechste_abholung": "mdi:recycle",
+        "sensor.gelbersack_naechste_abholung": "mdi:dump-truck",
         "sensor.vorhang_wohnzimmer": "mdi:curtains",
         "sensor.futterautomat_katze": "mdi:paw",
         "sensor.whirlpool_temp": "mdi:hot-tub",
