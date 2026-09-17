@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.13] - 2026-09-17
+
+### Added
+- 284 new keywords/icons across **config/settings**, **standby/reset
+  behavior**, **wireless/pairing diagnostics**, **notification sound/volume**,
+  plus misc device/brand synonyms and MDI icon backfills.
+
 ## [0.11.12] - 2026-09-16
 
 ### Added
