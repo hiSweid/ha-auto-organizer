@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.14] - 2026-09-18
+
+### Added
+- 134 new keywords/icons across **config/settings**, **diagnostics**,
+  **sun-position astronomy terms**, plus misc device/brand synonyms and MDI
+  icon backfills.
+
 ## [0.11.13] - 2026-09-17
 
 ### Added
