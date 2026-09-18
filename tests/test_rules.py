@@ -1082,7 +1082,10 @@ def test_pv_keyword_is_whole_word_not_pve_substring():
     # leaking out of "pve" into "Energie", which it must not.
     assert "Temperatur" in names(entry)
     assert "Energie" not in names(entry)
-    assert suggest_entity_icon(entry, OrganizerOptions()) == "mdi:thermometer"
+    # The "gpu temperatur" vocab keyword now legitimately matches this
+    # entity too (it genuinely is a GPU temperature sensor), giving a more
+    # specific icon than the generic thermometer fallback.
+    assert suggest_entity_icon(entry, OrganizerOptions()) == "mdi:expansion-card-variant"
     # The legitimate whole-word case (a real PV/solar entity) must still match.
     assert "Energie" in names(FakeEntry("sensor.solcast_pv_forecast"))
 
