@@ -4,9 +4,11 @@ from __future__ import annotations
 
 import logging
 from dataclasses import dataclass, field
+from typing import Final
 
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers import area_registry as ar
+from homeassistant.helpers import category_registry as cr
 from homeassistant.helpers import device_registry as dr
 from homeassistant.helpers import entity_registry as er
 from homeassistant.helpers import floor_registry as fr
@@ -29,12 +31,18 @@ _LOGGER = logging.getLogger(__name__)
 
 __all__ = [
     "AreaAssignResult",
+    "CategoryAssignResult",
     "IconAssignResult",
     "Organizer",
     "OrganizerOptions",
     "RunResult",
     "compute_label_specs",
 ]
+
+# Domains whose entity registry entries carry a "category" (scoped to the
+# domain itself, e.g. the room grouping shown on the automation/script
+# dashboard) instead of relying on labels or areas for that grouping.
+CATEGORY_SCOPES: Final[tuple[str, ...]] = ("automation", "script")
 
 
 @dataclass
@@ -82,6 +90,22 @@ class IconAssignResult:
 @dataclass
 class AreaAssignResult:
     """Summary of an area auto-assignment run."""
+
+    scanned: int = 0
+    assigned: int = 0
+    changes: list[dict[str, str]] = field(default_factory=list)
+
+    def as_dict(self) -> dict:
+        return {
+            "scanned": self.scanned,
+            "assigned": self.assigned,
+            "changes": self.changes,
+        }
+
+
+@dataclass
+class CategoryAssignResult:
+    """Summary of a domain-category auto-assignment run (automation/script)."""
 
     scanned: int = 0
     assigned: int = 0
@@ -423,6 +447,67 @@ class Organizer:
 
         _LOGGER.info(
             "Auto-Organizer area assign: scanned=%s assigned=%s dry_run=%s",
+            result.scanned,
+            result.assigned,
+            dry_run,
+        )
+        return result
+
+    async def assign_categories(
+        self, dry_run: bool = False, exclude: tuple[str, ...] = ()
+    ) -> CategoryAssignResult:
+        """Auto-assign automation/script entities without a category by name.
+
+        The automation and script dashboards group their list by this
+        per-domain "category" (a room, in this installation) — a separate
+        registry from labels and areas. auto_organizer's own labels never
+        populate it, so an automation kept its thematic label ("Sicherheit",
+        "Beleuchtung", ...) but stayed stuck in "Nicht kategorisiert" on that
+        dashboard until someone set a category on it by hand. This reuses
+        the same name-matching as :meth:`assign_areas`, just against the
+        category registry's own scope instead of the area registry, and only
+        ever fills a category in — an entity that already has one (however
+        it got there) is left alone, same as an existing area override.
+        """
+        result = CategoryAssignResult()
+        ent_reg = er.async_get(self.hass)
+        cat_reg = cr.async_get(self.hass)
+
+        for scope in CATEGORY_SCOPES:
+            categories = [
+                {"area_id": c.category_id, "name": c.name, "aliases": []}
+                for c in cat_reg.async_list_categories(scope=scope)
+            ]
+            if not categories:
+                continue
+
+            for entry in ent_reg.entities.values():
+                if not entry.entity_id.startswith(f"{scope}."):
+                    continue
+                if is_excluded(entry.entity_id, exclude):
+                    continue
+                if entry.categories.get(scope):
+                    continue
+
+                result.scanned += 1
+                category_id = match_area(
+                    entry.entity_id, entry.name or entry.original_name, categories
+                )
+                if not category_id:
+                    continue
+
+                result.assigned += 1
+                result.changes.append(
+                    {"entity_id": entry.entity_id, "category_id": category_id}
+                )
+                if not dry_run:
+                    new_categories = {**entry.categories, scope: category_id}
+                    ent_reg.async_update_entity(
+                        entry.entity_id, categories=new_categories
+                    )
+
+        _LOGGER.info(
+            "Auto-Organizer category assign: scanned=%s assigned=%s dry_run=%s",
             result.scanned,
             result.assigned,
             dry_run,

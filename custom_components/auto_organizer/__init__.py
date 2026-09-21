@@ -74,6 +74,7 @@ from .const import (
     DEFAULT_SCAN_INTERVAL,
     DOMAIN,
     SERVICE_ASSIGN_AREAS,
+    SERVICE_ASSIGN_CATEGORIES,
     SERVICE_ASSIGN_ICONS,
     SERVICE_CLEANUP,
     SERVICE_PREVIEW,
@@ -427,6 +428,28 @@ def _register_services(hass: HomeAssistant) -> None:
         )
         return result.as_dict()
 
+    async def _handle_assign_categories(call: ServiceCall) -> ServiceResponse:
+        await _async_require_admin(call)
+        entries = hass.config_entries.async_entries(DOMAIN)
+        if not entries:
+            return {"error": "no config entry"}
+        dry_run = call.data.get(ATTR_DRY_RUN, False)
+        try:
+            result = await entries[0].runtime_data.organizer.assign_categories(
+                dry_run=dry_run,
+                exclude=_options_from_entry(hass, entries[0]).exclude,
+            )
+        except Exception as err:
+            entries[0].runtime_data.record_error(str(err))
+            raise
+        _record_last_run(
+            entries[0].runtime_data,
+            "categories",
+            dry_run,
+            categories=result.as_dict(),
+        )
+        return result.as_dict()
+
     async def _handle_assign_icons(call: ServiceCall) -> ServiceResponse:
         await _async_require_admin(call)
         entries = hass.config_entries.async_entries(DOMAIN)
@@ -483,10 +506,14 @@ def _register_services(hass: HomeAssistant) -> None:
         areas_result = await organizer.assign_areas(
             dry_run=True, exclude=options.exclude
         )
+        categories_result = await organizer.assign_categories(
+            dry_run=True, exclude=options.exclude
+        )
         icons_result = await organizer.assign_icons(options, dry_run=True)
         return {
             "labels": labels_result.as_dict(),
             "areas": areas_result.as_dict(),
+            "categories": categories_result.as_dict(),
             "icons": icons_result.as_dict(),
         }
 
@@ -516,6 +543,13 @@ def _register_services(hass: HomeAssistant) -> None:
         DOMAIN,
         SERVICE_ASSIGN_AREAS,
         _handle_assign_areas,
+        schema=vol.Schema({vol.Optional(ATTR_DRY_RUN): cv.boolean}),
+        supports_response=SupportsResponse.OPTIONAL,
+    )
+    hass.services.async_register(
+        DOMAIN,
+        SERVICE_ASSIGN_CATEGORIES,
+        _handle_assign_categories,
         schema=vol.Schema({vol.Optional(ATTR_DRY_RUN): cv.boolean}),
         supports_response=SupportsResponse.OPTIONAL,
     )
@@ -563,6 +597,7 @@ async def async_unload_entry(
             SERVICE_RUN,
             SERVICE_CLEANUP,
             SERVICE_ASSIGN_AREAS,
+            SERVICE_ASSIGN_CATEGORIES,
             SERVICE_ASSIGN_ICONS,
             SERVICE_REMOVE_ALL,
             SERVICE_PREVIEW,

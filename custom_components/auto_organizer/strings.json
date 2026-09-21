@@ -157,6 +157,16 @@
         }
       }
     },
+    "assign_categories": {
+      "name": "Assign categories",
+      "description": "Auto-assign automation/script entities without a category to a matching room category by name.",
+      "fields": {
+        "dry_run": {
+          "name": "Dry run",
+          "description": "Compute changes without writing them."
+        }
+      }
+    },
     "assign_icons": {
       "name": "Assign icons",
       "description": "Suggest and apply specific icons across all entities, independent of labels.",

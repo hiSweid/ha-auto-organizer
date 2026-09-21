@@ -157,6 +157,16 @@
         }
       }
     },
+    "assign_categories": {
+      "name": "Kategorien zuweisen",
+      "description": "Automationen/Skripte ohne Kategorie automatisch einer passenden Raum-Kategorie anhand des Namens zuordnen.",
+      "fields": {
+        "dry_run": {
+          "name": "Testlauf",
+          "description": "Änderungen berechnen, aber nicht schreiben."
+        }
+      }
+    },
     "assign_icons": {
       "name": "Icons zuweisen",
       "description": "Passende Icons für alle Entitäten vorschlagen und setzen, unabhängig von Labels.",
