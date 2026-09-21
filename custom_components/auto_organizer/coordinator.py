@@ -204,6 +204,22 @@ class AutoOrganizerRuntime:
                     self.record_history(
                         self.last_grouped, areas_result.changes, summary["timestamp"]
                     )
+                # Same "grouping" bucket as areas — the automation/script
+                # dashboard's own room category, which areas/labels never
+                # touch. Sharing the "areas" scope (rather than a scope of
+                # its own) keeps it on the same run-on-startup / periodic /
+                # button cadence areas already have, with no separate toggle
+                # to remember to turn on.
+                categories_result = await self.organizer.assign_categories(
+                    dry_run=self.dry_run, exclude=options.exclude
+                )
+                summary["categories"] = categories_result.as_dict()
+                if not self.dry_run:
+                    self.record_history(
+                        self.last_grouped,
+                        categories_result.changes,
+                        summary["timestamp"],
+                    )
             if self.scope in (SCOPE_ALL, SCOPE_ICONS):
                 icons_result = await self.organizer.assign_icons(
                     options, dry_run=self.dry_run

@@ -226,6 +226,13 @@ async def async_setup_entry(
             areas_result = await runtime.organizer.assign_areas(
                 dry_run=options.dry_run, exclude=options.exclude
             )
+            # Same reasoning as assign_areas above: a brand new automation
+            # should not sit in "Nicht kategorisiert" on the dashboard for
+            # up to scan_interval minutes just because it missed the
+            # startup/periodic run by seconds.
+            categories_result = await runtime.organizer.assign_categories(
+                dry_run=options.dry_run, exclude=options.exclude
+            )
             timestamp = dt_util.utcnow().isoformat()
             if result.updated:
                 runtime.record_history(runtime.last_labeled, result.changes, timestamp)
@@ -236,7 +243,11 @@ async def async_setup_entry(
                 runtime.record_history(
                     runtime.last_grouped, areas_result.changes, timestamp
                 )
-            if result.updated or areas_result.assigned:
+            if categories_result.assigned:
+                runtime.record_history(
+                    runtime.last_grouped, categories_result.changes, timestamp
+                )
+            if result.updated or areas_result.assigned or categories_result.assigned:
                 # Skip the full registry walk when nothing changed (nothing
                 # for the stats to reflect).
                 runtime.refresh_stats()
