@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.16] - 2026-09-28
+
+### Added
+- 117 new keywords/icons across **automotive** (clutch/oil-change/lane-assist
+  terms), **garden/mower** (loop/search-wire, RTK base station, lidar
+  robot mower), **weather astronomy** (moonset/dusk/dawn times), **lighting**,
+  and misc device/brand synonyms and MDI icon backfills.
+
 ## [0.11.15] - 2026-09-21
 
 ### Added
