@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.17] - 2026-09-29
+
+### Added
+- 120 new keywords/icons across **intervals/timing config**, **diagnostics**
+  (crash/debug/connection logs, watchdog/retry counters), **security**
+  (certificate expiry, encryption method), **networking** (LAN cable, serial
+  interface, signal strength), and **solar/aurora astronomy terms**.
+
 ## [0.11.16] - 2026-09-28
 
 ### Added
