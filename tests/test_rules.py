@@ -775,6 +775,25 @@ def test_new_integrations():
     assert names(FakeEntry("sensor.x", platform="solaredge")) == ["Energie"]
 
 
+def test_arr_stack_and_download_client_integrations():
+    for platform in (
+        "sonarr",
+        "radarr",
+        "lidarr",
+        "prowlarr",
+        "bazarr",
+        "qbittorrent",
+        "sabnzbd",
+        "transmission",
+        "deluge",
+        "nzbget",
+        "overseerr",
+        "jellyseerr",
+        "tautulli",
+    ):
+        assert names(FakeEntry("sensor.x", platform=platform)) == ["Medien"], platform
+
+
 def test_no_false_positive_oven_substring():
     assert names(FakeEntry("sensor.woven_fabric_display")) == []
     assert names(FakeEntry("sensor.provencal_recipe")) == []

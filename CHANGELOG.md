@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.18] - 2026-09-30
+
+### Added
+- Curated `INTEGRATION_LABELS` entries for the media/*arr stack: `sonarr`,
+  `radarr`, `lidarr`, `prowlarr`, `bazarr`, `qbittorrent`, `sabnzbd`,
+  `transmission`, `deluge`, `nzbget`, `overseerr`, `jellyseerr`, `tautulli`
+  all map to "Medien" now, matching by exact `platform` so there's no
+  keyword-collision risk.
+
 ## [0.11.17] - 2026-09-29
 
 ### Added
