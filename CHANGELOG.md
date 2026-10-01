@@ -6,6 +6,23 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.19] - 2026-10-01
+
+### Added
+- 136 additional vocabulary entries (config/diagnostic/sun/icons/devices
+  themes), collision-checked against the existing keyword set.
+
+### Fixed
+- Config flow: pass `reload_on_update=False` to `_abort_if_unique_id_configured()`
+  to avoid combining a config entry update listener with an automatic flow
+  reload, which Home Assistant deprecated in 2026.6 and will turn into a hard
+  error in 2026.12.
+- Removed 9 accidental duplicate dictionary keys in `SPECIFIC_ICONS`
+  (`arlo`, `beko`, `anker`, `baxi`, `bedienteil`, `bhkw`, `birne`, `blitz`,
+  `aruba`) introduced by earlier vocabulary batches; no behavior change since
+  the later entry already took precedence at runtime, but ruff flagged them
+  (F601) and they were dead code.
+
 ## [0.11.18] - 2026-09-30
 
 ### Added
