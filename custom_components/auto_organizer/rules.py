@@ -35974,6 +35974,51 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "kaugummiautomat": "mdi:candy",
     "ersatzmaehmesser": "mdi:saw-blade",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "einstellungsmenue": "mdi:cog-outline",
+    "parametrierung": "mdi:tune-vertical",
+
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "fehlerrate": "mdi:alert-circle-outline",
+    "lebensdauer": "mdi:timer-sand",
+    "modellbezeichnung": "mdi:label-outline",
+    "geraetekennung": "mdi:identifier",
+    "bootmodus": "mdi:restart",
+    "protokollierungsstufe": "mdi:text-box-search-outline",
+    "pufferueberlauf": "mdi:database-alert",
+    "baudrate": "mdi:swap-horizontal",
+    "supportcode": "mdi:lifebuoy",
+    "ausfallursache": "mdi:alert-decagram",
+    "verbindungsdauer": "mdi:timer-sync-outline",
+    "firmwarehash": "mdi:pound",
+    "online seit": "mdi:access-point-network",
+    "verbunden seit": "mdi:lan-connect",
+    "api erreichbar": "mdi:api",
+    "network latency": "mdi:speedometer-medium",
+    "fehlertoleranz": "mdi:shield-half-full",
+    "offsetkorrektur": "mdi:format-align-middle",
+    "messbereich": "mdi:ruler",
+    "leistungsbegrenzung": "mdi:speedometer-slow",
+    "anwesenheitsschwelle": "mdi:account-check-outline",
+    "taupunktgrenze": "mdi:water-thermometer-outline",
+    "feuchtigkeitsschwelle": "mdi:water-percent",
+    "pollingfrequenz": "mdi:timer-refresh-outline",
+    "ruhezustandsverzoegerung": "mdi:sleep",
+    "stromsparmodus": "mdi:leaf",
+    "inspektionsintervall": "mdi:clipboard-check-outline",
+    "messgenauigkeit": "mdi:crosshairs-gps",
+    "lautstaerkestufe": "mdi:volume-medium",
+    "backoffzeit": "mdi:timer-sand",
+    "sonnentiefstand": "mdi:weather-sunset-down",
+    "sonnenlaufbahn": "mdi:sun-clock",
+    "polartag": "mdi:weather-sunny",
+    "mitternachtssonne": "mdi:weather-sunny",
+    "tageslichtstunden": "mdi:clock-time-eight-outline",
+    "sonnenbrandrisiko": "mdi:sun-thermometer-outline",
+    "sonneneinstrahlungsstaerke": "mdi:solar-power",
+    "sonnenblendung": "mdi:white-balance-sunny",
+    "sonnenhoechststand": "mdi:weather-sunny-alert",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -71414,6 +71459,10 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "garagentoroeffner fernbedienung": "covers",
     "sauna ofen": "appliances",
     "poolrobotersteuerung": "appliances",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "einstellungsmenue": "config",
+    "parametrierung": "config",
 
 }
 
