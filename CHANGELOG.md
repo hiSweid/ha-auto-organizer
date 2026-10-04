@@ -6,6 +6,12 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.22] - 2026-10-04
+
+### Added
+- 2 additional vocabulary entries plus 39 icon backfills (config/diagnostic/sun
+  themes), collision-checked against the existing keyword set.
+
 ## [0.11.21] - 2026-10-03
 
 ### Added
