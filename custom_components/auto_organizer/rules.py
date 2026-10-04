@@ -36019,6 +36019,16 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "sonnenblendung": "mdi:white-balance-sunny",
     "sonnenhoechststand": "mdi:weather-sunny-alert",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "self test": "mdi:clipboard-pulse-outline",
+    "fehlerbericht": "mdi:file-alert-outline",
+    "zustandsbericht": "mdi:file-document-check-outline",
+    "tagesbogen": "mdi:weather-sunset",
+    "bildschirmhelligkeit": "mdi:brightness-6",
+    "sprachlautstaerke": "mdi:volume-high",
+    "uhrzeitformat": "mdi:clock-time-four-outline",
+    "ntp zeitserver": "mdi:clock-check-outline",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -71463,6 +71473,16 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     # --- incremental vocabulary batch (auto-generated + collision-checked) ---
     "einstellungsmenue": "config",
     "parametrierung": "config",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "self test": "diagnostic",
+    "fehlerbericht": "diagnostic",
+    "zustandsbericht": "diagnostic",
+    "tagesbogen": "sun",
+    "bildschirmhelligkeit": "config",
+    "sprachlautstaerke": "config",
+    "uhrzeitformat": "config",
+    "ntp zeitserver": "config",
 
 }
 

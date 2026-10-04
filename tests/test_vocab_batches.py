@@ -97846,3 +97846,43 @@ def test_icon_backfill_sonnenblendung():
 
 def test_icon_backfill_sonnenhoechststand():
     assert suggest_entity_icon(_FakeEntry("sensor.sonnenhoechststand"), OrganizerOptions()) == "mdi:weather-sunny-alert"
+
+
+def test_batch_self_test():
+    assert _has_label("sensor.self_test", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.self_test"), OrganizerOptions()) == "mdi:clipboard-pulse-outline"
+
+
+def test_batch_fehlerbericht():
+    assert _has_label("sensor.fehlerbericht", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.fehlerbericht"), OrganizerOptions()) == "mdi:file-alert-outline"
+
+
+def test_batch_zustandsbericht():
+    assert _has_label("sensor.zustandsbericht", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.zustandsbericht"), OrganizerOptions()) == "mdi:file-document-check-outline"
+
+
+def test_batch_tagesbogen():
+    assert _has_label("sensor.tagesbogen", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.tagesbogen"), OrganizerOptions()) == "mdi:weather-sunset"
+
+
+def test_batch_bildschirmhelligkeit():
+    assert _has_label("sensor.bildschirmhelligkeit", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.bildschirmhelligkeit"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_batch_sprachlautstaerke():
+    assert _has_label("sensor.sprachlautstaerke", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.sprachlautstaerke"), OrganizerOptions()) == "mdi:volume-high"
+
+
+def test_batch_uhrzeitformat():
+    assert _has_label("sensor.uhrzeitformat", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.uhrzeitformat"), OrganizerOptions()) == "mdi:clock-time-four-outline"
+
+
+def test_batch_ntp_zeitserver():
+    assert _has_label("sensor.ntp_zeitserver", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.ntp_zeitserver"), OrganizerOptions()) == "mdi:clock-check-outline"
