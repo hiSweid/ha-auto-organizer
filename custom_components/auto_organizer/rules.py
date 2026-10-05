@@ -36029,6 +36029,54 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "uhrzeitformat": "mdi:clock-time-four-outline",
     "ntp zeitserver": "mdi:clock-check-outline",
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "konfigurationsfehler": "mdi:alert-circle-outline",
+    "initialisierungsfehler": "mdi:alert-circle-outline",
+    "modulversion": "mdi:chip",
+    "softwarekennung": "mdi:identifier",
+    "sonnenstandkorrektur": "mdi:weather-sunny",
+    "luftqualitaetsschwelle": "mdi:air-filter",
+    "heizkurve neigung": "mdi:chart-line",
+    "heizkurve parallelverschiebung": "mdi:chart-line-variant",
+    "mischerlaufzeit": "mdi:timer-sync-outline",
+    "fehlerschwelle": "mdi:alert-outline",
+    "schaltschwelle": "mdi:tune-vertical",
+    "hysteresebreite": "mdi:arrow-expand-horizontal",
+    "meldefrequenz": "mdi:bell-ring-outline",
+    "startup delay": "mdi:timer-outline",
+    "shutdown delay": "mdi:timer-off-outline",
+    "service interval": "mdi:wrench-clock",
+    "sensitivity threshold": "mdi:tune",
+    "detection threshold": "mdi:radar",
+    "cooldown period": "mdi:timer-sand",
+    "sonnenkulmination": "mdi:white-balance-sunny",
+    "sonnendeklination": "mdi:angle-acute",
+    "schattenlaenge": "mdi:ruler",
+    "sonnenuhr": "mdi:sun-clock",
+    "sonnenkalender": "mdi:calendar-clock",
+    "wintersonnenwende": "mdi:snowflake",
+    "sommersonnenwende": "mdi:weather-sunny",
+    "tagnachtgrenze": "mdi:weather-sunset",
+    "solar midnight": "mdi:weather-night",
+    "suncalc": "mdi:sun-compass",
+    "equation of time": "mdi:clock-outline",
+    "sonnenexposition": "mdi:sun-thermometer",
+    "perihelion": "mdi:orbit",
+    "halbschatten": "mdi:weather-cloudy",
+    "daemmerungsdauer": "mdi:weather-sunset-down",
+    "sonnenscheibe": "mdi:white-balance-sunny",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "systemzustand": "mdi:heart-pulse",
+    "system health": "mdi:heart-pulse",
+    "bootzeit": "mdi:restart",
+    "messfehler": "mdi:alert-circle-outline",
+    "arbeitsspeicher": "mdi:memory",
+    "speicherplatz frei": "mdi:harddisk",
+    "anlernmodus": "mdi:school-outline",
+    "sprachausgabe": "mdi:account-voice",
+    "solarmittag": "mdi:white-balance-sunny",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -71483,6 +71531,17 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "sprachlautstaerke": "config",
     "uhrzeitformat": "config",
     "ntp zeitserver": "config",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "systemzustand": "diagnostic",
+    "system health": "diagnostic",
+    "bootzeit": "diagnostic",
+    "messfehler": "diagnostic",
+    "arbeitsspeicher": "diagnostic",
+    "speicherplatz frei": "diagnostic",
+    "anlernmodus": "config",
+    "sprachausgabe": "config",
+    "solarmittag": "sun",
 
 }
 

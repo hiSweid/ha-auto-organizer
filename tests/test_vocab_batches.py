@@ -97886,3 +97886,188 @@ def test_batch_uhrzeitformat():
 def test_batch_ntp_zeitserver():
     assert _has_label("sensor.ntp_zeitserver", "config")
     assert suggest_entity_icon(_FakeEntry("sensor.ntp_zeitserver"), OrganizerOptions()) == "mdi:clock-check-outline"
+
+
+def test_icon_backfill_konfigurationsfehler():
+    assert suggest_entity_icon(_FakeEntry("sensor.konfigurationsfehler"), OrganizerOptions()) == "mdi:alert-circle-outline"
+
+
+def test_icon_backfill_initialisierungsfehler():
+    assert suggest_entity_icon(_FakeEntry("sensor.initialisierungsfehler"), OrganizerOptions()) == "mdi:alert-circle-outline"
+
+
+def test_icon_backfill_modulversion():
+    assert suggest_entity_icon(_FakeEntry("sensor.modulversion"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_icon_backfill_softwarekennung():
+    assert suggest_entity_icon(_FakeEntry("sensor.softwarekennung"), OrganizerOptions()) == "mdi:identifier"
+
+
+def test_icon_backfill_sonnenstandkorrektur():
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenstandkorrektur"), OrganizerOptions()) == "mdi:weather-sunny"
+
+
+def test_icon_backfill_luftqualitaetsschwelle():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftqualitaetsschwelle"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_icon_backfill_heizkurve_neigung():
+    assert suggest_entity_icon(_FakeEntry("sensor.heizkurve_neigung"), OrganizerOptions()) == "mdi:chart-line"
+
+
+def test_icon_backfill_heizkurve_parallelverschiebung():
+    assert suggest_entity_icon(_FakeEntry("sensor.heizkurve_parallelverschiebung"), OrganizerOptions()) == "mdi:chart-line-variant"
+
+
+def test_icon_backfill_mischerlaufzeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.mischerlaufzeit"), OrganizerOptions()) == "mdi:timer-sync-outline"
+
+
+def test_icon_backfill_fehlerschwelle():
+    assert suggest_entity_icon(_FakeEntry("sensor.fehlerschwelle"), OrganizerOptions()) == "mdi:alert-outline"
+
+
+def test_icon_backfill_schaltschwelle():
+    assert suggest_entity_icon(_FakeEntry("sensor.schaltschwelle"), OrganizerOptions()) == "mdi:tune-vertical"
+
+
+def test_icon_backfill_hysteresebreite():
+    assert suggest_entity_icon(_FakeEntry("sensor.hysteresebreite"), OrganizerOptions()) == "mdi:arrow-expand-horizontal"
+
+
+def test_icon_backfill_meldefrequenz():
+    assert suggest_entity_icon(_FakeEntry("sensor.meldefrequenz"), OrganizerOptions()) == "mdi:bell-ring-outline"
+
+
+def test_icon_backfill_startup_delay():
+    assert suggest_entity_icon(_FakeEntry("sensor.startup_delay"), OrganizerOptions()) == "mdi:timer-outline"
+
+
+def test_icon_backfill_shutdown_delay():
+    assert suggest_entity_icon(_FakeEntry("sensor.shutdown_delay"), OrganizerOptions()) == "mdi:timer-off-outline"
+
+
+def test_icon_backfill_service_interval():
+    assert suggest_entity_icon(_FakeEntry("sensor.service_interval"), OrganizerOptions()) == "mdi:wrench-clock"
+
+
+def test_icon_backfill_sensitivity_threshold():
+    assert suggest_entity_icon(_FakeEntry("sensor.sensitivity_threshold"), OrganizerOptions()) == "mdi:tune"
+
+
+def test_icon_backfill_detection_threshold():
+    assert suggest_entity_icon(_FakeEntry("sensor.detection_threshold"), OrganizerOptions()) == "mdi:radar"
+
+
+def test_icon_backfill_cooldown_period():
+    assert suggest_entity_icon(_FakeEntry("sensor.cooldown_period"), OrganizerOptions()) == "mdi:timer-sand"
+
+
+def test_icon_backfill_sonnenkulmination():
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenkulmination"), OrganizerOptions()) == "mdi:white-balance-sunny"
+
+
+def test_icon_backfill_sonnendeklination():
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnendeklination"), OrganizerOptions()) == "mdi:angle-acute"
+
+
+def test_icon_backfill_schattenlaenge():
+    assert suggest_entity_icon(_FakeEntry("sensor.schattenlaenge"), OrganizerOptions()) == "mdi:ruler"
+
+
+def test_icon_backfill_sonnenuhr():
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenuhr"), OrganizerOptions()) == "mdi:sun-clock"
+
+
+def test_icon_backfill_sonnenkalender():
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenkalender"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_icon_backfill_wintersonnenwende():
+    assert suggest_entity_icon(_FakeEntry("sensor.wintersonnenwende"), OrganizerOptions()) == "mdi:snowflake"
+
+
+def test_icon_backfill_sommersonnenwende():
+    assert suggest_entity_icon(_FakeEntry("sensor.sommersonnenwende"), OrganizerOptions()) == "mdi:weather-sunny"
+
+
+def test_icon_backfill_tagnachtgrenze():
+    assert suggest_entity_icon(_FakeEntry("sensor.tagnachtgrenze"), OrganizerOptions()) == "mdi:weather-sunset"
+
+
+def test_icon_backfill_solar_midnight():
+    assert suggest_entity_icon(_FakeEntry("sensor.solar_midnight"), OrganizerOptions()) == "mdi:weather-night"
+
+
+def test_icon_backfill_suncalc():
+    assert suggest_entity_icon(_FakeEntry("sensor.suncalc"), OrganizerOptions()) == "mdi:sun-compass"
+
+
+def test_icon_backfill_equation_of_time():
+    assert suggest_entity_icon(_FakeEntry("sensor.equation_of_time"), OrganizerOptions()) == "mdi:clock-outline"
+
+
+def test_icon_backfill_sonnenexposition():
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenexposition"), OrganizerOptions()) == "mdi:sun-thermometer"
+
+
+def test_icon_backfill_perihelion():
+    assert suggest_entity_icon(_FakeEntry("sensor.perihelion"), OrganizerOptions()) == "mdi:orbit"
+
+
+def test_icon_backfill_halbschatten():
+    assert suggest_entity_icon(_FakeEntry("sensor.halbschatten"), OrganizerOptions()) == "mdi:weather-cloudy"
+
+
+def test_icon_backfill_daemmerungsdauer():
+    assert suggest_entity_icon(_FakeEntry("sensor.daemmerungsdauer"), OrganizerOptions()) == "mdi:weather-sunset-down"
+
+
+def test_icon_backfill_sonnenscheibe():
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenscheibe"), OrganizerOptions()) == "mdi:white-balance-sunny"
+
+
+def test_batch_systemzustand():
+    assert _has_label("sensor.systemzustand", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.systemzustand"), OrganizerOptions()) == "mdi:heart-pulse"
+
+
+def test_batch_system_health():
+    assert _has_label("sensor.system_health", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.system_health"), OrganizerOptions()) == "mdi:heart-pulse"
+
+
+def test_batch_bootzeit():
+    assert _has_label("sensor.bootzeit", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.bootzeit"), OrganizerOptions()) == "mdi:restart"
+
+
+def test_batch_messfehler():
+    assert _has_label("sensor.messfehler", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.messfehler"), OrganizerOptions()) == "mdi:alert-circle-outline"
+
+
+def test_batch_arbeitsspeicher():
+    assert _has_label("sensor.arbeitsspeicher", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.arbeitsspeicher"), OrganizerOptions()) == "mdi:memory"
+
+
+def test_batch_speicherplatz_frei():
+    assert _has_label("sensor.speicherplatz_frei", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.speicherplatz_frei"), OrganizerOptions()) == "mdi:harddisk"
+
+
+def test_batch_anlernmodus():
+    assert _has_label("sensor.anlernmodus", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.anlernmodus"), OrganizerOptions()) == "mdi:school-outline"
+
+
+def test_batch_sprachausgabe():
+    assert _has_label("sensor.sprachausgabe", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.sprachausgabe"), OrganizerOptions()) == "mdi:account-voice"
+
+
+def test_batch_solarmittag():
+    assert _has_label("sensor.solarmittag", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.solarmittag"), OrganizerOptions()) == "mdi:white-balance-sunny"
