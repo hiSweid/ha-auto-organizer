@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.23] - 2026-10-05
+
+### Added
+- 8 additional vocabulary entries (diagnostic/config/sun themes: self test,
+  fault report, status report, time format, NTP time server, etc.),
+  collision-checked against the existing keyword set.
+
 ## [0.11.22] - 2026-10-04
 
 ### Added
