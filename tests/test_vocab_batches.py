@@ -98071,3 +98071,81 @@ def test_batch_sprachausgabe():
 def test_batch_solarmittag():
     assert _has_label("sensor.solarmittag", "sun")
     assert suggest_entity_icon(_FakeEntry("sensor.solarmittag"), OrganizerOptions()) == "mdi:white-balance-sunny"
+
+
+def test_batch_routing_tabelle():
+    assert _has_label("sensor.routing_tabelle", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.routing_tabelle"), OrganizerOptions()) == "mdi:router-network"
+
+
+def test_batch_nachbartabelle():
+    assert _has_label("sensor.nachbartabelle", "diagnostic")
+
+
+def test_batch_geraeteinterview():
+    assert _has_label("sensor.geraeteinterview", "diagnostic")
+
+
+def test_batch_endpunkte():
+    assert _has_label("sensor.endpunkte", "diagnostic")
+
+
+def test_batch_neighbor_table():
+    assert _has_label("sensor.neighbor_table", "diagnostic")
+
+
+def test_batch_pairing_status():
+    assert _has_label("sensor.pairing_status", "diagnostic")
+
+
+def test_batch_dimmkurve():
+    assert _has_label("sensor.dimmkurve", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.dimmkurve"), OrganizerOptions()) == "mdi:tune-variant"
+
+
+def test_batch_einschaltstufe():
+    assert _has_label("sensor.einschaltstufe", "config")
+
+
+def test_batch_schaltrichtung():
+    assert _has_label("sensor.schaltrichtung", "config")
+
+
+def test_batch_drehrichtung():
+    assert _has_label("sensor.drehrichtung", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.drehrichtung"), OrganizerOptions()) == "mdi:rotate-3d-variant"
+
+
+def test_batch_wippenmodus():
+    assert _has_label("sensor.wippenmodus", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.wippenmodus"), OrganizerOptions()) == "mdi:gesture-tap-button"
+
+
+def test_batch_dimmgeschwindigkeit():
+    assert _has_label("sensor.dimmgeschwindigkeit", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.dimmgeschwindigkeit"), OrganizerOptions()) == "mdi:tune-variant"
+
+
+def test_batch_relaismodus():
+    assert _has_label("sensor.relaismodus", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.relaismodus"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_batch_ausschaltverhalten():
+    assert _has_label("sensor.ausschaltverhalten", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.ausschaltverhalten"), OrganizerOptions()) == "mdi:cog-outline"
+
+
+def test_batch_eingangskonfiguration():
+    assert _has_label("sensor.eingangskonfiguration", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.eingangskonfiguration"), OrganizerOptions()) == "mdi:cog-outline"
+
+
+def test_batch_taster_modus():
+    assert _has_label("sensor.taster_modus", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.taster_modus"), OrganizerOptions()) == "mdi:gesture-tap-button"
+
+
+def test_batch_sonnenautomatik():
+    assert _has_label("sensor.sonnenautomatik", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenautomatik"), OrganizerOptions()) == "mdi:white-balance-sunny"

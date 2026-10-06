@@ -36077,6 +36077,18 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "sprachausgabe": "mdi:account-voice",
     "solarmittag": "mdi:white-balance-sunny",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "routing tabelle": "mdi:router-network",
+    "dimmkurve": "mdi:tune-variant",
+    "drehrichtung": "mdi:rotate-3d-variant",
+    "wippenmodus": "mdi:gesture-tap-button",
+    "dimmgeschwindigkeit": "mdi:tune-variant",
+    "relaismodus": "mdi:light-switch",
+    "ausschaltverhalten": "mdi:cog-outline",
+    "eingangskonfiguration": "mdi:cog-outline",
+    "taster modus": "mdi:gesture-tap-button",
+    "sonnenautomatik": "mdi:white-balance-sunny",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -71542,6 +71554,25 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "anlernmodus": "config",
     "sprachausgabe": "config",
     "solarmittag": "sun",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "routing tabelle": "diagnostic",
+    "nachbartabelle": "diagnostic",
+    "geraeteinterview": "diagnostic",
+    "endpunkte": "diagnostic",
+    "neighbor table": "diagnostic",
+    "pairing status": "diagnostic",
+    "dimmkurve": "config",
+    "einschaltstufe": "config",
+    "schaltrichtung": "config",
+    "drehrichtung": "config",
+    "wippenmodus": "config",
+    "dimmgeschwindigkeit": "config",
+    "relaismodus": "config",
+    "ausschaltverhalten": "config",
+    "eingangskonfiguration": "config",
+    "taster modus": "config",
+    "sonnenautomatik": "sun",
 
 }
 
