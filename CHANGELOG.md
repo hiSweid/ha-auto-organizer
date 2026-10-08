@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.25] - 2026-10-08
+
+### Added
+- 138 additional vocabulary entries (diagnostic, config, sun themes, plus
+  ZHA/Zigbee2MQTT/Matter device-ecosystem and brand terms across several
+  domains) and 119 icon backfills, collision-checked against the existing
+  keyword set.
+
 ## [0.11.24] - 2026-10-06
 
 ### Added
