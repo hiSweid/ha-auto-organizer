@@ -14,7 +14,7 @@ Automatically assigns [Labels](https://www.home-assistant.io/docs/organizing/lab
 - 🎯 Restrict to chosen label themes; exclude by domain, entity, or glob pattern
 - 🧪 Dry-run mode + `preview` service — see changes before writing anything
 - ⏱️ Runs on startup, on an interval, and auto-labels new entities
-- 🌍 German (default) / English
+- 🌍 German (default) / English / Danish
 
 ## Installation
 
