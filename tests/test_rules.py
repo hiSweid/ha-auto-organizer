@@ -11,6 +11,10 @@ COMPONENT = Path(__file__).resolve().parents[1] / "custom_components" / "auto_or
 sys.path.insert(0, str(COMPONENT))
 
 import rules  # noqa: E402
+from localization import (  # noqa: E402
+    available_translation_languages,
+    runtime_new_label_marker,
+)
 from rules import (  # noqa: E402
     OrganizerOptions,
     affected_count,
@@ -149,9 +153,28 @@ def test_english_language():
     assert names(entry, opts) == ["Temperature"]
 
 
-def test_unsupported_language_falls_back_to_german():
+def test_danish_language_uses_english_label_names():
+    opts = OrganizerOptions(language="da")
+    entry = FakeEntry("sensor.outdoor", original_device_class="temperature")
+    assert names(entry, opts) == ["Temperature"]
+
+
+def test_unsupported_language_falls_back_to_english():
     opts = OrganizerOptions(language="fr")
-    assert names(FakeEntry("light.k"), opts) == ["Beleuchtung"]
+    assert names(FakeEntry("light.k"), opts) == ["Lights"]
+
+
+def test_runtime_marker_comes_from_translation_files():
+    assert runtime_new_label_marker("en") == "new"
+    assert runtime_new_label_marker("de") == "neu"
+    assert runtime_new_label_marker("da") == "ny"
+
+
+def test_translation_languages_are_discovered_from_files():
+    langs = available_translation_languages()
+    assert "en" in langs
+    assert "de" in langs
+    assert "da" in langs
 
 
 def test_language_region_code_normalized():

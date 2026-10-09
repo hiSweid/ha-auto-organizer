@@ -26,7 +26,7 @@
           "enable_area": "Label für den Bereich jeder Entität hinzufügen",
           "enable_floor": "Label für die Etage jeder Entität hinzufügen",
           "skip_categories": "Diagnose-/Konfig-Entitäten überspringen",
-          "language": "Label-Sprache (auto/de/en)",
+          "language": "Label-Sprache (auto oder verfügbare Übersetzung)",
           "max_labels": "Maximale Labels pro Entität",
           "auto_label_new": "Neu hinzugefügte Entitäten automatisch labeln",
           "run_on_startup": "Einmal beim Start von Home Assistant ausführen",
@@ -117,6 +117,9 @@
       "title": "Keine Bereiche definiert",
       "description": "Bereich-/Etagen-Labeln ist aktiv, aber Home Assistant hat keine Bereiche. Lege Bereiche an oder deaktiviere die Optionen."
     }
+  },
+  "runtime": {
+    "new_label_marker": "neu"
   },
   "services": {
     "run": {
