@@ -58,7 +58,7 @@ Under the integration's *Configure* button:
 | Auto-suggest entity icons | off | Fill in a specific icon where none is set |
 | Area / floor labels | off | Add area/floor as labels too |
 | Skip diagnostic/config | on | Keep the domain/keyword engine off helper entities; they still get a generic Diagnose/Konfiguration label instead of none |
-| Label language | auto | `auto` / `de` / `en` |
+| Label language | auto | `auto` / `de` / `en` / `da` |
 | Max labels per entity | 3 | 1–10 |
 | Auto-label new entities | on | Debounced, on entity creation |
 | Run on startup / interval | off / 0 | Automatic runs |
