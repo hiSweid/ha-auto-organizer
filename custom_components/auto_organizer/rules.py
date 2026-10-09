@@ -4,8 +4,8 @@ The ruleset is intentionally pure data so it can be extended, unit-tested and
 later made configurable without touching the engine in ``organizer.py``.
 
 Labels are referenced by a stable *key* (e.g. ``"lights"``).  A key maps to a
-color, an ``mdi:`` icon and a per-language display name.  Only German (``de``)
-and English (``en``) are supported for now; German is the default.
+color, an ``mdi:`` icon and a per-language display name.  German (``de``) and
+English (``en``) are the built-in label vocabularies.
 """
 
 from __future__ import annotations
@@ -15,7 +15,7 @@ import re
 from dataclasses import dataclass, field
 from typing import Final, Protocol, TypedDict
 
-# Supported UI languages. German is the default, English the fallback.
+# Supported label vocabularies with dedicated names.
 SUPPORTED_LANGUAGES: Final = ("de", "en")
 DEFAULT_LANGUAGE: Final = "de"
 
@@ -72072,10 +72072,8 @@ INTEGRATION_LABELS: Final[dict[str, str]] = {
 
 
 def resolve_language(language: str | None) -> str:
-    """Return a supported language code, falling back to the default."""
-    if language and language.split("-", 1)[0] in SUPPORTED_LANGUAGES:
-        return language.split("-", 1)[0]
-    return DEFAULT_LANGUAGE
+    """Normalize a language code to its base form (e.g. en-US -> en)."""
+    return language.split("-", 1)[0] if language else DEFAULT_LANGUAGE
 
 
 def _normalize(text: str) -> str:
@@ -72310,7 +72308,7 @@ def label_spec(key: str, language: str = DEFAULT_LANGUAGE) -> LabelSpec:
     """Resolve a label key into a localized :class:`LabelSpec`."""
     ld = LABELS[key]
     lang = resolve_language(language)
-    name = ld["names"].get(lang) or ld["names"][DEFAULT_LANGUAGE]
+    name = ld["names"].get(lang) or ld["names"].get("en") or ld["names"][DEFAULT_LANGUAGE]
     return {"name": name, "color": ld["color"], "icon": ld["icon"]}
 
 

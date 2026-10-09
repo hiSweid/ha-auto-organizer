@@ -26,7 +26,7 @@
           "enable_area": "Add a label for each entity's area",
           "enable_floor": "Add a label for each entity's floor",
           "skip_categories": "Skip diagnostic/config entities",
-          "language": "Label language (auto/de/en)",
+          "language": "Label language (auto or available translation)",
           "max_labels": "Maximum labels per entity",
           "auto_label_new": "Auto-label newly added entities",
           "run_on_startup": "Run once on Home Assistant start",
@@ -117,6 +117,9 @@
       "title": "No areas defined",
       "description": "Area/floor labeling is enabled but Home Assistant has no areas. Create areas, or turn off the area/floor options."
     }
+  },
+  "runtime": {
+    "new_label_marker": "new"
   },
   "services": {
     "run": {
