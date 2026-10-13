@@ -834,7 +834,10 @@ def test_switch_and_outlet_synonyms():
 
 def test_tv_synonym_no_socket_false_positive():
     assert names(FakeEntry("sensor.tv_wohnzimmer")) == ["Medien"]
-    assert names(FakeEntry("sensor.websocket_status")) == []
+    # "websocket status" is now its own diagnostic keyword (added by a vocab
+    # batch) — the point of this test is that "tv" inside "websocket" never
+    # falsely matches "Medien", which still holds.
+    assert names(FakeEntry("sensor.websocket_status")) == ["Diagnose"]
     assert names(FakeEntry("sensor.basket_count")) == []
 
 
