@@ -83226,6 +83226,7 @@ def test_batch_landroid_app():
 
 def test_batch_sperrzone_maeher():
     assert _has_label("sensor.sperrzone_maeher", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.sperrzone_maeher"), OrganizerOptions()) == "mdi:map-marker-radius"
 
 
 def test_batch_spot_mowing():
@@ -83846,6 +83847,7 @@ def test_batch_irrigation_system():
 
 def test_batch_gartenpflanze():
     assert _has_label("sensor.gartenpflanze", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenpflanze"), OrganizerOptions()) == "mdi:sprout"
 
 
 def test_batch_gartenzwerg():
@@ -83862,6 +83864,7 @@ def test_batch_potting_shed():
 
 def test_batch_gartenduengung():
     assert _has_label("sensor.gartenduengung", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenduengung"), OrganizerOptions()) == "mdi:sprout-outline"
 
 
 def test_batch_growlight():
@@ -83882,6 +83885,7 @@ def test_batch_schattennetz():
 
 def test_batch_steingarten():
     assert _has_label("sensor.steingarten", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.steingarten"), OrganizerOptions()) == "mdi:terrain"
 
 
 def test_batch_birdbath():
@@ -84502,6 +84506,7 @@ def test_batch_satellitenposition_maeher():
 
 def test_batch_kabelloses_maehen():
     assert _has_label("sensor.kabelloses_maehen", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.kabelloses_maehen"), OrganizerOptions()) == "mdi:crosshairs-gps"
 
 
 def test_batch_yarbo():
@@ -85141,10 +85146,12 @@ def test_batch_maehhistorie():
 
 def test_batch_antriebsraeder_maeher():
     assert _has_label("sensor.antriebsraeder_maeher", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.antriebsraeder_maeher"), OrganizerOptions()) == "mdi:tire"
 
 
 def test_batch_traktion_maeher():
     assert _has_label("sensor.traktion_maeher", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.traktion_maeher"), OrganizerOptions()) == "mdi:car-traction-control"
 
 
 def test_batch_hinderniskarte_maeher():
@@ -85246,6 +85253,7 @@ def test_batch_maehroboter_unterstand():
 
 def test_batch_return_to_dock_mower():
     assert _has_label("sensor.return_to_dock_mower", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.return_to_dock_mower"), OrganizerOptions()) == "mdi:home-import-outline"
 
 
 def test_batch_fernsteuerung_maehroboter():
@@ -85805,6 +85813,7 @@ def test_batch_erdbeben():
 
 def test_batch_leise_modus_maeher():
     assert _has_label("sensor.leise_modus_maeher", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.leise_modus_maeher"), OrganizerOptions()) == "mdi:volume-low"
 
 
 def test_batch_notstopp_maeher():
@@ -85822,6 +85831,7 @@ def test_batch_hebeschutz_maeher():
 
 def test_batch_individualzone_maeher():
     assert _has_label("sensor.individualzone_maeher", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.individualzone_maeher"), OrganizerOptions()) == "mdi:map-marker-radius-outline"
 
 
 def test_batch_mehrflaechenmaehen():
@@ -85830,6 +85840,7 @@ def test_batch_mehrflaechenmaehen():
 
 def test_batch_satellitenkorrektur_maeher():
     assert _has_label("sensor.satellitenkorrektur_maeher", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.satellitenkorrektur_maeher"), OrganizerOptions()) == "mdi:satellite-variant"
 
 
 def test_batch_maeherwarnung():
@@ -85968,6 +85979,7 @@ def test_batch_maehzeitfenster():
 
 def test_batch_nachtmodus_maeher():
     assert _has_label("sensor.nachtmodus_maeher", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.nachtmodus_maeher"), OrganizerOptions()) == "mdi:weather-night"
 
 
 def test_batch_wochenplan_maehroboter():
@@ -87247,6 +87259,7 @@ def test_batch_pizzastein():
 
 def test_batch_slush_maschine():
     assert _has_label("sensor.slush_maschine", "appliances")
+    assert suggest_entity_icon(_FakeEntry("sensor.slush_maschine"), OrganizerOptions()) == "mdi:blender"
 
 
 def test_batch_ariston():
@@ -87449,6 +87462,7 @@ def test_batch_silabs_multiprotocol():
 
 def test_batch_reinigungsbuerste_maehroboter():
     assert _has_label("sensor.reinigungsbuerste_maehroboter", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.reinigungsbuerste_maehroboter"), OrganizerOptions()) == "mdi:broom"
 
 
 def test_batch_pflegestation_maehroboter():
@@ -87933,6 +87947,7 @@ def test_batch_sonneneinfallswinkel():
 
 def test_batch_schattenwinkel():
     assert _has_label("sensor.schattenwinkel", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.schattenwinkel"), OrganizerOptions()) == "mdi:sun-angle-outline"
 
 
 def test_batch_schattenlaenge():
@@ -88575,6 +88590,7 @@ def test_batch_tagnachtgrenze():
 
 def test_batch_terminatorlinie():
     assert _has_label("sensor.terminatorlinie", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.terminatorlinie"), OrganizerOptions()) == "mdi:brightness-6"
 
 
 def test_batch_nachtbogen():
@@ -89109,14 +89125,17 @@ def test_batch_sonnenanalemma():
 
 def test_batch_ekliptik():
     assert _has_label("sensor.ekliptik", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.ekliptik"), OrganizerOptions()) == "mdi:orbit"
 
 
 def test_batch_ecliptic():
     assert _has_label("sensor.ecliptic", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.ecliptic"), OrganizerOptions()) == "mdi:orbit"
 
 
 def test_batch_zeitgleichung():
     assert _has_label("sensor.zeitgleichung", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.zeitgleichung"), OrganizerOptions()) == "mdi:sun-clock-outline"
 
 
 def test_batch_equation_of_time():
@@ -89125,6 +89144,7 @@ def test_batch_equation_of_time():
 
 def test_batch_sonnenzeit():
     assert _has_label("sensor.sonnenzeit", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenzeit"), OrganizerOptions()) == "mdi:sun-clock"
 
 
 def test_batch_sonnenexposition():
@@ -89611,6 +89631,7 @@ def test_batch_sonneneinfallsrichtung():
 
 def test_batch_sonnenkataster():
     assert _has_label("sensor.sonnenkataster", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenkataster"), OrganizerOptions()) == "mdi:solar-panel-large"
 
 
 def test_batch_sonnenstandsberechnung():
@@ -90354,6 +90375,7 @@ def test_batch_stundenwinkel():
 
 def test_batch_zweiachsnachfuehrung():
     assert _has_label("sensor.zweiachsnachfuehrung", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.zweiachsnachfuehrung"), OrganizerOptions()) == "mdi:sun-compass"
 
 
 def test_batch_einachsnachfuehrung():
@@ -91863,6 +91885,7 @@ def test_batch_tagbogenlaenge():
 
 def test_batch_sonnenkonstante():
     assert _has_label("sensor.sonnenkonstante", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenkonstante"), OrganizerOptions()) == "mdi:solar-power"
 
 
 def test_batch_sonnenbahnneigung():
@@ -91931,10 +91954,12 @@ def test_batch_solarkonstante():
 
 def test_batch_fruehlingsanfang():
     assert _has_label("sensor.fruehlingsanfang", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.fruehlingsanfang"), OrganizerOptions()) == "mdi:flower-outline"
 
 
 def test_batch_herbstanfang():
     assert _has_label("sensor.herbstanfang", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.herbstanfang"), OrganizerOptions()) == "mdi:leaf-maple"
 
 
 def test_batch_sommeranfang():
@@ -96012,6 +96037,7 @@ def test_batch_shutdown_delay():
 
 def test_batch_maintenance_interval():
     assert _has_label("sensor.maintenance_interval", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.maintenance_interval"), OrganizerOptions()) == "mdi:wrench-clock-outline"
 
 
 def test_batch_service_interval():
@@ -96038,6 +96064,7 @@ def test_batch_detection_threshold():
 
 def test_batch_backoff_delay():
     assert _has_label("sensor.backoff_delay", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.backoff_delay"), OrganizerOptions()) == "mdi:timer-refresh-outline"
 
 
 def test_batch_retry_delay():
@@ -96058,6 +96085,7 @@ def test_batch_wakeup_delay():
 
 def test_batch_sleep_delay():
     assert _has_label("sensor.sleep_delay", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.sleep_delay"), OrganizerOptions()) == "mdi:sleep"
 
 
 def test_batch_standby_delay():
@@ -96067,6 +96095,7 @@ def test_batch_standby_delay():
 
 def test_batch_lockout_duration():
     assert _has_label("sensor.lockout_duration", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.lockout_duration"), OrganizerOptions()) == "mdi:timer-lock-outline"
 
 
 def test_batch_drehzahlstufe():
@@ -96722,6 +96751,7 @@ def test_batch_fernwartungszugriff():
 
 def test_batch_benachrichtigungskanal():
     assert _has_label("sensor.benachrichtigungskanal", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.benachrichtigungskanal"), OrganizerOptions()) == "mdi:message-badge-outline"
 
 
 def test_batch_webhook_url():
@@ -98096,6 +98126,7 @@ def test_batch_neighbor_table():
 
 def test_batch_pairing_status():
     assert _has_label("sensor.pairing_status", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.pairing_status"), OrganizerOptions()) == "mdi:bluetooth-connect"
 
 
 def test_batch_dimmkurve():
@@ -98162,6 +98193,7 @@ def test_batch_interruptzaehler():
 
 def test_batch_kerndump():
     assert _has_label("sensor.kerndump", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.kerndump"), OrganizerOptions()) == "mdi:memory"
 
 
 def test_batch_fehlersignatur():
@@ -98289,6 +98321,7 @@ def test_batch_isolationsfehler():
 
 def test_batch_erdungswiderstand():
     assert _has_label("sensor.erdungswiderstand", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.erdungswiderstand"), OrganizerOptions()) == "mdi:resistor"
 
 
 def test_batch_kanalueberlappung():
@@ -98910,6 +98943,7 @@ def test_batch_revision_nummer():
 
 def test_batch_rebootursache():
     assert _has_label("sensor.rebootursache", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.rebootursache"), OrganizerOptions()) == "mdi:restart-alert"
 
 
 def test_batch_systemlog():
@@ -98959,6 +98993,7 @@ def test_batch_tastenfehler():
 
 def test_batch_transistorfehler():
     assert _has_label("sensor.transistorfehler", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.transistorfehler"), OrganizerOptions()) == "mdi:chip"
 
 
 def test_batch_justierfehler():
@@ -101264,6 +101299,7 @@ def test_batch_bitfehlerrate():
 
 def test_batch_supportende():
     assert _has_label("sensor.supportende", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.supportende"), OrganizerOptions()) == "mdi:calendar-end"
 
 
 def test_batch_bootpartition():
@@ -101465,6 +101501,7 @@ def test_batch_profilwechsel():
 
 def test_batch_gruppenzuordnung():
     assert _has_label("sensor.gruppenzuordnung", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.gruppenzuordnung"), OrganizerOptions()) == "mdi:home-group"
 
 
 def test_batch_raumzuordnung():
@@ -101496,6 +101533,7 @@ def test_batch_maxwiederholungen():
 
 def test_batch_tokenablauf():
     assert _has_label("sensor.tokenablauf", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.tokenablauf"), OrganizerOptions()) == "mdi:lock-clock"
 
 
 def test_batch_feinabstimmung():
@@ -102026,6 +102064,7 @@ def test_batch_displaydimmung():
 
 def test_batch_fadezeit():
     assert _has_label("sensor.fadezeit", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.fadezeit"), OrganizerOptions()) == "mdi:transition"
 
 
 def test_batch_rampenzeit():
@@ -102609,10 +102648,12 @@ def test_batch_serverantwortzeit():
 
 def test_batch_cloudverbindungsstatus():
     assert _has_label("sensor.cloudverbindungsstatus", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.cloudverbindungsstatus"), OrganizerOptions()) == "mdi:cloud-check"
 
 
 def test_batch_koppelversuche():
     assert _has_label("sensor.koppelversuche", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.koppelversuche"), OrganizerOptions()) == "mdi:link-variant"
 
 
 def test_batch_modbus_fehlercode():
@@ -102784,3 +102825,570 @@ def test_batch_gesichtssauna():
 def test_batch_eskalationskette():
     assert _has_label("sensor.eskalationskette", "automations")
     assert suggest_entity_icon(_FakeEntry("sensor.eskalationskette"), OrganizerOptions()) == "mdi:link-variant"
+
+
+def test_batch_terminator():
+    assert _has_label("sensor.terminator", "sun")
+
+
+def test_batch_tag_nacht_grenze():
+    assert _has_label("sensor.tag_nacht_grenze", "sun")
+
+
+def test_batch_schattengrenze():
+    assert _has_label("sensor.schattengrenze", "sun")
+
+
+def test_batch_polartagende():
+    assert _has_label("sensor.polartagende", "sun")
+
+
+def test_batch_analemma():
+    assert _has_label("sensor.analemma", "sun")
+
+
+def test_batch_clearsky_index():
+    assert _has_label("sensor.clearsky_index", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.clearsky_index"), OrganizerOptions()) == "mdi:weather-sunny"
+
+
+def test_batch_sun_hour_angle():
+    assert _has_label("sensor.sun_hour_angle", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.sun_hour_angle"), OrganizerOptions()) == "mdi:sun-angle"
+
+
+def test_batch_obliquity():
+    assert _has_label("sensor.obliquity", "sun")
+
+
+def test_batch_declination_angle():
+    assert _has_label("sensor.declination_angle", "sun")
+
+
+def test_batch_sun_intensity_index():
+    assert _has_label("sensor.sun_intensity_index", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.sun_intensity_index"), OrganizerOptions()) == "mdi:weather-sunny-alert"
+
+
+def test_batch_sun_strength():
+    assert _has_label("sensor.sun_strength", "sun")
+
+
+def test_batch_hoehenwinkel():
+    assert _has_label("sensor.hoehenwinkel", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.hoehenwinkel"), OrganizerOptions()) == "mdi:sun-angle"
+
+
+def test_batch_azimutwinkel():
+    assert _has_label("sensor.azimutwinkel", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.azimutwinkel"), OrganizerOptions()) == "mdi:sun-compass"
+
+
+def test_batch_sonnenhoehenmaximum():
+    assert _has_label("sensor.sonnenhoehenmaximum", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenhoehenmaximum"), OrganizerOptions()) == "mdi:sun-angle"
+
+
+def test_batch_sonnenhoehenminimum():
+    assert _has_label("sensor.sonnenhoehenminimum", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenhoehenminimum"), OrganizerOptions()) == "mdi:sun-angle"
+
+
+def test_batch_polarnachtbeginn():
+    assert _has_label("sensor.polarnachtbeginn", "sun")
+
+
+def test_batch_abenddaemmerungsende():
+    assert _has_label("sensor.abenddaemmerungsende", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.abenddaemmerungsende"), OrganizerOptions()) == "mdi:weather-sunset-down"
+
+
+def test_batch_morgendaemmerungsbeginn():
+    assert _has_label("sensor.morgendaemmerungsbeginn", "sun")
+
+
+def test_batch_sonnenstandsverlauf():
+    assert _has_label("sensor.sonnenstandsverlauf", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenstandsverlauf"), OrganizerOptions()) == "mdi:sun-clock"
+
+
+def test_batch_sonnenscheinklasse():
+    assert _has_label("sensor.sonnenscheinklasse", "sun")
+
+
+def test_batch_diffuse_horizontal_irradiance():
+    assert _has_label("sensor.diffuse_horizontal_irradiance", "sun")
+
+
+def test_batch_zenith_angle():
+    assert _has_label("sensor.zenith_angle", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.zenith_angle"), OrganizerOptions()) == "mdi:sun-angle"
+
+
+def test_batch_solar_time_offset():
+    assert _has_label("sensor.solar_time_offset", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.solar_time_offset"), OrganizerOptions()) == "mdi:sun-clock"
+
+
+def test_batch_daylight_fraction():
+    assert _has_label("sensor.daylight_fraction", "sun")
+
+
+def test_batch_daylight_percentage():
+    assert _has_label("sensor.daylight_percentage", "sun")
+
+
+def test_batch_sun_safety_index():
+    assert _has_label("sensor.sun_safety_index", "sun")
+
+
+def test_batch_golden_hour_start():
+    assert _has_label("sensor.golden_hour_start", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.golden_hour_start"), OrganizerOptions()) == "mdi:weather-sunset"
+
+
+def test_batch_golden_hour_end():
+    assert _has_label("sensor.golden_hour_end", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.golden_hour_end"), OrganizerOptions()) == "mdi:weather-sunset"
+
+
+def test_batch_blue_hour_start():
+    assert _has_label("sensor.blue_hour_start", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.blue_hour_start"), OrganizerOptions()) == "mdi:weather-sunset-down"
+
+
+def test_batch_blue_hour_end():
+    assert _has_label("sensor.blue_hour_end", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.blue_hour_end"), OrganizerOptions()) == "mdi:weather-sunset-down"
+
+
+def test_batch_sun_glare_risk():
+    assert _has_label("sensor.sun_glare_risk", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.sun_glare_risk"), OrganizerOptions()) == "mdi:weather-sunny-alert"
+
+
+def test_batch_sun_glare_index():
+    assert _has_label("sensor.sun_glare_index", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.sun_glare_index"), OrganizerOptions()) == "mdi:weather-sunny-alert"
+
+
+def test_batch_pollintervall():
+    assert _has_label("sensor.pollintervall", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.pollintervall"), OrganizerOptions()) == "mdi:timer-sync"
+
+
+def test_batch_offsetwert():
+    assert _has_label("sensor.offsetwert", "config")
+
+
+def test_batch_korrekturwert():
+    assert _has_label("sensor.korrekturwert", "config")
+
+
+def test_batch_werkszuruecksetzung():
+    assert _has_label("sensor.werkszuruecksetzung", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.werkszuruecksetzung"), OrganizerOptions()) == "mdi:backup-restore"
+
+
+def test_batch_standorteinstellung():
+    assert _has_label("sensor.standorteinstellung", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.standorteinstellung"), OrganizerOptions()) == "mdi:map-marker"
+
+
+def test_batch_nullabgleich():
+    assert _has_label("sensor.nullabgleich", "config")
+
+
+def test_batch_referenzpunkt():
+    assert _has_label("sensor.referenzpunkt", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.referenzpunkt"), OrganizerOptions()) == "mdi:crosshairs"
+
+
+def test_batch_ansprechverhalten():
+    assert _has_label("sensor.ansprechverhalten", "config")
+
+
+def test_batch_einschaltschwelle():
+    assert _has_label("sensor.einschaltschwelle", "config")
+
+
+def test_batch_ausschaltschwelle():
+    assert _has_label("sensor.ausschaltschwelle", "config")
+
+
+def test_batch_threshold_value():
+    assert _has_label("sensor.threshold_value", "config")
+
+
+def test_batch_report_interval():
+    assert _has_label("sensor.report_interval", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.report_interval"), OrganizerOptions()) == "mdi:timer-sync"
+
+
+def test_batch_backoff_interval():
+    assert _has_label("sensor.backoff_interval", "config")
+
+
+def test_batch_factory_default():
+    assert _has_label("sensor.factory_default", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.factory_default"), OrganizerOptions()) == "mdi:factory"
+
+
+def test_batch_reset_button():
+    assert _has_label("sensor.reset_button", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.reset_button"), OrganizerOptions()) == "mdi:restart"
+
+
+def test_batch_restore_defaults():
+    assert _has_label("sensor.restore_defaults", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.restore_defaults"), OrganizerOptions()) == "mdi:backup-restore"
+
+
+def test_batch_calibration_value():
+    assert _has_label("sensor.calibration_value", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.calibration_value"), OrganizerOptions()) == "mdi:tune"
+
+
+def test_batch_correction_factor():
+    assert _has_label("sensor.correction_factor", "config")
+
+
+def test_batch_alert_threshold():
+    assert _has_label("sensor.alert_threshold", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.alert_threshold"), OrganizerOptions()) == "mdi:bell-alert"
+
+
+def test_batch_auto_calibration():
+    assert _has_label("sensor.auto_calibration", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.auto_calibration"), OrganizerOptions()) == "mdi:tune"
+
+
+def test_batch_zero_calibration():
+    assert _has_label("sensor.zero_calibration", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.zero_calibration"), OrganizerOptions()) == "mdi:tune"
+
+
+def test_batch_neustartverzoegerung():
+    assert _has_label("sensor.neustartverzoegerung", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.neustartverzoegerung"), OrganizerOptions()) == "mdi:restart"
+
+
+def test_batch_bootverzoegerung():
+    assert _has_label("sensor.bootverzoegerung", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.bootverzoegerung"), OrganizerOptions()) == "mdi:restart"
+
+
+def test_batch_erinnerungsintervall():
+    assert _has_label("sensor.erinnerungsintervall", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.erinnerungsintervall"), OrganizerOptions()) == "mdi:bell-ring"
+
+
+def test_batch_filtererinnerung():
+    assert _has_label("sensor.filtererinnerung", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.filtererinnerung"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_batch_batteriewarnschwelle():
+    assert _has_label("sensor.batteriewarnschwelle", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.batteriewarnschwelle"), OrganizerOptions()) == "mdi:battery-alert"
+
+
+def test_batch_akkuwarnschwelle():
+    assert _has_label("sensor.akkuwarnschwelle", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.akkuwarnschwelle"), OrganizerOptions()) == "mdi:battery-alert"
+
+
+def test_batch_lichtschwelle():
+    assert _has_label("sensor.lichtschwelle", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtschwelle"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_batch_voralarmzeit():
+    assert _has_label("sensor.voralarmzeit", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.voralarmzeit"), OrganizerOptions()) == "mdi:clock-alert"
+
+
+def test_batch_nachlaufdauer():
+    assert _has_label("sensor.nachlaufdauer", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.nachlaufdauer"), OrganizerOptions()) == "mdi:progress-clock"
+
+
+def test_batch_update_interval():
+    assert _has_label("sensor.update_interval", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.update_interval"), OrganizerOptions()) == "mdi:update"
+
+
+def test_batch_cooldown_delay():
+    assert _has_label("sensor.cooldown_delay", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.cooldown_delay"), OrganizerOptions()) == "mdi:snowflake"
+
+
+def test_batch_reminder_interval():
+    assert _has_label("sensor.reminder_interval", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.reminder_interval"), OrganizerOptions()) == "mdi:bell-ring"
+
+
+def test_batch_notification_volume():
+    assert _has_label("sensor.notification_volume", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.notification_volume"), OrganizerOptions()) == "mdi:volume-high"
+
+
+def test_batch_display_brightness():
+    assert _has_label("sensor.display_brightness", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.display_brightness"), OrganizerOptions()) == "mdi:brightness-percent"
+
+
+def test_batch_maehhoehe():
+    assert _has_label("sensor.maehhoehe", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.maehhoehe"), OrganizerOptions()) == "mdi:mower"
+
+
+def test_batch_maehbreite():
+    assert _has_label("sensor.maehbreite", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.maehbreite"), OrganizerOptions()) == "mdi:mower"
+
+
+def test_batch_navimow_h800():
+    assert _has_label("sensor.navimow_h800", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.navimow_h800"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_husqvarna_450x():
+    assert _has_label("sensor.husqvarna_450x", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.husqvarna_450x"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_husqvarna_430x():
+    assert _has_label("sensor.husqvarna_430x", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.husqvarna_430x"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_robomow_rc304():
+    assert _has_label("sensor.robomow_rc304", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.robomow_rc304"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_doppelmesser_maeher():
+    assert _has_label("sensor.doppelmesser_maeher", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.doppelmesser_maeher"), OrganizerOptions()) == "mdi:mower"
+
+
+def test_batch_edelstahlmesser():
+    assert _has_label("sensor.edelstahlmesser", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.edelstahlmesser"), OrganizerOptions()) == "mdi:mower"
+
+
+def test_batch_geraetesperre_maeher():
+    assert _has_label("sensor.geraetesperre_maeher", "mower")
+
+
+def test_batch_satellitennavigation_maeher():
+    assert _has_label("sensor.satellitennavigation_maeher", "mower")
+
+
+def test_batch_rtk_maeher():
+    assert _has_label("sensor.rtk_maeher", "mower")
+
+
+def test_batch_stossensor():
+    assert _has_label("sensor.stossensor", "mower")
+
+
+def test_batch_kantenschnitt_maeher():
+    assert _has_label("sensor.kantenschnitt_maeher", "mower")
+
+
+def test_batch_winterschlaf_maeher():
+    assert _has_label("sensor.winterschlaf_maeher", "mower")
+
+
+def test_batch_geofence_maeher():
+    assert _has_label("sensor.geofence_maeher", "mower")
+
+
+def test_batch_frostschutz_maeher():
+    assert _has_label("sensor.frostschutz_maeher", "mower")
+
+
+def test_batch_schnittbreite():
+    assert _has_label("sensor.schnittbreite", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.schnittbreite"), OrganizerOptions()) == "mdi:ruler"
+
+
+def test_batch_ambrogio_l60_deluxe():
+    assert _has_label("sensor.ambrogio_l60_deluxe", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.ambrogio_l60_deluxe"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_worx_vision():
+    assert _has_label("sensor.worx_vision", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.worx_vision"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_landroid_m500():
+    assert _has_label("sensor.landroid_m500", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.landroid_m500"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_landroid_l2000():
+    assert _has_label("sensor.landroid_l2000", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.landroid_l2000"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_mulchmesser():
+    assert _has_label("sensor.mulchmesser", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.mulchmesser"), OrganizerOptions()) == "mdi:mower"
+
+
+def test_batch_hebesensor():
+    assert _has_label("sensor.hebesensor", "mower")
+
+
+def test_batch_pin_code_maeher():
+    assert _has_label("sensor.pin_code_maeher", "mower")
+
+
+def test_batch_maeherverriegelung():
+    assert _has_label("sensor.maeherverriegelung", "mower")
+
+
+def test_batch_maeherdiebstahl():
+    assert _has_label("sensor.maeherdiebstahl", "mower")
+
+
+def test_batch_maehroboterkamera():
+    assert _has_label("sensor.maehroboterkamera", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.maehroboterkamera"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_ultraschallsensor_maeher():
+    assert _has_label("sensor.ultraschallsensor_maeher", "mower")
+
+
+def test_batch_maehroboterapp():
+    assert _has_label("sensor.maehroboterapp", "mower")
+
+
+def test_batch_wetterzeitplan_maeher():
+    assert _has_label("sensor.wetterzeitplan_maeher", "mower")
+
+
+def test_batch_geraeuschpegel_maeher():
+    assert _has_label("sensor.geraeuschpegel_maeher", "mower")
+
+
+def test_batch_ladezeit_maeher():
+    assert _has_label("sensor.ladezeit_maeher", "mower")
+
+
+def test_batch_solarladung_maeher():
+    assert _has_label("sensor.solarladung_maeher", "mower")
+
+
+def test_batch_maeherkalibrierung():
+    assert _has_label("sensor.maeherkalibrierung", "mower")
+
+
+def test_batch_ring_peephole_cam():
+    assert _has_label("sensor.ring_peephole_cam", "cameras")
+
+
+def test_batch_ring_car_cam():
+    assert _has_label("sensor.ring_car_cam", "cameras")
+
+
+def test_batch_innogy_smart_home():
+    assert _has_label("sensor.innogy_smart_home", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.innogy_smart_home"), OrganizerOptions()) == "mdi:router-wireless"
+
+
+def test_batch_magenta_smarthome():
+    assert _has_label("sensor.magenta_smarthome", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.magenta_smarthome"), OrganizerOptions()) == "mdi:hub-outline"
+
+
+def test_batch_lupus_panel():
+    assert _has_label("sensor.lupus_panel", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.lupus_panel"), OrganizerOptions()) == "mdi:shield-lock"
+
+
+def test_batch_qivicon():
+    assert _has_label("sensor.qivicon", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.qivicon"), OrganizerOptions()) == "mdi:router-wireless"
+
+
+def test_batch_conrad_connect():
+    assert _has_label("sensor.conrad_connect", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.conrad_connect"), OrganizerOptions()) == "mdi:router-wireless"
+
+
+def test_batch_sommer_antriebstechnik():
+    assert _has_label("sensor.sommer_antriebstechnik", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.sommer_antriebstechnik"), OrganizerOptions()) == "mdi:garage"
+
+
+def test_batch_matter_closure():
+    assert _has_label("sensor.matter_closure", "covers")
+
+
+def test_batch_jung_smart_home():
+    assert _has_label("sensor.jung_smart_home", "automations")
+
+
+def test_batch_lupus_home_automation():
+    assert _has_label("sensor.lupus_home_automation", "security")
+
+
+def test_batch_eve_systems_outlet():
+    assert _has_label("sensor.eve_systems_outlet", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.eve_systems_outlet"), OrganizerOptions()) == "mdi:power-socket-de"
+
+
+def test_batch_ikea_tradfri_rollo():
+    assert _has_label("sensor.ikea_tradfri_rollo", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.ikea_tradfri_rollo"), OrganizerOptions()) == "mdi:roller-shade"
+
+
+def test_batch_ikea_tradfri_gardine():
+    assert _has_label("sensor.ikea_tradfri_gardine", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.ikea_tradfri_gardine"), OrganizerOptions()) == "mdi:curtains"
+
+
+def test_batch_homematic_ip_tuer_fenster_kontakt():
+    assert _has_label("sensor.homematic_ip_tuer_fenster_kontakt", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.homematic_ip_tuer_fenster_kontakt"), OrganizerOptions()) == "mdi:door-closed"
+
+
+def test_batch_fibaro_home_center():
+    assert _has_label("sensor.fibaro_home_center", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.fibaro_home_center"), OrganizerOptions()) == "mdi:router-wireless"
+
+
+def test_batch_august_view_doorbell():
+    assert _has_label("sensor.august_view_doorbell", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.august_view_doorbell"), OrganizerOptions()) == "mdi:doorbell-video"
+
+
+def test_batch_ecovacs_omni():
+    assert _has_label("sensor.ecovacs_omni", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.ecovacs_omni"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_tado_water_heater_control():
+    assert _has_label("sensor.tado_water_heater_control", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.tado_water_heater_control"), OrganizerOptions()) == "mdi:water-boiler"
+
+
+def test_batch_netatmo_smart_valve():
+    assert _has_label("sensor.netatmo_smart_valve", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.netatmo_smart_valve"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_batch_ecovacs_airbot():
+    assert _has_label("sensor.ecovacs_airbot", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.ecovacs_airbot"), OrganizerOptions()) == "mdi:air-purifier"
+
+
+def test_batch_reolink_floodlight():
+    assert _has_label("sensor.reolink_floodlight", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.reolink_floodlight"), OrganizerOptions()) == "mdi:light-flood-down"
