@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.27] - 2026-10-19
+
+### Added
+- 2899 additional vocabulary entries and 2389 icon entries, accumulated over
+  24 small daily batches since 0.11.26 (sun, config, mower, diagnostic, garden,
+  humidity, waste themes, plus ZHA/Zigbee2MQTT/Matter device-ecosystem and
+  brand terms and icon backfills across several domains), collision-checked
+  against the existing keyword set.
+
 ## [0.11.26] - 2026-10-13
 
 ### Added
