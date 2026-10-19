@@ -118492,3 +118492,490 @@ def test_batch_ph_wert_wasser():
 def test_batch_fisheye_kamera():
     assert _has_label("sensor.fisheye_kamera", "cameras")
     assert suggest_entity_icon(_FakeEntry("sensor.fisheye_kamera"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_batch_enthaertung():
+    assert _has_label("sensor.enthaertung", "water")
+
+
+def test_batch_spuelstation():
+    assert _has_label("sensor.spuelstation", "water")
+
+
+def test_batch_salzverbrauch_enthaerter():
+    assert _has_label("sensor.salzverbrauch_enthaerter", "water")
+
+
+def test_batch_restharte():
+    assert _has_label("sensor.restharte", "water")
+
+
+def test_batch_gesamtharte():
+    assert _has_label("sensor.gesamtharte", "water")
+    assert suggest_entity_icon(_FakeEntry("sensor.gesamtharte"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_batch_carbonathaerte():
+    assert _has_label("sensor.carbonathaerte", "water")
+
+
+def test_batch_wasserabfluss():
+    assert _has_label("sensor.wasserabfluss", "water")
+
+
+def test_batch_wassereinlass():
+    assert _has_label("sensor.wassereinlass", "water")
+
+
+def test_batch_wasserauslass():
+    assert _has_label("sensor.wasserauslass", "water")
+
+
+def test_batch_badewasserstand():
+    assert _has_label("sensor.badewasserstand", "water")
+
+
+def test_batch_rohrleitungsschutz():
+    assert _has_label("sensor.rohrleitungsschutz", "water")
+
+
+def test_batch_saugpumpe():
+    assert _has_label("sensor.saugpumpe", "water")
+
+
+def test_batch_dosiergeraet():
+    assert _has_label("sensor.dosiergeraet", "water")
+
+
+def test_batch_water_tank_level():
+    assert _has_label("sensor.water_tank_level", "water")
+
+
+def test_batch_water_supply():
+    assert _has_label("sensor.water_supply", "water")
+
+
+def test_batch_water_hose():
+    assert _has_label("sensor.water_hose", "water")
+
+
+def test_batch_sump_level():
+    assert _has_label("sensor.sump_level", "water")
+
+
+def test_batch_well_level():
+    assert _has_label("sensor.well_level", "water")
+
+
+def test_batch_schlagbrunnen():
+    assert _has_label("sensor.schlagbrunnen", "water")
+
+
+def test_batch_kondensatwasser():
+    assert _has_label("sensor.kondensatwasser", "water")
+
+
+def test_batch_wassersaeule():
+    assert _has_label("sensor.wassersaeule", "water")
+
+
+def test_batch_entkeimung():
+    assert _has_label("sensor.entkeimung", "water")
+
+
+def test_batch_trinkwasserhygiene():
+    assert _has_label("sensor.trinkwasserhygiene", "water")
+
+
+def test_batch_frischwasser():
+    assert _has_label("sensor.frischwasser", "water")
+    assert suggest_entity_icon(_FakeEntry("sensor.frischwasser"), OrganizerOptions()) == "mdi:water"
+
+
+def test_batch_gartenhahn():
+    assert _has_label("sensor.gartenhahn", "water")
+
+
+def test_batch_pool_chemistry():
+    assert _has_label("sensor.pool_chemistry", "water")
+
+
+def test_batch_duschwanne():
+    assert _has_label("sensor.duschwanne", "water")
+
+
+def test_batch_duschtasse():
+    assert _has_label("sensor.duschtasse", "water")
+
+
+def test_batch_wannenfuellung():
+    assert _has_label("sensor.wannenfuellung", "water")
+
+
+def test_batch_wannenueberlauf():
+    assert _has_label("sensor.wannenueberlauf", "water")
+
+
+def test_batch_badueberlauf():
+    assert _has_label("sensor.badueberlauf", "water")
+
+
+def test_batch_warmwasserverbrauch():
+    assert _has_label("sensor.warmwasserverbrauch", "water")
+
+
+def test_batch_hygienespueler():
+    assert _has_label("sensor.hygienespueler", "water")
+
+
+def test_batch_rueckstauschutz():
+    assert _has_label("sensor.rueckstauschutz", "water")
+
+
+def test_batch_fasspumpe():
+    assert _has_label("sensor.fasspumpe", "water")
+
+
+def test_batch_water_softener_salt():
+    assert _has_label("sensor.water_softener_salt", "water")
+
+
+def test_batch_water_hardness():
+    assert _has_label("sensor.water_hardness", "water")
+    assert suggest_entity_icon(_FakeEntry("sensor.water_hardness"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_batch_water_tap():
+    assert _has_label("sensor.water_tap", "water")
+    assert suggest_entity_icon(_FakeEntry("sensor.water_tap"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_batch_irrigation_pump():
+    assert _has_label("sensor.irrigation_pump", "water")
+
+
+def test_batch_cistern_level():
+    assert _has_label("sensor.cistern_level", "water")
+    assert suggest_entity_icon(_FakeEntry("sensor.cistern_level"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_batch_replace_battery():
+    assert _has_label("sensor.replace_battery", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.replace_battery"), OrganizerOptions()) == "mdi:battery-sync"
+
+
+def test_batch_lithium_zelle():
+    assert _has_label("sensor.lithium_zelle", "battery")
+
+
+def test_batch_battery_full():
+    assert _has_label("sensor.battery_full", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.battery_full"), OrganizerOptions()) == "mdi:battery-high"
+
+
+def test_batch_battery_change():
+    assert _has_label("sensor.battery_change", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.battery_change"), OrganizerOptions()) == "mdi:battery-sync"
+
+
+def test_batch_battery_indicator():
+    assert _has_label("sensor.battery_indicator", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.battery_indicator"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_batch_cr2032_batterie():
+    assert _has_label("sensor.cr2032_batterie", "battery")
+
+
+def test_batch_cr2450_batterie():
+    assert _has_label("sensor.cr2450_batterie", "battery")
+
+
+def test_batch_cr123a_batterie():
+    assert _has_label("sensor.cr123a_batterie", "battery")
+
+
+def test_batch_batterie_wechseln():
+    assert _has_label("sensor.batterie_wechseln", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.batterie_wechseln"), OrganizerOptions()) == "mdi:battery-sync"
+
+
+def test_batch_batterie_tauschen():
+    assert _has_label("sensor.batterie_tauschen", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.batterie_tauschen"), OrganizerOptions()) == "mdi:battery-sync"
+
+
+def test_batch_akku_zyklen():
+    assert _has_label("sensor.akku_zyklen", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.akku_zyklen"), OrganizerOptions()) == "mdi:battery-clock"
+
+
+def test_batch_akku_tauschen():
+    assert _has_label("sensor.akku_tauschen", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.akku_tauschen"), OrganizerOptions()) == "mdi:battery-sync"
+
+
+def test_batch_akku_zustand():
+    assert _has_label("sensor.akku_zustand", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.akku_zustand"), OrganizerOptions()) == "mdi:battery-heart-variant"
+
+
+def test_batch_battery_state_of_health():
+    assert _has_label("sensor.battery_state_of_health", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.battery_state_of_health"), OrganizerOptions()) == "mdi:battery-heart-variant"
+
+
+def test_batch_akkuladestand():
+    assert _has_label("sensor.akkuladestand", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.akkuladestand"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_batch_battery_sensor_low():
+    assert _has_label("sensor.battery_sensor_low", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.battery_sensor_low"), OrganizerOptions()) == "mdi:battery-low"
+
+
+def test_batch_akku_wechseln():
+    assert _has_label("sensor.akku_wechseln", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.akku_wechseln"), OrganizerOptions()) == "mdi:battery-sync"
+
+
+def test_batch_knopfzellenbatterie():
+    assert _has_label("sensor.knopfzellenbatterie", "battery")
+
+
+def test_batch_speicherladestand():
+    assert _has_label("sensor.speicherladestand", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.speicherladestand"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_batch_heimspeicher_soc():
+    assert _has_label("sensor.heimspeicher_soc", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.heimspeicher_soc"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_batch_kopfhoereranschluss():
+    assert _has_label("sensor.kopfhoereranschluss", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.kopfhoereranschluss"), OrganizerOptions()) == "mdi:headphones"
+
+
+def test_batch_titelwechsel():
+    assert _has_label("sensor.titelwechsel", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.titelwechsel"), OrganizerOptions()) == "mdi:skip-next"
+
+
+def test_batch_marshall_lautsprecher():
+    assert _has_label("sensor.marshall_lautsprecher", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.marshall_lautsprecher"), OrganizerOptions()) == "mdi:speaker"
+
+
+def test_batch_samsung_soundbar():
+    assert _has_label("sensor.samsung_soundbar", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.samsung_soundbar"), OrganizerOptions()) == "mdi:soundbar"
+
+
+def test_batch_lg_soundbar():
+    assert _has_label("sensor.lg_soundbar", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.lg_soundbar"), OrganizerOptions()) == "mdi:soundbar"
+
+
+def test_batch_tonausgabe_wechseln():
+    assert _has_label("sensor.tonausgabe_wechseln", "media")
+
+
+def test_batch_heimkino_system():
+    assert _has_label("sensor.heimkino_system", "media")
+
+
+def test_batch_heimkinoraum():
+    assert _has_label("sensor.heimkinoraum", "media")
+
+
+def test_batch_fernsehsessel():
+    assert _has_label("sensor.fernsehsessel", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.fernsehsessel"), OrganizerOptions()) == "mdi:sofa"
+
+
+def test_batch_tv_halterung():
+    assert _has_label("sensor.tv_halterung", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.tv_halterung"), OrganizerOptions()) == "mdi:television"
+
+
+def test_batch_einschlafmusik():
+    assert _has_label("sensor.einschlafmusik", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.einschlafmusik"), OrganizerOptions()) == "mdi:music"
+
+
+def test_batch_aufwachmusik():
+    assert _has_label("sensor.aufwachmusik", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.aufwachmusik"), OrganizerOptions()) == "mdi:music"
+
+
+def test_batch_studiomonitor():
+    assert _has_label("sensor.studiomonitor", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.studiomonitor"), OrganizerOptions()) == "mdi:speaker"
+
+
+def test_batch_stimmgeraet():
+    assert _has_label("sensor.stimmgeraet", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.stimmgeraet"), OrganizerOptions()) == "mdi:tune-vertical"
+
+
+def test_batch_mediencenter():
+    assert _has_label("sensor.mediencenter", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.mediencenter"), OrganizerOptions()) == "mdi:television-box"
+
+
+def test_batch_nachtmodus_audio():
+    assert _has_label("sensor.nachtmodus_audio", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.nachtmodus_audio"), OrganizerOptions()) == "mdi:volume-low"
+
+
+def test_batch_sleeptimer():
+    assert _has_label("sensor.sleeptimer", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.sleeptimer"), OrganizerOptions()) == "mdi:timer-sand"
+
+
+def test_batch_sprachassistent_lautsprecher():
+    assert _has_label("sensor.sprachassistent_lautsprecher", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.sprachassistent_lautsprecher"), OrganizerOptions()) == "mdi:speaker"
+
+
+def test_batch_plattenspieler_vorverstaerker():
+    assert _has_label("sensor.plattenspieler_vorverstaerker", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.plattenspieler_vorverstaerker"), OrganizerOptions()) == "mdi:amplifier"
+
+
+def test_batch_aktivlautsprecher_paar():
+    assert _has_label("sensor.aktivlautsprecher_paar", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.aktivlautsprecher_paar"), OrganizerOptions()) == "mdi:speaker-multiple"
+
+
+def test_batch_teufel_raumfeld():
+    assert _has_label("sensor.teufel_raumfeld", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.teufel_raumfeld"), OrganizerOptions()) == "mdi:speaker-wireless"
+
+
+def test_batch_bose_quietcomfort():
+    assert _has_label("sensor.bose_quietcomfort", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.bose_quietcomfort"), OrganizerOptions()) == "mdi:headphones"
+
+
+def test_batch_philips_hue_sync():
+    assert _has_label("sensor.philips_hue_sync", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.philips_hue_sync"), OrganizerOptions()) == "mdi:television-ambient-light"
+
+
+def test_batch_tv_ambilight():
+    assert _has_label("sensor.tv_ambilight", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.tv_ambilight"), OrganizerOptions()) == "mdi:television-ambient-light"
+
+
+def test_batch_optischer_eingang():
+    assert _has_label("sensor.optischer_eingang", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.optischer_eingang"), OrganizerOptions()) == "mdi:video-input-component"
+
+
+def test_batch_koaxial_eingang():
+    assert _has_label("sensor.koaxial_eingang", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.koaxial_eingang"), OrganizerOptions()) == "mdi:video-input-component"
+
+
+def test_batch_mediaplayer_ausgang():
+    assert _has_label("sensor.mediaplayer_ausgang", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.mediaplayer_ausgang"), OrganizerOptions()) == "mdi:video-input-hdmi"
+
+
+def test_batch_tv_stummschalten():
+    assert _has_label("sensor.tv_stummschalten", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.tv_stummschalten"), OrganizerOptions()) == "mdi:volume-off"
+
+
+def test_batch_sofa_fernseher():
+    assert _has_label("sensor.sofa_fernseher", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.sofa_fernseher"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_batch_tv_board():
+    assert _has_label("sensor.tv_board", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.tv_board"), OrganizerOptions()) == "mdi:television-box"
+
+
+def test_batch_badezimmerradio():
+    assert _has_label("sensor.badezimmerradio", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.badezimmerradio"), OrganizerOptions()) == "mdi:radio"
+
+
+def test_batch_kuechenradio():
+    assert _has_label("sensor.kuechenradio", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.kuechenradio"), OrganizerOptions()) == "mdi:radio"
+
+
+def test_batch_wecker_radio():
+    assert _has_label("sensor.wecker_radio", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.wecker_radio"), OrganizerOptions()) == "mdi:alarm"
+
+
+def test_batch_gitarrenverstaerker():
+    assert _has_label("sensor.gitarrenverstaerker", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.gitarrenverstaerker"), OrganizerOptions()) == "mdi:guitar-electric"
+
+
+def test_batch_keyboard_instrument():
+    assert _has_label("sensor.keyboard_instrument", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.keyboard_instrument"), OrganizerOptions()) == "mdi:piano"
+
+
+def test_batch_tv_wiedergabe_pausiert():
+    assert _has_label("sensor.tv_wiedergabe_pausiert", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.tv_wiedergabe_pausiert"), OrganizerOptions()) == "mdi:pause"
+
+
+def test_batch_tv_eingang_wechseln():
+    assert _has_label("sensor.tv_eingang_wechseln", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.tv_eingang_wechseln"), OrganizerOptions()) == "mdi:video-input-hdmi"
+
+
+def test_batch_shelly_plus_wall_display():
+    assert _has_label("sensor.shelly_plus_wall_display", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_plus_wall_display"), OrganizerOptions()) == "mdi:tablet-dashboard"
+
+
+def test_batch_aqara_mini_switch():
+    assert _has_label("sensor.aqara_mini_switch", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.aqara_mini_switch"), OrganizerOptions()) == "mdi:gesture-tap-button"
+
+
+def test_batch_aqara_n100():
+    assert _has_label("sensor.aqara_n100", "locks")
+    assert suggest_entity_icon(_FakeEntry("sensor.aqara_n100"), OrganizerOptions()) == "mdi:lock-smart"
+
+
+def test_batch_siegenia_aeroturbo():
+    assert _has_label("sensor.siegenia_aeroturbo", "air_quality")
+    assert suggest_entity_icon(_FakeEntry("sensor.siegenia_aeroturbo"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_batch_siegenia_drivereco():
+    assert _has_label("sensor.siegenia_drivereco", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.siegenia_drivereco"), OrganizerOptions()) == "mdi:window-open-variant"
+
+
+def test_batch_sonoff_mini_r4():
+    assert _has_label("sensor.sonoff_mini_r4", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonoff_mini_r4"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_batch_sonoff_ihost():
+    assert _has_label("sensor.sonoff_ihost", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonoff_ihost"), OrganizerOptions()) == "mdi:server"
+
+
+def test_batch_sonoff_4chpro():
+    assert _has_label("sensor.sonoff_4chpro", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonoff_4chpro"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_batch_sonoff_rfbridge():
+    assert _has_label("sensor.sonoff_rfbridge", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonoff_rfbridge"), OrganizerOptions()) == "mdi:bridge"
