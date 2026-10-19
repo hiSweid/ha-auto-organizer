@@ -39715,6 +39715,21 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "fan failure": "mdi:fan",
     "fan fault": "mdi:fan",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "battery replace": "mdi:battery-sync",
+    "bewegungsmelder flur": "mdi:motion-sensor",
+    "bewegungsaktivitaet": "mdi:motion-sensor",
+    "aussenbewegung": "mdi:motion-sensor",
+    "hofbewegung": "mdi:motion-sensor",
+    "bewegungskontakt": "mdi:motion-sensor",
+    "tierkamera": "mdi:cctv",
+    "kuechenkamera": "mdi:cctv",
+    "flurkamera": "mdi:cctv",
+    "ladezustand akku": "mdi:battery-charging",
+    "batterietausch": "mdi:battery-sync",
+    "batterieladestand": "mdi:battery-high",
+    "gartenbewegung": "mdi:motion-sensor",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -79589,6 +79604,22 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "fan housing": "fans",
     "fan failure": "fans",
     "fan fault": "fans",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "battery replace": "battery",
+    "bewegungsmelder flur": "motion",
+    "bewegungsaktivitaet": "motion",
+    "aussenbewegung": "motion",
+    "hofbewegung": "motion",
+    "bewegungskontakt": "motion",
+    "kinderzimmerkamera": "cameras",
+    "tierkamera": "cameras",
+    "kuechenkamera": "cameras",
+    "flurkamera": "cameras",
+    "ladezustand akku": "battery",
+    "batterietausch": "battery",
+    "batterieladestand": "battery",
+    "gartenbewegung": "motion",
 
 }
 

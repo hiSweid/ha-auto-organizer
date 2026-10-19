@@ -118363,3 +118363,72 @@ def test_batch_fan_failure():
 def test_batch_fan_fault():
     assert _has_label("sensor.fan_fault", "fans")
     assert suggest_entity_icon(_FakeEntry("sensor.fan_fault"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_batch_battery_replace():
+    assert _has_label("sensor.battery_replace", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.battery_replace"), OrganizerOptions()) == "mdi:battery-sync"
+
+
+def test_batch_bewegungsmelder_flur():
+    assert _has_label("sensor.bewegungsmelder_flur", "motion")
+    assert suggest_entity_icon(_FakeEntry("sensor.bewegungsmelder_flur"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_batch_bewegungsaktivitaet():
+    assert _has_label("sensor.bewegungsaktivitaet", "motion")
+    assert suggest_entity_icon(_FakeEntry("sensor.bewegungsaktivitaet"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_batch_aussenbewegung():
+    assert _has_label("sensor.aussenbewegung", "motion")
+    assert suggest_entity_icon(_FakeEntry("sensor.aussenbewegung"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_batch_hofbewegung():
+    assert _has_label("sensor.hofbewegung", "motion")
+    assert suggest_entity_icon(_FakeEntry("sensor.hofbewegung"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_batch_bewegungskontakt():
+    assert _has_label("sensor.bewegungskontakt", "motion")
+    assert suggest_entity_icon(_FakeEntry("sensor.bewegungskontakt"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_batch_kinderzimmerkamera():
+    assert _has_label("sensor.kinderzimmerkamera", "cameras")
+
+
+def test_batch_tierkamera():
+    assert _has_label("sensor.tierkamera", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.tierkamera"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_batch_kuechenkamera():
+    assert _has_label("sensor.kuechenkamera", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.kuechenkamera"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_batch_flurkamera():
+    assert _has_label("sensor.flurkamera", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.flurkamera"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_batch_ladezustand_akku():
+    assert _has_label("sensor.ladezustand_akku", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.ladezustand_akku"), OrganizerOptions()) == "mdi:battery-charging"
+
+
+def test_batch_batterietausch():
+    assert _has_label("sensor.batterietausch", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.batterietausch"), OrganizerOptions()) == "mdi:battery-sync"
+
+
+def test_batch_batterieladestand():
+    assert _has_label("sensor.batterieladestand", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.batterieladestand"), OrganizerOptions()) == "mdi:battery-high"
+
+
+def test_batch_gartenbewegung():
+    assert _has_label("sensor.gartenbewegung", "motion")
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenbewegung"), OrganizerOptions()) == "mdi:motion-sensor"
