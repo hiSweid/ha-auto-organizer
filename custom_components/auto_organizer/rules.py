@@ -39815,6 +39815,15 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "sonoff 4chpro": "mdi:toggle-switch",
     "sonoff rfbridge": "mdi:bridge",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "global radiation": "mdi:white-balance-sunny",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -79833,6 +79842,56 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "sonoff ihost": "network",
     "sonoff 4chpro": "switches",
     "sonoff rfbridge": "network",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "hue sml001": "motion",
+    "hue sml002": "motion",
+    "hue sml003": "motion",
+    "hue sml004": "motion",
+    "ikea vallhorn sensor": "motion",
+    "shelly motion 2": "motion",
+    "flur bewegung": "motion",
+    "treppe bewegung": "motion",
+    "keller bewegung": "motion",
+    "garage bewegung": "motion",
+    "apollo mtr": "motion",
+    "seeed mr60": "motion",
+    "sen0395": "motion",
+    "hlk ld2412": "motion",
+    "ld1125": "motion",
+    "rtcgq12lm": "motion",
+    "rtcgq14lm": "motion",
+    "lumi motion": "motion",
+    "dj1 vibration": "motion",
+    "bwm motion": "motion",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "g4 pro": "cameras",
+    "ring stickup": "cameras",
+    "hikvision ds": "cameras",
+    "dome camera": "cameras",
+    "zoom kamera": "cameras",
+    "snapshot kamera": "cameras",
+    "garden cam": "cameras",
+    "driveway cam": "cameras",
+    "backyard cam": "cameras",
+    "garage cam": "cameras",
+    "porch cam": "cameras",
+    "ring spotlight": "cameras",
+    "ubiquiti uvc": "cameras",
+    "uvc g3": "cameras",
+    "carport kamera": "cameras",
+    "vogelhauskamera": "cameras",
+    "nistkasten kamera": "cameras",
+    "bewegungserkennung kamera": "cameras",
+    "fahrzeug erkannt": "cameras",
+    "doorcam": "cameras",
+    "front door cam": "cameras",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "fine offset": "weather",
+    "ecowitt gw": "weather",
+    "global radiation": "weather",
 
 }
 

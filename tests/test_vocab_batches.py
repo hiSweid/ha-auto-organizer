@@ -118979,3 +118979,180 @@ def test_batch_sonoff_4chpro():
 def test_batch_sonoff_rfbridge():
     assert _has_label("sensor.sonoff_rfbridge", "network")
     assert suggest_entity_icon(_FakeEntry("sensor.sonoff_rfbridge"), OrganizerOptions()) == "mdi:bridge"
+
+
+def test_batch_hue_sml001():
+    assert _has_label("sensor.hue_sml001", "motion")
+
+
+def test_batch_hue_sml002():
+    assert _has_label("sensor.hue_sml002", "motion")
+
+
+def test_batch_hue_sml003():
+    assert _has_label("sensor.hue_sml003", "motion")
+
+
+def test_batch_hue_sml004():
+    assert _has_label("sensor.hue_sml004", "motion")
+
+
+def test_batch_ikea_vallhorn_sensor():
+    assert _has_label("sensor.ikea_vallhorn_sensor", "motion")
+
+
+def test_batch_shelly_motion_2():
+    assert _has_label("sensor.shelly_motion_2", "motion")
+
+
+def test_batch_flur_bewegung():
+    assert _has_label("sensor.flur_bewegung", "motion")
+
+
+def test_batch_treppe_bewegung():
+    assert _has_label("sensor.treppe_bewegung", "motion")
+
+
+def test_batch_keller_bewegung():
+    assert _has_label("sensor.keller_bewegung", "motion")
+
+
+def test_batch_garage_bewegung():
+    assert _has_label("sensor.garage_bewegung", "motion")
+
+
+def test_batch_apollo_mtr():
+    assert _has_label("sensor.apollo_mtr", "motion")
+
+
+def test_batch_seeed_mr60():
+    assert _has_label("sensor.seeed_mr60", "motion")
+
+
+def test_batch_sen0395():
+    assert _has_label("sensor.sen0395", "motion")
+
+
+def test_batch_hlk_ld2412():
+    assert _has_label("sensor.hlk_ld2412", "motion")
+
+
+def test_batch_ld1125():
+    assert _has_label("sensor.ld1125", "motion")
+
+
+def test_batch_rtcgq12lm():
+    assert _has_label("sensor.rtcgq12lm", "motion")
+
+
+def test_batch_rtcgq14lm():
+    assert _has_label("sensor.rtcgq14lm", "motion")
+
+
+def test_batch_lumi_motion():
+    assert _has_label("sensor.lumi_motion", "motion")
+
+
+def test_batch_dj1_vibration():
+    assert _has_label("sensor.dj1_vibration", "motion")
+
+
+def test_batch_bwm_motion():
+    assert _has_label("sensor.bwm_motion", "motion")
+
+
+def test_batch_g4_pro():
+    assert _has_label("sensor.g4_pro", "cameras")
+
+
+def test_batch_ring_stickup():
+    assert _has_label("sensor.ring_stickup", "cameras")
+
+
+def test_batch_hikvision_ds():
+    assert _has_label("sensor.hikvision_ds", "cameras")
+
+
+def test_batch_dome_camera():
+    assert _has_label("sensor.dome_camera", "cameras")
+
+
+def test_batch_zoom_kamera():
+    assert _has_label("sensor.zoom_kamera", "cameras")
+
+
+def test_batch_snapshot_kamera():
+    assert _has_label("sensor.snapshot_kamera", "cameras")
+
+
+def test_batch_garden_cam():
+    assert _has_label("sensor.garden_cam", "cameras")
+
+
+def test_batch_driveway_cam():
+    assert _has_label("sensor.driveway_cam", "cameras")
+
+
+def test_batch_backyard_cam():
+    assert _has_label("sensor.backyard_cam", "cameras")
+
+
+def test_batch_garage_cam():
+    assert _has_label("sensor.garage_cam", "cameras")
+
+
+def test_batch_porch_cam():
+    assert _has_label("sensor.porch_cam", "cameras")
+
+
+def test_batch_ring_spotlight():
+    assert _has_label("sensor.ring_spotlight", "cameras")
+
+
+def test_batch_ubiquiti_uvc():
+    assert _has_label("sensor.ubiquiti_uvc", "cameras")
+
+
+def test_batch_uvc_g3():
+    assert _has_label("sensor.uvc_g3", "cameras")
+
+
+def test_batch_carport_kamera():
+    assert _has_label("sensor.carport_kamera", "cameras")
+
+
+def test_batch_vogelhauskamera():
+    assert _has_label("sensor.vogelhauskamera", "cameras")
+
+
+def test_batch_nistkasten_kamera():
+    assert _has_label("sensor.nistkasten_kamera", "cameras")
+
+
+def test_batch_bewegungserkennung_kamera():
+    assert _has_label("sensor.bewegungserkennung_kamera", "cameras")
+
+
+def test_batch_fahrzeug_erkannt():
+    assert _has_label("sensor.fahrzeug_erkannt", "cameras")
+
+
+def test_batch_doorcam():
+    assert _has_label("sensor.doorcam", "cameras")
+
+
+def test_batch_front_door_cam():
+    assert _has_label("sensor.front_door_cam", "cameras")
+
+
+def test_batch_fine_offset():
+    assert _has_label("sensor.fine_offset", "weather")
+
+
+def test_batch_ecowitt_gw():
+    assert _has_label("sensor.ecowitt_gw", "weather")
+
+
+def test_batch_global_radiation():
+    assert _has_label("sensor.global_radiation", "weather")
+    assert suggest_entity_icon(_FakeEntry("sensor.global_radiation"), OrganizerOptions()) == "mdi:white-balance-sunny"
