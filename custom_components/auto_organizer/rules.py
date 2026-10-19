@@ -39730,6 +39730,20 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "batterieladestand": "mdi:battery-high",
     "gartenbewegung": "mdi:motion-sensor",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "dinner party": "mdi:party-popper",
+    "wohlfuehlen": "mdi:spa",
+    "fokus modus": "mdi:head-lightbulb",
+    "videocall": "mdi:video-account",
+    "bullet cam": "mdi:cctv",
+    "dome cam": "mdi:cctv",
+    "abendessen": "mdi:silverware-fork-knife",
+    "schlafengehen": "mdi:sleep",
+    "webcam hd": "mdi:webcam",
+    "leitwert wasser": "mdi:water-check",
+    "ph wert wasser": "mdi:ph",
+    "fisheye kamera": "mdi:cctv",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -79620,6 +79634,20 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "batterietausch": "battery",
     "batterieladestand": "battery",
     "gartenbewegung": "motion",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "dinner party": "scenes",
+    "wohlfuehlen": "scenes",
+    "fokus modus": "scenes",
+    "videocall": "scenes",
+    "bullet cam": "cameras",
+    "dome cam": "cameras",
+    "abendessen": "scenes",
+    "schlafengehen": "scenes",
+    "webcam hd": "cameras",
+    "leitwert wasser": "water",
+    "ph wert wasser": "water",
+    "fisheye kamera": "cameras",
 
 }
 

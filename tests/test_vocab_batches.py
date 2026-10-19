@@ -118432,3 +118432,63 @@ def test_batch_batterieladestand():
 def test_batch_gartenbewegung():
     assert _has_label("sensor.gartenbewegung", "motion")
     assert suggest_entity_icon(_FakeEntry("sensor.gartenbewegung"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_batch_dinner_party():
+    assert _has_label("sensor.dinner_party", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.dinner_party"), OrganizerOptions()) == "mdi:party-popper"
+
+
+def test_batch_wohlfuehlen():
+    assert _has_label("sensor.wohlfuehlen", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.wohlfuehlen"), OrganizerOptions()) == "mdi:spa"
+
+
+def test_batch_fokus_modus():
+    assert _has_label("sensor.fokus_modus", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.fokus_modus"), OrganizerOptions()) == "mdi:head-lightbulb"
+
+
+def test_batch_videocall():
+    assert _has_label("sensor.videocall", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.videocall"), OrganizerOptions()) == "mdi:video-account"
+
+
+def test_batch_bullet_cam():
+    assert _has_label("sensor.bullet_cam", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.bullet_cam"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_batch_dome_cam():
+    assert _has_label("sensor.dome_cam", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.dome_cam"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_batch_abendessen():
+    assert _has_label("sensor.abendessen", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.abendessen"), OrganizerOptions()) == "mdi:silverware-fork-knife"
+
+
+def test_batch_schlafengehen():
+    assert _has_label("sensor.schlafengehen", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.schlafengehen"), OrganizerOptions()) == "mdi:sleep"
+
+
+def test_batch_webcam_hd():
+    assert _has_label("sensor.webcam_hd", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.webcam_hd"), OrganizerOptions()) == "mdi:webcam"
+
+
+def test_batch_leitwert_wasser():
+    assert _has_label("sensor.leitwert_wasser", "water")
+    assert suggest_entity_icon(_FakeEntry("sensor.leitwert_wasser"), OrganizerOptions()) == "mdi:water-check"
+
+
+def test_batch_ph_wert_wasser():
+    assert _has_label("sensor.ph_wert_wasser", "water")
+    assert suggest_entity_icon(_FakeEntry("sensor.ph_wert_wasser"), OrganizerOptions()) == "mdi:ph"
+
+
+def test_batch_fisheye_kamera():
+    assert _has_label("sensor.fisheye_kamera", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.fisheye_kamera"), OrganizerOptions()) == "mdi:cctv"
