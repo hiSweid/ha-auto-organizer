@@ -40290,6 +40290,25 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "wifi reconnects": "mdi:wifi-sync",
     "wlan reconnects": "mdi:wifi-sync",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "einkaufsrabatt": "mdi:cart-percent",
+    "wishlist items": "mdi:tag-heart",
+    "sonderangebote": "mdi:cart-percent",
+    "battery sync": "mdi:battery-sync",
+    "battery time remaining": "mdi:battery-clock",
+    "battery lock": "mdi:battery-lock",
+    "akku restlaufzeit": "mdi:battery-clock",
+    "batterie unbekannt": "mdi:battery-unknown",
+    "burst mode": "mdi:camera-burst",
+    "camera offline": "mdi:cctv-off",
+    "wireless camera": "mdi:camera-wireless",
+    "action camera": "mdi:camera-gopro",
+    "kamerablende": "mdi:camera-iris",
+    "camera iris": "mdi:camera-iris",
+    "privacy camera": "mdi:camera-lock",
+    "webcam aus": "mdi:webcam-off",
+    "camera stream": "mdi:video-wireless",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -80896,6 +80915,25 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "letzter heartbeat": "diagnostic",
     "wifi reconnects": "diagnostic",
     "wlan reconnects": "diagnostic",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "einkaufsrabatt": "shopping",
+    "wishlist items": "shopping",
+    "sonderangebote": "shopping",
+    "battery sync": "battery",
+    "battery time remaining": "battery",
+    "battery lock": "battery",
+    "akku restlaufzeit": "battery",
+    "batterie unbekannt": "battery",
+    "burst mode": "cameras",
+    "camera offline": "cameras",
+    "wireless camera": "cameras",
+    "action camera": "cameras",
+    "kamerablende": "cameras",
+    "camera iris": "cameras",
+    "privacy camera": "cameras",
+    "webcam aus": "cameras",
+    "camera stream": "cameras",
 
 }
 

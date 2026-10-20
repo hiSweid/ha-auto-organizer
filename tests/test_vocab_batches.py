@@ -121674,3 +121674,88 @@ def test_batch_wifi_reconnects():
 def test_batch_wlan_reconnects():
     assert _has_label("sensor.wlan_reconnects", "diagnostic")
     assert suggest_entity_icon(_FakeEntry("sensor.wlan_reconnects"), OrganizerOptions()) == "mdi:wifi-sync"
+
+
+def test_batch_einkaufsrabatt():
+    assert _has_label("sensor.einkaufsrabatt", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.einkaufsrabatt"), OrganizerOptions()) == "mdi:cart-percent"
+
+
+def test_batch_wishlist_items():
+    assert _has_label("sensor.wishlist_items", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.wishlist_items"), OrganizerOptions()) == "mdi:tag-heart"
+
+
+def test_batch_sonderangebote():
+    assert _has_label("sensor.sonderangebote", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonderangebote"), OrganizerOptions()) == "mdi:cart-percent"
+
+
+def test_batch_battery_sync():
+    assert _has_label("sensor.battery_sync", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.battery_sync"), OrganizerOptions()) == "mdi:battery-sync"
+
+
+def test_batch_battery_time_remaining():
+    assert _has_label("sensor.battery_time_remaining", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.battery_time_remaining"), OrganizerOptions()) == "mdi:battery-clock"
+
+
+def test_batch_battery_lock():
+    assert _has_label("sensor.battery_lock", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.battery_lock"), OrganizerOptions()) == "mdi:battery-lock"
+
+
+def test_batch_akku_restlaufzeit():
+    assert _has_label("sensor.akku_restlaufzeit", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.akku_restlaufzeit"), OrganizerOptions()) == "mdi:battery-clock"
+
+
+def test_batch_batterie_unbekannt():
+    assert _has_label("sensor.batterie_unbekannt", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.batterie_unbekannt"), OrganizerOptions()) == "mdi:battery-unknown"
+
+
+def test_batch_burst_mode():
+    assert _has_label("sensor.burst_mode", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.burst_mode"), OrganizerOptions()) == "mdi:camera-burst"
+
+
+def test_batch_camera_offline():
+    assert _has_label("sensor.camera_offline", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.camera_offline"), OrganizerOptions()) == "mdi:cctv-off"
+
+
+def test_batch_wireless_camera():
+    assert _has_label("sensor.wireless_camera", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.wireless_camera"), OrganizerOptions()) == "mdi:camera-wireless"
+
+
+def test_batch_action_camera():
+    assert _has_label("sensor.action_camera", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.action_camera"), OrganizerOptions()) == "mdi:camera-gopro"
+
+
+def test_batch_kamerablende():
+    assert _has_label("sensor.kamerablende", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.kamerablende"), OrganizerOptions()) == "mdi:camera-iris"
+
+
+def test_batch_camera_iris():
+    assert _has_label("sensor.camera_iris", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.camera_iris"), OrganizerOptions()) == "mdi:camera-iris"
+
+
+def test_batch_privacy_camera():
+    assert _has_label("sensor.privacy_camera", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.privacy_camera"), OrganizerOptions()) == "mdi:camera-lock"
+
+
+def test_batch_webcam_aus():
+    assert _has_label("sensor.webcam_aus", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.webcam_aus"), OrganizerOptions()) == "mdi:webcam-off"
+
+
+def test_batch_camera_stream():
+    assert _has_label("sensor.camera_stream", "cameras")
+    assert suggest_entity_icon(_FakeEntry("sensor.camera_stream"), OrganizerOptions()) == "mdi:video-wireless"
