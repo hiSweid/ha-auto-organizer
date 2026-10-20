@@ -120419,3 +120419,188 @@ def test_batch_benachrichtigung_senden():
 def test_batch_verzoegerung_ablauf():
     assert _has_label("sensor.verzoegerung_ablauf", "scripts")
     assert suggest_entity_icon(_FakeEntry("sensor.verzoegerung_ablauf"), OrganizerOptions()) == "mdi:timer-sand"
+
+
+def test_batch_parcel_locker():
+    assert _has_label("sensor.parcel_locker", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.parcel_locker"), OrganizerOptions()) == "mdi:package-variant"
+
+
+def test_batch_einstellungsseite():
+    assert _has_label("sensor.einstellungsseite", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.einstellungsseite"), OrganizerOptions()) == "mdi:cog-outline"
+
+
+def test_batch_led_anzeige():
+    assert _has_label("sensor.led_anzeige", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.led_anzeige"), OrganizerOptions()) == "mdi:led-on"
+
+
+def test_batch_rueckgabefrist():
+    assert _has_label("sensor.rueckgabefrist", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.rueckgabefrist"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_batch_abo_box():
+    assert _has_label("sensor.abo_box", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.abo_box"), OrganizerOptions()) == "mdi:package-variant"
+
+
+def test_batch_dpd_sendung():
+    assert _has_label("sensor.dpd_sendung", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.dpd_sendung"), OrganizerOptions()) == "mdi:truck-delivery"
+
+
+def test_batch_hermes_sendung():
+    assert _has_label("sensor.hermes_sendung", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.hermes_sendung"), OrganizerOptions()) == "mdi:truck-delivery"
+
+
+def test_batch_ups_sendung():
+    assert _has_label("sensor.ups_sendung", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.ups_sendung"), OrganizerOptions()) == "mdi:truck-delivery"
+
+
+def test_batch_delivery_status():
+    assert _has_label("sensor.delivery_status", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.delivery_status"), OrganizerOptions()) == "mdi:truck-delivery"
+
+
+def test_batch_switch_type():
+    assert _has_label("sensor.switch_type", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.switch_type"), OrganizerOptions()) == "mdi:toggle-switch-variant"
+
+
+def test_batch_detached_mode():
+    assert _has_label("sensor.detached_mode", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.detached_mode"), OrganizerOptions()) == "mdi:link-variant-off"
+
+
+def test_batch_relay_mode():
+    assert _has_label("sensor.relay_mode", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.relay_mode"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_beep():
+    assert _has_label("sensor.beep", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.beep"), OrganizerOptions()) == "mdi:volume-high"
+
+
+def test_batch_current_phase():
+    assert _has_label("sensor.current_phase", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.current_phase"), OrganizerOptions()) == "mdi:current-ac"
+
+
+def test_batch_house_load():
+    assert _has_label("sensor.house_load", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.house_load"), OrganizerOptions()) == "mdi:home-lightning-bolt"
+
+
+def test_batch_verbrauch_gesamt():
+    assert _has_label("sensor.verbrauch_gesamt", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.verbrauch_gesamt"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_batch_produktion_gesamt():
+    assert _has_label("sensor.produktion_gesamt", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.produktion_gesamt"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_batch_submeter():
+    assert _has_label("sensor.submeter", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.submeter"), OrganizerOptions()) == "mdi:meter-electric-outline"
+
+
+def test_batch_dreiphasen():
+    assert _has_label("sensor.dreiphasen", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.dreiphasen"), OrganizerOptions()) == "mdi:sine-wave"
+
+
+def test_batch_verbrauch_heute():
+    assert _has_label("sensor.verbrauch_heute", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.verbrauch_heute"), OrganizerOptions()) == "mdi:calendar-today"
+
+
+def test_batch_verbrauch_gestern():
+    assert _has_label("sensor.verbrauch_gestern", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.verbrauch_gestern"), OrganizerOptions()) == "mdi:calendar-arrow-left"
+
+
+def test_batch_verbrauch_woche():
+    assert _has_label("sensor.verbrauch_woche", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.verbrauch_woche"), OrganizerOptions()) == "mdi:calendar-week"
+
+
+def test_batch_bestellung_offen():
+    assert _has_label("sensor.bestellung_offen", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.bestellung_offen"), OrganizerOptions()) == "mdi:cart-arrow-down"
+
+
+def test_batch_lieferfenster():
+    assert _has_label("sensor.lieferfenster", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.lieferfenster"), OrganizerOptions()) == "mdi:clock-time-four"
+
+
+def test_batch_bringmeister():
+    assert _has_label("sensor.bringmeister", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.bringmeister"), OrganizerOptions()) == "mdi:truck-fast"
+
+
+def test_batch_rewe_lieferservice():
+    assert _has_label("sensor.rewe_lieferservice", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.rewe_lieferservice"), OrganizerOptions()) == "mdi:truck-fast"
+
+
+def test_batch_zustellung_heute():
+    assert _has_label("sensor.zustellung_heute", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.zustellung_heute"), OrganizerOptions()) == "mdi:truck-fast"
+
+
+def test_batch_voltage_phase():
+    assert _has_label("sensor.voltage_phase", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.voltage_phase"), OrganizerOptions()) == "mdi:sine-wave"
+
+
+def test_batch_strom_phase():
+    assert _has_label("sensor.strom_phase", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.strom_phase"), OrganizerOptions()) == "mdi:current-ac"
+
+
+def test_batch_peak_power():
+    assert _has_label("sensor.peak_power", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.peak_power"), OrganizerOptions()) == "mdi:chart-bell-curve-cumulative"
+
+
+def test_batch_total_consumption():
+    assert _has_label("sensor.total_consumption", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.total_consumption"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_batch_total_production():
+    assert _has_label("sensor.total_production", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.total_production"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_batch_energy_produced():
+    assert _has_label("sensor.energy_produced", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.energy_produced"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_batch_energy_consumed():
+    assert _has_label("sensor.energy_consumed", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.energy_consumed"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_batch_energy_returned():
+    assert _has_label("sensor.energy_returned", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.energy_returned"), OrganizerOptions()) == "mdi:transmission-tower-import"
+
+
+def test_batch_energie_bezogen():
+    assert _has_label("sensor.energie_bezogen", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.energie_bezogen"), OrganizerOptions()) == "mdi:transmission-tower-export"
+
+
+def test_batch_energie_eingespeist():
+    assert _has_label("sensor.energie_eingespeist", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.energie_eingespeist"), OrganizerOptions()) == "mdi:transmission-tower-import"
