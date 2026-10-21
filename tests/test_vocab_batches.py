@@ -128239,3 +128239,28 @@ def test_batch_haier_flexis():
 def test_batch_homematic_ip_heizkoerper():
     assert _has_label("sensor.homematic_ip_heizkoerper", "climate")
     assert suggest_entity_icon(_FakeEntry("sensor.homematic_ip_heizkoerper"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_batch_laufzeit_seit_start():
+    assert _has_label("sensor.laufzeit_seit_start", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.laufzeit_seit_start"), OrganizerOptions()) == "mdi:stethoscope"
+
+
+def test_batch_last_boot():
+    assert _has_label("sensor.last_boot", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.last_boot"), OrganizerOptions()) == "mdi:stethoscope"
+
+
+def test_batch_robot_cleaner():
+    assert _has_label("sensor.robot_cleaner", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.robot_cleaner"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_cleaning_robot():
+    assert _has_label("sensor.cleaning_robot", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.cleaning_robot"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_rasenpflegeroboter():
+    assert _has_label("sensor.rasenpflegeroboter", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.rasenpflegeroboter"), OrganizerOptions()) == "mdi:robot-mower"

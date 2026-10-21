@@ -41473,6 +41473,13 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "haier flexis": "mdi:air-conditioner",
     "homematic ip heizkoerper": "mdi:thermostat",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "laufzeit seit start": "mdi:stethoscope",
+    "last boot": "mdi:stethoscope",
+    "robot cleaner": "mdi:robot-vacuum",
+    "cleaning robot": "mdi:robot-vacuum",
+    "rasenpflegeroboter": "mdi:robot-mower",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -83437,6 +83444,13 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "gree versati": "climate",
     "haier flexis": "climate",
     "homematic ip heizkoerper": "climate",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "laufzeit seit start": "diagnostic",
+    "last boot": "diagnostic",
+    "robot cleaner": "vacuums",
+    "cleaning robot": "vacuums",
+    "rasenpflegeroboter": "mower",
 
 }
 
