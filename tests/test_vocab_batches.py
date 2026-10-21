@@ -126416,3 +126416,312 @@ def test_icon_backfill_neigungsschalter():
 
 def test_icon_backfill_abwassertank():
     assert suggest_entity_icon(_FakeEntry("sensor.abwassertank"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_batch_sonnenhochstand():
+    assert _has_label("sensor.sonnenhochstand", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenhochstand"), OrganizerOptions()) == "mdi:sun-angle"
+
+
+def test_batch_trucki():
+    assert _has_label("sensor.trucki", "sun")
+
+
+def test_batch_sunsynk():
+    assert _has_label("sensor.sunsynk", "sun")
+
+
+def test_batch_axpert():
+    assert _has_label("sensor.axpert", "sun")
+
+
+def test_batch_solar_prognose():
+    assert _has_label("sensor.solar_prognose", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.solar_prognose"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_batch_pv_forecast():
+    assert _has_label("sensor.pv_forecast", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.pv_forecast"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_batch_pv_ertragsprognose():
+    assert _has_label("sensor.pv_ertragsprognose", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.pv_ertragsprognose"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_batch_solar_ertrag_heute():
+    assert _has_label("sensor.solar_ertrag_heute", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.solar_ertrag_heute"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_batch_mpp_tracker():
+    assert _has_label("sensor.mpp_tracker", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.mpp_tracker"), OrganizerOptions()) == "mdi:solar-panel"
+
+
+def test_batch_solarkonverter():
+    assert _has_label("sensor.solarkonverter", "sun")
+
+
+def test_batch_solar_laderegler():
+    assert _has_label("sensor.solar_laderegler", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.solar_laderegler"), OrganizerOptions()) == "mdi:solar-panel"
+
+
+def test_batch_laderegler_solar():
+    assert _has_label("sensor.laderegler_solar", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.laderegler_solar"), OrganizerOptions()) == "mdi:solar-panel"
+
+
+def test_batch_victron_smartsolar():
+    assert _has_label("sensor.victron_smartsolar", "sun")
+
+
+def test_batch_smartsolar():
+    assert _has_label("sensor.smartsolar", "sun")
+
+
+def test_batch_ein_aus_schalter():
+    assert _has_label("sensor.ein_aus_schalter", "switches")
+
+
+def test_batch_zaehlersteckdose():
+    assert _has_label("sensor.zaehlersteckdose", "switches")
+
+
+def test_batch_funkstecker():
+    assert _has_label("sensor.funkstecker", "switches")
+
+
+def test_batch_funkschalter_set():
+    assert _has_label("sensor.funkschalter_set", "switches")
+
+
+def test_batch_ladeschalter():
+    assert _has_label("sensor.ladeschalter", "switches")
+
+
+def test_batch_not_aus_taster():
+    assert _has_label("sensor.not_aus_taster", "switches")
+
+
+def test_batch_fusschalter():
+    assert _has_label("sensor.fusschalter", "switches")
+
+
+def test_batch_tischschalter():
+    assert _has_label("sensor.tischschalter", "switches")
+
+
+def test_batch_socket_switch():
+    assert _has_label("sensor.socket_switch", "switches")
+
+
+def test_batch_esp_relay():
+    assert _has_label("sensor.esp_relay", "switches")
+
+
+def test_batch_sonoff_basiczb():
+    assert _has_label("sensor.sonoff_basiczb", "switches")
+
+
+def test_batch_shelly_4pro():
+    assert _has_label("sensor.shelly_4pro", "switches")
+
+
+def test_batch_shelly_1l():
+    assert _has_label("sensor.shelly_1l", "switches")
+
+
+def test_batch_shelly_wall_switch():
+    assert _has_label("sensor.shelly_wall_switch", "switches")
+
+
+def test_batch_hue_outlet():
+    assert _has_label("sensor.hue_outlet", "switches")
+
+
+def test_batch_brennenstuhl_comfort():
+    assert _has_label("sensor.brennenstuhl_comfort", "switches")
+
+
+def test_batch_intertechno():
+    assert _has_label("sensor.intertechno", "switches")
+
+
+def test_batch_siemens_delta():
+    assert _has_label("sensor.siemens_delta", "switches")
+
+
+def test_batch_muellsammelstelle():
+    assert _has_label("sensor.muellsammelstelle", "waste")
+
+
+def test_batch_tonnenstandplatz():
+    assert _has_label("sensor.tonnenstandplatz", "waste")
+
+
+def test_batch_biomuellsammlung():
+    assert _has_label("sensor.biomuellsammlung", "waste")
+
+
+def test_batch_restmuellsammlung():
+    assert _has_label("sensor.restmuellsammlung", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.restmuellsammlung"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_batch_altpapierkorb():
+    assert _has_label("sensor.altpapierkorb", "waste")
+
+
+def test_batch_sperrmuellsammlung():
+    assert _has_label("sensor.sperrmuellsammlung", "waste")
+
+
+def test_batch_kompostbox():
+    assert _has_label("sensor.kompostbox", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.kompostbox"), OrganizerOptions()) == "mdi:compost"
+
+
+def test_batch_kompostmiete():
+    assert _has_label("sensor.kompostmiete", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.kompostmiete"), OrganizerOptions()) == "mdi:compost"
+
+
+def test_batch_muelltonnenschrank():
+    assert _has_label("sensor.muelltonnenschrank", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.muelltonnenschrank"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_batch_abfallsortierung():
+    assert _has_label("sensor.abfallsortierung", "waste")
+
+
+def test_batch_wertstoffsortierung():
+    assert _has_label("sensor.wertstoffsortierung", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.wertstoffsortierung"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_batch_recyclingstation():
+    assert _has_label("sensor.recyclingstation", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.recyclingstation"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_batch_glasentsorgung():
+    assert _has_label("sensor.glasentsorgung", "waste")
+
+
+def test_batch_papierentsorgung():
+    assert _has_label("sensor.papierentsorgung", "waste")
+
+
+def test_batch_kunststoffentsorgung():
+    assert _has_label("sensor.kunststoffentsorgung", "waste")
+
+
+def test_batch_sperrmuellentsorgung():
+    assert _has_label("sensor.sperrmuellentsorgung", "waste")
+
+
+def test_batch_abfallverwertung():
+    assert _has_label("sensor.abfallverwertung", "waste")
+
+
+def test_batch_wertstoffverwertung():
+    assert _has_label("sensor.wertstoffverwertung", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.wertstoffverwertung"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_batch_bioabfallsammlung():
+    assert _has_label("sensor.bioabfallsammlung", "waste")
+
+
+def test_batch_compost_pile():
+    assert _has_label("sensor.compost_pile", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.compost_pile"), OrganizerOptions()) == "mdi:compost"
+
+
+def test_batch_waste_basket():
+    assert _has_label("sensor.waste_basket", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.waste_basket"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_batch_recycling_point():
+    assert _has_label("sensor.recycling_point", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.recycling_point"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_batch_waste_recycling():
+    assert _has_label("sensor.waste_recycling", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.waste_recycling"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_batch_trash_room():
+    assert _has_label("sensor.trash_room", "waste")
+
+
+def test_batch_waste_bag():
+    assert _has_label("sensor.waste_bag", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.waste_bag"), OrganizerOptions()) == "mdi:trash-can-outline"
+
+
+def test_batch_garbage_room():
+    assert _has_label("sensor.garbage_room", "waste")
+
+
+def test_batch_muellraum():
+    assert _has_label("sensor.muellraum", "waste")
+
+
+def test_batch_abfallraum():
+    assert _has_label("sensor.abfallraum", "waste")
+
+
+def test_batch_muellplatz():
+    assert _has_label("sensor.muellplatz", "waste")
+
+
+def test_batch_tonnenplatz():
+    assert _has_label("sensor.tonnenplatz", "waste")
+
+
+def test_batch_recycling_station():
+    assert _has_label("sensor.recycling_station", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.recycling_station"), OrganizerOptions()) == "mdi:recycle"
+
+
+def test_batch_waste_station():
+    assert _has_label("sensor.waste_station", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.waste_station"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_batch_compost_heap():
+    assert _has_label("sensor.compost_heap", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.compost_heap"), OrganizerOptions()) == "mdi:compost"
+
+
+def test_batch_tonnenabholung():
+    assert _has_label("sensor.tonnenabholung", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.tonnenabholung"), OrganizerOptions()) == "mdi:dump-truck"
+
+
+def test_batch_biotonnenabholung():
+    assert _has_label("sensor.biotonnenabholung", "waste")
+
+
+def test_batch_kehrichtentsorgung():
+    assert _has_label("sensor.kehrichtentsorgung", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.kehrichtentsorgung"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_batch_restmuellentsorgung():
+    assert _has_label("sensor.restmuellentsorgung", "waste")
+
+
+def test_batch_papierkorb_leeren():
+    assert _has_label("sensor.papierkorb_leeren", "waste")
+
+
+def test_batch_abfallsammelbehaelter():
+    assert _has_label("sensor.abfallsammelbehaelter", "waste")
