@@ -125307,3 +125307,80 @@ def test_batch_tuya_ts0207():
 def test_batch_tuya_garage():
     assert _has_label("sensor.tuya_garage", "covers")
     assert suggest_entity_icon(_FakeEntry("sensor.tuya_garage"), OrganizerOptions()) == "mdi:garage"
+
+
+def test_batch_if_then_rule():
+    assert _has_label("sensor.if_then_rule", "automations")
+
+
+def test_batch_zeitsteuerungsregel():
+    assert _has_label("sensor.zeitsteuerungsregel", "automations")
+
+
+def test_batch_bewegungsregel():
+    assert _has_label("sensor.bewegungsregel", "automations")
+
+
+def test_batch_sonnenaufgangsregel():
+    assert _has_label("sensor.sonnenaufgangsregel", "automations")
+
+
+def test_batch_sonnenuntergangsregel():
+    assert _has_label("sensor.sonnenuntergangsregel", "automations")
+
+
+def test_batch_anwesenheitsregel():
+    assert _has_label("sensor.anwesenheitsregel", "automations")
+
+
+def test_batch_beleuchtungsplan():
+    assert _has_label("sensor.beleuchtungsplan", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.beleuchtungsplan"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_batch_sonnenscheinhelligkeit():
+    assert _has_label("sensor.sonnenscheinhelligkeit", "light_level")
+
+
+def test_batch_hilfsscript():
+    assert _has_label("sensor.hilfsscript", "scripts")
+
+
+def test_batch_schaltablauf():
+    assert _has_label("sensor.schaltablauf", "scripts")
+
+
+def test_batch_startablauf():
+    assert _has_label("sensor.startablauf", "scripts")
+
+
+def test_batch_stoppablauf():
+    assert _has_label("sensor.stoppablauf", "scripts")
+
+
+def test_batch_beendigungsablauf():
+    assert _has_label("sensor.beendigungsablauf", "scripts")
+
+
+def test_batch_morgenskript():
+    assert _has_label("sensor.morgenskript", "scripts")
+
+
+def test_batch_abendskript():
+    assert _has_label("sensor.abendskript", "scripts")
+
+
+def test_batch_nachtskript():
+    assert _has_label("sensor.nachtskript", "scripts")
+
+
+def test_batch_action_script():
+    assert _has_label("sensor.action_script", "scripts")
+
+
+def test_batch_helper_script():
+    assert _has_label("sensor.helper_script", "scripts")
+
+
+def test_batch_kinoablauf():
+    assert _has_label("sensor.kinoablauf", "scripts")

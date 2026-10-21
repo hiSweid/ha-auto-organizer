@@ -40949,6 +40949,9 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "tuya ts0207": "mdi:water-alert",
     "tuya garage": "mdi:garage",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "beleuchtungsplan": "mdi:calendar-clock",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -82306,6 +82309,27 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "hmip bdt": "lights",
     "tuya ts0207": "leak",
     "tuya garage": "covers",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "if then rule": "automations",
+    "zeitsteuerungsregel": "automations",
+    "bewegungsregel": "automations",
+    "sonnenaufgangsregel": "automations",
+    "sonnenuntergangsregel": "automations",
+    "anwesenheitsregel": "automations",
+    "beleuchtungsplan": "automations",
+    "sonnenscheinhelligkeit": "light_level",
+    "hilfsscript": "scripts",
+    "schaltablauf": "scripts",
+    "startablauf": "scripts",
+    "stoppablauf": "scripts",
+    "beendigungsablauf": "scripts",
+    "morgenskript": "scripts",
+    "abendskript": "scripts",
+    "nachtskript": "scripts",
+    "action script": "scripts",
+    "helper script": "scripts",
+    "kinoablauf": "scripts",
 
 }
 
