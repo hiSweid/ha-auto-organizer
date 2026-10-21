@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.28] - 2026-10-21
+
+### Added
+- 2581 additional vocabulary entries and 2072 icon entries, accumulated over
+  25 small daily batches since 0.11.27 (light_level, cost, temperature,
+  weather, presence, water, fans, leak themes, plus device-ecosystem terms and
+  icon backfills across several domains), collision-checked against the
+  existing keyword set.
+
 ## [0.11.27] - 2026-10-19
 
 ### Added
