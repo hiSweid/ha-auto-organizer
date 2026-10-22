@@ -41480,6 +41480,18 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "cleaning robot": "mdi:robot-vacuum",
     "rasenpflegeroboter": "mdi:robot-mower",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "mowing time": "mdi:timer",
+    "maeherfehler": "mdi:alert-circle",
+    "cleaning area": "mdi:ruler-square",
+    "cleaning time": "mdi:timer",
+    "dock station": "mdi:home-import-outline",
+    "stromzaehlerstand": "mdi:meter-electric",
+    "netzbezug heute": "mdi:transmission-tower-import",
+    "kilowattstunden": "mdi:lightning-bolt",
+    "import energy": "mdi:transmission-tower-import",
+    "export energy": "mdi:transmission-tower-export",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -83451,6 +83463,18 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "robot cleaner": "vacuums",
     "cleaning robot": "vacuums",
     "rasenpflegeroboter": "mower",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "mowing time": "mower",
+    "maeherfehler": "mower",
+    "cleaning area": "vacuums",
+    "cleaning time": "vacuums",
+    "dock station": "vacuums",
+    "stromzaehlerstand": "energy",
+    "netzbezug heute": "energy",
+    "kilowattstunden": "energy",
+    "import energy": "energy",
+    "export energy": "energy",
 
 }
 

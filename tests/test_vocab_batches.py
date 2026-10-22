@@ -128264,3 +128264,53 @@ def test_batch_cleaning_robot():
 def test_batch_rasenpflegeroboter():
     assert _has_label("sensor.rasenpflegeroboter", "mower")
     assert suggest_entity_icon(_FakeEntry("sensor.rasenpflegeroboter"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_mowing_time():
+    assert _has_label("sensor.mowing_time", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.mowing_time"), OrganizerOptions()) == "mdi:timer"
+
+
+def test_batch_maeherfehler():
+    assert _has_label("sensor.maeherfehler", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.maeherfehler"), OrganizerOptions()) == "mdi:alert-circle"
+
+
+def test_batch_cleaning_area():
+    assert _has_label("sensor.cleaning_area", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.cleaning_area"), OrganizerOptions()) == "mdi:ruler-square"
+
+
+def test_batch_cleaning_time():
+    assert _has_label("sensor.cleaning_time", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.cleaning_time"), OrganizerOptions()) == "mdi:timer"
+
+
+def test_batch_dock_station():
+    assert _has_label("sensor.dock_station", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.dock_station"), OrganizerOptions()) == "mdi:home-import-outline"
+
+
+def test_batch_stromzaehlerstand():
+    assert _has_label("sensor.stromzaehlerstand", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.stromzaehlerstand"), OrganizerOptions()) == "mdi:meter-electric"
+
+
+def test_batch_netzbezug_heute():
+    assert _has_label("sensor.netzbezug_heute", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.netzbezug_heute"), OrganizerOptions()) == "mdi:transmission-tower-import"
+
+
+def test_batch_kilowattstunden():
+    assert _has_label("sensor.kilowattstunden", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.kilowattstunden"), OrganizerOptions()) == "mdi:lightning-bolt"
+
+
+def test_batch_import_energy():
+    assert _has_label("sensor.import_energy", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.import_energy"), OrganizerOptions()) == "mdi:transmission-tower-import"
+
+
+def test_batch_export_energy():
+    assert _has_label("sensor.export_energy", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.export_energy"), OrganizerOptions()) == "mdi:transmission-tower-export"
