@@ -133012,3 +133012,38 @@ def test_batch_filterpumpe_pool():
 def test_batch_pool_filter_pump():
     assert _has_label("sensor.pool_filter_pump", "water")
     assert suggest_entity_icon(_FakeEntry("sensor.pool_filter_pump"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_batch_fernsehsender():
+    assert _has_label("sensor.fernsehsender", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.fernsehsender"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_batch_soundbar_subwoofer():
+    assert _has_label("sensor.soundbar_subwoofer", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.soundbar_subwoofer"), OrganizerOptions()) == "mdi:speaker"
+
+
+def test_batch_apple_tv_hd():
+    assert _has_label("sensor.apple_tv_hd", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.apple_tv_hd"), OrganizerOptions()) == "mdi:apple"
+
+
+def test_batch_kopfhoerer_verstaerker():
+    assert _has_label("sensor.kopfhoerer_verstaerker", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.kopfhoerer_verstaerker"), OrganizerOptions()) == "mdi:headphones"
+
+
+def test_batch_sendersuchlauf():
+    assert _has_label("sensor.sendersuchlauf", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.sendersuchlauf"), OrganizerOptions()) == "mdi:radio-tower"
+
+
+def test_batch_filmprojektor():
+    assert _has_label("sensor.filmprojektor", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.filmprojektor"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_batch_heimkino_leinwand():
+    assert _has_label("sensor.heimkino_leinwand", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.heimkino_leinwand"), OrganizerOptions()) == "mdi:projector-screen"

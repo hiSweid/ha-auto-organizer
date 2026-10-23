@@ -42355,6 +42355,15 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "filterpumpe pool": "mdi:water-pump",
     "pool filter pump": "mdi:water-pump",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "fernsehsender": "mdi:television-classic",
+    "soundbar subwoofer": "mdi:speaker",
+    "apple tv hd": "mdi:apple",
+    "kopfhoerer verstaerker": "mdi:headphones",
+    "sendersuchlauf": "mdi:radio-tower",
+    "filmprojektor": "mdi:movie-open",
+    "heimkino leinwand": "mdi:projector-screen",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -85356,6 +85365,15 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "openmqttgateway": "network",
     "filterpumpe pool": "water",
     "pool filter pump": "water",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "fernsehsender": "media",
+    "soundbar subwoofer": "media",
+    "apple tv hd": "media",
+    "kopfhoerer verstaerker": "media",
+    "sendersuchlauf": "media",
+    "filmprojektor": "media",
+    "heimkino leinwand": "media",
 
 }
 
