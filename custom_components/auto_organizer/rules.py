@@ -42221,6 +42221,21 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "temperature humidity": "mdi:thermometer",
     "temperatur luftfeuchtigkeit": "mdi:thermometer",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "typ 1 stecker": "mdi:ev-plug-type1",
+    "type 1 plug": "mdi:ev-plug-type1",
+    "energy saving bulb": "mdi:lightbulb-cfl",
+    "night bulb": "mdi:lightbulb-night",
+    "lightbulb group": "mdi:lightbulb-group",
+    "ladeanschluss ccs": "mdi:ev-plug-ccs1",
+    "brake pad wear": "mdi:car-brake-worn-linings",
+    "nebelleuchte": "mdi:car-light-fog",
+    "parking lights": "mdi:car-parking-lights",
+    "mobile generator": "mdi:generator-mobile",
+    "hydro power": "mdi:hydro-power",
+    "laufwasserkraftwerk": "mdi:hydro-power",
+    "vertical blinds": "mdi:blinds-vertical-closed",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -85085,6 +85100,21 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "temperatur und luftfeuchte": "temperature",
     "temperature humidity": "temperature",
     "temperatur luftfeuchtigkeit": "temperature",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "typ 1 stecker": "car",
+    "type 1 plug": "car",
+    "energy saving bulb": "lights",
+    "night bulb": "lights",
+    "lightbulb group": "lights",
+    "ladeanschluss ccs": "car",
+    "brake pad wear": "car",
+    "nebelleuchte": "car",
+    "parking lights": "car",
+    "mobile generator": "energy",
+    "hydro power": "energy",
+    "laufwasserkraftwerk": "energy",
+    "vertical blinds": "covers",
 
 }
 

@@ -132350,3 +132350,68 @@ def test_batch_temperature_humidity():
 def test_batch_temperatur_luftfeuchtigkeit():
     assert _has_label("sensor.temperatur_luftfeuchtigkeit", "temperature")
     assert suggest_entity_icon(_FakeEntry("sensor.temperatur_luftfeuchtigkeit"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_batch_typ_1_stecker():
+    assert _has_label("sensor.typ_1_stecker", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.typ_1_stecker"), OrganizerOptions()) == "mdi:ev-plug-type1"
+
+
+def test_batch_type_1_plug():
+    assert _has_label("sensor.type_1_plug", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.type_1_plug"), OrganizerOptions()) == "mdi:ev-plug-type1"
+
+
+def test_batch_energy_saving_bulb():
+    assert _has_label("sensor.energy_saving_bulb", "lights")
+    assert suggest_entity_icon(_FakeEntry("sensor.energy_saving_bulb"), OrganizerOptions()) == "mdi:lightbulb-cfl"
+
+
+def test_batch_night_bulb():
+    assert _has_label("sensor.night_bulb", "lights")
+    assert suggest_entity_icon(_FakeEntry("sensor.night_bulb"), OrganizerOptions()) == "mdi:lightbulb-night"
+
+
+def test_batch_lightbulb_group():
+    assert _has_label("sensor.lightbulb_group", "lights")
+    assert suggest_entity_icon(_FakeEntry("sensor.lightbulb_group"), OrganizerOptions()) == "mdi:lightbulb-group"
+
+
+def test_batch_ladeanschluss_ccs():
+    assert _has_label("sensor.ladeanschluss_ccs", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.ladeanschluss_ccs"), OrganizerOptions()) == "mdi:ev-plug-ccs1"
+
+
+def test_batch_brake_pad_wear():
+    assert _has_label("sensor.brake_pad_wear", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.brake_pad_wear"), OrganizerOptions()) == "mdi:car-brake-worn-linings"
+
+
+def test_batch_nebelleuchte():
+    assert _has_label("sensor.nebelleuchte", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.nebelleuchte"), OrganizerOptions()) == "mdi:car-light-fog"
+
+
+def test_batch_parking_lights():
+    assert _has_label("sensor.parking_lights", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.parking_lights"), OrganizerOptions()) == "mdi:car-parking-lights"
+
+
+def test_batch_mobile_generator():
+    assert _has_label("sensor.mobile_generator", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.mobile_generator"), OrganizerOptions()) == "mdi:generator-mobile"
+
+
+def test_batch_hydro_power():
+    assert _has_label("sensor.hydro_power", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.hydro_power"), OrganizerOptions()) == "mdi:hydro-power"
+
+
+def test_batch_laufwasserkraftwerk():
+    assert _has_label("sensor.laufwasserkraftwerk", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.laufwasserkraftwerk"), OrganizerOptions()) == "mdi:hydro-power"
+
+
+def test_batch_vertical_blinds():
+    assert _has_label("sensor.vertical_blinds", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.vertical_blinds"), OrganizerOptions()) == "mdi:blinds-vertical-closed"
