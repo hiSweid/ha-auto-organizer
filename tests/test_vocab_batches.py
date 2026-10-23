@@ -131462,3 +131462,28 @@ def test_batch_lux_auswertung():
 def test_batch_lux_trigger():
     assert _has_label("sensor.lux_trigger", "light_level")
     assert suggest_entity_icon(_FakeEntry("sensor.lux_trigger"), OrganizerOptions()) == "mdi:brightness-6"
+
+
+def test_batch_switch_poe():
+    assert _has_label("sensor.switch_poe", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.switch_poe"), OrganizerOptions()) == "mdi:switch"
+
+
+def test_batch_dlan():
+    assert _has_label("sensor.dlan", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.dlan"), OrganizerOptions()) == "mdi:ethernet"
+
+
+def test_batch_bandwidth():
+    assert _has_label("sensor.bandwidth", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.bandwidth"), OrganizerOptions()) == "mdi:speedometer"
+
+
+def test_batch_dhcp():
+    assert _has_label("sensor.dhcp", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.dhcp"), OrganizerOptions()) == "mdi:ip-network"
+
+
+def test_batch_intervallsteuerung():
+    assert _has_label("sensor.intervallsteuerung", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.intervallsteuerung"), OrganizerOptions()) == "mdi:timer-cog"

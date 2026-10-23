@@ -42063,6 +42063,13 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "lux auswertung": "mdi:brightness-5",
     "lux trigger": "mdi:brightness-6",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "switch poe": "mdi:switch",
+    "dlan": "mdi:ethernet",
+    "bandwidth": "mdi:speedometer",
+    "dhcp": "mdi:ip-network",
+    "intervallsteuerung": "mdi:timer-cog",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -84732,6 +84739,13 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "brightness detection": "light_level",
     "lux auswertung": "light_level",
     "lux trigger": "light_level",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "switch poe": "network",
+    " dlan ": "network",
+    "bandwidth": "network",
+    " dhcp ": "network",
+    "intervallsteuerung": "automations",
 
 }
 
