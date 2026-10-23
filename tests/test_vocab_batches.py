@@ -131487,3 +131487,419 @@ def test_batch_dhcp():
 def test_batch_intervallsteuerung():
     assert _has_label("sensor.intervallsteuerung", "automations")
     assert suggest_entity_icon(_FakeEntry("sensor.intervallsteuerung"), OrganizerOptions()) == "mdi:timer-cog"
+
+
+def test_batch_zeitplan_regel():
+    assert _has_label("sensor.zeitplan_regel", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.zeitplan_regel"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_batch_automationsgruppe():
+    assert _has_label("sensor.automationsgruppe", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.automationsgruppe"), OrganizerOptions()) == "mdi:folder-cog"
+
+
+def test_batch_daemmerungsregel():
+    assert _has_label("sensor.daemmerungsregel", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.daemmerungsregel"), OrganizerOptions()) == "mdi:weather-sunset"
+
+
+def test_batch_automationsregel():
+    assert _has_label("sensor.automationsregel", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.automationsregel"), OrganizerOptions()) == "mdi:robot-outline"
+
+
+def test_batch_automationsplan():
+    assert _has_label("sensor.automationsplan", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.automationsplan"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_batch_nachtmodus_regel():
+    assert _has_label("sensor.nachtmodus_regel", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.nachtmodus_regel"), OrganizerOptions()) == "mdi:weather-night"
+
+
+def test_batch_wochenplan_heizung():
+    assert _has_label("sensor.wochenplan_heizung", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.wochenplan_heizung"), OrganizerOptions()) == "mdi:calendar-week"
+
+
+def test_batch_abwesenheitsregel():
+    assert _has_label("sensor.abwesenheitsregel", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.abwesenheitsregel"), OrganizerOptions()) == "mdi:home-export-outline"
+
+
+def test_batch_blueprint_automation():
+    assert _has_label("sensor.blueprint_automation", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.blueprint_automation"), OrganizerOptions()) == "mdi:file-cog"
+
+
+def test_batch_szenenautomation():
+    assert _has_label("sensor.szenenautomation", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.szenenautomation"), OrganizerOptions()) == "mdi:palette"
+
+
+def test_batch_sonnenstand_regel():
+    assert _has_label("sensor.sonnenstand_regel", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenstand_regel"), OrganizerOptions()) == "mdi:white-balance-sunny"
+
+
+def test_batch_lichtautomation():
+    assert _has_label("sensor.lichtautomation", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.lichtautomation"), OrganizerOptions()) == "mdi:lightbulb-auto"
+
+
+def test_batch_heizungsautomation():
+    assert _has_label("sensor.heizungsautomation", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.heizungsautomation"), OrganizerOptions()) == "mdi:thermostat-auto"
+
+
+def test_batch_rollladenautomation():
+    assert _has_label("sensor.rollladenautomation", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.rollladenautomation"), OrganizerOptions()) == "mdi:window-shutter-auto"
+
+
+def test_batch_lueftungsautomation():
+    assert _has_label("sensor.lueftungsautomation", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.lueftungsautomation"), OrganizerOptions()) == "mdi:fan-auto"
+
+
+def test_batch_gaestemodus_regel():
+    assert _has_label("sensor.gaestemodus_regel", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.gaestemodus_regel"), OrganizerOptions()) == "mdi:account-group"
+
+
+def test_batch_alarmregel():
+    assert _has_label("sensor.alarmregel", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.alarmregel"), OrganizerOptions()) == "mdi:bell-alert"
+
+
+def test_batch_regelengine():
+    assert _has_label("sensor.regelengine", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.regelengine"), OrganizerOptions()) == "mdi:cog-play"
+
+
+def test_batch_nachtabsenkung_regel():
+    assert _has_label("sensor.nachtabsenkung_regel", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.nachtabsenkung_regel"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_batch_schlafenszeit_regel():
+    assert _has_label("sensor.schlafenszeit_regel", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.schlafenszeit_regel"), OrganizerOptions()) == "mdi:sleep"
+
+
+def test_batch_automationshelfer():
+    assert _has_label("sensor.automationshelfer", "automations")
+    assert suggest_entity_icon(_FakeEntry("sensor.automationshelfer"), OrganizerOptions()) == "mdi:robot-happy"
+
+
+def test_batch_luftfeuchte_wc():
+    assert _has_label("sensor.luftfeuchte_wc", "humidity")
+
+
+def test_batch_luftfeuchte_waschkueche():
+    assert _has_label("sensor.luftfeuchte_waschkueche", "humidity")
+
+
+def test_batch_luftfeuchte_hobbykeller():
+    assert _has_label("sensor.luftfeuchte_hobbykeller", "humidity")
+
+
+def test_batch_luftfeuchte_abstellraum():
+    assert _has_label("sensor.luftfeuchte_abstellraum", "humidity")
+
+
+def test_batch_luftfeuchte_esszimmer():
+    assert _has_label("sensor.luftfeuchte_esszimmer", "humidity")
+
+
+def test_batch_luftfeuchte_arbeitszimmer():
+    assert _has_label("sensor.luftfeuchte_arbeitszimmer", "humidity")
+
+
+def test_batch_luftfeuchte_werkstatt():
+    assert _has_label("sensor.luftfeuchte_werkstatt", "humidity")
+
+
+def test_batch_feuchtekontrolle():
+    assert _has_label("sensor.feuchtekontrolle", "humidity")
+
+
+def test_batch_luftfeuchte_vorratsraum():
+    assert _has_label("sensor.luftfeuchte_vorratsraum", "humidity")
+
+
+def test_batch_luftfeuchte_speicher():
+    assert _has_label("sensor.luftfeuchte_speicher", "humidity")
+
+
+def test_batch_luftfeuchte_wintergarten():
+    assert _has_label("sensor.luftfeuchte_wintergarten", "humidity")
+
+
+def test_batch_luftfeuchte_gartenhaus():
+    assert _has_label("sensor.luftfeuchte_gartenhaus", "humidity")
+
+
+def test_batch_humidity_basement():
+    assert _has_label("sensor.humidity_basement", "humidity")
+
+
+def test_batch_humidity_cellar():
+    assert _has_label("sensor.humidity_cellar", "humidity")
+
+
+def test_batch_humidity_workshop():
+    assert _has_label("sensor.humidity_workshop", "humidity")
+
+
+def test_batch_humidity_laundry_room():
+    assert _has_label("sensor.humidity_laundry_room", "humidity")
+
+
+def test_batch_humidity_guest_room():
+    assert _has_label("sensor.humidity_guest_room", "humidity")
+
+
+def test_batch_humidity_dining_room():
+    assert _has_label("sensor.humidity_dining_room", "humidity")
+
+
+def test_batch_humidity_utility_room():
+    assert _has_label("sensor.humidity_utility_room", "humidity")
+
+
+def test_batch_humidity_bathroom():
+    assert _has_label("sensor.humidity_bathroom", "humidity")
+
+
+def test_batch_dehumidifier_bucket_full():
+    assert _has_label("sensor.dehumidifier_bucket_full", "humidity")
+
+
+def test_batch_dehumidifier_defrost():
+    assert _has_label("sensor.dehumidifier_defrost", "humidity")
+
+
+def test_batch_humidifier_water_level():
+    assert _has_label("sensor.humidifier_water_level", "humidity")
+
+
+def test_batch_humidifier_low_water():
+    assert _has_label("sensor.humidifier_low_water", "humidity")
+    assert suggest_entity_icon(_FakeEntry("sensor.humidifier_low_water"), OrganizerOptions()) == "mdi:air-humidifier-off"
+
+
+def test_batch_wasserstand_luftbefeuchter():
+    assert _has_label("sensor.wasserstand_luftbefeuchter", "humidity")
+
+
+def test_batch_wassertank_luftbefeuchter():
+    assert _has_label("sensor.wassertank_luftbefeuchter", "humidity")
+    assert suggest_entity_icon(_FakeEntry("sensor.wassertank_luftbefeuchter"), OrganizerOptions()) == "mdi:air-humidifier"
+
+
+def test_batch_wassertank_entfeuchter():
+    assert _has_label("sensor.wassertank_entfeuchter", "humidity")
+
+
+def test_batch_schimmelschutz():
+    assert _has_label("sensor.schimmelschutz", "humidity")
+
+
+def test_batch_schimmelvorsorge():
+    assert _has_label("sensor.schimmelvorsorge", "humidity")
+    assert suggest_entity_icon(_FakeEntry("sensor.schimmelvorsorge"), OrganizerOptions()) == "mdi:water-percent-alert"
+
+
+def test_batch_kondenswassertank():
+    assert _has_label("sensor.kondenswassertank", "humidity")
+
+
+def test_batch_target_humidity():
+    assert _has_label("sensor.target_humidity", "humidity")
+    assert suggest_entity_icon(_FakeEntry("sensor.target_humidity"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_batch_min_humidity():
+    assert _has_label("sensor.min_humidity", "humidity")
+
+
+def test_batch_max_humidity():
+    assert _has_label("sensor.max_humidity", "humidity")
+
+
+def test_batch_luftbefeuchter_schlafzimmer():
+    assert _has_label("sensor.luftbefeuchter_schlafzimmer", "humidity")
+    assert suggest_entity_icon(_FakeEntry("sensor.luftbefeuchter_schlafzimmer"), OrganizerOptions()) == "mdi:air-humidifier"
+
+
+def test_batch_luftbefeuchter_kinderzimmer():
+    assert _has_label("sensor.luftbefeuchter_kinderzimmer", "humidity")
+    assert suggest_entity_icon(_FakeEntry("sensor.luftbefeuchter_kinderzimmer"), OrganizerOptions()) == "mdi:air-humidifier"
+
+
+def test_batch_luftentfeuchter_schlafzimmer():
+    assert _has_label("sensor.luftentfeuchter_schlafzimmer", "humidity")
+    assert suggest_entity_icon(_FakeEntry("sensor.luftentfeuchter_schlafzimmer"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_batch_poe_port():
+    assert _has_label("sensor.poe_port", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.poe_port"), OrganizerOptions()) == "mdi:ethernet"
+
+
+def test_batch_portforwarding():
+    assert _has_label("sensor.portforwarding", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.portforwarding"), OrganizerOptions()) == "mdi:router-network"
+
+
+def test_batch_dns_anfragen():
+    assert _has_label("sensor.dns_anfragen", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.dns_anfragen"), OrganizerOptions()) == "mdi:dns"
+
+
+def test_batch_dns_queries():
+    assert _has_label("sensor.dns_queries", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.dns_queries"), OrganizerOptions()) == "mdi:dns"
+
+
+def test_batch_dns_blocked():
+    assert _has_label("sensor.dns_blocked", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.dns_blocked"), OrganizerOptions()) == "mdi:dns"
+
+
+def test_batch_blocklist():
+    assert _has_label("sensor.blocklist", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.blocklist"), OrganizerOptions()) == "mdi:shield-off"
+
+
+def test_batch_sperrliste():
+    assert _has_label("sensor.sperrliste", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.sperrliste"), OrganizerOptions()) == "mdi:shield-off"
+
+
+def test_batch_werbeblocker():
+    assert _has_label("sensor.werbeblocker", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.werbeblocker"), OrganizerOptions()) == "mdi:shield-off"
+
+
+def test_batch_public_ip():
+    assert _has_label("sensor.public_ip", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.public_ip"), OrganizerOptions()) == "mdi:ip"
+
+
+def test_batch_wifi_clients():
+    assert _has_label("sensor.wifi_clients", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.wifi_clients"), OrganizerOptions()) == "mdi:wifi"
+
+
+def test_batch_connected_clients():
+    assert _has_label("sensor.connected_clients", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.connected_clients"), OrganizerOptions()) == "mdi:lan-connect"
+
+
+def test_batch_sfp_port():
+    assert _has_label("sensor.sfp_port", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.sfp_port"), OrganizerOptions()) == "mdi:ethernet"
+
+
+def test_batch_nat_tabelle():
+    assert _has_label("sensor.nat_tabelle", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.nat_tabelle"), OrganizerOptions()) == "mdi:router-network"
+
+
+def test_batch_conntrack():
+    assert _has_label("sensor.conntrack", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.conntrack"), OrganizerOptions()) == "mdi:lan"
+
+
+def test_batch_rx_rate():
+    assert _has_label("sensor.rx_rate", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.rx_rate"), OrganizerOptions()) == "mdi:download-network"
+
+
+def test_batch_tx_rate():
+    assert _has_label("sensor.tx_rate", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.tx_rate"), OrganizerOptions()) == "mdi:upload-network"
+
+
+def test_batch_dns_rewrite():
+    assert _has_label("sensor.dns_rewrite", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.dns_rewrite"), OrganizerOptions()) == "mdi:dns"
+
+
+def test_batch_blockierte_anfragen():
+    assert _has_label("sensor.blockierte_anfragen", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.blockierte_anfragen"), OrganizerOptions()) == "mdi:shield-off"
+
+
+def test_batch_blocked_queries():
+    assert _has_label("sensor.blocked_queries", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.blocked_queries"), OrganizerOptions()) == "mdi:shield-off"
+
+
+def test_batch_filterliste():
+    assert _has_label("sensor.filterliste", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.filterliste"), OrganizerOptions()) == "mdi:shield-off"
+
+
+def test_batch_internet_connection():
+    assert _has_label("sensor.internet_connection", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.internet_connection"), OrganizerOptions()) == "mdi:web"
+
+
+def test_batch_wan_status():
+    assert _has_label("sensor.wan_status", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.wan_status"), OrganizerOptions()) == "mdi:web"
+
+
+def test_batch_gastnetz():
+    assert _has_label("sensor.gastnetz", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.gastnetz"), OrganizerOptions()) == "mdi:wifi-lock"
+
+
+def test_batch_gaestenetz():
+    assert _has_label("sensor.gaestenetz", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.gaestenetz"), OrganizerOptions()) == "mdi:wifi-lock"
+
+
+def test_batch_poe_leistung():
+    assert _has_label("sensor.poe_leistung", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.poe_leistung"), OrganizerOptions()) == "mdi:ethernet-cable"
+
+
+def test_batch_adblock():
+    assert _has_label("sensor.adblock", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.adblock"), OrganizerOptions()) == "mdi:shield-off"
+
+
+def test_batch_mesh_master():
+    assert _has_label("sensor.mesh_master", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.mesh_master"), OrganizerOptions()) == "mdi:lan"
+
+
+def test_batch_wlan_5ghz():
+    assert _has_label("sensor.wlan_5ghz", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.wlan_5ghz"), OrganizerOptions()) == "mdi:wifi"
+
+
+def test_batch_netzwerkgeraete():
+    assert _has_label("sensor.netzwerkgeraete", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.netzwerkgeraete"), OrganizerOptions()) == "mdi:lan"
+
+
+def test_batch_netzwerk_geraete():
+    assert _has_label("sensor.netzwerk_geraete", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.netzwerk_geraete"), OrganizerOptions()) == "mdi:lan"
+
+
+def test_batch_traffic_rate():
+    assert _has_label("sensor.traffic_rate", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.traffic_rate"), OrganizerOptions()) == "mdi:chart-line"
+
+
+def test_batch_ping_loss():
+    assert _has_label("sensor.ping_loss", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.ping_loss"), OrganizerOptions()) == "mdi:lan-disconnect"
