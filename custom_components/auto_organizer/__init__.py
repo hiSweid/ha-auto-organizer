@@ -100,7 +100,7 @@ def _options_from_entry(hass: HomeAssistant, entry: ConfigEntry) -> OrganizerOpt
     o = entry.options
     language = o.get(CONF_LANGUAGE, DEFAULT_LANGUAGE)
     if language == "auto":
-        # Follow Home Assistant's configured language (resolved to de/en).
+        # Follow Home Assistant's configured language (resolved to en/de/da).
         language = hass.config.language
     return OrganizerOptions(
         dry_run=o.get(CONF_DRY_RUN, DEFAULT_DRY_RUN),
