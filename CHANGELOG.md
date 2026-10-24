@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.29] - 2026-10-24
+
+### Added
+- 1882 additional vocabulary entries and 1512 icon entries, accumulated over
+  daily batches since 0.11.28 (scenes, weather, media, config, motion, sun,
+  waste, shopping, appliances, switches, leak, updates, garden, presence,
+  air quality, cost, mower themes, plus device-ecosystem terms), collision-checked
+  against the existing keyword set.
+
 ## [0.11.28] - 2026-10-21
 
 ### Added
