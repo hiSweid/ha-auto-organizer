@@ -134092,3 +134092,490 @@ def test_icon_backfill_schneepflug():
 
 def test_icon_backfill_sundial():
     assert suggest_entity_icon(_FakeEntry("sensor.sundial"), OrganizerOptions()) == "mdi:sun-clock"
+
+
+def test_batch_abendlounge():
+    assert _has_label("sensor.abendlounge", "scenes")
+
+
+def test_batch_party_mode():
+    assert _has_label("sensor.party_mode", "scenes")
+
+
+def test_batch_dinner_mode():
+    assert _has_label("sensor.dinner_mode", "scenes")
+
+
+def test_batch_relax_mode():
+    assert _has_label("sensor.relax_mode", "scenes")
+
+
+def test_batch_night_mode_scene():
+    assert _has_label("sensor.night_mode_scene", "scenes")
+
+
+def test_batch_sleep_scene():
+    assert _has_label("sensor.sleep_scene", "scenes")
+
+
+def test_batch_romantic_mode():
+    assert _has_label("sensor.romantic_mode", "scenes")
+
+
+def test_batch_focus_mode_scene():
+    assert _has_label("sensor.focus_mode_scene", "scenes")
+
+
+def test_batch_fernsehszene():
+    assert _has_label("sensor.fernsehszene", "scenes")
+
+
+def test_batch_chill_mode():
+    assert _has_label("sensor.chill_mode", "scenes")
+
+
+def test_batch_dance_mode():
+    assert _has_label("sensor.dance_mode", "scenes")
+
+
+def test_batch_nap_scene():
+    assert _has_label("sensor.nap_scene", "scenes")
+
+
+def test_batch_fruehlingsszene():
+    assert _has_label("sensor.fruehlingsszene", "scenes")
+
+
+def test_batch_sommerszene():
+    assert _has_label("sensor.sommerszene", "scenes")
+
+
+def test_batch_herbstszene():
+    assert _has_label("sensor.herbstszene", "scenes")
+
+
+def test_batch_winterszene():
+    assert _has_label("sensor.winterszene", "scenes")
+
+
+def test_batch_stimmungsszene():
+    assert _has_label("sensor.stimmungsszene", "scenes")
+
+
+def test_batch_wohlfuehlmodus():
+    assert _has_label("sensor.wohlfuehlmodus", "scenes")
+
+
+def test_batch_ruheszene():
+    assert _has_label("sensor.ruheszene", "scenes")
+
+
+def test_batch_kuschelszene():
+    assert _has_label("sensor.kuschelszene", "scenes")
+
+
+def test_batch_partyszene():
+    assert _has_label("sensor.partyszene", "scenes")
+
+
+def test_batch_festtagsstimmung():
+    assert _has_label("sensor.festtagsstimmung", "scenes")
+
+
+def test_batch_morning_scene():
+    assert _has_label("sensor.morning_scene", "scenes")
+
+
+def test_batch_evening_mode():
+    assert _has_label("sensor.evening_mode", "scenes")
+
+
+def test_batch_gewitterrisiko():
+    assert _has_label("sensor.gewitterrisiko", "weather")
+
+
+def test_batch_weather_alerts():
+    assert _has_label("sensor.weather_alerts", "weather")
+
+
+def test_batch_regenwarner():
+    assert _has_label("sensor.regenwarner", "weather")
+
+
+def test_batch_rain_warning():
+    assert _has_label("sensor.rain_warning", "weather")
+
+
+def test_batch_snow_warning():
+    assert _has_label("sensor.snow_warning", "weather")
+
+
+def test_batch_stormy():
+    assert _has_label("sensor.stormy", "weather")
+
+
+def test_batch_snowfall_rate():
+    assert _has_label("sensor.snowfall_rate", "weather")
+
+
+def test_batch_tropical_storm():
+    assert _has_label("sensor.tropical_storm", "weather")
+
+
+def test_batch_wetterlagen():
+    assert _has_label("sensor.wetterlagen", "weather")
+
+
+def test_batch_wettervorschau():
+    assert _has_label("sensor.wettervorschau", "weather")
+
+
+def test_batch_wind_kompass():
+    assert _has_label("sensor.wind_kompass", "weather")
+
+
+def test_batch_wind_compass():
+    assert _has_label("sensor.wind_compass", "weather")
+
+
+def test_batch_windrichtung_grad():
+    assert _has_label("sensor.windrichtung_grad", "weather")
+
+
+def test_batch_rain_total():
+    assert _has_label("sensor.rain_total", "weather")
+
+
+def test_batch_wetterstation_innen():
+    assert _has_label("sensor.wetterstation_innen", "weather")
+
+
+def test_batch_mondalter():
+    assert _has_label("sensor.mondalter", "weather")
+
+
+def test_batch_moon_age():
+    assert _has_label("sensor.moon_age", "weather")
+
+
+def test_batch_tide():
+    assert _has_label("sensor.tide", "weather")
+
+
+def test_batch_ebbe():
+    assert _has_label("sensor.ebbe", "weather")
+
+
+def test_batch_snow_cover():
+    assert _has_label("sensor.snow_cover", "weather")
+
+
+def test_batch_wetterbild():
+    assert _has_label("sensor.wetterbild", "weather")
+
+
+def test_batch_hail_warning():
+    assert _has_label("sensor.hail_warning", "weather")
+
+
+def test_batch_tageshoechstwert():
+    assert _has_label("sensor.tageshoechstwert", "weather")
+
+
+def test_batch_nachttiefstwert():
+    assert _has_label("sensor.nachttiefstwert", "weather")
+
+
+def test_batch_daily_high():
+    assert _has_label("sensor.daily_high", "weather")
+
+
+def test_batch_wetter_morgen():
+    assert _has_label("sensor.wetter_morgen", "weather")
+
+
+def test_batch_wetter_heute():
+    assert _has_label("sensor.wetter_heute", "weather")
+
+
+def test_batch_weather_today():
+    assert _has_label("sensor.weather_today", "weather")
+
+
+def test_batch_weather_tomorrow():
+    assert _has_label("sensor.weather_tomorrow", "weather")
+
+
+def test_batch_wetter_draussen():
+    assert _has_label("sensor.wetter_draussen", "weather")
+
+
+def test_batch_barometer_pressure():
+    assert _has_label("sensor.barometer_pressure", "weather")
+
+
+def test_batch_mp3_player():
+    assert _has_label("sensor.mp3_player", "media")
+
+
+def test_batch_mp3player():
+    assert _has_label("sensor.mp3player", "media")
+
+
+def test_batch_musikplayer():
+    assert _has_label("sensor.musikplayer", "media")
+
+
+def test_batch_discman():
+    assert _has_label("sensor.discman", "media")
+
+
+def test_batch_diktiergeraet():
+    assert _has_label("sensor.diktiergeraet", "media")
+
+
+def test_batch_gameboy():
+    assert _has_label("sensor.gameboy", "media")
+
+
+def test_batch_playstation_4():
+    assert _has_label("sensor.playstation_4", "media")
+
+
+def test_batch_xbox_one():
+    assert _has_label("sensor.xbox_one", "media")
+
+
+def test_batch_lcd_fernseher():
+    assert _has_label("sensor.lcd_fernseher", "media")
+
+
+def test_batch_plasma_fernseher():
+    assert _has_label("sensor.plasma_fernseher", "media")
+
+
+def test_batch_led_fernseher():
+    assert _has_label("sensor.led_fernseher", "media")
+
+
+def test_batch_hifi():
+    assert _has_label("sensor.hifi", "media")
+
+
+def test_batch_soundanlage():
+    assert _has_label("sensor.soundanlage", "media")
+
+
+def test_batch_heimkinoprojektor():
+    assert _has_label("sensor.heimkinoprojektor", "media")
+
+
+def test_batch_apple_tv_remote():
+    assert _has_label("sensor.apple_tv_remote", "media")
+
+
+def test_batch_siri_remote():
+    assert _has_label("sensor.siri_remote", "media")
+
+
+def test_batch_hoerspielbox():
+    assert _has_label("sensor.hoerspielbox", "media")
+
+
+def test_batch_yoto():
+    assert _has_label("sensor.yoto", "media")
+
+
+def test_batch_streamingplayer():
+    assert _has_label("sensor.streamingplayer", "media")
+
+
+def test_batch_radiostation():
+    assert _has_label("sensor.radiostation", "media")
+
+
+def test_batch_digitalrekorder():
+    assert _has_label("sensor.digitalrekorder", "media")
+
+
+def test_batch_winamp():
+    assert _has_label("sensor.winamp", "media")
+
+
+def test_batch_itunes():
+    assert _has_label("sensor.itunes", "media")
+
+
+def test_batch_airport_express():
+    assert _has_label("sensor.airport_express", "media")
+
+
+def test_batch_sonos_connect():
+    assert _has_label("sensor.sonos_connect", "media")
+
+
+def test_batch_klipsch_speaker():
+    assert _has_label("sensor.klipsch_speaker", "media")
+
+
+def test_batch_zigbee_hub():
+    assert _has_label("sensor.zigbee_hub", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.zigbee_hub"), OrganizerOptions()) == "mdi:zigbee"
+
+
+def test_batch_thread_hub():
+    assert _has_label("sensor.thread_hub", "network")
+
+
+def test_batch_iot_hub():
+    assert _has_label("sensor.iot_hub", "network")
+
+
+def test_batch_ble_proxy():
+    assert _has_label("sensor.ble_proxy", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.ble_proxy"), OrganizerOptions()) == "mdi:bluetooth"
+
+
+def test_batch_tischsteckdose():
+    assert _has_label("sensor.tischsteckdose", "switches")
+
+
+def test_batch_artnet():
+    assert _has_label("sensor.artnet", "lights")
+
+
+def test_batch_sirene_innen():
+    assert _has_label("sensor.sirene_innen", "security")
+
+
+def test_batch_ring_klingel():
+    assert _has_label("sensor.ring_klingel", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.ring_klingel"), OrganizerOptions()) == "mdi:doorbell"
+
+
+def test_batch_mueckengitter():
+    assert _has_label("sensor.mueckengitter", "covers")
+
+
+def test_batch_elektrodecke():
+    assert _has_label("sensor.elektrodecke", "appliances")
+
+
+def test_batch_inhalator():
+    assert _has_label("sensor.inhalator", "appliances")
+
+
+def test_batch_tvlift():
+    assert _has_label("sensor.tvlift", "media")
+
+
+def test_batch_tv_szene():
+    assert _has_label("sensor.tv_szene", "scenes")
+
+
+def test_batch_tv_scene():
+    assert _has_label("sensor.tv_scene", "scenes")
+
+
+def test_batch_musikszene():
+    assert _has_label("sensor.musikszene", "scenes")
+
+
+def test_batch_music_scene():
+    assert _has_label("sensor.music_scene", "scenes")
+
+
+def test_batch_cinema_night_mode():
+    assert _has_label("sensor.cinema_night_mode", "scenes")
+
+
+def test_batch_theater_mode():
+    assert _has_label("sensor.theater_mode", "scenes")
+
+
+def test_batch_glatteisalarm():
+    assert _has_label("sensor.glatteisalarm", "weather")
+
+
+def test_batch_sturmalarm():
+    assert _has_label("sensor.sturmalarm", "weather")
+
+
+def test_batch_wind_chill_factor():
+    assert _has_label("sensor.wind_chill_factor", "weather")
+
+
+def test_batch_mond_beleuchtung():
+    assert _has_label("sensor.mond_beleuchtung", "weather")
+
+
+def test_batch_forecast_high():
+    assert _has_label("sensor.forecast_high", "weather")
+
+
+def test_batch_forecast_low():
+    assert _has_label("sensor.forecast_low", "weather")
+
+
+def test_batch_mediacenter():
+    assert _has_label("sensor.mediacenter", "media")
+
+
+def test_batch_djmixer():
+    assert _has_label("sensor.djmixer", "media")
+
+
+def test_batch_dj_controller():
+    assert _has_label("sensor.dj_controller", "media")
+
+
+def test_batch_festplattenrecorder():
+    assert _has_label("sensor.festplattenrecorder", "media")
+
+
+def test_batch_blaupunkt():
+    assert _has_label("sensor.blaupunkt", "media")
+
+
+def test_batch_kenwood():
+    assert _has_label("sensor.kenwood", "media")
+
+
+def test_batch_philips_tv():
+    assert _has_label("sensor.philips_tv", "media")
+
+
+def test_batch_usb_netzteil():
+    assert _has_label("sensor.usb_netzteil", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.usb_netzteil"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_batch_aquariumlicht():
+    assert _has_label("sensor.aquariumlicht", "lights")
+
+
+def test_batch_ventilatorheizer():
+    assert _has_label("sensor.ventilatorheizer", "climate")
+
+
+def test_batch_infrarot_thermostat():
+    assert _has_label("sensor.infrarot_thermostat", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.infrarot_thermostat"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_batch_solarabdeckung():
+    assert _has_label("sensor.solarabdeckung", "water")
+
+
+def test_batch_uv_klaerer():
+    assert _has_label("sensor.uv_klaerer", "water")
+
+
+def test_batch_fensterroboter():
+    assert _has_label("sensor.fensterroboter", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.fensterroboter"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_schlaftracker():
+    assert _has_label("sensor.schlaftracker", "presence")
+    assert suggest_entity_icon(_FakeEntry("sensor.schlaftracker"), OrganizerOptions()) == "mdi:bed"
