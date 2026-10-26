@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.30] - 2026-10-26
+
+### Added
+- 554 additional vocabulary entries (with icons where available), accumulated over
+  daily batches since 0.11.29 (cameras, presence, battery, diagnostic, covers,
+  locks, garden, automations, vacuums, fans, light level, water, climate,
+  temperature, updates, energy, car, motion, plus device terms),
+  collision-checked against the existing keyword set.
+
 ## [0.11.29] - 2026-10-24
 
 ### Added
