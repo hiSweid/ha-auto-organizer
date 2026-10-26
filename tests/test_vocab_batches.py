@@ -139865,3 +139865,33 @@ def test_batch_wago():
 def test_batch_zbminir2():
     assert _has_label("sensor.zbminir2", "switches")
     assert suggest_entity_icon(_FakeEntry("sensor.zbminir2"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_batch_einstellungsprofil():
+    assert _has_label("sensor.einstellungsprofil", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.einstellungsprofil"), OrganizerOptions()) == "mdi:account-cog"
+
+
+def test_batch_konfig_backup():
+    assert _has_label("sensor.konfig_backup", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.konfig_backup"), OrganizerOptions()) == "mdi:backup-restore"
+
+
+def test_batch_settings_export():
+    assert _has_label("sensor.settings_export", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.settings_export"), OrganizerOptions()) == "mdi:export"
+
+
+def test_batch_reconfigure():
+    assert _has_label("sensor.reconfigure", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.reconfigure"), OrganizerOptions()) == "mdi:cog-refresh"
+
+
+def test_batch_schwellwert_einstellung():
+    assert _has_label("sensor.schwellwert_einstellung", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.schwellwert_einstellung"), OrganizerOptions()) == "mdi:tune-variant"
+
+
+def test_batch_naechste_version():
+    assert _has_label("sensor.naechste_version", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.naechste_version"), OrganizerOptions()) == "mdi:update"

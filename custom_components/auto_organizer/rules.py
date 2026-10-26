@@ -43567,6 +43567,14 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     # --- incremental vocabulary batch (auto-generated + collision-checked) ---
     "zbminir2": "mdi:light-switch",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "einstellungsprofil": "mdi:account-cog",
+    "konfig backup": "mdi:backup-restore",
+    "settings export": "mdi:export",
+    "reconfigure": "mdi:cog-refresh",
+    "schwellwert einstellung": "mdi:tune-variant",
+    "naechste version": "mdi:update",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -88029,6 +88037,14 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     # --- incremental vocabulary batch (auto-generated + collision-checked) ---
     " wago ": "switches",
     "zbminir2": "switches",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "einstellungsprofil": "config",
+    "konfig backup": "config",
+    "settings export": "config",
+    "reconfigure": "config",
+    "schwellwert einstellung": "config",
+    "naechste version": "updates",
 
 }
 
