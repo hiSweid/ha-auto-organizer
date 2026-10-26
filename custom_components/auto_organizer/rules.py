@@ -43385,6 +43385,30 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "cost alert": "mdi:bell-alert",
     "heizoel kosten": "mdi:cash-multiple",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "ring base station": "mdi:shield-home",
+    "adt pulse": "mdi:shield-home",
+    "x sense rauchmelder": "mdi:smoke-detector",
+    "hekatron genius": "mdi:smoke-detector",
+    "garagentor kontakt": "mdi:garage",
+    "perimeter sensor": "mdi:fence",
+    "dual tech melder": "mdi:motion-sensor",
+    "disarmed": "mdi:shield-off",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "fritzbox 6690": "mdi:router-wireless",
+    "fritzbox 7530": "mdi:router-wireless",
+    "unifi nanohd": "mdi:access-point",
+    "udm pro": "mdi:router-network",
+    "asus zenwifi": "mdi:wifi",
+    "site to site vpn": "mdi:vpn",
+    "unbound dns": "mdi:dns",
+    "nextdns": "mdi:dns",
+    "fritz nas": "mdi:nas",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "propane detector": "mdi:gas-cylinder",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -87630,6 +87654,53 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "price limit": "cost",
     "cost alert": "cost",
     "heizoel kosten": "cost",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "ring base station": "security",
+    "adt pulse": "security",
+    "x sense rauchmelder": "security",
+    "hekatron genius": "security",
+    "garagentor kontakt": "security",
+    "perimeter sensor": "security",
+    "dual tech melder": "security",
+    "disarmed": "security",
+    "ring contact sensor": "security",
+    "telekom smart home alarm": "security",
+    "innogy alarm": "security",
+    "tresor sensor": "security",
+    "garage door sensor": "security",
+    "intrusion alarm": "security",
+    "scharfschalten": "security",
+    "medical alarm": "security",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "fritzbox 6690": "network",
+    "fritzbox 7530": "network",
+    "unifi nanohd": "network",
+    "udm pro": "network",
+    "asus zenwifi": "network",
+    "site to site vpn": "network",
+    "unbound dns": "network",
+    "nextdns": "network",
+    "fritz nas": "network",
+    "fritzbox 6591": "network",
+    "fritzbox 5530": "network",
+    "fritz mesh": "network",
+    "unifi usg": "network",
+    "netgear nighthawk": "network",
+    "linksys velop": "network",
+    "wifi 7 router": "network",
+    "gigabit switch": "network",
+    "dsl router": "network",
+    "fritzbox 7690": "network",
+    "fritz wlan mesh": "network",
+    "netgear switch": "network",
+    "tplink switch": "network",
+    "wlan access point": "network",
+    "mobiler router": "network",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "propane detector": "leak",
 
 }
 

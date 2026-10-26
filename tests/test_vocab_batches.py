@@ -138864,3 +138864,185 @@ def test_batch_cost_alert():
 def test_batch_heizoel_kosten():
     assert _has_label("sensor.heizoel_kosten", "cost")
     assert suggest_entity_icon(_FakeEntry("sensor.heizoel_kosten"), OrganizerOptions()) == "mdi:cash-multiple"
+
+
+def test_batch_ring_base_station():
+    assert _has_label("sensor.ring_base_station", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.ring_base_station"), OrganizerOptions()) == "mdi:shield-home"
+
+
+def test_batch_adt_pulse():
+    assert _has_label("sensor.adt_pulse", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.adt_pulse"), OrganizerOptions()) == "mdi:shield-home"
+
+
+def test_batch_x_sense_rauchmelder():
+    assert _has_label("sensor.x_sense_rauchmelder", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.x_sense_rauchmelder"), OrganizerOptions()) == "mdi:smoke-detector"
+
+
+def test_batch_hekatron_genius():
+    assert _has_label("sensor.hekatron_genius", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.hekatron_genius"), OrganizerOptions()) == "mdi:smoke-detector"
+
+
+def test_batch_garagentor_kontakt():
+    assert _has_label("sensor.garagentor_kontakt", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.garagentor_kontakt"), OrganizerOptions()) == "mdi:garage"
+
+
+def test_batch_perimeter_sensor():
+    assert _has_label("sensor.perimeter_sensor", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.perimeter_sensor"), OrganizerOptions()) == "mdi:fence"
+
+
+def test_batch_dual_tech_melder():
+    assert _has_label("sensor.dual_tech_melder", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.dual_tech_melder"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_batch_disarmed():
+    assert _has_label("sensor.disarmed", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.disarmed"), OrganizerOptions()) == "mdi:shield-off"
+
+
+def test_batch_ring_contact_sensor():
+    assert _has_label("sensor.ring_contact_sensor", "security")
+
+
+def test_batch_telekom_smart_home_alarm():
+    assert _has_label("sensor.telekom_smart_home_alarm", "security")
+
+
+def test_batch_innogy_alarm():
+    assert _has_label("sensor.innogy_alarm", "security")
+
+
+def test_batch_tresor_sensor():
+    assert _has_label("sensor.tresor_sensor", "security")
+
+
+def test_batch_garage_door_sensor():
+    assert _has_label("sensor.garage_door_sensor", "security")
+
+
+def test_batch_intrusion_alarm():
+    assert _has_label("sensor.intrusion_alarm", "security")
+
+
+def test_batch_scharfschalten():
+    assert _has_label("sensor.scharfschalten", "security")
+
+
+def test_batch_medical_alarm():
+    assert _has_label("sensor.medical_alarm", "security")
+
+
+def test_batch_fritzbox_6690():
+    assert _has_label("sensor.fritzbox_6690", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.fritzbox_6690"), OrganizerOptions()) == "mdi:router-wireless"
+
+
+def test_batch_fritzbox_7530():
+    assert _has_label("sensor.fritzbox_7530", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.fritzbox_7530"), OrganizerOptions()) == "mdi:router-wireless"
+
+
+def test_batch_unifi_nanohd():
+    assert _has_label("sensor.unifi_nanohd", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.unifi_nanohd"), OrganizerOptions()) == "mdi:access-point"
+
+
+def test_batch_udm_pro():
+    assert _has_label("sensor.udm_pro", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.udm_pro"), OrganizerOptions()) == "mdi:router-network"
+
+
+def test_batch_asus_zenwifi():
+    assert _has_label("sensor.asus_zenwifi", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.asus_zenwifi"), OrganizerOptions()) == "mdi:wifi"
+
+
+def test_batch_site_to_site_vpn():
+    assert _has_label("sensor.site_to_site_vpn", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.site_to_site_vpn"), OrganizerOptions()) == "mdi:vpn"
+
+
+def test_batch_unbound_dns():
+    assert _has_label("sensor.unbound_dns", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.unbound_dns"), OrganizerOptions()) == "mdi:dns"
+
+
+def test_batch_nextdns():
+    assert _has_label("sensor.nextdns", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.nextdns"), OrganizerOptions()) == "mdi:dns"
+
+
+def test_batch_fritz_nas():
+    assert _has_label("sensor.fritz_nas", "network")
+    assert suggest_entity_icon(_FakeEntry("sensor.fritz_nas"), OrganizerOptions()) == "mdi:nas"
+
+
+def test_batch_fritzbox_6591():
+    assert _has_label("sensor.fritzbox_6591", "network")
+
+
+def test_batch_fritzbox_5530():
+    assert _has_label("sensor.fritzbox_5530", "network")
+
+
+def test_batch_fritz_mesh():
+    assert _has_label("sensor.fritz_mesh", "network")
+
+
+def test_batch_unifi_usg():
+    assert _has_label("sensor.unifi_usg", "network")
+
+
+def test_batch_netgear_nighthawk():
+    assert _has_label("sensor.netgear_nighthawk", "network")
+
+
+def test_batch_linksys_velop():
+    assert _has_label("sensor.linksys_velop", "network")
+
+
+def test_batch_wifi_7_router():
+    assert _has_label("sensor.wifi_7_router", "network")
+
+
+def test_batch_gigabit_switch():
+    assert _has_label("sensor.gigabit_switch", "network")
+
+
+def test_batch_dsl_router():
+    assert _has_label("sensor.dsl_router", "network")
+
+
+def test_batch_fritzbox_7690():
+    assert _has_label("sensor.fritzbox_7690", "network")
+
+
+def test_batch_fritz_wlan_mesh():
+    assert _has_label("sensor.fritz_wlan_mesh", "network")
+
+
+def test_batch_netgear_switch():
+    assert _has_label("sensor.netgear_switch", "network")
+
+
+def test_batch_tplink_switch():
+    assert _has_label("sensor.tplink_switch", "network")
+
+
+def test_batch_wlan_access_point():
+    assert _has_label("sensor.wlan_access_point", "network")
+
+
+def test_batch_mobiler_router():
+    assert _has_label("sensor.mobiler_router", "network")
+
+
+def test_batch_propane_detector():
+    assert _has_label("sensor.propane_detector", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.propane_detector"), OrganizerOptions()) == "mdi:gas-cylinder"
