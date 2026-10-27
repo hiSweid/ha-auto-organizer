@@ -1,6 +1,7 @@
 {
   "domain": "auto_organizer",
   "name": "Entity Auto-Organizer",
+  "categories": ["helpers"],
   "codeowners": [
     "@hiSweid"
   ],

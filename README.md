@@ -1,6 +1,6 @@
 # Entity Auto-Organizer for Home Assistant
 
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg)](https://github.com/hacs/integration)
+[![Marketplace | HACS Default](https://img.shields.io/badge/Marketplace%20%7C%20HACS-Default-41BDF5.svg)](https://www.hacs.xyz/docs/marketplace/)
 
 Automatically assigns [Labels](https://www.home-assistant.io/docs/organizing/labels/),
 **Areas** and **Icons** to your entities — by domain, device class, and
@@ -18,11 +18,20 @@ Automatically assigns [Labels](https://www.home-assistant.io/docs/organizing/lab
 
 ## Installation
 
-[![Open in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=hiSweid&repository=ha-auto-organizer&category=integration)
+[![Open in Marketplace / HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=hiSweid&repository=ha-auto-organizer&category=integration)
 
-In HACS since [hacs/default#8666](https://github.com/hacs/default/pull/8666):
-HACS → *Integrations* → search **Entity Auto-Organizer** → install → restart →
+In the default catalog since [hacs/default#8666](https://github.com/hacs/default/pull/8666).
+
+**Home Assistant 2026.11 and newer (Marketplace):** *Settings → Marketplace* →
+search **Entity Auto-Organizer** → **Install** (no GitHub account needed). The
+setup dialog opens right away; if Home Assistant asks for a restart (repair
+under *Settings → System → Repairs*), restart first, then add it under
 *Settings → Devices & Services → Add Integration → Entity Auto-Organizer*.
+HACS installs move to the Marketplace automatically on the update to 2026.11.
+
+**Home Assistant 2026.10 and older (HACS):** HACS → *Integrations* → search
+**Entity Auto-Organizer** → install → restart → *Settings → Devices & Services →
+Add Integration → Entity Auto-Organizer*.
 
 Manual: copy `custom_components/auto_organizer` into `config/custom_components/`.
 
