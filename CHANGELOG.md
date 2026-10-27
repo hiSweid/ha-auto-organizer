@@ -13,8 +13,6 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   batches since 0.11.30 (humidity, lights, scripts, cost, appliances, shopping,
   security, network, leak, presence, scenes, water, air quality, cameras, config,
   updates, sun, locks, media, plus device terms).
-- Marketplace metadata: the manifest declares `categories` (`helpers`), which the
-  Home Assistant 2026.11 Marketplace uses to browse integrations.
 
 ### Changed
 - The README documents installation through the Marketplace (Home Assistant
