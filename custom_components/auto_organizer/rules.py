@@ -43667,6 +43667,20 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "bewegungserkennung kamera": "mdi:motion-sensor",
     "zigbee mac": "mdi:zigbee",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "glasabholung": "mdi:bottle-wine",
+    "muelltonnen standort": "mdi:trash-can",
+    "grundrauschen schwelle": "mdi:tune",
+    "anzeigedauer": "mdi:timer-cog",
+    "thread kanal": "mdi:router-wireless",
+    "windboen": "mdi:weather-windy",
+    "froststufe": "mdi:snowflake-alert",
+    "biomuellabholung": "mdi:leaf",
+    "papiermuellabholung": "mdi:newspaper-variant",
+    "altpapierabholung": "mdi:newspaper-variant",
+    "muelltermin": "mdi:calendar-clock",
+    "abfallart": "mdi:recycle",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -88220,6 +88234,20 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "updatehinweise": "updates",
     "max cube": "climate",
     "kentix": "security",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "glasabholung": "waste",
+    "muelltonnen standort": "waste",
+    "grundrauschen schwelle": "config",
+    "anzeigedauer": "config",
+    "thread kanal": "config",
+    "windboen": "weather",
+    "froststufe": "weather",
+    "biomuellabholung": "waste",
+    "papiermuellabholung": "waste",
+    "altpapierabholung": "waste",
+    "muelltermin": "waste",
+    "abfallart": "waste",
 
 }
 

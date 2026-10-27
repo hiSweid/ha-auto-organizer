@@ -140338,3 +140338,63 @@ def test_icon_backfill_bewegungserkennung_kamera():
 
 def test_icon_backfill_zigbee_mac():
     assert suggest_entity_icon(_FakeEntry("sensor.zigbee_mac"), OrganizerOptions()) == "mdi:zigbee"
+
+
+def test_batch_glasabholung():
+    assert _has_label("sensor.glasabholung", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.glasabholung"), OrganizerOptions()) == "mdi:bottle-wine"
+
+
+def test_batch_muelltonnen_standort():
+    assert _has_label("sensor.muelltonnen_standort", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.muelltonnen_standort"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_batch_grundrauschen_schwelle():
+    assert _has_label("sensor.grundrauschen_schwelle", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.grundrauschen_schwelle"), OrganizerOptions()) == "mdi:tune"
+
+
+def test_batch_anzeigedauer():
+    assert _has_label("sensor.anzeigedauer", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.anzeigedauer"), OrganizerOptions()) == "mdi:timer-cog"
+
+
+def test_batch_thread_kanal():
+    assert _has_label("sensor.thread_kanal", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.thread_kanal"), OrganizerOptions()) == "mdi:router-wireless"
+
+
+def test_batch_windboen():
+    assert _has_label("sensor.windboen", "weather")
+    assert suggest_entity_icon(_FakeEntry("sensor.windboen"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_batch_froststufe():
+    assert _has_label("sensor.froststufe", "weather")
+    assert suggest_entity_icon(_FakeEntry("sensor.froststufe"), OrganizerOptions()) == "mdi:snowflake-alert"
+
+
+def test_batch_biomuellabholung():
+    assert _has_label("sensor.biomuellabholung", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.biomuellabholung"), OrganizerOptions()) == "mdi:leaf"
+
+
+def test_batch_papiermuellabholung():
+    assert _has_label("sensor.papiermuellabholung", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.papiermuellabholung"), OrganizerOptions()) == "mdi:newspaper-variant"
+
+
+def test_batch_altpapierabholung():
+    assert _has_label("sensor.altpapierabholung", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.altpapierabholung"), OrganizerOptions()) == "mdi:newspaper-variant"
+
+
+def test_batch_muelltermin():
+    assert _has_label("sensor.muelltermin", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.muelltermin"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_batch_abfallart():
+    assert _has_label("sensor.abfallart", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.abfallart"), OrganizerOptions()) == "mdi:recycle"
