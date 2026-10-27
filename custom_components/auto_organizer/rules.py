@@ -43575,6 +43575,22 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "schwellwert einstellung": "mdi:tune-variant",
     "naechste version": "mdi:update",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "config backup": "mdi:backup-restore",
+    "setup assistent": "mdi:wizard-hat",
+    "konfig export": "mdi:export",
+    "media library": "mdi:folder-multiple-image",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "rollback version": "mdi:backup-restore",
+    "aktueller song": "mdi:music-note",
+    "current track": "mdi:music-note",
+    "album name": "mdi:album",
+    "lautstaerke medien": "mdi:volume-high",
+    "sonnenaufgang zeit": "mdi:weather-sunset-up",
+    "sonnenuntergang zeit": "mdi:weather-sunset-down",
+    "sonnenstand azimut": "mdi:sun-compass",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -88045,6 +88061,22 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "reconfigure": "config",
     "schwellwert einstellung": "config",
     "naechste version": "updates",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "config backup": "config",
+    "setup assistent": "config",
+    "konfig export": "config",
+    "media library": "media",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "rollback version": "updates",
+    "aktueller song": "media",
+    "current track": "media",
+    "album name": "media",
+    "lautstaerke medien": "media",
+    "sonnenaufgang zeit": "sun",
+    "sonnenuntergang zeit": "sun",
+    "sonnenstand azimut": "sun",
 
 }
 

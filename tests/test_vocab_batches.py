@@ -139895,3 +139895,63 @@ def test_batch_schwellwert_einstellung():
 def test_batch_naechste_version():
     assert _has_label("sensor.naechste_version", "updates")
     assert suggest_entity_icon(_FakeEntry("sensor.naechste_version"), OrganizerOptions()) == "mdi:update"
+
+
+def test_batch_config_backup():
+    assert _has_label("sensor.config_backup", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.config_backup"), OrganizerOptions()) == "mdi:backup-restore"
+
+
+def test_batch_setup_assistent():
+    assert _has_label("sensor.setup_assistent", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.setup_assistent"), OrganizerOptions()) == "mdi:wizard-hat"
+
+
+def test_batch_konfig_export():
+    assert _has_label("sensor.konfig_export", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.konfig_export"), OrganizerOptions()) == "mdi:export"
+
+
+def test_batch_media_library():
+    assert _has_label("sensor.media_library", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.media_library"), OrganizerOptions()) == "mdi:folder-multiple-image"
+
+
+def test_batch_rollback_version():
+    assert _has_label("sensor.rollback_version", "updates")
+    assert suggest_entity_icon(_FakeEntry("sensor.rollback_version"), OrganizerOptions()) == "mdi:backup-restore"
+
+
+def test_batch_aktueller_song():
+    assert _has_label("sensor.aktueller_song", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.aktueller_song"), OrganizerOptions()) == "mdi:music-note"
+
+
+def test_batch_current_track():
+    assert _has_label("sensor.current_track", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.current_track"), OrganizerOptions()) == "mdi:music-note"
+
+
+def test_batch_album_name():
+    assert _has_label("sensor.album_name", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.album_name"), OrganizerOptions()) == "mdi:album"
+
+
+def test_batch_lautstaerke_medien():
+    assert _has_label("sensor.lautstaerke_medien", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.lautstaerke_medien"), OrganizerOptions()) == "mdi:volume-high"
+
+
+def test_batch_sonnenaufgang_zeit():
+    assert _has_label("sensor.sonnenaufgang_zeit", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenaufgang_zeit"), OrganizerOptions()) == "mdi:weather-sunset-up"
+
+
+def test_batch_sonnenuntergang_zeit():
+    assert _has_label("sensor.sonnenuntergang_zeit", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenuntergang_zeit"), OrganizerOptions()) == "mdi:weather-sunset-down"
+
+
+def test_batch_sonnenstand_azimut():
+    assert _has_label("sensor.sonnenstand_azimut", "sun")
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenstand_azimut"), OrganizerOptions()) == "mdi:sun-compass"
