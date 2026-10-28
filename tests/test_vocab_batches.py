@@ -124489,11 +124489,6 @@ def test_batch_minianlage():
     assert suggest_entity_icon(_FakeEntry("sensor.minianlage"), OrganizerOptions()) == "mdi:speaker"
 
 
-def test_batch_wohnzimmer_tv():
-    assert _has_label("sensor.wohnzimmer_tv", "media")
-    assert suggest_entity_icon(_FakeEntry("sensor.wohnzimmer_tv"), OrganizerOptions()) == "mdi:television"
-
-
 def test_batch_schlafzimmer_tv():
     assert _has_label("sensor.schlafzimmer_tv", "media")
     assert suggest_entity_icon(_FakeEntry("sensor.schlafzimmer_tv"), OrganizerOptions()) == "mdi:television"
@@ -140857,3 +140852,480 @@ def test_batch_wetterkachel():
 def test_batch_persoenliche_wetterstation():
     assert _has_label("sensor.persoenliche_wetterstation", "weather")
     assert suggest_entity_icon(_FakeEntry("sensor.persoenliche_wetterstation"), OrganizerOptions()) == "mdi:weather-partly-cloudy"
+
+
+def test_batch_pop_up_regner():
+    assert _has_label("sensor.pop_up_regner", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.pop_up_regner"), OrganizerOptions()) == "mdi:sprinkler-variant"
+
+
+def test_batch_hecken_trimmer():
+    assert _has_label("sensor.hecken_trimmer", "garden")
+
+
+def test_batch_igelhaus():
+    assert _has_label("sensor.igelhaus", "garden")
+
+
+def test_batch_gartenhacksler():
+    assert _has_label("sensor.gartenhacksler", "garden")
+
+
+def test_batch_sickerschlauch():
+    assert _has_label("sensor.sickerschlauch", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.sickerschlauch"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_batch_zisterne_garten():
+    assert _has_label("sensor.zisterne_garten", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.zisterne_garten"), OrganizerOptions()) == "mdi:water-well"
+
+
+def test_batch_heizstrahler_terrasse():
+    assert _has_label("sensor.heizstrahler_terrasse", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.heizstrahler_terrasse"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_batch_pergola_lamellen():
+    assert _has_label("sensor.pergola_lamellen", "garden")
+
+
+def test_batch_windwaechter_markise():
+    assert _has_label("sensor.windwaechter_markise", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.windwaechter_markise"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_batch_gartenhaus_licht():
+    assert _has_label("sensor.gartenhaus_licht", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenhaus_licht"), OrganizerOptions()) == "mdi:outdoor-lamp"
+
+
+def test_batch_gartenteich_pumpe():
+    assert _has_label("sensor.gartenteich_pumpe", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenteich_pumpe"), OrganizerOptions()) == "mdi:water-pump"
+
+
+def test_batch_uv_klaerer_teich():
+    assert _has_label("sensor.uv_klaerer_teich", "garden")
+
+
+def test_batch_pool_abdeckung():
+    assert _has_label("sensor.pool_abdeckung", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.pool_abdeckung"), OrganizerOptions()) == "mdi:pool"
+
+
+def test_batch_solarabsorber_pool():
+    assert _has_label("sensor.solarabsorber_pool", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.solarabsorber_pool"), OrganizerOptions()) == "mdi:solar-panel"
+
+
+def test_batch_wildkamera_garten():
+    assert _has_label("sensor.wildkamera_garten", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.wildkamera_garten"), OrganizerOptions()) == "mdi:cctv"
+
+
+def test_batch_gewaechshaus_heizung():
+    assert _has_label("sensor.gewaechshaus_heizung", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.gewaechshaus_heizung"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_batch_anzuchtlampe():
+    assert _has_label("sensor.anzuchtlampe", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.anzuchtlampe"), OrganizerOptions()) == "mdi:lightbulb-on"
+
+
+def test_batch_luba_mower():
+    assert _has_label("sensor.luba_mower", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.luba_mower"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_yuka_mower():
+    assert _has_label("sensor.yuka_mower", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.yuka_mower"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_regensensor_rasen():
+    assert _has_label("sensor.regensensor_rasen", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.regensensor_rasen"), OrganizerOptions()) == "mdi:weather-rainy"
+
+
+def test_batch_spiessleuchte():
+    assert _has_label("sensor.spiessleuchte", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.spiessleuchte"), OrganizerOptions()) == "mdi:outdoor-lamp"
+
+
+def test_batch_erdspiess_strahler():
+    assert _has_label("sensor.erdspiess_strahler", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.erdspiess_strahler"), OrganizerOptions()) == "mdi:outdoor-lamp"
+
+
+def test_batch_fassadenstrahler_garten():
+    assert _has_label("sensor.fassadenstrahler_garten", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.fassadenstrahler_garten"), OrganizerOptions()) == "mdi:outdoor-lamp"
+
+
+def test_batch_solarlampe_garten():
+    assert _has_label("sensor.solarlampe_garten", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.solarlampe_garten"), OrganizerOptions()) == "mdi:solar-power"
+
+
+def test_batch_steckdose_terrasse():
+    assert _has_label("sensor.steckdose_terrasse", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.steckdose_terrasse"), OrganizerOptions()) == "mdi:power-socket-eu"
+
+
+def test_batch_gartentor_antrieb():
+    assert _has_label("sensor.gartentor_antrieb", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.gartentor_antrieb"), OrganizerOptions()) == "mdi:gate"
+
+
+def test_batch_schiebetor_garten():
+    assert _has_label("sensor.schiebetor_garten", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.schiebetor_garten"), OrganizerOptions()) == "mdi:gate"
+
+
+def test_batch_elektrozaun_weide():
+    assert _has_label("sensor.elektrozaun_weide", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.elektrozaun_weide"), OrganizerOptions()) == "mdi:fence-electric"
+
+
+def test_batch_vorgarten_licht():
+    assert _has_label("sensor.vorgarten_licht", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.vorgarten_licht"), OrganizerOptions()) == "mdi:outdoor-lamp"
+
+
+def test_batch_kompost_thermometer():
+    assert _has_label("sensor.kompost_thermometer", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.kompost_thermometer"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_batch_wurmkompost():
+    assert _has_label("sensor.wurmkompost", "garden")
+
+
+def test_batch_grill_thermometer():
+    assert _has_label("sensor.grill_thermometer", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.grill_thermometer"), OrganizerOptions()) == "mdi:thermometer"
+
+
+def test_batch_feuerkorb():
+    assert _has_label("sensor.feuerkorb", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.feuerkorb"), OrganizerOptions()) == "mdi:fire"
+
+
+def test_batch_outdoor_kueche():
+    assert _has_label("sensor.outdoor_kueche", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.outdoor_kueche"), OrganizerOptions()) == "mdi:grill"
+
+
+def test_batch_wetterstation_garten():
+    assert _has_label("sensor.wetterstation_garten", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.wetterstation_garten"), OrganizerOptions()) == "mdi:weather-partly-cloudy"
+
+
+def test_batch_bresser_wetter():
+    assert _has_label("sensor.bresser_wetter", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.bresser_wetter"), OrganizerOptions()) == "mdi:weather-partly-cloudy"
+
+
+def test_batch_schaukel():
+    assert _has_label("sensor.schaukel", "garden")
+
+
+def test_batch_robovac_g30():
+    assert _has_label("sensor.robovac_g30", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.robovac_g30"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_mop_2_pro():
+    assert _has_label("sensor.mop_2_pro", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.mop_2_pro"), OrganizerOptions()) == "mdi:robot-vacuum-variant"
+
+
+def test_batch_airrobo_p20():
+    assert _has_label("sensor.airrobo_p20", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.airrobo_p20"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_vacuum_wohnzimmer():
+    assert _has_label("sensor.vacuum_wohnzimmer", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.vacuum_wohnzimmer"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_vacuum_kueche():
+    assert _has_label("sensor.vacuum_kueche", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.vacuum_kueche"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_mijia_saugroboter():
+    assert _has_label("sensor.mijia_saugroboter", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.mijia_saugroboter"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_wyze_robot_vacuum():
+    assert _has_label("sensor.wyze_robot_vacuum", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.wyze_robot_vacuum"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_roborock_dock():
+    assert _has_label("sensor.roborock_dock", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.roborock_dock"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_hauptbuerste_saugroboter():
+    assert _has_label("sensor.hauptbuerste_saugroboter", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.hauptbuerste_saugroboter"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_staubbehaelter_saugroboter():
+    assert _has_label("sensor.staubbehaelter_saugroboter", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.staubbehaelter_saugroboter"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_dock_station_vacuum():
+    assert _has_label("sensor.dock_station_vacuum", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.dock_station_vacuum"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_vacuum_cleaner_robot():
+    assert _has_label("sensor.vacuum_cleaner_robot", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.vacuum_cleaner_robot"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_kehrmaschine_roboter():
+    assert _has_label("sensor.kehrmaschine_roboter", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.kehrmaschine_roboter"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_dreame_d9():
+    assert _has_label("sensor.dreame_d9", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.dreame_d9"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_dreame_z10():
+    assert _has_label("sensor.dreame_z10", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.dreame_z10"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_ecovacs_n8():
+    assert _has_label("sensor.ecovacs_n8", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.ecovacs_n8"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_ecovacs_winbot():
+    assert _has_label("sensor.ecovacs_winbot", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.ecovacs_winbot"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_tapo_rv20():
+    assert _has_label("sensor.tapo_rv20", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.tapo_rv20"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_vorwerk_kobold_vr300():
+    assert _has_label("sensor.vorwerk_kobold_vr300", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.vorwerk_kobold_vr300"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_kobold_vr200():
+    assert _has_label("sensor.kobold_vr200", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.kobold_vr200"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_lg_cordzero_roboking():
+    assert _has_label("sensor.lg_cordzero_roboking", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.lg_cordzero_roboking"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_ilife_v3s():
+    assert _has_label("sensor.ilife_v3s", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.ilife_v3s"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_ilife_a10():
+    assert _has_label("sensor.ilife_a10", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.ilife_a10"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_silvercrest_saugroboter():
+    assert _has_label("sensor.silvercrest_saugroboter", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.silvercrest_saugroboter"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_rowenta_xplorer():
+    assert _has_label("sensor.rowenta_xplorer", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.rowenta_xplorer"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_saugroboter_wohnzimmer():
+    assert _has_label("sensor.saugroboter_wohnzimmer", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.saugroboter_wohnzimmer"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_saugroboter_flur():
+    assert _has_label("sensor.saugroboter_flur", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.saugroboter_flur"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_saugroboter_kueche():
+    assert _has_label("sensor.saugroboter_kueche", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.saugroboter_kueche"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_saugroboter_schlafzimmer():
+    assert _has_label("sensor.saugroboter_schlafzimmer", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.saugroboter_schlafzimmer"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_wischroboter_kueche():
+    assert _has_label("sensor.wischroboter_kueche", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.wischroboter_kueche"), OrganizerOptions()) == "mdi:robot-vacuum-variant"
+
+
+def test_batch_roboter_staubsauger():
+    assert _has_label("sensor.roboter_staubsauger", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.roboter_staubsauger"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_roboter_sauger():
+    assert _has_label("sensor.roboter_sauger", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.roboter_sauger"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_vacuum_cleaner_wohnzimmer():
+    assert _has_label("sensor.vacuum_cleaner_wohnzimmer", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.vacuum_cleaner_wohnzimmer"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_bot_vacuum():
+    assert _has_label("sensor.bot_vacuum", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.bot_vacuum"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_canton():
+    assert _has_label("sensor.canton", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.canton"), OrganizerOptions()) == "mdi:speaker"
+
+
+def test_batch_jbl_charge():
+    assert _has_label("sensor.jbl_charge", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.jbl_charge"), OrganizerOptions()) == "mdi:speaker-bluetooth"
+
+
+def test_batch_mecool():
+    assert _has_label("sensor.mecool", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.mecool"), OrganizerOptions()) == "mdi:television-play"
+
+
+def test_batch_hisense_tv():
+    assert _has_label("sensor.hisense_tv", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.hisense_tv"), OrganizerOptions()) == "mdi:television"
+
+
+def test_batch_audiobookshelf():
+    assert _has_label("sensor.audiobookshelf", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.audiobookshelf"), OrganizerOptions()) == "mdi:book-music"
+
+
+def test_batch_kaleidescape():
+    assert _has_label("sensor.kaleidescape", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.kaleidescape"), OrganizerOptions()) == "mdi:movie-roll"
+
+
+def test_batch_yoto_player():
+    assert _has_label("sensor.yoto_player", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.yoto_player"), OrganizerOptions()) == "mdi:music-box"
+
+
+def test_batch_pioneer_avr():
+    assert _has_label("sensor.pioneer_avr", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.pioneer_avr"), OrganizerOptions()) == "mdi:audio-video"
+
+
+def test_batch_anthem_avr():
+    assert _has_label("sensor.anthem_avr", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.anthem_avr"), OrganizerOptions()) == "mdi:audio-video"
+
+
+def test_batch_nad_receiver():
+    assert _has_label("sensor.nad_receiver", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.nad_receiver"), OrganizerOptions()) == "mdi:audio-video"
+
+
+def test_batch_wiim_mini():
+    assert _has_label("sensor.wiim_mini", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.wiim_mini"), OrganizerOptions()) == "mdi:speaker-wireless"
+
+
+def test_batch_bluetooth_speaker():
+    assert _has_label("sensor.bluetooth_speaker", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.bluetooth_speaker"), OrganizerOptions()) == "mdi:speaker-bluetooth"
+
+
+def test_batch_nest_mini():
+    assert _has_label("sensor.nest_mini", "media")
+
+
+def test_batch_google_tv_streamer():
+    assert _has_label("sensor.google_tv_streamer", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.google_tv_streamer"), OrganizerOptions()) == "mdi:television-play"
+
+
+def test_batch_xiaomi_tv_box():
+    assert _has_label("sensor.xiaomi_tv_box", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.xiaomi_tv_box"), OrganizerOptions()) == "mdi:television-play"
+
+
+def test_batch_magentatv():
+    assert _has_label("sensor.magentatv", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.magentatv"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_batch_sky_receiver():
+    assert _has_label("sensor.sky_receiver", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.sky_receiver"), OrganizerOptions()) == "mdi:television-classic"
+
+
+def test_batch_hdmi_matrix():
+    assert _has_label("sensor.hdmi_matrix", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.hdmi_matrix"), OrganizerOptions()) == "mdi:video-input-hdmi"
+
+
+def test_batch_hdmi_switch():
+    assert _has_label("sensor.hdmi_switch", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.hdmi_switch"), OrganizerOptions()) == "mdi:video-input-hdmi"
+
+
+def test_batch_loewe_tv():
+    assert _has_label("sensor.loewe_tv", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.loewe_tv"), OrganizerOptions()) == "mdi:television"
+
+
+def test_batch_epson_beamer():
+    assert _has_label("sensor.epson_beamer", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.epson_beamer"), OrganizerOptions()) == "mdi:projector"
+
+
+def test_batch_benq_beamer():
+    assert _has_label("sensor.benq_beamer", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.benq_beamer"), OrganizerOptions()) == "mdi:projector"
+
+
+def test_batch_home_cinema():
+    assert _has_label("sensor.home_cinema", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.home_cinema"), OrganizerOptions()) == "mdi:theater"
+
+
+def test_batch_musikserver():
+    assert _has_label("sensor.musikserver", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.musikserver"), OrganizerOptions()) == "mdi:server"
+
+
+def test_batch_integra_receiver():
+    assert _has_label("sensor.integra_receiver", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.integra_receiver"), OrganizerOptions()) == "mdi:audio-video"
+
+
+def test_batch_streamer_verstaerker():
+    assert _has_label("sensor.streamer_verstaerker", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.streamer_verstaerker"), OrganizerOptions()) == "mdi:amplifier"
