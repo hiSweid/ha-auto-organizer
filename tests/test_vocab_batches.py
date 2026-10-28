@@ -141949,3 +141949,422 @@ def test_batch_mower_lift():
 def test_batch_zone_maeher():
     assert _has_label("sensor.zone_maeher", "mower")
     assert suggest_entity_icon(_FakeEntry("sensor.zone_maeher"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_shelly_2pm_gen4():
+    assert _has_label("sensor.shelly_2pm_gen4", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_2pm_gen4"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_shelly_mini_1pm_gen4():
+    assert _has_label("sensor.shelly_mini_1pm_gen4", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_mini_1pm_gen4"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_shelly_i4_gen4():
+    assert _has_label("sensor.shelly_i4_gen4", "switches")
+
+
+def test_batch_matter_wandschalter():
+    assert _has_label("sensor.matter_wandschalter", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.matter_wandschalter"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_batch_z2m_switch_state():
+    assert _has_label("sensor.z2m_switch_state", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.z2m_switch_state"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_batch_shelly_plus_plug_us():
+    assert _has_label("sensor.shelly_plus_plug_us", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_plus_plug_us"), OrganizerOptions()) == "mdi:power-socket-us"
+
+
+def test_batch_shelly_plus_plug_it():
+    assert _has_label("sensor.shelly_plus_plug_it", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_plus_plug_it"), OrganizerOptions()) == "mdi:power-socket-it"
+
+
+def test_batch_shelly_plus_plug_uk():
+    assert _has_label("sensor.shelly_plus_plug_uk", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_plus_plug_uk"), OrganizerOptions()) == "mdi:power-socket-uk"
+
+
+def test_batch_shelly_pro_1pm():
+    assert _has_label("sensor.shelly_pro_1pm", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_pro_1pm"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_shelly_pro_dual_cover():
+    assert _has_label("sensor.shelly_pro_dual_cover", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_pro_dual_cover"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_batch_shelly_qubino_wave_1():
+    assert _has_label("sensor.shelly_qubino_wave_1", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_qubino_wave_1"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_shelly_blu_remote():
+    assert _has_label("sensor.shelly_blu_remote", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_blu_remote"), OrganizerOptions()) == "mdi:remote"
+
+
+def test_batch_shelly_1_gen4():
+    assert _has_label("sensor.shelly_1_gen4", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_1_gen4"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_shelly_plug_us_gen4():
+    assert _has_label("sensor.shelly_plug_us_gen4", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_plug_us_gen4"), OrganizerOptions()) == "mdi:power-socket-us"
+
+
+def test_batch_shelly_dali_dimmer():
+    assert _has_label("sensor.shelly_dali_dimmer", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_dali_dimmer"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_batch_shelly_pro_dimmer_2pm():
+    assert _has_label("sensor.shelly_pro_dimmer_2pm", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_pro_dimmer_2pm"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_batch_shelly_vintage_bulb():
+    assert _has_label("sensor.shelly_vintage_bulb", "switches")
+
+
+def test_batch_aqara_t1_wall_switch():
+    assert _has_label("sensor.aqara_t1_wall_switch", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.aqara_t1_wall_switch"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_batch_aqara_h1_wireless_remote():
+    assert _has_label("sensor.aqara_h1_wireless_remote", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.aqara_h1_wireless_remote"), OrganizerOptions()) == "mdi:remote"
+
+
+def test_batch_aqara_e1_wall_switch():
+    assert _has_label("sensor.aqara_e1_wall_switch", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.aqara_e1_wall_switch"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_batch_aqara_single_switch_module_t1():
+    assert _has_label("sensor.aqara_single_switch_module_t1", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.aqara_single_switch_module_t1"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_aqara_smart_plug_eu():
+    assert _has_label("sensor.aqara_smart_plug_eu", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.aqara_smart_plug_eu"), OrganizerOptions()) == "mdi:power-socket-eu"
+
+
+def test_batch_aqara_dual_relay_t2():
+    assert _has_label("sensor.aqara_dual_relay_t2", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.aqara_dual_relay_t2"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_ikea_tradfri_control_outlet():
+    assert _has_label("sensor.ikea_tradfri_control_outlet", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.ikea_tradfri_control_outlet"), OrganizerOptions()) == "mdi:power-socket-eu"
+
+
+def test_batch_ikea_tradfri_on_off_switch():
+    assert _has_label("sensor.ikea_tradfri_on_off_switch", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.ikea_tradfri_on_off_switch"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_batch_ikea_symfonisk_fernbedienung():
+    assert _has_label("sensor.ikea_symfonisk_fernbedienung", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.ikea_symfonisk_fernbedienung"), OrganizerOptions()) == "mdi:remote"
+
+
+def test_batch_ikea_inspelning_plug():
+    assert _has_label("sensor.ikea_inspelning_plug", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.ikea_inspelning_plug"), OrganizerOptions()) == "mdi:power-socket-eu"
+
+
+def test_batch_tuya_smart_plug_zigbee():
+    assert _has_label("sensor.tuya_smart_plug_zigbee", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.tuya_smart_plug_zigbee"), OrganizerOptions()) == "mdi:power-socket-eu"
+
+
+def test_batch_tuya_ts0001():
+    assert _has_label("sensor.tuya_ts0001", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.tuya_ts0001"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_tuya_ts011f():
+    assert _has_label("sensor.tuya_ts011f", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.tuya_ts011f"), OrganizerOptions()) == "mdi:power-socket-eu"
+
+
+def test_batch_tuya_ts0121():
+    assert _has_label("sensor.tuya_ts0121", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.tuya_ts0121"), OrganizerOptions()) == "mdi:power-socket-eu"
+
+
+def test_batch_tuya_ts0002():
+    assert _has_label("sensor.tuya_ts0002", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.tuya_ts0002"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_tuya_ts0003():
+    assert _has_label("sensor.tuya_ts0003", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.tuya_ts0003"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_tuya_ts0004():
+    assert _has_label("sensor.tuya_ts0004", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.tuya_ts0004"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_tuya_ts0042():
+    assert _has_label("sensor.tuya_ts0042", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.tuya_ts0042"), OrganizerOptions()) == "mdi:gesture-tap-button"
+
+
+def test_batch_tuya_ts004f():
+    assert _has_label("sensor.tuya_ts004f", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.tuya_ts004f"), OrganizerOptions()) == "mdi:gesture-tap-button"
+
+
+def test_batch_tuya_ts130f():
+    assert _has_label("sensor.tuya_ts130f", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.tuya_ts130f"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_batch_matter_zwischenstecker():
+    assert _has_label("sensor.matter_zwischenstecker", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.matter_zwischenstecker"), OrganizerOptions()) == "mdi:power-plug"
+
+
+def test_batch_matter_dimmer_switch():
+    assert _has_label("sensor.matter_dimmer_switch", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.matter_dimmer_switch"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_batch_matter_onoff_plugin_unit():
+    assert _has_label("sensor.matter_onoff_plugin_unit", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.matter_onoff_plugin_unit"), OrganizerOptions()) == "mdi:power-socket-eu"
+
+
+def test_batch_matter_on_off_light_switch():
+    assert _has_label("sensor.matter_on_off_light_switch", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.matter_on_off_light_switch"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_batch_tado_wireless_thermostat():
+    assert _has_label("sensor.tado_wireless_thermostat", "switches")
+
+
+def test_batch_tado_x_steckdose():
+    assert _has_label("sensor.tado_x_steckdose", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.tado_x_steckdose"), OrganizerOptions()) == "mdi:power-socket-eu"
+
+
+def test_batch_zigbee2mqtt_plug():
+    assert _has_label("sensor.zigbee2mqtt_plug", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.zigbee2mqtt_plug"), OrganizerOptions()) == "mdi:power-socket-eu"
+
+
+def test_batch_zigbee2mqtt_relay():
+    assert _has_label("sensor.zigbee2mqtt_relay", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.zigbee2mqtt_relay"), OrganizerOptions()) == "mdi:electric-switch"
+
+
+def test_batch_zigbee2mqtt_wall_switch():
+    assert _has_label("sensor.zigbee2mqtt_wall_switch", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.zigbee2mqtt_wall_switch"), OrganizerOptions()) == "mdi:light-switch"
+
+
+def test_batch_zigbee2mqtt_power_on_behavior():
+    assert _has_label("sensor.zigbee2mqtt_power_on_behavior", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.zigbee2mqtt_power_on_behavior"), OrganizerOptions()) == "mdi:power"
+
+
+def test_batch_zigbee2mqtt_child_lock():
+    assert _has_label("sensor.zigbee2mqtt_child_lock", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.zigbee2mqtt_child_lock"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_batch_zigbee2mqtt_backlight_mode():
+    assert _has_label("sensor.zigbee2mqtt_backlight_mode", "switches")
+
+
+def test_batch_zigbee2mqtt_led_indicator():
+    assert _has_label("sensor.zigbee2mqtt_led_indicator", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.zigbee2mqtt_led_indicator"), OrganizerOptions()) == "mdi:led-on"
+
+
+def test_batch_zigbee2mqtt_switch_type():
+    assert _has_label("sensor.zigbee2mqtt_switch_type", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.zigbee2mqtt_switch_type"), OrganizerOptions()) == "mdi:toggle-switch"
+
+
+def test_batch_zigbee2mqtt_power_outage_memory():
+    assert _has_label("sensor.zigbee2mqtt_power_outage_memory", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.zigbee2mqtt_power_outage_memory"), OrganizerOptions()) == "mdi:power-plug-off"
+
+
+def test_batch_zigbee2mqtt_countdown():
+    assert _has_label("sensor.zigbee2mqtt_countdown", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.zigbee2mqtt_countdown"), OrganizerOptions()) == "mdi:timer"
+
+
+def test_batch_zigbee2mqtt_operation_mode():
+    assert _has_label("sensor.zigbee2mqtt_operation_mode", "switches")
+
+
+def test_batch_zigbee2mqtt_interlock():
+    assert _has_label("sensor.zigbee2mqtt_interlock", "switches")
+    assert suggest_entity_icon(_FakeEntry("sensor.zigbee2mqtt_interlock"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_batch_zigbee2mqtt_do_not_disturb():
+    assert _has_label("sensor.zigbee2mqtt_do_not_disturb", "switches")
+
+
+def test_batch_ajax_fireprotect():
+    assert _has_label("sensor.ajax_fireprotect", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.ajax_fireprotect"), OrganizerOptions()) == "mdi:smoke-detector"
+
+
+def test_batch_nest_guard():
+    assert _has_label("sensor.nest_guard", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.nest_guard"), OrganizerOptions()) == "mdi:shield-home"
+
+
+def test_batch_salto():
+    assert _has_label("sensor.salto", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.salto"), OrganizerOptions()) == "mdi:key-wireless"
+
+
+def test_batch_hmip_sws2():
+    assert _has_label("sensor.hmip_sws2", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.hmip_sws2"), OrganizerOptions()) == "mdi:smoke-detector"
+
+
+def test_batch_matter_heizkoerper():
+    assert _has_label("sensor.matter_heizkoerper", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.matter_heizkoerper"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_batch_hvac_action():
+    assert _has_label("sensor.hvac_action", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.hvac_action"), OrganizerOptions()) == "mdi:hvac"
+
+
+def test_batch_hvac_modus():
+    assert _has_label("sensor.hvac_modus", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.hvac_modus"), OrganizerOptions()) == "mdi:hvac"
+
+
+def test_batch_preset_eco():
+    assert _has_label("sensor.preset_eco", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.preset_eco"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_batch_klimaanlage_wohnzimmer():
+    assert _has_label("sensor.klimaanlage_wohnzimmer", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.klimaanlage_wohnzimmer"), OrganizerOptions()) == "mdi:air-conditioner"
+
+
+def test_batch_klimageraet_schlafzimmer():
+    assert _has_label("sensor.klimageraet_schlafzimmer", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.klimageraet_schlafzimmer"), OrganizerOptions()) == "mdi:air-conditioner"
+
+
+def test_batch_tado_fussbodenheizung():
+    assert _has_label("sensor.tado_fussbodenheizung", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.tado_fussbodenheizung"), OrganizerOptions()) == "mdi:heating-coil"
+
+
+def test_batch_tuya_heizkoerperventil():
+    assert _has_label("sensor.tuya_heizkoerperventil", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.tuya_heizkoerperventil"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_batch_tuya_thermostat_valve():
+    assert _has_label("sensor.tuya_thermostat_valve", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.tuya_thermostat_valve"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_batch_tuya_wandthermostat():
+    assert _has_label("sensor.tuya_wandthermostat", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.tuya_wandthermostat"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_batch_aqara_thermostat_e1():
+    assert _has_label("sensor.aqara_thermostat_e1", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.aqara_thermostat_e1"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_batch_aqara_smart_radiator_thermostat():
+    assert _has_label("sensor.aqara_smart_radiator_thermostat", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.aqara_smart_radiator_thermostat"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_batch_aqara_w100_thermostat():
+    assert _has_label("sensor.aqara_w100_thermostat", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.aqara_w100_thermostat"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_batch_ikea_starkvind_luftreiniger():
+    assert _has_label("sensor.ikea_starkvind_luftreiniger", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.ikea_starkvind_luftreiniger"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_batch_zigbee2mqtt_thermostat():
+    assert _has_label("sensor.zigbee2mqtt_thermostat", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.zigbee2mqtt_thermostat"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_batch_zigbee2mqtt_trv():
+    assert _has_label("sensor.zigbee2mqtt_trv", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.zigbee2mqtt_trv"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_batch_homematic_ip_fussbodenheizung():
+    assert _has_label("sensor.homematic_ip_fussbodenheizung", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.homematic_ip_fussbodenheizung"), OrganizerOptions()) == "mdi:heating-coil"
+
+
+def test_batch_avm_fritz_dect_thermostat():
+    assert _has_label("sensor.avm_fritz_dect_thermostat", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.avm_fritz_dect_thermostat"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_batch_zonenventil_heizung():
+    assert _has_label("sensor.zonenventil_heizung", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.zonenventil_heizung"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_batch_fensterkontakt_heizung():
+    assert _has_label("sensor.fensterkontakt_heizung", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.fensterkontakt_heizung"), OrganizerOptions()) == "mdi:window-open"
+
+
+def test_batch_zwave_thermostat():
+    assert _has_label("sensor.zwave_thermostat", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.zwave_thermostat"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_batch_thermostat_kopf():
+    assert _has_label("sensor.thermostat_kopf", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.thermostat_kopf"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_batch_wiser_heizkoerperthermostat():
+    assert _has_label("sensor.wiser_heizkoerperthermostat", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.wiser_heizkoerperthermostat"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_batch_bticino_thermostat():
+    assert _has_label("sensor.bticino_thermostat", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.bticino_thermostat"), OrganizerOptions()) == "mdi:thermostat"
+
+
+def test_batch_devolo_heizkoerperthermostat():
+    assert _has_label("sensor.devolo_heizkoerperthermostat", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.devolo_heizkoerperthermostat"), OrganizerOptions()) == "mdi:radiator"
