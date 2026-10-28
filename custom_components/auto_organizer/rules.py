@@ -43948,6 +43948,27 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "shelly button type": "mdi:gesture-tap-button",
     "tado child lock": "mdi:lock",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "batterieleiste": "mdi:battery",
+    "bms status": "mdi:battery-heart-variant",
+    "rolladenposition": "mdi:window-shutter",
+    "jalousieposition": "mdi:blinds",
+    "fahrzeit rolladen": "mdi:window-shutter",
+    "referenzfahrt": "mdi:window-shutter",
+    "duoblind": "mdi:blinds",
+    "shade position": "mdi:blinds",
+    "maeherstatus": "mdi:robot-mower",
+    "rtk station": "mdi:robot-mower",
+    "lithiumakku": "mdi:battery",
+    "akku kapazitaet": "mdi:battery-high",
+    "lamellenposition": "mdi:blinds",
+    "endlagenschalter": "mdi:window-shutter-cog",
+    "hindernisserkennung rollladen": "mdi:window-shutter-alert",
+    "pergola dach": "mdi:awning",
+    "blade wear": "mdi:robot-mower",
+    "mower lift": "mdi:robot-mower",
+    "zone maeher": "mdi:robot-mower",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -88836,6 +88857,27 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "aqara approach distance": "config",
     "shelly button type": "config",
     "tado child lock": "config",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "batterieleiste": "battery",
+    "bms status": "battery",
+    "rolladenposition": "covers",
+    "jalousieposition": "covers",
+    "fahrzeit rolladen": "covers",
+    "referenzfahrt": "covers",
+    "duoblind": "covers",
+    "shade position": "covers",
+    "maeherstatus": "mower",
+    "rtk station": "mower",
+    "lithiumakku": "battery",
+    "akku kapazitaet": "battery",
+    "lamellenposition": "covers",
+    "endlagenschalter": "covers",
+    "hindernisserkennung rollladen": "covers",
+    "pergola dach": "covers",
+    "blade wear": "mower",
+    "mower lift": "mower",
+    "zone maeher": "mower",
 
 }
 

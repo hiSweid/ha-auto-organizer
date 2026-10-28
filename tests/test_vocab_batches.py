@@ -141854,3 +141854,98 @@ def test_batch_shelly_button_type():
 def test_batch_tado_child_lock():
     assert _has_label("sensor.tado_child_lock", "config")
     assert suggest_entity_icon(_FakeEntry("sensor.tado_child_lock"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_batch_batterieleiste():
+    assert _has_label("sensor.batterieleiste", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.batterieleiste"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_batch_bms_status():
+    assert _has_label("sensor.bms_status", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.bms_status"), OrganizerOptions()) == "mdi:battery-heart-variant"
+
+
+def test_batch_rolladenposition():
+    assert _has_label("sensor.rolladenposition", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.rolladenposition"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_batch_jalousieposition():
+    assert _has_label("sensor.jalousieposition", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.jalousieposition"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_batch_fahrzeit_rolladen():
+    assert _has_label("sensor.fahrzeit_rolladen", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.fahrzeit_rolladen"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_batch_referenzfahrt():
+    assert _has_label("sensor.referenzfahrt", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.referenzfahrt"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_batch_duoblind():
+    assert _has_label("sensor.duoblind", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.duoblind"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_batch_shade_position():
+    assert _has_label("sensor.shade_position", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.shade_position"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_batch_maeherstatus():
+    assert _has_label("sensor.maeherstatus", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.maeherstatus"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_rtk_station():
+    assert _has_label("sensor.rtk_station", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.rtk_station"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_lithiumakku():
+    assert _has_label("sensor.lithiumakku", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.lithiumakku"), OrganizerOptions()) == "mdi:battery"
+
+
+def test_batch_akku_kapazitaet():
+    assert _has_label("sensor.akku_kapazitaet", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.akku_kapazitaet"), OrganizerOptions()) == "mdi:battery-high"
+
+
+def test_batch_lamellenposition():
+    assert _has_label("sensor.lamellenposition", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.lamellenposition"), OrganizerOptions()) == "mdi:blinds"
+
+
+def test_batch_endlagenschalter():
+    assert _has_label("sensor.endlagenschalter", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.endlagenschalter"), OrganizerOptions()) == "mdi:window-shutter-cog"
+
+
+def test_batch_hindernisserkennung_rollladen():
+    assert _has_label("sensor.hindernisserkennung_rollladen", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.hindernisserkennung_rollladen"), OrganizerOptions()) == "mdi:window-shutter-alert"
+
+
+def test_batch_pergola_dach():
+    assert _has_label("sensor.pergola_dach", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.pergola_dach"), OrganizerOptions()) == "mdi:awning"
+
+
+def test_batch_blade_wear():
+    assert _has_label("sensor.blade_wear", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.blade_wear"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_mower_lift():
+    assert _has_label("sensor.mower_lift", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.mower_lift"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_zone_maeher():
+    assert _has_label("sensor.zone_maeher", "mower")
+    assert suggest_entity_icon(_FakeEntry("sensor.zone_maeher"), OrganizerOptions()) == "mdi:robot-mower"
