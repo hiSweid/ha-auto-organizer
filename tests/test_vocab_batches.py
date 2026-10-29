@@ -143712,3 +143712,53 @@ def test_batch_karaoke_szene():
 def test_batch_halloween_szene():
     assert _has_label("sensor.halloween_szene", "scenes")
     assert suggest_entity_icon(_FakeEntry("sensor.halloween_szene"), OrganizerOptions()) == "mdi:halloween"
+
+
+def test_batch_prime_abo():
+    assert _has_label("sensor.prime_abo", "shopping")
+    assert suggest_entity_icon(_FakeEntry("sensor.prime_abo"), OrganizerOptions()) == "mdi:cart"
+
+
+def test_batch_awning_position():
+    assert _has_label("sensor.awning_position", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.awning_position"), OrganizerOptions()) == "mdi:awning"
+
+
+def test_batch_aufwach_routine():
+    assert _has_label("sensor.aufwach_routine", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.aufwach_routine"), OrganizerOptions()) == "mdi:script-text-play"
+
+
+def test_batch_einschlaf_routine():
+    assert _has_label("sensor.einschlaf_routine", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.einschlaf_routine"), OrganizerOptions()) == "mdi:script-text-play"
+
+
+def test_batch_putz_routine():
+    assert _has_label("sensor.putz_routine", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.putz_routine"), OrganizerOptions()) == "mdi:script-text-play"
+
+
+def test_batch_waesche_routine():
+    assert _has_label("sensor.waesche_routine", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.waesche_routine"), OrganizerOptions()) == "mdi:script-text-play"
+
+
+def test_batch_start_ablauf():
+    assert _has_label("sensor.start_ablauf", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.start_ablauf"), OrganizerOptions()) == "mdi:script-text-play"
+
+
+def test_batch_herunterfahr_ablauf():
+    assert _has_label("sensor.herunterfahr_ablauf", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.herunterfahr_ablauf"), OrganizerOptions()) == "mdi:script-text-play"
+
+
+def test_batch_arriving_routine():
+    assert _has_label("sensor.arriving_routine", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.arriving_routine"), OrganizerOptions()) == "mdi:script-text-play"
+
+
+def test_batch_morning_sequence():
+    assert _has_label("sensor.morning_sequence", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.morning_sequence"), OrganizerOptions()) == "mdi:script-text-play"

@@ -44291,6 +44291,18 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "karaoke szene": "mdi:microphone-variant",
     "halloween szene": "mdi:halloween",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "prime abo": "mdi:cart",
+    "awning position": "mdi:awning",
+    "aufwach routine": "mdi:script-text-play",
+    "einschlaf routine": "mdi:script-text-play",
+    "putz routine": "mdi:script-text-play",
+    "waesche routine": "mdi:script-text-play",
+    "start ablauf": "mdi:script-text-play",
+    "herunterfahr ablauf": "mdi:script-text-play",
+    "arriving routine": "mdi:script-text-play",
+    "morning sequence": "mdi:script-text-play",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -89583,6 +89595,18 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "musik szene": "scenes",
     "karaoke szene": "scenes",
     "halloween szene": "scenes",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "prime abo": "shopping",
+    "awning position": "covers",
+    "aufwach routine": "scripts",
+    "einschlaf routine": "scripts",
+    "putz routine": "scripts",
+    "waesche routine": "scripts",
+    "start ablauf": "scripts",
+    "herunterfahr ablauf": "scripts",
+    "arriving routine": "scripts",
+    "morning sequence": "scripts",
 
 }
 
