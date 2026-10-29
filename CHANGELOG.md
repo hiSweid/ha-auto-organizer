@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.32] - 2026-10-29
+
+### Added
+- 66 additional vocabulary entries (motion, sun, scenes).
+- The manifest declares `categories` (`helpers`), which the Home Assistant 2026.11
+  Marketplace uses to browse integrations.
+
 ## [0.11.31] - 2026-10-27
 
 ### Added
