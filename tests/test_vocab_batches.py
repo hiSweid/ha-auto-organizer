@@ -145912,3 +145912,53 @@ def test_batch_monthly_consumption():
 def test_batch_phantomlast():
     assert _has_label("sensor.phantomlast", "energy")
     assert suggest_entity_icon(_FakeEntry("sensor.phantomlast"), OrganizerOptions()) == "mdi:power-sleep"
+
+
+def test_batch_phono_preamp():
+    assert _has_label("sensor.phono_preamp", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.phono_preamp"), OrganizerOptions()) == "mdi:record-player"
+
+
+def test_batch_games_console():
+    assert _has_label("sensor.games_console", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.games_console"), OrganizerOptions()) == "mdi:gamepad-variant"
+
+
+def test_batch_sd_card():
+    assert _has_label("sensor.sd_card", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.sd_card"), OrganizerOptions()) == "mdi:sd"
+
+
+def test_batch_operating_hours():
+    assert _has_label("sensor.operating_hours", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.operating_hours"), OrganizerOptions()) == "mdi:wrench-clock"
+
+
+def test_batch_annual_statement():
+    assert _has_label("sensor.annual_statement", "cost")
+    assert suggest_entity_icon(_FakeEntry("sensor.annual_statement"), OrganizerOptions()) == "mdi:receipt-text"
+
+
+def test_batch_base_price():
+    assert _has_label("sensor.base_price", "cost")
+    assert suggest_entity_icon(_FakeEntry("sensor.base_price"), OrganizerOptions()) == "mdi:currency-eur"
+
+
+def test_batch_vinyl_player():
+    assert _has_label("sensor.vinyl_player", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.vinyl_player"), OrganizerOptions()) == "mdi:record-player"
+
+
+def test_batch_dab_tuner():
+    assert _has_label("sensor.dab_tuner", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.dab_tuner"), OrganizerOptions()) == "mdi:radio-tower"
+
+
+def test_batch_service_intervall():
+    assert _has_label("sensor.service_intervall", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.service_intervall"), OrganizerOptions()) == "mdi:wrench-clock"
+
+
+def test_batch_tagesabrechnung():
+    assert _has_label("sensor.tagesabrechnung", "cost")
+    assert suggest_entity_icon(_FakeEntry("sensor.tagesabrechnung"), OrganizerOptions()) == "mdi:cash-register"

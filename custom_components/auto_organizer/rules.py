@@ -44687,6 +44687,18 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "monthly consumption": "mdi:calendar-month",
     "phantomlast": "mdi:power-sleep",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "phono preamp": "mdi:record-player",
+    "games console": "mdi:gamepad-variant",
+    "sd card": "mdi:sd",
+    "operating hours": "mdi:wrench-clock",
+    "annual statement": "mdi:receipt-text",
+    "base price": "mdi:currency-eur",
+    "vinyl player": "mdi:record-player",
+    "dab tuner": "mdi:radio-tower",
+    "service intervall": "mdi:wrench-clock",
+    "tagesabrechnung": "mdi:cash-register",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -90478,6 +90490,18 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "daily consumption": "energy",
     "monthly consumption": "energy",
     "phantomlast": "energy",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "phono preamp": "media",
+    "games console": "media",
+    "sd card": "diagnostic",
+    "operating hours": "diagnostic",
+    "annual statement": "cost",
+    "base price": "cost",
+    "vinyl player": "media",
+    "dab tuner": "media",
+    "service intervall": "diagnostic",
+    "tagesabrechnung": "cost",
 
 }
 
