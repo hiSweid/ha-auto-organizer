@@ -44556,6 +44556,16 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "tuya voc": "mdi:smog",
     "qingping co2": "mdi:molecule-co2",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "timed action": "mdi:timer-play",
+    "hichi ir": "mdi:meter-electric",
+    "lesekopf zaehler": "mdi:meter-electric",
+    "phase current": "mdi:current-ac",
+    "rundsteuerung": "mdi:transmission-tower",
+    "grid voltage": "mdi:sine-wave",
+    "flowsafe": "mdi:pipe-valve",
+    "heating leak": "mdi:pipe-leak",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -90151,6 +90161,16 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "zigbee co2": "air_quality",
     "tuya voc": "air_quality",
     "qingping co2": "air_quality",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "timed action": "scripts",
+    "hichi ir": "energy",
+    "lesekopf zaehler": "energy",
+    "phase current": "energy",
+    "rundsteuerung": "energy",
+    "grid voltage": "energy",
+    "flowsafe": "leak",
+    "heating leak": "leak",
 
 }
 

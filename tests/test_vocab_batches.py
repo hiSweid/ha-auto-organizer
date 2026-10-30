@@ -145089,3 +145089,43 @@ def test_batch_tuya_voc():
 def test_batch_qingping_co2():
     assert _has_label("sensor.qingping_co2", "air_quality")
     assert suggest_entity_icon(_FakeEntry("sensor.qingping_co2"), OrganizerOptions()) == "mdi:molecule-co2"
+
+
+def test_batch_timed_action():
+    assert _has_label("sensor.timed_action", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.timed_action"), OrganizerOptions()) == "mdi:timer-play"
+
+
+def test_batch_hichi_ir():
+    assert _has_label("sensor.hichi_ir", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.hichi_ir"), OrganizerOptions()) == "mdi:meter-electric"
+
+
+def test_batch_lesekopf_zaehler():
+    assert _has_label("sensor.lesekopf_zaehler", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.lesekopf_zaehler"), OrganizerOptions()) == "mdi:meter-electric"
+
+
+def test_batch_phase_current():
+    assert _has_label("sensor.phase_current", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.phase_current"), OrganizerOptions()) == "mdi:current-ac"
+
+
+def test_batch_rundsteuerung():
+    assert _has_label("sensor.rundsteuerung", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.rundsteuerung"), OrganizerOptions()) == "mdi:transmission-tower"
+
+
+def test_batch_grid_voltage():
+    assert _has_label("sensor.grid_voltage", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.grid_voltage"), OrganizerOptions()) == "mdi:sine-wave"
+
+
+def test_batch_flowsafe():
+    assert _has_label("sensor.flowsafe", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.flowsafe"), OrganizerOptions()) == "mdi:pipe-valve"
+
+
+def test_batch_heating_leak():
+    assert _has_label("sensor.heating_leak", "leak")
+    assert suggest_entity_icon(_FakeEntry("sensor.heating_leak"), OrganizerOptions()) == "mdi:pipe-leak"
