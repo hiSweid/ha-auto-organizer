@@ -145129,3 +145129,346 @@ def test_batch_flowsafe():
 def test_batch_heating_leak():
     assert _has_label("sensor.heating_leak", "leak")
     assert suggest_entity_icon(_FakeEntry("sensor.heating_leak"), OrganizerOptions()) == "mdi:pipe-leak"
+
+
+def test_batch_dormakaba_schloss():
+    assert _has_label("sensor.dormakaba_schloss", "locks")
+
+
+def test_batch_assa_abloy_schloss():
+    assert _has_label("sensor.assa_abloy_schloss", "locks")
+
+
+def test_batch_zylinderschloss_elektronisch():
+    assert _has_label("sensor.zylinderschloss_elektronisch", "locks")
+
+
+def test_batch_tastenfeldschloss():
+    assert _has_label("sensor.tastenfeldschloss", "locks")
+
+
+def test_batch_autounlock():
+    assert _has_label("sensor.autounlock", "locks")
+
+
+def test_batch_jammed():
+    assert _has_label("sensor.jammed", "locks")
+
+
+def test_batch_unlocking():
+    assert _has_label("sensor.unlocking", "locks")
+
+
+def test_batch_lock_jam():
+    assert _has_label("sensor.lock_jam", "locks")
+
+
+def test_batch_latch_status():
+    assert _has_label("sensor.latch_status", "locks")
+
+
+def test_batch_bolt_status():
+    assert _has_label("sensor.bolt_status", "locks")
+
+
+def test_batch_schlosszustand():
+    assert _has_label("sensor.schlosszustand", "locks")
+
+
+def test_batch_riegelzustand():
+    assert _has_label("sensor.riegelzustand", "locks")
+
+
+def test_batch_schliesszustand():
+    assert _has_label("sensor.schliesszustand", "locks")
+
+
+def test_batch_schluessellos():
+    assert _has_label("sensor.schluessellos", "locks")
+
+
+def test_batch_burg_waechter_schloss():
+    assert _has_label("sensor.burg_waechter_schloss", "locks")
+
+
+def test_batch_tuerschlosscylinder():
+    assert _has_label("sensor.tuerschlosscylinder", "locks")
+
+
+def test_batch_wlan_schloss():
+    assert _has_label("sensor.wlan_schloss", "locks")
+
+
+def test_batch_fahrradschloss_smart():
+    assert _has_label("sensor.fahrradschloss_smart", "locks")
+
+
+def test_batch_tuerfallenstatus():
+    assert _has_label("sensor.tuerfallenstatus", "locks")
+
+
+def test_batch_pin_code_slot():
+    assert _has_label("sensor.pin_code_slot", "locks")
+
+
+def test_batch_tuerschloss_bluetooth():
+    assert _has_label("sensor.tuerschloss_bluetooth", "locks")
+
+
+def test_batch_aqara_smart_lock():
+    assert _has_label("sensor.aqara_smart_lock", "locks")
+
+
+def test_batch_eufy_tuerschloss():
+    assert _has_label("sensor.eufy_tuerschloss", "locks")
+
+
+def test_batch_schloss_batterie():
+    assert _has_label("sensor.schloss_batterie", "locks")
+
+
+def test_batch_lock_battery():
+    assert _has_label("sensor.lock_battery", "locks")
+
+
+def test_batch_tuer_entriegeln():
+    assert _has_label("sensor.tuer_entriegeln", "locks")
+
+
+def test_batch_tuer_verriegeln():
+    assert _has_label("sensor.tuer_verriegeln", "locks")
+
+
+def test_batch_tuer_aufschliessen():
+    assert _has_label("sensor.tuer_aufschliessen", "locks")
+
+
+def test_batch_tuer_abschliessen():
+    assert _has_label("sensor.tuer_abschliessen", "locks")
+
+
+def test_batch_door_unlock():
+    assert _has_label("sensor.door_unlock", "locks")
+
+
+def test_batch_front_door_lock():
+    assert _has_label("sensor.front_door_lock", "locks")
+
+
+def test_batch_back_door_lock():
+    assert _has_label("sensor.back_door_lock", "locks")
+
+
+def test_batch_tuer_offen_halten():
+    assert _has_label("sensor.tuer_offen_halten", "locks")
+
+
+def test_batch_leckagesonde():
+    assert _has_label("sensor.leckagesonde", "leak")
+
+
+def test_batch_leckagekabel():
+    assert _has_label("sensor.leckagekabel", "leak")
+
+
+def test_batch_tropfenmelder():
+    assert _has_label("sensor.tropfenmelder", "leak")
+
+
+def test_batch_tropfschutz():
+    assert _has_label("sensor.tropfschutz", "leak")
+
+
+def test_batch_wassermeldesensor():
+    assert _has_label("sensor.wassermeldesensor", "leak")
+
+
+def test_batch_wasseralarmgeber():
+    assert _has_label("sensor.wasseralarmgeber", "leak")
+
+
+def test_batch_sensorkabel_wasser():
+    assert _has_label("sensor.sensorkabel_wasser", "leak")
+
+
+def test_batch_feuchtigkeitsmelder_keller():
+    assert _has_label("sensor.feuchtigkeitsmelder_keller", "leak")
+
+
+def test_batch_water_leakage_sensor():
+    assert _has_label("sensor.water_leakage_sensor", "leak")
+
+
+def test_batch_netatmo_wassermelder():
+    assert _has_label("sensor.netatmo_wassermelder", "leak")
+
+
+def test_batch_innr_wassermelder():
+    assert _has_label("sensor.innr_wassermelder", "leak")
+
+
+def test_batch_homematic_hmip_swd():
+    assert _has_label("sensor.homematic_hmip_swd", "leak")
+
+
+def test_batch_hmip_swd():
+    assert _has_label("sensor.hmip_swd", "leak")
+
+
+def test_batch_waterguard():
+    assert _has_label("sensor.waterguard", "leak")
+
+
+def test_batch_wassersensor_waschmaschine():
+    assert _has_label("sensor.wassersensor_waschmaschine", "leak")
+
+
+def test_batch_wassersensor_spuelmaschine():
+    assert _has_label("sensor.wassersensor_spuelmaschine", "leak")
+
+
+def test_batch_wassersensor_heizung():
+    assert _has_label("sensor.wassersensor_heizung", "leak")
+
+
+def test_batch_wassersensor_keller():
+    assert _has_label("sensor.wassersensor_keller", "leak")
+
+
+def test_batch_wassersensor_bad():
+    assert _has_label("sensor.wassersensor_bad", "leak")
+
+
+def test_batch_wassersensor_kueche():
+    assert _has_label("sensor.wassersensor_kueche", "leak")
+
+
+def test_batch_wassersensor_unterm_waschbecken():
+    assert _has_label("sensor.wassersensor_unterm_waschbecken", "leak")
+
+
+def test_batch_wassersensor_boiler():
+    assert _has_label("sensor.wassersensor_boiler", "leak")
+
+
+def test_batch_wassersensor_aquarium():
+    assert _has_label("sensor.wassersensor_aquarium", "leak")
+
+
+def test_batch_sonoff_snzb_05p():
+    assert _has_label("sensor.sonoff_snzb_05p", "leak")
+
+
+def test_batch_skriptaktion():
+    assert _has_label("sensor.skriptaktion", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.skriptaktion"), OrganizerOptions()) == "mdi:script-text-outline"
+
+
+def test_batch_turn_off_everything():
+    assert _has_label("sensor.turn_off_everything", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.turn_off_everything"), OrganizerOptions()) == "mdi:power"
+
+
+def test_batch_macro_action():
+    assert _has_label("sensor.macro_action", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.macro_action"), OrganizerOptions()) == "mdi:play-box-multiple"
+
+
+def test_batch_bedingungsskript():
+    assert _has_label("sensor.bedingungsskript", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.bedingungsskript"), OrganizerOptions()) == "mdi:code-braces"
+
+
+def test_batch_hausverlassen_skript():
+    assert _has_label("sensor.hausverlassen_skript", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.hausverlassen_skript"), OrganizerOptions()) == "mdi:exit-run"
+
+
+def test_batch_heimkommen_skript():
+    assert _has_label("sensor.heimkommen_skript", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.heimkommen_skript"), OrganizerOptions()) == "mdi:home-import-outline"
+
+
+def test_batch_alles_aus_skript():
+    assert _has_label("sensor.alles_aus_skript", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.alles_aus_skript"), OrganizerOptions()) == "mdi:power"
+
+
+def test_batch_alle_lichter_aus():
+    assert _has_label("sensor.alle_lichter_aus", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.alle_lichter_aus"), OrganizerOptions()) == "mdi:lightbulb-group-off"
+
+
+def test_batch_rollaeden_hoch_skript():
+    assert _has_label("sensor.rollaeden_hoch_skript", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.rollaeden_hoch_skript"), OrganizerOptions()) == "mdi:window-shutter-open"
+
+
+def test_batch_rollaeden_runter_skript():
+    assert _has_label("sensor.rollaeden_runter_skript", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.rollaeden_runter_skript"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_batch_alarmskript():
+    assert _has_label("sensor.alarmskript", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.alarmskript"), OrganizerOptions()) == "mdi:alarm-light"
+
+
+def test_batch_panikskript():
+    assert _has_label("sensor.panikskript", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.panikskript"), OrganizerOptions()) == "mdi:alert-octagon"
+
+
+def test_batch_waschroutine():
+    assert _has_label("sensor.waschroutine", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.waschroutine"), OrganizerOptions()) == "mdi:washing-machine"
+
+
+def test_batch_kinoszene_start():
+    assert _has_label("sensor.kinoszene_start", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.kinoszene_start"), OrganizerOptions()) == "mdi:movie-open-play"
+
+
+def test_batch_ruhemodus_routine():
+    assert _has_label("sensor.ruhemodus_routine", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.ruhemodus_routine"), OrganizerOptions()) == "mdi:sleep"
+
+
+def test_batch_sparroutine():
+    assert _has_label("sensor.sparroutine", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.sparroutine"), OrganizerOptions()) == "mdi:piggy-bank"
+
+
+def test_batch_urlaubsskript():
+    assert _has_label("sensor.urlaubsskript", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.urlaubsskript"), OrganizerOptions()) == "mdi:airplane"
+
+
+def test_batch_scharfschalt_routine():
+    assert _has_label("sensor.scharfschalt_routine", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.scharfschalt_routine"), OrganizerOptions()) == "mdi:shield-lock"
+
+
+def test_batch_sprachbefehl_skript():
+    assert _has_label("sensor.sprachbefehl_skript", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.sprachbefehl_skript"), OrganizerOptions()) == "mdi:microphone"
+
+
+def test_batch_leave_home_routine():
+    assert _has_label("sensor.leave_home_routine", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.leave_home_routine"), OrganizerOptions()) == "mdi:exit-run"
+
+
+def test_batch_welcome_home_routine():
+    assert _has_label("sensor.welcome_home_routine", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.welcome_home_routine"), OrganizerOptions()) == "mdi:home-heart"
+
+
+def test_batch_movie_night_routine():
+    assert _has_label("sensor.movie_night_routine", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.movie_night_routine"), OrganizerOptions()) == "mdi:movie-open"
+
+
+def test_batch_panic_button_routine():
+    assert _has_label("sensor.panic_button_routine", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.panic_button_routine"), OrganizerOptions()) == "mdi:alert-octagon"
