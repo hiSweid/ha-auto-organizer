@@ -145877,3 +145877,38 @@ def test_batch_kamera_mast():
 
 def test_batch_kameraarm():
     assert _has_label("sensor.kameraarm", "cameras")
+
+
+def test_batch_disk_usage():
+    assert _has_label("sensor.disk_usage", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.disk_usage"), OrganizerOptions()) == "mdi:harddisk"
+
+
+def test_batch_base_fee():
+    assert _has_label("sensor.base_fee", "cost")
+    assert suggest_entity_icon(_FakeEntry("sensor.base_fee"), OrganizerOptions()) == "mdi:cash-lock"
+
+
+def test_batch_wirkenergie():
+    assert _has_label("sensor.wirkenergie", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.wirkenergie"), OrganizerOptions()) == "mdi:lightning-bolt"
+
+
+def test_batch_blindenergie():
+    assert _has_label("sensor.blindenergie", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.blindenergie"), OrganizerOptions()) == "mdi:lightning-bolt-outline"
+
+
+def test_batch_daily_consumption():
+    assert _has_label("sensor.daily_consumption", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.daily_consumption"), OrganizerOptions()) == "mdi:calendar-today"
+
+
+def test_batch_monthly_consumption():
+    assert _has_label("sensor.monthly_consumption", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.monthly_consumption"), OrganizerOptions()) == "mdi:calendar-month"
+
+
+def test_batch_phantomlast():
+    assert _has_label("sensor.phantomlast", "energy")
+    assert suggest_entity_icon(_FakeEntry("sensor.phantomlast"), OrganizerOptions()) == "mdi:power-sleep"

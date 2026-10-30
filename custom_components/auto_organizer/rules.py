@@ -44674,6 +44674,19 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "tado hygrometer": "mdi:water-percent",
     "aqara smart lock": "mdi:lock-smart",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "disk usage": "mdi:harddisk",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "base fee": "mdi:cash-lock",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "wirkenergie": "mdi:lightning-bolt",
+    "blindenergie": "mdi:lightning-bolt-outline",
+    "daily consumption": "mdi:calendar-today",
+    "monthly consumption": "mdi:calendar-month",
+    "phantomlast": "mdi:power-sleep",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -90452,6 +90465,19 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "gimbal kamera": "cameras",
     "kamera mast": "cameras",
     "kameraarm": "cameras",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "disk usage": "diagnostic",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "base fee": "cost",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "wirkenergie": "energy",
+    "blindenergie": "energy",
+    "daily consumption": "energy",
+    "monthly consumption": "energy",
+    "phantomlast": "energy",
 
 }
 
