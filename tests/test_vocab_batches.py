@@ -149726,3 +149726,87 @@ def test_batch_vorklimatisieren():
 def test_batch_ofenheizung():
     assert _has_label("sensor.ofenheizung", "climate")
     assert suggest_entity_icon(_FakeEntry("sensor.ofenheizung"), OrganizerOptions()) == "mdi:fireplace"
+
+
+def test_batch_mower_lifted():
+    assert _has_label("sensor.mower_lifted", "mower")
+
+
+def test_batch_flood_protection():
+    assert _has_label("sensor.flood_protection", "leak")
+
+
+def test_batch_electric_range():
+    assert _has_label("sensor.electric_range", "car")
+
+
+def test_batch_volkswagen_id():
+    assert _has_label("sensor.volkswagen_id", "car")
+
+
+def test_batch_myskoda():
+    assert _has_label("sensor.myskoda", "car")
+
+
+def test_batch_mybmw():
+    assert _has_label("sensor.mybmw", "car")
+
+
+def test_batch_maehroboter_regensensor():
+    assert _has_label("sensor.maehroboter_regensensor", "mower")
+
+
+def test_batch_maehroboter_schnitthoehe():
+    assert _has_label("sensor.maehroboter_schnitthoehe", "mower")
+
+
+def test_batch_maehroboter_messer():
+    assert _has_label("sensor.maehroboter_messer", "mower")
+
+
+def test_batch_maehroboter_zeitplan():
+    assert _has_label("sensor.maehroboter_zeitplan", "mower")
+
+
+def test_batch_maehroboter_hochgehoben():
+    assert _has_label("sensor.maehroboter_hochgehoben", "mower")
+
+
+def test_batch_mower_docking_station():
+    assert _has_label("sensor.mower_docking_station", "mower")
+
+
+def test_batch_mower_schedule():
+    assert _has_label("sensor.mower_schedule", "mower")
+
+
+def test_batch_rasenmaeher_messer():
+    assert _has_label("sensor.rasenmaeher_messer", "mower")
+
+
+def test_batch_dreame_roboticmower():
+    assert _has_label("sensor.dreame_roboticmower", "mower")
+
+
+def test_batch_keller_wasser():
+    assert _has_label("sensor.keller_wasser", "leak")
+
+
+def test_batch_charge_port_door():
+    assert _has_label("sensor.charge_port_door", "car")
+
+
+def test_batch_tailgate():
+    assert _has_label("sensor.tailgate", "car")
+
+
+def test_batch_fuel_door():
+    assert _has_label("sensor.fuel_door", "car")
+
+
+def test_batch_ladestand_auto():
+    assert _has_label("sensor.ladestand_auto", "car")
+
+
+def test_batch_weconnect():
+    assert _has_label("sensor.weconnect", "car")

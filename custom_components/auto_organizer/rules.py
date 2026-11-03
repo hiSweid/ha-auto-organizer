@@ -45416,6 +45416,9 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "vorklimatisieren": "mdi:car-defrost-front",
     "ofenheizung": "mdi:fireplace",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -91994,6 +91997,29 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "dimmer puck": "lights",
     "vorklimatisieren": "climate",
     "ofenheizung": "climate",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "mower lifted": "mower",
+    "flood protection": "leak",
+    "electric range": "car",
+    "volkswagen id": "car",
+    "myskoda": "car",
+    " mybmw ": "car",
+    "maehroboter regensensor": "mower",
+    "maehroboter schnitthoehe": "mower",
+    "maehroboter messer": "mower",
+    "maehroboter zeitplan": "mower",
+    "maehroboter hochgehoben": "mower",
+    "mower docking station": "mower",
+    "mower schedule": "mower",
+    "rasenmaeher messer": "mower",
+    "dreame roboticmower": "mower",
+    "keller wasser": "leak",
+    "charge port door": "car",
+    "tailgate": "car",
+    "fuel door": "car",
+    "ladestand auto": "car",
+    "weconnect": "car",
 
 }
 
