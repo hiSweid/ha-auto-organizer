@@ -45232,6 +45232,16 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "sonoff snzb 05p": "mdi:water-alert",
     "ikea vindkast": "mdi:air-filter",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "systemeinstellung": "mdi:cog",
+    "geraetekonfiguration": "mdi:cog-outline",
+    "parameter offset": "mdi:tune-variant",
+    "led anzeige einstellung": "mdi:led-on",
+    "script ausfuehrung": "mdi:script-text-play",
+    "diagnose export": "mdi:file-export",
+    "hysterese einstellung": "mdi:tune",
+    "wandtemperatur": "mdi:thermometer-lines",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -91586,6 +91596,16 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "aqara camera hub g3": "cameras",
     "hmip drbl": "covers",
     "ikea blind": "covers",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "systemeinstellung": "config",
+    "geraetekonfiguration": "config",
+    "parameter offset": "config",
+    "led anzeige einstellung": "config",
+    "script ausfuehrung": "scripts",
+    "diagnose export": "config",
+    "hysterese einstellung": "config",
+    "wandtemperatur": "temperature",
 
 }
 

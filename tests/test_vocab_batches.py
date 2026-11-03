@@ -148676,3 +148676,43 @@ def test_icon_backfill_sonoff_snzb_05p():
 
 def test_icon_backfill_ikea_vindkast():
     assert suggest_entity_icon(_FakeEntry("sensor.ikea_vindkast"), OrganizerOptions()) == "mdi:air-filter"
+
+
+def test_batch_systemeinstellung():
+    assert _has_label("sensor.systemeinstellung", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.systemeinstellung"), OrganizerOptions()) == "mdi:cog"
+
+
+def test_batch_geraetekonfiguration():
+    assert _has_label("sensor.geraetekonfiguration", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.geraetekonfiguration"), OrganizerOptions()) == "mdi:cog-outline"
+
+
+def test_batch_parameter_offset():
+    assert _has_label("sensor.parameter_offset", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.parameter_offset"), OrganizerOptions()) == "mdi:tune-variant"
+
+
+def test_batch_led_anzeige_einstellung():
+    assert _has_label("sensor.led_anzeige_einstellung", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.led_anzeige_einstellung"), OrganizerOptions()) == "mdi:led-on"
+
+
+def test_batch_script_ausfuehrung():
+    assert _has_label("sensor.script_ausfuehrung", "scripts")
+    assert suggest_entity_icon(_FakeEntry("sensor.script_ausfuehrung"), OrganizerOptions()) == "mdi:script-text-play"
+
+
+def test_batch_diagnose_export():
+    assert _has_label("sensor.diagnose_export", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.diagnose_export"), OrganizerOptions()) == "mdi:file-export"
+
+
+def test_batch_hysterese_einstellung():
+    assert _has_label("sensor.hysterese_einstellung", "config")
+    assert suggest_entity_icon(_FakeEntry("sensor.hysterese_einstellung"), OrganizerOptions()) == "mdi:tune"
+
+
+def test_batch_wandtemperatur():
+    assert _has_label("sensor.wandtemperatur", "temperature")
+    assert suggest_entity_icon(_FakeEntry("sensor.wandtemperatur"), OrganizerOptions()) == "mdi:thermometer-lines"
