@@ -151850,3 +151850,138 @@ def test_batch_kofferraum_offen():
 def test_batch_tuev_faelligkeit():
     assert _has_label("sensor.tuev_faelligkeit", "car")
     assert suggest_entity_icon(_FakeEntry("sensor.tuev_faelligkeit"), OrganizerOptions()) == "mdi:car-wrench"
+
+
+def test_batch_heap_frei():
+    assert _has_label("sensor.heap_frei", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.heap_frei"), OrganizerOptions()) == "mdi:memory"
+
+
+def test_batch_parent_knoten():
+    assert _has_label("sensor.parent_knoten", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.parent_knoten"), OrganizerOptions()) == "mdi:graph-outline"
+
+
+def test_batch_hop_anzahl():
+    assert _has_label("sensor.hop_anzahl", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.hop_anzahl"), OrganizerOptions()) == "mdi:transit-connection-variant"
+
+
+def test_batch_route_qualitaet():
+    assert _has_label("sensor.route_qualitaet", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.route_qualitaet"), OrganizerOptions()) == "mdi:transit-connection-variant"
+
+
+def test_batch_crash_zaehler():
+    assert _has_label("sensor.crash_zaehler", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.crash_zaehler"), OrganizerOptions()) == "mdi:alert-octagon"
+
+
+def test_batch_hersteller_kennung():
+    assert _has_label("sensor.hersteller_kennung", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.hersteller_kennung"), OrganizerOptions()) == "mdi:factory"
+
+
+def test_batch_herstelleranzeige():
+    assert _has_label("sensor.herstelleranzeige", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.herstelleranzeige"), OrganizerOptions()) == "mdi:factory"
+
+
+def test_batch_manufacturer_code():
+    assert _has_label("sensor.manufacturer_code", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.manufacturer_code"), OrganizerOptions()) == "mdi:factory"
+
+
+def test_batch_sw_build():
+    assert _has_label("sensor.sw_build", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.sw_build"), OrganizerOptions()) == "mdi:source-branch"
+
+
+def test_batch_build_date():
+    assert _has_label("sensor.build_date", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.build_date"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_batch_installationsdatum():
+    assert _has_label("sensor.installationsdatum", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.installationsdatum"), OrganizerOptions()) == "mdi:calendar-check"
+
+
+def test_batch_wuehlmausschutz():
+    assert _has_label("sensor.wuehlmausschutz", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.wuehlmausschutz"), OrganizerOptions()) == "mdi:rodent"
+
+
+def test_batch_messerblatt():
+    assert _has_label("sensor.messerblatt", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.messerblatt"), OrganizerOptions()) == "mdi:saw-blade"
+
+
+def test_batch_klingenverschleiss():
+    assert _has_label("sensor.klingenverschleiss", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.klingenverschleiss"), OrganizerOptions()) == "mdi:saw-blade"
+
+
+def test_batch_hedgehog_house():
+    assert _has_label("sensor.hedgehog_house", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.hedgehog_house"), OrganizerOptions()) == "mdi:paw"
+
+
+def test_batch_holzlager():
+    assert _has_label("sensor.holzlager", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.holzlager"), OrganizerOptions()) == "mdi:tree"
+
+
+def test_batch_zaunelement():
+    assert _has_label("sensor.zaunelement", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.zaunelement"), OrganizerOptions()) == "mdi:fence"
+
+
+def test_batch_access_point_verbunden():
+    assert _has_label("sensor.access_point_verbunden", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.access_point_verbunden"), OrganizerOptions()) == "mdi:access-point-network"
+
+
+def test_batch_build_datum():
+    assert _has_label("sensor.build_datum", "diagnostic")
+    assert suggest_entity_icon(_FakeEntry("sensor.build_datum"), OrganizerOptions()) == "mdi:calendar-clock"
+
+
+def test_batch_gartenbeet():
+    assert _has_label("sensor.gartenbeet", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.gartenbeet"), OrganizerOptions()) == "mdi:flower"
+
+
+def test_batch_mulchmaehen():
+    assert _has_label("sensor.mulchmaehen", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.mulchmaehen"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_mulching_mower():
+    assert _has_label("sensor.mulching_mower", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.mulching_mower"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_batch_drucksteigerungspumpe():
+    assert _has_label("sensor.drucksteigerungspumpe", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.drucksteigerungspumpe"), OrganizerOptions()) == "mdi:pump"
+
+
+def test_batch_palettenhochbeet():
+    assert _has_label("sensor.palettenhochbeet", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.palettenhochbeet"), OrganizerOptions()) == "mdi:flower"
+
+
+def test_batch_nest_box():
+    assert _has_label("sensor.nest_box", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.nest_box"), OrganizerOptions()) == "mdi:bird"
+
+
+def test_batch_brennholz():
+    assert _has_label("sensor.brennholz", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.brennholz"), OrganizerOptions()) == "mdi:tree"
+
+
+def test_batch_firewood():
+    assert _has_label("sensor.firewood", "garden")
+    assert suggest_entity_icon(_FakeEntry("sensor.firewood"), OrganizerOptions()) == "mdi:tree"
