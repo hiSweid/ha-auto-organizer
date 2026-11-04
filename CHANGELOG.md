@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.33] - 2026-11-04
+
+### Added
+- About 2,800 additional vocabulary and icon entries across all categories (cost, humidity,
+  locks, diagnostic, media, energy, appliances, covers and more), including device and
+  platform synonyms (Aqara, Matter, Shelly, SIEGENIA, tado).
+
 ## [0.11.32] - 2026-10-29
 
 ### Added
