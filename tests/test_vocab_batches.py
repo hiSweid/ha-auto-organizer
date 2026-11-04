@@ -151820,3 +151820,33 @@ def test_icon_backfill_360_kamera():
 
 def test_icon_backfill_4g_kamera():
     assert suggest_entity_icon(_FakeEntry("sensor.4g_kamera"), OrganizerOptions()) == "mdi:camera-wireless"
+
+
+def test_batch_wiper_fluid():
+    assert _has_label("sensor.wiper_fluid", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.wiper_fluid"), OrganizerOptions()) == "mdi:wiper-wash"
+
+
+def test_batch_naechster_oelwechsel():
+    assert _has_label("sensor.naechster_oelwechsel", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.naechster_oelwechsel"), OrganizerOptions()) == "mdi:oil"
+
+
+def test_batch_tire_pressure_front():
+    assert _has_label("sensor.tire_pressure_front", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.tire_pressure_front"), OrganizerOptions()) == "mdi:car-tire-alert"
+
+
+def test_batch_odometer_reading():
+    assert _has_label("sensor.odometer_reading", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.odometer_reading"), OrganizerOptions()) == "mdi:counter"
+
+
+def test_batch_kofferraum_offen():
+    assert _has_label("sensor.kofferraum_offen", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.kofferraum_offen"), OrganizerOptions()) == "mdi:car-back"
+
+
+def test_batch_tuev_faelligkeit():
+    assert _has_label("sensor.tuev_faelligkeit", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.tuev_faelligkeit"), OrganizerOptions()) == "mdi:car-wrench"

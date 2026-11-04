@@ -45826,6 +45826,14 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "360 kamera": "mdi:video-3d",
     "4g kamera": "mdi:camera-wireless",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "wiper fluid": "mdi:wiper-wash",
+    "naechster oelwechsel": "mdi:oil",
+    "tire pressure front": "mdi:car-tire-alert",
+    "odometer reading": "mdi:counter",
+    "kofferraum offen": "mdi:car-back",
+    "tuev faelligkeit": "mdi:car-wrench",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -92816,6 +92824,14 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "bestway": "water",
     " intex ": "water",
     "poolsana": "water",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "wiper fluid": "car",
+    "naechster oelwechsel": "car",
+    "tire pressure front": "car",
+    "odometer reading": "car",
+    "kofferraum offen": "car",
+    "tuev faelligkeit": "car",
 
 }
 
