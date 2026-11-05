@@ -152353,3 +152353,63 @@ def test_batch_dwd_wetter():
 def test_batch_boengeschwindigkeit():
     assert _has_label("sensor.boengeschwindigkeit", "weather")
     assert suggest_entity_icon(_FakeEntry("sensor.boengeschwindigkeit"), OrganizerOptions()) == "mdi:weather-windy"
+
+
+def test_batch_bewegungsmelder_deckenmontage():
+    assert _has_label("sensor.bewegungsmelder_deckenmontage", "motion")
+    assert suggest_entity_icon(_FakeEntry("sensor.bewegungsmelder_deckenmontage"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_batch_security_system():
+    assert _has_label("sensor.security_system", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.security_system"), OrganizerOptions()) == "mdi:shield-home"
+
+
+def test_batch_venus_e():
+    assert _has_label("sensor.venus_e", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.venus_e"), OrganizerOptions()) == "mdi:home-battery"
+
+
+def test_batch_byd_box():
+    assert _has_label("sensor.byd_box", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.byd_box"), OrganizerOptions()) == "mdi:home-battery"
+
+
+def test_batch_laden_unterbrochen():
+    assert _has_label("sensor.laden_unterbrochen", "battery")
+    assert suggest_entity_icon(_FakeEntry("sensor.laden_unterbrochen"), OrganizerOptions()) == "mdi:battery-off"
+
+
+def test_batch_nachtwache():
+    assert _has_label("sensor.nachtwache", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.nachtwache"), OrganizerOptions()) == "mdi:shield-moon"
+
+
+def test_batch_alarm_armed():
+    assert _has_label("sensor.alarm_armed", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.alarm_armed"), OrganizerOptions()) == "mdi:shield-lock"
+
+
+def test_batch_alarm_disarmed():
+    assert _has_label("sensor.alarm_disarmed", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.alarm_disarmed"), OrganizerOptions()) == "mdi:shield-off"
+
+
+def test_batch_alarm_pending():
+    assert _has_label("sensor.alarm_pending", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.alarm_pending"), OrganizerOptions()) == "mdi:shield-alert"
+
+
+def test_batch_alarm_arming():
+    assert _has_label("sensor.alarm_arming", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.alarm_arming"), OrganizerOptions()) == "mdi:shield-lock"
+
+
+def test_batch_safe_sensor():
+    assert _has_label("sensor.safe_sensor", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.safe_sensor"), OrganizerOptions()) == "mdi:safe"
+
+
+def test_batch_emergency_button():
+    assert _has_label("sensor.emergency_button", "security")
+    assert suggest_entity_icon(_FakeEntry("sensor.emergency_button"), OrganizerOptions()) == "mdi:alert-octagon"

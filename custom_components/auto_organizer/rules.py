@@ -45937,6 +45937,20 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "dwd wetter": "mdi:weather-partly-cloudy",
     "boengeschwindigkeit": "mdi:weather-windy",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "bewegungsmelder deckenmontage": "mdi:motion-sensor",
+    "security system": "mdi:shield-home",
+    "venus e": "mdi:home-battery",
+    "byd box": "mdi:home-battery",
+    "laden unterbrochen": "mdi:battery-off",
+    "nachtwache": "mdi:shield-moon",
+    "alarm armed": "mdi:shield-lock",
+    "alarm disarmed": "mdi:shield-off",
+    "alarm pending": "mdi:shield-alert",
+    "alarm arming": "mdi:shield-lock",
+    "safe sensor": "mdi:safe",
+    "emergency button": "mdi:alert-octagon",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -93040,6 +93054,20 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "gewitterindex": "weather",
     "dwd wetter": "weather",
     "boengeschwindigkeit": "weather",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "bewegungsmelder deckenmontage": "motion",
+    "security system": "security",
+    "venus e": "battery",
+    "byd box": "battery",
+    "laden unterbrochen": "battery",
+    "nachtwache": "security",
+    "alarm armed": "security",
+    "alarm disarmed": "security",
+    "alarm pending": "security",
+    "alarm arming": "security",
+    "safe sensor": "security",
+    "emergency button": "security",
 
 }
 
