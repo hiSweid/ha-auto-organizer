@@ -152413,3 +152413,48 @@ def test_batch_safe_sensor():
 def test_batch_emergency_button():
     assert _has_label("sensor.emergency_button", "security")
     assert suggest_entity_icon(_FakeEntry("sensor.emergency_button"), OrganizerOptions()) == "mdi:alert-octagon"
+
+
+def test_batch_kassettenspieler():
+    assert _has_label("sensor.kassettenspieler", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.kassettenspieler"), OrganizerOptions()) == "mdi:cassette"
+
+
+def test_batch_ad_blue():
+    assert _has_label("sensor.ad_blue", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.ad_blue"), OrganizerOptions()) == "mdi:car-coolant-level"
+
+
+def test_batch_wallbox_phase():
+    assert _has_label("sensor.wallbox_phase", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.wallbox_phase"), OrganizerOptions()) == "mdi:ev-station"
+
+
+def test_batch_praesenzmelder_aussen():
+    assert _has_label("sensor.praesenzmelder_aussen", "motion")
+    assert suggest_entity_icon(_FakeEntry("sensor.praesenzmelder_aussen"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_batch_haustier_erkannt():
+    assert _has_label("sensor.haustier_erkannt", "motion")
+    assert suggest_entity_icon(_FakeEntry("sensor.haustier_erkannt"), OrganizerOptions()) == "mdi:paw"
+
+
+def test_batch_zonenpraesenz():
+    assert _has_label("sensor.zonenpraesenz", "motion")
+    assert suggest_entity_icon(_FakeEntry("sensor.zonenpraesenz"), OrganizerOptions()) == "mdi:radar"
+
+
+def test_batch_xbox_konsole():
+    assert _has_label("sensor.xbox_konsole", "media")
+    assert suggest_entity_icon(_FakeEntry("sensor.xbox_konsole"), OrganizerOptions()) == "mdi:microsoft-xbox"
+
+
+def test_batch_reichweite_auto():
+    assert _has_label("sensor.reichweite_auto", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.reichweite_auto"), OrganizerOptions()) == "mdi:map-marker-distance"
+
+
+def test_batch_tuev_termin():
+    assert _has_label("sensor.tuev_termin", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.tuev_termin"), OrganizerOptions()) == "mdi:car-wrench"

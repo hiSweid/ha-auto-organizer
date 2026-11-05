@@ -45951,6 +45951,17 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "safe sensor": "mdi:safe",
     "emergency button": "mdi:alert-octagon",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "kassettenspieler": "mdi:cassette",
+    "ad blue": "mdi:car-coolant-level",
+    "wallbox phase": "mdi:ev-station",
+    "praesenzmelder aussen": "mdi:motion-sensor",
+    "haustier erkannt": "mdi:paw",
+    "zonenpraesenz": "mdi:radar",
+    "xbox konsole": "mdi:microsoft-xbox",
+    "reichweite auto": "mdi:map-marker-distance",
+    "tuev termin": "mdi:car-wrench",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -93068,6 +93079,17 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "alarm arming": "security",
     "safe sensor": "security",
     "emergency button": "security",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "kassettenspieler": "media",
+    "ad blue": "car",
+    "wallbox phase": "car",
+    "praesenzmelder aussen": "motion",
+    "haustier erkannt": "motion",
+    "zonenpraesenz": "motion",
+    "xbox konsole": "media",
+    "reichweite auto": "car",
+    "tuev termin": "car",
 
 }
 
