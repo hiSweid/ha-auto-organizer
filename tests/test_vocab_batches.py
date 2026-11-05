@@ -153343,3 +153343,68 @@ def test_icon_backfill_axpert():
 
 def test_icon_backfill_artnet():
     assert suggest_entity_icon(_FakeEntry("sensor.artnet"), OrganizerOptions()) == "mdi:lightbulb-group"
+
+
+def test_batch_exhaust_air_fan():
+    assert _has_label("sensor.exhaust_air_fan", "fans")
+    assert suggest_entity_icon(_FakeEntry("sensor.exhaust_air_fan"), OrganizerOptions()) == "mdi:fan"
+
+
+def test_batch_fan_automatik():
+    assert _has_label("sensor.fan_automatik", "fans")
+    assert suggest_entity_icon(_FakeEntry("sensor.fan_automatik"), OrganizerOptions()) == "mdi:fan-auto"
+
+
+def test_batch_fan_speed_step():
+    assert _has_label("sensor.fan_speed_step", "fans")
+    assert suggest_entity_icon(_FakeEntry("sensor.fan_speed_step"), OrganizerOptions()) == "mdi:fan-speed-1"
+
+
+def test_batch_wachwerden():
+    assert _has_label("sensor.wachwerden", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.wachwerden"), OrganizerOptions()) == "mdi:alarm-bell"
+
+
+def test_batch_color_mood():
+    assert _has_label("sensor.color_mood", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.color_mood"), OrganizerOptions()) == "mdi:palette"
+
+
+def test_batch_romantikszene():
+    assert _has_label("sensor.romantikszene", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.romantikszene"), OrganizerOptions()) == "mdi:candle"
+
+
+def test_batch_einschlafszene():
+    assert _has_label("sensor.einschlafszene", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.einschlafszene"), OrganizerOptions()) == "mdi:sleep"
+
+
+def test_batch_bedtime_scene():
+    assert _has_label("sensor.bedtime_scene", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.bedtime_scene"), OrganizerOptions()) == "mdi:sleep"
+
+
+def test_batch_lesebeleuchtung_szene():
+    assert _has_label("sensor.lesebeleuchtung_szene", "scenes")
+    assert suggest_entity_icon(_FakeEntry("sensor.lesebeleuchtung_szene"), OrganizerOptions()) == "mdi:book-open-page-variant"
+
+
+def test_batch_kinderzimmer_anwesenheit():
+    assert _has_label("sensor.kinderzimmer_anwesenheit", "presence")
+    assert suggest_entity_icon(_FakeEntry("sensor.kinderzimmer_anwesenheit"), OrganizerOptions()) == "mdi:account-child"
+
+
+def test_batch_gaestepraesenz():
+    assert _has_label("sensor.gaestepraesenz", "presence")
+    assert suggest_entity_icon(_FakeEntry("sensor.gaestepraesenz"), OrganizerOptions()) == "mdi:human-greeting-variant"
+
+
+def test_batch_guest_presence():
+    assert _has_label("sensor.guest_presence", "presence")
+    assert suggest_entity_icon(_FakeEntry("sensor.guest_presence"), OrganizerOptions()) == "mdi:human-greeting-variant"
+
+
+def test_batch_schlafzimmer_belegung():
+    assert _has_label("sensor.schlafzimmer_belegung", "presence")
+    assert suggest_entity_icon(_FakeEntry("sensor.schlafzimmer_belegung"), OrganizerOptions()) == "mdi:bed-king"

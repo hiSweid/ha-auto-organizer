@@ -46143,6 +46143,21 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "axpert": "mdi:solar-power",
     "artnet": "mdi:lightbulb-group",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "exhaust air fan": "mdi:fan",
+    "fan automatik": "mdi:fan-auto",
+    "fan speed step": "mdi:fan-speed-1",
+    "wachwerden": "mdi:alarm-bell",
+    "color mood": "mdi:palette",
+    "romantikszene": "mdi:candle",
+    "einschlafszene": "mdi:sleep",
+    "bedtime scene": "mdi:sleep",
+    "lesebeleuchtung szene": "mdi:book-open-page-variant",
+    "kinderzimmer anwesenheit": "mdi:account-child",
+    "gaestepraesenz": "mdi:human-greeting-variant",
+    "guest presence": "mdi:human-greeting-variant",
+    "schlafzimmer belegung": "mdi:bed-king",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -93440,6 +93455,21 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "tado smart": "climate",
     "aqara gas": "air_quality",
     "aqara shutter": "covers",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "exhaust air fan": "fans",
+    "fan automatik": "fans",
+    "fan speed step": "fans",
+    "wachwerden": "scenes",
+    "color mood": "scenes",
+    "romantikszene": "scenes",
+    "einschlafszene": "scenes",
+    "bedtime scene": "scenes",
+    "lesebeleuchtung szene": "scenes",
+    "kinderzimmer anwesenheit": "presence",
+    "gaestepraesenz": "presence",
+    "guest presence": "presence",
+    "schlafzimmer belegung": "presence",
 
 }
 
