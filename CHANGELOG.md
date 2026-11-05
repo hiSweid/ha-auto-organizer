@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.34] - 2026-11-05
+
+### Added
+- 219 additional vocabulary entries and icons across cameras, automations, mower,
+  devices, car, diagnostic, garden, sun, weather, waste, motion, battery and
+  security categories.
+
 ## [0.11.33] - 2026-11-04
 
 ### Added
