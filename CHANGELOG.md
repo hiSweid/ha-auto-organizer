@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.35] - 2026-11-07
+
+### Added
+- About 1,900 additional vocabulary entries and device icons collected over 12 batches across
+  appliances, weather, car, devices, fans, locks, presence, automations, humidity,
+  motion, battery, light level, scenes, water, shopping, media, sun, waste, leak
+  and config categories.
+
 ## [0.11.34] - 2026-11-05
 
 ### Added
