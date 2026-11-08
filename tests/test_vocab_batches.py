@@ -158805,3 +158805,102 @@ def test_icon_backfill_tv_scene():
 
 def test_icon_backfill_pizza_night():
     assert suggest_entity_icon(_FakeEntry("sensor.pizza_night"), OrganizerOptions()) == "mdi:party-popper"
+
+
+def test_batch_shelly_trv_blu():
+    assert _has_label("sensor.shelly_trv_blu", "climate")
+    assert suggest_entity_icon(_FakeEntry("sensor.shelly_trv_blu"), OrganizerOptions()) == "mdi:radiator"
+
+
+def test_batch_viomi_vacuum():
+    assert _has_label("sensor.viomi_vacuum", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.viomi_vacuum"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_xiaomi_mop():
+    assert _has_label("sensor.xiaomi_mop", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.xiaomi_mop"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_segment_cleaning():
+    assert _has_label("sensor.segment_cleaning", "vacuums")
+    assert suggest_entity_icon(_FakeEntry("sensor.segment_cleaning"), OrganizerOptions()) == "mdi:robot-vacuum"
+
+
+def test_batch_tibber_verbrauch():
+    assert _has_label("sensor.tibber_verbrauch", "cost")
+
+
+def test_batch_tibber_abrechnung():
+    assert _has_label("sensor.tibber_abrechnung", "cost")
+
+
+def test_batch_rollo_position():
+    assert _has_label("sensor.rollo_position", "covers")
+
+
+def test_batch_rolladen_position():
+    assert _has_label("sensor.rolladen_position", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.rolladen_position"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_batch_somfy_animeo():
+    assert _has_label("sensor.somfy_animeo", "covers")
+
+
+def test_batch_somfy_sonesse():
+    assert _has_label("sensor.somfy_sonesse", "covers")
+
+
+def test_batch_rolladenantrieb():
+    assert _has_label("sensor.rolladenantrieb", "covers")
+    assert suggest_entity_icon(_FakeEntry("sensor.rolladenantrieb"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_batch_selve_rollladen():
+    assert _has_label("sensor.selve_rollladen", "covers")
+
+
+def test_batch_abfall_kalender():
+    assert _has_label("sensor.abfall_kalender", "waste")
+
+
+def test_batch_abfall_termin():
+    assert _has_label("sensor.abfall_termin", "waste")
+
+
+def test_batch_awb_muell():
+    assert _has_label("sensor.awb_muell", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.awb_muell"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_batch_awb_abfall():
+    assert _has_label("sensor.awb_abfall", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.awb_abfall"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_batch_abfall_naechste_abholung():
+    assert _has_label("sensor.abfall_naechste_abholung", "waste")
+
+
+def test_batch_muell_kalender():
+    assert _has_label("sensor.muell_kalender", "waste")
+
+
+def test_batch_abfuhr_kalender():
+    assert _has_label("sensor.abfuhr_kalender", "waste")
+
+
+def test_batch_mymuell():
+    assert _has_label("sensor.mymuell", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.mymuell"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_batch_abfall_plus():
+    assert _has_label("sensor.abfall_plus", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.abfall_plus"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_batch_abfall_plus_app():
+    assert _has_label("sensor.abfall_plus_app", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.abfall_plus_app"), OrganizerOptions()) == "mdi:trash-can"

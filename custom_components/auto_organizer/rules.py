@@ -47171,6 +47171,21 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "tv scene": "mdi:movie-open",
     "pizza night": "mdi:party-popper",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "shelly trv blu": "mdi:radiator",
+    "viomi vacuum": "mdi:robot-vacuum",
+    "xiaomi mop": "mdi:robot-vacuum",
+    "segment cleaning": "mdi:robot-vacuum",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "rolladen position": "mdi:window-shutter",
+    "rolladenantrieb": "mdi:window-shutter",
+    "awb muell": "mdi:trash-can",
+    "awb abfall": "mdi:trash-can",
+    "mymuell": "mdi:trash-can",
+    "abfall plus": "mdi:trash-can",
+    "abfall plus app": "mdi:trash-can",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -95562,6 +95577,32 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "hubwerk tv": "media",
     "drehtuerantrieb": "covers",
     "spirit zigbee": "climate",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "shelly trv blu": "climate",
+    "viomi vacuum": "vacuums",
+    "xiaomi mop": "vacuums",
+    "segment cleaning": "vacuums",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "tibber verbrauch": "cost",
+    "tibber abrechnung": "cost",
+    "rollo position": "covers",
+    "rolladen position": "covers",
+    "somfy animeo": "covers",
+    "somfy sonesse": "covers",
+    "rolladenantrieb": "covers",
+    "selve rollladen": "covers",
+    "abfall kalender": "waste",
+    "abfall termin": "waste",
+    "awb muell": "waste",
+    "awb abfall": "waste",
+    "abfall naechste abholung": "waste",
+    "muell kalender": "waste",
+    "abfuhr kalender": "waste",
+    "mymuell": "waste",
+    "abfall plus": "waste",
+    "abfall plus app": "waste",
 
 }
 
