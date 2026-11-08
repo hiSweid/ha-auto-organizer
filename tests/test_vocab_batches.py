@@ -159139,3 +159139,31 @@ def test_batch_esp32_cam():
 def test_batch_nous_plug():
     assert _has_label("sensor.nous_plug", "switches")
     assert suggest_entity_icon(_FakeEntry("sensor.nous_plug"), OrganizerOptions()) == "mdi:power-socket-eu"
+
+
+def test_batch_running_costs():
+    assert _has_label("sensor.running_costs", "cost")
+
+
+def test_batch_reinigungsbereich():
+    assert _has_label("sensor.reinigungsbereich", "vacuums")
+
+
+def test_batch_reinigungsfahrt():
+    assert _has_label("sensor.reinigungsfahrt", "vacuums")
+
+
+def test_batch_cleaning_history():
+    assert _has_label("sensor.cleaning_history", "vacuums")
+
+
+def test_batch_script_ausfuehren():
+    assert _has_label("sensor.script_ausfuehren", "scripts")
+
+
+def test_batch_sequence_runner():
+    assert _has_label("sensor.sequence_runner", "scripts")
+
+
+def test_batch_stoppskript():
+    assert _has_label("sensor.stoppskript", "scripts")
