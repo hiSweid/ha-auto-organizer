@@ -47613,6 +47613,9 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "shelly bluetooth motion lux": "mdi:motion-sensor",
     "tuerschlosscylinder": "mdi:lock",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -96409,6 +96412,40 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "aqara vorhangtreiber": "covers",
     "tor controller": "covers",
     "tuerklingel taster": "security",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "hotend temperatur": "temperature",
+    "puffertemperatur oben": "temperature",
+    "puffertemperatur unten": "temperature",
+    "brutkasten temperatur": "temperature",
+    "sous vide temperatur": "temperature",
+    "ph sensor pool": "water",
+    "leitwert sensor": "water",
+    "wohnzimmer praesenz": "presence",
+    "kuechen praesenz": "presence",
+    "bad praesenz": "presence",
+    "flur praesenz": "presence",
+    "treppen praesenz": "presence",
+    "kinderzimmer praesenz": "presence",
+    "buero praesenz": "presence",
+    "keller praesenz": "presence",
+    "garage praesenz": "presence",
+    "vorhanden sensor": "presence",
+    "haustier sensor": "presence",
+    "schreibtisch sensor": "presence",
+    "sofa sensor": "presence",
+    "terrarium temperatur": "temperature",
+    "joghurtmaker temperatur": "temperature",
+    "smoker temperatur": "temperature",
+    "wintergarten temperatur": "temperature",
+    "wine cooler temperature": "temperature",
+    "server rack temperature": "temperature",
+    "saugroboter pool": "water",
+    "wasserfall pumpe": "water",
+    "subzaehler wasser": "water",
+    "tuerkontakt anwesenheit": "presence",
+    "fahrzeug anwesenheit": "presence",
+    "toilettensitz sensor": "presence",
 
 }
 

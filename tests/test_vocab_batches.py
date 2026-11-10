@@ -160803,3 +160803,131 @@ def test_icon_backfill_shelly_bluetooth_motion_lux():
 
 def test_icon_backfill_tuerschlosscylinder():
     assert suggest_entity_icon(_FakeEntry("sensor.tuerschlosscylinder"), OrganizerOptions()) == "mdi:lock"
+
+
+def test_batch_hotend_temperatur():
+    assert _has_label("sensor.hotend_temperatur", "temperature")
+
+
+def test_batch_puffertemperatur_oben():
+    assert _has_label("sensor.puffertemperatur_oben", "temperature")
+
+
+def test_batch_puffertemperatur_unten():
+    assert _has_label("sensor.puffertemperatur_unten", "temperature")
+
+
+def test_batch_brutkasten_temperatur():
+    assert _has_label("sensor.brutkasten_temperatur", "temperature")
+
+
+def test_batch_sous_vide_temperatur():
+    assert _has_label("sensor.sous_vide_temperatur", "temperature")
+
+
+def test_batch_ph_sensor_pool():
+    assert _has_label("sensor.ph_sensor_pool", "water")
+
+
+def test_batch_leitwert_sensor():
+    assert _has_label("sensor.leitwert_sensor", "water")
+
+
+def test_batch_wohnzimmer_praesenz():
+    assert _has_label("sensor.wohnzimmer_praesenz", "presence")
+
+
+def test_batch_kuechen_praesenz():
+    assert _has_label("sensor.kuechen_praesenz", "presence")
+
+
+def test_batch_bad_praesenz():
+    assert _has_label("sensor.bad_praesenz", "presence")
+
+
+def test_batch_flur_praesenz():
+    assert _has_label("sensor.flur_praesenz", "presence")
+
+
+def test_batch_treppen_praesenz():
+    assert _has_label("sensor.treppen_praesenz", "presence")
+
+
+def test_batch_kinderzimmer_praesenz():
+    assert _has_label("sensor.kinderzimmer_praesenz", "presence")
+
+
+def test_batch_buero_praesenz():
+    assert _has_label("sensor.buero_praesenz", "presence")
+
+
+def test_batch_keller_praesenz():
+    assert _has_label("sensor.keller_praesenz", "presence")
+
+
+def test_batch_garage_praesenz():
+    assert _has_label("sensor.garage_praesenz", "presence")
+
+
+def test_batch_vorhanden_sensor():
+    assert _has_label("sensor.vorhanden_sensor", "presence")
+
+
+def test_batch_haustier_sensor():
+    assert _has_label("sensor.haustier_sensor", "presence")
+
+
+def test_batch_schreibtisch_sensor():
+    assert _has_label("sensor.schreibtisch_sensor", "presence")
+
+
+def test_batch_sofa_sensor():
+    assert _has_label("sensor.sofa_sensor", "presence")
+
+
+def test_batch_terrarium_temperatur():
+    assert _has_label("sensor.terrarium_temperatur", "temperature")
+
+
+def test_batch_joghurtmaker_temperatur():
+    assert _has_label("sensor.joghurtmaker_temperatur", "temperature")
+
+
+def test_batch_smoker_temperatur():
+    assert _has_label("sensor.smoker_temperatur", "temperature")
+
+
+def test_batch_wintergarten_temperatur():
+    assert _has_label("sensor.wintergarten_temperatur", "temperature")
+
+
+def test_batch_wine_cooler_temperature():
+    assert _has_label("sensor.wine_cooler_temperature", "temperature")
+
+
+def test_batch_server_rack_temperature():
+    assert _has_label("sensor.server_rack_temperature", "temperature")
+
+
+def test_batch_saugroboter_pool():
+    assert _has_label("sensor.saugroboter_pool", "water")
+
+
+def test_batch_wasserfall_pumpe():
+    assert _has_label("sensor.wasserfall_pumpe", "water")
+
+
+def test_batch_subzaehler_wasser():
+    assert _has_label("sensor.subzaehler_wasser", "water")
+
+
+def test_batch_tuerkontakt_anwesenheit():
+    assert _has_label("sensor.tuerkontakt_anwesenheit", "presence")
+
+
+def test_batch_fahrzeug_anwesenheit():
+    assert _has_label("sensor.fahrzeug_anwesenheit", "presence")
+
+
+def test_batch_toilettensitz_sensor():
+    assert _has_label("sensor.toilettensitz_sensor", "presence")
