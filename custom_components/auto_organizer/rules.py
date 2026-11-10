@@ -96190,9 +96190,8 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
 #: * a vacuum's "spot clean" is not a " spot " light (issue #5)
 #: * a weather station's "current conditions" is not an automation condition
 #:
-#: Only keyword-assigned labels can be cancelled — a veto never overrides a
-#: domain or device_class match, both of which are decided before the
-#: keyword pass runs.
+#: A veto cancels keyword-, domain- and device_class-assigned labels, but
+#: never a curated integration label.
 KEYWORD_VETOES: Final[dict[str, frozenset[str]]] = {
     "next alarm": frozenset({"security", "presence"}),
     "naechster wecker": frozenset({"security", "presence"}),
@@ -96217,13 +96216,15 @@ KEYWORD_VETOES: Final[dict[str, frozenset[str]]] = {
     # A wet-bulb temperature has nothing to do with " bulb " lighting.
     "wet bulb": frozenset({"lights"}),
     # An Echo Dot's "Do not disturb" switch is not a robot vacuum's.
-    "echo dot": frozenset({"vacuums"}),
+    "echo dot": frozenset({"vacuums", "lights"}),
+    "regenwarner": frozenset({"leak"}),
+    " bodenfeuchte ": frozenset({"leak"}),
     # BTHome sensors (e.g. TRV valves, window contacts) are Bluetooth, not
     # a network/server or a water valve.
     "bthome": frozenset({"network", "water"}),
     # Soil moisture is garden, not air humidity.
-    "soil moisture": frozenset({"humidity"}),
-    "leaf wetness": frozenset({"humidity"}),
+    "soil moisture": frozenset({"humidity", "leak"}),
+    "leaf wetness": frozenset({"humidity", "leak"}),
 }
 
 # KEYWORD_LABELS sorted longest-needle-first so callers that stop at the
@@ -96757,13 +96758,29 @@ def _collect_label_keys(
     if not is_category:
         domain = entry.entity_id.split(".", 1)[0]
 
+        # Vetoes also cancel a domain/device_class label (an Echo Dot's
+        # light ring is a "light" entity, a rain warner is a "moisture"
+        # binary_sensor — neither is lighting or a leak).
+        name_for_veto = getattr(entry, "name", None) or getattr(
+            entry, "original_name", None
+        )
+        veto_hay = _normalize(f"{entry.entity_id} {name_for_veto or ''}")
+        early_vetoes: set[str] = set()
+        for needle, keys_vetoed in KEYWORD_VETOES.items():
+            if _keyword_hit(needle, veto_hay):
+                early_vetoes |= keys_vetoed
+
         if options.enable_domain:
-            add(DOMAIN_LABELS.get(domain), reason=domain)
+            label = DOMAIN_LABELS.get(domain)
+            if label not in early_vetoes:
+                add(label, reason=domain)
 
         if options.enable_device_class:
             device_class = entry.device_class or entry.original_device_class
             if device_class:
-                add(DEVICE_CLASS_LABELS.get(device_class), reason=device_class)
+                label = DEVICE_CLASS_LABELS.get(device_class)
+                if label not in early_vetoes:
+                    add(label, reason=device_class)
 
         # Keyword fallbacks whenever nothing *curated* matched. Matched
         # against the normalized entity_id and friendly name. User-defined

@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.37] - 2026-11-10
+
+### Fixed
+- Keyword vetoes now also cancel labels that come from the entity domain or
+  device_class, so an Echo Dot light ring is no longer lighting and rain warners,
+  soil-moisture and leaf-wetness sensors are no longer leak sensors (issue #5).
+
 ## [0.11.36] - 2026-11-10
 
 ### Fixed

@@ -1212,6 +1212,19 @@ def test_keyword_vetoes_issue_5_follow_up():
         assert not set(banned) & set(got), (eid, got)
 
 
+def test_vetoes_also_cancel_domain_and_device_class_labels():
+    # Issue #5 follow-up: the light domain / moisture device_class used to win.
+    assert "Beleuchtung" not in names(FakeEntry("light.echo_dot_3_179ba4_light_ring"))
+    assert "Leck" not in names(
+        FakeEntry("binary_sensor.wetter_regenwarner_raining", device_class="moisture")
+    )
+    assert "Leck" not in names(FakeEntry("sensor.bodenfeuchte_10", device_class="moisture"))
+    assert "Leck" not in names(FakeEntry("sensor.ws_soil_moisture_pct", device_class="moisture"))
+    # Unrelated lights and real leak sensors keep their labels.
+    assert "Beleuchtung" in names(FakeEntry("light.wohnzimmer"))
+    assert "Leck" in names(FakeEntry("binary_sensor.keller_wasser", device_class="moisture"))
+
+
 # --- curated platform label stays authoritative ---------------------------
 
 
