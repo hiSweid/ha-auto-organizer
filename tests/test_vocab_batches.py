@@ -161175,3 +161175,203 @@ def test_icon_backfill_ruhezustand():
 
 def test_icon_backfill_schlagschatten():
     assert suggest_entity_icon(_FakeEntry("sensor.schlagschatten"), OrganizerOptions()) == "mdi:weather-sunny-off"
+
+
+def test_batch_drip_sensor():
+    assert _has_label("sensor.drip_sensor", "leak")
+
+
+def test_batch_leak_probe():
+    assert _has_label("sensor.leak_probe", "leak")
+
+
+def test_batch_leckagesensor_waschmaschine():
+    assert _has_label("sensor.leckagesensor_waschmaschine", "leak")
+
+
+def test_batch_feuchtemelder_boden():
+    assert _has_label("sensor.feuchtemelder_boden", "leak")
+
+
+def test_batch_spillage_alarm():
+    assert _has_label("sensor.spillage_alarm", "leak")
+
+
+def test_batch_water_leak_cable():
+    assert _has_label("sensor.water_leak_cable", "leak")
+
+
+def test_batch_parent_device():
+    assert _has_label("sensor.parent_device", "diagnostic")
+
+
+def test_batch_reboot_counter():
+    assert _has_label("sensor.reboot_counter", "diagnostic")
+
+
+def test_batch_mesh_nachbarn():
+    assert _has_label("sensor.mesh_nachbarn", "diagnostic")
+
+
+def test_batch_raclette_grill():
+    assert _has_label("sensor.raclette_grill", "appliances")
+
+
+def test_batch_sodamaker():
+    assert _has_label("sensor.sodamaker", "appliances")
+
+
+def test_batch_joghurtmaker():
+    assert _has_label("sensor.joghurtmaker", "appliances")
+
+
+def test_icon_backfill_zutatenliste():
+    assert suggest_entity_icon(_FakeEntry("sensor.zutatenliste"), OrganizerOptions()) == "mdi:format-list-bulleted"
+
+
+def test_icon_backfill_sonnenfleck():
+    assert suggest_entity_icon(_FakeEntry("sensor.sonnenfleck"), OrganizerOptions()) == "mdi:white-balance-sunny"
+
+
+def test_icon_backfill_mp3_player():
+    assert suggest_entity_icon(_FakeEntry("sensor.mp3_player"), OrganizerOptions()) == "mdi:music-box"
+
+
+def test_icon_backfill_playstation_4():
+    assert suggest_entity_icon(_FakeEntry("sensor.playstation_4"), OrganizerOptions()) == "mdi:sony-playstation"
+
+
+def test_icon_backfill_selve_rollladen():
+    assert suggest_entity_icon(_FakeEntry("sensor.selve_rollladen"), OrganizerOptions()) == "mdi:window-shutter"
+
+
+def test_icon_backfill_batteriehalterung():
+    assert suggest_entity_icon(_FakeEntry("sensor.batteriehalterung"), OrganizerOptions()) == "mdi:battery-outline"
+
+
+def test_icon_backfill_gartentisch():
+    assert suggest_entity_icon(_FakeEntry("sensor.gartentisch"), OrganizerOptions()) == "mdi:table-furniture"
+
+
+def test_icon_backfill_server_rack_temperature():
+    assert suggest_entity_icon(_FakeEntry("sensor.server_rack_temperature"), OrganizerOptions()) == "mdi:server"
+
+
+def test_icon_backfill_ac_living_room():
+    assert suggest_entity_icon(_FakeEntry("sensor.ac_living_room"), OrganizerOptions()) == "mdi:air-conditioner"
+
+
+def test_icon_backfill_biomuelltonnenkalender():
+    assert suggest_entity_icon(_FakeEntry("sensor.biomuelltonnenkalender"), OrganizerOptions()) == "mdi:calendar-today"
+
+
+def test_icon_backfill_update_tool():
+    assert suggest_entity_icon(_FakeEntry("sensor.update_tool"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_theater_mode():
+    assert suggest_entity_icon(_FakeEntry("sensor.theater_mode"), OrganizerOptions()) == "mdi:theater"
+
+
+def test_icon_backfill_geraetefehler():
+    assert suggest_entity_icon(_FakeEntry("sensor.geraetefehler"), OrganizerOptions()) == "mdi:alert-circle"
+
+
+def test_icon_backfill_connection_delay():
+    assert suggest_entity_icon(_FakeEntry("sensor.connection_delay"), OrganizerOptions()) == "mdi:lan-pending"
+
+
+def test_icon_backfill_pruefsumme_fehler():
+    assert suggest_entity_icon(_FakeEntry("sensor.pruefsumme_fehler"), OrganizerOptions()) == "mdi:alert-circle-outline"
+
+
+def test_icon_backfill_aufwachgrund():
+    assert suggest_entity_icon(_FakeEntry("sensor.aufwachgrund"), OrganizerOptions()) == "mdi:power-sleep"
+
+
+def test_icon_backfill_gesamtrechnung():
+    assert suggest_entity_icon(_FakeEntry("sensor.gesamtrechnung"), OrganizerOptions()) == "mdi:receipt-text"
+
+
+def test_icon_backfill_rechnungsbetrag_wasser():
+    assert suggest_entity_icon(_FakeEntry("sensor.rechnungsbetrag_wasser"), OrganizerOptions()) == "mdi:receipt-text"
+
+
+def test_icon_backfill_mondbeleuchtungsgrad():
+    assert suggest_entity_icon(_FakeEntry("sensor.mondbeleuchtungsgrad"), OrganizerOptions()) == "mdi:moon-waxing-gibbous"
+
+
+def test_icon_backfill_outside_lux():
+    assert suggest_entity_icon(_FakeEntry("sensor.outside_lux"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_bh1750_lux():
+    assert suggest_entity_icon(_FakeEntry("sensor.bh1750_lux"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_hauswirtschaftsraum_helligkeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.hauswirtschaftsraum_helligkeit"), OrganizerOptions()) == "mdi:brightness-5"
+
+
+def test_icon_backfill_luftfeuchte_waschkueche():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftfeuchte_waschkueche"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_luftfeuchte_speicher():
+    assert suggest_entity_icon(_FakeEntry("sensor.luftfeuchte_speicher"), OrganizerOptions()) == "mdi:water-percent"
+
+
+def test_icon_backfill_lacrosse_wetter():
+    assert suggest_entity_icon(_FakeEntry("sensor.lacrosse_wetter"), OrganizerOptions()) == "mdi:weather-partly-cloudy"
+
+
+def test_icon_backfill_fahrzeug_anwesenheit():
+    assert suggest_entity_icon(_FakeEntry("sensor.fahrzeug_anwesenheit"), OrganizerOptions()) == "mdi:car-connected"
+
+
+def test_icon_backfill_stop_action():
+    assert suggest_entity_icon(_FakeEntry("sensor.stop_action"), OrganizerOptions()) == "mdi:stop"
+
+
+def test_icon_backfill_mtd_maeher():
+    assert suggest_entity_icon(_FakeEntry("sensor.mtd_maeher"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_icon_backfill_maehroboter_leistungsaufnahme():
+    assert suggest_entity_icon(_FakeEntry("sensor.maehroboter_leistungsaufnahme"), OrganizerOptions()) == "mdi:robot-mower"
+
+
+def test_icon_backfill_messerschaerfe():
+    assert suggest_entity_icon(_FakeEntry("sensor.messerschaerfe"), OrganizerOptions()) == "mdi:knife"
+
+
+def test_icon_backfill_firmware_blob():
+    assert suggest_entity_icon(_FakeEntry("sensor.firmware_blob"), OrganizerOptions()) == "mdi:chip"
+
+
+def test_icon_backfill_installationsstand():
+    assert suggest_entity_icon(_FakeEntry("sensor.installationsstand"), OrganizerOptions()) == "mdi:update"
+
+
+def test_icon_backfill_bwm_motion():
+    assert suggest_entity_icon(_FakeEntry("sensor.bwm_motion"), OrganizerOptions()) == "mdi:motion-sensor"
+
+
+def test_icon_backfill_nachverzoegerung():
+    assert suggest_entity_icon(_FakeEntry("sensor.nachverzoegerung"), OrganizerOptions()) == "mdi:timer-sand"
+
+
+def test_icon_backfill_reaktionsschwelle():
+    assert suggest_entity_icon(_FakeEntry("sensor.reaktionsschwelle"), OrganizerOptions()) == "mdi:tune"
+
+
+def test_icon_backfill_next_solar_midnight():
+    assert suggest_entity_icon(_FakeEntry("sensor.next_solar_midnight"), OrganizerOptions()) == "mdi:weather-night"
+
+
+def test_icon_backfill_akku_pack():
+    assert suggest_entity_icon(_FakeEntry("sensor.akku_pack"), OrganizerOptions()) == "mdi:battery-high"
+
+
+def test_icon_backfill_spielzeit():
+    assert suggest_entity_icon(_FakeEntry("sensor.spielzeit"), OrganizerOptions()) == "mdi:gamepad-variant"

@@ -47679,6 +47679,49 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "ruhezustand": "mdi:sleep",
     "schlagschatten": "mdi:weather-sunny-off",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+
+
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "zutatenliste": "mdi:format-list-bulleted",
+    "sonnenfleck": "mdi:white-balance-sunny",
+    "mp3 player": "mdi:music-box",
+    "playstation 4": "mdi:sony-playstation",
+    "selve rollladen": "mdi:window-shutter",
+    "batteriehalterung": "mdi:battery-outline",
+    "gartentisch": "mdi:table-furniture",
+    "server rack temperature": "mdi:server",
+    "ac living room": "mdi:air-conditioner",
+    "biomuelltonnenkalender": "mdi:calendar-today",
+    "update tool": "mdi:update",
+    "theater mode": "mdi:theater",
+    "geraetefehler": "mdi:alert-circle",
+    "connection delay": "mdi:lan-pending",
+    "pruefsumme fehler": "mdi:alert-circle-outline",
+    "aufwachgrund": "mdi:power-sleep",
+    "gesamtrechnung": "mdi:receipt-text",
+    "rechnungsbetrag wasser": "mdi:receipt-text",
+    "mondbeleuchtungsgrad": "mdi:moon-waxing-gibbous",
+    "outside lux": "mdi:brightness-5",
+    "bh1750 lux": "mdi:brightness-5",
+    "hauswirtschaftsraum helligkeit": "mdi:brightness-5",
+    "luftfeuchte waschkueche": "mdi:water-percent",
+    "luftfeuchte speicher": "mdi:water-percent",
+    "lacrosse wetter": "mdi:weather-partly-cloudy",
+    "fahrzeug anwesenheit": "mdi:car-connected",
+    "stop action": "mdi:stop",
+    "mtd maeher": "mdi:robot-mower",
+    "maehroboter leistungsaufnahme": "mdi:robot-mower",
+    "messerschaerfe": "mdi:knife",
+    "firmware blob": "mdi:chip",
+    "installationsstand": "mdi:update",
+    "bwm motion": "mdi:motion-sensor",
+    "nachverzoegerung": "mdi:timer-sand",
+    "reaktionsschwelle": "mdi:tune",
+    "next solar midnight": "mdi:weather-night",
+    "akku pack": "mdi:battery-high",
+    "spielzeit": "mdi:gamepad-variant",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -96509,6 +96552,20 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "tuerkontakt anwesenheit": "presence",
     "fahrzeug anwesenheit": "presence",
     "toilettensitz sensor": "presence",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "drip sensor": "leak",
+    "leak probe": "leak",
+    "leckagesensor waschmaschine": "leak",
+    "feuchtemelder boden": "leak",
+    "spillage alarm": "leak",
+    "water leak cable": "leak",
+    "parent device": "diagnostic",
+    "reboot counter": "diagnostic",
+    "mesh nachbarn": "diagnostic",
+    "raclette grill": "appliances",
+    "sodamaker": "appliances",
+    "joghurtmaker": "appliances",
 
 }
 
