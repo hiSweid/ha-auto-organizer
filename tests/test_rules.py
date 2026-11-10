@@ -1195,6 +1195,23 @@ def test_keyword_veto_waste_schedule_is_not_an_automation():
     assert names(entry) == ["Abfall"]
 
 
+def test_keyword_vetoes_issue_5_follow_up():
+    # Issue #5 follow-up: concrete false positives from a real installation.
+    for eid, banned in (
+        ("sensor.zuhause_sun_solar_midnight", ("Anwesenheit", "Energie")),
+        ("sensor.handy_xyz_next_alarm", ("Anwesenheit", "Sicherheit")),
+        ("sensor.sun_next_dawn", ("Helligkeit",)),
+        ("sensor.ws_wet_bulb", ("Beleuchtung",)),
+        ("switch.echo_dot_3_4ffd90_do_not_disturb", ("Staubsauger",)),
+        ("sensor.bthome_sensor_abc_ventil", ("Wasser", "Netzwerk & Server")),
+        ("binary_sensor.bthome_sensor_677f_fenster", ("Netzwerk & Server",)),
+        ("sensor.ws_soil_moisture_pct", ("Luftfeuchtigkeit",)),
+        ("sensor.ws_leaf_wetness", ("Luftfeuchtigkeit",)),
+    ):
+        got = names(FakeEntry(eid))
+        assert not set(banned) & set(got), (eid, got)
+
+
 # --- curated platform label stays authoritative ---------------------------
 
 
@@ -1231,7 +1248,7 @@ def test_leaf_wetness_is_not_a_nissan_leaf():
     entry = FakeEntry("sensor.ws_leaf_wetness")
     result = names(entry)
     assert "Auto" not in result
-    assert "Luftfeuchtigkeit" in result
+    assert "Garten" in result
 
 
 def test_nissan_leaf_is_still_a_car():

@@ -51258,7 +51258,7 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "mauerfeuchte": "humidity",
     "kellerfeuchte": "humidity",
     "blattfeuchte": "humidity",
-    "leaf wetness": "humidity",
+    "leaf wetness": "garden",
     "thermo hygro": "humidity",
     " hygro ": "humidity",
     "raumklima": "humidity",
@@ -96194,9 +96194,9 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
 #: domain or device_class match, both of which are decided before the
 #: keyword pass runs.
 KEYWORD_VETOES: Final[dict[str, frozenset[str]]] = {
-    "next alarm": frozenset({"security"}),
-    "naechster wecker": frozenset({"security"}),
-    "nachster wecker": frozenset({"security"}),
+    "next alarm": frozenset({"security", "presence"}),
+    "naechster wecker": frozenset({"security", "presence"}),
+    "nachster wecker": frozenset({"security", "presence"}),
     "spot clean": frozenset({"lights"}),
     "spot cleaning": frozenset({"lights"}),
     "spotreinigung": frozenset({"lights"}),
@@ -96210,6 +96210,20 @@ KEYWORD_VETOES: Final[dict[str, frozenset[str]]] = {
     # comment above evcc_intg's removal from INTEGRATION_LABELS.
     "poolpumpe": frozenset({"car"}),
     "pool pumpe": frozenset({"car"}),
+    # A sun2 "zuhause_sun_solar_midnight" is neither presence nor energy, and
+    # "sun next dawn" is not a light-level reading (issue #5).
+    "solar midnight": frozenset({"presence", "energy"}),
+    "sun next dawn": frozenset({"light_level"}),
+    # A wet-bulb temperature has nothing to do with " bulb " lighting.
+    "wet bulb": frozenset({"lights"}),
+    # An Echo Dot's "Do not disturb" switch is not a robot vacuum's.
+    "echo dot": frozenset({"vacuums"}),
+    # BTHome sensors (e.g. TRV valves, window contacts) are Bluetooth, not
+    # a network/server or a water valve.
+    "bthome": frozenset({"network", "water"}),
+    # Soil moisture is garden, not air humidity.
+    "soil moisture": frozenset({"humidity"}),
+    "leaf wetness": frozenset({"humidity"}),
 }
 
 # KEYWORD_LABELS sorted longest-needle-first so callers that stop at the

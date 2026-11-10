@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.36] - 2026-11-10
+
+### Fixed
+- More keyword false positives from issue #5: sun2 `solar midnight` is no longer
+  presence/energy, `sun next dawn` no light level, phone `next alarm` no presence,
+  `wet bulb` no lighting, an Echo Dot's `do not disturb` no vacuum, BTHome sensors
+  no network/water, and soil moisture / leaf wetness are garden, not air humidity.
+
 ## [0.11.35] - 2026-11-07
 
 ### Added

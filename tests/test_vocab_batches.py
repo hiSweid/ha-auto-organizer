@@ -132598,7 +132598,7 @@ def test_batch_slat_tilt():
 
 
 def test_batch_bthome():
-    assert _has_label("sensor.bthome", "network")
+    assert not _has_label("sensor.bthome", "network")
 
 
 def test_batch_shelly_1_gen3():
