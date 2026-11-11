@@ -101078,7 +101078,7 @@ def test_batch_thermostat_auto_modus():
 
 
 def test_batch_farbtemperatur_kelvin():
-    assert _has_label("sensor.farbtemperatur_kelvin", "temperature")
+    assert not _has_label("sensor.farbtemperatur_kelvin", "temperature")
     assert suggest_entity_icon(_FakeEntry("sensor.farbtemperatur_kelvin"), OrganizerOptions()) == "mdi:temperature-kelvin"
 
 

@@ -96665,7 +96665,7 @@ KEYWORD_VETOES: Final[dict[str, frozenset[str]]] = {
     # A sun2 "zuhause_sun_solar_midnight" is neither presence nor energy, and
     # "sun next dawn" is not a light-level reading (issue #5).
     "solar midnight": frozenset({"presence", "energy"}),
-    "sun next dawn": frozenset({"light_level"}),
+    "sun next dawn": frozenset({"light_level", "automations"}),
     # A wet-bulb temperature has nothing to do with " bulb " lighting.
     "wet bulb": frozenset({"lights"}),
     # An Echo Dot's "Do not disturb" switch is not a robot vacuum's.
@@ -96696,6 +96696,20 @@ KEYWORD_VETOES: Final[dict[str, frozenset[str]]] = {
     "ble dongle": frozenset({"network"}),
     "blu dongle": frozenset({"network"}),
     "lms mixer": frozenset({"appliances"}),
+    # Found by running the engine over a real installation (2768 entities):
+    # a CPU/GPU "Auslastung" is load, not room occupancy; a "Keller
+    # Wasserzaehler" is not a leak sensor; colour temperature is not a
+    # temperature; a candy-cane light is not shopping; "Home Assistant ..."
+    # 
+    "auslastung": frozenset({"presence"}),
+    "keller wasserzaehler": frozenset({"leak"}),
+    "marstek": frozenset({"network"}),
+    "aqara dimmer": frozenset({"network"}),
+    "farbtemperatur": frozenset({"temperature"}),
+    "zuckerstangen": frozenset({"shopping"}),
+    "roborock": frozenset({"shopping"}),
+    "fahrzeugerkennung": frozenset({"cameras"}),
+    "blindstrom": frozenset({"covers"}),
     "leaf wetness": frozenset({"humidity", "leak"}),
 }
 
@@ -97244,7 +97258,7 @@ def _collect_label_keys(
 
         if options.enable_domain:
             label = DOMAIN_LABELS.get(domain)
-            if label not in early_vetoes:
+            if label not in early_vetoes or domain == "update":
                 add(label, reason=domain)
 
         if options.enable_device_class:

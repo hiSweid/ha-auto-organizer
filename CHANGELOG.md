@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.39] - 2026-11-11
+
+### Fixed
+- False positives found by running the engine over a real 2768-entity installation:
+  CPU/GPU `Auslastung` is no longer presence, `Keller Wasserzaehler` no longer a leak,
+  `Farbtemperatur` no longer temperature, `Zuckerstangen` lights and Roborock no longer
+  shopping, Aqara dimmers/Marstek no longer network, `Fahrzeugerkennung` no
+  longer a camera. About 260 wrong labels removed, none added.
+
 ## [0.11.38] - 2026-11-10
 
 ### Fixed

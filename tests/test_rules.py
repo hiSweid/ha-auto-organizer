@@ -1260,6 +1260,24 @@ class _Named(FakeEntry):
         self.name = name
 
 
+def test_vetoes_from_real_installation_audit():
+    def labels(eid, name, dc=None):
+        return [s["name"] for s in compute_label_specs(_Named(eid, name, dc), OrganizerOptions())]
+
+    for eid, name, dc, banned in (
+        ("sensor.pve_cpu_auslastung", "pve CPU-Auslastung", None, ("Anwesenheit",)),
+        ("sensor.watermeter_status", "Keller Wasserzähler Status", None, ("Leck",)),
+        ("number.x_farbtemperatur", "Stehlampe Wiedereinschalt Farbtemperatur", None, ("Temperatur",)),
+        ("light.garten_zuckerstangen_links", "Garten Zuckerstangen links", None, ("Einkauf",)),
+        ("sensor.aqara_dimmer_switch_energie", "Lesebereich Energie", "energy", ("Netzwerk & Server",)),
+        ("update.marstek_venus_modbus_update", "Marstek Venus Modbus Update", None, ("Netzwerk & Server",)),
+        ("binary_sensor.evcc_garage_vehicle_detection_active", "Garage Fahrzeugerkennung", None, ("Kamera",)),
+    ):
+        got = labels(eid, name, dc)
+        assert not set(banned) & set(got), (eid, got)
+    assert "Updates" in labels("update.home_assistant_core_update", "Home Assistant Core Update")
+
+
 # --- curated platform label stays authoritative ---------------------------
 
 
