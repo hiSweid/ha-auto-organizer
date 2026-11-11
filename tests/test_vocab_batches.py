@@ -162183,3 +162183,8 @@ def test_batch_schneeketten():
 def test_batch_parking_sensor():
     assert _has_label("sensor.parking_sensor", "car")
     assert suggest_entity_icon(_FakeEntry("sensor.parking_sensor"), OrganizerOptions()) == "mdi:car-brake-parking"
+
+
+def test_batch_dosenoeffner():
+    assert _has_label("sensor.dosenoeffner", "appliances")
+    assert suggest_entity_icon(_FakeEntry("sensor.dosenoeffner"), OrganizerOptions()) == "mdi:tools"
