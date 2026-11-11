@@ -1278,6 +1278,16 @@ def test_vetoes_from_real_installation_audit():
     assert "Updates" in labels("update.home_assistant_core_update", "Home Assistant Core Update")
 
 
+def test_curated_grocy_gates_keywords_even_when_label_not_enabled():
+    # Issue #5: with an `enabled_labels` allow-list lacking "shopping", a Grocy
+    # product named "Mais"/"Frost" must not fall through to garden/weather.
+    opts = OrganizerOptions(enabled_labels=frozenset({"garden", "weather"}))
+    for name in ("Mais", "Frost", "Rosmarin"):
+        got = [s["name"] for s in compute_label_specs(
+            _Named("sensor.shopping_list_with_grocy_product_346", name), opts)]
+        assert got == [], (name, got)
+
+
 # --- curated platform label stays authoritative ---------------------------
 
 

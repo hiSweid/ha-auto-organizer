@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.40] - 2026-11-11
+
+### Fixed
+- A curated integration match (e.g. Grocy products) now gates the keyword pass even when
+  `enabled_labels` filters its own label out, so "Mais"/"Frost"/"Rosmarin" products no
+  longer fall through to Garten/Wetter (issue #5).
+
 ## [0.11.39] - 2026-11-11
 
 ### Fixed

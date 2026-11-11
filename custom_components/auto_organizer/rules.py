@@ -97443,6 +97443,7 @@ def _collect_label_keys(
             reasons.append(reason)
 
     platform = getattr(entry, "platform", None)
+    curated_matched = False
     is_category = bool(
         options.skip_categories and getattr(entry, "entity_category", None)
     )
@@ -97461,6 +97462,7 @@ def _collect_label_keys(
     if options.enable_curated:
         if platform:
             add(INTEGRATION_LABELS.get(platform), reason=platform)
+            curated_matched = platform in INTEGRATION_LABELS
         # Known vehicle names always count as "car".
         ename = getattr(entry, "name", None) or getattr(
             entry, "original_name", None
@@ -97476,6 +97478,7 @@ def _collect_label_keys(
         # "Abfall" from the unrelated frying-oil keyword.
         if not keys and "grocy" in hay:
             add(INTEGRATION_LABELS.get("grocy"), reason="grocy")
+            curated_matched = True
         for kw in CAR_NAME_KEYWORDS:
             if f" {kw} " not in hay:
                 continue
@@ -97483,7 +97486,9 @@ def _collect_label_keys(
                 continue
             add("car", reason=kw)
             break
-    curated_hit = bool(keys)
+    # A curated match gates the keyword pass even when `enabled_labels` filtered
+    # its own label out, otherwise "Mais"/"Frost" Grocy products fall through.
+    curated_hit = bool(keys) or curated_matched
 
     # Domain/device_class labels are skipped for config/diagnostic helpers.
     if not is_category:
