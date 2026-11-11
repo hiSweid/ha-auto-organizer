@@ -162128,3 +162128,58 @@ def test_icon_backfill_schattennetz():
 
 def test_icon_backfill_winterschlaf_maeher():
     assert suggest_entity_icon(_FakeEntry("sensor.winterschlaf_maeher"), OrganizerOptions()) == "mdi:snowflake"
+
+
+def test_batch_pannenhilfe():
+    assert _has_label("sensor.pannenhilfe", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.pannenhilfe"), OrganizerOptions()) == "mdi:car-wrench"
+
+
+def test_batch_abschleppseil():
+    assert _has_label("sensor.abschleppseil", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.abschleppseil"), OrganizerOptions()) == "mdi:tow-truck"
+
+
+def test_batch_muelltonnenstellplatz():
+    assert _has_label("sensor.muelltonnenstellplatz", "waste")
+    assert suggest_entity_icon(_FakeEntry("sensor.muelltonnenstellplatz"), OrganizerOptions()) == "mdi:trash-can"
+
+
+def test_batch_stagnationsspuelung():
+    assert _has_label("sensor.stagnationsspuelung", "water")
+    assert suggest_entity_icon(_FakeEntry("sensor.stagnationsspuelung"), OrganizerOptions()) == "mdi:water-sync"
+
+
+def test_batch_main_shutoff():
+    assert _has_label("sensor.main_shutoff", "water")
+    assert suggest_entity_icon(_FakeEntry("sensor.main_shutoff"), OrganizerOptions()) == "mdi:valve"
+
+
+def test_batch_lane_assist():
+    assert _has_label("sensor.lane_assist", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.lane_assist"), OrganizerOptions()) == "mdi:road-variant"
+
+
+def test_batch_zuendkerze():
+    assert _has_label("sensor.zuendkerze", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.zuendkerze"), OrganizerOptions()) == "mdi:flash"
+
+
+def test_batch_totwinkel():
+    assert _has_label("sensor.totwinkel", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.totwinkel"), OrganizerOptions()) == "mdi:car-side"
+
+
+def test_batch_abgasruecklauf():
+    assert _has_label("sensor.abgasruecklauf", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.abgasruecklauf"), OrganizerOptions()) == "mdi:smoke"
+
+
+def test_batch_schneeketten():
+    assert _has_label("sensor.schneeketten", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.schneeketten"), OrganizerOptions()) == "mdi:snowflake"
+
+
+def test_batch_parking_sensor():
+    assert _has_label("sensor.parking_sensor", "car")
+    assert suggest_entity_icon(_FakeEntry("sensor.parking_sensor"), OrganizerOptions()) == "mdi:car-brake-parking"

@@ -47871,6 +47871,19 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "schattennetz": "mdi:shield-sun",
     "winterschlaf maeher": "mdi:snowflake",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "pannenhilfe": "mdi:car-wrench",
+    "abschleppseil": "mdi:tow-truck",
+    "muelltonnenstellplatz": "mdi:trash-can",
+    "stagnationsspuelung": "mdi:water-sync",
+    "main shutoff": "mdi:valve",
+    "lane assist": "mdi:road-variant",
+    "zuendkerze": "mdi:flash",
+    "totwinkel": "mdi:car-side",
+    "abgasruecklauf": "mdi:smoke",
+    "schneeketten": "mdi:snowflake",
+    "parking sensor": "mdi:car-brake-parking",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -96873,6 +96886,19 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "miele at home": "appliances",
     "sole wasser": "climate",
     "kollektor": "energy",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "pannenhilfe": "car",
+    "abschleppseil": "car",
+    "muelltonnenstellplatz": "waste",
+    "stagnationsspuelung": "water",
+    "main shutoff": "water",
+    "lane assist": "car",
+    "zuendkerze": "car",
+    "totwinkel": "car",
+    "abgasruecklauf": "car",
+    "schneeketten": "car",
+    "parking sensor": "car",
 
 }
 
