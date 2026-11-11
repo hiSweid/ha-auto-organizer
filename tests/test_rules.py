@@ -1225,6 +1225,41 @@ def test_vetoes_also_cancel_domain_and_device_class_labels():
     assert "Leck" in names(FakeEntry("binary_sensor.keller_wasser", device_class="moisture"))
 
 
+def test_vetoes_issue_5_second_follow_up():
+    def labels(eid, name, dc=None):
+        return names(FakeEntry(eid, device_class=dc), OrganizerOptions()) if name is None else [
+            s["name"] for s in compute_label_specs(
+                _Named(eid, name, dc), OrganizerOptions())
+        ]
+
+    for eid, name, dc, banned in (
+        ("sensor.ws_illuminance", "Beleuchtungsstärke Wetterstation", "illuminance", ("Beleuchtung",)),
+        ("sensor.infrarotlicht", "Infrarotlicht", None, ("Beleuchtung", "Bewegung")),
+        ("light.echo_2_064a21_light_ring", "Echo 2 56f3bd Light ring", None, ("Beleuchtung",)),
+        ("binary_sensor.tires_for_zuhause", "Winterräder", None, ("Anwesenheit",)),
+        ("schedule.heizplan_ez_abwesend", "Heizplan EZ abwesend", None, ("Anwesenheit",)),
+        ("schedule.heizplan_ez_urlaub", "Heizplan EZ Urlaub", None, ("Anwesenheit",)),
+        ("sensor.openscale_total_body_water", "Total body water", "moisture", ("Leck",)),
+        ("valve.bthome_sensor_x_ventil", "Ventil", "moisture", ("Leck",)),
+        ("binary_sensor.vu_duo2_recording", "Recording", None, ("Kamera",)),
+        ("sensor.shelly_bt_dongle_ez_temperatur", "Shelly BT Dongle EZ Temperatur", "temperature", ("Netzwerk & Server",)),
+        ("script.1643637515376", "LMS Mixer", None, ("Haushaltsgeräte",)),
+    ):
+        got = labels(eid, name, dc)
+        assert not set(banned) & set(got), (eid, got)
+    # A real moisture binary_sensor stays a leak sensor.
+    assert "Leck" in labels("binary_sensor.keller_wasser", "Keller Wasser", "moisture")
+
+
+@dataclass
+class _Named(FakeEntry):
+    name: str | None = None
+
+    def __init__(self, entity_id, name, device_class=None):
+        super().__init__(entity_id, device_class=device_class)
+        self.name = name
+
+
 # --- curated platform label stays authoritative ---------------------------
 
 

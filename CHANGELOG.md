@@ -6,6 +6,16 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.38] - 2026-11-10
+
+### Fixed
+- `moisture` device_class only maps to leak on a `binary_sensor`; on a `sensor` or
+  `valve` it is a content value (soil, body water) and no longer a leak.
+- Vetoes now also apply to keyword labels from other needles, and cover more issue #5
+  cases: illuminance/infrared sensors (not lighting/motion), Echo light rings, winter
+  tyres and heating plans (not presence), satellite-receiver recording flags (not a
+  camera), BT dongles (not network) and a "mixer" script (not an appliance).
+
 ## [0.11.37] - 2026-11-10
 
 ### Fixed

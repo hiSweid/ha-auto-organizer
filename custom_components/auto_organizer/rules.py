@@ -96677,6 +96677,25 @@ KEYWORD_VETOES: Final[dict[str, frozenset[str]]] = {
     "bthome": frozenset({"network", "water"}),
     # Soil moisture is garden, not air humidity.
     "soil moisture": frozenset({"humidity", "leak"}),
+    # Issue #5 (0.11.37 feedback): illuminance / infrared light sensors are
+    # not lighting, Echo light rings are not lighting, winter tyres and
+    # heating plans are not presence, a satellite receiver's recording flag
+    # is not a camera, a BT dongle is not a network device, a "mixer" script
+    # is not a kitchen appliance.
+    "beleuchtungsstaerke": frozenset({"lights"}),
+    "infrarotlicht": frozenset({"lights", "motion"}),
+    " echo ": frozenset({"lights", "vacuums"}),
+    " tires ": frozenset({"presence"}),
+    "winterraeder": frozenset({"presence"}),
+    "heizplan": frozenset({"presence"}),
+    "heizungsplan": frozenset({"presence"}),
+    "heating schedule": frozenset({"presence"}),
+    "vu duo": frozenset({"cameras"}),
+    "enigma": frozenset({"cameras"}),
+    "bt dongle": frozenset({"network"}),
+    "ble dongle": frozenset({"network"}),
+    "blu dongle": frozenset({"network"}),
+    "lms mixer": frozenset({"appliances"}),
     "leaf wetness": frozenset({"humidity", "leak"}),
 }
 
@@ -97232,6 +97251,10 @@ def _collect_label_keys(
             device_class = entry.device_class or entry.original_device_class
             if device_class:
                 label = DEVICE_CLASS_LABELS.get(device_class)
+                # "moisture" means wet/dry only on a binary_sensor; on a
+                # sensor it is a content percentage (soil, body water).
+                if device_class == "moisture" and domain != "binary_sensor":
+                    label = None
                 if label not in early_vetoes:
                     add(label, reason=device_class)
 
@@ -97267,7 +97290,7 @@ def _collect_label_keys(
                 candidates.setdefault(key, needle)
                 vetoed |= KEYWORD_VETOES.get(needle, frozenset())
             for key, needle in candidates.items():
-                if key not in vetoed:
+                if key not in vetoed and key not in early_vetoes:
                     add(key, reason=needle)
     elif not keys:
         # A config/diagnostic helper no curated integration recognized is
