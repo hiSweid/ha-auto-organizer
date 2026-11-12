@@ -47932,6 +47932,46 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     # --- incremental vocabulary batch (auto-generated + collision-checked) ---
 
 
+    # --- icon backfill batch (local-LLM generated + validated) ---
+    "musikszene": "mdi:music",
+    "tv szene": "mdi:television-play",
+    "fernsehszene": "mdi:television",
+    "winterszene": "mdi:snowflake",
+    "herbstszene": "mdi:leaf-maple",
+    "bbq night": "mdi:grill",
+    "dinner light": "mdi:silverware-fork-knife",
+    "festessen": "mdi:food-turkey",
+    "regenabend": "mdi:weather-pouring",
+    "sommerabend szene": "mdi:weather-sunset",
+    "kuschelzeit": "mdi:heart",
+    "pancake maker": "mdi:pot-steam",
+    "roof leakage": "mdi:water-alert",
+    "keller wasser": "mdi:water-alert",
+    "waterguard": "mdi:water-alert",
+    "pir flur": "mdi:motion-sensor",
+    "pir keller": "mdi:motion-sensor",
+    "radar bewegung": "mdi:radar",
+    "keller bewegung": "mdi:motion-sensor",
+    "flur bewegung": "mdi:motion-sensor",
+    "bewegung bad": "mdi:motion-sensor",
+    "ring bewegung": "mdi:motion-sensor",
+    "hikvision bewegungserkennung": "mdi:motion-sensor",
+    "person present": "mdi:account-eye",
+    "string 1 leistung": "mdi:solar-power",
+    "string 2 leistung": "mdi:solar-power",
+    "wirkleistungsbegrenzung": "mdi:flash-triangle",
+    "umwandlungsverlust": "mdi:flash-alert",
+    "sonnenaufgangsschaltung": "mdi:weather-sunset-up",
+    "bewegungsregel": "mdi:motion-sensor",
+    "platform trigger": "mdi:play-circle",
+    "automationswarteschlange": "mdi:format-list-numbered",
+    "automationsstatistik": "mdi:chart-bar",
+    "going out": "mdi:exit-run",
+    "wolle handwasch": "mdi:hand-wash",
+    "home connect programm": "mdi:washing-machine",
+    "ofeneinstellungen": "mdi:stove",
+    "night mode scene": "mdi:weather-night",
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
