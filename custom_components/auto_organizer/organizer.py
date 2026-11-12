@@ -15,6 +15,7 @@ from homeassistant.helpers import floor_registry as fr
 from homeassistant.helpers import label_registry as lr
 
 from .const import MANAGED_MARKER
+from .localization import runtime_new_label_marker
 from .rules import (
     LabelSpec,
     OrganizerOptions,
@@ -159,6 +160,7 @@ class Organizer:
         *,
         create: bool,
         synced: set[str],
+        language: str,
     ) -> str:
         """Return the label_id for ``spec``.
 
@@ -166,8 +168,8 @@ class Organizer:
         labels managed by this integration, the color/icon is re-synced when
         the rule changed. During a dry run (``create=False``) nothing is
         written: existing labels resolve to their id, missing ones to a
-        ``(neu) <name>`` placeholder so the preview still shows what would
-        be added.
+        localized ``(<new>) <name>`` placeholder so the preview still shows
+        what would be added.
         """
         reg = lr.async_get(self.hass)
         existing = reg.async_get_label_by_name(spec["name"])
@@ -187,7 +189,8 @@ class Organizer:
                     )
             return existing.label_id
         if not create:
-            return f"(neu) {spec['name']}"
+            marker = runtime_new_label_marker(language)
+            return f"({marker}) {spec['name']}"
         created = reg.async_create(
             name=spec["name"],
             color=spec["color"],
@@ -245,7 +248,11 @@ class Organizer:
 
             target_ids = {
                 self._resolve_label(
-                    s, result, create=not options.dry_run, synced=synced
+                    s,
+                    result,
+                    create=not options.dry_run,
+                    synced=synced,
+                    language=options.language,
                 )
                 for s in specs
             }

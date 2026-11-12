@@ -15,6 +15,7 @@ from homeassistant.core import callback
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.helpers import selector
 
+from .localization import available_translation_languages
 from .rules import DOMAIN_LABELS, LABELS
 from .const import (
     CONF_AUTO_LABEL_NEW,
@@ -94,6 +95,7 @@ class AutoOrganizerOptionsFlow(OptionsFlow):
             return self.async_create_entry(title="", data=user_input)
 
         o = self.config_entry.options
+        language_options = ["auto", *available_translation_languages()]
         schema = vol.Schema(
             {
                 vol.Optional(
@@ -155,7 +157,7 @@ class AutoOrganizerOptionsFlow(OptionsFlow):
                 vol.Optional(
                     CONF_LANGUAGE,
                     default=o.get(CONF_LANGUAGE, DEFAULT_LANGUAGE),
-                ): vol.In(["auto", "de", "en"]),
+                ): vol.In(language_options),
                 vol.Optional(
                     CONF_MAX_LABELS,
                     default=o.get(CONF_MAX_LABELS, DEFAULT_MAX_LABELS),

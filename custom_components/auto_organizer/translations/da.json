@@ -1,0 +1,198 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Automatisk Enhedsorganisering",
+        "description": "Mærk automatisk dine enheder baseret på deres domæne og enhedsklasse. Du kan konfigurere reglerne efter opsætning og starte en kørsel med tjenesten `auto_organizer.run`."
+      }
+    },
+    "abort": {
+      "already_configured": "Auto-Organizer er allerede konfigureret."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Indstillinger for Auto-Organizer",
+        "data": {
+          "dry_run": "Testkørsel (skriv ikke ændringer)",
+          "overwrite": "Overskriv eksisterende etiketter i stedet for at flette",
+          "enable_domain": "Mærk efter domæne (lys, kontakter osv.)",
+          "enable_device_class": "Mærk efter enhedsklasse (temperatur, bevægelse osv.)",
+          "enable_integration": "Mærk efter kildeintegration",
+          "enable_curated": "Udvalgte temaetiketter (husholdningsapparater, have, netværk osv.)",
+          "enabled_labels": "Begræns til kun disse etiketter (lad stå tomt = alle tilladt)",
+          "set_entity_icons": "Angiv også et mere specifikt ikon pr. enhed, hvor det er kendt (f.eks. kaffemaskine, TV) – overskriver aldrig et ikon, du allerede har sat",
+          "enable_area": "Tilføj en etiket for hver enheds område",
+          "enable_floor": "Tilføj en etiket for hver enheds etage",
+          "skip_categories": "Spring diagnostik-/konfigurationsenheder over",
+          "language": "Sprog for etiketter (auto eller tilgængelig oversættelse)",
+          "max_labels": "Maksimalt antal etiketter pr. enhed",
+          "auto_label_new": "Mærk automatisk nytilføjede enheder",
+          "run_on_startup": "Kør én gang ved opstart af Home Assistant",
+          "scan_interval": "Genkendingsinterval i minutter (0 = fra)",
+          "label_prefix": "Valgfrit præfiks for oprettede etiketter",
+          "exclude_domains": "Udelad hele domæner/grupper (vælg alle relevante)",
+          "exclude_entities": "Udelad individuelle enheder",
+          "exclude": "Avanceret: udelad via glob-mønster (f.eks. sensor.test_*)",
+          "custom_rules": "Brugerdefinerede regler: nøgleord=etiket, én pr. linje (etiketten skal eksistere, f.eks. pool=vand)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "button": {
+      "run": {
+        "name": "Kør nu"
+      },
+      "cleanup": {
+        "name": "Ryd etiketter op"
+      },
+      "remove_all": {
+        "name": "Fjern alle etiketter"
+      }
+    },
+    "select": {
+      "scope": {
+        "name": "Kørselsomfang",
+        "state": {
+          "labels_areas_icons": "Alt (etiketter + områder + ikoner)",
+          "labels_and_areas": "Etiketter + områder",
+          "labels": "Kun etiketter",
+          "areas": "Kun områder",
+          "icons": "Kun ikoner"
+        }
+      }
+    },
+    "switch": {
+      "dry_run": {
+        "name": "Testkørsel"
+      }
+    },
+    "sensor": {
+      "last_run": {
+        "name": "Seneste kørsel"
+      },
+      "last_run_time": {
+        "name": "Tidspunkt for seneste kørsel"
+      },
+      "labeled": {
+        "name": "Mærkede enheder"
+      },
+      "unlabeled": {
+        "name": "Umærkede enheder"
+      },
+      "without_area": {
+        "name": "Enheder uden område"
+      },
+      "managed_labels": {
+        "name": "Administrerede etiketter"
+      },
+      "with_icon": {
+        "name": "Enheder med ikon"
+      },
+      "coverage": {
+        "name": "Etiketdækning"
+      },
+      "last_labeled": {
+        "name": "Senest mærkede enheder"
+      },
+      "last_grouped": {
+        "name": "Senest grupperede enheder"
+      },
+      "last_iconed": {
+        "name": "Seneste enheder med nyt ikon"
+      },
+      "last_error": {
+        "name": "Seneste fejl"
+      }
+    }
+  },
+  "issues": {
+    "invalid_custom_rules": {
+      "title": "Ukendt etiket i brugerdefinerede regler",
+      "description": "Disse etiketter i dine brugerdefinerede regler findes ikke og ignoreres: {labels}. Brug en indbygget etiketnøgle (f.eks. vand, energi, medier)."
+    },
+    "no_areas": {
+      "title": "Ingen områder defineret",
+      "description": "Område-/etagemærkning er aktiveret, men Home Assistant har ingen områder. Opret områder, eller deaktiver område-/etagefunktionerne."
+    }
+  },
+  "runtime": {
+    "new_label_marker": "ny"
+  },
+  "services": {
+    "run": {
+      "name": "Kør",
+      "description": "Scan alle enheder og anvend matchende etiketter.",
+      "fields": {
+        "dry_run": {
+          "name": "Testkørsel",
+          "description": "Beregn ændringer uden at gemme dem."
+        },
+        "overwrite": {
+          "name": "Overskriv",
+          "description": "Erstat eksisterende etiketter i stedet for at flette."
+        },
+        "entities": {
+          "name": "Enheder",
+          "description": "Begræns kørslen til disse enheder."
+        }
+      }
+    },
+    "cleanup": {
+      "name": "Ryd etiketter op",
+      "description": "Fjern etiketter, der er oprettet af Auto-Organizer.",
+      "fields": {
+        "dry_run": {
+          "name": "Testkørsel",
+          "description": "Beregn ændringer uden at gemme dem."
+        }
+      }
+    },
+    "assign_areas": {
+      "name": "Tildel områder",
+      "description": "Tildel automatisk enheder uden område til et matchende område baseret på navn.",
+      "fields": {
+        "dry_run": {
+          "name": "Testkørsel",
+          "description": "Beregn ændringer uden at gemme dem."
+        }
+      }
+    },
+    "assign_categories": {
+      "name": "Tildel kategorier",
+      "description": "Tildel automatisk automations-/scriptenheder uden kategori til en matchende rumkategori baseret på navn.",
+      "fields": {
+        "dry_run": {
+          "name": "Testkørsel",
+          "description": "Beregn ændringer uden at gemme dem."
+        }
+      }
+    },
+    "assign_icons": {
+      "name": "Tildel ikoner",
+      "description": "Foreslå og anvend specifikke ikoner på tværs af alle enheder uafhængigt af etiketter.",
+      "fields": {
+        "dry_run": {
+          "name": "Testkørsel",
+          "description": "Beregn ændringer uden at gemme dem."
+        }
+      }
+    },
+    "remove_all": {
+      "name": "Fjern alle etiketter",
+      "description": "Slet alle etiketter i Home Assistant, ikke kun dem der administreres af Auto-Organizer.",
+      "fields": {
+        "dry_run": {
+          "name": "Testkørsel",
+          "description": "Beregn ændringer uden at gemme dem."
+        }
+      }
+    },
+    "preview": {
+      "name": "Forhåndsvisning",
+      "description": "Forhåndsvis både etiketter og områder samlet uden at gemme ændringer."
+    }
+  }
+}
