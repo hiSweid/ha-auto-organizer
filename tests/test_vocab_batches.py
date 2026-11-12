@@ -162188,3 +162188,31 @@ def test_batch_parking_sensor():
 def test_batch_dosenoeffner():
     assert _has_label("sensor.dosenoeffner", "appliances")
     assert suggest_entity_icon(_FakeEntry("sensor.dosenoeffner"), OrganizerOptions()) == "mdi:tools"
+
+
+def test_batch_mover_ladeschacht():
+    assert _has_label("sensor.mover_ladeschacht", "mower")
+
+
+def test_batch_landxcape():
+    assert _has_label("sensor.landxcape", "mower")
+
+
+def test_batch_maehstopp():
+    assert _has_label("sensor.maehstopp", "mower")
+
+
+def test_batch_maehfreie_zone():
+    assert _has_label("sensor.maehfreie_zone", "mower")
+
+
+def test_batch_tonnenstandort():
+    assert _has_label("sensor.tonnenstandort", "waste")
+
+
+def test_batch_aufbackstation():
+    assert _has_label("sensor.aufbackstation", "appliances")
+
+
+def test_batch_sichelmaeher():
+    assert _has_label("sensor.sichelmaeher", "mower")

@@ -47929,6 +47929,9 @@ SPECIFIC_ICONS: Final[dict[str, str]] = {
     "handruehrgeraet": "mdi:blender",
     "superkuehlen": "mdi:snowflake",
 
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+
+
 }
 
 # --- keyword fallbacks --------------------------------------------------
@@ -96944,6 +96947,15 @@ KEYWORD_LABELS: Final[dict[str, str]] = {
     "abgasruecklauf": "car",
     "schneeketten": "car",
     "parking sensor": "car",
+
+    # --- incremental vocabulary batch (auto-generated + collision-checked) ---
+    "mover ladeschacht": "mower",
+    "landxcape": "mower",
+    "maehstopp": "mower",
+    "maehfreie zone": "mower",
+    "tonnenstandort": "waste",
+    "aufbackstation": "appliances",
+    "sichelmaeher": "mower",
 
 }
 
